@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-11-09T04:18:02.411390+00:00",
+  "records": [
+    {
+      "id": "H01",
+      "entry_name": "exact_match",
+      "score_full_AST_sha256": "a5bc32db11274c237befe591939375ffc154d6f42827b1457db92c45f33eac68",
+      "score_doc_annotation_local_alpha_sha256": "b608b9ab669ba19f6848378643d61d691eded989677f22b13ff23c472ab8a583",
+      "closure_doc_annotation_local_alpha_sha256": "b608b9ab669ba19f6848378643d61d691eded989677f22b13ff23c472ab8a583",
+      "declared_helpers": []
+    },
+    {
+      "id": "H02",
+      "entry_name": "quasi_exact_match",
+      "score_full_AST_sha256": "b34f1b067d30cc9f4695c994d2465ea704c86491b52569d374e66e88b7c5034d",
+      "score_doc_annotation_local_alpha_sha256": "98708df6780fde47134ca4623edb4cb2ca5572ac53e903f45e250b2fe3e733ee",
+      "closure_doc_annotation_local_alpha_sha256": "f861dc86d00cbc236d0887b689c1ca234af0e5aaf0d7f13c9f3d82ff4e2484af",
+      "declared_helpers": [
+        "normalize_text"
+      ]
+    },
+    {
+      "id": "H03",
+      "entry_name": "prefix_exact_match",
+      "score_full_AST_sha256": "f72fbfb9d682ce292c3d76cfdfa447d281ee92383d34eeea426e7c35087275b4",
+      "score_doc_annotation_local_alpha_sha256": "1ef4b0dc4293b4161cb611a1041e859a6e8a66b1922506c0d23f82762da6b393",
+      "closure_doc_annotation_local_alpha_sha256": "1ef4b0dc4293b4161cb611a1041e859a6e8a66b1922506c0d23f82762da6b393",
+      "declared_helpers": []
+    }
+  ],
+  "local_alpha_preserves_global_function_builtin_attribute_names": true,
+  "all_three_source_implementations_distinct": true,
+  "policy_correlation": "Same project and metric family; distinct registered exact/normalize/prefix policies, not independent tasks or repositories.",
+  "source_freshness": "Prior paths show HELM common/general.py/LICENSE only; no evaluate_reference_metrics.py, CivilComments source or exact_match(gold,..) /quasi/prefix definitions under prior outputs/submission/work/datasets.",
+  "selection_basis": "Firstthree publishedregistryentries, fixed before model/detector/native probe outputs.",
+  "normalization_is_dedup_only_source_not_rewritten": true
+}

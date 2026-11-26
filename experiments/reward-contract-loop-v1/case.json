@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-11-08T15:55:52.944788+00:00",
+  "scope": "One known development bug family and one paired proposed repair; not held-out or a neural-gain evaluation.",
+  "selection_reason": "Real reported bug with actual opposite VALID Boolean-token witness, exact executable source and paired proposed repair; current frozen analyzers already handle its main path, avoiding numeric/helper additions.",
+  "issue": {
+    "url": "https://github.com/open-thought/reasoning-gym/issues/544",
+    "title": "Game of Life halting Boolean truthiness scoring bug",
+    "evidence": "datasets/reasoning-gym-reward-v1/collection/issue-544.json"
+  },
+  "repair": {
+    "url": "https://github.com/open-thought/reasoning-gym/pull/561",
+    "status": "Proposed upstream repair in frozen snapshot; not a verified merged release",
+    "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0"
+  },
+  "versions": [
+    {
+      "id": "rg-issue-544-original",
+      "version": "original",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "module": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "score_source": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0\n",
+      "method_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-544-original/score_answer.py",
+          "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+          "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+            "module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "module": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+      "score_source": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0\n",
+      "method_ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-pr-561-proposed-repair/score_answer.py",
+          "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+          "ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+            "module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    }
+  ],
+  "probes": [
+    "counterexamples/opposite-false",
+    "counterexamples/nonboolean-banana",
+    "normal_controls/exact-true"
+  ],
+  "primary_witness": {
+    "probe_id": "counterexamples/opposite-false",
+    "answer": "False",
+    "entry": {
+      "answer": "True"
+    },
+    "original_reward": 1.0,
+    "repair_reward": 0.0
+  },
+  "primary_fixture_origin": "Reported opposite-token failure with curated minimal native entry; not a newly generated Game of Life board. Trusted reference interface is conditional; generator correctness is not tested.",
+  "contract_logic": {
+    "correct": "full_reward => valid_boolean_token AND equals_trusted_reference",
+    "missing": "No authoritative full-reward obligation; adapter policy reports Unknown.",
+    "omitted_equality": "full_reward => valid_boolean_token only"
+  },
+  "frozen_components": {
+    "static_baseline_method_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+    "extraction_bridge_sha256": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6"
+  },
+  "boundaries": [
+    "Witness oracle evaluates concrete values only and is not a new analyzer or solver.",
+    "Missing-spec Unknown is wrapper policy; native Semgrep truthiness syntax rule itself is specification-independent.",
+    "Weak-spec nonviolation does not establish actual task correctness.",
+    "Full source can have a different counterexample under weaker contract.",
+    "No model calls, task replacement, analyzer edits or rule additions."
+  ]
+}

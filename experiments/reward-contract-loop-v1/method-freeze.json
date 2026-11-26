@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-08T15:58:04.852156+00:00",
+  "files_sha256": {
+    "run_case.py": "25603e0e702285f98c938c89985787f6565fd03e03465f76c937bcc0ec159ff4",
+    "test_case.py": "c2751aa847a6e721b3f4a066ddb7787de23498c7cd8dc3956f85feb8e6c94893",
+    "case.json": "3e3a651a5f7b67750c78e95ba03be7de4c23d8f4f292399fb22e1e80cc577eb6",
+    "contracts.json": "036cca877a952421590d4b5a72835fc1f631267a50a515d85645164c0f07ec1d",
+    "expected.json": "e7383842c01cc1cbcf273f4d459f05958da943cee12bfe985bbf10a84282f663",
+    "inputs.json": "15ad8ec1bea5ca36126fe207ebf90b666053a9e2c6d501c6e441ab6a3b945c04",
+    "archived-observations.json": "db7fe7043d672cbecc5f4fa79035386823ba76bb796618ecb2bd3ccd391c86fa"
+  },
+  "bridge_sha256": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6",
+  "reproduction_worker_sha256": "ceca17ce0e0b413821fb223ebcf9d967e56f42e1714c4040e46f467e68be780d",
+  "preserved_baseline": {
+    "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+    "files_sha256": {
+      "prepare_inputs.py": "32b7d1aef06f525a7aa76294a6aad36b46afd7687ed05466d9872890196561af",
+      "protocol/contracts-evaluation-freeze.json": "b2a688633864a35e702b9ab0536a5ddf08a7f54d44e20f3171df02d1bfec7e0e",
+      "protocol/contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+      "protocol/evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab",
+      "run_baselines.py": "211da806e4c9b092031652d54689a9d000f1dfa0d432dad8040bc8b64355e32a",
+      "test_study.py": "355bb8eaac02db7e2d98da705e61320b4a8e5a5fb66c652f3a304600c6f1fe5e",
+      "tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+      "tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "tools/test_semgrep_baseline.py": "ecdd607446186c788540a7b44902293c6176026a13255e50e41970ce22d2ff51",
+      "tools/test_symbolic_baseline.py": "2a2653686e307048ee77d1668388f7464f20d7239a77f99c6167720e2151181b",
+      "tools/tool-release.json": "ef27db9b8b76468126e040ebb188ac9a941158f960265ad7b7dc944378d54005"
+    },
+    "analyzer_files_unchanged": true,
+    "new_analyzer_semantics_or_rules": false
+  },
+  "expected_table_frozen_before_execution": true,
+  "no_analyzer_modification": true,
+  "LLM_calls": 0
+}

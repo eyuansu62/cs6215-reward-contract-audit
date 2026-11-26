@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "input_freeze_sha256": "5d8bf96dc7d4f1912c0aec38ba58c1c6e1d25865bebfa1bceef9a7c70d660e63",
+  "task_condition_rows": 6,
+  "full_parsed_analytical_outputs_equal": true,
+  "completed_semgrep_scans_verified": 3,
+  "separate_pattern_and_coverage_commands_verified": 6,
+  "normalization": [
+    "run paths",
+    "wall_seconds",
+    "bridge_wall_seconds",
+    "commands with bytes and flags verified separately"
+  ],
+  "same_machine": true,
+  "new_LLM_or_target_runs": 0
+}

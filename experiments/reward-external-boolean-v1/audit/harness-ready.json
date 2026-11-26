@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-11-09T04:21:35.316350+00:00",
+  "status": "freeze_ready_no_primary_calls",
+  "files_sha256": {
+    "run_study.py": "8b2f2f9cc298eade92b181778c2b1ab4342888499c2fb5dc9b7f962166404490",
+    "tests/test_study.py": "d1a6929ece2561b73256229d3070e9bd34ba55436368b91ee0bd039acb765a2c"
+  },
+  "synthetic_test_methods_passed": 20,
+  "py_compile_passed": true,
+  "primary_project_files_read_by_author": false,
+  "primary_scorer_executions": 0,
+  "native_Semgrep_scans": 0,
+  "model_requests": 0,
+  "api": {
+    "CLI": [
+      "freeze",
+      "verify",
+      "run",
+      "worker",
+      "replay"
+    ],
+    "source_units": "data/source-units.json.units, unique id/scorer; exact original_source_file+sha, definitions[{name,source,optionalastsha}], all_source=source, standard analyzer fields+native_binding",
+    "probes": "data/probes.json.probes[{id,answer,reference,optionalunit_ids}]",
+    "reference": "data/reference-contract.json.contract maybeIRorNone",
+    "model_seal": "results/model-response-freeze.json: method_freeze_sha256,model_output relativefolder,files_sha256 covers data/condition-contracts.json plus metadata/raw/accepted artifacts",
+    "conditions": "data/condition-contracts.json.conditions exactly reference,llm; null staysnull; activeLLM musttypedJSON-match sealed raw/acceptedcontract"
+  },
+  "scope": [
+    "Exact pinned source/function AST/fragment reproduction, no original module import",
+    "Declared re/string only in inspected bounded execution namespace",
+    "Native numeric scalar reward, no dict/tuple/bool coercion or answer conversion",
+    "Same Semgrep CE helpers/rules/engine, neutral exact-source packet wrapper, no semantic findings filtering",
+    "Reference and LLM share fixed source/binding theory; activeIR copied exactly",
+    "Globalanalyzers receive SOURCE_FIELDS/trust flag only; no identity/labels/probes/rewardmetadata",
+    "Concrete worker observesnative rewards separately; check_witness receives no observedreward",
+    "Unknown oracle/source comparison eligibility gates; zero eligible comparisons=>null match metrics",
+    "Missing reference/model neverfilled fromothercondition",
+    "Model/condition integrity ties rawselectedIR to actual consumer inputs"
+  ],
+  "known_limits": [
+    "Execution namespace is not a general-purpose sandbox for arbitraryPython",
+    "No pretense of unchanged oldSemgrepmetadataadapter: native source packager different, engine/rules pinned",
+    "Nativeevaluation leniency may bepolicy difference under strictIR, not upstreambug",
+    "Replay same-machine; archivedcommand paths resolved under providedrunfolder",
+    "No groundtruth bugprecision/recall computed"
+  ],
+  "test_notes": "An initial wrong working-directory output path was corrected before file creation; no primary work occurred. All final tests are authored syntheticfixtures/mocked transport only.",
+  "pre_model_revision": {
+    "reason": "Native executor safe-attribute packaging omitted startswith; static theory remains unchanged/Unknown.",
+    "prior_attempt_preserved_by_parent": "audit/pre-model-preflight-revision-01 and audit/method-freeze-preflight-01.json",
+    "regression_before_fix": "audit/harness-startswith-before-fix.txt",
+    "primary_outcomes_used": false,
+    "change": "One native-execution attribute whitelist entry plus synthetic regression; no scoring/analyzer code change."
+  }
+}

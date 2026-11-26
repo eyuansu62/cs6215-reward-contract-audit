@@ -1,0 +1,864 @@
+{
+  "created_utc": "2026-11-08T15:26:32.392733+00:00",
+  "role": "Independent AI-assisted semantic field review; completed without reading root comparison decisions, scorers, generators, source units or downstream outcomes",
+  "reference_authorship": "AI-assisted researcher reference, not a real human annotation or independent human gold standard",
+  "scope": "Raw six one-shot responses versus pre-model frozen reference and exact blind descriptions; ten preregistered groups per task",
+  "model_response_freeze_sha256": "96548066b9f89362d1f05d08591e7bb0ec5427ca40dde9b93c86f357975f6ba5",
+  "extraction_freeze_sha256": "2271f85f77ff26b263d0b543ad43c3ed2dd087e53286698a0a51e34120ea6828",
+  "reference_sha256": "0eab3063bbae805ed513f5816450dc0851f49667ff53e0d1c0ccabc3ec7392f0",
+  "description_sha256": "fea9db1afd4d95a8fbc20adc4d0e43802203c7156de261433dbb06a9fc3113ff",
+  "field_groups": [
+    "answer_kind",
+    "boolean_tokens",
+    "collection_element_kind",
+    "order_requirement",
+    "output_format_requirements",
+    "full_credit_requirements",
+    "allowed_normalizations",
+    "numeric_tolerance",
+    "partial_credit_policy_and_details",
+    "not_specified"
+  ],
+  "tasks": [
+    {
+      "task_id": "T01",
+      "raw_response_sha256": "33abe4a43e101904d5f857646ddaafbadb5fa7dcbadd28e43d6d34d3cd8ee3fc",
+      "schema_valid": true,
+      "strictly_accepted": true,
+      "semantic_fields": [
+        {
+          "field_group": "answer_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Same justified inherent answer type; this is not an invented textual parser rule.",
+          "model_value": "boolean",
+          "reference_value": "boolean",
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "boolean_tokens",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Explicit True/False spellings match the question for Boolean tasks; nulls correctly mark non-Boolean tasks.",
+          "model_value": {
+            "true": "True",
+            "false": "False"
+          },
+          "reference_value": {
+            "true": "True",
+            "false": "False"
+          },
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "collection_element_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The scalar/noncollection null is appropriate.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "order_requirement",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Order is not applicable to this scalar answer.",
+          "model_value": "not_applicable",
+          "reference_value": "not_applicable",
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "output_format_requirements",
+          "decision": "uncertain",
+          "required_substantive_revision": null,
+          "reason": "The phrase \"exactly the Boolean token\" may impose an answer-only restriction that the question does not expressly state; alternatively it may merely emphasize the stated True/False spellings. I would soften \"exactly\", but cannot classify this as a definite material semantic error without choosing one interpretation. Do not count it as a confirmed required revision or silently ignore the ambiguity.",
+          "model_value": [
+            "Return exactly the Boolean token True or False."
+          ],
+          "reference_value": [
+            "Express the Boolean answer as True or False."
+          ],
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:",
+          "possible_revision": "Express the Boolean answer as True or False; acceptance of extra explanatory text is not specified."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Consistent positional character mapping, repeated-character consistency, injectivity and permitted self-maps are all preserved; True iff a mapping exists.",
+          "model_value": [
+            "Determine whether a consistent character mapping transforms the first string s into the second string t while preserving character order.",
+            "Every occurrence of the same character in s must map to the same character in t.",
+            "Distinct characters in s must not map to the same character in t.",
+            "A character is permitted to map to itself.",
+            "Return True exactly when such a mapping exists; otherwise return False."
+          ],
+          "reference_value": [
+            "Return True exactly when a consistent injective character replacement maps the first string to the second while preserving character order; return False otherwise.",
+            "Repeated occurrences of a source character use the same replacement, distinct source characters have distinct replacements, and self-mapping is permitted."
+          ],
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty permissions correctly avoid inventing case/whitespace/number-spelling normalization; absence is not a promise that the evaluator rejects all variants.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Null correctly records that the description supplies no tolerance; it is not a fabricated zero-tolerance policy.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unspecified/null correctly avoid inventing a reward schedule or threshold.",
+          "model_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "reference_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        },
+        {
+          "field_group": "not_specified",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction identifies absent normalization and reward policy. Shorter uncertainty lists do not require expansion merely to reproduce every reference wording.",
+          "model_value": [
+            "Case normalization is not specified.",
+            "Whitespace normalization is not specified.",
+            "No partial-credit or reward policy is specified."
+          ],
+          "reference_value": [
+            "Reward scale, thresholds, and partial-credit allocation.",
+            "Whitespace, case, or other answer normalization and parser behavior.",
+            "Whether additional explanatory text is accepted."
+          ],
+          "description_evidence": "Return True if the following two strings are isomorphic, or False otherwise:"
+        }
+      ],
+      "confirmed_substantive_revision_groups": 0,
+      "uncertain_revision_groups": [
+        "output_format_requirements"
+      ],
+      "protocol_issues": []
+    },
+    {
+      "task_id": "T02",
+      "raw_response_sha256": "ea42d2dd3bb09c5741313dd531937a8e0bdb1a0ba4c7fa75db726d48795620bf",
+      "schema_valid": true,
+      "strictly_accepted": true,
+      "semantic_fields": [
+        {
+          "field_group": "answer_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Same justified inherent answer type; this is not an invented textual parser rule.",
+          "model_value": "boolean",
+          "reference_value": "boolean",
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Explicit True/False spellings match the question for Boolean tasks; nulls correctly mark non-Boolean tasks.",
+          "model_value": {
+            "true": "True",
+            "false": "False"
+          },
+          "reference_value": {
+            "true": "True",
+            "false": "False"
+          },
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The scalar/noncollection null is appropriate.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "order_requirement",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Order is not applicable to this scalar answer.",
+          "model_value": "not_applicable",
+          "reference_value": "not_applicable",
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extracted format preserves the explicit answer instruction without adding a parser, quote-style or numeric-spelling rule.",
+          "model_value": [
+            "Return True or False."
+          ],
+          "reference_value": [
+            "Express the Boolean answer as True or False."
+          ],
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction preserves letter occurrence counts and at-most-once usage; it adds no magazine-order/subsequence restriction.",
+          "model_value": [
+            "Return True exactly when the ransom-note string can be constructed from the magazine string.",
+            "Use each occurrence of a magazine letter at most once, so every letter's multiplicity in the ransom note must not exceed its multiplicity in the magazine."
+          ],
+          "reference_value": [
+            "Return True exactly when the magazine supplies at least as many occurrences of each required letter as the ransom note needs; return False otherwise.",
+            "Use each occurrence of a magazine letter at most once."
+          ],
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty permissions correctly avoid inventing case/whitespace/number-spelling normalization; absence is not a promise that the evaluator rejects all variants.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Null correctly records that the description supplies no tolerance; it is not a fabricated zero-tolerance policy.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unspecified/null correctly avoid inventing a reward schedule or threshold.",
+          "model_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "reference_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        },
+        {
+          "field_group": "not_specified",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction identifies absent normalization and reward policy. Shorter uncertainty lists do not require expansion merely to reproduce every reference wording.",
+          "model_value": [
+            "Case normalization is not specified.",
+            "Whitespace normalization is not specified.",
+            "No partial-credit or reward policy is specified."
+          ],
+          "reference_value": [
+            "Reward scale, thresholds, and partial-credit allocation.",
+            "Whitespace, case, or other answer normalization and parser behavior.",
+            "Input-letter case folding or other input normalization.",
+            "Whether additional explanatory text is accepted."
+          ],
+          "description_evidence": "Each letter in the magazine string can only be used once in your ransom note."
+        }
+      ],
+      "confirmed_substantive_revision_groups": 0,
+      "uncertain_revision_groups": [],
+      "protocol_issues": []
+    },
+    {
+      "task_id": "T03",
+      "raw_response_sha256": "ee53efb1ea310ffa5993a1835f36679d2b6fd47ca286963f051aab1330206ad0",
+      "schema_valid": true,
+      "strictly_accepted": true,
+      "semantic_fields": [
+        {
+          "field_group": "answer_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Same justified inherent answer type; this is not an invented textual parser rule.",
+          "model_value": "boolean",
+          "reference_value": "boolean",
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Explicit True/False spellings match the question for Boolean tasks; nulls correctly mark non-Boolean tasks.",
+          "model_value": {
+            "true": "True",
+            "false": "False"
+          },
+          "reference_value": {
+            "true": "True",
+            "false": "False"
+          },
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The scalar/noncollection null is appropriate.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "order_requirement",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Order is not applicable to this scalar answer.",
+          "model_value": "not_applicable",
+          "reference_value": "not_applicable",
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extracted format preserves the explicit answer instruction without adding a parser, quote-style or numeric-spelling rule.",
+          "model_value": [
+            "Return the Boolean token True or False."
+          ],
+          "reference_value": [
+            "Express the Boolean answer as True or False."
+          ],
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction preserves all-course feasibility and the b_i-before-a_i prerequisite direction; it does not request a course-order list.",
+          "model_value": [
+            "Return True exactly when all courses can be completed while satisfying every prerequisite pair (a_i, b_i), meaning course b_i must be taken before course a_i.",
+            "Return False otherwise, including when the prerequisite constraints make completion of all courses impossible."
+          ],
+          "reference_value": [
+            "Return True exactly when all courses can be completed in an order satisfying every prerequisite; return False otherwise.",
+            "For each prerequisite pair (a_i, b_i), course b_i precedes course a_i."
+          ],
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty permissions correctly avoid inventing case/whitespace/number-spelling normalization; absence is not a promise that the evaluator rejects all variants.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Null correctly records that the description supplies no tolerance; it is not a fabricated zero-tolerance policy.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unspecified/null correctly avoid inventing a reward schedule or threshold.",
+          "model_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "reference_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        },
+        {
+          "field_group": "not_specified",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction identifies absent normalization and reward policy. Shorter uncertainty lists do not require expansion merely to reproduce every reference wording.",
+          "model_value": [
+            "Case or whitespace normalization",
+            "Alternative Boolean spellings or encodings",
+            "Partial-credit or reward policy",
+            "Parser behavior"
+          ],
+          "reference_value": [
+            "Reward scale, thresholds, and partial-credit allocation.",
+            "Whitespace, case, or other answer normalization and parser behavior.",
+            "Whether additional explanatory text is accepted."
+          ],
+          "description_evidence": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+        }
+      ],
+      "confirmed_substantive_revision_groups": 0,
+      "uncertain_revision_groups": [],
+      "protocol_issues": []
+    },
+    {
+      "task_id": "T04",
+      "raw_response_sha256": "202b9d4eb88c2dea1c35917de306076809d6a0b0aec53fa2208f65a43ee4df93",
+      "schema_valid": true,
+      "strictly_accepted": true,
+      "semantic_fields": [
+        {
+          "field_group": "answer_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Same justified inherent answer type; this is not an invented textual parser rule.",
+          "model_value": "integer",
+          "reference_value": "integer",
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "boolean_tokens",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Explicit True/False spellings match the question for Boolean tasks; nulls correctly mark non-Boolean tasks.",
+          "model_value": {
+            "true": null,
+            "false": null
+          },
+          "reference_value": {
+            "true": null,
+            "false": null
+          },
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "collection_element_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The scalar/noncollection null is appropriate.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "order_requirement",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Order is not applicable to this scalar answer.",
+          "model_value": "not_applicable",
+          "reference_value": "not_applicable",
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "output_format_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "An empty array preserves the distinction between an inherent integer count and an explicitly prescribed integer-literal/output-only serialization.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The closed interval includes both endpoints and the output is the count of prime integers; this is semantically the same as the reference.",
+          "model_value": [
+            "Return the number of prime integers in the closed interval from the instance-specific start integer through the instance-specific end integer."
+          ],
+          "reference_value": [
+            "Give the number of prime integers p satisfying start <= p <= end, including either endpoint when it is prime."
+          ],
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty permissions correctly avoid inventing case/whitespace/number-spelling normalization; absence is not a promise that the evaluator rejects all variants.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Null correctly records that the description supplies no tolerance; it is not a fabricated zero-tolerance policy.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unspecified/null correctly avoid inventing a reward schedule or threshold.",
+          "model_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "reference_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        },
+        {
+          "field_group": "not_specified",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction identifies absent normalization and reward policy. Shorter uncertainty lists do not require expansion merely to reproduce every reference wording.",
+          "model_value": [
+            "Output syntax or formatting",
+            "Whitespace or case normalization",
+            "Numeric tolerance",
+            "Partial-credit or reward policy"
+          ],
+          "reference_value": [
+            "Reward scale, thresholds, and partial-credit allocation.",
+            "Numeric tolerance.",
+            "Answer serialization, numeric notation, and whether explanatory text is accepted.",
+            "Whitespace or other answer normalization and parser behavior."
+          ],
+          "description_evidence": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        }
+      ],
+      "confirmed_substantive_revision_groups": 0,
+      "uncertain_revision_groups": [],
+      "protocol_issues": []
+    },
+    {
+      "task_id": "T05",
+      "raw_response_sha256": "4f9964c553e3449f0e94d72226e5fa6802dc443f3ca43448cf29ddfaba642e4b",
+      "schema_valid": true,
+      "strictly_accepted": false,
+      "semantic_fields": [
+        {
+          "field_group": "answer_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Same justified inherent answer type; this is not an invented textual parser rule.",
+          "model_value": "list",
+          "reference_value": "list",
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Explicit True/False spellings match the question for Boolean tasks; nulls correctly mark non-Boolean tasks.",
+          "model_value": {
+            "true": null,
+            "false": null
+          },
+          "reference_value": {
+            "true": null,
+            "false": null
+          },
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "String representations of numbers is semantically the same element kind as string; this wording does not require a new edit.",
+          "model_value": "string representations of numbers",
+          "reference_value": "string",
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "order_requirement",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "as_requested preserves the instance-specific ascending/descending direction rather than hard-coding one order.",
+          "model_value": "as_requested",
+          "reference_value": "as_requested",
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extracted format preserves the explicit answer instruction without adding a parser, quote-style or numeric-spelling rule.",
+          "model_value": [
+            "Return a list.",
+            "Represent every number in the list as a quoted string.",
+            "Use square-bracket list syntax as illustrated."
+          ],
+          "reference_value": [
+            "Return a square-bracketed list.",
+            "Represent every number in the list as a string."
+          ],
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "All input values and multiplicities are retained, numeric rather than lexical ordering follows the requested direction, and list elements are strings.",
+          "model_value": [
+            "Include all instance-specific input numbers.",
+            "Sort them numerically in the instance-specific ascending or descending direction.",
+            "Preserve multiplicity if input numbers repeat.",
+            "Return each sorted number as a string element in a list."
+          ],
+          "reference_value": [
+            "Include exactly the input numbers, preserving their multiplicities, with every element represented as a string.",
+            "Order the represented numeric values in ascending or descending order as specified by direction."
+          ],
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty permissions correctly avoid inventing case/whitespace/number-spelling normalization; absence is not a promise that the evaluator rejects all variants.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Null correctly records that the description supplies no tolerance; it is not a fabricated zero-tolerance policy.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unspecified/null correctly avoid inventing a reward schedule or threshold.",
+          "model_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "reference_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        },
+        {
+          "field_group": "not_specified",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction identifies absent normalization and reward policy. Shorter uncertainty lists do not require expansion merely to reproduce every reference wording.",
+          "model_value": [
+            "Case or whitespace normalization.",
+            "Numeric tolerance.",
+            "Partial-credit or reward policy.",
+            "Parser behavior.",
+            "Number formatting normalization beyond conversion to strings."
+          ],
+          "reference_value": [
+            "Reward scale, thresholds, and partial-credit allocation.",
+            "Numeric tolerance.",
+            "Parser behavior, exact quote style, and whitespace normalization.",
+            "Canonical numeric spelling within strings or normalization of alternative spellings.",
+            "Whether additional explanatory text is accepted."
+          ],
+          "description_evidence": "Convert all numbers in the square brackets as strings."
+        }
+      ],
+      "confirmed_substantive_revision_groups": 0,
+      "uncertain_revision_groups": [],
+      "protocol_issues": [
+        {
+          "kind": "quote_outside_question_description",
+          "evidence": [
+            {
+              "field": "order_requirement",
+              "quote": "instance-specific 'ascending' or 'descending'"
+            }
+          ],
+          "reason": "The quoted direction phrase occurs in the supplied placeholder notes, not in question_description. The preregistered validator permits exact question-description substrings only. The task semantics are otherwise preserved, but operational acceptance remains failed; no quote repair or regeneration is performed.",
+          "repair_needed_for_acceptance": true,
+          "semantic_contract_repair_required": false
+        }
+      ]
+    },
+    {
+      "task_id": "T06",
+      "raw_response_sha256": "288ce5cbc5be83a1b0444481466f9252b694cd2aa6c4e3cedaf9e1d5b06e2447",
+      "schema_valid": true,
+      "strictly_accepted": true,
+      "semantic_fields": [
+        {
+          "field_group": "answer_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Same justified inherent answer type; this is not an invented textual parser rule.",
+          "model_value": "fraction",
+          "reference_value": "fraction",
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Explicit True/False spellings match the question for Boolean tasks; nulls correctly mark non-Boolean tasks.",
+          "model_value": {
+            "true": null,
+            "false": null
+          },
+          "reference_value": {
+            "true": null,
+            "false": null
+          },
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The scalar/noncollection null is appropriate.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "order_requirement",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Order is not applicable to this scalar answer.",
+          "model_value": "not_applicable",
+          "reference_value": "not_applicable",
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The only-fraction final-answer instruction is explicit and retained.",
+          "model_value": [
+            "Give only the simplified fraction as the final answer."
+          ],
+          "reference_value": [
+            "Give only the simplified fraction as the final answer."
+          ],
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Equivalent rational value plus lowest terms expresses the same mathematical condition as coprime integer components; expanding the gcd definition is not required.",
+          "model_value": [
+            "Return a fraction equivalent to the instance-specific input fraction.",
+            "Express the fraction in lowest terms."
+          ],
+          "reference_value": [
+            "The answer fraction has the same rational value as the input fraction.",
+            "Its integer numerator and nonzero integer denominator have no common divisor greater than 1; all equivalent fractions satisfying this lowest-terms condition meet the semantic requirement."
+          ],
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty permissions correctly avoid inventing case/whitespace/number-spelling normalization; absence is not a promise that the evaluator rejects all variants.",
+          "model_value": [],
+          "reference_value": [],
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Null correctly records that the description supplies no tolerance; it is not a fabricated zero-tolerance policy.",
+          "model_value": null,
+          "reference_value": null,
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unspecified/null correctly avoid inventing a reward schedule or threshold.",
+          "model_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "reference_value": {
+            "partial_credit_policy": "unspecified",
+            "partial_credit_details": null
+          },
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        },
+        {
+          "field_group": "not_specified",
+          "decision": "keep",
+          "required_substantive_revision": false,
+          "reason": "The extraction identifies absent normalization and reward policy. Shorter uncertainty lists do not require expansion merely to reproduce every reference wording.",
+          "model_value": [
+            "Denominator/sign conventions are not stated.",
+            "No case or whitespace normalization is stated.",
+            "No numeric tolerance is stated.",
+            "No partial-credit or reward policy is stated."
+          ],
+          "reference_value": [
+            "Reward scale, thresholds, and partial-credit allocation.",
+            "Numeric tolerance.",
+            "A canonical placement of signs or a positive-denominator requirement.",
+            "Exact fraction notation, whitespace normalization, and parser behavior."
+          ],
+          "description_evidence": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        }
+      ],
+      "confirmed_substantive_revision_groups": 0,
+      "uncertain_revision_groups": [],
+      "protocol_issues": []
+    }
+  ],
+  "summary": {
+    "raw_schema_valid_tasks": 6,
+    "strictly_accepted_tasks": 5,
+    "explicit_model_abstentions": 0,
+    "field_groups_reviewed": 60,
+    "keep_groups": 59,
+    "confirmed_required_substantive_revision_groups": 0,
+    "uncertain_revision_groups": 1,
+    "confirmed_tasks_requiring_semantic_revision": 0,
+    "tasks_with_semantic_uncertainty": [
+      "T01"
+    ],
+    "tasks_requiring_protocol_quote_repair": [
+      "T05"
+    ],
+    "confirmed_semantic_revision_rate": 0.0,
+    "possible_semantic_revision_rate_upper_bound": 0.016666666666666666,
+    "note": "One evidence-protocol repair is outside the 60 semantic-field groups. T05 is not operationally accepted and must not be silently repaired or used downstream."
+  },
+  "limitations": [
+    "No actual human effort/time was measured; field judgments cannot establish reduced human labor.",
+    "Both reference and adjudicator are AI assisted and may share model/ecosystem biases.",
+    "Natural-language semantic judgments can be ambiguous; preserve the T01 formatting uncertainty and reconcile independently before any single-number final claim.",
+    "Six templates from one purposive project sample do not establish generalization.",
+    "This review makes no claim about downstream analyzer correctness or detection gain."
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "authored_before_primary_new_interface_execution": true,
+  "witness_rows": [
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "violated_obligations": [
+        "equals_reference"
+      ],
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "active_obligations": null,
+      "per_obligation": [],
+      "violated_obligations": [],
+      "expected_witness_verdict": "unknown"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "active_obligations": null,
+      "per_obligation": [],
+      "violated_obligations": [],
+      "expected_witness_verdict": "unknown"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "violated_obligations": [
+        "valid_boolean_token"
+      ],
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "active_obligations": null,
+      "per_obligation": [],
+      "violated_obligations": [],
+      "expected_witness_verdict": "unknown"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "missing",
+      "active_obligations": null,
+      "per_obligation": [],
+      "violated_obligations": [],
+      "expected_witness_verdict": "unknown"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "omitted_equality",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "missing",
+      "active_obligations": null,
+      "per_obligation": [],
+      "violated_obligations": [],
+      "expected_witness_verdict": "unknown"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "omitted_equality",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "active_obligations": null,
+      "per_obligation": [],
+      "violated_obligations": [],
+      "expected_witness_verdict": "unknown"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    }
+  ],
+  "global_static_rows": [
+    {
+      "source_id": "rg-issue-544-original",
+      "contract": "correct",
+      "verdict": "alarm",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "alarm"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "verdict": "alarm"
+        }
+      ]
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "contract": "missing",
+      "verdict": "unknown",
+      "active_obligations": null,
+      "per_obligation": []
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "contract": "omitted_equality",
+      "verdict": "alarm",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "alarm"
+        }
+      ]
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "contract": "correct",
+      "verdict": "no_alarm",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "no_alarm"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "verdict": "no_alarm"
+        }
+      ]
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "contract": "missing",
+      "verdict": "unknown",
+      "active_obligations": null,
+      "per_obligation": []
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "contract": "omitted_equality",
+      "verdict": "no_alarm",
+      "active_obligations": [
+        "valid_boolean_token"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "no_alarm"
+        }
+      ]
+    }
+  ],
+  "acceptance": "Contract hashes and actual consumer input hashes must differ for correct vs omitted; active IDs preserved exactly; each static supplied-witness result must match actual source return and concrete oracle, including violated IDs.",
+  "note": "Identical global Alarm is expected for original under both nonmissing contracts because banana violates validity. Obligation attribution, not global alarm count, is the ablation outcome."
+}

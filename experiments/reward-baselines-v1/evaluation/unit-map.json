@@ -1,0 +1,47 @@
+{
+  "mapping": [
+    {
+      "id": "rg-issue-543-original",
+      "unit_id": "531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6",
+      "function_family": "rg-issue-543",
+      "contract_id": "C_PROBABILITY_FULL"
+    },
+    {
+      "id": "rg-issue-544-original",
+      "unit_id": "109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f",
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL"
+    },
+    {
+      "id": "rg-issue-545-original",
+      "unit_id": "5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3",
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE"
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "unit_id": "7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b",
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL"
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "unit_id": "3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603",
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE"
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "unit_id": "2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880",
+      "function_family": "PalindromeDataset.score_answer",
+      "contract_id": "C_PALINDROME_FULL"
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "unit_id": "271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393",
+      "function_family": "PrimeFactorizationDataset.score_answer",
+      "contract_id": "C_PRIME_FACTORS_FULL"
+    }
+  ],
+  "not_passed_to_detectors": true
+}

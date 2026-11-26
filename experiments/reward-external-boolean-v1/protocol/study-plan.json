@@ -1,0 +1,39 @@
+{
+  "study": "fresh_external_real_TrueFalse_reward_small_batch",
+  "selection": "2\u20133 source-supported bare-True/False tasks/scorers from independent real projects, exact implementations fresh and nonduplicate. No selection from model/detector/probe outcomes.",
+  "binding_authorization": "User explicitly allows only parameter/reference-field binding; scorer logic, answer encoding, predicates, analysis capabilities remain unchanged.",
+  "fixed_components": {
+    "experiments/reward-contract-e2e-v1/protocol/prompt-prefix.txt": "7ab27452c5c41b9d524dc715de98976208d36661ccf2a39ae51072ce40607f92",
+    "experiments/reward-contract-e2e-v1/protocol/analysis-profile.json": "4f812ece34caddc3b76c940aee9914b7d7bc34e9c73a9c617cd552a08ba81603",
+    "experiments/reward-contract-e2e-v1/protocol/response-schema.json": "8802b98a6f86dc86fd9dbb11aa32c8a3c8cef91cca2bacaa8e85663d304e38a3",
+    "experiments/reward-contract-e2e-v1/run_e2e.py": "58657b6059f664a55e5b8783d7d07dc2bf0bac471212ab2579d08a977c16dc73",
+    "experiments/reward-contract-loop-v2/boolean_contracts.py": "b832098bb832b56d2bd100bc5b66d02546820bdabfac51fff22eaa395c58f257",
+    "experiments/reward-contract-loop-v2/boolean_checker.py": "a0218e6474606af3841dd96212fad7c3327dee9a14f8940a7184b13e95dd7705",
+    "experiments/reward-baselines-v1/tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e"
+  },
+  "source_criteria": [
+    "Exact pinned upstream source with native caller/task linkage",
+    "Native numeric scalar reward, no reward extraction/coercion",
+    "Raw candidate genuinely governed by bare True/False task, not a boxed/XML or0/1/YesNo conversion",
+    "Direct native parameter or one-level field binding only",
+    "Reject copied/fork/default wrappers, preserve dedup/source/helper-closure evidence",
+    "Unsupported source theory retainedUnknown, not expanded"
+  ],
+  "reference": "AI-assisted researcher reference authored from same task description/fixedprofile only, not source/bug/model findings; independentreview before model outputs.",
+  "model": "One fresh isolated request perselectedquestion using byte-identicale2eprompt/schema/profile; no scorer/sourcepath/taskrepo/probe/gold/referencecontract/modelotheroutputs; strictvalidation preservesselectedIDs, noautoaddition.",
+  "conditions": [
+    "Native unfiltered Semgrep source-pattern scan",
+    "Reference contract plus same frozen pure symbolic theory with explicit nativebinding",
+    "LLM contract plus exact same symbolic theory/binding"
+  ],
+  "probe_policy": "Freeze deterministic small probe list and obligation truth table before detector predictions: correctTrue/False, oppositevalidtoken, invalidtoken, empty,None ifnative accepts. Concrete native source execution separate from staticresults. Exceptionsnotfullreward. No generatedmutantscountedreal.",
+  "metrics": "Per-function determinate/U, source-supportedfull-rewardviolationlabels only, per-obligation witnessfalse/true/violated IDs, pairedLLMvsreferencecontrolgains/losses. Semgrepheuristic alertsnotobligationproof; do notimputeunknownpositive/negative labelsfromfiniteprobeabsence.",
+  "stopping": "Smallbatch, no outcome-drivenprompts/sourceversionretuning oranalysisfeature additions. Ifextractioninvalid/omitted =>preservefailure/Unknown, do notrepair.",
+  "known_limits": [
+    "AIdraftedreference nothuman-time evidence",
+    "Twoatommenuandprofilestronglyscaffoldselection",
+    "Semantically equality entailsvalidityundercanonicalref, so omittedvalidityID mayberedundant",
+    "Pretrainednoveltynotguaranteed",
+    "Unsupportedhelpers/parsers/callsretainUnknown; no advantageclaimfromengineercoveragemiss"
+  ]
+}

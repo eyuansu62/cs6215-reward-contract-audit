@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "api": [
+    "ContractError",
+    "compile_contract(contract, unit=None)",
+    "fingerprint(contract)",
+    "evaluate_witness(contract, answer, reference, reward)"
+  ],
+  "owned_files_sha256": {
+    "boolean_contracts.py": "b832098bb832b56d2bd100bc5b66d02546820bdabfac51fff22eaa395c58f257",
+    "tests/test_boolean_contracts.py": "d1d036bc8a047e49e2d34397a3d6df696d517420ed42e0c50e94f52b5c0b364c"
+  },
+  "synthetic_tests": {
+    "methods_passed": 17,
+    "command": "python3 -m unittest discover -s experiments/reward-contract-loop-v2/tests -p test_boolean_contracts.py -v",
+    "source_or_model_executions": 0
+  },
+  "py_compile_passed": true,
+  "regression_basis": {
+    "prior_v1_output_sha256": "e32b013f02fd62365a9a051f1de3177acacb33a99854b4079444f8870c0bee08",
+    "prior_v1_correct_and_omitted_projection_identical": true,
+    "new_regressions": "Correct/weak compiled obligations and fingerprints differ; no omitted predicate executes. Equality-only cannot add validity."
+  },
+  "test_first_record": "Synthetic tests were written before the new module; initial import failed because boolean_contracts.py did not yet exist. This import failure is not presented as a semantic regression against v1.",
+  "assumptions": [
+    "Native str/None candidates, canonical native True/False references, finite native int/float rewards excluding bool",
+    "Only fixed strip/lower normalization and full-credit threshold 1 are supported",
+    "No empty/unknown/duplicate obligations, no silent defaults or free-text inference",
+    "Missing/invalid contract returns administrative Unknown, including reward0"
+  ],
+  "changes_to_prior_frozen_files": false,
+  "new_dependencies": false,
+  "primary_case_execution": false,
+  "qualification": "evaluate_witness checks concrete supplied values only and is not a static analyzer; no claim of human annotations or neural gain."
+}

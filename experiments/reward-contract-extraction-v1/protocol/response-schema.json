@@ -1,0 +1,155 @@
+{
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "extracted",
+        "abstain"
+      ]
+    },
+    "answer_kind": {
+      "type": "string",
+      "enum": [
+        "boolean",
+        "integer",
+        "number",
+        "fraction",
+        "list",
+        "set",
+        "mapping",
+        "text",
+        "other",
+        "unspecified"
+      ]
+    },
+    "boolean_tokens": {
+      "type": "object",
+      "properties": {
+        "true": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "false": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "true",
+        "false"
+      ],
+      "additionalProperties": false
+    },
+    "collection_element_kind": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "order_requirement": {
+      "type": "string",
+      "enum": [
+        "as_requested",
+        "ascending",
+        "descending",
+        "irrelevant",
+        "not_applicable",
+        "unspecified"
+      ]
+    },
+    "output_format_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "full_credit_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_normalizations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "numeric_tolerance": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "partial_credit_policy": {
+      "type": "string",
+      "enum": [
+        "unspecified",
+        "specified"
+      ]
+    },
+    "partial_credit_details": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "not_specified": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "abstention_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "task_id",
+    "status",
+    "answer_kind",
+    "boolean_tokens",
+    "collection_element_kind",
+    "order_requirement",
+    "output_format_requirements",
+    "full_credit_requirements",
+    "allowed_normalizations",
+    "numeric_tolerance",
+    "partial_credit_policy",
+    "partial_credit_details",
+    "not_specified",
+    "evidence",
+    "abstention_reason"
+  ],
+  "additionalProperties": false
+}

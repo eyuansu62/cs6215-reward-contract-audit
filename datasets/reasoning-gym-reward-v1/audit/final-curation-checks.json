@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-11-08T08:03:19.858970+00:00",
+  "passed": true,
+  "primary_versions": 7,
+  "qualified_versions": 1,
+  "primary_function_families": 5,
+  "archived_function_families": 6,
+  "canonical_version_probe_evaluations": 63,
+  "separate_schema_diagnostic_evaluations": 1,
+  "prior_validation_round_evaluations": 63,
+  "actual_rewards_unchanged_across_validation_rounds": 63,
+  "corrected_contract_flags": [
+    "rg-issue-545-original/normal_controls/equivalent-parentheses",
+    "rg-pr-562-proposed-repair/normal_controls/equivalent-parentheses"
+  ],
+  "reported_bug_families_reproduced": 3,
+  "open_upstream_repair_candidates": 2,
+  "source_blobs_verified": 28,
+  "source_import_registration_evidence": [
+    {
+      "class": "CoinFlipDataset",
+      "category_import": "upstream/main/reasoning_gym/probability/__init__.py",
+      "source_registration_checked": true,
+      "package_import_executed": false
+    },
+    {
+      "class": "GameOfLifeHaltingDataset",
+      "category_import": "upstream/main/reasoning_gym/algorithmic/__init__.py",
+      "source_registration_checked": true,
+      "package_import_executed": false
+    },
+    {
+      "class": "ComplexArithmeticDataset",
+      "category_import": "upstream/main/reasoning_gym/algebra/__init__.py",
+      "source_registration_checked": true,
+      "package_import_executed": false
+    },
+    {
+      "class": "PalindromeDataset",
+      "category_import": "upstream/main/reasoning_gym/algorithmic/__init__.py",
+      "source_registration_checked": true,
+      "package_import_executed": false
+    },
+    {
+      "class": "PrimeFactorizationDataset",
+      "category_import": "upstream/main/reasoning_gym/arithmetic/__init__.py",
+      "source_registration_checked": true,
+      "package_import_executed": false
+    },
+    {
+      "class": "GroupAnagramsDataset",
+      "category_import": "upstream/main/reasoning_gym/algorithmic/__init__.py",
+      "source_registration_checked": true,
+      "package_import_executed": false
+    }
+  ],
+  "no_full_package_import_generators_training_or_analyzer_calls": true,
+  "new_dependencies_installed": false,
+  "v10_method_files_unchanged": 488,
+  "v10_archive_unchanged": true,
+  "all_current_source_is_development_exposed": true,
+  "normal_scope": "Only named contracts; GroupAnagrams excluded from general schema-safety negatives; no global clean claim.",
+  "fix_scope": "Unmerged proposals with closure of covered witnesses, not released fixes or complete correctness proof."
+}

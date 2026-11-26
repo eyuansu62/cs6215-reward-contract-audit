@@ -1,0 +1,221 @@
+{
+  "labels": [
+    {
+      "task_id": "P35",
+      "semantic_class": "V",
+      "family": "direct_instruction",
+      "expected_obligations": [
+        "valid_boolean_token"
+      ],
+      "rationale": "The whole normalized response must be a valid Boolean token. Explicit acceptance of the label opposite the trusted correct reference rules out reference equality as a necessary obligation.",
+      "semantic_evidence_quotes": [
+        "require the entire remaining response to be one of those two labels.",
+        "either label earns full credit even when it disagrees with that reference."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "Both permitted tokens, whole-response scope, and normalization are explicit. Reference disagreement is expressly acceptable, so correctness cannot be silently added to this rubric."
+    },
+    {
+      "task_id": "P28",
+      "semantic_class": "E",
+      "family": "conditional_policy",
+      "expected_obligations": [
+        "equals_reference"
+      ],
+      "rationale": "The if/otherwise policy makes normalized whole-string equality to the trusted correct reference the full-credit condition. Added prose and an incorrect standalone Boolean label both fail.",
+      "semantic_evidence_quotes": [
+        "If the whole response equals the trusted correct True-or-False reference after both are trimmed at their outer edges and lowercased, award full credit.",
+        "Otherwise, do not award full credit."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "The conditional has an explicit otherwise branch, so equality is necessary as well as sufficient. Whole-response comparison and both disallowed counterexamples exclude token extraction or correctness-only readings."
+    },
+    {
+      "task_id": "P91",
+      "semantic_class": "V",
+      "family": "scope_negation",
+      "expected_obligations": [
+        "valid_boolean_token"
+      ],
+      "rationale": "Only the whole-response Boolean format is required. The explicit exclusion of reference agreement and full-credit acceptance of both labels rule out equality as a necessary obligation.",
+      "semantic_evidence_quotes": [
+        "Do not use agreement with the trusted correct reference as a condition for full credit.",
+        "Require only that the entire response be True or False after outer whitespace is removed and case is ignored.",
+        "Both labels receive full credit; an explanation or any other text does not satisfy this format requirement."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "Negation applies to reference agreement, not to Boolean formatting. The positive requirement and extra-text exclusion establish whole-string validity, while both-label acceptance removes reference correctness."
+    },
+    {
+      "task_id": "P73",
+      "semantic_class": "U",
+      "family": "distributed_requirements",
+      "expected_obligations": null,
+      "rationale": "Separate sentences jointly authorize unrestricted text, award it full credit, remove format restrictions, and exclude the reference from grading. Neither Boolean-token validity nor equality is necessary.",
+      "semantic_evidence_quotes": [
+        "Natural-language explanations and unrestricted text are accepted.",
+        "Every submitted text response earns full credit.",
+        "There is no required wording or format.",
+        "The trusted correct True-or-False reference is available as background, but it is not used to grade the response."
+      ],
+      "abstention_kind": "not_expressible",
+      "ambiguity_audit": "Accepted is anchored to an explicit full-credit sentence, so it cannot mean merely accepted for submission. The format and background-reference clauses positively establish the absence of both target obligations."
+    },
+    {
+      "task_id": "P96",
+      "semantic_class": "V",
+      "family": "conditional_policy",
+      "expected_obligations": [
+        "valid_boolean_token"
+      ],
+      "rationale": "Full credit depends on the whole normalized response being either Boolean token. The explicit regardless-of-reference clause permits incorrect labels, so equality is not necessary.",
+      "semantic_evidence_quotes": [
+        "If removing outer whitespace and ignoring letter case leaves the entire response as True or False, award full credit.",
+        "a valid label that disagrees with it still receives full credit."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "The condition and failure branch define the token boundary. The final clause explicitly grants full credit to reference-disagreeing Boolean tokens and prevents an implicit correctness condition."
+    },
+    {
+      "task_id": "P46",
+      "semantic_class": "E",
+      "family": "direct_instruction",
+      "expected_obligations": [
+        "equals_reference"
+      ],
+      "rationale": "Full credit requires whole-response equality to the normalized trusted correct reference. Since that reference is a canonical Boolean label, equality also entails Boolean-token validity; the stronger equality obligation determines class E.",
+      "semantic_evidence_quotes": [
+        "Give full credit to a response exactly when its entire text, after trimming leading and trailing whitespace and converting letters to lowercase, matches the trusted correct reference label treated the same way.",
+        "An added explanation or the opposite label does not earn full credit."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "The entire-text scope, normalization, trusted correct reference, and exclusion of extra text and the opposite label are explicit. Exact matching both qualifies for full credit and is required for it."
+    },
+    {
+      "task_id": "P17",
+      "semantic_class": "V",
+      "family": "distributed_requirements",
+      "expected_obligations": [
+        "valid_boolean_token"
+      ],
+      "rationale": "The distributed requirements establish the two tokens, normalization, and whole-response validity. The separate correctness clause makes both labels full-credit answers independently of the reference.",
+      "semantic_evidence_quotes": [
+        "The resulting response must consist entirely of one accepted label to receive full credit.",
+        "Either label receives full credit.",
+        "Whether it agrees with the trusted correct reference has no effect on grading."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "Accepted label refers unambiguously to True and False in the first sentence. Entirely excludes added prose; the final two sentences expressly disallow importing reference correctness as a scoring requirement."
+    },
+    {
+      "task_id": "P42",
+      "semantic_class": "E",
+      "family": "distributed_requirements",
+      "expected_obligations": [
+        "equals_reference"
+      ],
+      "rationale": "Across the sentences, the policy establishes a trusted correct Boolean reference, normalization, whole-response comparison, and full credit exactly for a match. Together these require reference equality.",
+      "semantic_evidence_quotes": [
+        "The trusted reference records the correct answer as True or False.",
+        "Remove whitespace at the outer edges of the response and ignore letter case when grading.",
+        "This comparison covers the response from beginning to end.",
+        "A match earns full credit, and a mismatch does not."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "The preceding comparison gives match a clear antecedent, and the beginning-to-end sentence supplies whole-string scope. Case-insensitive comparison applies to response and reference; no sentence permits explanations or the opposite label."
+    },
+    {
+      "task_id": "P23",
+      "semantic_class": "U",
+      "family": "direct_instruction",
+      "expected_obligations": null,
+      "rationale": "Arbitrary text and prose explicitly receive full credit. Such responses can violate both whole-string Boolean-token validity and whole-string reference equality, so neither available obligation is necessary.",
+      "semantic_evidence_quotes": [
+        "Give full credit to every submitted text response, including a plain-language explanation or other unrestricted prose.",
+        "The response need not be True or False and need not reproduce the trusted correct reference; arbitrary text earns full credit as well."
+      ],
+      "abstention_kind": "not_expressible",
+      "ambiguity_audit": "Unrestricted prose is positively authorized for full credit rather than inferred from an absent restriction. The text explicitly removes both Boolean-format and reference-matching requirements."
+    },
+    {
+      "task_id": "P62",
+      "semantic_class": "U",
+      "family": "conditional_policy",
+      "expected_obligations": null,
+      "rationale": "The text-response condition explicitly admits arbitrary strings and natural-language explanations for full credit. These need neither be Boolean tokens nor equal the reference, leaving no necessary obligation in the available pair.",
+      "semantic_evidence_quotes": [
+        "If the candidate is a text response, award full credit without checking its wording or format.",
+        "This applies whether the response is a Boolean label, a natural-language explanation, or any other string.",
+        "Even if its entire text differs from the trusted correct reference, it still earns full credit."
+      ],
+      "abstention_kind": "not_expressible",
+      "ambiguity_audit": "The positive conditional explicitly covers unrestricted strings, not only Boolean labels. Its reference-disagreement branch removes equality; full credit for natural-language explanations removes Boolean-token validity."
+    },
+    {
+      "task_id": "P59",
+      "semantic_class": "U",
+      "family": "scope_negation",
+      "expected_obligations": null,
+      "rationale": "The policy expressly awards full credit to every text response, including non-Boolean prose and reference-disagreeing text. Therefore neither available obligation is necessary, and abstention reflects non-expressibility rather than uncertainty.",
+      "semantic_evidence_quotes": [
+        "Do not withhold full credit because a response uses natural prose, includes an explanation, or differs from the trusted correct reference.",
+        "Every text response receives full credit without further conditions; a standalone Boolean label is not required."
+      ],
+      "abstention_kind": "not_expressible",
+      "ambiguity_audit": "The positive every-text-response sentence prevents the negative clauses from being read as mere exceptions to an unstated restriction. Full-credit prose and explicit reference disagreement each supply a clear counterexample to a target obligation."
+    },
+    {
+      "task_id": "P84",
+      "semantic_class": "E",
+      "family": "scope_negation",
+      "expected_obligations": [
+        "equals_reference"
+      ],
+      "rationale": "The limited allowances preserve exact normalized whole-response equality to the correct reference. Excluding extra words and the opposite Boolean label makes the equality obligation explicit.",
+      "semantic_evidence_quotes": [
+        "the only permitted departures from the trusted correct True-or-False reference are capitalization and whitespace at the beginning or end of the response.",
+        "Extra words are not permitted, and the opposite label does not qualify.",
+        "Responses satisfying this whole-response match, after trimming and lowercasing, receive full credit."
+      ],
+      "abstention_kind": null,
+      "ambiguity_audit": "Only scopes the permitted variations to capitalization and outer whitespace. The reference is explicitly correct, and the last sentence grants full credit to compliant whole-response matches without a hidden extra condition."
+    }
+  ],
+  "authorship": {
+    "source_type": "researcher-authored synthetic scoring-policy controls",
+    "upstream_contracts": false,
+    "external_sources": [],
+    "generation": "Authored directly by the assigned description author; no external fetching or additional model calls.",
+    "blinding": "The author did not inspect the rule extractor, development material, results, or model outputs.",
+    "ordering": {
+      "method": "Python random.Random(seed).shuffle over the predeclared 12-card list",
+      "seed": 731109
+    },
+    "label_status": "Researcher-assigned intended-semantics labels, not machine-proved implication or soundness gold."
+  },
+  "units": {
+    "description_count": 12,
+    "linguistic_family_count": 4,
+    "semantic_class_count": 3,
+    "crossing": "One description for each of four linguistic families crossed with E, V, and U.",
+    "independence": "These are 12 controlled descriptions of three semantic conditions, not 12 independent real programs or upstream contracts.",
+    "model_input": "question_description is the only policy content. Opaque task_id is administrative schema bookkeeping; empty placeholder_notes and the fixed analysis profile are also supplied. Labels, family names, filenames, rationales, evidence, audits, and provenance are excluded.",
+    "common_analysis_environment": {
+      "candidate_domain": "native string or None",
+      "reference_domain": [
+        "True",
+        "False"
+      ],
+      "reference_role": "trusted correct canonical label",
+      "normalization": "strip leading/trailing whitespace, then lowercase",
+      "full_credit_threshold": 1,
+      "origin": "Fixed analysis assumptions supplied by the experiment, not facts inferred from any description."
+    },
+    "class_interpretation": {
+      "E": "Whole normalized candidate equality to the trusted correct canonical reference is necessary for full credit. Equality already entails Boolean-token validity; E plus V is the same class E.",
+      "V": "Whole normalized candidate Boolean-token validity is necessary for full credit, while either label is accepted independently of the trusted correct reference.",
+      "U": "The description positively grants full credit to unrestricted text or natural prose, so neither whole-string Boolean validity nor whole-string equality is necessary. The intended abstention reason is not_expressible."
+    },
+    "scope_of_claim": "Controlled intended-semantics evaluation only. These labels do not prove formal implication from natural language, certify extractor soundness, or establish performance on real upstream programs."
+  }
+}

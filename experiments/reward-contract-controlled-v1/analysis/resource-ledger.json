@@ -1,0 +1,193 @@
+{
+  "requests": 12,
+  "completed_turns": 12,
+  "statuses": {
+    "complete": 8,
+    "abstained": 4,
+    "failed": 0,
+    "rejected": 0
+  },
+  "tokens": {
+    "input_tokens": 303662,
+    "output_tokens": 1834,
+    "cached_input_tokens": 83328,
+    "cache_write_input_tokens": 0,
+    "reasoning_output_tokens": 0
+  },
+  "summed_request_seconds": 84.8577,
+  "model_identities": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "temperature_and_seed": "not controlled/reported",
+  "scope": "Experimental request totals only; excludes research/design/coding/review AI. Input tokens include unobserved service context; no price or token-only explicit-prompt claim.",
+  "records": [
+    {
+      "task_id": "P17",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 24672,
+        "cached_input_tokens": 15488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 151,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 7.388,
+      "response_sha256": "8f91921cac951bb7d1fb69409dc755f0b625b712af2cb20a08676eb8050b8415"
+    },
+    {
+      "task_id": "P23",
+      "status": "abstained",
+      "usage": {
+        "input_tokens": 24465,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 64,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 3.9282,
+      "response_sha256": "2a3815a93697b06995b9ea70b5d79b8eb43b8f92f39e587ff8203481ca82cd79"
+    },
+    {
+      "task_id": "P28",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 27271,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 210,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 8.2242,
+      "response_sha256": "682c1877235e57ca079f036e82aa12e6987e837f3ccaf19c2e6672e88b7c70ca"
+    },
+    {
+      "task_id": "P35",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 27265,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 145,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 7.6193,
+      "response_sha256": "ce03d7ef4d54d1bca56f5b0c0d7d650ac83369acaa1ca80651ec76c5dad65170"
+    },
+    {
+      "task_id": "P42",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 24672,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 225,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 7.8518,
+      "response_sha256": "e0827b623d8929fbbf6249c35229194a52ebd24387cf450ca066f7d44d7a4168"
+    },
+    {
+      "task_id": "P46",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 24673,
+        "cached_input_tokens": 15488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 226,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 7.6996,
+      "response_sha256": "c441ced15fe346795025f217158723d852f6b592dc90b9c197f28fd78c0a373f"
+    },
+    {
+      "task_id": "P59",
+      "status": "abstained",
+      "usage": {
+        "input_tokens": 24680,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 6.4618,
+      "response_sha256": "d55af8ab036b87551a21b45147b1e01b2bc36e79e87b6ff362d0f17458d41096"
+    },
+    {
+      "task_id": "P62",
+      "status": "abstained",
+      "usage": {
+        "input_tokens": 24671,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 95,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 5.5517,
+      "response_sha256": "35c9b90f6aa5f9fbbe3e39b820c598f1fc794ed01167b8b1ee76603774fb37a0"
+    },
+    {
+      "task_id": "P73",
+      "status": "abstained",
+      "usage": {
+        "input_tokens": 24673,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 98,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 5.3934,
+      "response_sha256": "6c2b8026e733af03704275999d0a60d1665b59dd9a35b995ff1b0f489ff32036"
+    },
+    {
+      "task_id": "P84",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 24679,
+        "cached_input_tokens": 15488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 197,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 10.1986,
+      "response_sha256": "79c885c299e901833f57007031122ac270442717e8e27697107ca654db53fde6"
+    },
+    {
+      "task_id": "P91",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 27268,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 164,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 7.5947,
+      "response_sha256": "ca8ea5f91be893833bfba1abdf07e4b4ba5722a2ad40fb18c42497da4e82ffaa"
+    },
+    {
+      "task_id": "P96",
+      "status": "complete",
+      "usage": {
+        "input_tokens": 24673,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 176,
+        "reasoning_output_tokens": 0
+      },
+      "wall_seconds": 6.9464,
+      "response_sha256": "d8e46dc618863d5a9addb4f149c79593179ffaf1c78b87925b783722e2de665d"
+    }
+  ],
+  "parallel_batch_elapsed_seconds": 32.8394
+}

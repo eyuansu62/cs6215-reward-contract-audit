@@ -1,0 +1,21 @@
+{
+  "task": {
+    "task_id": "P28",
+    "question_description": "If the whole response equals the trusted correct True-or-False reference after both are trimmed at their outer edges and lowercased, award full credit. Otherwise, do not award full credit. In particular, a correct label followed by an explanation fails this check, and so does the opposite label on its own.",
+    "placeholder_notes": {}
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "subjects": [
+    {
+      "id": "rg-issue-543-original",
+      "function_family": "rg-issue-543",
+      "contract_id": "C_PROBABILITY_FULL",
+      "disposition": "reported_bug_original",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+      "source_sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+      "class": "CoinFlipDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-543-original/score_answer.py",
+          "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+          "ast_sha256": "25d747080224c4cdb953bf9d00a070a38b2a3ee4cc1be3e49b850249802f19d0",
+          "extraction": {
+            "qualified_name": "CoinFlipDataset.score_answer",
+            "start_line": 113,
+            "end_line": 149,
+            "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+            "module_sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/bugs.json",
+      "execution_evidence": "results/replay-02/rg-issue-543-original.json"
+    },
+    {
+      "id": "rg-issue-544-original",
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "disposition": "reported_bug_original",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "class": "GameOfLifeHaltingDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-544-original/score_answer.py",
+          "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+          "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+            "module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/bugs.json",
+      "execution_evidence": "results/replay-02/rg-issue-544-original.json"
+    },
+    {
+      "id": "rg-issue-545-original",
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "disposition": "reported_bug_original",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+      "class": "ComplexArithmeticDataset",
+      "method": "score_answer",
+      "helpers": [
+        "parse_string_to_complex"
+      ],
+      "extracted_methods": [
+        {
+          "name": "parse_string_to_complex",
+          "source_path": "extracted/rg-issue-545-original/parse_string_to_complex.py",
+          "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+            "start_line": 111,
+            "end_line": 166,
+            "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+            "module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-545-original/score_answer.py",
+          "source_sha256": "02ce23747621aa9e4abc88f2f9ff37a1e57ef455ca8ea54ddb89375a8ed23a62",
+          "ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.score_answer",
+            "start_line": 168,
+            "end_line": 183,
+            "source_sha256": "02ce23747621aa9e4abc88f2f9ff37a1e57ef455ca8ea54ddb89375a8ed23a62",
+            "module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/bugs.json",
+      "execution_evidence": "results/replay-02/rg-issue-545-original.json"
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "disposition": "proposed_upstream_repair",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+      "class": "GameOfLifeHaltingDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-pr-561-proposed-repair/score_answer.py",
+          "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+          "ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+            "module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/bugs.json",
+      "execution_evidence": "results/replay-02/rg-pr-561-proposed-repair.json"
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "disposition": "proposed_upstream_repair",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+      "class": "ComplexArithmeticDataset",
+      "method": "score_answer",
+      "helpers": [
+        "parse_string_to_complex"
+      ],
+      "extracted_methods": [
+        {
+          "name": "parse_string_to_complex",
+          "source_path": "extracted/rg-pr-562-proposed-repair/parse_string_to_complex.py",
+          "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+            "start_line": 111,
+            "end_line": 166,
+            "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+            "module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-pr-562-proposed-repair/score_answer.py",
+          "source_sha256": "bbd11031b433de4bfc9b6664295511f62d3ad366e71b92f8c2045f022da3a9d8",
+          "ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.score_answer",
+            "start_line": 168,
+            "end_line": 187,
+            "source_sha256": "bbd11031b433de4bfc9b6664295511f62d3ad366e71b92f8c2045f022da3a9d8",
+            "module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/bugs.json",
+      "execution_evidence": "results/replay-02/rg-pr-562-proposed-repair.json"
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "function_family": "PalindromeDataset.score_answer",
+      "contract_id": "C_PALINDROME_FULL",
+      "disposition": "normal_control",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+      "source_sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+      "class": "PalindromeDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/control-palindrome-validity-main/score_answer.py",
+          "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+          "ast_sha256": "9c6fc330cea2c8195759eb0dab0a239a219c47992d317034c09beabf9e9e4c21",
+          "extraction": {
+            "qualified_name": "PalindromeDataset.score_answer",
+            "start_line": 97,
+            "end_line": 126,
+            "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+            "module_sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/controls.json",
+      "execution_evidence": "results/replay-02/control-palindrome-validity-main.json"
+    },
+    {
+      "id": "control-group-anagrams-order-main",
+      "function_family": "GroupAnagramsDataset.score_answer",
+      "contract_id": "C_ANAGRAM_ORDER_CONDITIONAL",
+      "disposition": "qualified_semantic_order_control_not_general_safety_negative",
+      "primary_eligible": false,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+      "source_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+      "class": "GroupAnagramsDataset",
+      "method": "score_answer",
+      "helpers": [
+        "_sort_nested_list"
+      ],
+      "extracted_methods": [
+        {
+          "name": "_sort_nested_list",
+          "source_path": "extracted/control-group-anagrams-order-main/_sort_nested_list.py",
+          "source_sha256": "f9bf93062ffb17a6f5e76a5da364e14c00229900322f8f2830c4bb4eb03f96ec",
+          "ast_sha256": "e71e8121e893ea6c4ad688cdd8ec7719f396ca36b61d42bcb0481327f54e375b",
+          "extraction": {
+            "qualified_name": "GroupAnagramsDataset._sort_nested_list",
+            "start_line": 67,
+            "end_line": 69,
+            "source_sha256": "f9bf93062ffb17a6f5e76a5da364e14c00229900322f8f2830c4bb4eb03f96ec",
+            "module_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/control-group-anagrams-order-main/score_answer.py",
+          "source_sha256": "a9f4a4026ba2589cbda5576381ad62f2813e0e931ae7e511093e4fc197cf5182",
+          "ast_sha256": "86e18b876068ca355beec75be86c324dabd1fdb71084334aafc60ae10fd557ad",
+          "extraction": {
+            "qualified_name": "GroupAnagramsDataset.score_answer",
+            "start_line": 88,
+            "end_line": 103,
+            "source_sha256": "a9f4a4026ba2589cbda5576381ad62f2813e0e931ae7e511093e4fc197cf5182",
+            "module_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/controls.json",
+      "execution_evidence": "results/replay-02/control-group-anagrams-order-main.json"
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "function_family": "PrimeFactorizationDataset.score_answer",
+      "contract_id": "C_PRIME_FACTORS_FULL",
+      "disposition": "normal_control",
+      "primary_eligible": true,
+      "split": "development_source_exposed",
+      "project": "open-thought/reasoning-gym",
+      "source_file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+      "source_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+      "class": "PrimeFactorizationDataset",
+      "method": "score_answer",
+      "helpers": [
+        "_normalize_answer"
+      ],
+      "extracted_methods": [
+        {
+          "name": "_normalize_answer",
+          "source_path": "extracted/control-prime-factorization-main/_normalize_answer.py",
+          "source_sha256": "721226999b692ae252e39d7d76f048c92f2a2e1ff6caed646ea19fab0c6a2cc4",
+          "ast_sha256": "f5eef7c9b8eebf48757f5168ff872436f9294c2544725dd1bfa9d850f41f33fd",
+          "extraction": {
+            "qualified_name": "PrimeFactorizationDataset._normalize_answer",
+            "start_line": 50,
+            "end_line": 55,
+            "source_sha256": "721226999b692ae252e39d7d76f048c92f2a2e1ff6caed646ea19fab0c6a2cc4",
+            "module_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/control-prime-factorization-main/score_answer.py",
+          "source_sha256": "5de0f48c97d1210672df760b3b68823449782ed6deae50eb7c2cd6bcd11352a1",
+          "ast_sha256": "661669714196aab3f91c599b55a1176332a5c765abd8589982a156dfcf20d0a4",
+          "extraction": {
+            "qualified_name": "PrimeFactorizationDataset.score_answer",
+            "start_line": 57,
+            "end_line": 70,
+            "source_sha256": "5de0f48c97d1210672df760b3b68823449782ed6deae50eb7c2cd6bcd11352a1",
+            "module_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ],
+      "review_record": "records/controls.json",
+      "execution_evidence": "results/replay-02/control-prime-factorization-main.json"
+    }
+  ],
+  "source_only_index": true,
+  "analyzer_predictions_exist": false
+}

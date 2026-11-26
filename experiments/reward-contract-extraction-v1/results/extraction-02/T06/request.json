@@ -1,0 +1,7 @@
+{
+  "task_id": "T06",
+  "question_description": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer.",
+  "placeholder_notes": {
+    "question_fraction": "instance-specific input fraction in its displayed representation"
+  }
+}

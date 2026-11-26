@@ -1,0 +1,8 @@
+{
+  "task_id": "B01",
+  "question_description": "This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\nWill this game halt at or before {max_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\n\nInitial board:\n{initial_board}",
+  "placeholder_notes": {
+    "max_steps": "Instance-specific nonnegative step budget; at-or-before is inclusive.",
+    "initial_board": "Instance-specific displayed initial board; do not solve the placeholders."
+  }
+}

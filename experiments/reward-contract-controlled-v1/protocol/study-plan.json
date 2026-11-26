@@ -1,0 +1,63 @@
+{
+  "research_question": "Does a fixed one-shot description-only LLM extractor outperform a reasonable fixed rule extractor in semantic selection and witness-justified downstream decisions on controlled policies using an unchanged static checker?",
+  "scope": "Synthetic policy-description selection with controlled source pairings. Not new upstream bugs, independent real-project evaluation, or human-effort measurement.",
+  "test_design": {
+    "descriptions": 12,
+    "families": 4,
+    "semantic_classes": [
+      "E",
+      "V",
+      "U"
+    ],
+    "each_class": 4,
+    "programs": 3,
+    "nonnull_standard_combinations": 6,
+    "nonnull_downstream_cells_per_condition": 24,
+    "U_administrative_cells_per_condition": 12,
+    "development_descriptions": 6,
+    "test_description_author_did_not_read_rules": true,
+    "rule_author_did_not_read_test_descriptions": true,
+    "description_labels": "Researcher-authored before predictions; no test-model judging, not machine-proved natural-language gold."
+  },
+  "methods": [
+    "reference",
+    "rules",
+    "llm",
+    "fixed_E",
+    "fixed_V",
+    "fixed_null"
+  ],
+  "information_boundary": {
+    "rules_and_llm": "Opaque task ID, same complete synthetic description and fixed analysis profile only. No label, family, source, oracle, reference contract, witness or other outputs.",
+    "constant_conditions": "Assumed fixed contracts, not evidence-qualified description extractors.",
+    "compiler": "Unchanged explicit obligation compiler; exact ordered list retained. E and E+V equivalent only in evaluation, no rewrite."
+  },
+  "transport": {
+    "cli": "codex-cli 0.147.0",
+    "model": "Default service with user config ignored; record actual identity if exposed, otherwise null.",
+    "temperature": "Not exposed or controlled",
+    "seed": "Not exposed or controlled",
+    "max_requests": 12,
+    "one_request_per_card": true,
+    "timeout_seconds": 240,
+    "parallelism": 3,
+    "automatic_retries": 0,
+    "commands": "Fresh ephemeral isolated read-only directory, project docs disabled, JSON schema, audit all tool/action events.",
+    "failed_or_rejected_response": "Preserve raw logs; downstream null/Unknown but extraction class INVALID, never correct U."
+  },
+  "preflight_gate": "Freeze all descriptions, rules, prompt, labels, probes, expected matrix, methods/scripts/dependencies before six standard combinations. Require all determinate expected verdicts, preserved contracts, source certificates and independent native witness checks. On failure stop; do not repair analyzer, source, prompt or rule.",
+  "primary_metrics": [
+    "12-card semantic class confusion with invalid responses separate",
+    "Paired LLM-vs-rules correct downstream decisions on24nonnullcells withTP/FP/FN/TN/Unknown separately",
+    "Witness-justified alarms under gold policy; label-correct alarms with unjustified witnesses reported separately",
+    "8nonnullcards with correct semantic class and all3expected determinate results",
+    "U-card unwarranted contracts and consequent alarms, not staticFP/TN"
+  ],
+  "unknown_policy": "Retain Unknown reasons; positive recall denominator includes abstentions. Do not discard failures or treat matching Unknown as correct.",
+  "witness_policy": "For each certificate and fixed probe, independently evaluate gold and selected obligations from native values/reward. Wrong-policy alarm can coincide with a genuinely buggy function yet have an invalid witness; this is not credited as verified detection gain. No observed reward fed into static APIs.",
+  "benefit_rule": "More correct paired downstream decisions with no increase in erroneous decisions and no increase in unjustified alarm witnesses/U-policy obligations supports a bounded controlled gain. Addedcoverage withaddederrors is a tradeoff. Equal downstream results imply no observed detection gain. Compare fixedE/V too; beating null alone is not evidence.",
+  "statistical_scope": "12descriptions clustered in4authoredlanguagefamilies;24nonnullcells repeat6semantic/programcombinations. Report exact tables, no iid p-values/generalization/novel-bug counts.",
+  "stopping_rule": "Single frozen batch; no outcome-driven task replacement, retry, prompt/rule tuning, source rewriting or analyzer expansion.",
+  "preservation": "New directory only; all pre-existing experiment/dataset/output/submission files hash-snapshotted before work.",
+  "one_sided_scope": "Audits only reward>=1 => selected necessary obligations. No_alarm does not prove complete reward-policy implementation: equality can under-reward the opposite valid label under V; token_only can under-reward case/whitespace variants. Under-rewarding, completeness, and U policies are not certified by these checks."
+}

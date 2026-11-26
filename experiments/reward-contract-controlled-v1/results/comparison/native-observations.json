@@ -1,0 +1,2612 @@
+{
+  "executions": [
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "__not_a_boolean_token__",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"__not_a_boolean_token__\",\"True\"]"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "False",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"False\",\"True\"]"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "request": {
+        "program_id": "token_only",
+        "answer": "True",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"token_only\",\"True\",\"False\"]"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "True",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"True\",\"False\"]"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "True",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"True\",\"True\"]"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "False",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"False\",\"False\"]"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "banana",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"banana\",\"True\"]"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "banana",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\"banana\",\"False\"]"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "request": {
+        "program_id": "truthiness",
+        "answer": "",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"truthiness\",\"\",\"True\"]"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "request": {
+        "program_id": "truthiness",
+        "answer": null,
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"truthiness\",null,\"True\"]"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "request": {
+        "program_id": "truthiness",
+        "answer": " true ",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"truthiness\",\" true \",\"True\"]"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "request": {
+        "program_id": "equality",
+        "answer": "False",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"equality\",\"False\",\"True\"]"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "request": {
+        "program_id": "equality",
+        "answer": "True",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"equality\",\"True\",\"False\"]"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "request": {
+        "program_id": "equality",
+        "answer": "True",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"equality\",\"True\",\"True\"]"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "request": {
+        "program_id": "equality",
+        "answer": "False",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"equality\",\"False\",\"False\"]"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "request": {
+        "program_id": "equality",
+        "answer": "banana",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"equality\",\"banana\",\"True\"]"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "request": {
+        "program_id": "equality",
+        "answer": "banana",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"equality\",\"banana\",\"False\"]"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "request": {
+        "program_id": "equality",
+        "answer": "",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"equality\",\"\",\"True\"]"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "request": {
+        "program_id": "equality",
+        "answer": null,
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"equality\",null,\"True\"]"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "request": {
+        "program_id": "equality",
+        "answer": " true ",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"equality\",\" true \",\"True\"]"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "request": {
+        "program_id": "token_only",
+        "answer": "False",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"token_only\",\"False\",\"True\"]"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "request": {
+        "program_id": "token_only",
+        "answer": "True",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"token_only\",\"True\",\"True\"]"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "request": {
+        "program_id": "token_only",
+        "answer": "False",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "1.0\n",
+      "stderr": "",
+      "reward": 1.0,
+      "cache_key": "[\"token_only\",\"False\",\"False\"]"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "request": {
+        "program_id": "token_only",
+        "answer": "banana",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"token_only\",\"banana\",\"True\"]"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "request": {
+        "program_id": "token_only",
+        "answer": "banana",
+        "reference": "False",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"token_only\",\"banana\",\"False\"]"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "request": {
+        "program_id": "token_only",
+        "answer": "",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"token_only\",\"\",\"True\"]"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "request": {
+        "program_id": "token_only",
+        "answer": null,
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"token_only\",null,\"True\"]"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "request": {
+        "program_id": "token_only",
+        "answer": " true ",
+        "reference": "True",
+        "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+      },
+      "argv": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+      ],
+      "timeout_seconds": 8,
+      "returncode": 0,
+      "stdout": "0.0\n",
+      "stderr": "",
+      "reward": 0.0,
+      "cache_key": "[\"token_only\",\" true \",\"True\"]"
+    }
+  ],
+  "uses": [
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": false,
+      "purpose": "P35:reference:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P35:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": false,
+      "purpose": "P35:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": false,
+      "purpose": "P35:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P35:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P28:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P28:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P28:rules:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P28:rules:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P28:rules:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P28:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P28:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P28:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P28:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P28:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P28:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P91:reference:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P91:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P91:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P91:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P91:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P73:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P73:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P73:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P96:reference:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P96:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P96:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P96:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P96:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P46:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P46:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P46:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P46:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P46:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P46:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P46:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P46:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P17:reference:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P17:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P17:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P17:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P17:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P42:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P42:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P42:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P42:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P42:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P42:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P42:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P42:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P23:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P23:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P23:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P62:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P62:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P62:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P59:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P59:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P59:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P84:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P84:reference:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P84:llm:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P84:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P84:llm:equals_reference"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P84:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P84:fixed_E:equals_reference"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P84:fixed_V:valid_boolean_token"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P35:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": false,
+      "purpose": "P35:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": false,
+      "purpose": "P35:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": false,
+      "purpose": "P35:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": false,
+      "purpose": "P35:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": false,
+      "purpose": "P35:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": false,
+      "purpose": "P35:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": false,
+      "purpose": "P35:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": false,
+      "purpose": "P35:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P35:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": false,
+      "purpose": "P35:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": false,
+      "purpose": "P35:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": false,
+      "purpose": "P35:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": false,
+      "purpose": "P35:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": false,
+      "purpose": "P35:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": false,
+      "purpose": "P35:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": false,
+      "purpose": "P35:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": false,
+      "purpose": "P35:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": false,
+      "purpose": "P35:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": false,
+      "purpose": "P35:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P35:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": false,
+      "purpose": "P35:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": false,
+      "purpose": "P35:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": false,
+      "purpose": "P35:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": false,
+      "purpose": "P35:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": false,
+      "purpose": "P35:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": false,
+      "purpose": "P35:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": false,
+      "purpose": "P35:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P28:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P28:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P28:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P28:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P28:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P28:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P28:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P28:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P28:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P28:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P28:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P28:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P28:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P28:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P28:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P28:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P28:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P28:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P28:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P28:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P28:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P28:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P28:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P28:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P28:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P28:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P28:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P28:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P91:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P91:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P91:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P91:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P91:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P91:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P91:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P91:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P91:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P91:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P91:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P91:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P91:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P91:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P91:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P91:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P91:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P91:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P91:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P91:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P91:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P91:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P91:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P91:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P91:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P91:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P91:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P91:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P73:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P73:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P73:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P73:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P73:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P73:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P73:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P73:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P73:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P73:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P73:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P73:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P73:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P73:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P73:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P73:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P73:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P73:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P73:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P73:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P73:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P73:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P73:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P73:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P73:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P73:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P73:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P73:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P96:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P96:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P96:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P96:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P96:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P96:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P96:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P96:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P96:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P96:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P96:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P96:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P96:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P96:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P96:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P96:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P96:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P96:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P96:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P96:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P96:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P96:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P96:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P96:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P96:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P96:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P96:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P96:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P46:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P46:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P46:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P46:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P46:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P46:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P46:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P46:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P46:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P46:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P46:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P46:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P46:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P46:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P46:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P46:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P46:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P46:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P46:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P46:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P46:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P46:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P46:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P46:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P46:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P46:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P46:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P46:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P17:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P17:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P17:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P17:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P17:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P17:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P17:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P17:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P17:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P17:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P17:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P17:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P17:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P17:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P17:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P17:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P17:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P17:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P17:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P17:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P17:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P17:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P17:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P17:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P17:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P17:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P17:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P17:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P42:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P42:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P42:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P42:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P42:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P42:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P42:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P42:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P42:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P42:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P42:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P42:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P42:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P42:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P42:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P42:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P42:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P42:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P42:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P42:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P42:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P42:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P42:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P42:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P42:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P42:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P42:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P42:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P23:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P23:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P23:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P23:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P23:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P23:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P23:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P23:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P23:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P23:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P23:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P23:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P23:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P23:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P23:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P23:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P23:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P23:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P23:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P23:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P23:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P23:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P23:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P23:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P23:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P23:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P23:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P23:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P62:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P62:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P62:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P62:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P62:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P62:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P62:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P62:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P62:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P62:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P62:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P62:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P62:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P62:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P62:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P62:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P62:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P62:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P62:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P62:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P62:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P62:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P62:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P62:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P62:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P62:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P62:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P62:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P59:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P59:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P59:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P59:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P59:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P59:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P59:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P59:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P59:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P59:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P59:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P59:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P59:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P59:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P59:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P59:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P59:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P59:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P59:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P59:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P59:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P59:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P59:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P59:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P59:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P59:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P59:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P59:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-549e9d65dcd11f0df90c",
+      "cached": true,
+      "purpose": "P84:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-baed70c42210a7248405",
+      "cached": true,
+      "purpose": "P84:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-de62734f125727f59f81",
+      "cached": true,
+      "purpose": "P84:probe:correct-true"
+    },
+    {
+      "execution_id": "native-175aad542f3c8d4c2b4b",
+      "cached": true,
+      "purpose": "P84:probe:correct-false"
+    },
+    {
+      "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+      "cached": true,
+      "purpose": "P84:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-f0c3ffa49e6e51a72984",
+      "cached": true,
+      "purpose": "P84:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-ac1bb62a105005d09bd3",
+      "cached": true,
+      "purpose": "P84:probe:empty"
+    },
+    {
+      "execution_id": "native-8086549bf9a3ad1a58f6",
+      "cached": true,
+      "purpose": "P84:probe:none"
+    },
+    {
+      "execution_id": "native-1bd5522757889338cde8",
+      "cached": true,
+      "purpose": "P84:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-0a451cb4875e00da57af",
+      "cached": true,
+      "purpose": "P84:probe:source-generated-db7c02e0b90d"
+    },
+    {
+      "execution_id": "native-438e40da3602375276d5",
+      "cached": true,
+      "purpose": "P84:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-4a6ed158ccba96e18a99",
+      "cached": true,
+      "purpose": "P84:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-e8673f0ec2a99f3e9ccd",
+      "cached": true,
+      "purpose": "P84:probe:correct-true"
+    },
+    {
+      "execution_id": "native-d5d124f9352e28677927",
+      "cached": true,
+      "purpose": "P84:probe:correct-false"
+    },
+    {
+      "execution_id": "native-c6e3ae94a3e362134f9e",
+      "cached": true,
+      "purpose": "P84:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-7b52765972407b4dda99",
+      "cached": true,
+      "purpose": "P84:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-530436d268953f1a7148",
+      "cached": true,
+      "purpose": "P84:probe:empty"
+    },
+    {
+      "execution_id": "native-4d0dfd3ea06a3733846b",
+      "cached": true,
+      "purpose": "P84:probe:none"
+    },
+    {
+      "execution_id": "native-8cffeff36c233eae51ef",
+      "cached": true,
+      "purpose": "P84:probe:normalized-correct"
+    },
+    {
+      "execution_id": "native-8ad24ebb66adfa344a08",
+      "cached": true,
+      "purpose": "P84:probe:opposite-false"
+    },
+    {
+      "execution_id": "native-b028bc6644008befda5e",
+      "cached": true,
+      "purpose": "P84:probe:opposite-true"
+    },
+    {
+      "execution_id": "native-be4f70174b3393aca26e",
+      "cached": true,
+      "purpose": "P84:probe:correct-true"
+    },
+    {
+      "execution_id": "native-1e7302e1f981015b8cbe",
+      "cached": true,
+      "purpose": "P84:probe:correct-false"
+    },
+    {
+      "execution_id": "native-dab96fcafab5e8dc7cd2",
+      "cached": true,
+      "purpose": "P84:probe:invalid-true"
+    },
+    {
+      "execution_id": "native-2ffd3c5d8c3623fff0a6",
+      "cached": true,
+      "purpose": "P84:probe:invalid-false"
+    },
+    {
+      "execution_id": "native-0c13dce2e04851a56c50",
+      "cached": true,
+      "purpose": "P84:probe:empty"
+    },
+    {
+      "execution_id": "native-e65ef5c4107653692d09",
+      "cached": true,
+      "purpose": "P84:probe:none"
+    },
+    {
+      "execution_id": "native-643d22b3776dcbb8c69c",
+      "cached": true,
+      "purpose": "P84:probe:normalized-correct"
+    }
+  ],
+  "execution_count": 28,
+  "cache_hits": 375,
+  "cache_scope": "Identical frozen program_id, native answer, canonical reference within this run"
+}

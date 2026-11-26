@@ -1,0 +1,40 @@
+{
+  "origin": "Explicitly authored AI-assisted development ablation, not new LLM extraction outputs. No natural-language clause inference is performed.",
+  "variants": {
+    "correct": {
+      "schema": "boolean-obligations-v1",
+      "candidate_arg": "answer",
+      "reference_arg": "entry",
+      "reference_key": "answer",
+      "candidate_domain": "native_str_or_none",
+      "trusted_reference": "canonical_True_False",
+      "normalization": [
+        "strip",
+        "lower"
+      ],
+      "full_credit_threshold": 1.0,
+      "obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ]
+    },
+    "missing": null,
+    "omitted_equality": {
+      "schema": "boolean-obligations-v1",
+      "candidate_arg": "answer",
+      "reference_arg": "entry",
+      "reference_key": "answer",
+      "candidate_domain": "native_str_or_none",
+      "trusted_reference": "canonical_True_False",
+      "normalization": [
+        "strip",
+        "lower"
+      ],
+      "full_credit_threshold": 1.0,
+      "obligations": [
+        "valid_boolean_token"
+      ]
+    }
+  },
+  "single_edit": "Delete only obligations[1]=equals_reference; no obligation defaults or type-based completion."
+}

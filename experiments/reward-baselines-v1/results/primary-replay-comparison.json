@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "cases": 7,
+  "method_results": 14,
+  "full_analytical_outputs_equal": true,
+  "all_score_metrics_equal": true,
+  "semgrep_taint_or_pattern_commands_verified": 7,
+  "semgrep_function_return_coverage_commands_verified": 7,
+  "normalization_only": [
+    "wall_seconds",
+    "command fields with flags/bytes checked separately",
+    "recorded run/core paths"
+  ],
+  "new_LLM_or_target_runs": 0,
+  "same_machine_replay": true
+}

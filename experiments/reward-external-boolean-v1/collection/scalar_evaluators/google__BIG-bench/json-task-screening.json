@@ -1,0 +1,164 @@
+{
+  "commit": "092b196c1f8f14a54bbc62f24759d43bde46dd3b",
+  "purpose": "Original JSON task evidence for actual HELM exact/quasi scalar evaluator usage; not trainingreward claim",
+  "records": [
+    {
+      "task": "analytic_entailment",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/bigbench/benchmark_tasks/analytic_entailment/task.json",
+      "path": "bigbench/benchmark_tasks/analytic_entailment/task.json",
+      "sha256": "b5b407a23ab0bef5d019656d072e9b39c7126e33ec607e13c3cf16e471ee8307",
+      "bytes": 13173,
+      "metrics": [
+        "multiple_choice_grade"
+      ],
+      "preferred_score": "multiple_choice_grade",
+      "description": "Identify whether one sentence entails the next",
+      "task_prefix": "Determine whether the following pairs of sentences embody an entailment relation or not.\n",
+      "examples": 70,
+      "canonical_examples": 0,
+      "canonical_first": [],
+      "domain_sample": [
+        "entailment",
+        "no-entailment"
+      ]
+    },
+    {
+      "task": "auto_debugging",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/bigbench/benchmark_tasks/auto_debugging/task.json",
+      "path": "bigbench/benchmark_tasks/auto_debugging/task.json",
+      "sha256": "70cd1ca76acc7497b8eaf87d36f287eaab5f3bffd86433c8333101e32423e926",
+      "bytes": 6655,
+      "metrics": [
+        "exact_str_match"
+      ],
+      "preferred_score": "exact_str_match",
+      "description": "Answer questions about a Python 3.7 program's intermediate state",
+      "task_prefix": null,
+      "examples": 34,
+      "canonical_examples": 1,
+      "canonical_first": [
+        {
+          "index": 14,
+          "example": {
+            "input": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nWhat is test(101)?",
+            "target": "True"
+          }
+        }
+      ],
+      "domain_sample": [
+        "'1048hello'",
+        "12",
+        "2",
+        "25",
+        "2550",
+        "294",
+        "3",
+        "45",
+        "5",
+        "55",
+        "6",
+        "625"
+      ]
+    },
+    {
+      "task": "evaluating_information_essentiality",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/bigbench/benchmark_tasks/evaluating_information_essentiality/task.json",
+      "path": "bigbench/benchmark_tasks/evaluating_information_essentiality/task.json",
+      "sha256": "df5891c9359ebc4835d01bc5963272280fcb3f57f3a7d3b318bd497d60ef8cb7",
+      "bytes": 53830,
+      "metrics": [
+        "multiple_choice_grade"
+      ],
+      "preferred_score": "multiple_choice_grade",
+      "description": "Identify statements that are essential to answer a question",
+      "task_prefix": null,
+      "examples": 68,
+      "canonical_examples": 0,
+      "canonical_first": [],
+      "domain_sample": [
+        "Either statement 1 or statement 2 is sufficient",
+        "Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient",
+        "Statement 1 alone is sufficient while statement 2 alone is insufficient",
+        "Statement 1 and statement 2 taken together are sufficient",
+        "Statement 2 alone is sufficient while statement 1 alone is insufficient",
+        "The question can be answered without either statement"
+      ]
+    },
+    {
+      "task": "misconceptions",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/bigbench/benchmark_tasks/misconceptions/task.json",
+      "path": "bigbench/benchmark_tasks/misconceptions/task.json",
+      "sha256": "f6091db702cb3f3f699c570f732828283a85dbf137b1e1a65b7bcbbe98ebe6db",
+      "bytes": 49182,
+      "metrics": [
+        "multiple_choice_grade"
+      ],
+      "preferred_score": "multiple_choice_grade",
+      "description": "Distinguish true statements from common misconceptions.",
+      "task_prefix": "Is the following statement true or false? Output T for true and F for false.",
+      "examples": 219,
+      "canonical_examples": 0,
+      "canonical_first": [],
+      "domain_sample": [
+        "F",
+        "T"
+      ]
+    },
+    {
+      "task": "mathematical_induction",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/bigbench/benchmark_tasks/mathematical_induction/task.json",
+      "path": "bigbench/benchmark_tasks/mathematical_induction/task.json",
+      "sha256": "942ebe5aab7304dd03823a7bff6d37686669fbe3fe0c4755680f9e92619932a1",
+      "bytes": 16496,
+      "metrics": [
+        "multiple_choice_grade"
+      ],
+      "preferred_score": "multiple_choice_grade",
+      "description": "Verify mathematical induction proofs",
+      "task_prefix": null,
+      "examples": 70,
+      "canonical_examples": 0,
+      "canonical_first": [],
+      "domain_sample": [
+        "No",
+        "Yes"
+      ]
+    },
+    {
+      "task": "logical_args",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/bigbench/benchmark_tasks/logical_args/task.json",
+      "path": "bigbench/benchmark_tasks/logical_args/task.json",
+      "sha256": "821ec7b2852ae698df1124848ec4d681e24b303e6b9e210f330aedd1fccc1af1",
+      "bytes": 29555,
+      "metrics": [
+        "multiple_choice_grade"
+      ],
+      "preferred_score": "multiple_choice_grade",
+      "description": "Find statements which strengthen or weaken logical arguments",
+      "task_prefix": "Please answer the following questions about the structure of logical arguments.\n",
+      "examples": 32,
+      "canonical_examples": 0,
+      "canonical_first": [],
+      "domain_sample": [
+        "2000 calories per day is too few for the average person.",
+        "A causal link exists between sitting and obesity.",
+        "All competing apps feature similar graphics to the newly-updated app.",
+        "All people, both injured and not, are wearing seatbelts.",
+        "Although students can transmit XVirus, they do not display any symptoms.",
+        "Amateur chess players do not know how to analyze chess positions.",
+        "Bitcoins are not physical objects.",
+        "Calorie restriction is not beneficial for anyone.",
+        "Calorie restriction is pseudoscience.",
+        "Calories are not the most important measure of food quality.",
+        "Chess players often know the correct move to make instinctually.",
+        "Children are often very quick to learn chess."
+      ]
+    }
+  ]
+}

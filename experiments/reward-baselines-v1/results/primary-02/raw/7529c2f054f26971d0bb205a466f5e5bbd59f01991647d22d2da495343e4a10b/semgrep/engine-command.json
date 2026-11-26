@@ -1,0 +1,8 @@
+{
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-version"
+  ],
+  "timeout_seconds": 20,
+  "returncode": 0
+}

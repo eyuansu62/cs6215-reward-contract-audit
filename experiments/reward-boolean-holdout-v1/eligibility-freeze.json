@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-11-09T02:36:26.386731+00:00",
+  "stage": "data_eligibility_only_no_experiment",
+  "files_sha256": {
+    "planned-comparison.json": "7b14e4025aad7a8931bb9daa0594cb9400af10ad534cfccd242933176148ae1d",
+    "results/status.json": "0780dd489e039098692133a0270b8be19998c968520242669d7dbb5280b8ca69",
+    "verify_data.py": "d1dfea4d352f9ae464bbd90165606d5ff6465e5d8d24b1be0cecf86f2d0678de",
+    "REPORT.md": "dd3bfa97b30a40743c0506f4f6c70519c276bbe0bfdc7dfc02f08e273847bb4d",
+    "README.md": "589f9dfe524575729b04f8bc643934ef78c773105e52d00cf030ffa1b521000b",
+    "audit/selection-review.json": "152c9d6a92e960f78e24c526da3225eb5ff5098ffd27c5653208046ec582f358",
+    "audit/selection-review.md": "11e0fcca649435e35696cba54ea7bf802d337f6b5e9269155e283cbc54fba984",
+    "audit/additional-source-exposure.json": "856f2c85b4ff7f31b89bf0590f8d115c691e0c4b589e61ab60d08ea14147a16f",
+    "collection/collection-freeze.json": "ecca356087ed930f55adf49fe0baa326169bb8db6a5d79ebcf36cd093be0ed38"
+  },
+  "eligible_new_scorers_selected": 0,
+  "independent_test_executed": false,
+  "preserved_archives_sha256": {
+    "experiments/reward-contract-e2e-v1.zip": "2b95123837b60e95c65d35bc798d6d389fa4729d3a1fbc00a132029adc74f57b",
+    "experiments/reward-contract-loop-v2.zip": "e42c983d75d820ceae49f6068605d642ac27c7bbc099ba5826907ff28f5335f4",
+    "experiments/reward-contract-extraction-v1.zip": "a3832dd0f80e26e9027e00990a6dbb830fae33f5a6264955de1af899ba400f1f",
+    "experiments/reward-baselines-v1.zip": "8cc39df03a1702245edc96f6576db7f76d59e955613dcc825a7d94490b51b17d",
+    "datasets/reasoning-gym-reward-v1.zip": "35d974538ac87f7bb7419512632dd9d97ffed2387dc474c84f1901b07841d880",
+    "outputs/main-experiment-v10.zip": "1ec556817897134f2c9f46f53ef9771caf251ef2394998c604aa00f9a391ed32"
+  }
+}

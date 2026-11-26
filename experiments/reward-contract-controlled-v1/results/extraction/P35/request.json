@@ -1,0 +1,21 @@
+{
+  "task": {
+    "task_id": "P35",
+    "question_description": "Accept either True or False for full credit. Trim leading and trailing whitespace and ignore capitalization, but require the entire remaining response to be one of those two labels. The trusted correct reference must not affect the score: either label earns full credit even when it disagrees with that reference.",
+    "placeholder_notes": {}
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

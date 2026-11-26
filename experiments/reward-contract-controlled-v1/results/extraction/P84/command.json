@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$HOME/.local/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--json",
+    "--output-schema",
+    "$TMPDIR/controlled-contract-blind-_nro1qs2/response-schema.json",
+    "--output-last-message",
+    "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/results/extraction/P84/response.json",
+    "--cd",
+    "$TMPDIR/controlled-contract-blind-_nro1qs2",
+    "-"
+  ],
+  "stdin_sha256": "0c4f0e07c08fffb43cb76fae9e3956592d2f81dbf108ae53fda4fb7e1396b253"
+}

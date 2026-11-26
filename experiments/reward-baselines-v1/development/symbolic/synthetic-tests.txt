@@ -1,0 +1,33 @@
+test_assignments_and_partial_credit (test_symbolic_baseline.SymbolicTests.test_assignments_and_partial_credit) ... ok
+test_assignments_and_unprotected_fallthrough (test_symbolic_baseline.SymbolicTests.test_assignments_and_unprotected_fallthrough) ... ok
+test_constant_helper_does_not_certify_equality (test_symbolic_baseline.SymbolicTests.test_constant_helper_does_not_certify_equality) ... ok
+test_dead_bad_return (test_symbolic_baseline.SymbolicTests.test_dead_bad_return) ... ok
+test_effectful_exception_handler_type_is_unsupported (test_symbolic_baseline.SymbolicTests.test_effectful_exception_handler_type_is_unsupported) ... ok
+test_exception_handlers_are_not_ignored (test_symbolic_baseline.SymbolicTests.test_exception_handlers_are_not_ignored) ... ok
+test_exception_target_shadows_builtin_for_whole_function (test_symbolic_baseline.SymbolicTests.test_exception_target_shadows_builtin_for_whole_function) ... ok
+test_identifier_and_unit_id_do_not_classify (test_symbolic_baseline.SymbolicTests.test_identifier_and_unit_id_do_not_classify) ... ok
+test_intermediate_exception_is_not_a_normal_alarm_path (test_symbolic_baseline.SymbolicTests.test_intermediate_exception_is_not_a_normal_alarm_path) ... ok
+test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) ... ok
+test_locally_shadowed_builtin_is_not_native (test_symbolic_baseline.SymbolicTests.test_locally_shadowed_builtin_is_not_native) ... ok
+test_loop_is_unsupported (test_symbolic_baseline.SymbolicTests.test_loop_is_unsupported) ... ok
+test_normalized_equality (test_symbolic_baseline.SymbolicTests.test_normalized_equality) ... ok
+test_numeric_contract_not_claimed (test_symbolic_baseline.SymbolicTests.test_numeric_contract_not_claimed) ... ok
+test_palindrome_dominating_guards (test_symbolic_baseline.SymbolicTests.test_palindrome_dominating_guards) ... ok
+test_palindrome_missing_guard_is_unknown (test_symbolic_baseline.SymbolicTests.test_palindrome_missing_guard_is_unknown) ... ok
+test_prime_helper_source_certificate (test_symbolic_baseline.SymbolicTests.test_prime_helper_source_certificate) ... ok
+test_raise_expression_effects_are_not_skipped (test_symbolic_baseline.SymbolicTests.test_raise_expression_effects_are_not_skipped) ... ok
+test_reference_mutation_cannot_reuse_stale_facts (test_symbolic_baseline.SymbolicTests.test_reference_mutation_cannot_reuse_stale_facts) ... ok
+test_shadowed_exception_handler_type_is_unproven (test_symbolic_baseline.SymbolicTests.test_shadowed_exception_handler_type_is_unproven) ... ok
+test_short_circuit_dead_unknown_call (test_symbolic_baseline.SymbolicTests.test_short_circuit_dead_unknown_call) ... ok
+test_truthiness_behind_equality_is_safe (test_symbolic_baseline.SymbolicTests.test_truthiness_behind_equality_is_safe) ... ok
+test_truthiness_counterexample (test_symbolic_baseline.SymbolicTests.test_truthiness_counterexample) ... ok
+test_undeclared_reference_state_cannot_establish_reachability (test_symbolic_baseline.SymbolicTests.test_undeclared_reference_state_cannot_establish_reachability) ... ok
+test_unknown_call_effects_stop_native_reference_reasoning (test_symbolic_baseline.SymbolicTests.test_unknown_call_effects_stop_native_reference_reasoning) ... ok
+test_unknown_call_terms_do_not_prove_contradictions (test_symbolic_baseline.SymbolicTests.test_unknown_call_terms_do_not_prove_contradictions) ... ok
+test_unknown_calls_and_mutations_cannot_prove_safety (test_symbolic_baseline.SymbolicTests.test_unknown_calls_and_mutations_cannot_prove_safety) ... ok
+test_valueless_annotation_does_not_assign_none (test_symbolic_baseline.SymbolicTests.test_valueless_annotation_does_not_assign_none) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.009s
+
+OK

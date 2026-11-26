@@ -1,0 +1,288 @@
+{
+  "passed": true,
+  "method_freeze_sha256": "b348f4aaf047c23f2e864aea540329a50f63b3d920bc499533c8fb694b6c35c9",
+  "bug_families": 1,
+  "source_versions": 2,
+  "live_source_only_executions": 6,
+  "witness_contract_rows": 18,
+  "all_live_rewards_match_archived_replay": true,
+  "all_expected_witness_rows_match": true,
+  "all_frozen_interface_predictions_match": true,
+  "witness_results": [
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "predicate_satisfied": false,
+      "verdict": "full_credit_violation",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "predicate_satisfied": null,
+      "verdict": "unknown_missing_spec",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "predicate_satisfied": true,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "predicate_satisfied": false,
+      "verdict": "full_credit_violation",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "predicate_satisfied": null,
+      "verdict": "unknown_missing_spec",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "predicate_satisfied": false,
+      "verdict": "full_credit_violation",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "predicate_satisfied": true,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "predicate_satisfied": null,
+      "verdict": "unknown_missing_spec",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "predicate_satisfied": true,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "correct",
+      "predicate_satisfied": false,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "missing",
+      "predicate_satisfied": null,
+      "verdict": "unknown_missing_spec",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "omitted_equality",
+      "predicate_satisfied": true,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "correct",
+      "predicate_satisfied": false,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "missing",
+      "predicate_satisfied": null,
+      "verdict": "unknown_missing_spec",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "omitted_equality",
+      "predicate_satisfied": false,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "predicate_satisfied": true,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "missing",
+      "predicate_satisfied": null,
+      "verdict": "unknown_missing_spec",
+      "expected_matched": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "omitted_equality",
+      "predicate_satisfied": true,
+      "verdict": "no_violation_for_this_witness",
+      "expected_matched": true
+    }
+  ],
+  "projection_proof": [
+    {
+      "source_id": "rg-issue-544-original",
+      "input_contracts_differ": true,
+      "projected_contracts_identical": true,
+      "projected_contract_sha256": "be78e73cc450480f69f5d901e6b18362a4e433ff7a82492d6d1a146a5a0b346b",
+      "actual_detector_inputs_identical": true,
+      "compiled_contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "deleted_input_obligation": "A full-reward answer must equal the trusted Boolean reference after strip/lower normalization.",
+      "compiled_obligation_reintroduced": "normalized candidate is a Boolean token equal to normalized reference",
+      "missing_contract_supported": false,
+      "missing_contract_reason": "missing_contract",
+      "actual_semgrep": {
+        "correct": "alarm",
+        "missing": "unknown",
+        "omitted_equality": "alarm"
+      },
+      "actual_symbolic": {
+        "correct": "alarm",
+        "missing": "unknown",
+        "omitted_equality": "alarm"
+      }
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "input_contracts_differ": true,
+      "projected_contracts_identical": true,
+      "projected_contract_sha256": "be78e73cc450480f69f5d901e6b18362a4e433ff7a82492d6d1a146a5a0b346b",
+      "actual_detector_inputs_identical": true,
+      "compiled_contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "deleted_input_obligation": "A full-reward answer must equal the trusted Boolean reference after strip/lower normalization.",
+      "compiled_obligation_reintroduced": "normalized candidate is a Boolean token equal to normalized reference",
+      "missing_contract_supported": false,
+      "missing_contract_reason": "missing_contract",
+      "actual_semgrep": {
+        "correct": "no_alarm",
+        "missing": "unknown",
+        "omitted_equality": "no_alarm"
+      },
+      "actual_symbolic": {
+        "correct": "no_alarm",
+        "missing": "unknown",
+        "omitted_equality": "no_alarm"
+      }
+    }
+  ],
+  "faithful_three_contract_closed_loop_supported": false,
+  "qualification": "Witness results are concrete evaluation oracles. Whole-source weak contract can still alarm on banana. Identical global alarms alone do not diagnose sensitivity; byte-identical projections with reinstated equality do.",
+  "analyzer_edits": false,
+  "LLM_calls": 0,
+  "missing_Unknown_is_wrapper_policy_not_intrinsic_semgrep_limit": true
+}

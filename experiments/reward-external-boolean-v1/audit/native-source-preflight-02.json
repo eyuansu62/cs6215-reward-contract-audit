@@ -1,0 +1,22 @@
+{
+  "validation_only_no_target_execution_or_contract_analysis": true,
+  "rows": [
+    {
+      "id": "H01",
+      "source_AST_and_namespace_preflight": "passed"
+    },
+    {
+      "id": "H02",
+      "source_AST_and_namespace_preflight": "passed"
+    },
+    {
+      "id": "H03",
+      "source_AST_and_namespace_preflight": "passed"
+    }
+  ],
+  "static_semantics_unchanged": {
+    "v2_checker_sha256": "a0218e6474606af3841dd96212fad7c3327dee9a14f8940a7184b13e95dd7705",
+    "v2_contracts_sha256": "b832098bb832b56d2bd100bc5b66d02546820bdabfac51fff22eaa395c58f257",
+    "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+  }
+}

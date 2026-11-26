@@ -1,0 +1,77 @@
+{
+  "old_summary_sha256": "e32b013f02fd62365a9a051f1de3177acacb33a99854b4079444f8870c0bee08",
+  "v1_failed_desired_fidelity": true,
+  "old_projection_proof": [
+    {
+      "source_id": "rg-issue-544-original",
+      "input_contracts_differ": true,
+      "projected_contracts_identical": true,
+      "projected_contract_sha256": "be78e73cc450480f69f5d901e6b18362a4e433ff7a82492d6d1a146a5a0b346b",
+      "actual_detector_inputs_identical": true,
+      "compiled_contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "deleted_input_obligation": "A full-reward answer must equal the trusted Boolean reference after strip/lower normalization.",
+      "compiled_obligation_reintroduced": "normalized candidate is a Boolean token equal to normalized reference",
+      "missing_contract_supported": false,
+      "missing_contract_reason": "missing_contract",
+      "actual_semgrep": {
+        "correct": "alarm",
+        "missing": "unknown",
+        "omitted_equality": "alarm"
+      },
+      "actual_symbolic": {
+        "correct": "alarm",
+        "missing": "unknown",
+        "omitted_equality": "alarm"
+      }
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "input_contracts_differ": true,
+      "projected_contracts_identical": true,
+      "projected_contract_sha256": "be78e73cc450480f69f5d901e6b18362a4e433ff7a82492d6d1a146a5a0b346b",
+      "actual_detector_inputs_identical": true,
+      "compiled_contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "deleted_input_obligation": "A full-reward answer must equal the trusted Boolean reference after strip/lower normalization.",
+      "compiled_obligation_reintroduced": "normalized candidate is a Boolean token equal to normalized reference",
+      "missing_contract_supported": false,
+      "missing_contract_reason": "missing_contract",
+      "actual_semgrep": {
+        "correct": "no_alarm",
+        "missing": "unknown",
+        "omitted_equality": "no_alarm"
+      },
+      "actual_symbolic": {
+        "correct": "no_alarm",
+        "missing": "unknown",
+        "omitted_equality": "no_alarm"
+      }
+    }
+  ],
+  "new_required_behavior": "No C_BOOLEAN_FULL synthesis; actual consumer contracts preserve exactly explicit obligation IDs."
+}

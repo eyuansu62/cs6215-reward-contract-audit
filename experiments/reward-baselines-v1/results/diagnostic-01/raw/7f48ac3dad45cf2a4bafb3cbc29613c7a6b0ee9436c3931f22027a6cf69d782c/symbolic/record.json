@@ -1,0 +1,14 @@
+{
+  "verdict": "no_alarm",
+  "certificate": {
+    "kind": "all_normal_full_credit_paths_certified",
+    "full_credit_path_count": 0,
+    "paths": [],
+    "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+  },
+  "evidence": [],
+  "source_spans": [],
+  "unsupported_reason": null,
+  "method": "bounded-static-source-path-certificates-v1",
+  "wall_seconds": 0.000175
+}

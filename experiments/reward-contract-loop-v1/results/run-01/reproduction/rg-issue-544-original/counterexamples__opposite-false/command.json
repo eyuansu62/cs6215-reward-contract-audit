@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "$HOMEBREW/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+    "worker",
+    "--case",
+    "rg-issue-544-original",
+    "--probe",
+    "counterexamples/opposite-false"
+  ],
+  "returncode": 0,
+  "timeout_seconds": 8
+}

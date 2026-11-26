@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "pr561",
+  "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+  "tree": "677fb315de12c5f2840b65b5c3e12c8abd63bf0e",
+  "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+  "sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+  "git_blob_sha1": "5d4d6c609024a35a6af8ac15380e8ca0d53a153f",
+  "bytes": 15397,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/reasoning_gym/algorithmic/game_of_life_halting.py",
+  "local_path": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+  "fetched_utc": "2026-11-08T07:29:18.226058+00:00",
+  "git_blob_verified": true
+}

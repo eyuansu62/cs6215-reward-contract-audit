@@ -1,0 +1,355 @@
+{
+  "created_utc": "2026-11-09T02:24:17.317984+00:00",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "candidate_module_contents_screened": 8,
+  "eligible_distinct_new_TrueFalse_scorers": 0,
+  "selected": [],
+  "records": [
+    {
+      "path": "reasoning_gym/logic/syllogisms.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "c2fa3a6cc9615e7970fb058856987b9a42ac64ec0177f637cb76ac97bfb86999",
+      "class": "SyllogismDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "Yes/No",
+      "canonical_True_False": false,
+      "owns_score_answer": false,
+      "eligible": false,
+      "reason": "No own score_answer; previously exposed default scorer is inherited. Native answer tokens Yes/No also fail unchanged True/False interface.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            432,
+            432
+          ],
+          "expression": "\"Yes\" if is_valid else \"No\""
+        },
+        {
+          "span": [
+            378,
+            378
+          ],
+          "expression": "\"Yes\" if is_valid else \"No\""
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "inherited_scorer": "Previously exposed ProceduralDataset.score_answer in reasoning_gym/dataset.py"
+    },
+    {
+      "path": "reasoning_gym/logic/propositional_logic.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "8367b082850207e87ffeda3cccf74d96ce92f93e449c520bc2f1b96aeacff5e6",
+      "class": "PropositionalLogicDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "propositional_expression",
+      "canonical_True_False": false,
+      "owns_score_answer": true,
+      "eligible": false,
+      "reason": "Answer is a proposed logical conclusion/expression, not a scalar True/False task; entry.answer is None. Own scorer uses expression validity/triviality.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            219,
+            219
+          ],
+          "expression": "None"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "score": {
+        "source_span": [
+          308,
+          331
+        ],
+        "exact_score_source": "def score_answer(self, answer: str | None, entry: dict[str, Any]) -> float:\n        \"\"\"Robust scoring implementation for propositional logic answers\"\"\"\n        if not isinstance(answer, str):\n            return 0.0\n\n        try:\n            cleaned_answer = answer\n\n            valid_vars = set(entry[\"metadata\"][\"variables\"])\n            answer_vars = re.findall(r\"([A-Z])\", cleaned_answer)\n            if any(var not in valid_vars for var in answer_vars):\n                return 0.0\n\n            premises = [Expression.from_string(p) for p in entry[\"metadata\"][\"premises\"]]\n            answer_expr = Expression.from_string(cleaned_answer)\n\n            if self._is_valid_conclusion(premises, answer_expr):\n                if self._is_trivial(answer_expr):\n                    return 0.25\n                else:\n                    return 1.0\n            return 0.05\n        except (ValueError, KeyError, AttributeError):\n            return 0.0",
+        "score_source_sha256": "433516791073107ca87718a3570d9adc709a8f85755172d44ce2d62024558e60",
+        "score_ast_sha256": "bd4faf8c1e168811c37181ce10ce05342c431582baa52588890fe60d22e1b6cb",
+        "alpha_implementation_sha256": "2f4e9900a6b409ffcd9fcbf7162ae0074370abe3ba1531754c2310220a33d53d",
+        "self_helper_closure": [
+          {
+            "name": "_collect_variables",
+            "span": [
+              276,
+              287
+            ],
+            "alpha_sha256": "60f7b4faf5851e54a502a933299108d36c93bdf872ae336cde56d0667cbe511a"
+          },
+          {
+            "name": "_generate_assignments",
+            "span": [
+              289,
+              297
+            ],
+            "alpha_sha256": "510806c6dc4a92b0d8b05813765eb86b80a0cd851b574c75e6c2b0336e262e24"
+          },
+          {
+            "name": "_is_trivial",
+            "span": [
+              333,
+              341
+            ],
+            "alpha_sha256": "449b655551043c0d5733c0c032bcfd7a31bb30633e3b8240fe0a180199b57499"
+          },
+          {
+            "name": "_is_valid_conclusion",
+            "span": [
+              265,
+              274
+            ],
+            "alpha_sha256": "e370105ef045033f9597e5a6c7ad25856e12fe8449f3d0d6718484901e5c516f"
+          },
+          {
+            "name": "score_answer",
+            "span": [
+              308,
+              331
+            ],
+            "alpha_sha256": "2f4e9900a6b409ffcd9fcbf7162ae0074370abe3ba1531754c2310220a33d53d"
+          }
+        ],
+        "unresolved_self_calls": [],
+        "alpha_matches_prior": false
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/circuit_logic.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "04858f961e50c87f16aab89e2f83b000c9577dd83704a7a205b919f92d14a56f",
+      "class": "CircuitLogicDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "0/1",
+      "canonical_True_False": false,
+      "owns_score_answer": true,
+      "eligible": false,
+      "reason": "Own scorer exists, but generated output is str(final_result) with final_result in integer 0/1. Unchanged interface requires canonical True/False; no encoding translation allowed.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            384,
+            384
+          ],
+          "expression": "answer_str"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "score": {
+        "source_span": [
+          400,
+          408
+        ],
+        "exact_score_source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        if isinstance(answer, str) and len(answer) > 0:\n            oracle_answer = entry[\"answer\"]\n            if oracle_answer == answer:\n                return 1.0\n            elif oracle_answer == answer.strip():\n                return len(oracle_answer) / len(answer)\n\n        return 0.0",
+        "score_source_sha256": "07ae182f2a87ec734e633600fba7a230207075f4d4c1bdad016fcfe1abfe48db",
+        "score_ast_sha256": "1e01b767345918fdaa2aeb27e22edeec66fb94005ec174a0f7efa16e92f93d02",
+        "alpha_implementation_sha256": "91960a41bb458bc39c5906a13d1c6eeafa8728537bf8325a4554d41f0e2d7c1d",
+        "self_helper_closure": [
+          {
+            "name": "score_answer",
+            "span": [
+              400,
+              408
+            ],
+            "alpha_sha256": "91960a41bb458bc39c5906a13d1c6eeafa8728537bf8325a4554d41f0e2d7c1d"
+          }
+        ],
+        "unresolved_self_calls": [],
+        "alpha_matches_prior": false
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/self_reference.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "8b0eebadba3c07a56a58fd9f88830be40b49cb94882a9cb595672ae337143424",
+      "class": "SelfReferenceDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "integer_solution_count",
+      "canonical_True_False": false,
+      "owns_score_answer": true,
+      "eligible": false,
+      "reason": "Question asks number of possible solutions and answer=str(len(solutions)); scalar truth values of puzzle statements are not the requested answer.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            350,
+            350
+          ],
+          "expression": "answer"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "score": {
+        "source_span": [
+          358,
+          374
+        ],
+        "exact_score_source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        \"\"\"Determine if the solution provided solves the SelfReference task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (dict[str, Any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if isinstance(answer, str):\n            if answer == str(entry[\"answer\"]):\n                return 1.0  # Yay\n        return 0.0",
+        "score_source_sha256": "58d141f558834ae714c1e10e12f6be83a2fe5e7bacd85a7430158f878f6516e8",
+        "score_ast_sha256": "fc24fd082f17a70e2034ddbac713323a1e49f3275c91f43cdb89e3215c677381",
+        "alpha_implementation_sha256": "7c1562b6b15b96b880aab04dd9096a20f0a4ed40cadfecb613e1f1765be3c229",
+        "self_helper_closure": [
+          {
+            "name": "score_answer",
+            "span": [
+              358,
+              374
+            ],
+            "alpha_sha256": "7c1562b6b15b96b880aab04dd9096a20f0a4ed40cadfecb613e1f1765be3c229"
+          }
+        ],
+        "unresolved_self_calls": [],
+        "alpha_matches_prior": false
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/knights_knaves.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "8837a3c6dfc72bb40db168b82ad6b3da45a08a4000a006fc306368b77b622705",
+      "class": "KnightsKnavesDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "name_role_assignment_set",
+      "canonical_True_False": false,
+      "owns_score_answer": true,
+      "eligible": false,
+      "reason": "Answer is names/knight-knave role assignments, not one Boolean token; scorer normalizes a set of assignments.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            474,
+            474
+          ],
+          "expression": "answer"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "score": {
+        "source_span": [
+          501,
+          522
+        ],
+        "exact_score_source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        \"\"\"Score an answer against the oracle answer.\"\"\"\n        if not isinstance(answer, str) or len(answer) == 0:\n            return 0.0\n\n        try:\n            oracle_assignments = self._normalize_answer(entry[\"answer\"])\n            answer_assignments = self._normalize_answer(answer)\n\n            # Full credit for exact assignments regardless of order\n            if oracle_assignments == answer_assignments:\n                return 1.0\n\n            # Partial credit if all names are present and some assignments match\n            if len(oracle_assignments) == len(answer_assignments):\n                matching = len(oracle_assignments.intersection(answer_assignments))\n                if matching > 0:\n                    return 0.3 + (0.7 * matching / len(oracle_assignments))\n\n        except Exception:\n            pass\n        return 0.0",
+        "score_source_sha256": "f6ffc89cf600ac903d5821a9e048c573212ca56757c1e6975a612d88c4aa68e1",
+        "score_ast_sha256": "877897ee4ac8752251c6f0787f7d7a1ea154ec37858e5d53ebf9cb0cb1b40ed8",
+        "alpha_implementation_sha256": "a84361cde0381a48b61de0a7be12937897922abf2892d75882984079c6394922",
+        "self_helper_closure": [
+          {
+            "name": "_normalize_answer",
+            "span": [
+              477,
+              499
+            ],
+            "alpha_sha256": "956c0c569cafa8f6b6ba910be04b0eb3b5fcfc082ce70166a2a18a40a67f622a"
+          },
+          {
+            "name": "score_answer",
+            "span": [
+              501,
+              522
+            ],
+            "alpha_sha256": "a84361cde0381a48b61de0a7be12937897922abf2892d75882984079c6394922"
+          }
+        ],
+        "unresolved_self_calls": [],
+        "alpha_matches_prior": false
+      }
+    },
+    {
+      "path": "reasoning_gym/induction/acre/acre.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "77e2fe8e91d1017002cbb746779765a2c0d1d32a8542e88969720865f893e0a6",
+      "class": "ACREDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "on/off/undetermined",
+      "canonical_True_False": false,
+      "owns_score_answer": false,
+      "eligible": false,
+      "reason": "Three-way detector status, not canonical Boolean tokens; also inherits previously exposed default scorer.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            95,
+            95
+          ],
+          "expression": "answer"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "inherited_scorer": "Previously exposed ProceduralDataset.score_answer in reasoning_gym/dataset.py"
+    },
+    {
+      "path": "reasoning_gym/logic/aiw.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "2c51c0ed6e89251f1e375023b336a43c8ea04a6f6ce34a6b5b608082104f3e4e",
+      "class": "AliceInWonderlandDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "integer_people_count",
+      "canonical_True_False": false,
+      "owns_score_answer": false,
+      "eligible": false,
+      "reason": "Question asks number of siblings/friends/colleagues and answer is str of an integer count; no own score_answer.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            197,
+            197
+          ],
+          "expression": "str(answer)"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "inherited_scorer": "Previously exposed ProceduralDataset.score_answer in reasoning_gym/dataset.py"
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_alternation.py",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "source_sha256": "84cfba9930234cfe989c83a02533df1428d77e397dcd6d6b4c930ab482280464",
+      "class": "BinaryAlternationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "native_answer_domain": "minimum_swap_count_or_minus_one",
+      "canonical_True_False": false,
+      "owns_score_answer": false,
+      "eligible": false,
+      "reason": "Question explicitly asks minimum swaps or -1, not True/False; no own score_answer.",
+      "answer_field_evidence": [
+        {
+          "span": [
+            109,
+            109
+          ],
+          "expression": "str(answer)"
+        }
+      ],
+      "prior_full_content_exposed_before_screen": false,
+      "filename_previously_listed": true,
+      "inherited_scorer": "Previously exposed ProceduralDataset.score_answer in reasoning_gym/dataset.py"
+    }
+  ],
+  "selection_status": "infeasible_within_eight_fixed_candidates",
+  "scope_limit": "Not an exhaustive claim about all Reasoning Gym versions/tasks. Eight task modules screened before any model/analyzer outcome.",
+  "model_requests": 0,
+  "analyzer_runs": 0,
+  "upstream_execution": false,
+  "no_encoding_translation_or_function_rewriting": true,
+  "next_step": "Separate structural census may be authorized by parent; do not conflate it with these eight preselected modules."
+}

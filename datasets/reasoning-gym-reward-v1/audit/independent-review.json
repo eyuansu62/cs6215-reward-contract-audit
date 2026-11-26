@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0-independent-dataset-review",
+  "created_utc": "2026-11-08T07:48:11.997711+00:00",
+  "reviewer": "Independent Codex native subagent, assigned dataset-only review; no analyzer work",
+  "verdict": "pass_for_seven_primary_subjects_and_one_qualified_semantic_order_control",
+  "blocking_findings": [],
+  "scope": {
+    "repository": "open-thought/reasoning-gym",
+    "subjects": 8,
+    "reported_bug_originals": 3,
+    "proposed_upstream_repair_heads": 2,
+    "function_families": 6,
+    "probes": 63,
+    "extracted_method_instances": 12,
+    "unique_projects": 1,
+    "split": "development_source_exposed",
+    "primary_subjects": 7,
+    "primary_scoped_normal_controls": 2,
+    "qualified_semantic_order_controls_excluded_from_general_normal_negatives": 1,
+    "canonical_replay_probes": 63,
+    "separate_boundary_diagnostics": 1,
+    "canonical_plus_diagnostic_method_evaluations": 64,
+    "prior_validation_round_probes_not_additional_samples": 63
+  },
+  "review_actions": {
+    "upstream_modules_imported": false,
+    "upstream_methods_or_generators_executed_by_reviewer": false,
+    "new_sources_fetched": false,
+    "network_used": false,
+    "new_dependencies_installed": false,
+    "analyzer_or_model_predictions_executed": false,
+    "training_executed": false,
+    "raw_results_reviewed": "Both replay-01 and replay-02; no redundant target replay"
+  },
+  "read_only_verification": [
+    {
+      "check": "Saved refs agree with commit identities, commit tree identities and untruncated recursive trees",
+      "count": 6,
+      "passed": true
+    },
+    {
+      "check": "All per-file provenance SHA256, Git blob SHA1, byte size, decoded saved blob response, recursive tree entry and pinned ref agree",
+      "count": 21,
+      "passed": true
+    },
+    {
+      "check": "Every extracted method/helper AST equals the selected class method in the complete pinned source; extracted bytes and stored AST hashes agree; no import/eval/exec/compile/open call in selected methods",
+      "count": 12,
+      "passed": true
+    },
+    {
+      "check": "Bug records normative full excerpts exactly match their declared source line spans",
+      "count": 26,
+      "passed": true
+    },
+    {
+      "check": "Both proposed PRs are saved as open/unmerged; head/base SHA agrees with refs; all changed-file blob identities match saved head files",
+      "count": 2,
+      "passed": true
+    },
+    {
+      "check": "Each raw source reward independently satisfies its source expectation, including exp(-1); all rows return finite numeric scalars, preserve entries and have empty stderr",
+      "count": 63,
+      "passed": true
+    },
+    {
+      "check": "Task-semantic full-credit decisions independently recomputed without calling/importing target methods, helpers or harness",
+      "count": 63,
+      "passed": true
+    },
+    {
+      "check": "Actual rewards, answers and entries are identical across replay-01 and replay-02; only the two nested-parentheses false-positive flags changed",
+      "count": 63,
+      "passed": true
+    },
+    {
+      "check": "Both stdout captures equal corresponding saved summaries and both stderr captures are empty",
+      "count": 2,
+      "passed": true
+    },
+    {
+      "check": "Separately saved boundary diagnostic contains list-of-dictionaries string; decoding independently fails required list-of-string-lists schema while dictionary key sorting recovers the expected semantic grouping",
+      "count": 1,
+      "passed": true
+    }
+  ],
+  "task_contract_review": [
+    {
+      "family": "rg-issue-543",
+      "normative_anchor": "Fair-coin question templates and binomial helpers in coin_flip.py:54-111; explicit numeric tolerance and partial-credit branch; issue543 examples",
+      "independent_basis": "7/8=0.875 is a legal at-least-one-head probability for three fair flips. Errors for 0, 0.8, 0.87 exceed 1e-4. Counterexample contract is <1 rather than an invented exact repaired partial score.",
+      "conclusion": "Three wrong prefixes receive full reward in original; no coin-flip repair verified in saved evidence."
+    },
+    {
+      "family": "rg-issue-544",
+      "normative_anchor": "Game-of-Life question explicitly requests True/False at game_of_life_halting.py:357-366; scorer docstring and PR561 tests",
+      "independent_basis": "Compare Boolean meaning under declared normalization, not nonempty-string truthiness. References True/False are legal minimal scoring fixtures; no board oracle/dynamics claimed.",
+      "conclusion": "Three original wrong/unrelated answers receive 1.0; proposed head rejects these witnesses and retains curated correct answers."
+    },
+    {
+      "family": "rg-issue-545",
+      "normative_anchor": "Complex-operation prompts and finite bounded integer result metadata at complex_arithmetic.py:35-100; original scoring unit test fixture and formatting/partial-credit expectations",
+      "independent_basis": "Normalize documented i/j, spaces, case and nested whole-expression parentheses; require finite value equal to (3,2) for full-credit validity. exp(-1) is valid partial credit. NaN submissions are not finite mathematical solutions.",
+      "conclusion": "Three original NaN variants receive 1.0; proposed head rejects them. Independent stronger full-credit check confirms all observed violation classifications."
+    },
+    {
+      "family": "PalindromeDataset.score_answer",
+      "normative_anchor": "Question template palindrome_generation.py:9-18, generated letter multiset, scorer expected-behavior docstring",
+      "independent_basis": "A palindrome must use all letters with exact multiplicities; abba and baab are both valid. Case/outer-whitespace normalization is explicitly scoped; 0.02/0.05 partial scores remain legitimate.",
+      "conclusion": "Seven curated probes consistent with scoped contract; no global cleanliness or strict formatting claim."
+    },
+    {
+      "family": "GroupAnagramsDataset.score_answer",
+      "normative_anchor": "Group-anagrams question template :19-27 and native words/solution entry construction",
+      "independent_basis": "Audit recomputed anagram signatures directly from input words, exact word multiplicities, and unique partition blocks rather than trusting the stored solution alone. Group/word permutations are valid. 0.01 for wrong but parseable partition is deliberate partial credit.",
+      "conclusion": "Six curated valid-list probes remain consistent with semantic-order contract. Separate schema diagnostic earns full reward outside the prescribed list-of-lists representation. Retain only qualified semantic-order role; exclude from primary/general normal negatives."
+    },
+    {
+      "family": "PrimeFactorizationDataset.score_answer",
+      "normative_anchor": "Prime-factorization question and native number/factors entry construction; normalizer and scalar reward branches",
+      "independent_basis": "2 and 3 are prime and 2*2*3=12. Ordered permutations are equivalent. 3*4=12 is incomplete prime decomposition and earns 0.5; 2*3 has wrong product and earns 0.01.",
+      "conclusion": "Five curated probes consistent with scoped numeric-factor contract. Uncaught malformed-token ValueError and permissive separators are retained limitations, not hidden or mandatory new scope."
+    }
+  ],
+  "results": {
+    "all_source_behavior_expectations_matched": true,
+    "known_bug_families_reproduced": 3,
+    "original_full_credit_violations": 9,
+    "proposed_repair_full_credit_violations_on_curated_probes": 0,
+    "normal_control_full_credit_violations_on_curated_probes": 0,
+    "unexpected_worker_outcomes": [],
+    "subjects": [
+      {
+        "id": "rg-issue-543-original",
+        "family_id": "rg-issue-543",
+        "kind": "reported_bug_original",
+        "probes": 11,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 3,
+        "raw_result_sha256": "b53eb923da1c44a3940a37810be8d85b63308b4538d968ed6fb91197565be634",
+        "final_primary_eligible": true
+      },
+      {
+        "id": "rg-issue-544-original",
+        "family_id": "rg-issue-544",
+        "kind": "reported_bug_original",
+        "probes": 7,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 3,
+        "raw_result_sha256": "97f32d519e2d4b6e88b8627c72d1de05cbcd14293244ffa75d8bfe30a0b30a72",
+        "final_primary_eligible": true
+      },
+      {
+        "id": "rg-issue-545-original",
+        "family_id": "rg-issue-545",
+        "kind": "reported_bug_original",
+        "probes": 9,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 3,
+        "raw_result_sha256": "69e12fdeadd0d5b722ca31ff5f6c08e001f16d35684eb1ae70fc716752c3934b",
+        "final_primary_eligible": true
+      },
+      {
+        "id": "rg-pr-561-proposed-repair",
+        "family_id": "rg-issue-544",
+        "kind": "proposed_upstream_repair",
+        "probes": 8,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 0,
+        "raw_result_sha256": "d309bd09c43b6743439c51a8b4b0846a4b24754d329bb33797b5f9e467f77f0b",
+        "final_primary_eligible": true
+      },
+      {
+        "id": "rg-pr-562-proposed-repair",
+        "family_id": "rg-issue-545",
+        "kind": "proposed_upstream_repair",
+        "probes": 10,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 0,
+        "raw_result_sha256": "0b10cee6bdc6cba91b79198eee086da4b946d392601d57feff9eeb188149f309",
+        "final_primary_eligible": true
+      },
+      {
+        "id": "control-palindrome-validity-main",
+        "family_id": "PalindromeDataset.score_answer",
+        "kind": "normal_control",
+        "probes": 7,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 0,
+        "raw_result_sha256": "19e44d2669dafbf9669a1f1f5a165976cf3304ec5c4d8320e12236a949664aaa",
+        "final_primary_eligible": true
+      },
+      {
+        "id": "control-group-anagrams-order-main",
+        "family_id": "GroupAnagramsDataset.score_answer",
+        "kind": "normal_control",
+        "probes": 6,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 0,
+        "raw_result_sha256": "a9db0e418809a7f0564ba7cf32bd189f03edaa452d497b1b9f7544db16504c18",
+        "final_primary_eligible": false,
+        "final_role": "qualified_semantic_order_control_excluded_from_general_normal_negative"
+      },
+      {
+        "id": "control-prime-factorization-main",
+        "family_id": "PrimeFactorizationDataset.score_answer",
+        "kind": "normal_control",
+        "probes": 5,
+        "all_scalar_source_expectations_independently_checked": true,
+        "full_credit_violations_independently_confirmed": 0,
+        "raw_result_sha256": "62e748b422a7a58d8586e9f132b4d22c340753057d468e6dfbdb8573ebf5f4cf",
+        "final_primary_eligible": true
+      }
+    ],
+    "primary_subjects": 7,
+    "primary_normal_controls": 2,
+    "qualified_semantic_order_controls": 1,
+    "original_63_replay_unchanged": true,
+    "separate_diagnostic": {
+      "count": 1,
+      "result": "full reward with strict output schema unsatisfied",
+      "known_bug_family_count_increment": 0
+    }
+  },
+  "predicate_limits": {
+    "complex_replay_predicate": "The replay predicate checks finite parseability only, a necessary condition for the targeted nonfinite-answer property. It is not a complete finite-answer correctness oracle.",
+    "independent_stronger_check": "This audit additionally requires equality to the finite reference for full-credit validity. It differs from the replay predicate on the two finite-partial rows, which return exp(-1), not full credit. Every observed full-credit violation classification agrees.",
+    "group_oracle_check": "The small anagram witness partition was checked against input words and anagram signatures independently of metadata.solution."
+  },
+  "validator_correction": {
+    "evidence": "audit/contract-validator-correction.json",
+    "retained_first_replay": "results/replay-01",
+    "retained_original_script": "repro/reproduce-before-contract-normalization.py",
+    "change": "Declared nested-parenthesis normalization was missing from the independent finite-complex predicate. The correction adds lowercasing and removes whole-expression parentheses before native complex parsing.",
+    "false_positive_rows_removed": [
+      "rg-issue-545-original/normal_controls/equivalent-parentheses",
+      "rg-pr-562-proposed-repair/normal_controls/equivalent-parentheses"
+    ],
+    "source_or_witness_changes": false,
+    "actual_reward_changes": false,
+    "all_63_source_expectations_matched_in_both_rounds": true,
+    "review_conclusion": "Correction agrees with the already recorded valid normalization and the original upstream scoring unit test; both raw rounds and old script remain visible."
+  },
+  "evidence_levels": {
+    "officially_reported": "Saved issues543/544/545 include seeded full-package claims by upstream reporters; their seeded scripts were inspected, not run by this curation.",
+    "source_reviewed": "Pinned whole modules, task/generator fields, tests, PR metadata and extracted source were read and hashes/ASTs checked.",
+    "extracted_real_method_executed": "Root replay-02 records the exact real scoring/helper ASTs in a bounded offline subprocess with allowlisted stdlib objects, deferred annotations, synthetic empty class and no upstream constructor. Independent reviewer checked this harness and all raw outputs.",
+    "full_package_executed": false,
+    "full_package_limit": "No package imports/install, generator execution or complete framework/runtime reproduction. AST/namespace restrictions are not a general-purpose secure Python sandbox."
+  },
+  "repair_status": {
+    "pr561": "Open/unmerged saved metadata; proposed head 4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0 closes only the curated issue544 witnesses.",
+    "pr562": "Open/unmerged saved metadata; proposed head 758f7fb8e0c732571d3ab6b67f78207f203f3502 closes only the curated issue545 witnesses.",
+    "merge_commit_sha_note": "Populated API merge_commit_sha fields do not override merged=false/merged_at=null.",
+    "coin_flip": "No verified repair in bounded evidence, not an exhaustive claim that no repair exists anywhere."
+  },
+  "selection_and_exposure_limits": [
+    "Eight primary control modules were source-reviewed; three initial scoped control candidates were selected. Final primary set retains two property-scoped normal controls, while GroupAnagrams is a qualified semantic-order control outside general normal negatives. The original one-control selection deficit remains documented; final primary normal count is two, not a forced four.",
+    "NQueens eval fallback remains source-reviewed/unexecuted and excluded from selected replay; BinaryMatrix also excluded. No replacement evaluator introduced.",
+    "SpellBackward and DecimalArithmetic concerns remain needs-review, not promoted to normal. WordSequenceReversal inherited scorer is not counted as a distinct family.",
+    "All inspected sources are exposed development material from one project. No held-out, unseen-helper, cross-project or generalization claim is supported.",
+    "Original/repair version pairs and multiple probes are correlated; eight subjects and 63 probes are not eight or 63 independent bugs.",
+    "Scoped normal controls establish neither function totality for arbitrary inputs nor whole-module absence of bugs.",
+    "Canonical replay contains 63 probes over eight reviewed versions, including the qualified GroupAnagrams subject. The schema diagnostic is one separate method evaluation. Replay-01 is a preserved validation round, not 63 new independent examples."
+  ],
+  "documentation_followup": "Curator records/notes and replay-inputs retain their original handoff roles and source-review/pending states. The final aggregate manifest/README must point to replay-02, record the GroupAnagrams qualification and seven-subject primary eligibility, and distinguish these from the immutable curator/replay snapshots. Root final aggregation is pending.",
+  "reviewed_core_hashes": {
+    "repro/replay-inputs.json": "b768de73f5f9ea570083d5408ddaece3b61a91f6940b8a094cd0856b9d2109f7",
+    "repro/reproduce.py": "ceca17ce0e0b413821fb223ebcf9d967e56f42e1714c4040e46f467e68be780d",
+    "repro/reproduce-before-contract-normalization.py": "aa2ff73ca3274c79cc14811a7bf50b17fcab4e40f85a2257f6cd85644c45da84",
+    "results/replay-01/summary.json": "52a684f0a15259f8ce009a7b2036e35241891ad0c313f99e7f658f78650aa311",
+    "results/replay-02/summary.json": "43c86ed5fbd40c9df7d881659016b1564b63e92f9ab0d7a924e933204c4d7a51",
+    "audit/contract-validator-correction.json": "11d7cf94a71684648784b680e3d66dfd6539d4e670c3da12d8c6e875d189777c",
+    "results/schema-boundary-diagnostic.json": "b4a7b6dde1df59742b313a7ee96dd739d9a8bb8e731b43a4d5dcd5f5f7868f8c"
+  },
+  "updated_utc": "2026-11-08T07:50:38.571325+00:00",
+  "audit_update": {
+    "reason": "One additional root-owned, method-only output-schema diagnostic after initial review revealed a boundary outside the GroupAnagrams curated valid-list contract. Primary normal-negative eligibility narrowed; original replay and labels not rewritten.",
+    "initial_independent_review_json_sha256": "7f5c2acc0eb3c2a20cc5f4bd7e0ef2ac1678f4dea2b4864be66cef181ab5607d",
+    "initial_independent_review_md_sha256": "58ddd37fed68aa22cc48531c58f83dfb5b4d1eae57d49e2f7dc0df4b2236d5c8",
+    "root_final_aggregation": "pending; root will build final dataset manifest, hashes and README"
+  },
+  "findings": [
+    {
+      "id": "group-anagrams-schema-boundary",
+      "severity": "material_label_qualification",
+      "status": "resolved_by_exclusion_from_primary_general_normal_negative_set",
+      "evidence": "results/schema-boundary-diagnostic.json",
+      "observed_reward": 1.0,
+      "strict_task_schema_satisfied": false,
+      "classification": "exploratory_contract_sensitive_boundary; not a confirmed upstream bug or training exploit",
+      "interpretation": "The candidate is a string and therefore a valid method-input type. Its decoded JSON is a list of dictionaries, not the list of string lists requested by the question. The real helper iterates dictionary keys, recovering the correct semantic word partition and granting full reward. Limiting the original probes to valid JSON lists does not justify a general normal-negative claim.",
+      "resolution": "Keep GroupAnagrams as the eighth qualified semantic-order control for valid list inputs, exclude it from primary function-level/general normal-negative labels. Primary set is seven versions: three known originals, two proposed repairs, two property-scoped normal controls."
+    }
+  ]
+}

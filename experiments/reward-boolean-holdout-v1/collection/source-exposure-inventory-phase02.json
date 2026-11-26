@@ -1,0 +1,55 @@
+{
+  "purpose": "All saved candidate modules are now exposed; exclude in future fresh-content studies, even rejected modules.",
+  "sources": [
+    {
+      "path": "reasoning_gym/logic/syllogisms.py",
+      "sha256": "c2fa3a6cc9615e7970fb058856987b9a42ac64ec0177f637cb76ac97bfb86999",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/logic/propositional_logic.py",
+      "sha256": "8367b082850207e87ffeda3cccf74d96ce92f93e449c520bc2f1b96aeacff5e6",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/logic/circuit_logic.py",
+      "sha256": "04858f961e50c87f16aab89e2f83b000c9577dd83704a7a205b919f92d14a56f",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/logic/self_reference.py",
+      "sha256": "8b0eebadba3c07a56a58fd9f88830be40b49cb94882a9cb595672ae337143424",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/logic/knights_knaves.py",
+      "sha256": "8837a3c6dfc72bb40db168b82ad6b3da45a08a4000a006fc306368b77b622705",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/induction/acre/acre.py",
+      "sha256": "77e2fe8e91d1017002cbb746779765a2c0d1d32a8542e88969720865f893e0a6",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/logic/aiw.py",
+      "sha256": "2c51c0ed6e89251f1e375023b336a43c8ea04a6f6ce34a6b5b608082104f3e4e",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_alternation.py",
+      "sha256": "84cfba9930234cfe989c83a02533df1428d77e397dcd6d6b4c930ab482280464",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "disposition": "excluded_from_current_fixed_interface"
+    }
+  ],
+  "prior_filename_exposure": true,
+  "model_pretraining_novelty_not_established": true
+}

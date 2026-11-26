@@ -1,0 +1,22 @@
+{
+  "reviewed_utc": "2026-11-13T02:51:35.924267+00:00",
+  "passed": true,
+  "figure_sha256": "152897c9f722f893cfafdfa34da5302c5b10e38695f794673a4b098b2c550d26",
+  "source_data_sha256": "4165624fa25ea48c5e6e01e57a7e1c2b2e16864366859f1506cf14e5e4d26917",
+  "tool": "view_image; generated PNG inspected at returned full dimensions",
+  "dimensions": [
+    1600,
+    1020
+  ],
+  "checks": [
+    "Allbarsstartatzeroanduse24denominator",
+    "Uadministrativecellsexcludedandnoted",
+    "Exactcountsfromsavedsum,errorsFPplusFNseparatefromUnknown",
+    "FixedEbinary20andwitnesssupported16explicit",
+    "Labelslegendfootnotesreadable; nocliporoverlap",
+    "Controlled/repeatedunitsandnorealprojectgainclaimnoted"
+  ],
+  "visual_verdict_skill_available": false,
+  "fallback": "Direct visual QA; no active OMX workflow",
+  "experimental_calls": 0
+}

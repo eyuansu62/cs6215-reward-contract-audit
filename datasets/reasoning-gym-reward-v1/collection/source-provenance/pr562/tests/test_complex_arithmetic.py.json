@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "pr562",
+  "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+  "tree": "ab0f8007fbde37a3a94b816f1a194e250a958d89",
+  "path": "tests/test_complex_arithmetic.py",
+  "sha256": "340ae4df772ad8ee012c5f53f4309017a1d598949c37b15230fa2c4aec61fbe6",
+  "git_blob_sha1": "9f2cc252c9db2ca442f3f6f218568035be392a4b",
+  "bytes": 8956,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/tests/test_complex_arithmetic.py",
+  "local_path": "upstream/pr562/tests/test_complex_arithmetic.py",
+  "fetched_utc": "2026-11-08T07:29:17.961184+00:00",
+  "git_blob_verified": true
+}

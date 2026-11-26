@@ -1,0 +1,281 @@
+{
+  "records": [
+    {
+      "stratum": "boolean-like",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/isomorphic_strings.py",
+      "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/algorithmic/isomorphic_strings.py",
+      "source_sha256": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76",
+      "source_bytes": 5243,
+      "safe_description_fragments": [
+        {
+          "kind": "task_class_docstring",
+          "class": "IsomorphicStringsDataset",
+          "text": "Generates Isomorphic Strings exercises with configurable difficulty"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__init__",
+          "span": [
+            52,
+            54
+          ],
+          "source": "def __init__(self, config: IsomorphicStringsConfig):\n        super().__init__(config=config, seed=config.seed, size=config.size)\n        self.letters = {chr(i) for i in range(ord(\"a\"), ord(\"z\") + 1)}"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__getitem__",
+          "span": [
+            100,
+            123
+          ],
+          "source": "def __getitem__(self, idx: int) -> dict:\n        \"\"\"Generate a single Isomorphic Strings question\"\"\"\n        rng = Random(self.seed + idx)\n\n        string_length = rng.randint(self.config.min_string_length, self.config.max_string_length)\n        solvable = rng.random() < self.config.p_solvable\n        s, t = self._generate_inputs(rng, string_length, solvable)\n        answer = self._check_isomorphic(s, t)\n\n        return {\n            \"question\": QUESTION_TEMPLATE.format(s=s, t=t),\n            \"answer\": str(answer),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"words\": [s, t],\n                \"solution\": answer,\n                \"solvable\": solvable,\n                \"string_length\": string_length,\n                \"difficulty\": {\n                    \"string_length\": (self.config.min_string_length, self.config.max_string_length),\n                },\n            },\n        }"
+        }
+      ],
+      "sealed_score_spans": [],
+      "module_question_templates": [
+        {
+          "name": [
+            "QUESTION_TEMPLATE"
+          ],
+          "span": [
+            16,
+            24
+          ],
+          "text": "Two strings are isomorphic if the characters in one string can be replaced to get the second string.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters.\n\nNo two characters may map to the same character, but a character may map to itself.\n\nReturn True if the following two strings are isomorphic, or False otherwise:\n{s} {t}\n"
+        }
+      ]
+    },
+    {
+      "stratum": "boolean-like",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/ransom_note.py",
+      "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/algorithmic/ransom_note.py",
+      "source_sha256": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866",
+      "source_bytes": 5993,
+      "safe_description_fragments": [
+        {
+          "kind": "task_class_docstring",
+          "class": "RansomNoteDataset",
+          "text": "Generates Ransom Note exercises with configurable difficulty"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__init__",
+          "span": [
+            57,
+            59
+          ],
+          "source": "def __init__(self, config: RansomNoteConfig):\n        super().__init__(config=config, seed=config.seed, size=config.size)\n        self.letters = {chr(i) for i in range(ord(\"a\"), ord(\"z\") + 1)}"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__getitem__",
+          "span": [
+            88,
+            117
+          ],
+          "source": "def __getitem__(self, idx: int) -> dict:\n        \"\"\"Generate a single Group Anagrams question\"\"\"\n        rng = Random(self.seed + idx)\n\n        note_length = rng.randint(self.config.min_note_length, self.config.max_note_length)\n        magazine_length = rng.randint(\n            max(note_length, self.config.min_magazine_length), self.config.max_magazine_length\n        )\n        solvable = rng.random() < self.config.p_solvable\n        ransom_note, magazine = self._get_inputs(rng, note_length, magazine_length, solvable)\n        answer = self._can_construct(ransom_note, magazine)\n\n        return {\n            \"question\": QUESTION_TEMPLATE.format(ransom_note=ransom_note, magazine=magazine),\n            \"answer\": str(answer),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"ransom_note\": ransom_note,\n                \"magazine\": magazine,\n                \"solution\": answer,\n                \"solvable\": solvable,\n                \"note_length\": note_length,\n                \"magazine_length\": magazine_length,\n                \"difficulty\": {\n                    \"note_length\": (self.config.min_note_length, self.config.max_note_length),\n                    \"magazine_length\": (self.config.min_magazine_length, self.config.max_magazine_length),\n                },\n            },\n        }"
+        }
+      ],
+      "sealed_score_spans": [],
+      "module_question_templates": [
+        {
+          "name": [
+            "QUESTION_TEMPLATE"
+          ],
+          "span": [
+            15,
+            21
+          ],
+          "text": "Given two strings representing a ransom note and a magazine, return True if you can construct the ransom note using the letters in the magazine, and False otherwise.\n\nEach letter in the magazine string can only be used once in your ransom note.\n\nRansom note: {ransom_note}\nMagazine: {magazine}\n"
+        }
+      ]
+    },
+    {
+      "stratum": "boolean-like",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/graphs/course_schedule.py",
+      "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/graphs/course_schedule.py",
+      "source_sha256": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c",
+      "source_bytes": 7589,
+      "safe_description_fragments": [
+        {
+          "kind": "task_class_docstring",
+          "class": "CourseScheduleDataset",
+          "text": "Generates Course Schedule exercises with configurable difficulty"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__init__",
+          "span": [
+            59,
+            60
+          ],
+          "source": "def __init__(self, config: CourseScheduleConfig):\n        super().__init__(config=config, seed=config.seed, size=config.size)"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__getitem__",
+          "span": [
+            116,
+            149
+          ],
+          "source": "def __getitem__(self, idx: int) -> dict:\n        \"\"\"Generate a single Course Schedule question\"\"\"\n        rng = Random(self.seed + idx)\n\n        num_courses = rng.randint(self.config.min_num_courses, self.config.max_num_courses)\n        courses = list(range(num_courses))\n        rng.shuffle(courses)\n\n        solvable = rng.random() < self.config.p_solvable\n\n        prerequisites = self._create_prerequisites(rng, courses, solvable)\n        answer = self._can_finish(num_courses, prerequisites)\n\n        return {\n            \"question\": QUESTION_TEMPLATE.format(\n                num_courses=num_courses,\n                last_index=num_courses - 1,\n                prerequisites=str(prerequisites),\n            ),\n            \"answer\": str(answer),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"courses\": courses,\n                \"prerequisites\": prerequisites,\n                \"solution\": answer,\n                \"solvable\": solvable,\n                \"difficulty\": {\n                    \"num_courses\": (self.config.min_num_courses, self.config.max_num_courses),\n                    \"num_prerequisites\": (self.config.min_num_prerequisites, self.config.max_num_prerequisites),\n                    \"cycle_length\": (self.config.min_cycle_length, self.config.max_cycle_length),\n                },\n            },\n        }"
+        }
+      ],
+      "sealed_score_spans": [],
+      "module_question_templates": [
+        {
+          "name": [
+            "QUESTION_TEMPLATE"
+          ],
+          "span": [
+            16,
+            22
+          ],
+          "text": "There are a total of {num_courses} courses you have to take, labeled from 0 to {last_index}.\n\nYou are given the following list of prerequisites, where prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i:\n{prerequisites}\n\nReturn True if you can finish all courses considering the prerequisites, or False otherwise.\n"
+        }
+      ]
+    },
+    {
+      "stratum": "integer",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/count_primes.py",
+      "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/algorithmic/count_primes.py",
+      "source_sha256": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd",
+      "source_bytes": 3192,
+      "safe_description_fragments": [
+        {
+          "kind": "task_class_docstring",
+          "class": "CountPrimesDataset",
+          "text": "Generates Count Primes exercises with configurable difficulty"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__init__",
+          "span": [
+            39,
+            41
+          ],
+          "source": "def __init__(self, config: CountPrimesConfig):\n        super().__init__(config=config, seed=config.seed, size=config.size)\n        self.primes = self._get_primes(config.max_n + 1)"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__getitem__",
+          "span": [
+            54,
+            76
+          ],
+          "source": "def __getitem__(self, idx: int) -> dict:\n        \"\"\"Generate a single Count Primes question\"\"\"\n        rng = Random(self.seed + idx)\n        start = rng.randint(self.config.min_n, self.config.max_n)\n        end = rng.randint(start, self.config.max_n)\n        primes = [i for i in range(start, end + 1) if self.primes[i]]\n        answer = len(primes)\n        return {\n            \"question\": QUESTION_TEMPLATE.format(start=start, end=end),\n            \"answer\": str(answer),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"start\": start,\n                \"end\": end,\n                \"primes\": primes,\n                \"solution\": answer,\n                \"n\": (start, end),\n                \"difficulty\": {\n                    \"n\": (self.config.min_n, self.config.max_n),\n                },\n            },\n        }"
+        }
+      ],
+      "sealed_score_spans": [],
+      "module_question_templates": [
+        {
+          "name": [
+            "QUESTION_TEMPLATE"
+          ],
+          "span": [
+            15,
+            15
+          ],
+          "text": "Count how many prime numbers there are between {start} and {end} (inclusive) ?"
+        }
+      ]
+    },
+    {
+      "stratum": "ordered-list",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/number_sorting.py",
+      "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/algorithmic/number_sorting.py",
+      "source_sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+      "source_bytes": 7825,
+      "safe_description_fragments": [
+        {
+          "kind": "task_class_docstring",
+          "class": "NumberSortingDataset",
+          "text": "Generates number sorting tasks"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__init__",
+          "span": [
+            41,
+            47
+          ],
+          "source": "def __init__(self, config: NumberSortingConfig):\n        super().__init__(config=config, seed=config.seed, size=config.size)\n        self.added_instruction = \"\"\"\nPlease follow the instruction below:\n## 1. Let all your answers be a list of numbers. Instead of reporting your answer as -69, -13, 1, 7, 11, 43, 59, 61, use ['-69', '-13', '1', '7', '11', '43', '59', '61'] instead\n## 2. Convert all numbers in the square brackets as strings. For example, ['-69', '-13', '1', '7', '11', '43', '59', '61']\n\"\"\""
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__getitem__",
+          "span": [
+            63,
+            100
+          ],
+          "source": "def __getitem__(self, idx: int) -> dict:\n        \"\"\"Generate a single sorting task\"\"\"\n        rng = Random(self.seed + idx)\n\n        count = rng.randint(self.config.min_numbers, self.config.max_numbers)\n        numbers, number_strs = self._generate_numbers(rng, count)\n\n        # Generate both ascending and descending answers\n        asc_numbers = sorted(numbers)\n        desc_numbers = sorted(numbers, reverse=True)\n\n        # Format answers as string lists\n        asc_answer = [str(n) for n in asc_numbers]\n        desc_answer = [str(n) for n in desc_numbers]\n\n        # Randomly choose ascending or descending\n        is_ascending = rng.choice([True, False])\n        direction = \"ascending\" if is_ascending else \"descending\"\n        answer = asc_answer if is_ascending else desc_answer\n        question = f\"Sort these numbers in {direction} order: {', '.join(number_strs)}\" + self.added_instruction\n\n        return {\n            \"question\": question,\n            \"answer\": str(answer),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"original_numbers\": number_strs,\n                \"direction\": direction,\n                \"sorted_numbers\": answer,\n                \"numbers\": count,\n                \"difficulty\": {\n                    \"numbers\": (self.config.min_numbers, self.config.max_numbers),\n                    \"decimals\": (self.config.min_decimals, self.config.max_decimals),\n                    \"value\": (self.config.min_value, self.config.max_value),\n                },\n            },\n        }"
+        }
+      ],
+      "sealed_score_spans": [
+        [
+          102,
+          162
+        ]
+      ],
+      "module_question_templates": []
+    },
+    {
+      "stratum": "fraction",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/fraction_simplification.py",
+      "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/arithmetic/fraction_simplification.py",
+      "source_sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab",
+      "source_bytes": 8391,
+      "safe_description_fragments": [
+        {
+          "kind": "task_class_docstring",
+          "class": "FractionSimplificationDataset",
+          "text": "Generates fraction simplification tasks"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__init__",
+          "span": [
+            45,
+            46
+          ],
+          "source": "def __init__(self, config: FractionSimplificationConfig):\n        super().__init__(config=config, seed=config.seed, size=config.size)"
+        },
+        {
+          "kind": "question_or_generator_construction",
+          "name": "__getitem__",
+          "span": [
+            102,
+            133
+          ],
+          "source": "def __getitem__(self, idx: int) -> dict:\n        \"\"\"Generate a single fraction simplification task\"\"\"\n        rng = Random(self.seed + idx)\n\n        num, den, simple_num, simple_den, factor = self._generate_fraction(rng)\n\n        # Choose a random style from configured styles\n        style = self.config.styles[rng.randint(0, len(self.config.styles) - 1)]\n\n        # Format both question and answer in the same style\n        question_fraction = self._format_fraction(num, den, style)\n        answer_fraction = self._format_fraction(simple_num, simple_den, style)\n\n        return {\n            \"question\": QUESTION_TEMPLATE.format(question_fraction=question_fraction),\n            \"answer\": answer_fraction,\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"numerator\": num,\n                \"denominator\": den,\n                \"simplified_numerator\": simple_num,\n                \"simplified_denominator\": simple_den,\n                \"reduction_factor\": num // simple_num,  # Will be same as den // simple_den\n                \"style\": style,\n                \"factor\": factor,\n                \"difficulty\": {\n                    \"value\": (self.config.min_value, self.config.max_value),\n                    \"factor\": (self.config.min_factor, self.config.max_factor),\n                },\n            },\n        }"
+        }
+      ],
+      "sealed_score_spans": [
+        [
+          147,
+          162
+        ]
+      ],
+      "module_question_templates": [
+        {
+          "name": [
+            "QUESTION_TEMPLATE"
+          ],
+          "span": [
+            12,
+            12
+          ],
+          "text": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer."
+        }
+      ]
+    }
+  ],
+  "upstream_executed": false,
+  "score_bodies_disclosed": false
+}

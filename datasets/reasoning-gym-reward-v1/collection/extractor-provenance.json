@@ -1,0 +1,10 @@
+{
+  "original_workspace_path": "outputs/main-experiment-v10/corpus_tools.py",
+  "original_file_sha256": "017b5fd42ca70dc9dcf2dd74cd121df732266ee033d3fef2427a0176dabb2f12",
+  "reused_definitions": [
+    "sha",
+    "extract_function"
+  ],
+  "standalone_copy": "repro/source_extract.py",
+  "no_analyzer_import_required": true
+}

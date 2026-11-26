@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-09T02:46:39.975711+00:00",
+  "searches": [
+    {
+      "query": "boolq grpo",
+      "total_count": 1,
+      "items": [
+        {
+          "repo": "SPAR-Self-Forecasting/gemma2-boolq-calibration",
+          "description": "RL training of Gemma 2 2B IT for calibrated YES/NO probability estimates on BoolQ using GRPO",
+          "default_branch": "main",
+          "url": "https://github.com/SPAR-Self-Forecasting/gemma2-boolq-calibration"
+        }
+      ]
+    },
+    {
+      "query": "boolean_expressions reinforcement",
+      "total_count": 1,
+      "items": [
+        {
+          "repo": "TarunNagarajan/boolrl",
+          "description": "Reinforcement learning solves Boolean Expressions with DQN Agent (MLP/LSTM/GNN) for greedy decision making. MLP scores 63%, even with a simplistic view of each state.",
+          "default_branch": "main",
+          "url": "https://github.com/TarunNagarajan/boolrl"
+        }
+      ]
+    },
+    {
+      "query": "bbh reinforcement learning",
+      "total_count": 0,
+      "items": []
+    },
+    {
+      "query": "boolean reward reinforcement",
+      "total_count": 0,
+      "items": []
+    }
+  ],
+  "source_content_read": false,
+  "model_analyzer_or_target_execution": false
+}

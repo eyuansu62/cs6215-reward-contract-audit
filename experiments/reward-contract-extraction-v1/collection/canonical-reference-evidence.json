@@ -1,0 +1,131 @@
+{
+  "units": [
+    {
+      "task_id": "T01",
+      "source_path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "source_sha256": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76",
+      "confirmed": true,
+      "argument": "Generator entry.answer is native str(answer); answer is the result of the displayed helper. Every helper normal return is a native Boolean expression and a final unconditional Boolean return excludes implicit None. Thus generated reference strings are exactly True or False, conditional on normal generation. This does not prove the task solver itself correct.",
+      "generator_assignment_span": [
+        107,
+        107
+      ],
+      "generator_assignment_source": "answer = self._check_isomorphic(s, t)",
+      "entry_answer_span": [
+        111,
+        111
+      ],
+      "entry_answer_source": "str(answer)",
+      "producer_name": "_check_isomorphic",
+      "producer_span": [
+        56,
+        70
+      ],
+      "producer_exact_source": "def _check_isomorphic(self, s: str, t: str) -> bool:\n        \"\"\"Check if two strings are isomorphic\"\"\"\n        if len(s) != len(t):\n            return False\n\n        mapping, inverse_mapping = {}, {}  # s -> t, t -> s\n        for i in range(len(s)):\n            if (s[i] in mapping and mapping[s[i]] != t[i]) or (\n                t[i] in inverse_mapping and s[i] != inverse_mapping[t[i]]\n            ):\n                return False\n            mapping[s[i]] = t[i]\n            inverse_mapping[t[i]] = s[i]\n\n        return True",
+      "producer_return_spans": [
+        [
+          59,
+          59
+        ],
+        [
+          66,
+          66
+        ],
+        [
+          70,
+          70
+        ]
+      ]
+    },
+    {
+      "task_id": "T02",
+      "source_path": "reasoning_gym/algorithmic/ransom_note.py",
+      "source_sha256": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866",
+      "confirmed": true,
+      "argument": "Generator entry.answer is native str(answer); answer is the result of the displayed helper. Every helper normal return is a native Boolean expression and a final unconditional Boolean return excludes implicit None. Thus generated reference strings are exactly True or False, conditional on normal generation. This does not prove the task solver itself correct.",
+      "generator_assignment_span": [
+        98,
+        98
+      ],
+      "generator_assignment_source": "answer = self._can_construct(ransom_note, magazine)",
+      "entry_answer_span": [
+        102,
+        102
+      ],
+      "entry_answer_source": "str(answer)",
+      "producer_name": "_can_construct",
+      "producer_span": [
+        77,
+        86
+      ],
+      "producer_exact_source": "def _can_construct(self, ransom_note: str, magazine: str) -> bool:\n        \"\"\"Check if ransom note can be constructed from magazine\"\"\"\n        count = defaultdict(int)\n        for c in magazine:\n            count[c] += 1\n        for c in ransom_note:\n            if count[c] <= 0:\n                return False\n            count[c] -= 1\n        return True",
+      "producer_return_spans": [
+        [
+          84,
+          84
+        ],
+        [
+          86,
+          86
+        ]
+      ]
+    },
+    {
+      "task_id": "T03",
+      "source_path": "reasoning_gym/graphs/course_schedule.py",
+      "source_sha256": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c",
+      "confirmed": true,
+      "argument": "Generator entry.answer is native str(answer); answer is the result of the displayed helper. Every helper normal return is a native Boolean expression and a final unconditional Boolean return excludes implicit None. Thus generated reference strings are exactly True or False, conditional on normal generation. This does not prove the task solver itself correct.",
+      "generator_assignment_span": [
+        127,
+        127
+      ],
+      "generator_assignment_source": "answer = self._can_finish(num_courses, prerequisites)",
+      "entry_answer_span": [
+        135,
+        135
+      ],
+      "entry_answer_source": "str(answer)",
+      "producer_name": "_can_finish",
+      "producer_span": [
+        62,
+        87
+      ],
+      "producer_exact_source": "def _can_finish(self, num_courses: int, prerequisites: list[list[int]]) -> bool:\n        adj = defaultdict(list)\n        for course, prereq in prerequisites:\n            adj[course].append(prereq)\n\n        visited, cycle = set(), set()\n\n        def topological_sort(idx):\n            if idx in cycle:\n                return False\n            if idx in visited:\n                return True\n\n            cycle.add(idx)\n            for nei in adj[idx]:\n                if not topological_sort(nei):\n                    return False\n            cycle.remove(idx)\n            visited.add(idx)\n            return True\n\n        for i in range(num_courses):\n            if not topological_sort(i):\n                return False\n\n        return True",
+      "producer_return_spans": [
+        [
+          85,
+          85
+        ],
+        [
+          87,
+          87
+        ]
+      ]
+    },
+    {
+      "task_id": "T04",
+      "source_path": "reasoning_gym/algorithmic/count_primes.py",
+      "source_sha256": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd",
+      "confirmed": false,
+      "reason": "Task is not a Boolean-output family."
+    },
+    {
+      "task_id": "T05",
+      "source_path": "reasoning_gym/algorithmic/number_sorting.py",
+      "source_sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+      "confirmed": false,
+      "reason": "Task is not a Boolean-output family."
+    },
+    {
+      "task_id": "T06",
+      "source_path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "source_sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab",
+      "confirmed": false,
+      "reason": "Task is not a Boolean-output family."
+    }
+  ],
+  "normal_generation_only": true,
+  "task_solver_correctness_not_proved": true,
+  "not_provided_to_description_extractor": true
+}

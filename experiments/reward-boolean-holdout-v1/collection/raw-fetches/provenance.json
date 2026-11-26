@@ -1,0 +1,56 @@
+[
+  {
+    "path": "reasoning_gym/logic/syllogisms.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/logic/syllogisms.py",
+    "retrieved_utc": "2026-11-09T02:20:42.189558+00:00",
+    "transport": "public raw GitHub, host network after unavailable connector and sandbox DNS failure",
+    "bytes": 18824,
+    "sha256": "c2fa3a6cc9615e7970fb058856987b9a42ac64ec0177f637cb76ac97bfb86999",
+    "saved_path": "sealed-upstream/reasoning_gym/logic/syllogisms.py"
+  },
+  {
+    "path": "reasoning_gym/logic/propositional_logic.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/logic/propositional_logic.py",
+    "retrieved_utc": "2026-11-09T02:20:42.593366+00:00",
+    "transport": "public raw GitHub, host network after unavailable connector and sandbox DNS failure",
+    "bytes": 14809,
+    "sha256": "8367b082850207e87ffeda3cccf74d96ce92f93e449c520bc2f1b96aeacff5e6",
+    "saved_path": "sealed-upstream/reasoning_gym/logic/propositional_logic.py"
+  },
+  {
+    "path": "reasoning_gym/logic/circuit_logic.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/logic/circuit_logic.py",
+    "retrieved_utc": "2026-11-09T02:20:42.897573+00:00",
+    "transport": "public raw GitHub, host network after unavailable connector and sandbox DNS failure",
+    "bytes": 16042,
+    "sha256": "04858f961e50c87f16aab89e2f83b000c9577dd83704a7a205b919f92d14a56f",
+    "saved_path": "sealed-upstream/reasoning_gym/logic/circuit_logic.py"
+  },
+  {
+    "path": "reasoning_gym/logic/self_reference.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/logic/self_reference.py",
+    "retrieved_utc": "2026-11-09T02:20:43.194000+00:00",
+    "transport": "public raw GitHub, host network after unavailable connector and sandbox DNS failure",
+    "bytes": 14174,
+    "sha256": "8b0eebadba3c07a56a58fd9f88830be40b49cb94882a9cb595672ae337143424",
+    "saved_path": "sealed-upstream/reasoning_gym/logic/self_reference.py"
+  },
+  {
+    "path": "reasoning_gym/logic/knights_knaves.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/logic/knights_knaves.py",
+    "retrieved_utc": "2026-11-09T02:20:43.488970+00:00",
+    "transport": "public raw GitHub, host network after unavailable connector and sandbox DNS failure",
+    "bytes": 20743,
+    "sha256": "8837a3c6dfc72bb40db168b82ad6b3da45a08a4000a006fc306368b77b622705",
+    "saved_path": "sealed-upstream/reasoning_gym/logic/knights_knaves.py"
+  },
+  {
+    "path": "reasoning_gym/induction/acre/acre.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/induction/acre/acre.py",
+    "retrieved_utc": "2026-11-09T02:20:43.811458+00:00",
+    "transport": "public raw GitHub, host network after unavailable connector and sandbox DNS failure",
+    "bytes": 3957,
+    "sha256": "77e2fe8e91d1017002cbb746779765a2c0d1d32a8542e88969720865f893e0a6",
+    "saved_path": "sealed-upstream/reasoning_gym/induction/acre/acre.py"
+  }
+]

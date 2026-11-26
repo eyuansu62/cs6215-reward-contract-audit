@@ -1,0 +1,755 @@
+{
+  "schema_version": "1.0-independent-results-review",
+  "created_utc": "2026-11-08T14:50:01.462233+00:00",
+  "reviewer": "Independent Codex native subagent; no method/result edits",
+  "verdict": "pass_for_source_exposed_development_characterization_and_same_machine_replay",
+  "blocking_findings": [],
+  "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "scope": {
+    "primary_cases": 7,
+    "primary_families": 5,
+    "projects": 1,
+    "primary_positives": 3,
+    "primary_negatives": 4,
+    "synthetic_diagnostic_cases_separately_accounted": 8,
+    "qualified_group_anagrams_excluded": true,
+    "split": "development_source_exposed",
+    "target": "normal reward >=1 with a false declared necessary full-credit requirement"
+  },
+  "independently_recomputed_metrics": {
+    "primary": {
+      "semgrep": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "unknown_positive": 0,
+        "unknown_negative": 0,
+        "total": 7,
+        "unknown": 0,
+        "correct": 7,
+        "accuracy": 1.0,
+        "coverage": 1.0,
+        "precision": 1.0,
+        "recall_with_unknown": 1.0,
+        "f1_with_unknown": 1.0
+      },
+      "symbolic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "unknown_positive": 2,
+        "unknown_negative": 1,
+        "total": 7,
+        "unknown": 3,
+        "correct": 4,
+        "accuracy": 0.5714285714285714,
+        "coverage": 0.5714285714285714,
+        "precision": 1.0,
+        "recall_with_unknown": 0.3333333333333333,
+        "f1_with_unknown": 0.5
+      }
+    },
+    "synthetic_diagnostic": {
+      "semgrep": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 1,
+        "tn": 2,
+        "unknown_positive": 0,
+        "unknown_negative": 0,
+        "total": 8,
+        "unknown": 0,
+        "correct": 4,
+        "accuracy": 0.5,
+        "coverage": 1.0,
+        "precision": 0.4,
+        "recall_with_unknown": 0.6666666666666666,
+        "f1_with_unknown": 0.5
+      },
+      "symbolic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "unknown_positive": 2,
+        "unknown_negative": 2,
+        "total": 8,
+        "unknown": 4,
+        "correct": 4,
+        "accuracy": 0.5,
+        "coverage": 0.5,
+        "precision": 1.0,
+        "recall_with_unknown": 0.3333333333333333,
+        "f1_with_unknown": 0.5
+      }
+    }
+  },
+  "primary_cases": [
+    {
+      "id": "rg-issue-543-original",
+      "expected_violation": true,
+      "function_family": "rg-issue-543",
+      "contract_id": "C_PROBABILITY_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: answer.replace"
+        }
+      }
+    },
+    {
+      "id": "rg-issue-544-original",
+      "expected_violation": true,
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "rg-issue-545-original",
+      "expected_violation": true,
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: self.parse_string_to_complex"
+        }
+      }
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "expected_violation": false,
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "expected_violation": false,
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: self.parse_string_to_complex"
+        }
+      }
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "expected_violation": false,
+      "function_family": "PalindromeDataset.score_answer",
+      "contract_id": "C_PALINDROME_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "expected_violation": false,
+      "function_family": "PrimeFactorizationDataset.score_answer",
+      "contract_id": "C_PRIME_FACTORS_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "id": "diag-bool-truthiness",
+      "expected_violation": true,
+      "function_family": "diag-bool-truthiness",
+      "contract_id": "C_BOOLEAN_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "diag-bool-semantic-guard",
+      "expected_violation": false,
+      "function_family": "diag-bool-semantic-guard",
+      "contract_id": "C_BOOLEAN_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": false,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "diag-dead-truthiness",
+      "expected_violation": false,
+      "function_family": "diag-dead-truthiness",
+      "contract_id": "C_BOOLEAN_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": false,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "diag-finite-adjacent-guard",
+      "expected_violation": false,
+      "function_family": "diag-finite-adjacent-guard",
+      "contract_id": "C_COMPLEX_FINITE",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: abs"
+        }
+      }
+    },
+    {
+      "id": "diag-finite-nonadjacent-guard",
+      "expected_violation": false,
+      "function_family": "diag-finite-nonadjacent-guard",
+      "contract_id": "C_COMPLEX_FINITE",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": false,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: abs"
+        }
+      }
+    },
+    {
+      "id": "diag-finite-rebound-guard",
+      "expected_violation": true,
+      "function_family": "diag-finite-rebound-guard",
+      "contract_id": "C_COMPLEX_FINITE",
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated condition: unverified call: math.isfinite"
+        }
+      }
+    },
+    {
+      "id": "diag-finite-else-full",
+      "expected_violation": true,
+      "function_family": "diag-finite-else-full",
+      "contract_id": "C_COMPLEX_FINITE",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": false,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: abs"
+        }
+      }
+    },
+    {
+      "id": "diag-legitimate-partial",
+      "expected_violation": false,
+      "function_family": "diag-legitimate-partial",
+      "contract_id": "C_PALINDROME_FULL",
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched."
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null
+        }
+      }
+    }
+  ],
+  "checks": {
+    "freeze_and_all_frozen_file_hashes_match": true,
+    "implementation_reviewed_code_hashes_match_freeze": true,
+    "content_ids_and_exact_frozen_contracts_verified": true,
+    "forbidden_detector_input_fields_absent": true,
+    "no_case_id_or_oracle_decision_logic_found_in_prior_frozen_code_review": true,
+    "score_metrics_and_per_case_correctness_recomputed_without_runner_scoring_function": true,
+    "all_prediction_raw_records_agree": true,
+    "unexpected_errors": 0,
+    "semgrep_complete_scans_verified": 30,
+    "semgrep_native_search_commands_verified": 60,
+    "semgrep_engine_version_commands_verified": 30,
+    "all_semgrep_rule_bytes_identical_across_units_contracts_rounds": true,
+    "all_semgrep_raw_json_agrees_with_saved_stdout": true,
+    "all_semgrep_raw_stderr_empty": true,
+    "all_semgrep_engine_errors_skips_timeouts_absent": true,
+    "all_semgrep_function_return_spans_complete_against_source_ast": true,
+    "semgrep_pinned_binary_bytes_checked": true,
+    "target_scorer_or_model_executed_by_reviewer": false,
+    "network_used": false
+  },
+  "raw_semgrep_checks": [
+    {
+      "run": "primary-01",
+      "id": "rg-issue-543-original",
+      "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+      "functions": 1,
+      "returns": 4,
+      "findings": [
+        "reward-prefix-shorter-length-ratio"
+      ],
+      "passed": true
+    },
+    {
+      "run": "primary-01",
+      "id": "rg-issue-544-original",
+      "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "primary-01",
+      "id": "rg-issue-545-original",
+      "source_sha256": "7a17c19ddf7db86efaf06a0ce264b0b90a4bebd1342676673779a21bbd6f5956",
+      "functions": 2,
+      "returns": 11,
+      "findings": [
+        "reward-nonfinite-exp-clamp"
+      ],
+      "passed": true
+    },
+    {
+      "run": "primary-01",
+      "id": "rg-pr-561-proposed-repair",
+      "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+      "functions": 1,
+      "returns": 2,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-01",
+      "id": "rg-pr-562-proposed-repair",
+      "source_sha256": "c98e6fd7c1b26f62eacddc4e076e81731efcd6e8259195478cce3dd2ed17908a",
+      "functions": 2,
+      "returns": 13,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-01",
+      "id": "control-palindrome-validity-main",
+      "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+      "functions": 1,
+      "returns": 5,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-01",
+      "id": "control-prime-factorization-main",
+      "source_sha256": "24f8f6872817b7f65f2c1bd1a64965d0f14eedd83ec75cdfbc86cbce709e158b",
+      "functions": 2,
+      "returns": 3,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-bool-truthiness",
+      "source_sha256": "9a965578587f8a2e013bf6acbb22f9d864b18cac25246d5842f09bf56f99c0ad",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-bool-semantic-guard",
+      "source_sha256": "cc53a36c14e07fc0788e535795cf830e767551712e3a4c63bd865a32c17c9025",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-dead-truthiness",
+      "source_sha256": "5f980a52425c6290289e9a1588c44d04272bc9278e55bafe750b4b0c0fea0e8b",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-finite-adjacent-guard",
+      "source_sha256": "06406349a3db2b1a003e5ce71506d70a5312785de073406beb8a933525b30b10",
+      "functions": 1,
+      "returns": 2,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-finite-nonadjacent-guard",
+      "source_sha256": "afcf2dec9d3ea0a106df6a5fc9089743cc7ee11fd3b88a85fef4625421426607",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-nonfinite-exp-clamp"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-finite-rebound-guard",
+      "source_sha256": "9fc672ffa6bac1a1ba755cd01fdbfd8e50c1e031530b7fc3f67cea5367e20084",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-nonfinite-exp-clamp"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-finite-else-full",
+      "source_sha256": "73e664c1d2c5484ae6e4af7d4e2284601c827b3294a0faf4059b5a98c7da05c0",
+      "functions": 1,
+      "returns": 2,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-01",
+      "id": "diag-legitimate-partial",
+      "source_sha256": "a4cf850371da847a8c2ff33449613e8e983cf773acae3be00c2f6ff5327dea0c",
+      "functions": 1,
+      "returns": 1,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "rg-issue-543-original",
+      "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+      "functions": 1,
+      "returns": 4,
+      "findings": [
+        "reward-prefix-shorter-length-ratio"
+      ],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "rg-issue-544-original",
+      "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "rg-issue-545-original",
+      "source_sha256": "7a17c19ddf7db86efaf06a0ce264b0b90a4bebd1342676673779a21bbd6f5956",
+      "functions": 2,
+      "returns": 11,
+      "findings": [
+        "reward-nonfinite-exp-clamp"
+      ],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "rg-pr-561-proposed-repair",
+      "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+      "functions": 1,
+      "returns": 2,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "rg-pr-562-proposed-repair",
+      "source_sha256": "c98e6fd7c1b26f62eacddc4e076e81731efcd6e8259195478cce3dd2ed17908a",
+      "functions": 2,
+      "returns": 13,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "control-palindrome-validity-main",
+      "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+      "functions": 1,
+      "returns": 5,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "primary-02",
+      "id": "control-prime-factorization-main",
+      "source_sha256": "24f8f6872817b7f65f2c1bd1a64965d0f14eedd83ec75cdfbc86cbce709e158b",
+      "functions": 2,
+      "returns": 3,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-bool-truthiness",
+      "source_sha256": "9a965578587f8a2e013bf6acbb22f9d864b18cac25246d5842f09bf56f99c0ad",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-bool-semantic-guard",
+      "source_sha256": "cc53a36c14e07fc0788e535795cf830e767551712e3a4c63bd865a32c17c9025",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-dead-truthiness",
+      "source_sha256": "5f980a52425c6290289e9a1588c44d04272bc9278e55bafe750b4b0c0fea0e8b",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-bool-truthiness-equality"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-finite-adjacent-guard",
+      "source_sha256": "06406349a3db2b1a003e5ce71506d70a5312785de073406beb8a933525b30b10",
+      "functions": 1,
+      "returns": 2,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-finite-nonadjacent-guard",
+      "source_sha256": "afcf2dec9d3ea0a106df6a5fc9089743cc7ee11fd3b88a85fef4625421426607",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-nonfinite-exp-clamp"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-finite-rebound-guard",
+      "source_sha256": "9fc672ffa6bac1a1ba755cd01fdbfd8e50c1e031530b7fc3f67cea5367e20084",
+      "functions": 1,
+      "returns": 2,
+      "findings": [
+        "reward-nonfinite-exp-clamp"
+      ],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-finite-else-full",
+      "source_sha256": "73e664c1d2c5484ae6e4af7d4e2284601c827b3294a0faf4059b5a98c7da05c0",
+      "functions": 1,
+      "returns": 2,
+      "findings": [],
+      "passed": true
+    },
+    {
+      "run": "diagnostic-02",
+      "id": "diag-legitimate-partial",
+      "source_sha256": "a4cf850371da847a8c2ff33449613e8e983cf773acae3be00c2f6ff5327dea0c",
+      "functions": 1,
+      "returns": 1,
+      "findings": [],
+      "passed": true
+    }
+  ],
+  "replays": {
+    "primary": {
+      "passed": true,
+      "cases": 7,
+      "method_results": 14,
+      "normalized_analytical_predictions_equal": true,
+      "scores_equal": true,
+      "commands_and_source_rule_bytes_independently_verified": true,
+      "comparison_file": "results/primary-replay-comparison.json"
+    },
+    "diagnostic": {
+      "passed": true,
+      "cases": 8,
+      "method_results": 16,
+      "normalized_analytical_predictions_equal": true,
+      "scores_equal": true,
+      "commands_and_source_rule_bytes_independently_verified": true,
+      "comparison_file": "results/diagnostic-replay-comparison.json"
+    }
+  },
+  "interpretation": {
+    "primary": "The fixed Semgrep patterns identify all three known positive originals in this selected source-exposed set and produce no primary negative warnings. There is no observed primary detection headroom that establishes a neural benefit. Its four no_alarm outcomes remain heuristic completed-scan statuses, not semantic proofs.",
+    "symbolic": "One Boolean source counterexample and three source certificates are determinate; probability and both complex versions are Unknown. The first unsupported operations are answer.replace and self.parse_string_to_complex. These are implementation/library/helper coverage limits, not evidence that neural reasoning is required.",
+    "synthetic": "Two explicit guard/dead-code examples show determinate corrections of Semgrep false positives by this non-neural checker. Semgrep also has a nonadjacent-guard false positive and an else-full-return false negative; the symbolic checker is Unknown on all four numeric diagnostics. Synthetic accuracy ties at 4/8 under required Unknown accounting.",
+    "neural_claim": "No LLM, neural analyzer, contract-inference procedure or training system was tested. Neither need, necessity nor benefit of a neural component is established. Supplied reviewed contracts and small source-exposed examples cannot support independent generalization claims."
+  },
+  "nonblocking_output_qualification": [
+    {
+      "id": "expanded-condition-display",
+      "finding": "The symbolic output records the original whole BoolOp source text for individual expanded facts. A certificate can therefore display repeated whole-condition text with different truth flags (for example the palindrome initial guard), even though the underlying native atomic Terms differ.",
+      "impact": "Presentation ambiguity, not a changed verdict or metric. Read these fields as source-location context for expanded facts; do not present them as an executable atomic proof trace. Frozen outputs were preserved."
+    }
+  ],
+  "remaining_limits": [
+    "Original/repair pairs and archived probes are correlated; seven cases are not seven independent bugs.",
+    "Open proposed repairs and normal controls are negative only for the stated target properties; exceptions are not full-reward returns.",
+    "Static no_alarm certificates are bounded by declared native domains and reviewed source semantics; this audit is not arbitrary-Python formal verification.",
+    "Same-machine replay establishes stable analytical records/metrics under this frozen setup, not portability or generalization.",
+    "Semgrep uses fixed risk patterns without dedicated palindrome/prime semantic checks; symbolic numeric/helper Unknowns reflect deliberately missing models."
+  ],
+  "reviewed_artifact_hashes": {
+    "method-freeze.json": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+    "results/primary-01/predictions.json": "ec8ba20a343ce870e4d111e93ec9a4384c2375e194b1d4b400daea01c8e646d5",
+    "results/primary-01/scores.json": "51a6d14c09ad0de3d90aeb6757524690724ce0b8ad6e8b0c2cd6cc9bcd441da7",
+    "results/primary-02/predictions.json": "e730893201c14e7c96cb73ef7fd77c8cf79371fc3d6041c7a02c34c7bfcaf05c",
+    "results/primary-02/scores.json": "f9ad3994d51f4ec7bf455431f7f1a244105e5fedbf1ea214a9caff66c475127d",
+    "results/primary-replay-comparison.json": "c6ff1aa27cd4887260ebd902b0edf6844f5a07f032618fd3fde802b8c3110470",
+    "results/diagnostic-01/predictions.json": "fed0d4d2f66d045a2d8a5a87a0a0013c6fcfcdbe6e452ccc15324362ec719391",
+    "results/diagnostic-01/scores.json": "d2e9082c2f2b7403b10a4483edeabcbf5ed89d1efbc3ae10c40ffd139075cec6",
+    "results/diagnostic-02/predictions.json": "b9141ce9bafcd3622a36598e0432c7546597577e2258e0f3cdc601fd85b45ef3",
+    "results/diagnostic-02/scores.json": "d4dbf6be4e0f61dcb342a9b038d39db2325692124426ea67faefdf148d9b1473",
+    "results/diagnostic-replay-comparison.json": "6c11da3b251da0aa8a81c0d67bfbde6e77b44fde1399cba1cf7ee85ca621e8d3"
+  },
+  "report_and_readme_claims_review": {
+    "passed": true,
+    "documents_read": [
+      "REPORT.md",
+      "README.md",
+      "audit/pre-freeze-checks.json"
+    ],
+    "results_tables_match_independent_counts": true,
+    "neural_claims": "Explicitly states no observed primary detection gap requiring LLM, no established LLM gain, no method integration now. Does not generalize selected Semgrep 7/7 outcomes to unseen reward functions.",
+    "future_contract_proposal": "Future independent task-description to structured-contract candidates are clearly prospective. They are not presented as implemented, tested, a new gold oracle or an established improvement; exposed current families are excluded from that proposed independent test.",
+    "authorship_disclosure": "Distinguishes no experimental LLM detector from Codex-assisted code/material/review authorship.",
+    "verification_claim_support": "61 tests and original-data/archive integrity claims agree with the saved pre-freeze-checks record; implementation review independently reran all 56 detector synthetic tests and four non-primary scoring tests. The primary-projection test and full archive integrity were not rerun for this results audit.",
+    "documentation_followup": "Root is documenting the frozen BoolOp display ambiguity without changing method or result bytes."
+  }
+}

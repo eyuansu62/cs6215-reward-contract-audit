@@ -1,0 +1,48 @@
+{
+  "denominator": 24,
+  "records": [
+    {
+      "method": "llm",
+      "label": "LLM",
+      "correct": 24,
+      "errors": 0,
+      "unknown": 0,
+      "witness_supported_correct": 24
+    },
+    {
+      "method": "rules",
+      "label": "Fixed rules",
+      "correct": 3,
+      "errors": 0,
+      "unknown": 21,
+      "witness_supported_correct": 3
+    },
+    {
+      "method": "fixed_E",
+      "label": "Always equality (E)",
+      "correct": 20,
+      "errors": 4,
+      "unknown": 0,
+      "witness_supported_correct": 16
+    },
+    {
+      "method": "fixed_V",
+      "label": "Always validity (V)",
+      "correct": 20,
+      "errors": 4,
+      "unknown": 0,
+      "witness_supported_correct": 20
+    },
+    {
+      "method": "fixed_null",
+      "label": "Always abstain",
+      "correct": 0,
+      "errors": 0,
+      "unknown": 24,
+      "witness_supported_correct": 0
+    }
+  ],
+  "source": "results/comparison/summary.json",
+  "unit": "8 nonnull descriptions crossed with 3 shared programs; only 6 distinct semantic/program combinations",
+  "excluded": "4 U descriptions and their 12 administrative cells"
+}

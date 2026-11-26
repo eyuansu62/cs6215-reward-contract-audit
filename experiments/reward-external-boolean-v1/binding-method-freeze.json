@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-09T03:53:29.044017+00:00",
+  "files_sha256": {
+    "native_binding.py": "d2a4c32e807352ead28e98d9aa73767ce2aa7d006481e8db4451dd0342a03328",
+    "tests/test_native_binding.py": "444c4184ccf86af43981ab6e4854efaad1539fefd2b1ed06e2bdd8c360f3fe62",
+    "protocol/binding-plan.json": "47fbf6a32216a4d56099f889373d51ef31cf6c69a957ac69d4928e47a53e4af2"
+  },
+  "scope": "User-authorized native parameter/single-level field mapping only",
+  "frozen_before_external_primary_predictions": true,
+  "old_interface_and_semantics_changed": false
+}

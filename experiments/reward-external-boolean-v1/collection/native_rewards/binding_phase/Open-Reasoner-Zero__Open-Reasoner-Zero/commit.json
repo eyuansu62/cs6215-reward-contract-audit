@@ -1,0 +1,101 @@
+{
+  "sha": "3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+  "node_id": "C_kwDON8PtN9oAKDNmZGQ5YTA3YjRmYjAxZTA2MDA1ZTZlNzRmYzU2NjkwY2RlOGEzNDE",
+  "commit": {
+    "author": {
+      "name": "REIGN12",
+      "email": "[email omitted]",
+      "date": "2025-06-02T16:35:57Z"
+    },
+    "committer": {
+      "name": "REIGN12",
+      "email": "[email omitted]",
+      "date": "2025-06-02T16:35:57Z"
+    },
+    "message": "doc: update ORZ-R1-Distill-Qwen-14B results",
+    "tree": {
+      "sha": "e1c10dfc3adc9ddb295a5a392c61a974b4d0f81e",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/e1c10dfc3adc9ddb295a5a392c61a974b4d0f81e"
+    },
+    "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/commits/3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/commits/3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+  "html_url": "https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/commit/3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+  "comments_url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/commits/3fdd9a07b4fb01e06005e6e74fc56690cde8a341/comments",
+  "author": {
+    "login": "REIGN12",
+    "id": 67776176,
+    "node_id": "MDQ6VXNlcjY3Nzc2MTc2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/67776176?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/REIGN12",
+    "html_url": "https://github.com/REIGN12",
+    "followers_url": "https://api.github.com/users/REIGN12/followers",
+    "following_url": "https://api.github.com/users/REIGN12/following{/other_user}",
+    "gists_url": "https://api.github.com/users/REIGN12/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/REIGN12/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/REIGN12/subscriptions",
+    "organizations_url": "https://api.github.com/users/REIGN12/orgs",
+    "repos_url": "https://api.github.com/users/REIGN12/repos",
+    "events_url": "https://api.github.com/users/REIGN12/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/REIGN12/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "REIGN12",
+    "id": 67776176,
+    "node_id": "MDQ6VXNlcjY3Nzc2MTc2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/67776176?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/REIGN12",
+    "html_url": "https://github.com/REIGN12",
+    "followers_url": "https://api.github.com/users/REIGN12/followers",
+    "following_url": "https://api.github.com/users/REIGN12/following{/other_user}",
+    "gists_url": "https://api.github.com/users/REIGN12/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/REIGN12/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/REIGN12/subscriptions",
+    "organizations_url": "https://api.github.com/users/REIGN12/orgs",
+    "repos_url": "https://api.github.com/users/REIGN12/repos",
+    "events_url": "https://api.github.com/users/REIGN12/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/REIGN12/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "a23519277efdd71a063e1f2913d5c496a5f96180",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/commits/a23519277efdd71a063e1f2913d5c496a5f96180",
+      "html_url": "https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/commit/a23519277efdd71a063e1f2913d5c496a5f96180"
+    }
+  ],
+  "stats": {
+    "total": 10,
+    "additions": 10,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "7b962b8f4c651314ce5c17e5e9e15ce23e432130",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 0,
+      "changes": 10,
+      "blob_url": "https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/blob/3fdd9a07b4fb01e06005e6e74fc56690cde8a341/README.md",
+      "raw_url": "https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/raw/3fdd9a07b4fb01e06005e6e74fc56690cde8a341/README.md",
+      "contents_url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/contents/README.md?ref=3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+      "patch": "@@ -51,6 +51,16 @@ Please refer to our [paper](https://arxiv.org/abs/2503.24290) for more insights\n \n ## Releases \ud83d\udce6\n \n+<strong>[2025/06/03]</strong>\n+We release [ORZ-R1-Distill-Qwen-14B](https://huggingface.co/Open-Reasoner-Zero/ORZ-R1-Distill-Qwen-14B), obtained by applying ORZ recipe to reasoning-enhanced models like DeepSeek-R1-Distill-Qwen-14B. This ORZ-R1-Distill-Qwen-14B achieves strong results on reasoning benchmarks, even surpassing the larger DeepSeek-R1-Distill-Qwen-32B model.\n+\n+| Model                        | AIME 2024 | AIME 2025 | MATH500 | GPQA Dia. |\n+| ---------------------------- | --------- | --------- | ------- | --------- |\n+| DeepSeek-R1-Distill-Qwen-14B | 69.7      | 49.1      | 93.9    | 59.1      |\n+| DeepSeek-R1-Distill-Qwen-32B | 72.6      | 60.0      | 94.3    | **62.1**     |\n+| **ORZ-R1-Distill-Qwen-14B**  | **75.2**  | **60.0**  | **95.6** | 60.4  |\n+\n+\n <strong>[2025/03/31]</strong>\n We announce a major milestone for `Open-Reasoner-Zero`:\n "
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "sha": "3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+  "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+  "tree": [
+    {
+      "path": ".flake8",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd5d254d774cb5cdd7bdf2fc49f127dd5f0987b5",
+      "size": 872,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/fd5d254d774cb5cdd7bdf2fc49f127dd5f0987b5"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bbbd814900f45eb497aeda98a14a93e4ad94d75",
+      "size": 3195,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/2bbbd814900f45eb497aeda98a14a93e4ad94d75"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f401a65e09dbf4b8366723900e6374e09b57e1",
+      "size": 1075,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e1f401a65e09dbf4b8366723900e6374e09b57e1"
+    },
+    {
+      "path": "ORZ_paper.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3054ba93b5b648fe5701358e042cd116bc1b63fc",
+      "size": 1728006,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/3054ba93b5b648fe5701358e042cd116bc1b63fc"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b962b8f4c651314ce5c17e5e9e15ce23e432130",
+      "size": 12698,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/7b962b8f4c651314ce5c17e5e9e15ce23e432130"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92701967c697c05c052fd7d95c293f5850ab3d7b",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/92701967c697c05c052fd7d95c293f5850ab3d7b"
+    },
+    {
+      "path": "data/eval_data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cadb2068b196fff2d0a9cfc71b62d4a265edb13d",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/cadb2068b196fff2d0a9cfc71b62d4a265edb13d"
+    },
+    {
+      "path": "data/eval_data/aime2024.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b78e73d1460af1ab43727675d43ef498994a1d4",
+      "size": 14741,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/2b78e73d1460af1ab43727675d43ef498994a1d4"
+    },
+    {
+      "path": "data/eval_data/gpqa_diamond.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d6283c29abe432e6d68ac7cea8d43bf3f070aac",
+      "size": 200369,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/1d6283c29abe432e6d68ac7cea8d43bf3f070aac"
+    },
+    {
+      "path": "data/eval_data/math500.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ba46e18ac1a0cd112c63d863a167ad5d1cf5a2",
+      "size": 183569,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e8ba46e18ac1a0cd112c63d863a167ad5d1cf5a2"
+    },
+    {
+      "path": "data/orz_math_13k_collection_hard.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "136948e32ffd26e3988f9b9fc7be30b5626619bb",
+      "size": 6865906,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/136948e32ffd26e3988f9b9fc7be30b5626619bb"
+    },
+    {
+      "path": "data/orz_math_57k_collected.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08812d4a47aadf8fa80a43f11431e6d41ba55b64",
+      "size": 24529637,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/08812d4a47aadf8fa80a43f11431e6d41ba55b64"
+    },
+    {
+      "path": "data/orz_math_72k_collection_extended.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "692af2e8184c5a5ec6e9161abd89cdf561a1cb71",
+      "size": 35951252,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/692af2e8184c5a5ec6e9161abd89cdf561a1cb71"
+    },
+    {
+      "path": "docker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3508968f7c389603f0ca6b983023d6ad5d62b898",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/3508968f7c389603f0ca6b983023d6ad5d62b898"
+    },
+    {
+      "path": "docker/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec4f3f04bff45d7d518d89bbb4a5b8fb0c642f17",
+      "size": 1739,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/ec4f3f04bff45d7d518d89bbb4a5b8fb0c642f17"
+    },
+    {
+      "path": "docker/nccl.conf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fead2ca95faede1af5b0585f158b789a54f7335",
+      "size": 287,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/9fead2ca95faede1af5b0585f158b789a54f7335"
+    },
+    {
+      "path": "docker/parameter_offload.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "172414ade34a5ca2ecf4765e012b03f891ab0925",
+      "size": 25953,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/172414ade34a5ca2ecf4765e012b03f891ab0925"
+    },
+    {
+      "path": "docker/partitioned_param_coordinator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40b573860a8c51956c18edbbc29cb54f07f5614e",
+      "size": 27766,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/40b573860a8c51956c18edbbc29cb54f07f5614e"
+    },
+    {
+      "path": "figure",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ae654c619e3df0d7be2837c38d03e3979609106",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/2ae654c619e3df0d7be2837c38d03e3979609106"
+    },
+    {
+      "path": "figure/WeChatGroup.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "550eb534352c30746f339cbd3d6402be9f1bd6f5",
+      "size": 193679,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/550eb534352c30746f339cbd3d6402be9f1bd6f5"
+    },
+    {
+      "path": "figure/logo.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c693bcdd50d054fbe903b99d57c122390203846",
+      "size": 179827,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/7c693bcdd50d054fbe903b99d57c122390203846"
+    },
+    {
+      "path": "figure/teaser.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8afbc60314a9ad79af4093d40e6f1f508c9c00e6",
+      "size": 2374986,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/8afbc60314a9ad79af4093d40e6f1f508c9c00e6"
+    },
+    {
+      "path": "figure/train_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10984895196da86c4586a4771e2031da108af652",
+      "size": 1567536,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/10984895196da86c4586a4771e2031da108af652"
+    },
+    {
+      "path": "orz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff5150696102eb78e9d76784d350e4d1484b7e83",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/ff5150696102eb78e9d76784d350e4d1484b7e83"
+    },
+    {
+      "path": "orz/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/datasets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c29ed5a43250848533f70edbe690cf3d7f724142",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/c29ed5a43250848533f70edbe690cf3d7f724142"
+    },
+    {
+      "path": "orz/datasets/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/datasets/math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e7f97d5edda1e0f78be13ba1074dea0f8cbd55f",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/8e7f97d5edda1e0f78be13ba1074dea0f8cbd55f"
+    },
+    {
+      "path": "orz/datasets/math/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/datasets/math/gsm8k.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acdcfd87705807821144b9cc2a5f7a43fb7176a6",
+      "size": 6790,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/acdcfd87705807821144b9cc2a5f7a43fb7176a6"
+    },
+    {
+      "path": "orz/exp_engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98a9207257ab84170a933c9a029b8cd547640e81",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/98a9207257ab84170a933c9a029b8cd547640e81"
+    },
+    {
+      "path": "orz/exp_engine/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9649980a45553295eb7c139926efd6d0f08a8e9",
+      "size": 68,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/b9649980a45553295eb7c139926efd6d0f08a8e9"
+    },
+    {
+      "path": "orz/exp_engine/accelerators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20d8ec125b56cba3d50f3ff6831e5e5209a21ca0",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/20d8ec125b56cba3d50f3ff6831e5e5209a21ca0"
+    },
+    {
+      "path": "orz/exp_engine/accelerators/inference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d667fca098eb89589feea3320d2ccee653a5c773",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/d667fca098eb89589feea3320d2ccee653a5c773"
+    },
+    {
+      "path": "orz/exp_engine/accelerators/inference/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/exp_engine/accelerators/inference/vllm_engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f84a59d5eafb31d24f8d54d3a8a66c822b0706ec",
+      "size": 6106,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/f84a59d5eafb31d24f8d54d3a8a66c822b0706ec"
+    },
+    {
+      "path": "orz/exp_engine/accelerators/inference/vllm_worker_wrap.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6340b21d666118a95d43343c37f8610828192557",
+      "size": 3863,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/6340b21d666118a95d43343c37f8610828192557"
+    },
+    {
+      "path": "orz/exp_engine/kernels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+    },
+    {
+      "path": "orz/exp_engine/kernels/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/exp_engine/parallels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeae1dc8f3aaed8ec9532887a72c3e1c04d8da64",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/eeae1dc8f3aaed8ec9532887a72c3e1c04d8da64"
+    },
+    {
+      "path": "orz/exp_engine/parallels/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/exp_engine/parallels/orz_distributed_c10d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88aa79c84ec49d0a1d2f717904b89de4d236e733",
+      "size": 10035,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/88aa79c84ec49d0a1d2f717904b89de4d236e733"
+    },
+    {
+      "path": "orz/exps",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "457e4d09118074509fbadb71eecc06dda6342fb4",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/457e4d09118074509fbadb71eecc06dda6342fb4"
+    },
+    {
+      "path": "orz/exps/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "617468e70875579d8ea5bc389ce61b4995df8394",
+      "size": 166,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/617468e70875579d8ea5bc389ce61b4995df8394"
+    },
+    {
+      "path": "orz/exps/base_exp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8590831af23a9de30f25cea9b7535fbdd8891dc",
+      "size": 3605,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/a8590831af23a9de30f25cea9b7535fbdd8891dc"
+    },
+    {
+      "path": "orz/exps/datasets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+    },
+    {
+      "path": "orz/exps/datasets/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "orz/exps/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03f5439ec9cf1fdff7b6636ddc45445dc4a8b413",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/03f5439ec9cf1fdff7b6636ddc45445dc4a8b413"
+    },
+    {
+      "path": "orz/exps/examples/ppo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bdcb4944e809d1f922fcd851353f058e7a5b7949",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/bdcb4944e809d1f922fcd851353f058e7a5b7949"
+    },
+    {
+      "path": "orz/exps/examples/ppo/ppo_base_exp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ee05fe24339a495daf35a7320d57f083faa9673",
+      "size": 6960,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/1ee05fe24339a495daf35a7320d57f083faa9673"
+    },
+    {
+      "path": "orz/ppo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8dd7e130108d85c6cfb7ac8855cef09ce2ea5fc6",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/8dd7e130108d85c6cfb7ac8855cef09ce2ea5fc6"
+    },
+    {
+      "path": "orz/ppo/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4ed243c9261856eaeb6a66bd09e3b1fee9c918d",
+      "size": 70,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/b4ed243c9261856eaeb6a66bd09e3b1fee9c918d"
+    },
+    {
+      "path": "orz/ppo/actors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b53ab3a94ea7ca13737c7373d3d86e71c10ff1",
+      "size": 38524,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/20b53ab3a94ea7ca13737c7373d3d86e71c10ff1"
+    },
+    {
+      "path": "orz/ppo/dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5db0b862ff945b41b6e10db7b0738c64a1e358d",
+      "size": 2194,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/f5db0b862ff945b41b6e10db7b0738c64a1e358d"
+    },
+    {
+      "path": "orz/ppo/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc36f3776217270f13353e269b4e18993d671f61",
+      "size": 23481,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/bc36f3776217270f13353e269b4e18993d671f61"
+    },
+    {
+      "path": "orz/ppo/openrlhf_deepspeed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f90b728972425f75816fe4fa787af82f50509a",
+      "size": 15662,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/74f90b728972425f75816fe4fa787af82f50509a"
+    },
+    {
+      "path": "orz/ppo/replay_buffer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46c91000beec2ec292e9efba313c8a138e52d714",
+      "size": 13107,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/46c91000beec2ec292e9efba313c8a138e52d714"
+    },
+    {
+      "path": "orz/ppo/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1931fc44ad53bc8809c047dcc3a0862dde8deded",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/1931fc44ad53bc8809c047dcc3a0862dde8deded"
+    },
+    {
+      "path": "orz/ppo/tools/math_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfe929d049b9c8fd1c78b86f3980f5b03f01259f",
+      "size": 12011,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/cfe929d049b9c8fd1c78b86f3980f5b03f01259f"
+    },
+    {
+      "path": "orz/ppo/trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "956b089570973aa11c619cebcb15023cb588343b",
+      "size": 57078,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/956b089570973aa11c619cebcb15023cb588343b"
+    },
+    {
+      "path": "orz/ppo/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e784f7eabad146e959d12674831381feac92286",
+      "size": 16144,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/1e784f7eabad146e959d12674831381feac92286"
+    },
+    {
+      "path": "playground",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01471591dfdc8decff264352c28937f0abaa7e9d",
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/trees/01471591dfdc8decff264352c28937f0abaa7e9d"
+    },
+    {
+      "path": "playground/orz_0p5b_ppo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b63a230d94b7ba1efcfb7eef60ac689e806eb653",
+      "size": 3900,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/b63a230d94b7ba1efcfb7eef60ac689e806eb653"
+    },
+    {
+      "path": "playground/orz_0p5b_ppo_1gpu.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1caab1adc7f7c186b15c61521dad46c3025e42f",
+      "size": 3916,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/d1caab1adc7f7c186b15c61521dad46c3025e42f"
+    },
+    {
+      "path": "playground/orz_14m_ppo_mini.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6633f4b55bb3d622fe085f823090d581c895314b",
+      "size": 21450,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/6633f4b55bb3d622fe085f823090d581c895314b"
+    },
+    {
+      "path": "playground/orz_1p5b_ppo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb05bff42bdd7b7b39973b5bfd85300e78ce9fa6",
+      "size": 4394,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/cb05bff42bdd7b7b39973b5bfd85300e78ce9fa6"
+    },
+    {
+      "path": "playground/orz_32b_ppo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19421b8af04dcd0b6c1a8aa56157acf175cb20b7",
+      "size": 4689,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/19421b8af04dcd0b6c1a8aa56157acf175cb20b7"
+    },
+    {
+      "path": "playground/orz_7b_grpo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c4d446243a1b0ce65b619e6e0139076e3bb5abb",
+      "size": 4157,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/6c4d446243a1b0ce65b619e6e0139076e3bb5abb"
+    },
+    {
+      "path": "playground/orz_7b_ppo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c08a7b9f0c6dca6b870d44ca679fc8c79ce9127",
+      "size": 21641,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/2c08a7b9f0c6dca6b870d44ca679fc8c79ce9127"
+    },
+    {
+      "path": "playground/zero_setting_base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daebbea4b82b228ea59b2375d2175fb95b049a71",
+      "size": 3519,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/daebbea4b82b228ea59b2375d2175fb95b049a71"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2b04c8afe5a6b672d5033eb5cded566cfd91de",
+      "size": 2050,
+      "url": "https://api.github.com/repos/Open-Reasoner-Zero/Open-Reasoner-Zero/git/blobs/ea2b04c8afe5a6b672d5033eb5cded566cfd91de"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-11-08T07:41:06.147422+00:00",
+  "purpose": "Dataset evidence validation only; no analyzer, Semgrep, LLM, RL training or full RG package execution.",
+  "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "subjects": 8,
+  "function_families": 6,
+  "probe_count": 63,
+  "all_source_expectations_matched": true,
+  "known_bug_originals_reproduced": 3,
+  "proposed_repairs_without_observed_full_credit_violation": 1,
+  "normal_control_subjects": 3,
+  "violating_probes": 11,
+  "unexpected_worker_outcomes": [],
+  "assurance": "Exact real scoring/helper ASTs in an isolated, AST/namespace-scoped stdlib harness; not full-package/generator reproduction, exhaustive proof or a general secure code sandbox.",
+  "annotations_deferred": true,
+  "upstream_constructors_modules_and_generators_executed": false,
+  "new_dependencies": false,
+  "new_analyzer_or_model_runs": 0,
+  "replay_inputs_sha256": "b768de73f5f9ea570083d5408ddaece3b61a91f6940b8a094cd0856b9d2109f7",
+  "reproducer_sha256": "aa2ff73ca3274c79cc14811a7bf50b17fcab4e40f85a2257f6cd85644c45da84",
+  "subjects_results": [
+    {
+      "id": "rg-issue-543-original",
+      "probes": 11,
+      "source_expectations_match": true,
+      "full_credit_violations": 3
+    },
+    {
+      "id": "rg-issue-544-original",
+      "probes": 7,
+      "source_expectations_match": true,
+      "full_credit_violations": 3
+    },
+    {
+      "id": "rg-issue-545-original",
+      "probes": 9,
+      "source_expectations_match": true,
+      "full_credit_violations": 4
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "probes": 8,
+      "source_expectations_match": true,
+      "full_credit_violations": 0
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "probes": 10,
+      "source_expectations_match": true,
+      "full_credit_violations": 1
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "probes": 7,
+      "source_expectations_match": true,
+      "full_credit_violations": 0
+    },
+    {
+      "id": "control-group-anagrams-order-main",
+      "probes": 6,
+      "source_expectations_match": true,
+      "full_credit_violations": 0
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "probes": 5,
+      "source_expectations_match": true,
+      "full_credit_violations": 0
+    }
+  ]
+}

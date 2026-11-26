@@ -1,0 +1,25 @@
+{
+  "units": [
+    {
+      "task_id": "rg-issue-544-original",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true
+    },
+    {
+      "task_id": "rg-pr-561-proposed-repair",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true
+    }
+  ],
+  "source_origin": "Exact already-frozen v1 units; native canonical reference assumption reviewed in original dataset. No scorer rewriting."
+}

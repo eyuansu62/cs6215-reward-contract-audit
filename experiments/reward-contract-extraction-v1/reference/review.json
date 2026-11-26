@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-08T15:18:07.460955+00:00",
+  "review_role": "Independent AI-assisted reference-contract review, not a human annotator and not the evaluated extractor",
+  "reference_contracts_sha256": "0eab3063bbae805ed513f5816450dc0851f49667ff53e0d1c0ccabc3ec7392f0",
+  "source_description_sha256": "fea9db1afd4d95a8fbc20adc4d0e43802203c7156de261433dbb06a9fc3113ff",
+  "response_schema_sha256": "ad171b9e6a734c0a1d086d5a38f10766db044fe83e71cf6c88370d40aaa3dbe7",
+  "annotation_rubric_sha256": "4d9e24e694475b46a4acc33931e791d9c26b8e7c285be8ee75ce541621aff692",
+  "reference_authored_and_reviewed_before_evaluated_model_responses": true,
+  "chronology_evidence": "Evaluated results directory was empty at review; root reports no evaluated requests yet. This is process evidence, not a cryptographically trusted timestamp.",
+  "checks": [
+    {
+      "check": "Exactly the six blind task IDs; all reference objects satisfy generic schema",
+      "passed": true
+    },
+    {
+      "check": "Evidence quotes are exact source-description substrings",
+      "passed": true
+    },
+    {
+      "check": "No invented answer normalization, numeric tolerance or partial-credit allocation",
+      "passed": true
+    },
+    {
+      "check": "Boolean tokens follow explicit True/False wording",
+      "passed": true
+    },
+    {
+      "check": "Inherent mathematical type distinguished from explicit serialization instructions",
+      "passed": true
+    },
+    {
+      "check": "Reference does not claim actual human annotation, observed human time or causal savings",
+      "passed": true
+    }
+  ],
+  "per_task_semantic_review": [
+    {
+      "task_id": "T01",
+      "passed": true,
+      "basis": "Consistent injective positional character replacement; repeats consistent; self-mapping allowed; Boolean True/False."
+    },
+    {
+      "task_id": "T02",
+      "passed": true,
+      "basis": "Occurrence-count containment and each magazine letter used at most once; no invented subsequence/order constraint."
+    },
+    {
+      "task_id": "T03",
+      "passed": true,
+      "basis": "All courses admit completion under every b-before-a prerequisite; Boolean, not ordering-list output."
+    },
+    {
+      "task_id": "T04",
+      "passed": true,
+      "basis": "Prime count includes both integer endpoints; inherent count type is integer; no explicit integer-literal serialization policy."
+    },
+    {
+      "task_id": "T05",
+      "passed": true,
+      "basis": "Requested numeric direction, exact input multiplicities, square-bracketed list with string elements; no lexicographic sorting or fixed example answer."
+    },
+    {
+      "task_id": "T06",
+      "passed": true,
+      "basis": "Same rational value in lowest terms, nonzero integer denominator and coprime components; fraction-only final answer; no invented positive-denominator/sign/parser restriction."
+    }
+  ],
+  "inputs_consulted": [
+    "collection/blind-task-descriptions.json",
+    "protocol/response-schema.json",
+    "reference/contracts.json",
+    "reference/annotation-notes.md"
+  ],
+  "scorer_generator_tests_issues_model_outputs_or_reference_answers_read": false,
+  "subject_code_executed": false,
+  "real_human_data_collected": false,
+  "limits": [
+    "Both reference author and reviewer are AI assistants. The reference is assisted and fallible, not independent human ground truth.",
+    "Field revision counts are a review-burden proxy; no causal human-effort saving follows.",
+    "Templates, not independent concrete task-instance samples."
+  ]
+}

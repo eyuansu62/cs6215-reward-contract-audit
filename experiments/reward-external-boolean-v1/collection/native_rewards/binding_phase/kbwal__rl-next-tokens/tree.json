@@ -1,0 +1,211 @@
+{
+  "sha": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+  "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/trees/5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be5da8c39ebfd6b89cd8d91b3b83d9a7226decbe",
+      "size": 122,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/be5da8c39ebfd6b89cd8d91b3b83d9a7226decbe"
+    },
+    {
+      "path": ".python-version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4fba2183587225f216eeada4c78dfab6b2e65f5",
+      "size": 5,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/e4fba2183587225f216eeada4c78dfab6b2e65f5"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6b628ba03f38b7e334e8b9906c5810ca57cb598",
+      "size": 5776,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/d6b628ba03f38b7e334e8b9906c5810ca57cb598"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba037ee1d7c3cc9aeed00aa47a00cd40d4b1bf87",
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/trees/ba037ee1d7c3cc9aeed00aa47a00cd40d4b1bf87"
+    },
+    {
+      "path": "data/bbh",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b8c97e6c17ed2d72767acddbece691af667c77e",
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/trees/0b8c97e6c17ed2d72767acddbece691af667c77e"
+    },
+    {
+      "path": "data/bbh/boolean_expressions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd7b27ce8a8d36933abe1fd21a2cae6d94945e65",
+      "size": 17172,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/dd7b27ce8a8d36933abe1fd21a2cae6d94945e65"
+    },
+    {
+      "path": "data/bbh/dyck_languages.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a507b4d952dd18e6af54e9e38509584b47f08cf",
+      "size": 43814,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/2a507b4d952dd18e6af54e9e38509584b47f08cf"
+    },
+    {
+      "path": "data/bbh/multistep_arithmetic_two.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d961d60f818c2df15342f4d20a3f07cf60caba1",
+      "size": 18325,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/5d961d60f818c2df15342f4d20a3f07cf60caba1"
+    },
+    {
+      "path": "eval_on_bbh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28d66f8efc82693f9a51d3ccb1d71c78f1971a1b",
+      "size": 21976,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/28d66f8efc82693f9a51d3ccb1d71c78f1971a1b"
+    },
+    {
+      "path": "grpo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a620093bbbf52c90f00dcdb3033b6553999cb07",
+      "size": 9397,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/1a620093bbbf52c90f00dcdb3033b6553999cb07"
+    },
+    {
+      "path": "grpo_base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fc6ba7af888006e440d9120bb12b601c4844b27",
+      "size": 8560,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/0fc6ba7af888006e440d9120bb12b601c4844b27"
+    },
+    {
+      "path": "load_data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "757bc90661080c03d0beeea59ad05f7244f5f1bd",
+      "size": 25662,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/757bc90661080c03d0beeea59ad05f7244f5f1bd"
+    },
+    {
+      "path": "precompute_good_splits.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0cbaa7deb82dcb5d1bf196d567e2de548479b40",
+      "size": 7910,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/a0cbaa7deb82dcb5d1bf196d567e2de548479b40"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98885b582ee2c5463485b5250dd06dbec81be149",
+      "size": 265,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/98885b582ee2c5463485b5250dd06dbec81be149"
+    },
+    {
+      "path": "results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63bedd0ce743062772a847a2601dd1247b88e736",
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/trees/63bedd0ce743062772a847a2601dd1247b88e736"
+    },
+    {
+      "path": "results/boolean_expressions_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d9d33753a285ed146ffa9acaf0a742aa1b4911e",
+      "size": 408018,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/6d9d33753a285ed146ffa9acaf0a742aa1b4911e"
+    },
+    {
+      "path": "results/dyck_languages_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4e6e150f4cfef5c66c8634c884639231abdfeb1",
+      "size": 494171,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/f4e6e150f4cfef5c66c8634c884639231abdfeb1"
+    },
+    {
+      "path": "results/multistep_arithmetic_two_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08d06437d538c2a221d0e7bc0dedd1ea7846626c",
+      "size": 383540,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/08d06437d538c2a221d0e7bc0dedd1ea7846626c"
+    },
+    {
+      "path": "results/old_splits",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9924c99ea35c953c5a8312e0e61ff6e7e6132cc",
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/trees/e9924c99ea35c953c5a8312e0e61ff6e7e6132cc"
+    },
+    {
+      "path": "results/old_splits/boolean_expressions_results_old_splits.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6ca874764058a88ffc4f683e85fb9d808330ad7",
+      "size": 785563,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/b6ca874764058a88ffc4f683e85fb9d808330ad7"
+    },
+    {
+      "path": "results/old_splits/dyck_languages_results_old_splits.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f0d1b8797638962beaca825c6553311c3ffd4f9",
+      "size": 871002,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/7f0d1b8797638962beaca825c6553311c3ffd4f9"
+    },
+    {
+      "path": "results/old_splits/multistep_arithmetic_two_results_old_splits.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59d9dbb73f1e8457c5cefdbb6d14fa5010354212",
+      "size": 767899,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/59d9dbb73f1e8457c5cefdbb6d14fa5010354212"
+    },
+    {
+      "path": "sft_on_teacher_traces.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "559f57ca37aa2068eaadacdf4bdc59fe97627ed6",
+      "size": 9456,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/559f57ca37aa2068eaadacdf4bdc59fe97627ed6"
+    },
+    {
+      "path": "sft_sweep.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ab82c64fe9ded0e637747d611302ff2dd80e5f8",
+      "size": 207,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/0ab82c64fe9ded0e637747d611302ff2dd80e5f8"
+    },
+    {
+      "path": "teacher_predictions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb98229e7d4bb6c334d408d2ab43ff7cfbf57bf2",
+      "size": 9275,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/bb98229e7d4bb6c334d408d2ab43ff7cfbf57bf2"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38731c465514b4413f8d19fb2e351ac0a7a881e4",
+      "size": 1047139,
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/blobs/38731c465514b4413f8d19fb2e351ac0a7a881e4"
+    }
+  ],
+  "truncated": false
+}

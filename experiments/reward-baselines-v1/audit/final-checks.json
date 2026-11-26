@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "test_methods_passed": 61,
+  "primary_cases": 7,
+  "function_families": 5,
+  "projects": 1,
+  "synthetic_diagnostics_separate": 8,
+  "primary_and_diagnostic_same_machine_replay_passed": true,
+  "code_changed_after_method_freeze": false,
+  "unexpected_method_errors": 0,
+  "evaluated_detectors_LLM_runs": 0,
+  "target_scorers_executed_this_study": 0,
+  "dataset_frozen_files_verified": 176,
+  "preserved_artifacts_sha256": {
+    "datasets/reasoning-gym-reward-v1.zip": "35d974538ac87f7bb7419512632dd9d97ffed2387dc474c84f1901b07841d880",
+    "datasets/reasoning-gym-reward-v1/dataset-freeze.json": "174a493fdb19d4c3fe7b05ebfa65d2fb7f8ab6c0c909111045e22def454e6cfb",
+    "outputs/main-experiment-v10.zip": "1ec556817897134f2c9f46f53ef9771caf251ef2394998c604aa00f9a391ed32"
+  },
+  "independent_reviews": [
+    "audit/protocol-review.json",
+    "audit/implementation-review.json",
+    "audit/results-review.json"
+  ],
+  "known_limits": [
+    "source-exposed development, not held-out generalization",
+    "bounded checker, not mechanically proved",
+    "BoolOp subcondition display text shares original condition",
+    "native pinned macOS ARM64 Semgrep binary external to archive",
+    "no experimental LLM gain or RL training tested"
+  ]
+}

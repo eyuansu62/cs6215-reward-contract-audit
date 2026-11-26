@@ -1,0 +1,253 @@
+{
+  "created_utc": "2026-11-13T02:45:52.387439+00:00",
+  "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16",
+  "preflight_sha256": "b3ab3525ec241bc01d447b53ecf0fec89073df290e7fa14354a69c232ce635c3",
+  "records": [
+    {
+      "task_id": "P35",
+      "response": {
+        "task_id": "P35",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P28",
+      "response": {
+        "task_id": "P28",
+        "status": "extracted",
+        "contract": {
+          "schema": "boolean-obligations-v1",
+          "candidate_arg": "answer",
+          "reference_arg": "entry",
+          "reference_key": "answer",
+          "candidate_domain": "native_str_or_none",
+          "trusted_reference": "canonical_True_False",
+          "normalization": [
+            "strip",
+            "lower"
+          ],
+          "full_credit_threshold": 1.0,
+          "obligations": [
+            "valid_boolean_token",
+            "equals_reference"
+          ]
+        },
+        "evidence": [
+          {
+            "obligation_id": "valid_boolean_token",
+            "quote": "If the whole response equals the trusted correct True-or-False reference after both are trimmed at their outer edges and lowercased, award full credit.",
+            "reason": "Equality to the fixed canonical True/False reference entails Boolean-token validity after the supplied normalization."
+          },
+          {
+            "obligation_id": "equals_reference",
+            "quote": "If the whole response equals the trusted correct True-or-False reference after both are trimmed at their outer edges and lowercased, award full credit.",
+            "reason": "The policy requires reference agreement or the correct Boolean label; the fixed profile binds correctness to the trusted canonical reference."
+          }
+        ],
+        "not_specified": [],
+        "abstention_reason": null
+      },
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "status": "complete",
+      "error": null
+    },
+    {
+      "task_id": "P91",
+      "response": {
+        "task_id": "P91",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P73",
+      "response": {
+        "task_id": "P73",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P96",
+      "response": {
+        "task_id": "P96",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P46",
+      "response": {
+        "task_id": "P46",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P17",
+      "response": {
+        "task_id": "P17",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P42",
+      "response": {
+        "task_id": "P42",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P23",
+      "response": {
+        "task_id": "P23",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P62",
+      "response": {
+        "task_id": "P62",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P59",
+      "response": {
+        "task_id": "P59",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    },
+    {
+      "task_id": "P84",
+      "response": {
+        "task_id": "P84",
+        "status": "abstain",
+        "contract": null,
+        "evidence": [],
+        "not_specified": [
+          "valid_boolean_token",
+          "equals_reference"
+        ],
+        "abstention_reason": "No affirmative supported requirement for a native Boolean token or equality to the trusted reference was recognized."
+      },
+      "contract": null,
+      "status": "abstained",
+      "error": null
+    }
+  ],
+  "test_predictions_after_freeze": true,
+  "rules_not_tuned_on_test": true
+}

@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "request_attempted": true,
+  "successful_model_turns": 1,
+  "method_freeze_sha256": "ea5e8da2c74637bea061938cdf3c3dc8ea343101dc1f9e44c103d772a1608cd0",
+  "prompt_sha256": "fe50c7255fa77b94dc046a21f02fc0feccccffd56371a79d3eb8ad9ed438929d",
+  "source_reference_contract_and_probe_inputs_excluded": true,
+  "profile_is_researcher_supplied_not_extracted": true,
+  "cli_version": "codex-cli 0.147.0",
+  "wall_seconds": 7.4625,
+  "returncode": 0,
+  "model_reported": null,
+  "model_identity_note": "Exact model unknown when CLI service does not disclose it.",
+  "usage": {
+    "input_tokens": 27044,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 197,
+    "reasoning_output_tokens": 0
+  },
+  "event_count": 4,
+  "accepted_tool_actions": 0,
+  "response_sha256": "4f375fa8d445c1e5f6b05b1bb6d7a0eb180ed224588788c9b590083e558f0804",
+  "selected_obligations": [
+    "valid_boolean_token",
+    "equals_reference"
+  ]
+}

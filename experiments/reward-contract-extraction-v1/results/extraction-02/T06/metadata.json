@@ -1,0 +1,29 @@
+{
+  "task_id": "T06",
+  "status": "complete",
+  "model_called": true,
+  "extraction_freeze_sha256": "2271f85f77ff26b263d0b543ad43c3ed2dd087e53286698a0a51e34120ea6828",
+  "prompt_sha256": "f1a738746240738eecdafd69b2eaa48c7d07d008e5da35172fe77bf560650369",
+  "request_inputs": [
+    "opaque ID",
+    "description",
+    "placeholder notes",
+    "generic schema"
+  ],
+  "no_reference_scorer_or_history_in_prompt": true,
+  "cli_version": "codex-cli 0.147.0",
+  "wall_seconds": 7.9322,
+  "returncode": 0,
+  "model_reported": null,
+  "model_identity_note": "Exact model unknown if service does not expose it; no latest-model claim",
+  "usage": {
+    "input_tokens": 24264,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 218,
+    "reasoning_output_tokens": 0
+  },
+  "event_count": 4,
+  "accepted_tool_actions": 0,
+  "response_sha256": "288ce5cbc5be83a1b0444481466f9252b694cd2aa6c4e3cedaf9e1d5b06e2447"
+}

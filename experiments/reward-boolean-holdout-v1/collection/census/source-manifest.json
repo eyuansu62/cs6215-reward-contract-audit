@@ -1,0 +1,1127 @@
+{
+  "created_utc": "2026-11-09T02:25:57.349431+00:00",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "archive_sha256": "e35f4b9b470ae03e3f9ed8818e1f1cdfecbb0cc02063c93ec6a4317e8eb45591",
+  "tree_sha256": "8f10189dd449de90971bf0ab09f515fab4d611d7b40e7d66f85e192dbfbe1015",
+  "extracted_python_blobs": 122,
+  "all_git_blob_hashes_verified": true,
+  "sources": [
+    {
+      "path": "reasoning_gym/algebra/complex_arithmetic.py",
+      "git_blob_sha1": "fa4b0b34effe333dd25037e236f1c5ca5515f564",
+      "sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+      "bytes": 8782,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algebra/intermediate_integration.py",
+      "git_blob_sha1": "6449bd55e17d96078e0ea9d51f8d99aafc4406db",
+      "sha256": "74838f0224b504e369d3750183e6d96586ecd365fd618e98f11b8488260ed8ef",
+      "bytes": 13459,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algebra/polynomial_equations.py",
+      "git_blob_sha1": "b3d1279259b61475c3ab3f4cc3a22ea9623a50d7",
+      "sha256": "d41b84e2daf73105922c4211d8a49307ae0b143c0bc58c20cbbdcd25852fcf1a",
+      "bytes": 13417,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algebra/polynomial_multiplication.py",
+      "git_blob_sha1": "f0541ac38e806ece06e4999dc307016912a3b915",
+      "sha256": "4a2d9db4b720f17861b02d17add43255741b871ad4c161929ec6fd54f6112b20",
+      "bytes": 10350,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algebra/simple_equations.py",
+      "git_blob_sha1": "ee9f81a8878a367974bef63e56feb843437b94d9",
+      "sha256": "8ff7a0f4a6d78e9fda239ef0690f10d233ced73a154aa3a00da7ab57329a0c73",
+      "bytes": 6706,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algebra/simple_integration.py",
+      "git_blob_sha1": "d9fdfb2cddab5246066dd9942a7e3bbede08a843",
+      "sha256": "15e275301091a609745414f1e7b05a96dfe53ed19ed910ec2df065652299c698",
+      "bytes": 5678,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ab.py",
+      "git_blob_sha1": "61168d2d342af4ce6330a3432e189b16e1a5e86f",
+      "sha256": "a232e9cbf1cc7fb20f913cca845504d808578866734e085c9cffda12636bab65",
+      "bytes": 5132,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/base_conversion.py",
+      "git_blob_sha1": "81de935f52367fc8bfaeca1164377389d49baffe",
+      "sha256": "7d1a1564b6b9e462c73aba989bc572ee75a7d5bc5604637b181345ef94bb903e",
+      "bytes": 5535,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_alternation.py",
+      "git_blob_sha1": "ffffd2ab667da9aacb2831b7f57daeec7045bcfd",
+      "sha256": "84cfba9930234cfe989c83a02533df1428d77e397dcd6d6b4c930ab482280464",
+      "bytes": 4973,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_matrix.py",
+      "git_blob_sha1": "db1f6088520c77045cdd1d626b8b0cf1f208228e",
+      "sha256": "0697d49b6cb8812731713e2d930469023e9281c8c4354400655376a0becb6491",
+      "bytes": 5899,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/caesar_cipher.py",
+      "git_blob_sha1": "104492398db06f44cf630dc2fb322dcaf140d3c4",
+      "sha256": "c836398236ec5d9bd653d4c89c2fe6dfe19d7bd854e0be5978b4b79d08318694",
+      "bytes": 4545,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "git_blob_sha1": "1fcacd05402e71cb02b6e61f1404da24f99c2dad",
+      "sha256": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd",
+      "bytes": 3192,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/cryptarithm.py",
+      "git_blob_sha1": "952943b81a02d7dbe2c91e7b892d6052f30d59aa",
+      "sha256": "9dfd7012e4fda20c15e62559b7a508d211992fa33fc8641ca76ef384119bb10f",
+      "bytes": 14717,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life.py",
+      "git_blob_sha1": "4e56a20223050c8ddc2860525732c557c4078335",
+      "sha256": "0cd5e37e542f2e956efcefb898ec84f4a1d34d44ba4b039e145fcb457e907f20",
+      "bytes": 7193,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+      "git_blob_sha1": "d676f63c0947976e832eb335e16f56dac68d172a",
+      "sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "bytes": 15377,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/graph_color.py",
+      "git_blob_sha1": "36ab7c48ef52b0a1d3d244d66beed5295ce6830f",
+      "sha256": "b89db0e352de50fe841f7126904dfff1153596811171e8da70eb4ae4295d4929",
+      "bytes": 9803,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/group_anagrams.py",
+      "git_blob_sha1": "665408470a416984d696a2bf797cb4922ea74a30",
+      "sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+      "bytes": 6112,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "git_blob_sha1": "39b0cb8b3b39ecf2ff1aa2e6ee3a3624c2900710",
+      "sha256": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76",
+      "bytes": 5243,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/jugs.py",
+      "git_blob_sha1": "cecd01133ce6c3ecc2025fc55305915fc336e2e9",
+      "sha256": "9a14c33afbb2fcf0b182d80a2c300ef62f42a70b04768032550020c50dfe0d8d",
+      "bytes": 12083,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/letter_counting.py",
+      "git_blob_sha1": "509a6171e4a793dadace32ac596df2b3fe2a9187",
+      "sha256": "52e442146f1067b6cacc24cf343ea022ab2e15cd02835624b13cfb870d4bc099",
+      "bytes": 3369,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/letter_jumble.py",
+      "git_blob_sha1": "55e4d8fb3df8107773724021f324cbcc22517c9d",
+      "sha256": "1fc2b12a373460c72d9b5e0b31bd4f79c12082e708e6fd99470e91f853bec9b8",
+      "bytes": 7861,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/manipulate_matrix.py",
+      "git_blob_sha1": "fd0197195220321d2c6e533a24e3bb8ac13fdb4c",
+      "sha256": "7203c8ad02bb74fe52a91b88a9fcaca17647735a9d32acba09b04718a0458093",
+      "bytes": 14850,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/number_filtering.py",
+      "git_blob_sha1": "884dff3d277434ea9b0828e27e3cbe9cc8cea8e1",
+      "sha256": "ce86534027aad338ce6732efa1a78b58b4e27bce411ec65df9ab64a4fb198001",
+      "bytes": 6132,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "git_blob_sha1": "7406d96fa9d26e834b01a7f70d3aa41b4943df6e",
+      "sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+      "bytes": 7825,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/palindrome_generation.py",
+      "git_blob_sha1": "9385c0893c9d42a7f6145c2f36ab276668a5fc51",
+      "sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+      "bytes": 5181,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/palindrome_partitioning.py",
+      "git_blob_sha1": "cd66954c151fbb0f616d964a9d767c34042beabb",
+      "sha256": "a1c218cdd2bb9e90a692be8bf7877a3b93e6230c0028b5c9f506de4d971a9f4a",
+      "bytes": 7158,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/pool_matrix.py",
+      "git_blob_sha1": "66a17fee658d4da8655bacaffe0864b0de27d253",
+      "sha256": "36b24a7835769b132a22190f6477002b9ad516aa86c486e868b19e521eca8a9a",
+      "bytes": 6443,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "git_blob_sha1": "176e69fbd7a6bd150cf2a9d4ebefa71fa73eef1a",
+      "sha256": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866",
+      "bytes": 5993,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/rotate_matrix.py",
+      "git_blob_sha1": "c027733b66405120eb89043821eea03cb490621c",
+      "sha256": "264be4a9224025935878fbefa458bc6a364ef31f97bc9e8cc051824977591579",
+      "bytes": 4529,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/rotten_oranges.py",
+      "git_blob_sha1": "f10fb53d06bf276e60c47870a350f7c9ca114f9a",
+      "sha256": "2bf3d937e65980f138afbae89ed773b952ccb29ac8a9a35bb01443ea5c73ab92",
+      "bytes": 5393,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/sentence_reordering.py",
+      "git_blob_sha1": "77d14d72d38a63e03f3b87e67b7e733dc65b3b70",
+      "sha256": "0a5ec0e35dccd4ab85edf8a158ab575fa33a8689128735856a6f7e1ae9be77cf",
+      "bytes": 5914,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/spell_backward.py",
+      "git_blob_sha1": "ab26f843a7f3e3162307414f0e6c374c748385ec",
+      "sha256": "a27f14e886fad4d7dd1bf0506644be70c095bb71201a5e8d71128647901d9773",
+      "bytes": 3752,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/spiral_matrix.py",
+      "git_blob_sha1": "228d15d63793f306916c9ca06f6de8a1de6e175a",
+      "sha256": "7d1b8f352b72b609dab9aed7c6e585581c86666421ba78a3145e7d97cd37ed39",
+      "bytes": 5541,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_insertion.py",
+      "git_blob_sha1": "7df2d4b20c1e1f1332cd0e6a62b8c23d2f17ec04",
+      "sha256": "866e1de2b8fcd9f88de5b491e1b7e306a3db1041bf139cdbb79061b23fec40bf",
+      "bytes": 5253,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_manipulation.py",
+      "git_blob_sha1": "bebb8a6888e217f07a81cb81448f6745dfa07326",
+      "sha256": "acd0355646b5a302cb1af04e4d39da4ff38b097c3489c3019a297a005d06d795",
+      "bytes": 10368,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_splitting.py",
+      "git_blob_sha1": "8bd8192dd707caa1ab6cc9a55f0c50730dfd9536",
+      "sha256": "6589eb75c508270a8e095595f8c3bf6c2a4450207f980936e29cd2f663dea081",
+      "bytes": 6713,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_synthesis.py",
+      "git_blob_sha1": "f201854d5dfaf65f994f46d4bee57d68352727dd",
+      "sha256": "20298210ad442b0c2de736631b56845210ebccb648c2c1aef8e2579f727cc8e2",
+      "bytes": 7088,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_ladder.py",
+      "git_blob_sha1": "29df82ab4d92761e4bc7e48c19040601803af7b7",
+      "sha256": "8a82e0dee96401a019b6842bb99c2300e1b64b4cc03051a3f22675364acd9f5e",
+      "bytes": 11174,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "git_blob_sha1": "3a02f46aebd73bd6daec52c48ebdb26455225bb6",
+      "sha256": "912c346511855e7de945283420c472835e7d0397f74f3ef0d639d5d3b9d93e08",
+      "bytes": 3220,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_sorting.py",
+      "git_blob_sha1": "b83c88072193bff0c20edd8d0153d7a446e79bac",
+      "sha256": "32d554acf0613b0cec4236a806165bebb426420a851a9e5468943a0cb8deff41",
+      "bytes": 6492,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arc/arc_1d.py",
+      "git_blob_sha1": "a767c8dcb9c4062e01852ee60683f61829decb0e",
+      "sha256": "7180ae709160d07d05b46352d37afd7b3b2a10e9aec6178f554311dcb4b72b61",
+      "bytes": 5007,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arc/arc_1d_tasks.py",
+      "git_blob_sha1": "b454220d9bead1397c575012fc8539f77a5568d0",
+      "sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+      "bytes": 41219,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arc/arc_agi.py",
+      "git_blob_sha1": "3d6894fc8454c765e12004e3a5d6ac5449867301",
+      "sha256": "8055ffbf2e77b5225c4cbfb03db4434b67180600c20ad1decc055bd570c5d6ec",
+      "bytes": 8905,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arc/board_format.py",
+      "git_blob_sha1": "b0a40636e0122bfe0ba0e587a14123d0891c0ff4",
+      "sha256": "009ada0bc6e556eb52d832442d161284e09dee28a5c3eb8f5380965e2ae1e2d6",
+      "bytes": 3829,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arc/rearc.py",
+      "git_blob_sha1": "05d3563fa41c8fad9fcb108ea4b93244005b777f",
+      "sha256": "258bc27a44dadf46e29dc9431f965962d25b7917de5265467e24593288d57ad7",
+      "bytes": 7847,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/basic_arithmetic.py",
+      "git_blob_sha1": "b3958b26fef62fb2503ddb34e4d5625104cc658d",
+      "sha256": "9eb222cd9393ee7ce9e60e3cb2d00ba2da038aa0737f9fe46b866b3a6a682934",
+      "bytes": 10686,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/bitwise_arithmetic.py",
+      "git_blob_sha1": "28fccc9879e452c2c22c98b689fb7a0323bd2999",
+      "sha256": "d4c0fa2bf34ed1610c4cb3b2ec6ea40bdaf2b190875c3b64536f21e5540eacb5",
+      "bytes": 7396,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/calendar_arithmetic.py",
+      "git_blob_sha1": "023432d5b1dec0cf8fa945b902b7d77b2d166cbb",
+      "sha256": "ad06cec5be9c14889c4860482218aecba128815b1357a1ee410b3aac4be54120",
+      "bytes": 21642,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/chain_sum.py",
+      "git_blob_sha1": "d4778b7a01165a662bf807497967db39f3075af2",
+      "sha256": "7e811214e9e31aa67eeb5490a0cf8eb275fceab609c4523bb38ceec9f8dbcb9f",
+      "bytes": 5556,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/count_bits.py",
+      "git_blob_sha1": "366f21830c12d764ad90e9ca927cae4ce1ed67df",
+      "sha256": "32c9eb4539912277335c78a4fdbdbaf0af990d8ad2a0e02af5c7e641890f4d67",
+      "bytes": 2466,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "git_blob_sha1": "93dc0c8a3cc7d168d03f06ea83de97dfe8c4f973",
+      "sha256": "e56416e0c10bb55f46961e93ef55826f419d1a0186ff75b6bb367d098dcca245",
+      "bytes": 10040,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/arithmetic/decimal_chain_sum.py",
+      "git_blob_sha1": "a58a5f1a629d98bb3c0b2ce38e9ee35bc89d1f60",
+      "sha256": "1a4b13aceb3fc50dce3921f109b9d5b0d53aaa9c6eafc7acb01dd2988c15cc3e",
+      "bytes": 7582,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/dice.py",
+      "git_blob_sha1": "46f15e4192765403d817262c0d8d8ef28207e379",
+      "sha256": "3b8f83d04f01b13526e2790245c09a52b2c0998c16baf92607b671d2459ba0d9",
+      "bytes": 6468,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "git_blob_sha1": "75a19966b5453dd6cfed4dc6a2de523132786039",
+      "sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab",
+      "bytes": 8391,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gcd.py",
+      "git_blob_sha1": "b019dd7b608da3ac4c41022267772e9d430dd905",
+      "sha256": "d9a0d704f1425c5f03cee24683f63f819b324b882542da45886ca2f9682e3d2c",
+      "bytes": 3764,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/gsm_symbolic.py",
+      "git_blob_sha1": "962f5f521ac5073fed95a3eb6393447bb96bd697",
+      "sha256": "511e30a979511719c65019082ea298e215f4fbfab7d7660b384fa51c0fd03ee1",
+      "bytes": 3976,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/lcm.py",
+      "git_blob_sha1": "71ca660fd729f0d2b351dbcd27347ac9bb2d0fef",
+      "sha256": "1c9e9249a6ff30b1de11dba82ca4847053a72a570d98a1d55eadf69c3bb7d834",
+      "bytes": 3874,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/leg_counting.py",
+      "git_blob_sha1": "4c515aa38f44ab48023526c5f7def24a42dd3404",
+      "sha256": "6b530e05a8c6725406f9d32f583f7da0531b50ed06c702beb04874f88c72dcd7",
+      "bytes": 5138,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/number_format.py",
+      "git_blob_sha1": "c9663a8deba33380c95cba6a7242a3d352d6c275",
+      "sha256": "a30fb4f8086eff3a9fbc481e2dd423fa0d552502d3746c0a8bd2bff12e1b92e2",
+      "bytes": 5769,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/power_function.py",
+      "git_blob_sha1": "c5db17a0fc264559b30015187b4ed833d554c875",
+      "sha256": "fd820443cce4f23ac04de5c6cded9899c4898c399ea379e36d1e744b0c0ced91",
+      "bytes": 3742,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/prime_factorization.py",
+      "git_blob_sha1": "0a3072842bbb46de951a99659954691a8ffa1b55",
+      "sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+      "bytes": 4024,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/arithmetic/products.py",
+      "git_blob_sha1": "b504935ce9479fc948e3f261ed405ef090df3a33",
+      "sha256": "63959e2c03580d8d408e2e91c2c30c7016d8ca2ad937fd5656e83c371d5dcbc0",
+      "bytes": 5169,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/time_intervals.py",
+      "git_blob_sha1": "1cf7c1b09be83d57fcdc0db2f134236b8c386adc",
+      "sha256": "b42d9a9f992eead49d028f13e0ffd454b24676f92402e1a323cbabdd74d20100",
+      "bytes": 16164,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/coaching/attributes.py",
+      "git_blob_sha1": "737d4cb0cb239a08d076d9998acd95c5f72ff609",
+      "sha256": "724868b3a8ed278261d14db00cd475b0c78de6c3cb69af6a6b5fe80555de88d8",
+      "bytes": 1528,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/coaching/base_curriculum.py",
+      "git_blob_sha1": "c47551419639a3df7d9e1cf3ecd2430a4e92dcc0",
+      "sha256": "0e899f0c884e1bc7d4fb8b2fb6b15c75d6989540b3c2f7ca98470af5a81ced09",
+      "bytes": 11175,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/coaching/curriculum_config.py",
+      "git_blob_sha1": "452e29a3d84a73d97543da8610cac249188fb6e3",
+      "sha256": "90b1094c23d8d918bfbe71b81b364e313998f7146acaee03fefbbc139955f809",
+      "bytes": 2949,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/coaching/experiment.py",
+      "git_blob_sha1": "53384e62e6ca53addb36a59750a8f8407cd05dcb",
+      "sha256": "1744d4fd795b18044c56d5918e128f14178a485f889b92b7605a976ad465c792",
+      "bytes": 4587,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/coaching/registry.py",
+      "git_blob_sha1": "076ea1cdeba972b2a07625d7e0de80c6396cd9b7",
+      "sha256": "8b33538ce47d6e029166fb30d59cdbe2f5d34b3661cd45f8c90eba19b7d70c93",
+      "bytes": 1160,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/coaching/score_board.py",
+      "git_blob_sha1": "533e201b8a4c2c10db006f2ceb0983a0fd693dd7",
+      "sha256": "e2fc26518f11065cadd7090b8de68310fdbd229080a9a0d634386d1dcfe3100e",
+      "bytes": 7635,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/code/bf.py",
+      "git_blob_sha1": "973a41a646ef47b65c5fda9257b8b3a706de85a7",
+      "sha256": "dc71afe6d2da76414b4e46f1adcbe3ebba9d361f8995226815d5de98a7038f94",
+      "bytes": 4117,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/code/codeio.py",
+      "git_blob_sha1": "36b4469d9761baaaeabc082d0b518211e6ff6f73",
+      "sha256": "c573957be85a68179520b61cc70ebb22ab39027dd0a876b2f4402df9df6be1a2",
+      "bytes": 11153,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/color_cube_rotation.py",
+      "git_blob_sha1": "e2aa9c63eca4eaea4cfb49f6caedac5e5a00ea88",
+      "sha256": "0ea2f095bedd12372096fde20a06b5017820b3228e2603bc1f8a8dd188dab93e",
+      "bytes": 8173,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/figlet_fonts.py",
+      "git_blob_sha1": "e54f5c56073f7456b5a7aa8e1f745c1ac0d90cc8",
+      "sha256": "a39ae5e48acca9018a8d2d13d3e2543ffc2da7a8cf100c251f53dc956833500f",
+      "bytes": 6973,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/modulo_grid.py",
+      "git_blob_sha1": "8fe0b52adacc7d9df2815727940d1425fa99bbb3",
+      "sha256": "d82791d3fef00397e4ba7cf45909274e2aebef55e0a630c54eb5c273eafa7735",
+      "bytes": 7053,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/needle_data.py",
+      "git_blob_sha1": "5367314b6ad7881135895854c82d5650080240fc",
+      "sha256": "c9cf26529cd43f277c3efa3d3717ff9a42588c69cc522901460e9ce63eb7b525",
+      "bytes": 50850,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/needle_haystack.py",
+      "git_blob_sha1": "90fbdbc0975a983e492c518901c67d0c3f64d297",
+      "sha256": "c9f3c04bdff4b288a4265fdfacb1e7bc2b7c6d3dbe254c1dbdfb08924bad7bdc",
+      "bytes": 5845,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/number_sequences.py",
+      "git_blob_sha1": "6fd6d503944be2d33585f8dda6f7acef48ad0c41",
+      "sha256": "55e52b526312c06e57872d25b9ae250ddb7ec2723f35f7fcc7795cf17594f68d",
+      "bytes": 9000,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/rectangle_count.py",
+      "git_blob_sha1": "8c11af17cca3be29bd7a80fcd67d74390ae5fe00",
+      "sha256": "cbe4bb706e5db274cd9c2d600ce50e239572f700a6ba3a4043cf59f320f83769",
+      "bytes": 6045,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/rubiks_cube.py",
+      "git_blob_sha1": "cb51e4bce395bc291a53732e2b1e666dc017493d",
+      "sha256": "6e218e556f6940501d758702507fc7cc7b4ef929e9736239d8e49dfa34a09661",
+      "bytes": 8419,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/composite.py",
+      "git_blob_sha1": "a96af3436f59ac4fa9acceead37ceffda87c6482",
+      "sha256": "e12486e1c39cd081c56ad9837868698a2519a34d8edb2aa7f51ee3b4f1d63878",
+      "bytes": 11266,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/dataset.py",
+      "git_blob_sha1": "7cef17ce2277ad58f81501531246b79017374d98",
+      "sha256": "6e29c6f83cba9174631bd0fd10b86c5fbdd9de5904ace54d2554c92ee80371b4",
+      "bytes": 5430,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/factory.py",
+      "git_blob_sha1": "3d2f39a6c01e4c17a280033f9acfe7ab08fb966d",
+      "sha256": "fc651cc93205fafab926526a7d2c7a88c9dfa569af6e895135a1db48765e75bf",
+      "bytes": 3220,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/games/boxnet.py",
+      "git_blob_sha1": "c4adb00a33068ddfbab9e32450ad9fae452efec9",
+      "sha256": "358d0f7d3fd245b4f7606a9397fd9311b1b606a7ee745168837a6724a3aa6307",
+      "bytes": 12328,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/countdown.py",
+      "git_blob_sha1": "202b2e1c8461d21dbef473604c79c9072e5c21c6",
+      "sha256": "349cd7042a92a8b598954f4e2e771d4d4eb0ac18f81ac4a91f1c4e765ed15321",
+      "bytes": 10516,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/emoji_mystery.py",
+      "git_blob_sha1": "18efa8f17b6587d6dfb778cf8530c2c6b6b3ec45",
+      "sha256": "6345fd95cc54e614e3b92e9cc82f96b8eeb4362f95bdcaafe0424b85a895f2fd",
+      "bytes": 7005,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/futoshiki.py",
+      "git_blob_sha1": "4246e8b99e8e27b0d679fbfbf89e70b6046c0093",
+      "sha256": "1e17d801b9695f35d04047bde037beae0e6b1e6622ef89b287ec5c2061c2db5e",
+      "bytes": 29652,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/kakurasu.py",
+      "git_blob_sha1": "a95539a58e67e9ebd1857729b0275db0a2dcd93b",
+      "sha256": "32952922a3c863ba14acc2773230e18e2226e221cae093dd04956e7f86f69ab8",
+      "bytes": 15010,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/knight_swap.py",
+      "git_blob_sha1": "9c7b4db36fd274071074708baa23c9f38c6133f3",
+      "sha256": "a9de444d885125e0e6d42de9c34a705c3a22c9fed670375927ee8fe182542e95",
+      "bytes": 18479,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/mahjong.py",
+      "git_blob_sha1": "f8ff47c161f064b6716e6c2e16ed5653536e74e7",
+      "sha256": "421d9b55bdd6eef32b23b208cfa56e8cd4f30e43b71f9a583b6d3058955b4304",
+      "bytes": 6163,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/maze.py",
+      "git_blob_sha1": "30ea938d0a12690f0738cd8217e7c3346471e2eb",
+      "sha256": "8e31f44bdf89f65b7c432a445040ce9910c4405bc8ae1282d161aa9afdc5c83a",
+      "bytes": 8767,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/mini_sudoku.py",
+      "git_blob_sha1": "5efd2aaa0b3a1ecde5381ee65b2c39110369e0ea",
+      "sha256": "20b77f97b1f5a9aa364940311d6647c4fa3e2b69834995371e0b20dd9f818c0c",
+      "bytes": 9456,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/n_queens.py",
+      "git_blob_sha1": "06e53f0c44559fbae6a1b7eeb32010ad75450c99",
+      "sha256": "2738aad6232b45f21e57c0cb6d58dbcd1752a97e95e7abb8cf8c1002a4bf4c64",
+      "bytes": 7094,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/games/puzzle24.py",
+      "git_blob_sha1": "4334be8190984461163463597d398b3976b8f29d",
+      "sha256": "542f8a43867de1cc0a4269fbb885fdf749954a9ea525e3edef0423f8dffdbd92",
+      "bytes": 5542,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/rush_hour.py",
+      "git_blob_sha1": "5274fc01949646149f19d233784254a5278fa041",
+      "sha256": "75a9a4f18b7376661551e7febc67f53f4046fd967aa488912fb1aebb9fff3d61",
+      "bytes": 12926,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/sokoban.py",
+      "git_blob_sha1": "8a5686949ab4931bc2ff83b4081e7601761745b6",
+      "sha256": "19bdaa006e58627dbc76c46ae7641e34b2c9305603b1e68d47640e51c7c6b4bb",
+      "bytes": 5347,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/sudoku.py",
+      "git_blob_sha1": "d658ff5f19ed682556a8c0d1d06e7368befc8a8f",
+      "sha256": "dcb9e0c968d33b0f7883390d7b3155aa7a6088fae9db48bba832ca9aea21f4e0",
+      "bytes": 10087,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/survo.py",
+      "git_blob_sha1": "6f2fac9fb790aa7619cf47852b768c8ecd887bed",
+      "sha256": "6d506c11d914f8b1d7c910c26b8da9a44e9ad8bbec1b9cf595a426f8c8cf864a",
+      "bytes": 7774,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/tower_of_hanoi.py",
+      "git_blob_sha1": "2fe59914a73cdda9425e4dcb4de8cc62aefafedc",
+      "sha256": "6a983d45cd5ef3a6380b509ef7313af859defa52d02526b022f52fae85298eef",
+      "bytes": 17791,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/tsumego.py",
+      "git_blob_sha1": "fe8ace2bf26692eb1bc9859309158a9cce47ca8e",
+      "sha256": "5978a0f3b5b785e98b58190fb5ddf90403f16165094d2369d4a84f2a59daa021",
+      "bytes": 13648,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/geometry/advanced_geometry.py",
+      "git_blob_sha1": "d45cfc4a329c8de41b36940357f98327140e315f",
+      "sha256": "0a914f1a4095cf7d25e0bb2ba19d1e86bb7fe0cd8abb33a0acce81dbc6f7f34c",
+      "bytes": 12181,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/geometry/simple_geometry.py",
+      "git_blob_sha1": "b1c0d49920e6ccbaeef498a730e542b6517f7b1b",
+      "sha256": "32466b093be1da746e181447c41a3cd15a896835d410b58ad5d67c50bd2652d0",
+      "bytes": 7079,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "git_blob_sha1": "3e6bc744292fb15db5970d4b55613e42f777fcda",
+      "sha256": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c",
+      "bytes": 7589,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/graphs/family_relationships.py",
+      "git_blob_sha1": "1de0c1c83a8fc0abd91630dbc0bfe106f3da603e",
+      "sha256": "b00459b1242416befddbb4c0bb6880d02bf1c967a1057f9c39a298d5a4bda455",
+      "bytes": 14470,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/largest_island.py",
+      "git_blob_sha1": "eddedc89f6cb210cb2a3d8585e47bc6fb12b91ff",
+      "sha256": "9b3cff09d4d001443e91612c937b399c53349fc24d848503850cda25b392b502",
+      "bytes": 7674,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/path_star.py",
+      "git_blob_sha1": "53be8845a31021e93806e5343bb5d58de7581633",
+      "sha256": "ae55353009956240c0eacb5033753494c60c4b67ab29f12e77ed84ee66d9fe3a",
+      "bytes": 5465,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/quantum_lock.py",
+      "git_blob_sha1": "5aaa754667a65c584a7204b9dfe9e34d9ad0de31",
+      "sha256": "2f96d165fe0a33fb3dabdc92ffb99966fbcda41351d87f1c12df497da64311d8",
+      "bytes": 9310,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/shortest_path.py",
+      "git_blob_sha1": "4e33a9b2031f48b1bb420bb8005d7cd53eac1e64",
+      "sha256": "40756d552a64f6c7b513e2e6eb2d57755e31f70b766fff62113f786165dcaabd",
+      "bytes": 7586,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/induction/acre/acre.py",
+      "git_blob_sha1": "d2211a6b1abf0438d626d896eb44b5e7a328267d",
+      "sha256": "77e2fe8e91d1017002cbb746779765a2c0d1d32a8542e88969720865f893e0a6",
+      "bytes": 3957,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/induction/acre/blicket.py",
+      "git_blob_sha1": "7d3658a16a666761affbcebafdfe9e91ebe4533d",
+      "sha256": "1b471a22b8607a2851e2ab7442c6fb6e788d0e137cb27042b1ec79a5c96d0767",
+      "bytes": 25789,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/induction/acre/const.py",
+      "git_blob_sha1": "337ee09912fb890240ff583c2c458658135b0505",
+      "sha256": "39d5bdc195aa390e6e7bae51f40dddc00a404c06623442a0c05f1947a2ebdfc7",
+      "bytes": 259,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/list_functions.py",
+      "git_blob_sha1": "c1b0deda62135c0c390a5f09d94255326cc4bf5b",
+      "sha256": "c39605972d1ff57ba4cd890ef98f5e35756115c9b4cf7d4cdba0b6ab68d737d8",
+      "bytes": 2944,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/logic/aiw.py",
+      "git_blob_sha1": "e6c1109f899bba278af99afedd7f2eacc996d221",
+      "sha256": "2c51c0ed6e89251f1e375023b336a43c8ea04a6f6ce34a6b5b608082104f3e4e",
+      "bytes": 9841,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/circuit_logic.py",
+      "git_blob_sha1": "a77f1a6ef64031f6531811372f5f3eda760d7341",
+      "sha256": "04858f961e50c87f16aab89e2f83b000c9577dd83704a7a205b919f92d14a56f",
+      "bytes": 16042,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/knights_knaves.py",
+      "git_blob_sha1": "cd2970eceab8550dc05b9d8a9ecdc6d9b709b408",
+      "sha256": "8837a3c6dfc72bb40db168b82ad6b3da45a08a4000a006fc306368b77b622705",
+      "bytes": 20743,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/propositional_logic.py",
+      "git_blob_sha1": "961f94f313433a835f59c2213db92e2a5272917c",
+      "sha256": "8367b082850207e87ffeda3cccf74d96ce92f93e449c520bc2f1b96aeacff5e6",
+      "bytes": 14809,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/self_reference.py",
+      "git_blob_sha1": "d2c9d68c153642eced31aca8ef23dff68e371dba",
+      "sha256": "8b0eebadba3c07a56a58fd9f88830be40b49cb94882a9cb595672ae337143424",
+      "bytes": 14174,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/syllogisms.py",
+      "git_blob_sha1": "6a56594f02b36ae115b7c2d69346d64c67ea71af",
+      "sha256": "c2fa3a6cc9615e7970fb058856987b9a42ac64ec0177f637cb76ac97bfb86999",
+      "bytes": 18824,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/zebra_puzzles.py",
+      "git_blob_sha1": "909b24ce2a2baf76d73494e435c9647930a1610e",
+      "sha256": "41312f2635a0a7f920fd6a8006a9e8b1b7e4225d7900da504078b1fd5560e580",
+      "bytes": 3438,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/probability/coin_flip.py",
+      "git_blob_sha1": "6aeac2321f40859e1cbfdad951fc90c63e410870",
+      "sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+      "bytes": 5968,
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/scoring.py",
+      "git_blob_sha1": "2bd12e647707308165b2e4c6e00bd54bbaf6d5fc",
+      "sha256": "34499f61e2cc43e65cd4bee785ce7c986dcdf0b87f3b912eb38a35bfb4209c8f",
+      "bytes": 6310,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/utils.py",
+      "git_blob_sha1": "83ab6d46ba155cc945e40a93d73dd84175c80f9d",
+      "sha256": "25fe815ebfce019dad92aa79e61528e0418a04edbce2aa86d019a5a3f186e9d1",
+      "bytes": 6451,
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/version_manager.py",
+      "git_blob_sha1": "9b01f075eea5a8b2b4bda0232de4fddc0ece4ed2",
+      "sha256": "5b36d8ae6d8ebcc5e0607abb6085ff152f8f4d6c89032e0981d50483e1431128",
+      "bytes": 2318,
+      "previous_content_exposed_before_census": false
+    }
+  ],
+  "excluded": [
+    {
+      "path": "reasoning_gym/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/algebra/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/algorithmic/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/arc/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/dsl.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_00_99.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_100_199.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_200_299.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_300_399.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/utils.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/verifiers.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/generators_00_49.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/generators_50_99.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/coaching/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/code/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/BF-it.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Compiler.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Exceptions.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/FunctionCompiler.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Functions.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/General.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Globals.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Lexical_analyzer.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/LibraryFunctionCompiler.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Minify.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Node.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Optimizer.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Parser.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Token.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Interpreter.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/cognition/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/data/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/data/wordle_words.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/astar.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/bfs.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/box.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/game.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/generator.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/player.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/utils.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/geometry/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/graphs/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/induction/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/generators.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/__init__.py",
+      "reason": "package initializer not a task source"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/__init__.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/clues.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/generate.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/literals.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/puzzle.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/sat_utils.py",
+      "reason": "vendored/rearc/generator/data exclusion"
+    },
+    {
+      "path": "reasoning_gym/probability/__init__.py",
+      "reason": "package initializer not a task source"
+    }
+  ],
+  "source_execution": false
+}

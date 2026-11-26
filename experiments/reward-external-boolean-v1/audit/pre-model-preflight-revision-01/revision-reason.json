@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-09T04:20:28.816802+00:00",
+  "preserved_files_sha256": {
+    "method-freeze.json": "f256f89bec18d1a1a2fe1e23aa1527e10adc02342943c214e6abcffbb5356b22",
+    "run_study.py": "5112b10c9d51c653115238e117e4ad284e98a0af046a9358e87cfabba32c1f05",
+    "tests/test_study.py": "cd7f04a47bbdbac7584f0072399806ece33548bedb44442f12c0d7aa837233de",
+    "audit/harness-ready.json": "6eb2f316020176a83f2f91525428a181e9ba91716251772a4c473a4dd19ddb4c",
+    "audit/approved-pre-model-review.json": "68b9df3c60f0a0af9c1750574bdf349f0c196720aa0d1a0eefeaf16bd9378d50",
+    "audit/approved-pre-model-review.md": "d98ccf3da6aa45c82738c8fdd99c9f63428bbde97e021a2f27e8bbcd2eb56d87"
+  },
+  "reason": "Before any model/target/detector output, AST-only native reproduction preflight rejects H03 startswith because safe execution attribute whitelist omitted it. Add native-reproduction allowance only; symbolic source model/rules/obligations unchanged.",
+  "primary_model_or_target_or_analyzer_runs_so_far": 0,
+  "expected_actual_scores_not_used_for_revision": true,
+  "status": "Prior frozen attempt preserved, new main freeze after tested fix"
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "prior_manifests_verified_by_case_verify": 2805,
+  "preserved_archives_sha256": {
+    "experiments/reward-contract-extraction-v1.zip": "a3832dd0f80e26e9027e00990a6dbb830fae33f5a6264955de1af899ba400f1f",
+    "experiments/reward-baselines-v1.zip": "8cc39df03a1702245edc96f6576db7f76d59e955613dcc825a7d94490b51b17d",
+    "datasets/reasoning-gym-reward-v1.zip": "35d974538ac87f7bb7419512632dd9d97ffed2387dc474c84f1901b07841d880",
+    "outputs/main-experiment-v10.zip": "1ec556817897134f2c9f46f53ef9771caf251ef2394998c604aa00f9a391ed32"
+  },
+  "old_AST_file_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+  "old_bridge_sha256": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6"
+}

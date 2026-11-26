@@ -1,0 +1,112 @@
+{
+  "schema_version": "pre-model-minimal-contract-extraction-review-v1",
+  "created_utc": "2026-11-08T15:19:22.389308+00:00",
+  "passed": true,
+  "verdict": "pass_for_small_source-description-only_AI_assisted_reference_comparison",
+  "blocking_findings": [],
+  "review_role": "Independent native Codex subagent; no evaluated model response, scorer body, generator fragment or target execution consulted",
+  "scope": {
+    "task_family_templates": 6,
+    "Boolean_like": 3,
+    "non_Boolean": 3,
+    "projects": 1,
+    "description_source": "pinned Reasoning Gym snapshot",
+    "freshness": "new task-content exposure per collection record; filenames previously listed; no pretrained novelty claim",
+    "reference": "AI-assisted researcher reference, not real human annotation"
+  },
+  "checks": [
+    {
+      "check": "Exact six description templates and placeholder notes form the shared input boundary",
+      "passed": true
+    },
+    {
+      "check": "Generic schema enumerates broad answer kinds, not the six task-specific semantic solutions",
+      "passed": true
+    },
+    {
+      "check": "Prompt preserves semantic type versus explicit syntax distinction and does not invent absent reward/normalization policy",
+      "passed": true
+    },
+    {
+      "check": "Reference contracts and per-task comparison rubric independently reviewed against descriptions before evaluated model responses",
+      "passed": true
+    },
+    {
+      "check": "Each reference object validates and evidence quotes are exact description substrings",
+      "passed": true
+    },
+    {
+      "check": "Six fresh ephemeral one-shot requests, isolated temporary working directories, user config/project docs disabled, no accepted tool-action events",
+      "passed": true,
+      "qualification": "Runtime event audit and exact request count must still be checked on actual runs; code alone does not prove no network request retries inside the CLI."
+    },
+    {
+      "check": "No scorer, reference contract, filenames, issue/repair status or comparison rubric included in request payload",
+      "passed": true
+    },
+    {
+      "check": "Response/schema/ID/evidence validation fail closed and preserve failed attempts; outputs cannot silently overwrite",
+      "passed": true
+    },
+    {
+      "check": "Frozen prior baseline integrity check is present and independently passes",
+      "passed": true
+    },
+    {
+      "check": "Downstream design admits only existing canonical True/False necessary-condition projection; other task kinds stay Unknown",
+      "passed": true,
+      "qualification": "This audit reviews design only, not final bridge/source preparation or downstream outcomes."
+    },
+    {
+      "check": "Revision groups and denominator 60 fixed; semantic equivalence rather than natural-language exact string equality; no genuine human-time/savings claim",
+      "passed": true
+    },
+    {
+      "check": "No blanket negative labels from no findings; no fabricated extra real bug cases; stop after six-task pilot",
+      "passed": true
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "nonfinite-json-number",
+      "finding": "Python float NaN/Infinity passed the first numeric validator although JSON Schema numbers are finite",
+      "resolution": "Root added math.isfinite rejection and synthetic NaN/+Infinity/-Infinity regression before extraction freeze; independently reran passing suite."
+    },
+    {
+      "id": "comparison-rubric-freeze",
+      "finding": "Per-task comparison rubric in reference/annotation-notes.md was initially outside extraction_files",
+      "resolution": "Root added rubric file to extraction freeze before model requests."
+    }
+  ],
+  "independent_tests": {
+    "command": "python3 -m unittest discover -s experiments/reward-contract-extraction-v1 -p test_extraction.py -v",
+    "passed": 5,
+    "model_calls": 0,
+    "target_scorer_runs": 0
+  },
+  "reference_review": "reference/review.json",
+  "reviewed_files_sha256": {
+    "protocol/design.json": "e62b0cd6658b304708faad3b12307a899b33b1965367763de833ba098d903ba1",
+    "protocol/response-schema.json": "ad171b9e6a734c0a1d086d5a38f10766db044fe83e71cf6c88370d40aaa3dbe7",
+    "protocol/prompt-prefix.txt": "0e3aa2aa2f67d3d885102728578cfb80df80a5cc8d3ebf6d45af9ab93775cb5c",
+    "run_extraction.py": "2f87c1461c9b50ac621a838425042d59a7ade098109b58bbc02d3f4617dac4cb",
+    "test_extraction.py": "2dceafc755552567de7ddd1672e7071bbba2fa7c504a7f1caf43233a72b88cb5",
+    "collection/blind-task-descriptions.json": "fea9db1afd4d95a8fbc20adc4d0e43802203c7156de261433dbb06a9fc3113ff",
+    "collection/description-packet-freeze.json": "aab81cc76774bc2b502b9f0ba05af3bc6ef8f92209662899bd3d69f318ae8b23",
+    "reference/contracts.json": "0eab3063bbae805ed513f5816450dc0851f49667ff53e0d1c0ccabc3ec7392f0",
+    "reference/annotation-notes.md": "4d9e24e694475b46a4acc33931e791d9c26b8e7c285be8ee75ce541621aff692",
+    "reference/review.json": "d75cbc6939eff56e92604674346ab85cc0ca239975801e4db078388021c986df"
+  },
+  "limits": [
+    "Both reference author and reviewer are AI assistants; same ecosystem/model biases can correlate. Reference is not an independently collected human gold standard.",
+    "Field revisions are a descriptive review-burden proxy; no causal reduction of human annotation cost or actual time savings can be inferred.",
+    "Six purposively selected templates in one project are not a random benchmark or independent task-instance sample.",
+    "No pretrained-model contamination/novelty claim is established.",
+    "Exact model/default decoding identity may be unavailable from the CLI; record actual metadata and qualify this rather than invent it.",
+    "The fixed Boolean projection checks scorer agreement with trusted reference strings, not correctness of the underlying task solver, full formatting, or non-Boolean contracts.",
+    "Model outputs, source preparation, final bridge and downstream labels/results remain to be audited after the pre-model freeze."
+  ],
+  "outcomes_or_private_source_read": false,
+  "subject_code_executed": false,
+  "new_dependencies_or_network_used_by_reviewer": false
+}

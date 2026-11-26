@@ -1,0 +1,195 @@
+{
+  "contracts": [
+    {
+      "task_id": "T01",
+      "status": "extracted",
+      "answer_kind": "boolean",
+      "boolean_tokens": {"true": "True", "false": "False"},
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [
+        "Express the Boolean answer as True or False."
+      ],
+      "full_credit_requirements": [
+        "Return True exactly when a consistent injective character replacement maps the first string to the second while preserving character order; return False otherwise.",
+        "Repeated occurrences of a source character use the same replacement, distinct source characters have distinct replacements, and self-mapping is permitted."
+      ],
+      "allowed_normalizations": [],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Reward scale, thresholds, and partial-credit allocation.",
+        "Whitespace, case, or other answer normalization and parser behavior.",
+        "Whether additional explanatory text is accepted."
+      ],
+      "evidence": [
+        {"field": "boolean_tokens", "quote": "Return True if the following two strings are isomorphic, or False otherwise"},
+        {"field": "full_credit_requirements", "quote": "All occurrences of a character must be replaced with another character while preserving the order of characters."},
+        {"field": "full_credit_requirements", "quote": "No two characters may map to the same character, but a character may map to itself."}
+      ],
+      "abstention_reason": null
+    },
+    {
+      "task_id": "T02",
+      "status": "extracted",
+      "answer_kind": "boolean",
+      "boolean_tokens": {"true": "True", "false": "False"},
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [
+        "Express the Boolean answer as True or False."
+      ],
+      "full_credit_requirements": [
+        "Return True exactly when the magazine supplies at least as many occurrences of each required letter as the ransom note needs; return False otherwise.",
+        "Use each occurrence of a magazine letter at most once."
+      ],
+      "allowed_normalizations": [],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Reward scale, thresholds, and partial-credit allocation.",
+        "Whitespace, case, or other answer normalization and parser behavior.",
+        "Input-letter case folding or other input normalization.",
+        "Whether additional explanatory text is accepted."
+      ],
+      "evidence": [
+        {"field": "boolean_tokens", "quote": "return True if you can construct the ransom note using the letters in the magazine, and False otherwise."},
+        {"field": "full_credit_requirements", "quote": "Each letter in the magazine string can only be used once in your ransom note."}
+      ],
+      "abstention_reason": null
+    },
+    {
+      "task_id": "T03",
+      "status": "extracted",
+      "answer_kind": "boolean",
+      "boolean_tokens": {"true": "True", "false": "False"},
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [
+        "Express the Boolean answer as True or False."
+      ],
+      "full_credit_requirements": [
+        "Return True exactly when all courses can be completed in an order satisfying every prerequisite; return False otherwise.",
+        "For each prerequisite pair (a_i, b_i), course b_i precedes course a_i."
+      ],
+      "allowed_normalizations": [],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Reward scale, thresholds, and partial-credit allocation.",
+        "Whitespace, case, or other answer normalization and parser behavior.",
+        "Whether additional explanatory text is accepted."
+      ],
+      "evidence": [
+        {"field": "boolean_tokens", "quote": "Return True if you can finish all courses considering the prerequisites, or False otherwise."},
+        {"field": "full_credit_requirements", "quote": "prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i"}
+      ],
+      "abstention_reason": null
+    },
+    {
+      "task_id": "T04",
+      "status": "extracted",
+      "answer_kind": "integer",
+      "boolean_tokens": {"true": null, "false": null},
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [],
+      "full_credit_requirements": [
+        "Give the number of prime integers p satisfying start <= p <= end, including either endpoint when it is prime."
+      ],
+      "allowed_normalizations": [],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Reward scale, thresholds, and partial-credit allocation.",
+        "Numeric tolerance.",
+        "Answer serialization, numeric notation, and whether explanatory text is accepted.",
+        "Whitespace or other answer normalization and parser behavior."
+      ],
+      "evidence": [
+        {"field": "answer_kind", "quote": "Count how many prime numbers"},
+        {"field": "full_credit_requirements", "quote": "between {start} and {end} (inclusive)"}
+      ],
+      "abstention_reason": null
+    },
+    {
+      "task_id": "T05",
+      "status": "extracted",
+      "answer_kind": "list",
+      "boolean_tokens": {"true": null, "false": null},
+      "collection_element_kind": "string",
+      "order_requirement": "as_requested",
+      "output_format_requirements": [
+        "Return a square-bracketed list.",
+        "Represent every number in the list as a string."
+      ],
+      "full_credit_requirements": [
+        "Include exactly the input numbers, preserving their multiplicities, with every element represented as a string.",
+        "Order the represented numeric values in ascending or descending order as specified by direction."
+      ],
+      "allowed_normalizations": [],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Reward scale, thresholds, and partial-credit allocation.",
+        "Numeric tolerance.",
+        "Parser behavior, exact quote style, and whitespace normalization.",
+        "Canonical numeric spelling within strings or normalization of alternative spellings.",
+        "Whether additional explanatory text is accepted."
+      ],
+      "evidence": [
+        {"field": "order_requirement", "quote": "Sort these numbers in {direction} order: {numbers}"},
+        {"field": "answer_kind", "quote": "Let all your answers be a list of numbers."},
+        {"field": "collection_element_kind", "quote": "Convert all numbers in the square brackets as strings."},
+        {"field": "output_format_requirements", "quote": "['-69', '-13', '1', '7', '11', '43', '59', '61']"}
+      ],
+      "abstention_reason": null
+    },
+    {
+      "task_id": "T06",
+      "status": "extracted",
+      "answer_kind": "fraction",
+      "boolean_tokens": {"true": null, "false": null},
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [
+        "Give only the simplified fraction as the final answer."
+      ],
+      "full_credit_requirements": [
+        "The answer fraction has the same rational value as the input fraction.",
+        "Its integer numerator and nonzero integer denominator have no common divisor greater than 1; all equivalent fractions satisfying this lowest-terms condition meet the semantic requirement."
+      ],
+      "allowed_normalizations": [],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Reward scale, thresholds, and partial-credit allocation.",
+        "Numeric tolerance.",
+        "A canonical placement of signs or a positive-denominator requirement.",
+        "Exact fraction notation, whitespace normalization, and parser behavior."
+      ],
+      "evidence": [
+        {"field": "full_credit_requirements", "quote": "Simplify the fraction {question_fraction} to its lowest terms."},
+        {"field": "output_format_requirements", "quote": "Give only the simplified fraction as your final answer."}
+      ],
+      "abstention_reason": null
+    }
+  ],
+  "provenance": {
+    "artifact_role": "AI-assisted researcher reference draft for review and freeze before model-output access",
+    "authorship": "Authored by an AI assistant; not a human annotation and not an evaluated extractor response.",
+    "sources_read": [
+      "collection/blind-task-descriptions.json",
+      "protocol/response-schema.json"
+    ],
+    "source_boundary": "Only the blind question descriptions and generic response schema were consulted. No subject source, generators, scorers, tests, issues, PRs, model responses, other experiment outputs, or hidden reference answers were consulted.",
+    "method": "Extract stated formatting and task semantics; include necessary mathematical implications without inventing grading behavior. An empty normalization array records that no normalization permission was explicitly stated.",
+    "human_time_and_effort": "No real human time or effort data were collected or represented."
+  }
+}

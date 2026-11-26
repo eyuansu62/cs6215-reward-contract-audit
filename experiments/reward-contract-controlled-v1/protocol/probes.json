@@ -1,0 +1,50 @@
+{
+  "probes": [
+    {
+      "probe_id": "opposite-false",
+      "answer": "False",
+      "reference": "True"
+    },
+    {
+      "probe_id": "opposite-true",
+      "answer": "True",
+      "reference": "False"
+    },
+    {
+      "probe_id": "correct-true",
+      "answer": "True",
+      "reference": "True"
+    },
+    {
+      "probe_id": "correct-false",
+      "answer": "False",
+      "reference": "False"
+    },
+    {
+      "probe_id": "invalid-true",
+      "answer": "banana",
+      "reference": "True"
+    },
+    {
+      "probe_id": "invalid-false",
+      "answer": "banana",
+      "reference": "False"
+    },
+    {
+      "probe_id": "empty",
+      "answer": "",
+      "reference": "True"
+    },
+    {
+      "probe_id": "none",
+      "answer": null,
+      "reference": "True"
+    },
+    {
+      "probe_id": "normalized-correct",
+      "answer": " true ",
+      "reference": "True"
+    }
+  ],
+  "scope": "Fixed probe inputs for source-derived attribution. Actual reward is never passed to the static checker."
+}

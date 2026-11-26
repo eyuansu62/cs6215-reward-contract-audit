@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "previous_payload_files_verified": 2938,
+  "previous_manifest_sha256": "b4d3838423205dd6a2a6c7a4ec975714a072859c6b623e96bacf197680babfa0",
+  "archive_sha256": {
+    "experiments/reward-contract-e2e-v1.zip": "2b95123837b60e95c65d35bc798d6d389fa4729d3a1fbc00a132029adc74f57b",
+    "experiments/reward-contract-loop-v2.zip": "e42c983d75d820ceae49f6068605d642ac27c7bbc099ba5826907ff28f5335f4"
+  },
+  "no_new_model_or_analyzer_runs": true
+}

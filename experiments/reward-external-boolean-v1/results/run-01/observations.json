@@ -1,0 +1,1068 @@
+{
+  "observations": [
+    {
+      "unit_id": "H01",
+      "probe_id": "true-correct",
+      "answer": "True",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-opposite",
+      "answer": "False",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-invalid",
+      "answer": "banana",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-empty",
+      "answer": "",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-suffix",
+      "answer": "True extra",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-article",
+      "answer": "the True",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-punctuation",
+      "answer": "True!",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-correct",
+      "answer": "False",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-opposite",
+      "answer": "True",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-invalid",
+      "answer": "banana",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-empty",
+      "answer": "",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-suffix",
+      "answer": "False extra",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-article",
+      "answer": "the False",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-punctuation",
+      "answer": "False!",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-correct",
+      "answer": "True",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-opposite",
+      "answer": "False",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-invalid",
+      "answer": "banana",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-empty",
+      "answer": "",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-suffix",
+      "answer": "True extra",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-article",
+      "answer": "the True",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-punctuation",
+      "answer": "True!",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-correct",
+      "answer": "False",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-opposite",
+      "answer": "True",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-invalid",
+      "answer": "banana",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-empty",
+      "answer": "",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-suffix",
+      "answer": "False extra",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-article",
+      "answer": "the False",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-punctuation",
+      "answer": "False!",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "normalize_text",
+          "quasi_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-correct",
+      "answer": "True",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-opposite",
+      "answer": "False",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-invalid",
+      "answer": "banana",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-empty",
+      "answer": "",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-suffix",
+      "answer": "True extra",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-article",
+      "answer": "the True",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-punctuation",
+      "answer": "True!",
+      "reference": "True",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-correct",
+      "answer": "False",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-opposite",
+      "answer": "True",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-invalid",
+      "answer": "banana",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-empty",
+      "answer": "",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-suffix",
+      "answer": "False extra",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-article",
+      "answer": "the False",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 0,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-punctuation",
+      "answer": "False!",
+      "reference": "False",
+      "observed": {
+        "kind": "returned",
+        "reward": 1,
+        "python_type": "int",
+        "source_AST_identity_verified": true,
+        "source_rewritten": false,
+        "answer_encoding_converted": false,
+        "reward_coerced": false,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false,
+        "native_definition_names": [
+          "prefix_exact_match"
+        ],
+        "execution_guard": {
+          "status": "inspected_exact_definitions",
+          "module_imported": false,
+          "namespace_is_general_sandbox": false
+        }
+      }
+    }
+  ]
+}

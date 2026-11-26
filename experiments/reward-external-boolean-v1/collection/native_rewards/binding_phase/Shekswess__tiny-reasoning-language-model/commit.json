@@ -1,0 +1,101 @@
+{
+  "sha": "6824d651fd8b3cb102f4158068a64eb158fb700d",
+  "node_id": "C_kwDOP0PWkNoAKDY4MjRkNjUxZmQ4YjNjYjEwMmY0MTU4MDY4YTY0ZWIxNThmYjcwMGQ",
+  "commit": {
+    "author": {
+      "name": "Bojan Jakimovski",
+      "email": "[email omitted]",
+      "date": "2025-10-24T16:06:32Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "[email omitted]",
+      "date": "2025-10-24T16:06:32Z"
+    },
+    "message": "Fix: Broken link",
+    "tree": {
+      "sha": "f3ee3286894b74a42925324548bf5e6285b3b182",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/f3ee3286894b74a42925324548bf5e6285b3b182"
+    },
+    "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/commits/6824d651fd8b3cb102f4158068a64eb158fb700d",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJo+6QICRC1aQ7uu5UhlAAAIDcQAK5VcviEMuK0+m9Ag5azBNVW\n+Bv2yhfU5bVw5YBJTtnUw8fSL9n3d5UlhEQnrtmETcDTN0+rMusdEiFYHUJ2ieia\nm07EUPeu95nOGE+faQ0BzTHox407WQHCMgDsGe2zy3MI5RGpzRAIK8eP3GSN/pdC\nc/ROsqMbqEPvcZPUGQ4aHB0W7zoo7FDvK/QGhGsoEgL7TLPYkDIRyH8JU/QrUjb9\nDlmZrtixHrr0P2Hxtcvoybq0myiugOb0DRVogR3uNVW1amD7HZa1q4Io1vu1RrLt\njkC5+QM4bPDVsUC7XsQtqhm8qZuTP5p3yEWU7cqKJXiaqD2yR6cr1MqtyW1roNMM\nLV8rF+WMakaatfI5H6ykDzNbxqYdHe9/YXxxHXye2uGat3AF+XIqgOsPm2fmAUwm\nC6Yc9wUKiNrM12/nbFAxxKa38wJf2RYNbGRy+ARDukU/sekRxJ0UUUpwyAOJuRe7\n2GzFH4IKTV6YOIzMU1Ueb/lizfXsiOGm2A6jlVQJmiYpebWx/qnkRJq/NOrZFEmt\nNwD4Oda3GPNQ5U/rrUM1PIuVOGzJxeJ7XTcDPMaiai+0L1EVpUjivE2I/No+vctu\nUpOsTHK8DMBiI5sfl5MeqcrYqoo0Pglwc4UIBAGABoY3KNMuWdr1taqFrrNvx1xu\nXuWri7cGyfb9P7vLJ4TA\n=6xNu\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree f3ee3286894b74a42925324548bf5e6285b3b182\nparent d370bf6cc6bdd352784740a49247f8743fa900ca\nauthor Bojan Jakimovski <[email omitted]> 1761321992 +0200\ncommitter GitHub <[email omitted]> 1761321992 +0200\n\nFix: Broken link",
+      "verified_at": "2025-10-24T16:06:33Z"
+    }
+  },
+  "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/commits/6824d651fd8b3cb102f4158068a64eb158fb700d",
+  "html_url": "https://github.com/Shekswess/tiny-reasoning-language-model/commit/6824d651fd8b3cb102f4158068a64eb158fb700d",
+  "comments_url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/commits/6824d651fd8b3cb102f4158068a64eb158fb700d/comments",
+  "author": {
+    "login": "Shekswess",
+    "id": 72557383,
+    "node_id": "MDQ6VXNlcjcyNTU3Mzgz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/72557383?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Shekswess",
+    "html_url": "https://github.com/Shekswess",
+    "followers_url": "https://api.github.com/users/Shekswess/followers",
+    "following_url": "https://api.github.com/users/Shekswess/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Shekswess/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Shekswess/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Shekswess/subscriptions",
+    "organizations_url": "https://api.github.com/users/Shekswess/orgs",
+    "repos_url": "https://api.github.com/users/Shekswess/repos",
+    "events_url": "https://api.github.com/users/Shekswess/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Shekswess/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d370bf6cc6bdd352784740a49247f8743fa900ca",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/commits/d370bf6cc6bdd352784740a49247f8743fa900ca",
+      "html_url": "https://github.com/Shekswess/tiny-reasoning-language-model/commit/d370bf6cc6bdd352784740a49247f8743fa900ca"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "f4f95213b0252c45f0293f8069583c18042aab34",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/Shekswess/tiny-reasoning-language-model/blob/6824d651fd8b3cb102f4158068a64eb158fb700d/README.md",
+      "raw_url": "https://github.com/Shekswess/tiny-reasoning-language-model/raw/6824d651fd8b3cb102f4158068a64eb158fb700d/README.md",
+      "contents_url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/contents/README.md?ref=6824d651fd8b3cb102f4158068a64eb158fb700d",
+      "patch": "@@ -18,7 +18,7 @@ The goal of this project is to demonstrate that even small models can learn to r\n \n \n ## Technical Report\n-For an in-depth explanation of the motivation, training setup, datasets, and findings, see the full [Technical Report]([https://your-report-link-here](https://shekswess.github.io/tiny-reasoning-language-model.html)).\n+For an in-depth explanation of the motivation, training setup, datasets, and findings, see the full [Technical Report](https://shekswess.github.io/tiny-reasoning-language-model.html).\n \n ## [Hugging Face Collection](https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4)\n "
+    }
+  ]
+}

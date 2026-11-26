@@ -1,0 +1,9 @@
+id,function_family,primary_eligible,disposition,contract_id,source_file,probes,full_credit_violating_probes,evidence
+rg-issue-543-original,rg-issue-543,True,reported_bug_original,C_PROBABILITY_FULL,upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py,11,3,results/replay-02/rg-issue-543-original.json
+rg-issue-544-original,rg-issue-544,True,reported_bug_original,C_BOOLEAN_FULL,upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py,7,3,results/replay-02/rg-issue-544-original.json
+rg-issue-545-original,rg-issue-545,True,reported_bug_original,C_COMPLEX_FINITE,upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py,9,3,results/replay-02/rg-issue-545-original.json
+rg-pr-561-proposed-repair,rg-issue-544,True,proposed_upstream_repair,C_BOOLEAN_FULL,upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py,8,0,results/replay-02/rg-pr-561-proposed-repair.json
+rg-pr-562-proposed-repair,rg-issue-545,True,proposed_upstream_repair,C_COMPLEX_FINITE,upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py,10,0,results/replay-02/rg-pr-562-proposed-repair.json
+control-palindrome-validity-main,PalindromeDataset.score_answer,True,normal_control,C_PALINDROME_FULL,upstream/main/reasoning_gym/algorithmic/palindrome_generation.py,7,0,results/replay-02/control-palindrome-validity-main.json
+control-group-anagrams-order-main,GroupAnagramsDataset.score_answer,False,qualified_semantic_order_control_not_general_safety_negative,C_ANAGRAM_ORDER_CONDITIONAL,upstream/main/reasoning_gym/algorithmic/group_anagrams.py,6,0,results/replay-02/control-group-anagrams-order-main.json
+control-prime-factorization-main,PrimeFactorizationDataset.score_answer,True,normal_control,C_PRIME_FACTORS_FULL,upstream/main/reasoning_gym/arithmetic/prime_factorization.py,5,0,results/replay-02/control-prime-factorization-main.json

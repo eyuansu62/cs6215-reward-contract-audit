@@ -1,0 +1,36 @@
+{
+  "status": "data_eligibility_screening_before_independent_test",
+  "purpose": "Requested fresh Boolean reward implementations, no method expansion.",
+  "minimum_real_unique_compatible_scorers": 2,
+  "desired_small_batch": 3,
+  "eligible_domain": "Native canonical True/False reference and corresponding Boolean answer semantics. No relabeling Yes/No,0/1, role sets or non-Boolean tasks.",
+  "freshness": "Exclude prior content-exposed tasks including rejected candidates and previously exposed inherited/default scorer implementations. Deduplicate own scorers after removing docs/annotations and alpha-normalizing implementation identifiers; retain full AST/source hashes.",
+  "frozen_components": {
+    "experiments/reward-contract-e2e-v1/protocol/prompt-prefix.txt": "7ab27452c5c41b9d524dc715de98976208d36661ccf2a39ae51072ce40607f92",
+    "experiments/reward-contract-e2e-v1/protocol/analysis-profile.json": "4f812ece34caddc3b76c940aee9914b7d7bc34e9c73a9c617cd552a08ba81603",
+    "experiments/reward-contract-e2e-v1/protocol/response-schema.json": "8802b98a6f86dc86fd9dbb11aa32c8a3c8cef91cca2bacaa8e85663d304e38a3",
+    "experiments/reward-contract-e2e-v1/run_e2e.py": "58657b6059f664a55e5b8783d7d07dc2bf0bac471212ab2579d08a977c16dc73",
+    "experiments/reward-contract-loop-v2/boolean_contracts.py": "b832098bb832b56d2bd100bc5b66d02546820bdabfac51fff22eaa395c58f257",
+    "experiments/reward-contract-loop-v2/boolean_checker.py": "a0218e6474606af3841dd96212fad7c3327dee9a14f8940a7184b13e95dd7705",
+    "experiments/reward-baselines-v1/tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+    "experiments/reward-baselines-v1/tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+  },
+  "if_eligible": [
+    "Freeze selected tasks and question-only researcher reference before model outputs",
+    "Use same prompt/schema/profile and explicit IR without defaults",
+    "No source/probes/oracle in extraction request; no contract supplementation",
+    "Run native Semgrep syntax baseline separately from source-symbolic reference control and source-symbolic LLM condition",
+    "Freeze concrete probe/oracle fields before detector predictions; compare active and violated obligation IDs",
+    "Retain Unknown and source-execution exceptions; no task replacement based on detector outcome"
+  ],
+  "metrics_if_run": [
+    "task-level source-exposed-since-method-freeze classification with supportedlabels only",
+    "separate per-obligation witness verdicts",
+    "Semgrep heuristic alerts separate from obligation-level proofs",
+    "LLM/reference selectedID omissions and modelvalidation status",
+    "same-capability symboliccontrol pairedgains/losses"
+  ],
+  "if_insufficient": "Do not run or fabricate an independent benchmark. Publish exact surveyed sources, incompatibilities, duplicates and unrun/undefined metrics. Keep prior frozen results.",
+  "no_new_analyzer_features": true,
+  "model_or_analyzer_calls_so_far": 0
+}

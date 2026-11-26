@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "test_methods_passed": 3,
+  "compilation_passed": true,
+  "actual_source_only_reward_executions": 6,
+  "expected_concrete_contract_rows_matched": 18,
+  "static_method_records": 12,
+  "completed_semgrep_scans": 4,
+  "independent_review_passed": true,
+  "method_freeze_sha256": "b348f4aaf047c23f2e864aea540329a50f63b3d920bc499533c8fb694b6c35c9",
+  "report_sha256": "dc7d94d9c4cea9c603553ec623182e087017503e920f0e9ddf1c5aa423691bd1",
+  "analyzer_and_bridge_changes": false,
+  "new_LLM_extraction_requests": 0,
+  "previous_payloads_preserved": 2699,
+  "previous_archives_preserved": 4,
+  "faithful_omission_supported": false,
+  "reason": "Type-based projection reintroduces deleted equality; raw input ablation does not survive compilation.",
+  "limits": [
+    "one known development bug family, not held-out",
+    "concrete oracle is not a static analyzer",
+    "missing-spec Unknown is wrapper policy",
+    "weak-contract whole-source alarm can remain due banana",
+    "proposed repair snapshot, not released fix"
+  ]
+}

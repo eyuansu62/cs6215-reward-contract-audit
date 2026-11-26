@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-08T14:12:04.558559+00:00",
+  "files_sha256": {
+    "contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+    "evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab"
+  },
+  "oracle_sha256": "1fb258b1dd0780177b8b714982e6135307d3339a45b44ae288a840571771a371",
+  "frozen_before_detector_implementation_and_primary_predictions": true
+}

@@ -1,0 +1,370 @@
+test_assignments_and_partial_credit (test_symbolic_baseline.SymbolicTests.test_assignments_and_partial_credit) ... ok
+test_assignments_and_unprotected_fallthrough (test_symbolic_baseline.SymbolicTests.test_assignments_and_unprotected_fallthrough) ... ok
+test_constant_helper_does_not_certify_equality (test_symbolic_baseline.SymbolicTests.test_constant_helper_does_not_certify_equality) ... ok
+test_dead_bad_return (test_symbolic_baseline.SymbolicTests.test_dead_bad_return) ... ok
+test_exception_handlers_are_not_ignored (test_symbolic_baseline.SymbolicTests.test_exception_handlers_are_not_ignored) ... ok
+test_exception_target_shadows_builtin_for_whole_function (test_symbolic_baseline.SymbolicTests.test_exception_target_shadows_builtin_for_whole_function) ... FAIL
+test_identifier_and_unit_id_do_not_classify (test_symbolic_baseline.SymbolicTests.test_identifier_and_unit_id_do_not_classify) ... ok
+test_intermediate_exception_is_not_a_normal_alarm_path (test_symbolic_baseline.SymbolicTests.test_intermediate_exception_is_not_a_normal_alarm_path) ... ok
+test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) ... 
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='import builtins as bool') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='from builtins import bool') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='global bool') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='nonlocal bool') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='def bool(value):\n        return value') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='async def bool(value):\n        return value') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='class bool:\n        pass') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='del bool') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='match answer:\n        case bool:\n            return 0') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='match answer:\n        case [*bool]:\n            return 0') ... FAIL
+  test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='match answer:\n        case {**bool}:\n            return 0') ... FAIL
+test_locally_shadowed_builtin_is_not_native (test_symbolic_baseline.SymbolicTests.test_locally_shadowed_builtin_is_not_native) ... ok
+test_loop_is_unsupported (test_symbolic_baseline.SymbolicTests.test_loop_is_unsupported) ... ok
+test_normalized_equality (test_symbolic_baseline.SymbolicTests.test_normalized_equality) ... ok
+test_numeric_contract_not_claimed (test_symbolic_baseline.SymbolicTests.test_numeric_contract_not_claimed) ... ok
+test_palindrome_dominating_guards (test_symbolic_baseline.SymbolicTests.test_palindrome_dominating_guards) ... ok
+test_palindrome_missing_guard_is_unknown (test_symbolic_baseline.SymbolicTests.test_palindrome_missing_guard_is_unknown) ... ok
+test_prime_helper_source_certificate (test_symbolic_baseline.SymbolicTests.test_prime_helper_source_certificate) ... ok
+test_reference_mutation_cannot_reuse_stale_facts (test_symbolic_baseline.SymbolicTests.test_reference_mutation_cannot_reuse_stale_facts) ... FAIL
+test_short_circuit_dead_unknown_call (test_symbolic_baseline.SymbolicTests.test_short_circuit_dead_unknown_call) ... ok
+test_truthiness_behind_equality_is_safe (test_symbolic_baseline.SymbolicTests.test_truthiness_behind_equality_is_safe) ... ok
+test_truthiness_counterexample (test_symbolic_baseline.SymbolicTests.test_truthiness_counterexample) ... ok
+test_undeclared_reference_state_cannot_establish_reachability (test_symbolic_baseline.SymbolicTests.test_undeclared_reference_state_cannot_establish_reachability) ... ok
+test_unknown_call_effects_stop_native_reference_reasoning (test_symbolic_baseline.SymbolicTests.test_unknown_call_effects_stop_native_reference_reasoning) ... FAIL
+test_unknown_call_terms_do_not_prove_contradictions (test_symbolic_baseline.SymbolicTests.test_unknown_call_terms_do_not_prove_contradictions) ... FAIL
+test_unknown_calls_and_mutations_cannot_prove_safety (test_symbolic_baseline.SymbolicTests.test_unknown_calls_and_mutations_cannot_prove_safety) ... ok
+
+======================================================================
+FAIL: test_exception_target_shadows_builtin_for_whole_function (test_symbolic_baseline.SymbolicTests.test_exception_target_shadows_builtin_for_whole_function)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 135, in test_exception_target_shadows_builtin_for_whole_function
+            self.verdict('''def score(answer, entry):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+            return 0
+            ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='import builtins as bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='from builtins import bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='global bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='nonlocal bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='def bool(value):\n        return value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='async def bool(value):\n        return value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='class bool:\n        pass')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='del bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='match answer:\n        case bool:\n            return 0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='match answer:\n        case [*bool]:\n            return 0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_later_unsupported_binding_surfaces_prevent_early_alarm (test_symbolic_baseline.SymbolicTests.test_later_unsupported_binding_surfaces_prevent_early_alarm) (tail='match answer:\n        case {**bool}:\n            return 0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 160, in test_later_unsupported_binding_surfaces_prevent_early_alarm
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if bool(answer) == bool(entry["answer"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % tail, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [{'condition': "bool(answer) == bool(entry['answer'])", 'required_truth': True, 'source_span': {'line': 2, 'end_line': 2}}], 'source_spans': [{'line': 3, 'end_line': 3}, {'line': 2, 'end_line': 2}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_reference_mutation_cannot_reuse_stale_facts (test_symbolic_baseline.SymbolicTests.test_reference_mutation_cannot_reuse_stale_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 176, in test_reference_mutation_cannot_reuse_stale_facts
+            self.verdict('''def score(answer, entry):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if answer != entry["answer"]:
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        return 0
+        ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 0, 'paths': [], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_unknown_call_effects_stop_native_reference_reasoning (test_symbolic_baseline.SymbolicTests.test_unknown_call_effects_stop_native_reference_reasoning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 191, in test_unknown_call_effects_stop_native_reference_reasoning
+            self.verdict('''def score(answer, entry):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        change(entry)
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 0, 'paths': [], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_unknown_call_terms_do_not_prove_contradictions (test_symbolic_baseline.SymbolicTests.test_unknown_call_terms_do_not_prove_contradictions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 168, in test_unknown_call_terms_do_not_prove_contradictions
+            self.verdict('''def score(answer, entry):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        if answer.startswith("b"):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 0, 'paths': [], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.011s
+
+FAILED (failures=15)

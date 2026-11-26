@@ -1,0 +1,21 @@
+{
+  "task": {
+    "task_id": "P17",
+    "question_description": "There are two accepted response labels: True and False. Remove whitespace at the ends and ignore capitalization. The resulting response must consist entirely of one accepted label to receive full credit. Either label receives full credit. Whether it agrees with the trusted correct reference has no effect on grading.",
+    "placeholder_notes": {}
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

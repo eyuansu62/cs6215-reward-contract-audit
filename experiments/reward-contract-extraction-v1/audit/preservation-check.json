@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "old_manifested_payload_files_unchanged": 2380,
+  "preserved_archives_sha256": {
+    "experiments/reward-baselines-v1.zip": "8cc39df03a1702245edc96f6576db7f76d59e955613dcc825a7d94490b51b17d",
+    "datasets/reasoning-gym-reward-v1.zip": "35d974538ac87f7bb7419512632dd9d97ffed2387dc474c84f1901b07841d880",
+    "outputs/main-experiment-v10.zip": "1ec556817897134f2c9f46f53ef9771caf251ef2394998c604aa00f9a391ed32"
+  }
+}

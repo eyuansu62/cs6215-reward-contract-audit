@@ -1,0 +1,153 @@
+{
+  "phase1_sources": [
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/gsm8k.py",
+      "sha256": "497c6e32b708d0bc8803b5a048ca5983de7756eb9c146abdc56e6f5d28767189"
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/search_r1_like_qa_em.py",
+      "sha256": "8070e4d07719f23e626968b983c597918c73d15c6ab5b09c5346e7311d0cac83"
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/math_verify.py",
+      "sha256": "1242011cddc041ea6cb19fc9a1872ebab742d8ae7e8ebd3342f6b3b8b6e2ba15"
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/math.py",
+      "sha256": "52a2fa60fca2a47466eb1d622357249f6d787699ff4b274782641d5d7eace134"
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/dapo.py",
+      "sha256": "0f8ec9be155051859157184f08d91a9a6f7f8aae28b1dcce9f91bbbd70633c67"
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/r1v.py",
+      "sha256": "694c4197e8dd5088732b702dc4796f80a10319a9abfc125d2bc3c024aa097c5b"
+    },
+    {
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "examples/python/reward_func.py",
+      "sha256": "2022dd85be9befba57d5110d5d6b6932cebb6aa08bed8dcab9d9890a7faf4086"
+    },
+    {
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "examples/python/math_reward_func.py",
+      "sha256": "f21ff003d31e7436710099eae02d46db98d129e27301d93dfabf1e0048241214"
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "environments/eval_environments/boolq_eval.py",
+      "sha256": "5cf4973db93b7910f97e766ed912ae020fd96684457180661d73adbbbc9f4f38"
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/accuracy_reward.py",
+      "sha256": "1e6e4579a624720c40ef3053a946445e34716185244fd64ebaeb6ff61eb25e5f"
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/format_reward.py",
+      "sha256": "a050d0fd81217eda45580900ca47fcc75d5caebe30f9acd68963aaaf01ec969e"
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/r1_reward.py",
+      "sha256": "4d4a91fcab5a4331ed0b2f32f2b38b9dc2ef3ba6fa3f4859e516dfe59df9e2ac"
+    }
+  ],
+  "phase2_sources": [
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "README.md",
+      "sha256": "c2ecfea84af4867fb17e7dde4aef283724e323a1f5477325d83c4ffe4eecdcbe"
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "grpo.py",
+      "sha256": "c1fc2d13d31c19273c108c27ef00256390933eae6e2bacc557fdc98e0353e07f"
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "grpo_base.py",
+      "sha256": "e313f93d540afe7f2fd27d34ad3af6f11917350204ded7be57de4af6963b9322"
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "load_data.py",
+      "sha256": "b49bb7722ccacca54ccc4673f4375dcd84ac13579344c22237a191dcbafea897"
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "README.md",
+      "sha256": "3c63ca299727dd66521e657446d1c3a8ef52c43bb477db36f404f06171479b14"
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "verl/utils/reward_score/boolean/__init__.py",
+      "sha256": "333020760ca232b931482850bbe5283c50aeca866c20a285b5910d1af8cf4f1f"
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "verl/utils/reward_score/__init__.py",
+      "sha256": "bffda41d9d8ef4f91a368bb424419135e8336423b23340eb78b6209cf86051b3"
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "README.md",
+      "sha256": "ee8e607eb0b125d7ae1488dc20c664df1187265b0802e45ad2ef23ed60ce9327"
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "ppo.py",
+      "sha256": "683a2e9093892f9f656284e630210f0b78f8ffd3b6b4251aee6e2423e86c990f"
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "prompt.py",
+      "sha256": "ed177ec6c44b19913c5c258eaaeb86025c9a85be052300cb36586a24ca64fb71"
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "utils.py",
+      "sha256": "d946cbb04c68fd88443fbd475b37d98da88bcaa6050ebb332c35a4468b32d8f7"
+    }
+  ],
+  "metadata_only_repositories": [
+    "lew624/novelty_rl",
+    "Shekswess/tiny-reasoning-language-model",
+    "haolpku/DataFlex-RL-Anonymous",
+    "Unakar/Logic-RL",
+    "Open-Reasoner-Zero/Open-Reasoner-Zero"
+  ],
+  "future_freshness": "All listed source contents now exposed; do not silently reuse as unseen. Metadata-only repositories should be checked by exact path/content in future studies.",
+  "other_exposure": "Public search snippets included previously excluded RG/SkyRL/bio-mystery and original Google BIG-bench boolean expression task; no scorer labels or known bugs were used to select cases."
+}

@@ -1,0 +1,146 @@
+{
+  "verdict": "no_alarm",
+  "active_obligations": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "per_obligation": [
+    {
+      "obligation_id": "valid_boolean_token",
+      "verdict": "no_alarm",
+      "certificate": {
+        "kind": "all_normal_full_credit_paths_certified",
+        "full_credit_path_count": 1,
+        "paths": [
+          {
+            "kind": "source_guard_implies_active_boolean_obligation",
+            "obligation_id": "valid_boolean_token",
+            "source_proof": {
+              "kind": "boolean_normalized_equality_implication",
+              "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False."
+            },
+            "argument": "The source equality guard and trusted canonical reference imply only the requested obligation; no omitted obligation is required.",
+            "return_span": {
+              "line": 16,
+              "end_line": 16
+            },
+            "conditions": [
+              {
+                "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                "required_truth": true,
+                "source_span": {
+                  "line": 14,
+                  "end_line": 14
+                }
+              },
+              {
+                "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                "required_truth": true,
+                "source_span": {
+                  "line": 14,
+                  "end_line": 14
+                }
+              }
+            ]
+          }
+        ],
+        "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+      },
+      "evidence": [],
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        }
+      ],
+      "unsupported_reason": null,
+      "method": "bounded-static-source-path-certificates-v1"
+    },
+    {
+      "obligation_id": "equals_reference",
+      "verdict": "no_alarm",
+      "certificate": {
+        "kind": "all_normal_full_credit_paths_certified",
+        "full_credit_path_count": 1,
+        "paths": [
+          {
+            "kind": "source_guard_implies_active_boolean_obligation",
+            "obligation_id": "equals_reference",
+            "source_proof": {
+              "kind": "boolean_normalized_equality_implication",
+              "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False."
+            },
+            "argument": "The source equality guard and trusted canonical reference imply only the requested obligation; no omitted obligation is required.",
+            "return_span": {
+              "line": 16,
+              "end_line": 16
+            },
+            "conditions": [
+              {
+                "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                "required_truth": true,
+                "source_span": {
+                  "line": 14,
+                  "end_line": 14
+                }
+              },
+              {
+                "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                "required_truth": true,
+                "source_span": {
+                  "line": 14,
+                  "end_line": 14
+                }
+              }
+            ]
+          }
+        ],
+        "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+      },
+      "evidence": [],
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        }
+      ],
+      "unsupported_reason": null,
+      "method": "bounded-static-source-path-certificates-v1"
+    }
+  ],
+  "alarm_obligations": [],
+  "compiled_contract": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1,
+    "obligations": [
+      "valid_boolean_token",
+      "equals_reference"
+    ]
+  },
+  "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+  "input_fingerprint": "a58b73a1bac59f4facf443a1aa5e5b3f82dc32e39745be45b18925e572bc3d0b",
+  "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+  "source_spans": [
+    {
+      "line": 16,
+      "end_line": 16
+    },
+    {
+      "line": 16,
+      "end_line": 16
+    }
+  ],
+  "target_source_executed": false,
+  "unsupported_reason": null,
+  "method": "explicit_boolean_obligations_over_preserved_paths_v2",
+  "qualification": "Only the declared obligation is checked in each result. Unproved paths stay Unknown; bounded counterexample search does not prove absence."
+}

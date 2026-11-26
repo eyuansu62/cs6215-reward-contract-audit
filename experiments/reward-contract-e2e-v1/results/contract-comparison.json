@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-11-09T02:15:42.651801+00:00",
+  "task_id": "B01",
+  "known_development_case": true,
+  "reference_is_AI_assisted": true,
+  "status": "complete",
+  "selected_obligations_model": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "selected_obligations_reference": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "missing_reference_ids": [],
+  "same_selected_id_set": true,
+  "raw_model_contract_equal_to_compiled_values": true,
+  "whole_contract_semantically_equal_under_fixed_profile": true,
+  "numeric_serialization_difference": {
+    "field": "full_credit_threshold",
+    "model_native_type": "int",
+    "reference_native_type": "float",
+    "model_value": 1,
+    "reference_value": 1.0,
+    "note": "1 and1.0 numericallyequal; rawrepresentation preserved, no normalization rewrite. CompareactiveIDs/semantics, not byte identity betweenconditions."
+  },
+  "evidence": [
+    {
+      "obligation_id": "valid_boolean_token",
+      "quote": "If it will halt, reply 'True'. If it won't halt, reply 'False'.",
+      "reason": "The question requires a Boolean token for either possible answer."
+    },
+    {
+      "obligation_id": "equals_reference",
+      "quote": "Will this game halt at or before {max_steps} steps?",
+      "reason": "Full credit requires the submitted Boolean to correctly answer the task-instance question, represented by the trusted reference."
+    }
+  ],
+  "not_specified": [],
+  "same_paired_witness_verdicts": 6,
+  "same_paired_violated_id_sets": 6,
+  "paired_witnesses": 6,
+  "condition_rows": 12,
+  "static_analyzer_changes": false,
+  "manual_model_contract_repairs": 0,
+  "obligations_added_by_pipeline": 0,
+  "omission_not_observed_in_this_response": "No real omitted-ID model output in this onecall; preservation of deliberate omissions is verified by regressions, not claimed as an observed model failure.",
+  "interpretation": "Same-case constrained two-atom selection and integration success; no incremental detection gain/human-effort/generalization claim.",
+  "response_sha256": "4f375fa8d445c1e5f6b05b1bb6d7a0eb180ed224588788c9b590083e558f0804"
+}

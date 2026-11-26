@@ -1,0 +1,7 @@
+{
+  "condition": "reference",
+  "input_freeze_sha256": "5d8bf96dc7d4f1912c0aec38ba58c1c6e1d25865bebfa1bceef9a7c70d660e63",
+  "predictions_sha256": "8f019b8d219adeeb4d127cbc91980ad5511d04c34116ac8708d19d78f2d362aa",
+  "reference_is_AI_assisted": true,
+  "LLM_or_targets_executed_by_this_run": false
+}

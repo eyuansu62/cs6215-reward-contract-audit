@@ -1,0 +1,44 @@
+{
+  "verdict": "alarm",
+  "certificate": {
+    "kind": "native_boolean_path_counterexample",
+    "candidate_class": "fresh nonempty non-Boolean normalized string",
+    "trusted_reference": "True",
+    "argument": "The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed."
+  },
+  "evidence": [
+    {
+      "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+      "required_truth": true,
+      "source_span": {
+        "line": 14,
+        "end_line": 14
+      }
+    },
+    {
+      "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+      "required_truth": true,
+      "source_span": {
+        "line": 14,
+        "end_line": 14
+      }
+    }
+  ],
+  "source_spans": [
+    {
+      "line": 16,
+      "end_line": 16
+    },
+    {
+      "line": 14,
+      "end_line": 14
+    },
+    {
+      "line": 14,
+      "end_line": 14
+    }
+  ],
+  "unsupported_reason": null,
+  "method": "bounded-static-source-path-certificates-v1",
+  "bridge_wall_seconds": 0.001973
+}

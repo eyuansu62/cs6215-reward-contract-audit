@@ -1,0 +1,145 @@
+{
+  "method": "semgrep-ce-fixed-risky-idioms-v1",
+  "verdict": "alarm",
+  "status": "complete",
+  "errors": [],
+  "findings": [
+    {
+      "rule_id": "reward-bool-truthiness-equality",
+      "function": "score",
+      "span": [
+        2,
+        17,
+        2,
+        54
+      ],
+      "message": "Truthiness equality can award full credit to unequal Boolean strings."
+    }
+  ],
+  "all_findings": [
+    {
+      "check_id": "reward-bool-truthiness-equality",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-_3uf2d98/source.py",
+      "start": {
+        "line": 2,
+        "col": 18,
+        "offset": 43
+      },
+      "end": {
+        "line": 2,
+        "col": 55,
+        "offset": 80
+      },
+      "extra": {
+        "metavars": {
+          "$CANDIDATE": {
+            "start": {
+              "line": 2,
+              "col": 23,
+              "offset": 48
+            },
+            "end": {
+              "line": 2,
+              "col": 29,
+              "offset": 54
+            },
+            "abstract_content": "answer"
+          },
+          "$REFERENCE": {
+            "start": {
+              "line": 2,
+              "col": 39,
+              "offset": 64
+            },
+            "end": {
+              "line": 2,
+              "col": 54,
+              "offset": 79
+            },
+            "abstract_content": "entry[\"answer\"]"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Truthiness equality can award full credit to unequal Boolean strings.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "functions": [
+      {
+        "name": "score",
+        "source_span": [
+          1,
+          0,
+          2,
+          55
+        ],
+        "engine_span": [
+          1,
+          0,
+          2,
+          55
+        ]
+      }
+    ],
+    "return_spans": [
+      [
+        2,
+        4,
+        2,
+        55
+      ]
+    ],
+    "function_count": 1,
+    "return_count": 1,
+    "semantics_proved": false,
+    "mode": "search",
+    "source_rewritten": false,
+    "command": [
+      "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+      "-json_nodots",
+      "-j",
+      "1",
+      "-timeout",
+      "10",
+      "-lang",
+      "python",
+      "-rules",
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-_3uf2d98/coverage-rules.json",
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-_3uf2d98/source.py"
+    ],
+    "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+  },
+  "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+  "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+  "source_executed": false,
+  "source_rewritten": false,
+  "unit_id": "irrelevant-one",
+  "contract_id": "C_BOOLEAN_FULL",
+  "source_sha256": "bc027497809b91663b2d9404fdd1e9a93311a614dbb40ffe4ca267d9b476ee06",
+  "engine": {
+    "version": "semgrep-core version: 1.183.0 (08c107344d)",
+    "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+    "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "metrics": "off"
+  },
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-json_nodots",
+    "-j",
+    "1",
+    "-timeout",
+    "10",
+    "-lang",
+    "python",
+    "-rules",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-_3uf2d98/scan-rules.json",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-_3uf2d98/source.py"
+  ],
+  "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+  "wall_seconds": 0.448288
+}

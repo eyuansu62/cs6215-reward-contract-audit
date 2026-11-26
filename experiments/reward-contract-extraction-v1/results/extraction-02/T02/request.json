@@ -1,0 +1,8 @@
+{
+  "task_id": "T02",
+  "question_description": "Given two strings representing a ransom note and a magazine, return True if you can construct the ransom note using the letters in the magazine, and False otherwise.\n\nEach letter in the magazine string can only be used once in your ransom note.\n\nRansom note: {ransom_note}\nMagazine: {magazine}\n",
+  "placeholder_notes": {
+    "ransom_note": "instance-specific ransom-note string",
+    "magazine": "instance-specific available-letter string"
+  }
+}

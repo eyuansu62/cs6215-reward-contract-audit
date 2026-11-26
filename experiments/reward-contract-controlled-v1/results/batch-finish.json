@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-13T02:46:40.281990+00:00",
+  "records": [
+    {
+      "task_id": "P91",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P35",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P28",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P73",
+      "status": "abstained",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P96",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P46",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P23",
+      "status": "abstained",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P17",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P42",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P62",
+      "status": "abstained",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P59",
+      "status": "abstained",
+      "successful_model_turns": 1,
+      "error": null
+    },
+    {
+      "task_id": "P84",
+      "status": "complete",
+      "successful_model_turns": 1,
+      "error": null
+    }
+  ],
+  "attempts": 12,
+  "no_outcome_driven_retries_or_tuning": true
+}

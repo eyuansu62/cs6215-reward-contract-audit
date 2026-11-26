@@ -1,0 +1,33 @@
+test_boolean_normalization_no_pattern (test_semgrep_baseline.SemgrepSyntheticTests.test_boolean_normalization_no_pattern) ... ok
+test_boolean_semantic_preguard_is_documented_false_positive (test_semgrep_baseline.SemgrepSyntheticTests.test_boolean_semantic_preguard_is_documented_false_positive) ... ok
+test_boolean_truthiness_warns (test_semgrep_baseline.SemgrepSyntheticTests.test_boolean_truthiness_warns) ... ok
+test_empty_structural_coverage_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_empty_structural_coverage_is_unknown) ... ok
+test_engine_parse_error_cannot_be_a_negative (test_semgrep_baseline.SemgrepSyntheticTests.test_engine_parse_error_cannot_be_a_negative) ... ok
+test_existing_output_is_never_overwritten (test_semgrep_baseline.SemgrepSyntheticTests.test_existing_output_is_never_overwritten) ... ok
+test_frozen_contract_mismatch_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_frozen_contract_mismatch_is_unknown) ... ok
+test_helper_and_decorator_structural_coverage (test_semgrep_baseline.SemgrepSyntheticTests.test_helper_and_decorator_structural_coverage) ... ok
+test_identity_and_contract_do_not_choose_rules (test_semgrep_baseline.SemgrepSyntheticTests.test_identity_and_contract_do_not_choose_rules) ... ok
+test_metadata_mismatch_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_metadata_mismatch_is_unknown) ... ok
+test_missing_scanned_file_cannot_be_a_negative (test_semgrep_baseline.SemgrepSyntheticTests.test_missing_scanned_file_cannot_be_a_negative) ... ok
+test_no_returns_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_no_returns_is_unknown) ... ok
+test_numeric_adjacent_finite_guard_assignment (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_adjacent_finite_guard_assignment) ... ok
+test_numeric_adjacent_finite_guard_return (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_adjacent_finite_guard_return) ... ok
+test_numeric_distant_guard_is_conservatively_warned (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_distant_guard_is_conservatively_warned) ... ok
+test_numeric_guard_reassignment_never_masks_warning (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_guard_reassignment_never_masks_warning) ... ok
+test_numeric_guard_wrong_variable_never_masks_warning (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_guard_wrong_variable_never_masks_warning) ... ok
+test_numeric_positive_finite_branch (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_positive_finite_branch) ... ok
+test_numeric_repeated_call_guard_is_not_a_value_guard (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_repeated_call_guard_is_not_a_value_guard) ... ok
+test_numeric_unguarded_clamp_warns (test_semgrep_baseline.SemgrepSyntheticTests.test_numeric_unguarded_clamp_warns) ... ok
+test_parse_error_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_parse_error_is_unknown) ... ok
+test_partial_reward_is_not_intrinsically_a_warning (test_semgrep_baseline.SemgrepSyntheticTests.test_partial_reward_is_not_intrinsically_a_warning) ... ok
+test_prefix_min_length_ratio_warns (test_semgrep_baseline.SemgrepSyntheticTests.test_prefix_min_length_ratio_warns) ... ok
+test_rebound_builtin_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_rebound_builtin_is_unknown) ... ok
+test_rebound_math_namespace_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_rebound_math_namespace_is_unknown) ... ok
+test_timeout_is_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_timeout_is_unknown) ... ok
+test_unicode_source_preserved_and_spans_in_bytes (test_semgrep_baseline.SemgrepSyntheticTests.test_unicode_source_preserved_and_spans_in_bytes) ... ok
+test_unsupported_fixed_parameters_are_unknown (test_semgrep_baseline.SemgrepSyntheticTests.test_unsupported_fixed_parameters_are_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 10.320s
+
+OK

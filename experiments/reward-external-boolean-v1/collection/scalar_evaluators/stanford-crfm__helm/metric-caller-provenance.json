@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "path": "src/helm/benchmark/run_specs/lite_run_specs.py",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/run_specs/lite_run_specs.py",
+      "sha256": "f0e90bf60df04011bdea0d228c667d2f54eb6f9f5bed53c3c9832abc0de15df1",
+      "bytes": 11129
+    },
+    {
+      "path": "src/helm/benchmark/metrics/common_metric_specs.py",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/metrics/common_metric_specs.py",
+      "sha256": "24aaa63b8a2f05d7ce60a0bed34392cce32ffbe83d3530957d41cb6b3fb5527b",
+      "bytes": 6025
+    }
+  ]
+}

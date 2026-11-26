@@ -1,0 +1,207 @@
+{
+  "authored_before_current_execution": true,
+  "unit": "Fixed concrete input/returned-reward contract check, not whole-source static verdict.",
+  "witness_expectations": [
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "counterexamples/opposite-false",
+      "contract": "correct",
+      "reward": 1.0,
+      "contract_predicate_satisfied": false,
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "counterexamples/opposite-false",
+      "contract": "missing",
+      "reward": 1.0,
+      "contract_predicate_satisfied": null,
+      "expected_witness_verdict": "unknown_missing_spec"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "counterexamples/opposite-false",
+      "contract": "omitted_equality",
+      "reward": 1.0,
+      "contract_predicate_satisfied": true,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "contract": "correct",
+      "reward": 1.0,
+      "contract_predicate_satisfied": false,
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "contract": "missing",
+      "reward": 1.0,
+      "contract_predicate_satisfied": null,
+      "expected_witness_verdict": "unknown_missing_spec"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "contract": "omitted_equality",
+      "reward": 1.0,
+      "contract_predicate_satisfied": false,
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "normal_controls/exact-true",
+      "contract": "correct",
+      "reward": 1.0,
+      "contract_predicate_satisfied": true,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "normal_controls/exact-true",
+      "contract": "missing",
+      "reward": 1.0,
+      "contract_predicate_satisfied": null,
+      "expected_witness_verdict": "unknown_missing_spec"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "version": "original",
+      "probe_id": "normal_controls/exact-true",
+      "contract": "omitted_equality",
+      "reward": 1.0,
+      "contract_predicate_satisfied": true,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "counterexamples/opposite-false",
+      "contract": "correct",
+      "reward": 0.0,
+      "contract_predicate_satisfied": false,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "counterexamples/opposite-false",
+      "contract": "missing",
+      "reward": 0.0,
+      "contract_predicate_satisfied": null,
+      "expected_witness_verdict": "unknown_missing_spec"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "counterexamples/opposite-false",
+      "contract": "omitted_equality",
+      "reward": 0.0,
+      "contract_predicate_satisfied": true,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "contract": "correct",
+      "reward": 0.0,
+      "contract_predicate_satisfied": false,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "contract": "missing",
+      "reward": 0.0,
+      "contract_predicate_satisfied": null,
+      "expected_witness_verdict": "unknown_missing_spec"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "contract": "omitted_equality",
+      "reward": 0.0,
+      "contract_predicate_satisfied": false,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "normal_controls/exact-true",
+      "contract": "correct",
+      "reward": 1.0,
+      "contract_predicate_satisfied": true,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "normal_controls/exact-true",
+      "contract": "missing",
+      "reward": 1.0,
+      "contract_predicate_satisfied": null,
+      "expected_witness_verdict": "unknown_missing_spec"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "probe_id": "normal_controls/exact-true",
+      "contract": "omitted_equality",
+      "reward": 1.0,
+      "contract_predicate_satisfied": true,
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    }
+  ],
+  "frozen_bridge_whole_source_expectations": [
+    {
+      "contract": "correct",
+      "source_id": "rg-issue-544-original",
+      "semgrep": "alarm",
+      "symbolic": "alarm"
+    },
+    {
+      "contract": "correct",
+      "source_id": "rg-pr-561-proposed-repair",
+      "semgrep": "no_alarm",
+      "symbolic": "no_alarm"
+    },
+    {
+      "contract": "missing",
+      "source_id": "rg-issue-544-original",
+      "semgrep": "unknown",
+      "symbolic": "unknown"
+    },
+    {
+      "contract": "missing",
+      "source_id": "rg-pr-561-proposed-repair",
+      "semgrep": "unknown",
+      "symbolic": "unknown"
+    },
+    {
+      "contract": "omitted_equality",
+      "source_id": "rg-issue-544-original",
+      "semgrep": "alarm",
+      "symbolic": "alarm"
+    },
+    {
+      "contract": "omitted_equality",
+      "source_id": "rg-pr-561-proposed-repair",
+      "semgrep": "no_alarm",
+      "symbolic": "no_alarm"
+    }
+  ],
+  "important": "The weak contract still has a whole-source banana violation; equal aggregate alarms cannot by themselves show loss of contract sensitivity. Projection bytes and reinstated equality diagnose the interface separately."
+}

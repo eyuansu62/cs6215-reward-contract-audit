@@ -1,0 +1,151 @@
+{
+  "method": "semgrep-ce-fixed-risky-idioms-v1",
+  "verdict": "alarm",
+  "status": "complete",
+  "errors": [],
+  "findings": [
+    {
+      "rule_id": "reward-nonfinite-exp-clamp",
+      "function": "score",
+      "span": [
+        6,
+        11,
+        6,
+        40
+      ],
+      "message": "Clamping an exponential with min(1.0, ...) can promote a nonfinite distance to full credit."
+    }
+  ],
+  "all_findings": [
+    {
+      "check_id": "reward-nonfinite-exp-clamp",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-3eshr1ef/source.py",
+      "start": {
+        "line": 6,
+        "col": 12,
+        "offset": 151
+      },
+      "end": {
+        "line": 6,
+        "col": 41,
+        "offset": 180
+      },
+      "extra": {
+        "metavars": {
+          "$D": {
+            "start": {
+              "line": 6,
+              "col": 31,
+              "offset": 170
+            },
+            "end": {
+              "line": 6,
+              "col": 39,
+              "offset": 178
+            },
+            "abstract_content": "distance",
+            "propagated_value": {
+              "svalue_start": {
+                "line": 5,
+                "col": 16,
+                "offset": 125
+              },
+              "svalue_end": {
+                "line": 5,
+                "col": 30,
+                "offset": 139
+              },
+              "svalue_abstract_content": "entry[\"other\"]"
+            }
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Clamping an exponential with min(1.0, ...) can promote a nonfinite distance to full credit.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "functions": [
+      {
+        "name": "score",
+        "source_span": [
+          1,
+          0,
+          6,
+          40
+        ],
+        "engine_span": [
+          1,
+          0,
+          6,
+          40
+        ]
+      }
+    ],
+    "return_spans": [
+      [
+        4,
+        8,
+        4,
+        18
+      ],
+      [
+        6,
+        4,
+        6,
+        40
+      ]
+    ],
+    "function_count": 1,
+    "return_count": 2,
+    "semantics_proved": false,
+    "mode": "search",
+    "source_rewritten": false,
+    "command": [
+      "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+      "-json_nodots",
+      "-j",
+      "1",
+      "-timeout",
+      "10",
+      "-lang",
+      "python",
+      "-rules",
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-3eshr1ef/coverage-rules.json",
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-3eshr1ef/source.py"
+    ],
+    "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+  },
+  "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+  "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+  "source_executed": false,
+  "source_rewritten": false,
+  "unit_id": "synthetic",
+  "contract_id": "C_COMPLEX_FINITE",
+  "source_sha256": "9055fbe05971e933abe63c7550f9673e20e7ec0224e0276ce109fd2ac5ee1485",
+  "engine": {
+    "version": "semgrep-core version: 1.183.0 (08c107344d)",
+    "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+    "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "metrics": "off"
+  },
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-json_nodots",
+    "-j",
+    "1",
+    "-timeout",
+    "10",
+    "-lang",
+    "python",
+    "-rules",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-3eshr1ef/scan-rules.json",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-3eshr1ef/source.py"
+  ],
+  "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+  "wall_seconds": 0.475674
+}

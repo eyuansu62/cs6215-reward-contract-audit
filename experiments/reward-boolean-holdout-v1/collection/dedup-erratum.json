@@ -1,0 +1,14 @@
+{
+  "affected_files": [
+    "screen_sources.py",
+    "screen_sources_phase02.py",
+    "prior-score-fingerprints.json",
+    "screening-results.json",
+    "screening-results-phase02.json",
+    "census/first-pass-metadata.json"
+  ],
+  "issue": "Initial alpha-normalization renames unbound global/builtin names as well as locals; thus it is a heuristic hash that may collapse semantically different bool/str or other global operations.",
+  "impact": "No candidate passed the canonical True/False domain gate, and these hashes did not cause an inclusion. Original phase02 files/freeze preserved.",
+  "correction": "For further dedup use ordinary AST with docs/annotations removed and separate conservative alpha-local fingerprint preserving globals/builtins and attributes. Hashes are heuristics, not proofs of semantic equivalence; any eligible collision would need source/helper-closure adjudication.",
+  "analyzer_capability_changed": false
+}

@@ -1,0 +1,98 @@
+{
+  "verdict": "alarm",
+  "active_obligations": [
+    "valid_boolean_token"
+  ],
+  "per_obligation": [
+    {
+      "obligation_id": "valid_boolean_token",
+      "verdict": "alarm",
+      "certificate": {
+        "kind": "native_boolean_obligation_path_counterexample",
+        "obligation_id": "valid_boolean_token",
+        "candidate": "__not_a_boolean_token__",
+        "candidate_class": "source/contract-derived native string or None value",
+        "trusted_reference": "True",
+        "reward": 1.0,
+        "violated_obligations": [
+          "valid_boolean_token"
+        ],
+        "argument": "This native value satisfies every supported path fact and intermediate-definedness condition and reaches the literal full reward while the active obligation is false. No scorer was executed."
+      },
+      "evidence": [
+        {
+          "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+          "required_truth": true,
+          "source_span": {
+            "line": 14,
+            "end_line": 14
+          }
+        },
+        {
+          "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+          "required_truth": true,
+          "source_span": {
+            "line": 14,
+            "end_line": 14
+          }
+        }
+      ],
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        }
+      ],
+      "unsupported_reason": null,
+      "method": "bounded-static-source-path-certificates-v1"
+    }
+  ],
+  "alarm_obligations": [
+    "valid_boolean_token"
+  ],
+  "compiled_contract": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "obligations": [
+      "valid_boolean_token"
+    ]
+  },
+  "contract_fingerprint": "f8be865879706811e5a55ce2e05fc855b0881380274ae854053f63195b276d32",
+  "input_fingerprint": "e9b75787c0b0b94774d83526e353837e1cd2406ab93a53faa2ae60e1aa5548b1",
+  "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+  "source_spans": [
+    {
+      "line": 16,
+      "end_line": 16
+    },
+    {
+      "line": 14,
+      "end_line": 14
+    },
+    {
+      "line": 14,
+      "end_line": 14
+    }
+  ],
+  "target_source_executed": false,
+  "unsupported_reason": null,
+  "method": "explicit_boolean_obligations_over_preserved_paths_v2",
+  "qualification": "Only the declared obligation is checked in each result. Unproved paths stay Unknown; bounded counterexample search does not prove absence."
+}

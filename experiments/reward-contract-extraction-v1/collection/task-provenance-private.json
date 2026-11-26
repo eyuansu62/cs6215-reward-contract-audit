@@ -1,0 +1,93 @@
+{
+  "tasks": [
+    {
+      "task_id": "T01",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "source_sha256": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76",
+      "source_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/isomorphic_strings.py",
+      "question_source_spans": [
+        [
+          16,
+          24
+        ]
+      ],
+      "question_description_sha256": "e55df5722fbc2cc9b7b640be0949b9c7e62d0eeb1c26bb80943c2db6cac5f521",
+      "question_kind": "upstream_template_preserved"
+    },
+    {
+      "task_id": "T02",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "source_sha256": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866",
+      "source_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/ransom_note.py",
+      "question_source_spans": [
+        [
+          15,
+          21
+        ]
+      ],
+      "question_description_sha256": "cdad6377f72b7095ceabd7aa1af8286dd5f2521a9b712c836dff78c68f49d1ac",
+      "question_kind": "upstream_template_preserved"
+    },
+    {
+      "task_id": "T03",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "source_sha256": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c",
+      "source_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/graphs/course_schedule.py",
+      "question_source_spans": [
+        [
+          16,
+          22
+        ]
+      ],
+      "question_description_sha256": "30954d09fb3dd16670da4a879ad0ef344c731dc0d17d2a45966564c96610efa8",
+      "question_kind": "upstream_template_preserved"
+    },
+    {
+      "task_id": "T04",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "source_sha256": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd",
+      "source_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/count_primes.py",
+      "question_source_spans": [
+        [
+          15,
+          15
+        ]
+      ],
+      "question_description_sha256": "e7cf64d0caa603b07835d8cf1e5ebb0e0cb2eb9eedd8a2256b954d3a1f778818",
+      "question_kind": "upstream_template_preserved"
+    },
+    {
+      "task_id": "T05",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "source_sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+      "source_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/number_sorting.py",
+      "question_source_spans": [
+        [
+          82,
+          82
+        ],
+        [
+          43,
+          47
+        ]
+      ],
+      "question_description_sha256": "81844bcfca27d1df4134b1aa2e22e1c9ca6245e9bb445a18b413c715148f85be",
+      "question_kind": "direct_question_fstring_reconstruction_with_named_numbers_placeholder"
+    },
+    {
+      "task_id": "T06",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "source_sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab",
+      "source_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/fraction_simplification.py",
+      "question_source_spans": [
+        [
+          12,
+          12
+        ]
+      ],
+      "question_description_sha256": "d22d5a1d01cfb9162a431169fb4614596e2e5ab4c6d1a1b6cb98b5c7f52af083",
+      "question_kind": "upstream_template_preserved"
+    }
+  ],
+  "not_extractor_input": true
+}

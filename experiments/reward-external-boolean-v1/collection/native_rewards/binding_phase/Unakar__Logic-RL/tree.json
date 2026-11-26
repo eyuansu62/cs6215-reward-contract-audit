@@ -1,0 +1,3307 @@
+{
+  "sha": "9d2c457525ec14639e85afa12d49bb16efb053a4",
+  "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/9d2c457525ec14639e85afa12d49bb16efb053a4",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bce77bf090d62695436b12909ebf03c8b5956909",
+      "size": 1305,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bce77bf090d62695436b12909ebf03c8b5956909"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "Notice.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ade439da525ac3f82936e131a1ae386f43207fd8",
+      "size": 57,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ade439da525ac3f82936e131a1ae386f43207fd8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0edf12f5d7dfb4b2180c1535e28a6a38dcb37870",
+      "size": 3359,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0edf12f5d7dfb4b2180c1535e28a6a38dcb37870"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61e1c752978413f04ea1f93102b9f0b07f032cf8",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/61e1c752978413f04ea1f93102b9f0b07f032cf8"
+    },
+    {
+      "path": "data/kk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8023fa879431c1a08c1ada3e69b2cfc323ef182a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/8023fa879431c1a08c1ada3e69b2cfc323ef182a"
+    },
+    {
+      "path": "data/kk/instruct",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bb71ae09c17d139a76261d4402610860f72cad3",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/5bb71ae09c17d139a76261d4402610860f72cad3"
+    },
+    {
+      "path": "data/kk/instruct/3ppl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a8534b26b7ac08ff613ce0a6d3e1d764d3b277b",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/3a8534b26b7ac08ff613ce0a6d3e1d764d3b277b"
+    },
+    {
+      "path": "data/kk/instruct/3ppl/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ab3c4835dcef9094f388649f40120cd11266166",
+      "size": 66947,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7ab3c4835dcef9094f388649f40120cd11266166"
+    },
+    {
+      "path": "data/kk/instruct/3ppl/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebe777a3735cc53a0086ed17850f929c8a48f944",
+      "size": 433254,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ebe777a3735cc53a0086ed17850f929c8a48f944"
+    },
+    {
+      "path": "data/kk/instruct/4ppl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5944aeba24f5a50b49506548c1a462c7d226f091",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/5944aeba24f5a50b49506548c1a462c7d226f091"
+    },
+    {
+      "path": "data/kk/instruct/4ppl/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5be5ea56e63f0586f01879767d2e30c4314dfa8e",
+      "size": 83019,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5be5ea56e63f0586f01879767d2e30c4314dfa8e"
+    },
+    {
+      "path": "data/kk/instruct/4ppl/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aba1a9aa0df6a1f404dbc3808722c14be86be995",
+      "size": 551689,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/aba1a9aa0df6a1f404dbc3808722c14be86be995"
+    },
+    {
+      "path": "data/kk/instruct/5ppl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2e21836d84b27425d356f5305e7b9e644f877c9",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/c2e21836d84b27425d356f5305e7b9e644f877c9"
+    },
+    {
+      "path": "data/kk/instruct/5ppl/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e017e13b536eb5815d5c5daf1f13af5e859cf29",
+      "size": 95138,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0e017e13b536eb5815d5c5daf1f13af5e859cf29"
+    },
+    {
+      "path": "data/kk/instruct/5ppl/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c36143bd06bef0d2d8b4243fd864d0de0eb30634",
+      "size": 666200,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c36143bd06bef0d2d8b4243fd864d0de0eb30634"
+    },
+    {
+      "path": "data/kk/instruct/6ppl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e70ca328c449820e682b96bd65a0b763f37fc563",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/e70ca328c449820e682b96bd65a0b763f37fc563"
+    },
+    {
+      "path": "data/kk/instruct/6ppl/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4517474f3ed3f1fc63a091ceecca3dede55f8cb5",
+      "size": 108381,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4517474f3ed3f1fc63a091ceecca3dede55f8cb5"
+    },
+    {
+      "path": "data/kk/instruct/6ppl/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60600e20fbe24bc18c97392c7c23a6ae152cd1fe",
+      "size": 786457,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/60600e20fbe24bc18c97392c7c23a6ae152cd1fe"
+    },
+    {
+      "path": "data/kk/instruct/7ppl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb56edcc9c732d5b419e02d8922d8c622151ef5b",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/bb56edcc9c732d5b419e02d8922d8c622151ef5b"
+    },
+    {
+      "path": "data/kk/instruct/7ppl/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "848884aed525559789b31e6f19991991f626cd22",
+      "size": 122219,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/848884aed525559789b31e6f19991991f626cd22"
+    },
+    {
+      "path": "data/kk/instruct/7ppl/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0226abd4238f2fd46954bae2da796db7bfcda7f",
+      "size": 900456,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e0226abd4238f2fd46954bae2da796db7bfcda7f"
+    },
+    {
+      "path": "docker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df405d37668ff2cae34d114b0e039432f1a0a69a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/df405d37668ff2cae34d114b0e039432f1a0a69a"
+    },
+    {
+      "path": "docker/Dockerfile.ngc.vllm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347452e521f946e6689fd56c5f8e2d163a05aaba",
+      "size": 1475,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/347452e521f946e6689fd56c5f8e2d163a05aaba"
+    },
+    {
+      "path": "docker/Dockerfile.vemlp.vllm.te",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a03d7c102efccb391a93347fbcdbfcc2c47b60de",
+      "size": 1818,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a03d7c102efccb391a93347fbcdbfcc2c47b60de"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cae7a323f0261152b5bee15c8de9f53ae242e04",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/9cae7a323f0261152b5bee15c8de9f53ae242e04"
+    },
+    {
+      "path": "docs/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bda904a9b0b29dfcf538cb52b806dd910710a4a",
+      "size": 602,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8bda904a9b0b29dfcf538cb52b806dd910710a4a"
+    },
+    {
+      "path": "docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee325d86a2bc0285b36e09a6f153b09790754b35",
+      "size": 281,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ee325d86a2bc0285b36e09a6f153b09790754b35"
+    },
+    {
+      "path": "docs/_static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f58a0a3f224ed1ce54a152424532d20dda4809b",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/2f58a0a3f224ed1ce54a152424532d20dda4809b"
+    },
+    {
+      "path": "docs/_static/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a3b61308d73eb72071eaec8c95544ab36cd3970",
+      "size": 84701,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6a3b61308d73eb72071eaec8c95544ab36cd3970"
+    },
+    {
+      "path": "docs/advance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "301b2246837ddcd084fa1dafff4be81468e39e85",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/301b2246837ddcd084fa1dafff4be81468e39e85"
+    },
+    {
+      "path": "docs/advance/dpo_extension.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc8f08ad1bdc2e924dd49743cde55267c8e82847",
+      "size": 9682,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bc8f08ad1bdc2e924dd49743cde55267c8e82847"
+    },
+    {
+      "path": "docs/advance/fsdp_extension.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7a41aa59f0a4d35312a55475cb4deb464165a6a",
+      "size": 4400,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a7a41aa59f0a4d35312a55475cb4deb464165a6a"
+    },
+    {
+      "path": "docs/advance/megatron_extension.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91d744a8a9d21af126d00014fdbbc1368d04a75c",
+      "size": 1689,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/91d744a8a9d21af126d00014fdbbc1368d04a75c"
+    },
+    {
+      "path": "docs/advance/placement.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a98caa116eef8e9d5db5f92756d755ce9d1142ce",
+      "size": 429,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a98caa116eef8e9d5db5f92756d755ce9d1142ce"
+    },
+    {
+      "path": "docs/conf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "272f973221e66ba006be82fe57734832dfd60ba5",
+      "size": 3057,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/272f973221e66ba006be82fe57734832dfd60ba5"
+    },
+    {
+      "path": "docs/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8cd80900b3f49a82bc6f40ac21260b4c400f0a6",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f8cd80900b3f49a82bc6f40ac21260b4c400f0a6"
+    },
+    {
+      "path": "docs/examples/config.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fc1906bd3a6a6f3e0c1948f30f77874c7417b3c",
+      "size": 12468,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3fc1906bd3a6a6f3e0c1948f30f77874c7417b3c"
+    },
+    {
+      "path": "docs/examples/gsm8k_example.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de694cfdf5a16ae27524ee9a79bbf72a3697e2a0",
+      "size": 5991,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/de694cfdf5a16ae27524ee9a79bbf72a3697e2a0"
+    },
+    {
+      "path": "docs/examples/ppo_code_architecture.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dbafae19e6e431241ec5a37e556454e1b4b4cc8",
+      "size": 9045,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6dbafae19e6e431241ec5a37e556454e1b4b4cc8"
+    },
+    {
+      "path": "docs/experiment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf93601b6b85e745c70847e225d0d49d7020853f",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/cf93601b6b85e745c70847e225d0d49d7020853f"
+    },
+    {
+      "path": "docs/experiment/ppo.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d73f84bf10fbff6fa82f6e49cdcc50f5aaf2b3a8",
+      "size": 3029,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d73f84bf10fbff6fa82f6e49cdcc50f5aaf2b3a8"
+    },
+    {
+      "path": "docs/faq",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ff862bc8bdf979935b652c55805e0ece825e0c4",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/6ff862bc8bdf979935b652c55805e0ece825e0c4"
+    },
+    {
+      "path": "docs/faq/faq.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40bbb07d6b6c24872ccbe5dda0e6e5ea2ce8c583",
+      "size": 799,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/40bbb07d6b6c24872ccbe5dda0e6e5ea2ce8c583"
+    },
+    {
+      "path": "docs/index.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d44e2a71da967f587cdd23610882f4f03bfdfb0f",
+      "size": 3289,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d44e2a71da967f587cdd23610882f4f03bfdfb0f"
+    },
+    {
+      "path": "docs/preparation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9a14f0bb2f445066d820f9a58386adb57c65ff4",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/a9a14f0bb2f445066d820f9a58386adb57c65ff4"
+    },
+    {
+      "path": "docs/preparation/prepare_data.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c4f644fa85e8bcf19d4d02f714a279240cf783",
+      "size": 4336,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/40c4f644fa85e8bcf19d4d02f714a279240cf783"
+    },
+    {
+      "path": "docs/preparation/reward_function.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bd2c0632230e806bc53f57b5e4f03896fe8ce3a",
+      "size": 2606,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3bd2c0632230e806bc53f57b5e4f03896fe8ce3a"
+    },
+    {
+      "path": "docs/requirements-docs.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03cfbf106943cf2204059d7e16fd52f891e231ea",
+      "size": 135,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/03cfbf106943cf2204059d7e16fd52f891e231ea"
+    },
+    {
+      "path": "docs/start",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e671e974f50b29d3922ce77871075a212b3ecfb",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0e671e974f50b29d3922ce77871075a212b3ecfb"
+    },
+    {
+      "path": "docs/start/install.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cb86078ede88c2604ca42fc4b45ca429d94d5ec",
+      "size": 4914,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9cb86078ede88c2604ca42fc4b45ca429d94d5ec"
+    },
+    {
+      "path": "docs/start/quickstart.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "881839af7536f5ca26027404ad5df938414dd5e5",
+      "size": 7904,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/881839af7536f5ca26027404ad5df938414dd5e5"
+    },
+    {
+      "path": "docs/workers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ff80a3b1b4276f367a4bd0d7a599888bb483ee5",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/1ff80a3b1b4276f367a4bd0d7a599888bb483ee5"
+    },
+    {
+      "path": "docs/workers/fsdp_workers.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ea0e748cff340406bae22879fac1d5b02df9b4d",
+      "size": 4168,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3ea0e748cff340406bae22879fac1d5b02df9b4d"
+    },
+    {
+      "path": "docs/workers/megatron_workers.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cdccd997262ddd07997e00ee71507e84fd3328d",
+      "size": 7478,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8cdccd997262ddd07997e00ee71507e84fd3328d"
+    },
+    {
+      "path": "docs/workers/ray_trainer.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0bb958c728cde5cca679100ca69539c65ea9688",
+      "size": 12037,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d0bb958c728cde5cca679100ca69539c65ea9688"
+    },
+    {
+      "path": "eval_kk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0045903d3c013c64a3538209dbe7c5d049a0b63f",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0045903d3c013c64a3538209dbe7c5d049a0b63f"
+    },
+    {
+      "path": "eval_kk/compute_score.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8b5b54396479daf69e28e36d1369937b4156b96",
+      "size": 4382,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c8b5b54396479daf69e28e36d1369937b4156b96"
+    },
+    {
+      "path": "eval_kk/eval.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11f5136c7af3066e3f5da7538bf254df198f1912",
+      "size": 640,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/11f5136c7af3066e3f5da7538bf254df198f1912"
+    },
+    {
+      "path": "eval_kk/kk_processor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "626b265aad03616bc633e63fdf59ddd7eb489ccf",
+      "size": 8494,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/626b265aad03616bc633e63fdf59ddd7eb489ccf"
+    },
+    {
+      "path": "eval_kk/kk_prompt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb9e2d888d18b09c63e87b6c2d50eec97d813fbe",
+      "size": 2240,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/cb9e2d888d18b09c63e87b6c2d50eec97d813fbe"
+    },
+    {
+      "path": "eval_kk/main_eval_instruct.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "309e2c78f3ab74a0a82107fd302b6de55b31c537",
+      "size": 9294,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/309e2c78f3ab74a0a82107fd302b6de55b31c537"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad90c5c1b7691a60c276a1a0b81494d0608bc436",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/ad90c5c1b7691a60c276a1a0b81494d0608bc436"
+    },
+    {
+      "path": "examples/data_preprocess",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a019c956afb6ef93d22103042502954243758e23",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/a019c956afb6ef93d22103042502954243758e23"
+    },
+    {
+      "path": "examples/data_preprocess/arth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0bfffed70bff8e5b7595f1fadb0dbc69db5e477",
+      "size": 5561,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b0bfffed70bff8e5b7595f1fadb0dbc69db5e477"
+    },
+    {
+      "path": "examples/data_preprocess/countdown.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "497ad630ec2d7d2ce217d55709314438e814ec78",
+      "size": 5381,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/497ad630ec2d7d2ce217d55709314438e814ec78"
+    },
+    {
+      "path": "examples/data_preprocess/full_hh_rlhf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07e0884cb916cc5327d39955fcbbb76a596d60c3",
+      "size": 4962,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/07e0884cb916cc5327d39955fcbbb76a596d60c3"
+    },
+    {
+      "path": "examples/data_preprocess/gsm8k.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d666845a972fa23d75d9826d4ffbbed31d448864",
+      "size": 2986,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d666845a972fa23d75d9826d4ffbbed31d448864"
+    },
+    {
+      "path": "examples/data_preprocess/hellaswag.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c8e8f55916ffcaa4c8fbedb98c3c710a504cb2",
+      "size": 3358,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/39c8e8f55916ffcaa4c8fbedb98c3c710a504cb2"
+    },
+    {
+      "path": "examples/data_preprocess/kk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9746a72dc8b304e236b8151802fd6b113ef3f93c",
+      "size": 4381,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9746a72dc8b304e236b8151802fd6b113ef3f93c"
+    },
+    {
+      "path": "examples/data_preprocess/math_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6443431dc6fff020110d5670f9e1ff88f55d63d8",
+      "size": 2776,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6443431dc6fff020110d5670f9e1ff88f55d63d8"
+    },
+    {
+      "path": "examples/data_preprocess/multiply.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c6e349b5a4ee9b40f1c140b6ae896216ef41a2c",
+      "size": 5172,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2c6e349b5a4ee9b40f1c140b6ae896216ef41a2c"
+    },
+    {
+      "path": "examples/generation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ce50da86d5ec365c91b04b742d02185d4b6c70c",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/1ce50da86d5ec365c91b04b742d02185d4b6c70c"
+    },
+    {
+      "path": "examples/generation/run_deepseek_v2_lite_math.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "216b33d4ce9ad8f168bd5c2c0c03598b52acd359",
+      "size": 583,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/216b33d4ce9ad8f168bd5c2c0c03598b52acd359"
+    },
+    {
+      "path": "examples/grpo_trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99e3c1fef8b243491192e63f2b66c0fde1995542",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/99e3c1fef8b243491192e63f2b66c0fde1995542"
+    },
+    {
+      "path": "examples/grpo_trainer/run_deepseek7b_llm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1db795105009812a9c08301e7b02976d7828fa57",
+      "size": 1732,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1db795105009812a9c08301e7b02976d7828fa57"
+    },
+    {
+      "path": "examples/grpo_trainer/run_deepseek7b_llm_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adec112e505ae1da2681e1218953771e057277d0",
+      "size": 1681,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/adec112e505ae1da2681e1218953771e057277d0"
+    },
+    {
+      "path": "examples/grpo_trainer/run_qwen2-7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc293365d5dacb546e9395d9331b332652ab375b",
+      "size": 1755,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/dc293365d5dacb546e9395d9331b332652ab375b"
+    },
+    {
+      "path": "examples/grpo_trainer/run_qwen2-7b_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09eac41dff8d76ac0fe5ea7a318da65eee79d0e4",
+      "size": 1738,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/09eac41dff8d76ac0fe5ea7a318da65eee79d0e4"
+    },
+    {
+      "path": "examples/ppo_trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9d109b6b313ddb66932e65ad1d698625def639a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/b9d109b6b313ddb66932e65ad1d698625def639a"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek7b_llm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4ebdd8ae79c8e48366d18c005ee840eb9e5e3bd",
+      "size": 1789,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d4ebdd8ae79c8e48366d18c005ee840eb9e5e3bd"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek7b_llm_sp2.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42b69b4c232dd38ce68c082fd727c2ddbb7c4cd3",
+      "size": 1994,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/42b69b4c232dd38ce68c082fd727c2ddbb7c4cd3"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek_full_hh_rlhf.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd2c0bc8a5f7729583c1c68e30ff6a9884f29175",
+      "size": 1744,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bd2c0bc8a5f7729583c1c68e30ff6a9884f29175"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek_math_gsm8k_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c342d5262bee4c4ad674ec8a52248b858d5516be",
+      "size": 1667,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c342d5262bee4c4ad674ec8a52248b858d5516be"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f0f51e716890d7e811bc880f5fbd7d545f1e0b0",
+      "size": 1410,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1f0f51e716890d7e811bc880f5fbd7d545f1e0b0"
+    },
+    {
+      "path": "examples/ppo_trainer/run_gemma.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fb455a64dd9b5ae3a971ee89effd0095f4ac9a9",
+      "size": 1772,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9fb455a64dd9b5ae3a971ee89effd0095f4ac9a9"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e6bb16c2bc169675f50335aeb251e03507a08e7",
+      "size": 2054,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8e6bb16c2bc169675f50335aeb251e03507a08e7"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_rm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc64d36b39813f418c5deaef2ddeb85ae851baec",
+      "size": 2588,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/fc64d36b39813f418c5deaef2ddeb85ae851baec"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_rm_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd1e73270b398c135819f684782b54bc786e998f",
+      "size": 2656,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/dd1e73270b398c135819f684782b54bc786e998f"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c00b24c2c632dd2dd09e651cce1a4e65c093301",
+      "size": 2262,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0c00b24c2c632dd2dd09e651cce1a4e65c093301"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2.5-32b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f3bdc3a449ecb53fe113df8f4d0063ab23de6df",
+      "size": 2133,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1f3bdc3a449ecb53fe113df8f4d0063ab23de6df"
+    },
+    {
+      "path": "examples/ppo_trainer/verl_getting_started.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afe9ca3529d66b3c23556d4e0753e4a0c3b95b96",
+      "size": 254129,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/afe9ca3529d66b3c23556d4e0753e4a0c3b95b96"
+    },
+    {
+      "path": "examples/ray",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a59a05e6728753fdc5b6dae17744e8ff082bd053",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/a59a05e6728753fdc5b6dae17744e8ff082bd053"
+    },
+    {
+      "path": "examples/ray/tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37784f6f9528be290cfbb9a685c78e4ea5a6d294",
+      "size": 31455,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/37784f6f9528be290cfbb9a685c78e4ea5a6d294"
+    },
+    {
+      "path": "examples/sft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae0912a8d3df00da151058371806983d70949045",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/ae0912a8d3df00da151058371806983d70949045"
+    },
+    {
+      "path": "examples/sft/gsm8k",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e6c156abb2cf4f8c3657185dbac09810a12afee",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/6e6c156abb2cf4f8c3657185dbac09810a12afee"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_deepseek_6b7.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e4d54c6343ee731647ab9e76a9d95eb3afeed66",
+      "size": 729,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8e4d54c6343ee731647ab9e76a9d95eb3afeed66"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_gemma_2b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec85c09a23dea7c6e825875366dd81652de6400",
+      "size": 924,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7ec85c09a23dea7c6e825875366dd81652de6400"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_gemma_7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c357926a2c80ea7ce40f11eb249a654c288cd15",
+      "size": 685,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9c357926a2c80ea7ce40f11eb249a654c288cd15"
+    },
+    {
+      "path": "examples/split_placement",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfc57ea3f322f95bebf0dba266a20f3141835f47",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/bfc57ea3f322f95bebf0dba266a20f3141835f47"
+    },
+    {
+      "path": "examples/split_placement/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5e4ffde241d815ff2b809ae2af3fbcbd350b2f2",
+      "size": 2686,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a5e4ffde241d815ff2b809ae2af3fbcbd350b2f2"
+    },
+    {
+      "path": "examples/split_placement/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ef7f07f7d8ad9cefb8f5dd88dfe96106e50f7fe",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/6ef7f07f7d8ad9cefb8f5dd88dfe96106e50f7fe"
+    },
+    {
+      "path": "examples/split_placement/config/ppo_trainer_split.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7984c45a40a8b2afae259ba4b932f0fd7d6200a0",
+      "size": 3956,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7984c45a40a8b2afae259ba4b932f0fd7d6200a0"
+    },
+    {
+      "path": "examples/split_placement/main_ppo_split.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "180078a6a2e858eb24a1b922b3e187d0b4b0079e",
+      "size": 7775,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/180078a6a2e858eb24a1b922b3e187d0b4b0079e"
+    },
+    {
+      "path": "examples/split_placement/run_deepseek7b_llm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2db960a3afb10be776d7f69a6a83bd2cd0cfde1",
+      "size": 1683,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a2db960a3afb10be776d7f69a6a83bd2cd0cfde1"
+    },
+    {
+      "path": "examples/split_placement/split_monkey_patch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e09377beff5b906b9f7ac3d630c095ad74099ea",
+      "size": 7737,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5e09377beff5b906b9f7ac3d630c095ad74099ea"
+    },
+    {
+      "path": "main_grpo.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d33d8a74a3a1043066a6c793b23b0543ff7b6ab",
+      "size": 1764,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7d33d8a74a3a1043066a6c793b23b0543ff7b6ab"
+    },
+    {
+      "path": "math_eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afd42b9310d7c56aa55c56a67429c60323ed42ba",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/afd42b9310d7c56aa55c56a67429c60323ed42ba"
+    },
+    {
+      "path": "math_eval/aime_2021_2024.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "378067b525e26365e362035fd65fe7f11dd7575a",
+      "size": 48916,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/378067b525e26365e362035fd65fe7f11dd7575a"
+    },
+    {
+      "path": "math_eval/amc.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f4dd65bae0a558f7ed1808ccd86c211301a2eba",
+      "size": 35383,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1f4dd65bae0a558f7ed1808ccd86c211301a2eba"
+    },
+    {
+      "path": "math_eval/auto_test_aime.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f2a8983708005df0b3e5104fae5b58514ed9f2e",
+      "size": 2130,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3f2a8983708005df0b3e5104fae5b58514ed9f2e"
+    },
+    {
+      "path": "math_eval/test_aime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec986711d491bea0cced6a4f068ba0c5480636bf",
+      "size": 4468,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ec986711d491bea0cced6a4f068ba0c5480636bf"
+    },
+    {
+      "path": "math_eval/test_aime.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06417f519489727c802166ab94f28f80aadb1522",
+      "size": 1963,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/06417f519489727c802166ab94f28f80aadb1522"
+    },
+    {
+      "path": "math_eval/test_amc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f7d1c11b1462a701ce5393240cef276813b2b2d",
+      "size": 4130,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9f7d1c11b1462a701ce5393240cef276813b2b2d"
+    },
+    {
+      "path": "math_eval/test_amc.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd91218ad5cf1270dc154ac7ec0aa5ac286bd92e",
+      "size": 1951,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bd91218ad5cf1270dc154ac7ec0aa5ac286bd92e"
+    },
+    {
+      "path": "patches",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac01711a93a55e8406d9d8bef1aba0437f69fece",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/ac01711a93a55e8406d9d8bef1aba0437f69fece"
+    },
+    {
+      "path": "patches/megatron_v4.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17bceecc1583dd36f4c221530039c5b47404ff83",
+      "size": 23947,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/17bceecc1583dd36f4c221530039c5b47404ff83"
+    },
+    {
+      "path": "pics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ee69b23f942a7599f87629be8351013bf42b17a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0ee69b23f942a7599f87629be8351013bf42b17a"
+    },
+    {
+      "path": "pics/response.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87225a08e8712eae3ff9f91321d6ee5e5f5329a6",
+      "size": 1511557,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/87225a08e8712eae3ff9f91321d6ee5e5f5329a6"
+    },
+    {
+      "path": "pics/response_mean_length.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d331452970584f391d2f8b569b993e6ba66551b0",
+      "size": 219750,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d331452970584f391d2f8b569b993e6ba66551b0"
+    },
+    {
+      "path": "pics/response_mean_length_v2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b15a1c2fc5f80e07724a1c2b93f4c1c6287a135c",
+      "size": 34098,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b15a1c2fc5f80e07724a1c2b93f4c1c6287a135c"
+    },
+    {
+      "path": "pics/teaser.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b8177679c32f2747dd99c2d94d7715fa154a887",
+      "size": 303304,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9b8177679c32f2747dd99c2d94d7715fa154a887"
+    },
+    {
+      "path": "pics/test_score_plot_v1.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f5a7a189d561a35b3a9b2499d7024147d02c2e7",
+      "size": 22572,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2f5a7a189d561a35b3a9b2499d7024147d02c2e7"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d361848f54f7fc2da0b6cfafedfadc42e91de7b",
+      "size": 2219,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3d361848f54f7fc2da0b6cfafedfadc42e91de7b"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1221e13fa3ad682b36539cd19580fa02e546a2b",
+      "size": 135,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a1221e13fa3ad682b36539cd19580fa02e546a2b"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8730d458d71a4a7fecf544246945fd385ce6141d",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/8730d458d71a4a7fecf544246945fd385ce6141d"
+    },
+    {
+      "path": "scripts/curriculum.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd262b14b4f619bab95d3d56d550df7ee72c380e",
+      "size": 2574,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bd262b14b4f619bab95d3d56d550df7ee72c380e"
+    },
+    {
+      "path": "scripts/format.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "311aec7411a5a1144f4030442fb14396291dc1b3",
+      "size": 112,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/311aec7411a5a1144f4030442fb14396291dc1b3"
+    },
+    {
+      "path": "scripts/train_grpo_4gpu_7Binstruct.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90b4579ed13f4219fa3db4c05ebea508ed110e12",
+      "size": 1800,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/90b4579ed13f4219fa3db4c05ebea508ed110e12"
+    },
+    {
+      "path": "scripts/train_ppo_3B_4gpu.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b9e7889a4be471894cdf0b5d1d29b1715399487",
+      "size": 1230,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8b9e7889a4be471894cdf0b5d1d29b1715399487"
+    },
+    {
+      "path": "scripts/train_ppo_7B_4gpu.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "381c2fdf138c15054cf379182f2d546a35207724",
+      "size": 1685,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/381c2fdf138c15054cf379182f2d546a35207724"
+    },
+    {
+      "path": "scripts/train_reinforce_plus_4gpu_7Binstruct.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb84d3b07eda84b05260e479d4d31809e5e30a3",
+      "size": 1708,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/adb84d3b07eda84b05260e479d4d31809e5e30a3"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9aab68a3e8959317a9fbec484b9623912e633250",
+      "size": 1917,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9aab68a3e8959317a9fbec484b9623912e633250"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dca93baa06baa83694be199f20586eba57e1cb2f",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/dca93baa06baa83694be199f20586eba57e1cb2f"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a7aadbc9d946451bd151abc3e306357eda8140a",
+      "size": 599,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7a7aadbc9d946451bd151abc3e306357eda8140a"
+    },
+    {
+      "path": "tests/e2e",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bcb6ff1fcb672f1effc4947a2d6ea9c3a42f84e5",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/bcb6ff1fcb672f1effc4947a2d6ea9c3a42f84e5"
+    },
+    {
+      "path": "tests/e2e/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9947cb0d98db7ec10cc4f4fdc23c6acfb91c5e46",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/9947cb0d98db7ec10cc4f4fdc23c6acfb91c5e46"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1ae4caf6bab21ee76fb3ec57bc2e6a24650fd07",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/d1ae4caf6bab21ee76fb3ec57bc2e6a24650fd07"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data/create_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e023a29175b1e7a4f0cb09e54da63fc1263b8e77",
+      "size": 1774,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e023a29175b1e7a4f0cb09e54da63fc1263b8e77"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0729dc3d6ea7662a837d0da2b92cac3731a1b69",
+      "size": 3150,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d0729dc3d6ea7662a837d0da2b92cac3731a1b69"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a03a61a8142263c6e43e0fbf843dce40c5a3a68",
+      "size": 6225,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0a03a61a8142263c6e43e0fbf843dce40c5a3a68"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51d883a5afb3b25528a49428e9020b88fadbe52f",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/51d883a5afb3b25528a49428e9020b88fadbe52f"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87944c51fc10669f6486b5e0ca235a460857a095",
+      "size": 674,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/87944c51fc10669f6486b5e0ca235a460857a095"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/create_model_tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a3135f0c5fb2cf24aed917d82eab1c2bdbd0864",
+      "size": 2608,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9a3135f0c5fb2cf24aed917d82eab1c2bdbd0864"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/generation_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578d3750579ed4d19b57fd54c1297897f36d9e4d",
+      "size": 111,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/578d3750579ed4d19b57fd54c1297897f36d9e4d"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/model.safetensors",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "509e6e97c5040755b5ce0af0dbe4981ee6fefb0a",
+      "size": 1595672,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/509e6e97c5040755b5ce0af0dbe4981ee6fefb0a"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/tokenizer_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d01bf75f1db77250240841c306ddabece3dce3ec",
+      "size": 645,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d01bf75f1db77250240841c306ddabece3dce3ec"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b95fe958243736d9497f633b495b39974b3d4ee",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0b95fe958243736d9497f633b495b39974b3d4ee"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9b3f9e2e3c5bfc5cfd6984fe5a102cbd74eefcf",
+      "size": 1299,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a9b3f9e2e3c5bfc5cfd6984fe5a102cbd74eefcf"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c4b0c2a205d0a6d3f6f9136c2a843b32de751d0",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0c4b0c2a205d0a6d3f6f9136c2a843b32de751d0"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl/config/ray_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7618646deb16f034c2b39fa2b2070188aeee5054",
+      "size": 4922,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7618646deb16f034c2b39fa2b2070188aeee5054"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl/main_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18fdd457a9c447d722818042af0bd23823c243c7",
+      "size": 6040,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/18fdd457a9c447d722818042af0bd23823c243c7"
+    },
+    {
+      "path": "tests/e2e/check_results.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c12e2493e1ddb0976d968f0b9300ee90d4794c1d",
+      "size": 1651,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c12e2493e1ddb0976d968f0b9300ee90d4794c1d"
+    },
+    {
+      "path": "tests/e2e/envs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e75d57051b23f0bbe5f32fe7c3b0aa215741d06",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0e75d57051b23f0bbe5f32fe7c3b0aa215741d06"
+    },
+    {
+      "path": "tests/e2e/envs/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d39147942f250ca04a95cb0a9b971f271762f20",
+      "size": 677,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7d39147942f250ca04a95cb0a9b971f271762f20"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4a067a225015582853248b722b1fa4471b4dfbe",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/d4a067a225015582853248b722b1fa4471b4dfbe"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e3aa76da5b8d6cc870a366c5444d0c2e4e3f3ba",
+      "size": 905,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3e3aa76da5b8d6cc870a366c5444d0c2e4e3f3ba"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion/task.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7322027c78b2f083490f4571687147437ed32dec",
+      "size": 6354,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7322027c78b2f083490f4571687147437ed32dec"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8d94ee3461d7350e0a471f09b77d907bcfe543",
+      "size": 5702,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1b8d94ee3461d7350e0a471f09b77d907bcfe543"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_function_rm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459fbdb7baa1bff17cc686231f501440fc3aa874",
+      "size": 1794,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/459fbdb7baa1bff17cc686231f501440fc3aa874"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_function_rm_no_rmpad.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5250b813333a19d8f0fd406d9d6fbec9054ef355",
+      "size": 1834,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5250b813333a19d8f0fd406d9d6fbec9054ef355"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7ef53ef2c74a8b1557d975be6bc74ba653c5bc6",
+      "size": 2190,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b7ef53ef2c74a8b1557d975be6bc74ba653c5bc6"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_no_rmpad.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd06c2f8e0bdb7197e4dd7ce1042e70485518848",
+      "size": 2193,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/cd06c2f8e0bdb7197e4dd7ce1042e70485518848"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e50a95fc4f76bc37fd7f826e394de9b903efe61d",
+      "size": 2565,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e50a95fc4f76bc37fd7f826e394de9b903efe61d"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_ulysses.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c3c2ad3c500c10dba45e8787a3e976f4678416",
+      "size": 2402,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/18c3c2ad3c500c10dba45e8787a3e976f4678416"
+    },
+    {
+      "path": "tests/e2e/run_ray_trainer.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51d18fcc03cdb42a0d99c79109e792d42a1c5f2d",
+      "size": 559,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/51d18fcc03cdb42a0d99c79109e792d42a1c5f2d"
+    },
+    {
+      "path": "tests/e2e/run_ray_trainer_rmpad.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00272a9dee3167dbf670bccc3779ccb43bb9d68a",
+      "size": 598,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/00272a9dee3167dbf670bccc3779ccb43bb9d68a"
+    },
+    {
+      "path": "tests/gpu_utility",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d53cfd419df1aae1e12f75fe0230744d6128dc9",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/5d53cfd419df1aae1e12f75fe0230744d6128dc9"
+    },
+    {
+      "path": "tests/gpu_utility/test_memory_buffers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0116c8be023274ab9bf1e3376b97b4a3163a6920",
+      "size": 2641,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0116c8be023274ab9bf1e3376b97b4a3163a6920"
+    },
+    {
+      "path": "tests/gpu_utility/test_ops.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7663cfd2e9fd828650fcb339c695739ba6c9de8",
+      "size": 1765,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b7663cfd2e9fd828650fcb339c695739ba6c9de8"
+    },
+    {
+      "path": "tests/gpu_utility/test_torch_functional.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "292be4de9ea0a810b2c9179142f9247fca1de947",
+      "size": 3521,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/292be4de9ea0a810b2c9179142f9247fca1de947"
+    },
+    {
+      "path": "tests/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4836899abf8565ecb7a9f4d5799bbf355868d9e",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f4836899abf8565ecb7a9f4d5799bbf355868d9e"
+    },
+    {
+      "path": "tests/model/test_transformer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd7fcff14b825b1afa776466a37757bc884d787",
+      "size": 7485,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1dd7fcff14b825b1afa776466a37757bc884d787"
+    },
+    {
+      "path": "tests/model/test_transformers_ulysses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c800abdd9a3a04a8ef694823ac25196d3073a16",
+      "size": 10699,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5c800abdd9a3a04a8ef694823ac25196d3073a16"
+    },
+    {
+      "path": "tests/ray",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1585f58e12ce8c31a1abbe5ad3d67dd6bc45e6cb",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/1585f58e12ce8c31a1abbe5ad3d67dd6bc45e6cb"
+    },
+    {
+      "path": "tests/ray/check_worker_alive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bfba172f72975f66c817ec46be7bf06d5c5f225",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/4bfba172f72975f66c817ec46be7bf06d5c5f225"
+    },
+    {
+      "path": "tests/ray/check_worker_alive/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcebbfe20b850a4f10c6c123dd05f0f676235332",
+      "size": 1852,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/fcebbfe20b850a4f10c6c123dd05f0f676235332"
+    },
+    {
+      "path": "tests/ray/detached_worker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55d28b9134cb87870e2fe3a508fdc98a22c8beb1",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/55d28b9134cb87870e2fe3a508fdc98a22c8beb1"
+    },
+    {
+      "path": "tests/ray/detached_worker/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06c4c6143e01d071458f7416033872d41d71031",
+      "size": 242,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b06c4c6143e01d071458f7416033872d41d71031"
+    },
+    {
+      "path": "tests/ray/detached_worker/client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1773fffe702d447ebc39c073c5744516da3ca12d",
+      "size": 2077,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1773fffe702d447ebc39c073c5744516da3ca12d"
+    },
+    {
+      "path": "tests/ray/detached_worker/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c6387933262694bf3534066b4310fda0a9fea3",
+      "size": 93,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a3c6387933262694bf3534066b4310fda0a9fea3"
+    },
+    {
+      "path": "tests/ray/detached_worker/server.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2108f1ebd5d8946fe5f30f44567f6e8e847403a4",
+      "size": 6590,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2108f1ebd5d8946fe5f30f44567f6e8e847403a4"
+    },
+    {
+      "path": "tests/ray/test_check_worker_alive.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53b7f2aabcc4cae40f997b18371a3f888a9e1882",
+      "size": 1550,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/53b7f2aabcc4cae40f997b18371a3f888a9e1882"
+    },
+    {
+      "path": "tests/ray/test_colocated_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b859b4b2ea596111976bcbb1e7be4c29d7cfe1",
+      "size": 2750,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/96b859b4b2ea596111976bcbb1e7be4c29d7cfe1"
+    },
+    {
+      "path": "tests/ray/test_data_transfer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a17affd3092acbf17b113b9c593902053a84208a",
+      "size": 3365,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a17affd3092acbf17b113b9c593902053a84208a"
+    },
+    {
+      "path": "tests/ray/test_driverfunc_to_worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea253fd362b7d6b62d25ef7e05249f542d25433d",
+      "size": 2433,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ea253fd362b7d6b62d25ef7e05249f542d25433d"
+    },
+    {
+      "path": "tests/ray/test_high_level_scheduling_api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d83206e5e7c90ab6f299827333b759198a79dd2",
+      "size": 3724,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2d83206e5e7c90ab6f299827333b759198a79dd2"
+    },
+    {
+      "path": "tests/ray/test_ray_local_envs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63102d0c673ab0af63471163df14fe4eda14ba20",
+      "size": 1819,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/63102d0c673ab0af63471163df14fe4eda14ba20"
+    },
+    {
+      "path": "tests/ray/test_rvdz.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eec1d72c47a864efbd3409aefc9be3a687153d6",
+      "size": 1576,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9eec1d72c47a864efbd3409aefc9be3a687153d6"
+    },
+    {
+      "path": "tests/ray/test_worker_group_basics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4b633969ffa7eb994911ad50e66cfd151c460e7",
+      "size": 4051,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b4b633969ffa7eb994911ad50e66cfd151c460e7"
+    },
+    {
+      "path": "tests/ray/test_worker_group_torch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13508ed309204a2c808082253dc65fd6957a6979",
+      "size": 3697,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/13508ed309204a2c808082253dc65fd6957a6979"
+    },
+    {
+      "path": "tests/rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81f5fabc863574d8cc34fc040b2de5a9dbd22a75",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/81f5fabc863574d8cc34fc040b2de5a9dbd22a75"
+    },
+    {
+      "path": "tests/rollout/run_fsdp_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9e165a9fa59b6343696c6307821992711fd8c57",
+      "size": 5983,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d9e165a9fa59b6343696c6307821992711fd8c57"
+    },
+    {
+      "path": "tests/rollout/test_vllm_hf_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e956e03a32170778b266c79675efb1e802b143",
+      "size": 6078,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/64e956e03a32170778b266c79675efb1e802b143"
+    },
+    {
+      "path": "tests/sanity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03b30583579d88493d296358300c05e111f6efc1",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/03b30583579d88493d296358300c05e111f6efc1"
+    },
+    {
+      "path": "tests/sanity/check_license.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7ef2cec612d6717110d75dc8521a08ebb91c06f",
+      "size": 1300,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d7ef2cec612d6717110d75dc8521a08ebb91c06f"
+    },
+    {
+      "path": "tests/sanity/test_import.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2adf63a15ef60f0220399008dde6a9a33aeacaa8",
+      "size": 784,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2adf63a15ef60f0220399008dde6a9a33aeacaa8"
+    },
+    {
+      "path": "tests/utility",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76553a8a455fd2ed733ed764b377be6a4c210e23",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/76553a8a455fd2ed733ed764b377be6a4c210e23"
+    },
+    {
+      "path": "tests/utility/test_tensor_dict_utilities.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c952d5a99adae4897e49ef4c5822d555b3ecda3d",
+      "size": 11529,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c952d5a99adae4897e49ef4c5822d555b3ecda3d"
+    },
+    {
+      "path": "tests/verl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c508506f8676012d0774aa61120e95e146b20d0",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/6c508506f8676012d0774aa61120e95e146b20d0"
+    },
+    {
+      "path": "tests/verl/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41541077c2998bcde239addb35d2c4e5c14d8d00",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/41541077c2998bcde239addb35d2c4e5c14d8d00"
+    },
+    {
+      "path": "tests/verl/utils/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc5a3f8422c0921c4f5cb8ba929cee36c76d827a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/fc5a3f8422c0921c4f5cb8ba929cee36c76d827a"
+    },
+    {
+      "path": "tests/verl/utils/dataset/test_rl_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d3bba599f0533973fa958cd397a918939836042",
+      "size": 1999,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9d3bba599f0533973fa958cd397a918939836042"
+    },
+    {
+      "path": "tests/verl/utils/dataset/test_rm_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f40d4ac0619c3debfec73aeeda7c95c869cc3753",
+      "size": 1420,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/f40d4ac0619c3debfec73aeeda7c95c869cc3753"
+    },
+    {
+      "path": "tests/verl/utils/dataset/test_sft_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883422528358c29b0ef3f542f84974652714be50",
+      "size": 2287,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/883422528358c29b0ef3f542f84974652714be50"
+    },
+    {
+      "path": "verl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2b9ca77c8042746944e90a21774c2c11c15dc16",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f2b9ca77c8042746944e90a21774c2c11c15dc16"
+    },
+    {
+      "path": "verl/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f068717761543cde8dd59ad08b42465160893bb3",
+      "size": 927,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/f068717761543cde8dd59ad08b42465160893bb3"
+    },
+    {
+      "path": "verl/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f44da4ac9245b642d60f02c9dc37d072f64df7b8",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f44da4ac9245b642d60f02c9dc37d072f64df7b8"
+    },
+    {
+      "path": "verl/models/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "677b92f3871aa2f76a7f5bd8c07d1050bab14564",
+      "size": 1744,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/677b92f3871aa2f76a7f5bd8c07d1050bab14564"
+    },
+    {
+      "path": "verl/models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/llama",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "101ea314193b076d6e2206d2ae83dfbf7f78b1f6",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/101ea314193b076d6e2206d2ae83dfbf7f78b1f6"
+    },
+    {
+      "path": "verl/models/llama/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/llama/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "885286ef02b5d597d50a2802b475c140f19b41e7",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/885286ef02b5d597d50a2802b475c140f19b41e7"
+    },
+    {
+      "path": "verl/models/llama/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b188b3ee62cdfb978fc482984b423ce12e40a962",
+      "size": 944,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b188b3ee62cdfb978fc482984b423ce12e40a962"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3ab9b4fd0c139d4bfb3e456d3ef69e919a81012",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/e3ab9b4fd0c139d4bfb3e456d3ef69e919a81012"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00fb0a9c668be28b4e13abb9a24e42bd7498d088",
+      "size": 19665,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/00fb0a9c668be28b4e13abb9a24e42bd7498d088"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0764b6fe5020dc8ab3f69d57af9910e267aab52d",
+      "size": 18189,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0764b6fe5020dc8ab3f69d57af9910e267aab52d"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "826fc42479545cbbbe2d2ccbf893b23deb98bf5d",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/826fc42479545cbbbe2d2ccbf893b23deb98bf5d"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3761bae7db33c29c66534b9ae4f1d8ec8f63b829",
+      "size": 838,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3761bae7db33c29c66534b9ae4f1d8ec8f63b829"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f14653fca4ade888f5ee08e32aa57711c1cf5e73",
+      "size": 20129,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/f14653fca4ade888f5ee08e32aa57711c1cf5e73"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_decoder.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93050a37fefb35d8377a1593f0ea3a4e23938a27",
+      "size": 6036,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/93050a37fefb35d8377a1593f0ea3a4e23938a27"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_linear.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe5cf4e65e4bdd02ebc64ed8f85943b2f6f3a5f",
+      "size": 2787,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bfe5cf4e65e4bdd02ebc64ed8f85943b2f6f3a5f"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_mlp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21ad9b16a642655dd593ce4d1e5fafb31d81c435",
+      "size": 3394,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/21ad9b16a642655dd593ce4d1e5fafb31d81c435"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7027036bf48d47a7f983226e9308336f85ad0461",
+      "size": 1860,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7027036bf48d47a7f983226e9308336f85ad0461"
+    },
+    {
+      "path": "verl/models/llama/megatron/modeling_llama_megatron.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c693f33c5872e341368aad4ee4b0f2b99ed5f5cd",
+      "size": 29656,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c693f33c5872e341368aad4ee4b0f2b99ed5f5cd"
+    },
+    {
+      "path": "verl/models/registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ddbd4493d3287511fcaca1c215a22d8930b1a1",
+      "size": 2535,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/55ddbd4493d3287511fcaca1c215a22d8930b1a1"
+    },
+    {
+      "path": "verl/models/transformers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e42678e1a5037326fda83d28b6ca6f2f9e366514",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/e42678e1a5037326fda83d28b6ca6f2f9e366514"
+    },
+    {
+      "path": "verl/models/transformers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/transformers/llama.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e8a5b1906474435c235320d119dd1a7f9c61fa5",
+      "size": 6759,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4e8a5b1906474435c235320d119dd1a7f9c61fa5"
+    },
+    {
+      "path": "verl/models/transformers/monkey_patch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a11148b4d0ed565d5a9a5b43babe47789a9ce726",
+      "size": 2884,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a11148b4d0ed565d5a9a5b43babe47789a9ce726"
+    },
+    {
+      "path": "verl/models/transformers/qwen2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b267b8436b9e70cd9ea32f046dfdab71a4ce7565",
+      "size": 6144,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b267b8436b9e70cd9ea32f046dfdab71a4ce7565"
+    },
+    {
+      "path": "verl/models/weight_loader_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17f0c5cae957d6bd665fd0f9dcdc84c1206adfa8",
+      "size": 1137,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/17f0c5cae957d6bd665fd0f9dcdc84c1206adfa8"
+    },
+    {
+      "path": "verl/protocol.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "803da36643a70a69f08541d74e2782ad72db32a9",
+      "size": 24417,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/803da36643a70a69f08541d74e2782ad72db32a9"
+    },
+    {
+      "path": "verl/single_controller",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b11d1cc78ed7d2da96cd109bbbff767766f2ff87",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/b11d1cc78ed7d2da96cd109bbbff767766f2ff87"
+    },
+    {
+      "path": "verl/single_controller/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd850b790c7ef7ea88515b58e629cad45c0c84e2",
+      "size": 787,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bd850b790c7ef7ea88515b58e629cad45c0c84e2"
+    },
+    {
+      "path": "verl/single_controller/base",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82023e9a08866fe7902970ba77431e69961f2095",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/82023e9a08866fe7902970ba77431e69961f2095"
+    },
+    {
+      "path": "verl/single_controller/base/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75846436cd1285259d2bae6d4a7f190aebed1a80",
+      "size": 699,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/75846436cd1285259d2bae6d4a7f190aebed1a80"
+    },
+    {
+      "path": "verl/single_controller/base/decorator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fdacb6d97bc5897be837863236f6f057a024739",
+      "size": 15531,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6fdacb6d97bc5897be837863236f6f057a024739"
+    },
+    {
+      "path": "verl/single_controller/base/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18359816b3e5464129ac6c8baa505a94b19ff76a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/18359816b3e5464129ac6c8baa505a94b19ff76a"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d84d29f16420a5cf976d64f45ecbb599125c43c",
+      "size": 1595,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2d84d29f16420a5cf976d64f45ecbb599125c43c"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/worker_group.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67c21d309b75f1fc7e76b87c9436efc103570f50",
+      "size": 2080,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/67c21d309b75f1fc7e76b87c9436efc103570f50"
+    },
+    {
+      "path": "verl/single_controller/base/register_center",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8999e8c40f4885d3717d539a1da13efc83dff49d",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/8999e8c40f4885d3717d539a1da13efc83dff49d"
+    },
+    {
+      "path": "verl/single_controller/base/register_center/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/single_controller/base/register_center/ray.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "430290cf2683d882d35a83256aa363d959265a05",
+      "size": 939,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/430290cf2683d882d35a83256aa363d959265a05"
+    },
+    {
+      "path": "verl/single_controller/base/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad6bab9332b343cfcd3b8e4fdbe55010a995ab04",
+      "size": 6416,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ad6bab9332b343cfcd3b8e4fdbe55010a995ab04"
+    },
+    {
+      "path": "verl/single_controller/base/worker_group.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd584580c5c7223309e41ac39a865bd48c58c7d4",
+      "size": 7494,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bd584580c5c7223309e41ac39a865bd48c58c7d4"
+    },
+    {
+      "path": "verl/single_controller/ray",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a947f7a915f577d7520c9438ad62069b9458c6cc",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/a947f7a915f577d7520c9438ad62069b9458c6cc"
+    },
+    {
+      "path": "verl/single_controller/ray/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d5783448e68e7207e45303aaec3894e8ea838d1",
+      "size": 778,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4d5783448e68e7207e45303aaec3894e8ea838d1"
+    },
+    {
+      "path": "verl/single_controller/ray/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaa1b00de398a08223e0b7bcb25be943bf614f5b",
+      "size": 19238,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/eaa1b00de398a08223e0b7bcb25be943bf614f5b"
+    },
+    {
+      "path": "verl/single_controller/ray/megatron.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cdb49f95a77dca20c6a8f67ee1b61cfd4a1e8fc",
+      "size": 3035,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2cdb49f95a77dca20c6a8f67ee1b61cfd4a1e8fc"
+    },
+    {
+      "path": "verl/single_controller/version",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfdf49f4f44d5ef2ca38df3ca0aeafcd8231f0b3",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/bfdf49f4f44d5ef2ca38df3ca0aeafcd8231f0b3"
+    },
+    {
+      "path": "verl/single_controller/version/version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bcd0e3612da7c517106f9b581a8beb53d4b0a97",
+      "size": 5,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7bcd0e3612da7c517106f9b581a8beb53d4b0a97"
+    },
+    {
+      "path": "verl/third_party",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4c702efa64dbd9d04f39d2c24c7adaca913773f",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f4c702efa64dbd9d04f39d2c24c7adaca913773f"
+    },
+    {
+      "path": "verl/third_party/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70673f82c423b4210a4c3123bf74a3cb7e72d25d",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/70673f82c423b4210a4c3123bf74a3cb7e72d25d"
+    },
+    {
+      "path": "verl/third_party/vllm/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "290c83781e45d91cfae4643ea72166be65879bf4",
+      "size": 1746,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/290c83781e45d91cfae4643ea72166be65879bf4"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f07da68d9cc5be19291a15e1f3fc7532218106a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/7f07da68d9cc5be19291a15e1f3fc7532218106a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ae8f3b8f62fb62a909f4dfe66ede389b64e61b9",
+      "size": 11957,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ae8f3b8f62fb62a909f4dfe66ede389b64e61b9"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e1fead86283e1c9594b7556555158a6dc72e6f0",
+      "size": 25666,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1e1fead86283e1c9594b7556555158a6dc72e6f0"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d2475998ca2658b14d4a572e10cbfc96cfc3d35",
+      "size": 13604,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8d2475998ca2658b14d4a572e10cbfc96cfc3d35"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e264a8585bc2bb8c5b64efe339af7c9d02475614",
+      "size": 35525,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e264a8585bc2bb8c5b64efe339af7c9d02475614"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "450e2f4b49c22b86b5ce424a303c535fb1596a99",
+      "size": 12265,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/450e2f4b49c22b86b5ce424a303c535fb1596a99"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4acf3422d43c16091977f598111926d636cc3e29",
+      "size": 13381,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4acf3422d43c16091977f598111926d636cc3e29"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b7a45c8d6b8a62efd5100f27a00c399ec4e9e6",
+      "size": 6075,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c3b7a45c8d6b8a62efd5100f27a00c399ec4e9e6"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8de24afb834af4e5c8d60b006e0696206519315",
+      "size": 3047,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b8de24afb834af4e5c8d60b006e0696206519315"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72aa26d06013f5bf29e67bedfcb77fc0af80e1c7",
+      "size": 4215,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/72aa26d06013f5bf29e67bedfcb77fc0af80e1c7"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50eebd70b86c1160896ded81deeb7e6eedd6d605",
+      "size": 13214,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/50eebd70b86c1160896ded81deeb7e6eedd6d605"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29c895a1aeba5e752910bf4594d19470f8b622de",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/29c895a1aeba5e752910bf4594d19470f8b622de"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "089bbd748b202ccceb524f91271e7bf91dc9bdfe",
+      "size": 16002,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/089bbd748b202ccceb524f91271e7bf91dc9bdfe"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6af04417b43a2d3672298fcf887b71fc230bb8ae",
+      "size": 9527,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6af04417b43a2d3672298fcf887b71fc230bb8ae"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6668b7509161e7d19d4b37f13318a80d59147448",
+      "size": 12378,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6668b7509161e7d19d4b37f13318a80d59147448"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/hf_weight_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d562e596b8b75ac0a3e81ae651c77cfdc58f3a1",
+      "size": 4032,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0d562e596b8b75ac0a3e81ae651c77cfdc58f3a1"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94623a41423e841ae8e388a1d508da5b624a559a",
+      "size": 15147,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/94623a41423e841ae8e388a1d508da5b624a559a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75bf11ab319a623daf9d6d57668e17c46c2cc4ec",
+      "size": 12403,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/75bf11ab319a623daf9d6d57668e17c46c2cc4ec"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7c2e2cfe57f1bd3a4b49b61d1085a76b0a9b0a",
+      "size": 15726,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1a7c2e2cfe57f1bd3a4b49b61d1085a76b0a9b0a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f4013451ff7e4e4612719251f48d5849fdc15d5",
+      "size": 13600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5f4013451ff7e4e4612719251f48d5849fdc15d5"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1604b03630456a8adc44b31cec767f69f709899e",
+      "size": 12581,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1604b03630456a8adc44b31cec767f69f709899e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7464a2a50e3a968f8d0636e7a40f2d6cf57f56",
+      "size": 12798,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/be7464a2a50e3a968f8d0636e7a40f2d6cf57f56"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/spmd_gpu_executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b97bb600ac318cc4b769805a5dcedc24b296f4b3",
+      "size": 8647,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b97bb600ac318cc4b769805a5dcedc24b296f4b3"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa625a0338686d61816e838ef802cde327fc95c4",
+      "size": 3310,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/aa625a0338686d61816e838ef802cde327fc95c4"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fab3e41fe87ea599f251f5da2ebb67b54f84b81",
+      "size": 13310,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1fab3e41fe87ea599f251f5da2ebb67b54f84b81"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87cacec6910c227ac6894e252ad3efa3ec5e2790",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/87cacec6910c227ac6894e252ad3efa3ec5e2790"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c577277b8621421cb5e1c3dbb713dcb34519215",
+      "size": 23746,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6c577277b8621421cb5e1c3dbb713dcb34519215"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc61e6fe60661d7b5c4bfc77b5c1d3843997e46",
+      "size": 11948,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5fc61e6fe60661d7b5c4bfc77b5c1d3843997e46"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "732b543db6347d2f22db22745a3a7c037636737e",
+      "size": 15827,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/732b543db6347d2f22db22745a3a7c037636737e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/hf_weight_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7af4953f35e7107c9e7e6cd4f597b4a2715d441d",
+      "size": 1895,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7af4953f35e7107c9e7e6cd4f597b4a2715d441d"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f56f1e07af01e646e3a096e8a3b931a43dc3747",
+      "size": 12271,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5f56f1e07af01e646e3a096e8a3b931a43dc3747"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d161e747066ece4b19984dac4aecfa32cecf6e5",
+      "size": 14689,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8d161e747066ece4b19984dac4aecfa32cecf6e5"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/megatron_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f2b19a904e77a9c2d10e259d061f797da67ddd8",
+      "size": 13939,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4f2b19a904e77a9c2d10e259d061f797da67ddd8"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b675bb79df378b187d856136905104f7aca1146",
+      "size": 14974,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1b675bb79df378b187d856136905104f7aca1146"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6ab232558a4bcdce568cae6e24f658c28628a4e",
+      "size": 6857,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d6ab232558a4bcdce568cae6e24f658c28628a4e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0830093bca658fa4fdb4adc1d449b2dd678b73d5",
+      "size": 13091,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0830093bca658fa4fdb4adc1d449b2dd678b73d5"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/spmd_gpu_executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9040d52b57558ced35cc37dcbb96014255ccf95",
+      "size": 10184,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e9040d52b57558ced35cc37dcbb96014255ccf95"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa625a0338686d61816e838ef802cde327fc95c4",
+      "size": 3310,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/aa625a0338686d61816e838ef802cde327fc95c4"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5deb675a1180fc9a575ca0898be27f21c173151",
+      "size": 15305,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a5deb675a1180fc9a575ca0898be27f21c173151"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20f08acae90077eb91ad50ed786c02d71635239e",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/20f08acae90077eb91ad50ed786c02d71635239e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc4685c5f7968e827491f2bc02fdbd59bfac220c",
+      "size": 3142,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bc4685c5f7968e827491f2bc02fdbd59bfac220c"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7cee451416eb1d7d6c9b4b83fc53dc25a336ccf",
+      "size": 4167,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d7cee451416eb1d7d6c9b4b83fc53dc25a336ccf"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3042cabcc4112472b4bbf70a540471eae9e4073",
+      "size": 17356,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a3042cabcc4112472b4bbf70a540471eae9e4073"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/hf_weight_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e5b22b2fed3b17f22f66c7acef8094c1c7871a",
+      "size": 1773,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a3e5b22b2fed3b17f22f66c7acef8094c1c7871a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd3d646db46e0b6085a94a49da695d5a6feb1403",
+      "size": 10236,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/cd3d646db46e0b6085a94a49da695d5a6feb1403"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10b112b2595d83514698589bba472efb07dea562",
+      "size": 17823,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/10b112b2595d83514698589bba472efb07dea562"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fd6c0e624f7f51f9a16b7d5e8059aa1dbef905b",
+      "size": 13909,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7fd6c0e624f7f51f9a16b7d5e8059aa1dbef905b"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f146a0eae22563650ec87bc7e5ad3ce2c19e9398",
+      "size": 14439,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/f146a0eae22563650ec87bc7e5ad3ce2c19e9398"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0cceffb52fd29ae02466b3eec51faaf0bda2bfb",
+      "size": 7587,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b0cceffb52fd29ae02466b3eec51faaf0bda2bfb"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0150c1c678e43dc5a6cb3f4426b5854ab45d8e4a",
+      "size": 12915,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0150c1c678e43dc5a6cb3f4426b5854ab45d8e4a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/spmd_gpu_executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229a424c840226e2f6c148418d7c69a97807afa1",
+      "size": 10115,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/229a424c840226e2f6c148418d7c69a97807afa1"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0b4d0e27c84fc0358411d7bf29e0702aac929b9",
+      "size": 1649,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b0b4d0e27c84fc0358411d7bf29e0702aac929b9"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb1a7ab80c7526177cc0e53963f0e2e85d683334",
+      "size": 15138,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/cb1a7ab80c7526177cc0e53963f0e2e85d683334"
+    },
+    {
+      "path": "verl/trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34ed5844daa94968050af3edffdb97efdb608724",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/34ed5844daa94968050af3edffdb97efdb608724"
+    },
+    {
+      "path": "verl/trainer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/trainer/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b750822da4065b938050354074e458e23c1e6015",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/b750822da4065b938050354074e458e23c1e6015"
+    },
+    {
+      "path": "verl/trainer/config/evaluation.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d8ccff888f65e831ec702291b904a4a8a6f8a22",
+      "size": 160,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0d8ccff888f65e831ec702291b904a4a8a6f8a22"
+    },
+    {
+      "path": "verl/trainer/config/generation.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed805a8c04949ff02d0a7de67a2cf78788217ced",
+      "size": 779,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ed805a8c04949ff02d0a7de67a2cf78788217ced"
+    },
+    {
+      "path": "verl/trainer/config/ppo_megatron_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae26851f38d32715789777b2af741c5da19cae2",
+      "size": 4467,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6ae26851f38d32715789777b2af741c5da19cae2"
+    },
+    {
+      "path": "verl/trainer/config/ppo_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8429aeea7dd1884bed947c0aa91e4b71447a633d",
+      "size": 5353,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8429aeea7dd1884bed947c0aa91e4b71447a633d"
+    },
+    {
+      "path": "verl/trainer/config/sft_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bf7b6ec0f9695e41cef7934b447011399dd4f34",
+      "size": 906,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1bf7b6ec0f9695e41cef7934b447011399dd4f34"
+    },
+    {
+      "path": "verl/trainer/fsdp_sft_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb876a732d63116adcfe06d1e3b995ece10d2aba",
+      "size": 16299,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bb876a732d63116adcfe06d1e3b995ece10d2aba"
+    },
+    {
+      "path": "verl/trainer/main_eval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "756c836e337f33f80d80c8d9a913c1d7a482e49f",
+      "size": 2268,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/756c836e337f33f80d80c8d9a913c1d7a482e49f"
+    },
+    {
+      "path": "verl/trainer/main_generation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c3bd923fc30b20b07ff831b75657a1e949b6e43",
+      "size": 5760,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8c3bd923fc30b20b07ff831b75657a1e949b6e43"
+    },
+    {
+      "path": "verl/trainer/main_ppo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6186c69b00b4f42e389877236b66ec410fdc4392",
+      "size": 7384,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6186c69b00b4f42e389877236b66ec410fdc4392"
+    },
+    {
+      "path": "verl/trainer/ppo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "796c93bc9541fea1531a715d229218fefb6f22f1",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/796c93bc9541fea1531a715d229218fefb6f22f1"
+    },
+    {
+      "path": "verl/trainer/ppo/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/trainer/ppo/core_algos.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9a8952c2af720176ef2b310bb463d74481af601",
+      "size": 11230,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/f9a8952c2af720176ef2b310bb463d74481af601"
+    },
+    {
+      "path": "verl/trainer/ppo/ray_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22a8f415d7ab2926ba1e309320254102933f9aa4",
+      "size": 34849,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/22a8f415d7ab2926ba1e309320254102933f9aa4"
+    },
+    {
+      "path": "verl/trainer/runtime_env.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87bd05a9aabbc5db602626895518bb19add408d1",
+      "size": 122,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/87bd05a9aabbc5db602626895518bb19add408d1"
+    },
+    {
+      "path": "verl/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "02c77f433cde436751a1a25668b29d622afd149a",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/02c77f433cde436751a1a25668b29d622afd149a"
+    },
+    {
+      "path": "verl/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e453070a16370cd7006e0a7700c8550a56f19051",
+      "size": 678,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e453070a16370cd7006e0a7700c8550a56f19051"
+    },
+    {
+      "path": "verl/utils/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c9298c42adf89467d047a3d0fdf8919bf772a5a",
+      "size": 839,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5c9298c42adf89467d047a3d0fdf8919bf772a5a"
+    },
+    {
+      "path": "verl/utils/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bbfdb6aa8fd4999086ebdb0d8ab79f9d549c3380",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/bbfdb6aa8fd4999086ebdb0d8ab79f9d549c3380"
+    },
+    {
+      "path": "verl/utils/dataset/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f886a70aabf443fb167453d667529b62f3311765",
+      "size": 797,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/f886a70aabf443fb167453d667529b62f3311765"
+    },
+    {
+      "path": "verl/utils/dataset/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b833e441e7733bfa1b1f956d22ff17dc872faaf1",
+      "size": 707,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b833e441e7733bfa1b1f956d22ff17dc872faaf1"
+    },
+    {
+      "path": "verl/utils/dataset/rl_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75b65f4007f47a23a65bbe23999df9c5414f77fe",
+      "size": 5506,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/75b65f4007f47a23a65bbe23999df9c5414f77fe"
+    },
+    {
+      "path": "verl/utils/dataset/rm_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cba178db3d816b5291d836cbc4b30fed5b817944",
+      "size": 5494,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/cba178db3d816b5291d836cbc4b30fed5b817944"
+    },
+    {
+      "path": "verl/utils/dataset/sft_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c7a2966dfb2c5a46e87988c50ac90477c302ce3",
+      "size": 6917,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9c7a2966dfb2c5a46e87988c50ac90477c302ce3"
+    },
+    {
+      "path": "verl/utils/debug",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "307b15a7fbb9768ecb313fe08dcbcb97219b7c79",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/307b15a7fbb9768ecb313fe08dcbcb97219b7c79"
+    },
+    {
+      "path": "verl/utils/debug/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d0b3432eb4d6200ed84da0f735afa46735ef58e",
+      "size": 646,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0d0b3432eb4d6200ed84da0f735afa46735ef58e"
+    },
+    {
+      "path": "verl/utils/debug/performance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615475a66a5e45853540df2efd09c25991b43e12",
+      "size": 1214,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/615475a66a5e45853540df2efd09c25991b43e12"
+    },
+    {
+      "path": "verl/utils/debug/trajectory_tracker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b254685221a86b03f120b57659cd55b29ea0a2",
+      "size": 3174,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/33b254685221a86b03f120b57659cd55b29ea0a2"
+    },
+    {
+      "path": "verl/utils/distributed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fea5a29cd943ef91c8f27f44db2a69e40702cf7",
+      "size": 1124,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6fea5a29cd943ef91c8f27f44db2a69e40702cf7"
+    },
+    {
+      "path": "verl/utils/flops_counter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c5ac1a91160fc3265589fb6e93e93c8c1efb53e",
+      "size": 4887,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3c5ac1a91160fc3265589fb6e93e93c8c1efb53e"
+    },
+    {
+      "path": "verl/utils/fs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80c1889be3582fffcdef5267f5e9ac55e1d7e059",
+      "size": 2821,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/80c1889be3582fffcdef5267f5e9ac55e1d7e059"
+    },
+    {
+      "path": "verl/utils/fsdp_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eca5a1da9ad4e584040fd92bac28884e2e518600",
+      "size": 12229,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/eca5a1da9ad4e584040fd92bac28884e2e518600"
+    },
+    {
+      "path": "verl/utils/hdfs_io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08c4ecb9a5956865ce35651d6eaaf6844ba87f41",
+      "size": 4562,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/08c4ecb9a5956865ce35651d6eaaf6844ba87f41"
+    },
+    {
+      "path": "verl/utils/import_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5690512d144a30d2a1f0bd128a40eb8876936b7",
+      "size": 1351,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e5690512d144a30d2a1f0bd128a40eb8876936b7"
+    },
+    {
+      "path": "verl/utils/logger",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6642458a8af2a51272dd12ce1e036c88445cf1f",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f6642458a8af2a51272dd12ce1e036c88445cf1f"
+    },
+    {
+      "path": "verl/utils/logger/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/logger/aggregate_logger.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac57cf58e3de2862b5443189ccec276a7d2fc283",
+      "size": 1400,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ac57cf58e3de2862b5443189ccec276a7d2fc283"
+    },
+    {
+      "path": "verl/utils/logging_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bf6e1f0fa70784edb6a7e6efecdba07f0c399b3",
+      "size": 843,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1bf6e1f0fa70784edb6a7e6efecdba07f0c399b3"
+    },
+    {
+      "path": "verl/utils/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e604eb8233331b16ca7cf993d218da1f2c14858",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/4e604eb8233331b16ca7cf993d218da1f2c14858"
+    },
+    {
+      "path": "verl/utils/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/megatron/memory.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e8570ed495d83e74a1d0c7b1d17181271ce92a6",
+      "size": 1534,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/5e8570ed495d83e74a1d0c7b1d17181271ce92a6"
+    },
+    {
+      "path": "verl/utils/megatron/optimizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae70b0876d5255ffd24e132ca4d60faab883582",
+      "size": 4349,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9ae70b0876d5255ffd24e132ca4d60faab883582"
+    },
+    {
+      "path": "verl/utils/megatron/optimizer_config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3401de4163aadcad7f3a586587da38989ee19d3d",
+      "size": 4051,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3401de4163aadcad7f3a586587da38989ee19d3d"
+    },
+    {
+      "path": "verl/utils/megatron/pipeline_parallel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a3790bb1a0fe0340390b7c9083f94d9d56b9383",
+      "size": 2119,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3a3790bb1a0fe0340390b7c9083f94d9d56b9383"
+    },
+    {
+      "path": "verl/utils/megatron/sequence_parallel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b76cb295ef681e30b22d45404d4d5c26493f051",
+      "size": 1810,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4b76cb295ef681e30b22d45404d4d5c26493f051"
+    },
+    {
+      "path": "verl/utils/megatron/tensor_parallel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a8ce422c42498a5e5cbdddc74d6c9f3ae8d06b",
+      "size": 7257,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/25a8ce422c42498a5e5cbdddc74d6c9f3ae8d06b"
+    },
+    {
+      "path": "verl/utils/megatron_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcb6b65a79ea302e3f7eaccd5145e29adbb9edd6",
+      "size": 11812,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/fcb6b65a79ea302e3f7eaccd5145e29adbb9edd6"
+    },
+    {
+      "path": "verl/utils/memory_buffer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e07e42f7bc4648d3376dba404ae122e07ccb0d0",
+      "size": 7964,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2e07e42f7bc4648d3376dba404ae122e07ccb0d0"
+    },
+    {
+      "path": "verl/utils/model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9002451a1dce34b8c844f907ee6ac487351b5314",
+      "size": 12885,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9002451a1dce34b8c844f907ee6ac487351b5314"
+    },
+    {
+      "path": "verl/utils/py_functional.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f5a0e176779cc19d3035a3af77a1bdf1f39349a",
+      "size": 1656,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8f5a0e176779cc19d3035a3af77a1bdf1f39349a"
+    },
+    {
+      "path": "verl/utils/ray_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a75df6c37bc5a295aaa192b2a56cca2423e94b9",
+      "size": 1401,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9a75df6c37bc5a295aaa192b2a56cca2423e94b9"
+    },
+    {
+      "path": "verl/utils/rendezvous",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd86df75ba52e1b93d84fee9cff881b6c8e36547",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/bd86df75ba52e1b93d84fee9cff881b6c8e36547"
+    },
+    {
+      "path": "verl/utils/rendezvous/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/rendezvous/ray_backend.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0d2bd906fe14584896627143dea2d3ec032d912",
+      "size": 2720,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c0d2bd906fe14584896627143dea2d3ec032d912"
+    },
+    {
+      "path": "verl/utils/reward_score",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e2066e12c7e69278549a5137faf09a512a414f7",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/0e2066e12c7e69278549a5137faf09a512a414f7"
+    },
+    {
+      "path": "verl/utils/reward_score/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/reward_score/countdown.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14d414018314b6f0950cd201d09927f883e2216d",
+      "size": 3778,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/14d414018314b6f0950cd201d09927f883e2216d"
+    },
+    {
+      "path": "verl/utils/reward_score/gsm8k.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7091037643bc656f93c5c1a6acefb643d58421fe",
+      "size": 2385,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7091037643bc656f93c5c1a6acefb643d58421fe"
+    },
+    {
+      "path": "verl/utils/reward_score/kk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "418b9b9197937a5d3081f8a331dfb1263ebdb877",
+      "size": 7238,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/418b9b9197937a5d3081f8a331dfb1263ebdb877"
+    },
+    {
+      "path": "verl/utils/reward_score/math.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50792aa6edd082091a786f4d4fa29d0a601702cf",
+      "size": 6717,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/50792aa6edd082091a786f4d4fa29d0a601702cf"
+    },
+    {
+      "path": "verl/utils/reward_score/multiply.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71737f94f0b095e1bb49f8f85290c7bee8539bc0",
+      "size": 1977,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/71737f94f0b095e1bb49f8f85290c7bee8539bc0"
+    },
+    {
+      "path": "verl/utils/seqlen_balancing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee45da0d33264ea40591f95a98bdf35ef0ea4ad",
+      "size": 10327,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/fee45da0d33264ea40591f95a98bdf35ef0ea4ad"
+    },
+    {
+      "path": "verl/utils/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b64b6623ac62b6b3f4288dccf8f5307fc87439c7",
+      "size": 2384,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b64b6623ac62b6b3f4288dccf8f5307fc87439c7"
+    },
+    {
+      "path": "verl/utils/torch_dtypes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb63df13b9c26802dff23c92ae8e36f5c23ae4fd",
+      "size": 2217,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bb63df13b9c26802dff23c92ae8e36f5c23ae4fd"
+    },
+    {
+      "path": "verl/utils/torch_functional.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d53ca7a4e40efc715ceba1f3a8c725c2fe256a0",
+      "size": 18349,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3d53ca7a4e40efc715ceba1f3a8c725c2fe256a0"
+    },
+    {
+      "path": "verl/utils/tracking.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1fbd6f330451b89286644e226fb743237bc436c",
+      "size": 3839,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b1fbd6f330451b89286644e226fb743237bc436c"
+    },
+    {
+      "path": "verl/utils/ulysses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c085becc591d29a9517966cdee601843bdf24371",
+      "size": 10619,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c085becc591d29a9517966cdee601843bdf24371"
+    },
+    {
+      "path": "verl/version",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "929f32db81c7519834113fbc0b6b1670446fb2ce",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/929f32db81c7519834113fbc0b6b1670446fb2ce"
+    },
+    {
+      "path": "verl/version/version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceab6e11ece0bcec917c12e11d350946f085d549",
+      "size": 3,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/ceab6e11ece0bcec917c12e11d350946f085d549"
+    },
+    {
+      "path": "verl/workers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62258182e11f11aeb11adeafe9c19c281fa220e0",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/62258182e11f11aeb11adeafe9c19c281fa220e0"
+    },
+    {
+      "path": "verl/workers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/workers/actor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8584eb1776be490b409e61d0ebf5096127fc5df3",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/8584eb1776be490b409e61d0ebf5096127fc5df3"
+    },
+    {
+      "path": "verl/workers/actor/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a1404e17695436516c55794f9094c094dba61ce",
+      "size": 727,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/7a1404e17695436516c55794f9094c094dba61ce"
+    },
+    {
+      "path": "verl/workers/actor/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "144f0b90ef1efa77e5f1d4d26a07291ea89990cf",
+      "size": 2071,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/144f0b90ef1efa77e5f1d4d26a07291ea89990cf"
+    },
+    {
+      "path": "verl/workers/actor/dp_actor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15fc01f422493d79e212953273ac18e111528941",
+      "size": 14184,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/15fc01f422493d79e212953273ac18e111528941"
+    },
+    {
+      "path": "verl/workers/actor/megatron_actor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e674a28f6bbafabbfdb7b3c84e6d92833d1d8166",
+      "size": 18814,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e674a28f6bbafabbfdb7b3c84e6d92833d1d8166"
+    },
+    {
+      "path": "verl/workers/critic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e198fd2ab858dacbc763714e1877550ed4450401",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/e198fd2ab858dacbc763714e1877550ed4450401"
+    },
+    {
+      "path": "verl/workers/critic/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80808f10634b74ee3be94e3dc19e86855f884cc8",
+      "size": 732,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/80808f10634b74ee3be94e3dc19e86855f884cc8"
+    },
+    {
+      "path": "verl/workers/critic/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1055df4e04d80624d2ca28afcf6f6df3642b91",
+      "size": 1094,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/9d1055df4e04d80624d2ca28afcf6f6df3642b91"
+    },
+    {
+      "path": "verl/workers/critic/dp_critic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0842ff4a489cacd4331112aaefd6719ca22c1294",
+      "size": 9785,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/0842ff4a489cacd4331112aaefd6719ca22c1294"
+    },
+    {
+      "path": "verl/workers/critic/megatron_critic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a39ad4b460e609373f0283f7171f39127f813189",
+      "size": 10641,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a39ad4b460e609373f0283f7171f39127f813189"
+    },
+    {
+      "path": "verl/workers/fsdp_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be6546277d74449262cb57033770d31002334080",
+      "size": 52701,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/be6546277d74449262cb57033770d31002334080"
+    },
+    {
+      "path": "verl/workers/megatron_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "180a7761dd2e9affcc55e57244212f56bedcd9dd",
+      "size": 36072,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/180a7761dd2e9affcc55e57244212f56bedcd9dd"
+    },
+    {
+      "path": "verl/workers/reward_model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1af7b3438e27c5d79dfdfc176194e9c5dd453ea",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/d1af7b3438e27c5d79dfdfc176194e9c5dd453ea"
+    },
+    {
+      "path": "verl/workers/reward_model/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0b48a750841888b1e220b72422659d8073c22a0",
+      "size": 638,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/a0b48a750841888b1e220b72422659d8073c22a0"
+    },
+    {
+      "path": "verl/workers/reward_model/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c02487db3846d0fcec76c1c216fbbb52d15c64bd",
+      "size": 1710,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c02487db3846d0fcec76c1c216fbbb52d15c64bd"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96405bf4fe4e80c3151a7837c86c2bb5c9e9c2f8",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/96405bf4fe4e80c3151a7837c86c2bb5c9e9c2f8"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0956b4cc53b81bf4c675c235968e1fc577a49f9",
+      "size": 647,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/b0956b4cc53b81bf4c675c235968e1fc577a49f9"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron/reward_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c4c1b601c97927acf6f45cb36c39dea93998dd8",
+      "size": 13237,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/2c4c1b601c97927acf6f45cb36c39dea93998dd8"
+    },
+    {
+      "path": "verl/workers/rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb64f725979fe4005c636652a7afd58650ed381e",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/cb64f725979fe4005c636652a7afd58650ed381e"
+    },
+    {
+      "path": "verl/workers/rollout/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "083848c77faafa61d2a449e23707431925fafb40",
+      "size": 753,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/083848c77faafa61d2a449e23707431925fafb40"
+    },
+    {
+      "path": "verl/workers/rollout/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c2733325bbf7ba4e8c3438a53c4e2b97d60ee83",
+      "size": 1141,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/8c2733325bbf7ba4e8c3438a53c4e2b97d60ee83"
+    },
+    {
+      "path": "verl/workers/rollout/hf_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d929e5dd439a5c1a3b92b73bd6cb134cbb29f09",
+      "size": 5867,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/1d929e5dd439a5c1a3b92b73bd6cb134cbb29f09"
+    },
+    {
+      "path": "verl/workers/rollout/naive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd78603480142a71c6cfadeeec28ba1177f738bc",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/dd78603480142a71c6cfadeeec28ba1177f738bc"
+    },
+    {
+      "path": "verl/workers/rollout/naive/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df81c8603fc41731b2ec2cf007a06f5976e43c06",
+      "size": 641,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/df81c8603fc41731b2ec2cf007a06f5976e43c06"
+    },
+    {
+      "path": "verl/workers/rollout/naive/naive_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f2e8d59b9c664912f9ce81e5410f667985f0726",
+      "size": 4821,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/6f2e8d59b9c664912f9ce81e5410f667985f0726"
+    },
+    {
+      "path": "verl/workers/rollout/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0dfa3a530329605d7af48a2186d304198774e09",
+      "size": 5747,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/c0dfa3a530329605d7af48a2186d304198774e09"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d70ecd259a32b52fe6518cce49b35bc6aecfc4e6",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/d70ecd259a32b52fe6518cce49b35bc6aecfc4e6"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f06d209f9d7d58c5aa41efad7cd237164a9fb8b",
+      "size": 638,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/4f06d209f9d7d58c5aa41efad7cd237164a9fb8b"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "947d558fb1910c09a61ec0c81087815d92d16f94",
+      "size": 10319,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/947d558fb1910c09a61ec0c81087815d92d16f94"
+    },
+    {
+      "path": "verl/workers/sharding_manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9323eb8c3ed052fb9a422cbb63c24ebf40e6c21",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/f9323eb8c3ed052fb9a422cbb63c24ebf40e6c21"
+    },
+    {
+      "path": "verl/workers/sharding_manager/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e72fdf011c2455d920d0857eb3e6eadbaeebc332",
+      "size": 1169,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/e72fdf011c2455d920d0857eb3e6eadbaeebc332"
+    },
+    {
+      "path": "verl/workers/sharding_manager/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8717890f2e2cf4d2c5e7683398e32fa8ebf3765",
+      "size": 982,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/d8717890f2e2cf4d2c5e7683398e32fa8ebf3765"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_ulysses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3969a6fc519c7b5f46ff57c29f57605d0d184e00",
+      "size": 3542,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/3969a6fc519c7b5f46ff57c29f57605d0d184e00"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19490f4ea50d50a6ca885bd07da4e3dc4f74e954",
+      "size": 6186,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/19490f4ea50d50a6ca885bd07da4e3dc4f74e954"
+    },
+    {
+      "path": "verl/workers/sharding_manager/megatron_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc07a5a656445f4ea442440b8634422e1b836ce0",
+      "size": 18595,
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/blobs/bc07a5a656445f4ea442440b8634422e1b836ce0"
+    }
+  ],
+  "truncated": false
+}

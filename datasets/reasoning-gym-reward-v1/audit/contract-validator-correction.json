@@ -1,0 +1,12 @@
+{
+  "stage": "dataset oracle validation before freeze; no analyzer/model outputs exist",
+  "first_replay": "results/replay-01",
+  "source_behavior_expectations": "All63 matched unchanged real scoring methods in first replay.",
+  "issue": "Independent finite-complex predicate omitted declared nested-parenthesis normalization, falsely flagging two legitimate equivalent-answer probes (original and proposed repair).",
+  "resolution": "Normalize whole-expression parentheses before using native complex() for the independent finite predicate; no target source, probe answer or expected source reward changed.",
+  "original_reproducer_sha256": "aa2ff73ca3274c79cc14811a7bf50b17fcab4e40f85a2257f6cd85644c45da84",
+  "updated_reproducer_sha256": "ceca17ce0e0b413821fb223ebcf9d967e56f42e1714c4040e46f467e68be780d",
+  "old_reproducer_preserved": "repro/reproduce-before-contract-normalization.py",
+  "second_replay": "results/replay-02",
+  "why_not_outcome_selection": "This repairs the dataset validator against an already documented valid normalization, not an analyzer or evaluation result; both raw rounds retained."
+}

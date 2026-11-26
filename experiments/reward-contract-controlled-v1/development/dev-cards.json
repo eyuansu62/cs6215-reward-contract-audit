@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "task_id": "dev-e1",
+      "question_description": "For full credit, the submitted answer must match the trusted reference answer. Submit only True or False. Surrounding whitespace and letter case are ignored.",
+      "placeholder_notes": {},
+      "expected_label": "E"
+    },
+    {
+      "task_id": "dev-e2",
+      "question_description": "Choose the correct True or False label for the statement. Do not return the opposite of the correct label.",
+      "placeholder_notes": {},
+      "expected_label": "E"
+    },
+    {
+      "task_id": "dev-v1",
+      "question_description": "Respond with a single Boolean token: True or False. Correctness is irrelevant; either label receives full credit.",
+      "placeholder_notes": {},
+      "expected_label": "V"
+    },
+    {
+      "task_id": "dev-v2",
+      "question_description": "The answer must contain exactly one True or False token and no explanation. Do not compare it with the reference answer; the grade depends only on format.",
+      "placeholder_notes": {},
+      "expected_label": "V"
+    },
+    {
+      "task_id": "dev-u1",
+      "question_description": "Write a short explanation of your reasoning. The words True and False may appear inside the prose, but neither a Boolean-only reply nor correctness against a reference is required.",
+      "placeholder_notes": {},
+      "expected_label": "U"
+    },
+    {
+      "task_id": "dev-u2",
+      "question_description": "Return a JSON object with a Boolean value and an explanation. The object should follow this shape: {\"answer\": true, \"explanation\": \"reason\"}.",
+      "placeholder_notes": {},
+      "expected_label": "U"
+    }
+  ]
+}

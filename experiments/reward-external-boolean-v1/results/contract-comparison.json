@@ -1,0 +1,61 @@
+{
+  "schema_and_evidence_substring_validation": "passed",
+  "model_selected": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "reference_contract": null,
+  "reference_status": "abstain_insufficient_literal_format_specification",
+  "semantic_assessment": "Model inferred literal token validity and literal reference equality from a binary semantic question. The supplied question packet does not establish that serialization constraint. Under the declared conservative reference rules, the proposal commits beyond supported wording.",
+  "not_a_false_contract_gold": "Reference abstention is absence of an authoritative supported literal contract, not a negative label for both obligations. No extraction accuracy or bug precision/recall computed.",
+  "not_claiming_native_full_prompt_underspecified": "Actual HELM adaptation/fewshot context may provide further format evidence; the experiment supplies only the recorded template/profile.",
+  "proposal_propagation": "Raw selected list passed unchanged throughcompile/binding/conditionseal; no reference/modelconditions filled.",
+  "conditional_oracle_vs_static": "Executing a native scorer then applying proposed predicates is evaluation of that proposal, not a static detection or verification of its task semantics.",
+  "one_request_not_three": true,
+  "model_wall_seconds": 8.3008,
+  "usage": {
+    "input_tokens": 26971,
+    "cached_input_tokens": 18048,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 186,
+    "reasoning_output_tokens": 0
+  },
+  "model_reported": null,
+  "tools_used": 0,
+  "native_policy_counts": {
+    "H01": {
+      "native_executions": 14,
+      "normal_numeric_returns": 14,
+      "native_full_rewards": 2,
+      "conditional_model_contract_incompatibilities": 0,
+      "incompatible_probe_ids": []
+    },
+    "H02": {
+      "native_executions": 14,
+      "normal_numeric_returns": 14,
+      "native_full_rewards": 6,
+      "conditional_model_contract_incompatibilities": 4,
+      "incompatible_probe_ids": [
+        "true-article",
+        "true-punctuation",
+        "false-article",
+        "false-punctuation"
+      ]
+    },
+    "H03": {
+      "native_executions": 14,
+      "normal_numeric_returns": 14,
+      "native_full_rewards": 6,
+      "conditional_model_contract_incompatibilities": 4,
+      "incompatible_probe_ids": [
+        "true-suffix",
+        "true-punctuation",
+        "false-suffix",
+        "false-punctuation"
+      ]
+    }
+  },
+  "reference_model_comparison_eligible": 0,
+  "agreement_metrics": null,
+  "LLM_detection_gain_established": false
+}

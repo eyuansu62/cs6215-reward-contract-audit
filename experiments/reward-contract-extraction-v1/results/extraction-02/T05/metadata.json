@@ -1,0 +1,29 @@
+{
+  "task_id": "T05",
+  "status": "failed",
+  "model_called": true,
+  "extraction_freeze_sha256": "2271f85f77ff26b263d0b543ad43c3ed2dd087e53286698a0a51e34120ea6828",
+  "prompt_sha256": "d17cae91f5688b06b6b5c9781f21fcf70e90d67ca7b9253cf725140f643395b0",
+  "request_inputs": [
+    "opaque ID",
+    "description",
+    "placeholder notes",
+    "generic schema"
+  ],
+  "no_reference_scorer_or_history_in_prompt": true,
+  "cli_version": "codex-cli 0.147.0",
+  "wall_seconds": 11.347,
+  "returncode": 0,
+  "model_reported": null,
+  "model_identity_note": "Exact model unknown if service does not expose it; no latest-model claim",
+  "usage": {
+    "input_tokens": 26344,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 365,
+    "reasoning_output_tokens": 55
+  },
+  "event_count": 4,
+  "accepted_tool_actions": 0,
+  "error": "ValueError: Evidence quote not an exact description substring"
+}

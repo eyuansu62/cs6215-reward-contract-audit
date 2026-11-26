@@ -1,0 +1,6 @@
+{
+  "evaluation_scorers_approved": false,
+  "status": "awaiting_user_choice",
+  "candidate_scope": "Three native HELM scalar evaluation metric policies, not established RL training rewards",
+  "no_primary_experiment_runs": true
+}

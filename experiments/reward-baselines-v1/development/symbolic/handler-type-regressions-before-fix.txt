@@ -1,0 +1,51 @@
+test_effectful_exception_handler_type_is_unsupported (test_symbolic_baseline.SymbolicTests.test_effectful_exception_handler_type_is_unsupported) ... FAIL
+test_shadowed_exception_handler_type_is_unproven (test_symbolic_baseline.SymbolicTests.test_shadowed_exception_handler_type_is_unproven) ... FAIL
+
+======================================================================
+FAIL: test_effectful_exception_handler_type_is_unsupported (test_symbolic_baseline.SymbolicTests.test_effectful_exception_handler_type_is_unsupported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 103, in test_effectful_exception_handler_type_is_unsupported
+            self.verdict('''def score(answer, entry):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        try:
+        ^^^^
+    ...<4 lines>...
+        return 0
+        ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 0, 'paths': [], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_shadowed_exception_handler_type_is_unproven (test_symbolic_baseline.SymbolicTests.test_shadowed_exception_handler_type_is_unproven)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 113, in test_shadowed_exception_handler_type_is_unproven
+            self.verdict('''def score(answer, entry, Exception):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        try:
+        ^^^^
+    ...<5 lines>...
+        return 0
+        ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 1, 'paths': [{'kind': 'boolean_normalized_equality_implication', 'argument': 'Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.', 'return_span': {'line': 7, 'end_line': 7}, 'conditions': [{'condition': "answer == entry['answer']", 'required_truth': True, 'source_span': {'line': 6, 'end_line': 6}}]}], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [{'line': 7, 'end_line': 7}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=2)

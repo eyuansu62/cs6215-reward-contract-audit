@@ -1,0 +1,28 @@
+{
+  "study": "minimal-description-only-contract-extraction-v1",
+  "unit": "Six freshly content-exposed task-family question templates from the same pinned Reasoning Gym commit; filenames previously listed. Purposive 3 Boolean/3 non-Boolean selection fixed before description/scorer inspection.",
+  "preserved_baseline": "experiments/reward-baselines-v1",
+  "preserved_method_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "user_steering": "User initially chose independent human annotation, then asked assistant to complete it. Use AI-assisted researcher reference contracts, never claim real human annotation, measured human time or causal human-effort savings.",
+  "conditions": ["One-shot isolated LLM extraction from description only", "Independently authored and reviewed description-only reference contract; AI assisted"],
+  "information_boundary": "Same description and placeholder notes. Extractor receives opaque task ID and generic schema, not task filename, solution, scorer/helper, generator fragments, issues, PRs, reference contract, comparison rubric or baseline output.",
+  "reference_boundary": "Reference author sees task descriptions and generic schema only. Freeze reference before inspecting model responses and scorer bodies. Cross-review reference against exact wording. This is an assisted reference comparison, not an independent-human experiment.",
+  "model_protocol": "Six independent fresh ephemeral Codex CLI requests, one per task; fixed prompt/schema; no examples or in-context cross-task outputs. No tools accepted; preserve prompts, raw response, JSONL events, stderr, actual model identity when reported, usage, failure logs and hashes. No outcome-driven prompt retries.",
+  "scorer_access": "Do not inspect scorer implementations before prompt, reference and model responses are fixed. Afterwards extract source only; no upstream module import or generator execution. Downstream source discovery failures stay Unknown.",
+  "contract_comparison": {
+    "field_groups": ["answer_kind", "boolean_tokens", "collection_element_kind", "order_requirement", "output_format_requirements", "full_credit_requirements", "allowed_normalizations", "numeric_tolerance", "partial_credit_policy_and_details", "not_specified"],
+    "grading": "Semantic comparison with independently fixed reference and source-description evidence, not exact natural-language string equality. Preserve per-field keep/add/remove/replace/uncertain decisions and reasons; independently review. Do not reward verbosity or invent unstated scorer policies.",
+    "metrics": ["schema-valid tasks/6", "tasks needing substantive revision/6", "required field-group revisions/60", "unsupported/invented restrictions", "explicit abstentions", "token usage and model runtime when available"],
+    "effort_limit": "Field revisions are a review-burden proxy. No human time measurements or proof that LLM reduces human effort. Writing from scratch versus editing is not a randomized human study."
+  },
+  "downstream": {
+    "analyzers": "Exactly preserved Semgrep adapter and bounded symbolic code/rules. Only input preparation, conservative contract projection and reporting are new.",
+    "projection": "Only existing C_BOOLEAN_FULL necessary-condition projection for native True/False tasks is eligible. Actual generated reference field shape must support its trusted canonical-string assumption. Other task types are unsupported under the frozen interface, not force-fit to probability/complex/palindrome/factorization contracts.",
+    "projection_limits": "Checks agreement with trusted Boolean reference, not correctness of string-isomorphism/letter/cycle solving; full formatting and deeper semantics remain outside this projection. Normalization may be weakened only as an explicitly reported necessary condition, never a full-contract correctness claim.",
+    "metrics": ["supported contract projections/6", "per-case Semgrep and symbolic alarm/no_alarm/Unknown", "paired verdict differences between LLM/reference", "contract-caused errors versus analyzer coverage limits"],
+    "label_limit": "No blanket negative labels from absence of findings. TP/FP/FN/TN only if source/witness adjudication under fixed contract supports a label; otherwise report unadjudicated. No synthetic bugs silently counted as real cases.",
+    "gain_limit": "Equal contract projections or equal detector verdicts do not show improved detection. Unsupported projections are not evidence of failed extraction or neural necessity."
+  },
+  "stopping_rule": "One frozen six-task pilot; no task replacement, analyzer expansion, prompt tuning to outputs or new model/function support to improve results.",
+  "no_new_dependencies": true
+}

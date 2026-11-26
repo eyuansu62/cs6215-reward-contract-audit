@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-08T16:22:57.963496+00:00",
+  "files_sha256": {
+    "archived-observations.json": "db7fe7043d672cbecc5f4fa79035386823ba76bb796618ecb2bd3ccd391c86fa",
+    "boolean_checker.py": "a0218e6474606af3841dd96212fad7c3327dee9a14f8940a7184b13e95dd7705",
+    "boolean_contracts.py": "b832098bb832b56d2bd100bc5b66d02546820bdabfac51fff22eaa395c58f257",
+    "case.json": "f7400ca9b86e598dbbccedb0bc3c70ebda70b1643ce423d0aa6d68b90e1c3320",
+    "contracts.json": "33f368991a198a4a800ac08de18f90a4b46bd45a1428ce12cdfc512736ed2ecc",
+    "expected.json": "d415228687b4c596708dd089afd7c132741e6dc02f3ffbc9d8a0f8e02109c749",
+    "implementation-plan.json": "19151d04137636a23b7bceed6a1aa1c91e3ebbf8990c661d311fe78cf8729c3b",
+    "inputs.json": "15ad8ec1bea5ca36126fe207ebf90b666053a9e2c6d501c6e441ab6a3b945c04",
+    "run_case.py": "4f216b3bcad70d888c36293de0a24733c510cf436eeda6c7c64e0e657c831821",
+    "semgrep-reference.json": "fb85cd01f5e0d1951e5ebbb30b0090222d08204dc3a79149117a139b7c401565",
+    "tests/test_boolean_checker.py": "3481ade0cb358b98061f4ad2c4db75131245d1d02e72dc9b7913de290a9611ab",
+    "tests/test_boolean_contracts.py": "d1d036bc8a047e49e2d34397a3d6df696d517420ed42e0c50e94f52b5c0b364c"
+  },
+  "preserved_previous": {
+    "previous_payload_files_verified": 2805,
+    "old_case_method_sha256": "b348f4aaf047c23f2e864aea540329a50f63b3d920bc499533c8fb694b6c35c9",
+    "old_case_manifest_sha256": "31ab8de098dca9de14a9e3d4bdac4560f490ded0b27361bf51fb715a8f40626d",
+    "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+  },
+  "worker_sha256": "ceca17ce0e0b413821fb223ebcf9d967e56f42e1714c4040e46f467e68be780d",
+  "frozen_before_primary_rerun": true,
+  "scope": "Only explicit Boolean obligation interface/selection/evidence changed; old AST theory and all previous files preserved.",
+  "new_LLM_extraction_requests": 0
+}

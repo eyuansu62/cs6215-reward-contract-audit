@@ -1,0 +1,21 @@
+{
+  "contract": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1,
+    "obligations": [
+      "valid_boolean_token",
+      "equals_reference"
+    ]
+  },
+  "origin": "Exact model-selected IR; no obligations added",
+  "raw_contract_unchanged": true
+}

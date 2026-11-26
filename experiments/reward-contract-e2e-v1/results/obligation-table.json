@@ -1,0 +1,255 @@
+{
+  "rows": [
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "reference_verdict": "full_credit_violation",
+      "llm_verdict": "full_credit_violation",
+      "reference_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "llm_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "reference_violated": [
+        "equals_reference"
+      ],
+      "llm_violated": [
+        "equals_reference"
+      ],
+      "paired_ids_equal": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "reference_verdict": "full_credit_violation",
+      "llm_verdict": "full_credit_violation",
+      "reference_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "llm_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "reference_violated": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "llm_violated": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "paired_ids_equal": true
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "reference_verdict": "no_violation_for_this_witness",
+      "llm_verdict": "no_violation_for_this_witness",
+      "reference_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "llm_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "reference_violated": [],
+      "llm_violated": [],
+      "paired_ids_equal": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "executed_reward": 0.0,
+      "reference_verdict": "no_violation_for_this_witness",
+      "llm_verdict": "no_violation_for_this_witness",
+      "reference_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "llm_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "reference_violated": [],
+      "llm_violated": [],
+      "paired_ids_equal": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "executed_reward": 0.0,
+      "reference_verdict": "no_violation_for_this_witness",
+      "llm_verdict": "no_violation_for_this_witness",
+      "reference_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "llm_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "reference_violated": [],
+      "llm_violated": [],
+      "paired_ids_equal": true
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "reference_verdict": "no_violation_for_this_witness",
+      "llm_verdict": "no_violation_for_this_witness",
+      "reference_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "llm_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "reference_violated": [],
+      "llm_violated": [],
+      "paired_ids_equal": true
+    }
+  ],
+  "cases": "Six correlated witness/version pairs in one known bug family; 12conditionrows."
+}

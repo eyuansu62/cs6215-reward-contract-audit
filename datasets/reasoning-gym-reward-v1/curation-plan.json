@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-08T07:25:30.029504+00:00",
+  "scope": "Dataset curation and reproducible counterexamples only. No analyzer changes, baseline/model predictions, RL training or publication.",
+  "repository": "open-thought/reasoning-gym",
+  "selection": "Start with public issues543/544/545 and linked upstream repair PRs; add4 source-selected scalar reward controls with explicit task meaning and standard-library-only scoring dependencies. Retain unsupported/ambiguous subjects separately.",
+  "artifact_unit": "Version-pinned real scoring method + task contract + dependency source + counterexamples + issue/fix provenance. Version pairs and multiple probes are correlated, not independent bugs.",
+  "evidence_levels": [
+    "upstream_reported",
+    "source_reviewed",
+    "extracted_real_method_executed",
+    "full_package_executed"
+  ],
+  "fix_labels": "Merged fixes, proposed upstream fixes and locally authored repairs must remain distinct. No local repair is presented as upstream.",
+  "normal_labels": "Scoped to declared task/input contract and evidence; no global absence-of-bugs claim.",
+  "execution_policy": "Do not import or execute upstream modules/generators/framework/training. Execute only AST-checked extracted real scoring methods and necessary pure helpers with allowlisted stdlib dependencies in a time-bounded offline subprocess. No new dependency installation. Record exact harness adaptations and AST correspondence.",
+  "test_inputs": "Small explicit contract/witness inputs, not sampled hidden benchmark rows. Additional boundary and legitimate partial-credit probes separately marked.",
+  "future_evaluation": "All source bodies inspected now are development/exposed material. No unseen-helper or generalization claim; freeze data and record source exposure before analyzer work.",
+  "preserve": "Do not alter v10 code, results, report or existing archives."
+}

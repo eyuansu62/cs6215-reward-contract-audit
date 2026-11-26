@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "main",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "reasoning_gym/arithmetic/prime_factorization.py",
+  "sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+  "git_blob_sha1": "0a3072842bbb46de951a99659954691a8ffa1b55",
+  "bytes": 4024,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/prime_factorization.py",
+  "local_path": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+  "fetched_utc": "2026-11-08T07:30:07.830765+00:00",
+  "git_blob_verified": true
+}

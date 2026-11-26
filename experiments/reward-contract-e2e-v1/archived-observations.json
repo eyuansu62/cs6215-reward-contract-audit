@@ -1,0 +1,125 @@
+{
+  "role": "Already executed replay-02 evidence; not stale pending fields in curation records.",
+  "observations": [
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "entry": {
+        "answer": "True"
+      },
+      "reward": 1.0,
+      "frozen_observation": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "evidence_file": "datasets/reasoning-gym-reward-v1/results/replay-02/rg-issue-544-original.json",
+      "evidence_file_sha256": "97f32d519e2d4b6e88b8627c72d1de05cbcd14293244ffa75d8bfe30a0b30a72"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "entry": {
+        "answer": "True"
+      },
+      "reward": 1.0,
+      "frozen_observation": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "evidence_file": "datasets/reasoning-gym-reward-v1/results/replay-02/rg-issue-544-original.json",
+      "evidence_file_sha256": "97f32d519e2d4b6e88b8627c72d1de05cbcd14293244ffa75d8bfe30a0b30a72"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "entry": {
+        "answer": "True"
+      },
+      "reward": 1.0,
+      "frozen_observation": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "evidence_file": "datasets/reasoning-gym-reward-v1/results/replay-02/rg-issue-544-original.json",
+      "evidence_file_sha256": "97f32d519e2d4b6e88b8627c72d1de05cbcd14293244ffa75d8bfe30a0b30a72"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "entry": {
+        "answer": "True"
+      },
+      "reward": 0.0,
+      "frozen_observation": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "evidence_file": "datasets/reasoning-gym-reward-v1/results/replay-02/rg-pr-561-proposed-repair.json",
+      "evidence_file_sha256": "d309bd09c43b6743439c51a8b4b0846a4b24754d329bb33797b5f9e467f77f0b"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "entry": {
+        "answer": "True"
+      },
+      "reward": 0.0,
+      "frozen_observation": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "evidence_file": "datasets/reasoning-gym-reward-v1/results/replay-02/rg-pr-561-proposed-repair.json",
+      "evidence_file_sha256": "d309bd09c43b6743439c51a8b4b0846a4b24754d329bb33797b5f9e467f77f0b"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "entry": {
+        "answer": "True"
+      },
+      "reward": 1.0,
+      "frozen_observation": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "evidence_file": "datasets/reasoning-gym-reward-v1/results/replay-02/rg-pr-561-proposed-repair.json",
+      "evidence_file_sha256": "d309bd09c43b6743439c51a8b4b0846a4b24754d329bb33797b5f9e467f77f0b"
+    }
+  ]
+}

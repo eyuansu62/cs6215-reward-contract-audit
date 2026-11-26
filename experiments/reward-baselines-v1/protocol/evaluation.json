@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-11-08T14:12:04.558000+00:00",
+  "objective": "Characterize existing Semgrep and a minimal authored non-neural symbolic/path checker before deciding any LLM role.",
+  "dataset": "datasets/reasoning-gym-reward-v1",
+  "dataset_freeze_sha256": "174a493fdb19d4c3fe7b05ebfa65d2fb7f8ab6c0c909111045e22def454e6cfb",
+  "primary_unit": "7 function-version/contract cases,5correlated function families,one source-exposed project.63existingexecutionprobes are label-validation evidence,not detector inputs/cases.",
+  "methods": [
+    "PinnedSemgrepCE1.183.0 with fixed generic risky-idiom rules and straightforward source guard patterns",
+    "Small source-only non-neural structural/path-certificate checker; unsupported reasoning=>Unknown. Not arbitrary-Python verification or concreteprobe replay."
+  ],
+  "detector_inputs": [
+    "exact score/helper source",
+    "fixed structured task contract and native argument/reference assumptions"
+  ],
+  "forbidden_inputs": [
+    "oracle labels",
+    "curated probe values or observed rewards",
+    "issue/PR text or status",
+    "source version disposition or subject id as a classification condition"
+  ],
+  "outputs": [
+    "alarm",
+    "no_alarm",
+    "unknown"
+  ],
+  "semgrep_no_alarm": "Complete parse/scan with no warning, not proof of semantic contract correctness. Missing structural coverage/error=>Unknown.",
+  "symbolic_no_alarm": "Only when a bounded source/guard certificate establishes target implication under declared contract; otherwiseUnknown.",
+  "scoring": {
+    "TP": "alarm on positive",
+    "FP": "alarm on negative",
+    "FN": "no_alarm on positive",
+    "TN": "no_alarm on negative",
+    "Unknown": "Report separatelypositive/negative; neverTN. PositiveUnknown is a recall miss.",
+    "accuracy": "(TP+TN)/all7",
+    "coverage": "determinate cases/all7",
+    "recall_with_unknown": "TP/(TP+FN+positiveUnknown)",
+    "paired": "Additional determinate-correct gains/losses vsSemgrep, never inferneuralgain."
+  },
+  "controlled_scope": [
+    "Implement onlyneededBoolean/normalization and source-return/guard certificates; no SDK/thread/distributedtraining/LLM integration.",
+    "Use synthetic regressions for development, separate diagnostic accounting.",
+    "Freeze detector code/rules/tests before primary predictions; preserve failures and never outcome-tune the frozen run.",
+    "Allthisissource-exposeddevelopmentcharacterization,notindependentgeneralization."
+  ],
+  "interpretation": [
+    "If Semgrep already catches allknownbugs, do not weakenit to createLLMbenefit.",
+    "A customcheckerUnknown causedbyunimplementednumeric/loopsemantics is not evidence that LLM is needed.",
+    "Use results to distinguish manual contract acquisition, library models and helper/loop reasoning as potential future work; noLLMbenefitclaim now."
+  ],
+  "no_new_dependencies": true,
+  "no_experimental_model_calls": true,
+  "historical_snapshots_unchanged": true
+}

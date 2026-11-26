@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "$HOMEBREW/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/run_study.py",
+    "worker",
+    "--unit",
+    "H01",
+    "--probe",
+    "true-invalid"
+  ],
+  "returncode": 0,
+  "timeout_seconds": 8
+}

@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "pinned_text_files": 12,
+  "git_blob_checks": [
+    {
+      "repo": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "path": "README.md",
+      "git_blob_sha1": "a79430a65d14378deba35f26d4293f5286d8a9dc",
+      "sha256": "662af807c47a0865ec1f92d8cc859fbc4021c9d03c664741ed9a7b04ee53de1f",
+      "verified": true
+    },
+    {
+      "repo": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "path": "base_env.py",
+      "git_blob_sha1": "d5df7d4c7b79462fdf488b836773efb610dcf4ee",
+      "sha256": "58c5d19810a9d9793f090896f3b3f519754e7c6a498fb113e2f7893da98c1330",
+      "verified": true
+    },
+    {
+      "repo": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "path": "algorithmic/isomorphic_strings.py",
+      "git_blob_sha1": "008caee6aa0c0916bee58e69291cc64716036961",
+      "sha256": "a86ff744020df9b2a83b8da54f2d02ed054c9620803eff5cd7b799c28b649098",
+      "verified": true
+    },
+    {
+      "repo": "huggingface/OpenEnv",
+      "commit": "9fac2a9acae682d5c18857198eac7152d7bf1a63",
+      "path": "envs/reasoning_gym_env/README.md",
+      "git_blob_sha1": "6720c5242ce5da65791908c9b0c55efc3c2a8002",
+      "sha256": "ea81ed3b2dc574edbb9f25b4d1f23b54f58426eed68cc4b843728903e322362a",
+      "verified": true
+    },
+    {
+      "repo": "huggingface/OpenEnv",
+      "commit": "9fac2a9acae682d5c18857198eac7152d7bf1a63",
+      "path": "envs/reasoning_gym_env/server/reasoning_gym_environment.py",
+      "git_blob_sha1": "3428cc550f9c9362e4b0b6bde87e1848ff6f7da7",
+      "sha256": "fc278bc9463ea06097b3ea1663aa361d05d4331410523596491fb08cc43b64dd",
+      "verified": true
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "environments/reasoning_gym_environment/reasoning_gym_environment.py",
+      "git_blob_sha1": "6982507c70b96aa93bf35d67f9b35ce7a850fc5f",
+      "sha256": "f10a6560c39a120a6d6cddbcb1c298fca9e570e72a6fa6b15d5eb48cd27eeb82",
+      "verified": true
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "environments/reasoning_gym_environment/README.md",
+      "git_blob_sha1": "c22a8bebe327580f90203aaa727cf2833d5f929a",
+      "sha256": "a60e9efd32fe2ca3ddf921150d7068d1b1209fcaad59063f21eb8f8ce4c7487d",
+      "verified": true
+    },
+    {
+      "repo": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "path": "README.md",
+      "git_blob_sha1": "06304aeddd0769a45ea30283ccae4ca3674477c8",
+      "sha256": "ce23f6500b7629d50873eca6af572a5fb977e3ce9f6bf4be3cb8dd44e532f849",
+      "verified": true
+    },
+    {
+      "repo": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "path": "reasoning_gym/dataset.py",
+      "git_blob_sha1": "412de7734c90810ac3514201e212905ad62f2e00",
+      "sha256": "0e5d35a3a157ff9312ed00c43d529ab990537045f15d9e8a820c7c239e0baae5",
+      "verified": true
+    },
+    {
+      "repo": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+      "git_blob_sha1": "e70136e520805f023326ec2cb3e20db5c7ecb6f4",
+      "sha256": "e52abbb650a0cc8a560b254bb347b15fe36491903f0b28dc4c83a66cf4d33257",
+      "verified": true
+    },
+    {
+      "repo": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "path": "README.md",
+      "git_blob_sha1": "59ca1facbd4bbdd5dc9c0ec26a2933cd23b0c823",
+      "sha256": "3a50e09a5fc39af456951c64163696d01852b3670dbb90ccc90413c4d6106268",
+      "verified": true
+    },
+    {
+      "repo": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "path": "reasoning_gym/dataset.py",
+      "git_blob_sha1": "17bb00e42fe4768448b325e820464065ad0ae02d",
+      "sha256": "b8b8abd6bec41504e7ba07c7905568df7481e1cab2a66792efb07fa785dc837a",
+      "verified": true
+    }
+  ],
+  "subject_executed": false,
+  "model_or_analyzer_calls": 0
+}

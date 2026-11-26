@@ -1,0 +1,14 @@
+{
+  "verdict": "unknown",
+  "active_obligations": null,
+  "per_obligation": [],
+  "violated_obligations": [],
+  "alarm_obligations": [],
+  "compiled_contract": null,
+  "input_fingerprint": null,
+  "contract_fingerprint": null,
+  "unsupported_reason": "missing_contract",
+  "source_spans": [],
+  "target_source_executed": false,
+  "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+}

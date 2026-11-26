@@ -1,0 +1,54 @@
+{
+  "verdict": "no_alarm",
+  "certificate": {
+    "kind": "all_normal_full_credit_paths_certified",
+    "full_credit_path_count": 1,
+    "paths": [
+      {
+        "kind": "boolean_normalized_equality_implication",
+        "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.",
+        "return_span": {
+          "line": 4,
+          "end_line": 4
+        },
+        "conditions": [
+          {
+            "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+            "required_truth": true,
+            "source_span": {
+              "line": 2,
+              "end_line": 2
+            }
+          },
+          {
+            "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+            "required_truth": true,
+            "source_span": {
+              "line": 2,
+              "end_line": 2
+            }
+          },
+          {
+            "condition": "answer.strip().lower() == entry['answer'].strip().lower()",
+            "required_truth": true,
+            "source_span": {
+              "line": 3,
+              "end_line": 3
+            }
+          }
+        ]
+      }
+    ],
+    "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+  },
+  "evidence": [],
+  "source_spans": [
+    {
+      "line": 4,
+      "end_line": 4
+    }
+  ],
+  "unsupported_reason": null,
+  "method": "bounded-static-source-path-certificates-v1",
+  "wall_seconds": 0.000601
+}

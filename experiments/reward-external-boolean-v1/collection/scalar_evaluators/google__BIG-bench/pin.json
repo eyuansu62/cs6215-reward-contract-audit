@@ -1,0 +1,6 @@
+{
+  "repo": "google/BIG-bench",
+  "commit": "092b196c1f8f14a54bbc62f24759d43bde46dd3b",
+  "pin_method": "git ls-remote HEAD, read-only public transport; REST rate limit fallback",
+  "observed_utc": "2026-11-09T02:51:02.174098+00:00"
+}

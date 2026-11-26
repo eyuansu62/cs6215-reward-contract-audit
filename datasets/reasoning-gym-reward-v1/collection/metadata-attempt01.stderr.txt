@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/collect_source.py", line 86, in <module>
+    if a.operation=='metadata':metadata()
+                               ~~~~~~~~^^
+  File "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/collect_source.py", line 42, in metadata
+    with ThreadPoolExecutor(max_workers=4) as pool: values = dict(pool.map(one, endpoints.items()))
+                                                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$HOMEBREW/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 639, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "$HOMEBREW/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 311, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "$HOMEBREW/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "$HOMEBREW/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "$HOMEBREW/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "$HOMEBREW/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/collect_source.py", line 41, in one
+    return name, api(endpoint, ROOT/'collection'/name)
+                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/collect_source.py", line 27, in api
+    if result.returncode: raise RuntimeError('Public API read failed: ' + endpoint + ': ' + result.stderr.decode()[:250])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Public API read failed: repos/open-thought/reasoning-gym/: gh: Not Found (HTTP 404)
+

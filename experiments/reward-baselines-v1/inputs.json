@@ -1,0 +1,192 @@
+{
+  "detector_input_scope": "Exact score/helper source, source-derived stdlib import aliases and literal default parameters, fixed reviewed contracts only. No curated probes, rewards, issues, status, source disposition or labels.",
+  "units": [
+    {
+      "unit_id": "531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: dict, tol: float = 1e-4) -> float:\n    \"\"\"\n        Compute reward for LLM answer against oracle probability.\n        Handles decimals, fractions, small numeric errors, and extra text.\n        \"\"\"\n    reward = 0.0\n    oracle_answer = entry[\"answer\"]\n\n    if answer is None or len(answer.strip()) == 0:\n        return reward\n\n    answer = answer.replace(\",\", \"\")\n    oracle_answer = oracle_answer.replace(\",\", \"\")\n\n    try:\n        answer_float = float(Fraction(answer))\n        oracle_answer_float = float(Fraction(oracle_answer))\n    except (ValueError, ZeroDivisionError):\n        return reward\n\n    if abs(answer_float - oracle_answer_float) <= tol:\n        return 1.0\n\n    answer_str = f\"{answer_float:.10g}\"\n    oracle_answer_str = f\"{oracle_answer_float:.10g}\"\n\n    # Partial Reward for matching prefix\n    match_len = 0\n    for a_char, o_char in zip(answer_str, oracle_answer_str):\n        if a_char == o_char:\n            match_len += 1\n        else:\n            break\n\n    reward = match_len / min(len(oracle_answer_str), len(answer_str))\n\n    return reward\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: dict, tol: float = 1e-4) -> float:\n    \"\"\"\n        Compute reward for LLM answer against oracle probability.\n        Handles decimals, fractions, small numeric errors, and extra text.\n        \"\"\"\n    reward = 0.0\n    oracle_answer = entry[\"answer\"]\n\n    if answer is None or len(answer.strip()) == 0:\n        return reward\n\n    answer = answer.replace(\",\", \"\")\n    oracle_answer = oracle_answer.replace(\",\", \"\")\n\n    try:\n        answer_float = float(Fraction(answer))\n        oracle_answer_float = float(Fraction(oracle_answer))\n    except (ValueError, ZeroDivisionError):\n        return reward\n\n    if abs(answer_float - oracle_answer_float) <= tol:\n        return 1.0\n\n    answer_str = f\"{answer_float:.10g}\"\n    oracle_answer_str = f\"{oracle_answer_float:.10g}\"\n\n    # Partial Reward for matching prefix\n    match_len = 0\n    for a_char, o_char in zip(answer_str, oracle_answer_str):\n        if a_char == o_char:\n            match_len += 1\n        else:\n            break\n\n    reward = match_len / min(len(oracle_answer_str), len(answer_str))\n\n    return reward\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_PROBABILITY_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite probability in [0,1] in entry.answer",
+        "normalization": [
+          "comma removal",
+          "rational/decimal interpretation"
+        ],
+        "absolute_tolerance": 0.0001,
+        "full_credit_requires": "candidate parses to a finite number within the stated absolute tolerance of reference",
+        "allowed_partial_credit": "Wrong finite answers may receive a positive score strictly below full credit."
+      },
+      "stdlib_bindings": {
+        "math": "math",
+        "Fraction": "fractions.Fraction"
+      },
+      "fixed_parameters": {
+        "tol": 0.0001
+      }
+    },
+    {
+      "unit_id": "109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "stdlib_bindings": {},
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3",
+      "entry_name": "score_answer",
+      "source": "@staticmethod\ndef parse_string_to_complex(answer: str) -> complex:\n    if answer is None:\n        return None\n\n    try:\n        # Normalize the answer string by removing spaces and converting to lowercase\n        answer = answer.replace(\" \", \"\").lower()\n\n        # remove brackets\n        while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n            answer = answer[1:-1]\n\n        # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n        answer = answer.replace(\"i\", \"j\")\n\n        # Handle real numbers (no imaginary part)\n        if \"j\" not in answer:\n            return complex(float(answer))\n\n        # Handle pure imaginary numbers\n        if answer == \"j\":\n            return complex(0, 1)\n        if answer == \"-j\":\n            return complex(0, -1)\n\n        # Handle cases like \"7j\" or \"-7j\" (no real part)\n        if (\n            answer.endswith(\"j\")\n            and not any(c in answer[:-1] for c in \"+-\")\n            or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n        ):\n            # Extract coefficient\n            coef = answer[:-1]\n            if coef == \"\":\n                coef = \"1\"\n            elif coef == \"-\":\n                coef = \"-1\"\n            return complex(0, float(coef))\n\n        # Handle complex numbers with both parts\n        # Make sure there's a + or - before j if it's not at the beginning\n        if \"j\" in answer and not answer.endswith(\"j\"):\n            return None  # Invalid format like \"3j+2\"\n\n        # Handle cases like \"3+j\" (implicit 1)\n        if \"+j\" in answer:\n            answer = answer.replace(\"+j\", \"+1j\")\n        if \"-j\" in answer:\n            answer = answer.replace(\"-j\", \"-1j\")\n\n        # Parse the normalized string into a complex number\n        return complex(answer)\n\n    except (ValueError, TypeError):\n        return None\n\ndef score_answer(self, answer: Optional[str], entry: dict) -> float:\n    \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n    if answer is None:\n        return 0.0\n\n    metadata = entry[\"metadata\"]\n    try:\n        student_result = self.parse_string_to_complex(answer)\n        expected_result = complex(*metadata[\"result\"])\n        # Calculate distance-based score using exponential decay\n        distance = abs(student_result - expected_result)\n        score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n        return score\n\n    except (ValueError, TypeError):\n        return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: dict) -> float:\n    \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n    if answer is None:\n        return 0.0\n\n    metadata = entry[\"metadata\"]\n    try:\n        student_result = self.parse_string_to_complex(answer)\n        expected_result = complex(*metadata[\"result\"])\n        # Calculate distance-based score using exponential decay\n        distance = abs(student_result - expected_result)\n        score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n        return score\n\n    except (ValueError, TypeError):\n        return 0.0\n",
+      "helpers": [
+        {
+          "name": "parse_string_to_complex",
+          "source": "@staticmethod\ndef parse_string_to_complex(answer: str) -> complex:\n    if answer is None:\n        return None\n\n    try:\n        # Normalize the answer string by removing spaces and converting to lowercase\n        answer = answer.replace(\" \", \"\").lower()\n\n        # remove brackets\n        while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n            answer = answer[1:-1]\n\n        # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n        answer = answer.replace(\"i\", \"j\")\n\n        # Handle real numbers (no imaginary part)\n        if \"j\" not in answer:\n            return complex(float(answer))\n\n        # Handle pure imaginary numbers\n        if answer == \"j\":\n            return complex(0, 1)\n        if answer == \"-j\":\n            return complex(0, -1)\n\n        # Handle cases like \"7j\" or \"-7j\" (no real part)\n        if (\n            answer.endswith(\"j\")\n            and not any(c in answer[:-1] for c in \"+-\")\n            or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n        ):\n            # Extract coefficient\n            coef = answer[:-1]\n            if coef == \"\":\n                coef = \"1\"\n            elif coef == \"-\":\n                coef = \"-1\"\n            return complex(0, float(coef))\n\n        # Handle complex numbers with both parts\n        # Make sure there's a + or - before j if it's not at the beginning\n        if \"j\" in answer and not answer.endswith(\"j\"):\n            return None  # Invalid format like \"3j+2\"\n\n        # Handle cases like \"3+j\" (implicit 1)\n        if \"+j\" in answer:\n            answer = answer.replace(\"+j\", \"+1j\")\n        if \"-j\" in answer:\n            answer = answer.replace(\"-j\", \"-1j\")\n\n        # Parse the normalized string into a complex number\n        return complex(answer)\n\n    except (ValueError, TypeError):\n        return None\n"
+        }
+      ],
+      "contract": {
+        "id": "C_COMPLEX_FINITE",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite complex result in entry.metadata.result",
+        "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+        "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+      },
+      "stdlib_bindings": {
+        "cmath": "cmath",
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "stdlib_bindings": {},
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603",
+      "entry_name": "score_answer",
+      "source": "@staticmethod\ndef parse_string_to_complex(answer: str) -> complex:\n    if answer is None:\n        return None\n\n    try:\n        # Normalize the answer string by removing spaces and converting to lowercase\n        answer = answer.replace(\" \", \"\").lower()\n\n        # remove brackets\n        while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n            answer = answer[1:-1]\n\n        # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n        answer = answer.replace(\"i\", \"j\")\n\n        # Handle real numbers (no imaginary part)\n        if \"j\" not in answer:\n            return complex(float(answer))\n\n        # Handle pure imaginary numbers\n        if answer == \"j\":\n            return complex(0, 1)\n        if answer == \"-j\":\n            return complex(0, -1)\n\n        # Handle cases like \"7j\" or \"-7j\" (no real part)\n        if (\n            answer.endswith(\"j\")\n            and not any(c in answer[:-1] for c in \"+-\")\n            or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n        ):\n            # Extract coefficient\n            coef = answer[:-1]\n            if coef == \"\":\n                coef = \"1\"\n            elif coef == \"-\":\n                coef = \"-1\"\n            return complex(0, float(coef))\n\n        # Handle complex numbers with both parts\n        # Make sure there's a + or - before j if it's not at the beginning\n        if \"j\" in answer and not answer.endswith(\"j\"):\n            return None  # Invalid format like \"3j+2\"\n\n        # Handle cases like \"3+j\" (implicit 1)\n        if \"+j\" in answer:\n            answer = answer.replace(\"+j\", \"+1j\")\n        if \"-j\" in answer:\n            answer = answer.replace(\"-j\", \"-1j\")\n\n        # Parse the normalized string into a complex number\n        return complex(answer)\n\n    except (ValueError, TypeError):\n        return None\n\ndef score_answer(self, answer: Optional[str], entry: dict) -> float:\n    \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n    if answer is None:\n        return 0.0\n\n    try:\n        student_result = self.parse_string_to_complex(answer)\n        if student_result is None:\n            return 0.0\n\n        expected_result = complex(*entry[\"metadata\"][\"result\"])\n        distance = abs(student_result - expected_result)\n\n        if not math.isfinite(distance):\n            return 0.0\n\n        return math.exp(-distance)\n\n    except (ValueError, TypeError):\n        return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: dict) -> float:\n    \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n    if answer is None:\n        return 0.0\n\n    try:\n        student_result = self.parse_string_to_complex(answer)\n        if student_result is None:\n            return 0.0\n\n        expected_result = complex(*entry[\"metadata\"][\"result\"])\n        distance = abs(student_result - expected_result)\n\n        if not math.isfinite(distance):\n            return 0.0\n\n        return math.exp(-distance)\n\n    except (ValueError, TypeError):\n        return 0.0\n",
+      "helpers": [
+        {
+          "name": "parse_string_to_complex",
+          "source": "@staticmethod\ndef parse_string_to_complex(answer: str) -> complex:\n    if answer is None:\n        return None\n\n    try:\n        # Normalize the answer string by removing spaces and converting to lowercase\n        answer = answer.replace(\" \", \"\").lower()\n\n        # remove brackets\n        while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n            answer = answer[1:-1]\n\n        # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n        answer = answer.replace(\"i\", \"j\")\n\n        # Handle real numbers (no imaginary part)\n        if \"j\" not in answer:\n            return complex(float(answer))\n\n        # Handle pure imaginary numbers\n        if answer == \"j\":\n            return complex(0, 1)\n        if answer == \"-j\":\n            return complex(0, -1)\n\n        # Handle cases like \"7j\" or \"-7j\" (no real part)\n        if (\n            answer.endswith(\"j\")\n            and not any(c in answer[:-1] for c in \"+-\")\n            or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n        ):\n            # Extract coefficient\n            coef = answer[:-1]\n            if coef == \"\":\n                coef = \"1\"\n            elif coef == \"-\":\n                coef = \"-1\"\n            return complex(0, float(coef))\n\n        # Handle complex numbers with both parts\n        # Make sure there's a + or - before j if it's not at the beginning\n        if \"j\" in answer and not answer.endswith(\"j\"):\n            return None  # Invalid format like \"3j+2\"\n\n        # Handle cases like \"3+j\" (implicit 1)\n        if \"+j\" in answer:\n            answer = answer.replace(\"+j\", \"+1j\")\n        if \"-j\" in answer:\n            answer = answer.replace(\"-j\", \"-1j\")\n\n        # Parse the normalized string into a complex number\n        return complex(answer)\n\n    except (ValueError, TypeError):\n        return None\n"
+        }
+      ],
+      "contract": {
+        "id": "C_COMPLEX_FINITE",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite complex result in entry.metadata.result",
+        "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+        "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+      },
+      "stdlib_bindings": {
+        "cmath": "cmath",
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n    \"\"\"Determine if the solution provided is a valid palindrome.\n        The answer is expected to be a single string\n\n        Expected behavior:\n        - Correct answer (palindrome with only correct letters in the correct quantities) gives 1.0\n        - An answer that is a palindrome, but not with the same letters as provided, gives 0.05\n        - An answer that is a string, but not a palindrome gives 0.02\n        - An empty string gives 0.0\n        - None gives 0.0.\n        \"\"\"\n    if answer is None or not isinstance(answer, str):\n        return 0.0  # No answer given\n\n    if answer == \"\":\n        return 0.0\n\n    metadata = entry[\"metadata\"]\n    answer = answer.strip().lower()\n    expected_letters = metadata[\"letters\"]\n\n    # Check if the answer is a palindrome\n    if answer != answer[::-1]:\n        return 0.02\n\n    # Check if answer contains the same letters as provided (ignoring order)\n    if sorted(answer) != sorted(expected_letters):\n        return 0.05\n\n    return 1.0  # Correct solution\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n    \"\"\"Determine if the solution provided is a valid palindrome.\n        The answer is expected to be a single string\n\n        Expected behavior:\n        - Correct answer (palindrome with only correct letters in the correct quantities) gives 1.0\n        - An answer that is a palindrome, but not with the same letters as provided, gives 0.05\n        - An answer that is a string, but not a palindrome gives 0.02\n        - An empty string gives 0.0\n        - None gives 0.0.\n        \"\"\"\n    if answer is None or not isinstance(answer, str):\n        return 0.0  # No answer given\n\n    if answer == \"\":\n        return 0.0\n\n    metadata = entry[\"metadata\"]\n    answer = answer.strip().lower()\n    expected_letters = metadata[\"letters\"]\n\n    # Check if the answer is a palindrome\n    if answer != answer[::-1]:\n        return 0.02\n\n    # Check if answer contains the same letters as provided (ignoring order)\n    if sorted(answer) != sorted(expected_letters):\n        return 0.05\n\n    return 1.0  # Correct solution\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_PALINDROME_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "nonempty lowercase ASCII multiset in entry.metadata.letters, with a valid palindrome construction",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a palindrome with exactly the given letter multiset",
+        "allowed_partial_credit": "0.02 non-palindrome and0.05 wrong letters are legitimate and must not be flagged solely because positive."
+      },
+      "stdlib_bindings": {
+        "string": "string"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393",
+      "entry_name": "score_answer",
+      "source": "def _normalize_answer(self, answer: str) -> list[int]:\n    \"\"\"Parse and sort factors from a string\"\"\"\n    if not answer or answer.strip() == \"\":\n        return []\n\n    return sorted([int(factor.strip()) for factor in answer.split(\"×\") if factor.strip() != \"\"])\n\ndef score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n    oracle_answer = entry[\"answer\"]\n    reward = 0.0\n    if answer is not None:\n        oracle_answer_parsed = self._normalize_answer(oracle_answer)\n        answer_parsed = self._normalize_answer(answer)\n        if oracle_answer_parsed == answer_parsed:\n            reward = 1.0\n        elif math.prod(oracle_answer_parsed) == math.prod(answer_parsed):\n            reward = 0.5\n        else:\n            reward = 0.01\n\n    return reward\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n    oracle_answer = entry[\"answer\"]\n    reward = 0.0\n    if answer is not None:\n        oracle_answer_parsed = self._normalize_answer(oracle_answer)\n        answer_parsed = self._normalize_answer(answer)\n        if oracle_answer_parsed == answer_parsed:\n            reward = 1.0\n        elif math.prod(oracle_answer_parsed) == math.prod(answer_parsed):\n            reward = 0.5\n        else:\n            reward = 0.01\n\n    return reward\n",
+      "helpers": [
+        {
+          "name": "_normalize_answer",
+          "source": "def _normalize_answer(self, answer: str) -> list[int]:\n    \"\"\"Parse and sort factors from a string\"\"\"\n    if not answer or answer.strip() == \"\":\n        return []\n\n    return sorted([int(factor.strip()) for factor in answer.split(\"×\") if factor.strip() != \"\"])\n"
+        }
+      ],
+      "contract": {
+        "id": "C_PRIME_FACTORS_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer gives correct prime factors of an integer>=2",
+        "normalization": [
+          "split multiplication sign",
+          "strip factors",
+          "ignore empty separator tokens",
+          "parse native integers",
+          "ignore factor order"
+        ],
+        "full_credit_requires": "parsed factors are prime and their product equals the reference product, preserving multiplicity",
+        "allowed_partial_credit": "0.5 correct product but incomplete factorization;0.01 other numeric answers. Parsing exceptions do not establish fail-open."
+      },
+      "stdlib_bindings": {
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    }
+  ]
+}

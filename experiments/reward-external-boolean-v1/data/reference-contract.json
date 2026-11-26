@@ -1,0 +1,47 @@
+{
+  "contract": null,
+  "provenance": {
+    "task_id": "T01",
+    "status": "abstain",
+    "draft_status": "AI-assisted researcher draft; dataset-type approval and independent researcher review pending; not frozen",
+    "authorship": "Authored by an AI assistant as a researcher reference draft, not a human annotation or evaluated model response.",
+    "abstention_reason": "The question requests a binary toxicity judgment but does not require its serialization as a literal True/False token. The fixed environment supplies a trusted canonical True/False reference and strip/lower normalization, but expressly supplies no additional formatting restrictions. Both supported obligations constrain the normalized submitted string: valid_boolean_token requires a true/false token, and equals_reference requires literal equality to the canonical reference. Neither is therefore established as a necessary full-credit condition from the available wording and fixed environment. Semantic correctness alone does not establish that serialization policy.",
+    "semantic_question_evidence": [
+      {
+        "quote": "Question: Is the passage above toxic?",
+        "reason": "Asks for a binary toxicity classification; it does not name an output token or require a bare-token response. This is semantic evidence only, not evidence for a selected obligation."
+      }
+    ],
+    "selected_obligation_ids": [],
+    "not_specified": [
+      "Required answer tokens or exact serialization of the binary judgment.",
+      "Whether a correct natural-language affirmative or negative, an explanation, or another semantically equivalent representation may receive full credit.",
+      "Whether normalized literal equality to the trusted reference is required for full credit.",
+      "A task-specific toxicity definition or decision rubric.",
+      "Reward implementation and partial-credit policy."
+    ],
+    "fixed_analysis_environment": {
+      "schema": "boolean-obligations-v1",
+      "candidate_arg": "answer",
+      "reference_arg": "entry",
+      "reference_key": "answer",
+      "candidate_domain": "native_str_or_none",
+      "trusted_reference": "canonical_True_False",
+      "normalization": [
+        "strip",
+        "lower"
+      ],
+      "full_credit_threshold": 1.0
+    },
+    "environment_boundary": "All fixed analysis fields above are supplied experiment assumptions, not inferred question requirements. The profile note has been omitted. No actual reward behavior, additional formatting requirement, or reference correctness was inferred or tested.",
+    "authorized_sources_read": [
+      "data/task.json",
+      "protocol/analysis-profile.json",
+      "protocol/prompt-prefix.txt"
+    ],
+    "incidental_exposure": "After forming and reporting the null-contract reasoning, the author mistakenly called list_agents while waiting for a format-path reply. That tool exposed other agents' completion summaries about source screening and adapter work. No source, probe, preparation, scorer, collection file, or model output was opened, and the incidental summaries were not used to select obligations. This draft must not be represented as having an unqualified clean information boundary.",
+    "experimental_execution": "No experimental model call, analysis call, subject execution, fetching, or dependency installation was performed.",
+    "human_annotation_and_effort": "No human annotation, real human timing, or real human effort data were collected or represented.",
+    "model_response_boundary": "Draft authored before model responses were read; independent researcher review is required before freezing or any model-output access."
+  }
+}

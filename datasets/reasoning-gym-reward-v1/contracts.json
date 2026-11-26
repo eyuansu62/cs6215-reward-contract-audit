@@ -1,0 +1,551 @@
+{
+  "role": "AI-assisted reviewed task contracts, separate from future model outputs or analyzer predictions.",
+  "contracts": [
+    {
+      "subject_id": "rg-issue-543-original",
+      "contract_id": "C_PROBABILITY_FULL",
+      "reviewed_contract": {
+        "short": "Score the probability of exactly k or at least k heads in n fair flips; a wrong decimal prefix is not a full solution.",
+        "detailed": "For exactly k heads the generator computes C(n,k)/2^n; for at least k heads it sums C(n,i)/2^n for i=k..n. It stores the decimal with .10g formatting and rational numerator/denominator metadata. Full credit is explicitly returned when absolute numeric error is at most tol (default 1e-4); the fallback is described as partial credit. Therefore a prefix such as 0 for reference 0.875, whose error exceeds tol, must not obtain 1.0. The precise corrected partial-credit curve is not specified by the task or issue, so counterexample expectations require <1 rather than inventing a fixed partial score.",
+        "accepted_candidate_domain": "Optional[str]; after deleting commas, fractions.Fraction must parse the candidate and reference, then conversion to float must succeed. Decimal and rational forms are supported. Docstring says extra text, but the implementation does not extract numbers from arbitrary surrounding prose; no such acceptance is assumed.",
+        "reference_domain": "Generated oracle is a finite probability in (0,1] for n>=1 and 0<=k<=n, formatted with .10g. The explicit 0.875 fixture is valid for n=3, at least k=1 (7/8).",
+        "required_entry_fields": [
+          "answer"
+        ],
+        "full_reward_threshold": "Absolute numeric error <= tol (default 0.0001) is an explicit sufficient condition. Intended rejection of full reward for wrong prefixes outside tol is supported by the partial-credit label and issue; no stronger universal iff claim is made.",
+        "partial_credit": "Existing fallback counts common leading characters of .10g canonical floats and divides by min(string lengths); this denominator can improperly produce 1.0. No corrected universal partial-credit curve is asserted.",
+        "tolerance_default": 0.0001,
+        "numeric_canonicalization": ".10g after Fraction-to-float; commas stripped before parsing."
+      },
+      "normative_source_evidence": [
+        {
+          "role": "task_templates_and_reference",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+          "start_line": 54,
+          "end_line": 88,
+          "excerpt": "        # Pick number of trials\n        n = rng.randint(self.config.min_trials, self.config.max_trials)\n\n        available_types = []\n        if self.config.allow_exact:\n            available_types.append(\"exact\")\n        if self.config.allow_at_least:\n            available_types.append(\"at_least\")\n\n        problem_type = rng.choice(available_types)\n\n        if problem_type == \"exact\":\n            k = rng.randint(0, n)\n            question = f\"What is the probability of getting exactly {k} heads in {n} fair coin flips?\"\n            prob = self._prob_exact_heads(n, k)  # compute actual answer as float\n\n        else:\n            k = rng.randint(0, n)\n            question = f\"What is the probability of getting at least {k} heads in {n} fair coin flips?\"\n            prob = self._prob_at_least_heads(n, k)  # compute actual answer as float\n\n        answer_str = format(prob, \".10g\")\n\n        return {\n            \"question\": question,\n            \"answer\": answer_str,\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"num_trials\": n,\n                \"k_heads\": k,\n                \"problem_type\": problem_type,\n                \"rational\": {\n                    \"numerator\": self._rational_numerator(n, k, problem_type),\n                    \"denominator\": 2**n,",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py#L54-L88"
+        },
+        {
+          "role": "probability_helpers",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+          "start_line": 96,
+          "end_line": 111,
+          "excerpt": "    def _prob_exact_heads(self, n: int, k: int) -> float:\n        \"\"\"Return probability of exactly k heads in n fair coin tosses.\"\"\"\n        comb = math.comb(n, k)\n        return comb * (0.5**n)\n\n    def _prob_at_least_heads(self, n: int, k: int) -> float:\n        \"\"\"Return probability of at least k heads in n fair coin tosses.\"\"\"\n        total = sum(math.comb(n, i) for i in range(k, n + 1))\n        return total * (0.5**n)\n\n    def _rational_numerator(self, n: int, k: int, problem_type: str) -> int:\n        \"\"\"Return the numerator of the probability as a rational number.\"\"\"\n        if problem_type == \"exact\":\n            return math.comb(n, k)\n        else:\n            return sum(math.comb(n, i) for i in range(k, n + 1))",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py#L96-L111"
+        },
+        {
+          "role": "complete_reward_and_tolerance",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+          "start_line": 113,
+          "end_line": 149,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict, tol: float = 1e-4) -> float:\n        \"\"\"\n        Compute reward for LLM answer against oracle probability.\n        Handles decimals, fractions, small numeric errors, and extra text.\n        \"\"\"\n        reward = 0.0\n        oracle_answer = entry[\"answer\"]\n\n        if answer is None or len(answer.strip()) == 0:\n            return reward\n\n        answer = answer.replace(\",\", \"\")\n        oracle_answer = oracle_answer.replace(\",\", \"\")\n\n        try:\n            answer_float = float(Fraction(answer))\n            oracle_answer_float = float(Fraction(oracle_answer))\n        except (ValueError, ZeroDivisionError):\n            return reward\n\n        if abs(answer_float - oracle_answer_float) <= tol:\n            return 1.0\n\n        answer_str = f\"{answer_float:.10g}\"\n        oracle_answer_str = f\"{oracle_answer_float:.10g}\"\n\n        # Partial Reward for matching prefix\n        match_len = 0\n        for a_char, o_char in zip(answer_str, oracle_answer_str):\n            if a_char == o_char:\n                match_len += 1\n            else:\n                break\n\n        reward = match_len / min(len(oracle_answer_str), len(answer_str))\n\n        return reward",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py#L113-L149"
+        },
+        {
+          "role": "original_full_partial_reward_tests",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/tests/test_coin_flip.py",
+          "start_line": 60,
+          "end_line": 79,
+          "excerpt": "def test_coin_flip_score_answer():\n    \"\"\"Test full and partial reward behavior\"\"\"\n    config = CoinFlipConfig(size=200, seed=42)\n    dataset = CoinFlipDataset(config)\n\n    for i in range(len(dataset)):\n        entry = dataset[i]\n        answer = entry[\"answer\"]\n\n        # Exact answer -> full reward\n        reward = dataset.score_answer(answer, entry)\n        assert reward == 1.0\n\n        # Slightly wrong answer -> partial reward\n        if float(answer) + 0.01 <= 1.0:\n            slightly_wrong = str(float(answer) + 0.01)\n        else:\n            slightly_wrong = str(float(answer) - 0.01)\n        reward_partial = dataset.score_answer(slightly_wrong, entry)\n        assert 0.0 <= reward_partial <= 1.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_coin_flip.py#L60-L79"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    },
+    {
+      "subject_id": "rg-issue-544-original",
+      "contract_id": "C_BOOLEAN_FULL",
+      "reviewed_contract": {
+        "short": "Judge the requested Game of Life halting truth value, not Python string truthiness.",
+        "detailed": "The question defines halting as no live cells at or before the configured step bound, with Moore neighborhood and wrapping topology. It explicitly requests True for halting and False otherwise. The generator stores str(not should_oscillate). A correct Boolean answer earns 1.0 and an opposite value or unrelated text earns 0.0. This record checks answer-verifier semantics relative to the supplied reference; it does not verify board dynamics or the generator's oracle.",
+        "accepted_candidate_domain": "Optional[str]; task answers are True or False. PR561 additionally accepts surrounding whitespace and case variations. The original method accepts every nonempty string due to the bug, which is implementation behavior rather than the intended answer domain.",
+        "reference_domain": "entry[\"answer\"] is one of the nonempty strings \"True\" and \"False\".",
+        "required_entry_fields": [
+          "answer"
+        ],
+        "full_reward_threshold": "Semantically equal truth values (PR561 implements answer.strip().lower() == entry[\"answer\"].strip().lower()).",
+        "partial_credit": "None; reward is binary 0.0 or 1.0.",
+        "normalization_evidence": "Whitespace/case tolerance is explicitly tested only in proposed PR561; exact True/False semantics are already stated by original question."
+      },
+      "normative_source_evidence": [
+        {
+          "role": "task_semantics",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 39,
+          "end_line": 49,
+          "excerpt": "class GameOfLifeHaltingDataset(ProceduralDataset):\n    \"\"\"Generates Game of Life games with configurable parameters\n\n    This is a variant of the Game of Life task, which rather than trying to test the algorithmic simulation, tests\n    the ability of the model to do explanatory reasoning of the board. The idea is that a model with good\n    explanatory reasoning will be able to see that a game will not halt without simulating it into the future.\n\n    The task presents a GoL board, and the model is asked to predict if the board will halt (die, all cells zero)\n    after n steps. Sometimes, the board will be made up of 'oscillators', isolated structures which never die.\n    Othertimes, it is filled with non-oscillators, structures which will always die after a few steps. The model\n    should deduce which case the presented board is.",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L39-L49"
+        },
+        {
+          "role": "question_and_reference_generation",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 357,
+          "end_line": 366,
+          "excerpt": "        # Create the question string.\n        question = (\n            f\"This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\\n\"\n            f\"Will this game halt at or before {self.config.max_simulation_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\\n\\n\"\n            f\"Initial board:\\n{board_str}\"\n        )\n\n        return {\n            \"question\": question,\n            \"answer\": str(not should_oscillate),",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L357-L366"
+        },
+        {
+          "role": "claimed_correctness_and_buggy_reward",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 385,
+          "end_line": 401,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L385-L401"
+        },
+        {
+          "role": "proposed_repair_expected_behavior",
+          "snapshot": "pr561",
+          "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+          "source_file": "upstream/pr561/tests/test_game_of_life_halting.py",
+          "start_line": 29,
+          "end_line": 38,
+          "excerpt": "        # Test the scoring\n        correct_answer = item[\"answer\"]\n        wrong_answer = \"False\" if correct_answer == \"True\" else \"True\"\n\n        assert dataset.score_answer(answer=correct_answer, entry=item) == 1.0\n        assert dataset.score_answer(answer=f\"  {correct_answer.lower()}  \", entry=item) == 1.0\n        assert dataset.score_answer(answer=wrong_answer, entry=item) == 0.0\n        assert dataset.score_answer(answer=\"banana\", entry=item) == 0.0\n        assert dataset.score_answer(answer=\"\", entry=item) == 0.0\n        assert dataset.score_answer(answer=None, entry=item) == 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/tests/test_game_of_life_halting.py#L29-L38"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    },
+    {
+      "subject_id": "rg-issue-545-original",
+      "contract_id": "C_COMPLEX_FINITE",
+      "reviewed_contract": {
+        "short": "Reward finite complex arithmetic answers by exponential distance from the finite reference.",
+        "detailed": "Prompts ask addition, subtraction, multiplication, or division of complex numbers. Operands use bounded integer components, and division is constructed from an integer quotient and nonzero divisor. The generator stores integer real/imaginary result components in metadata. The intended score decreases as exp(-abs(student-reference)); exact finite answers earn 1.0, finite errors earn less than 1.0, and malformed or nonfinite submissions earn 0.0.",
+        "accepted_candidate_domain": "Optional[str]; normalized spaces/lowercase, outer parentheses, i/j notation, pure real/imaginary and two-component complex forms are parsed by parse_string_to_complex. Parser acceptance of nan is not intended mathematical correctness.",
+        "reference_domain": "entry[\"metadata\"][\"result\"] is a pair of finite integer-valued components (tuple upstream, JSON list in fixture); scoring constructs complex(*result).",
+        "required_entry_fields": [
+          "metadata.result"
+        ],
+        "full_reward_threshold": "Finite parsed answer at zero complex-plane distance from the reference (subject to host floating-point evaluation).",
+        "partial_credit": "For finite distance d>0, exp(-d), potentially underflowing to 0.0.",
+        "invalid_input_reward": 0.0,
+        "fixture_basis": "The (3.0,2.0) metadata fixture is the exact upstream unit-test fixture in test_complex_arithmetic_scoring."
+      },
+      "normative_source_evidence": [
+        {
+          "role": "prompt_templates",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 35,
+          "end_line": 40,
+          "excerpt": "    def __init__(self, config: ComplexArithmeticConfig):\n        self._prompt_templates = {\n            \"+\": \"Add the complex numbers: ({a}) + ({b})\",\n            \"-\": \"Subtract the complex numbers: ({a}) - ({b})\",\n            \"*\": \"Multiply the complex numbers: ({a}) × ({b})\",\n            \"/\": \"Divide the complex numbers: ({a}) ÷ ({b})\",",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L35-L40"
+        },
+        {
+          "role": "finite_integer_reference_generation",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 64,
+          "end_line": 100,
+          "excerpt": "        # Choose random operation\n        op = rng.choices(self.config.operations, weights=self.config.operations_weights, k=1)[0]\n\n        if op == \"/\":\n            # For division, first generate the quotient (a) and divisor (b)\n            # Then calculate the dividend (result) as a * b\n            a = self._generate_complex(rng)  # This will be the final result\n            b = self._generate_complex(rng)\n            while b == 0:  # Ensure non-zero divisor\n                b = self._generate_complex(rng)\n            result = a  # Store the intended result\n            a = result * b  # Calculate dividend to ensure whole number division\n        else:\n            # For other operations, generate numbers normally\n            a = self._generate_complex(rng)\n            b = self._generate_complex(rng)\n\n            # Calculate result\n            if op == \"+\":\n                result = a + b\n            elif op == \"-\":\n                result = a - b\n            else:  # op == \"*\"\n                result = a * b\n\n        question = self._prompt_templates[op].format(a=self._format_complex(a), b=self._format_complex(b))\n\n        return {\n            \"question\": question,\n            \"answer\": self._format_complex(result),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"num1\": (a.real, a.imag),\n                \"num2\": (b.real, b.imag),\n                \"operation\": op,\n                \"result\": (int(result.real), int(result.imag)),  # Convert to int since we ensure whole numbers",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L64-L100"
+        },
+        {
+          "role": "complete_parser_helper",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 111,
+          "end_line": 166,
+          "excerpt": "    @staticmethod\n    def parse_string_to_complex(answer: str) -> complex:\n        if answer is None:\n            return None\n\n        try:\n            # Normalize the answer string by removing spaces and converting to lowercase\n            answer = answer.replace(\" \", \"\").lower()\n\n            # remove brackets\n            while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n                answer = answer[1:-1]\n\n            # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n            answer = answer.replace(\"i\", \"j\")\n\n            # Handle real numbers (no imaginary part)\n            if \"j\" not in answer:\n                return complex(float(answer))\n\n            # Handle pure imaginary numbers\n            if answer == \"j\":\n                return complex(0, 1)\n            if answer == \"-j\":\n                return complex(0, -1)\n\n            # Handle cases like \"7j\" or \"-7j\" (no real part)\n            if (\n                answer.endswith(\"j\")\n                and not any(c in answer[:-1] for c in \"+-\")\n                or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n            ):\n                # Extract coefficient\n                coef = answer[:-1]\n                if coef == \"\":\n                    coef = \"1\"\n                elif coef == \"-\":\n                    coef = \"-1\"\n                return complex(0, float(coef))\n\n            # Handle complex numbers with both parts\n            # Make sure there's a + or - before j if it's not at the beginning\n            if \"j\" in answer and not answer.endswith(\"j\"):\n                return None  # Invalid format like \"3j+2\"\n\n            # Handle cases like \"3+j\" (implicit 1)\n            if \"+j\" in answer:\n                answer = answer.replace(\"+j\", \"+1j\")\n            if \"-j\" in answer:\n                answer = answer.replace(\"-j\", \"-1j\")\n\n            # Parse the normalized string into a complex number\n            return complex(answer)\n\n        except (ValueError, TypeError):\n            return None",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L111-L166"
+        },
+        {
+          "role": "buggy_reward",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 168,
+          "end_line": 183,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        metadata = entry[\"metadata\"]\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            expected_result = complex(*metadata[\"result\"])\n            # Calculate distance-based score using exponential decay\n            distance = abs(student_result - expected_result)\n            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n            return score\n\n        except (ValueError, TypeError):\n            return 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L168-L183"
+        },
+        {
+          "role": "original_exact_partial_invalid_contract",
+          "snapshot": "pr562_base",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/pr562_base/tests/test_complex_arithmetic.py",
+          "start_line": 53,
+          "end_line": 83,
+          "excerpt": "def test_complex_arithmetic_scoring():\n    \"\"\"Test scoring function with various answer formats and accuracies.\"\"\"\n    config = ComplexArithmeticConfig(seed=42)\n    dataset = ComplexArithmeticDataset(config)\n\n    # Test case with answer 3 + 2i\n    entry = {\"metadata\": {\"result\": (3.0, 2.0)}}\n\n    # Test exact matches (should get score of 1.0)\n    assert dataset.score_answer(\"3 + 2i\", entry) == 1.0\n    assert dataset.score_answer(\"3+2i\", entry) == 1.0\n    assert dataset.score_answer(\"3.0 + 2.0i\", entry) == 1.0\n    assert dataset.score_answer(\"((3.0 + 2.0i ) )\", entry) == 1.0\n\n    # Test answers with small errors (should get high but < 1.0 scores)\n    print(dataset.score_answer(\"3.1 + 2i\", entry))\n    assert 0.9 < dataset.score_answer(\"3.1 + 2i\", entry) < 1.0\n    assert 0.9 < dataset.score_answer(\"3 + 2.1i\", entry) < 1.0\n    assert 0.7 < dataset.score_answer(\"3.1 + 2.1i\", entry) < 0.95\n\n    # Test answers with moderate errors (should get medium scores)\n    assert 0.3 < dataset.score_answer(\"4 + 2i\", entry) < 0.4\n    assert 0.3 < dataset.score_answer(\"3 + 3i\", entry) < 0.4\n\n    # Test answers with large errors (should get very low scores)\n    assert dataset.score_answer(\"10 + 10i\", entry) < 0.01\n\n    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_complex_arithmetic.py#L53-L83"
+        },
+        {
+          "role": "proposed_nonfinite_rejection_tests",
+          "snapshot": "pr562",
+          "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+          "source_file": "upstream/pr562/tests/test_complex_arithmetic.py",
+          "start_line": 80,
+          "end_line": 87,
+          "excerpt": "    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0\n    assert dataset.score_answer(\"nan\", entry) == 0.0\n    assert dataset.score_answer(\"1+nanj\", entry) == 0.0\n    assert dataset.score_answer(\"nan+2i\", entry) == 0.0\n    assert dataset.score_answer(\"inf\", entry) == 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/tests/test_complex_arithmetic.py#L80-L87"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    },
+    {
+      "subject_id": "rg-pr-561-proposed-repair",
+      "contract_id": "C_BOOLEAN_FULL",
+      "reviewed_contract": {
+        "short": "Judge the requested Game of Life halting truth value, not Python string truthiness.",
+        "detailed": "The question defines halting as no live cells at or before the configured step bound, with Moore neighborhood and wrapping topology. It explicitly requests True for halting and False otherwise. The generator stores str(not should_oscillate). A correct Boolean answer earns 1.0 and an opposite value or unrelated text earns 0.0. This record checks answer-verifier semantics relative to the supplied reference; it does not verify board dynamics or the generator's oracle.",
+        "accepted_candidate_domain": "Optional[str]; task answers are True or False. PR561 additionally accepts surrounding whitespace and case variations. The original method accepts every nonempty string due to the bug, which is implementation behavior rather than the intended answer domain.",
+        "reference_domain": "entry[\"answer\"] is one of the nonempty strings \"True\" and \"False\".",
+        "required_entry_fields": [
+          "answer"
+        ],
+        "full_reward_threshold": "Semantically equal truth values (PR561 implements answer.strip().lower() == entry[\"answer\"].strip().lower()).",
+        "partial_credit": "None; reward is binary 0.0 or 1.0.",
+        "normalization_evidence": "Whitespace/case tolerance is explicitly tested only in proposed PR561; exact True/False semantics are already stated by original question."
+      },
+      "normative_source_evidence": [
+        {
+          "role": "task_semantics",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 39,
+          "end_line": 49,
+          "excerpt": "class GameOfLifeHaltingDataset(ProceduralDataset):\n    \"\"\"Generates Game of Life games with configurable parameters\n\n    This is a variant of the Game of Life task, which rather than trying to test the algorithmic simulation, tests\n    the ability of the model to do explanatory reasoning of the board. The idea is that a model with good\n    explanatory reasoning will be able to see that a game will not halt without simulating it into the future.\n\n    The task presents a GoL board, and the model is asked to predict if the board will halt (die, all cells zero)\n    after n steps. Sometimes, the board will be made up of 'oscillators', isolated structures which never die.\n    Othertimes, it is filled with non-oscillators, structures which will always die after a few steps. The model\n    should deduce which case the presented board is.",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L39-L49"
+        },
+        {
+          "role": "question_and_reference_generation",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 357,
+          "end_line": 366,
+          "excerpt": "        # Create the question string.\n        question = (\n            f\"This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\\n\"\n            f\"Will this game halt at or before {self.config.max_simulation_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\\n\\n\"\n            f\"Initial board:\\n{board_str}\"\n        )\n\n        return {\n            \"question\": question,\n            \"answer\": str(not should_oscillate),",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L357-L366"
+        },
+        {
+          "role": "claimed_correctness_and_buggy_reward",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 385,
+          "end_line": 401,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L385-L401"
+        },
+        {
+          "role": "proposed_repair_expected_behavior",
+          "snapshot": "pr561",
+          "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+          "source_file": "upstream/pr561/tests/test_game_of_life_halting.py",
+          "start_line": 29,
+          "end_line": 38,
+          "excerpt": "        # Test the scoring\n        correct_answer = item[\"answer\"]\n        wrong_answer = \"False\" if correct_answer == \"True\" else \"True\"\n\n        assert dataset.score_answer(answer=correct_answer, entry=item) == 1.0\n        assert dataset.score_answer(answer=f\"  {correct_answer.lower()}  \", entry=item) == 1.0\n        assert dataset.score_answer(answer=wrong_answer, entry=item) == 0.0\n        assert dataset.score_answer(answer=\"banana\", entry=item) == 0.0\n        assert dataset.score_answer(answer=\"\", entry=item) == 0.0\n        assert dataset.score_answer(answer=None, entry=item) == 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/tests/test_game_of_life_halting.py#L29-L38"
+        },
+        {
+          "role": "complete_proposed_repair_method",
+          "snapshot": "pr561",
+          "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+          "source_file": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "start_line": 385,
+          "end_line": 401,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/reasoning_gym/algorithmic/game_of_life_halting.py#L385-L401"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    },
+    {
+      "subject_id": "rg-pr-562-proposed-repair",
+      "contract_id": "C_COMPLEX_FINITE",
+      "reviewed_contract": {
+        "short": "Reward finite complex arithmetic answers by exponential distance from the finite reference.",
+        "detailed": "Prompts ask addition, subtraction, multiplication, or division of complex numbers. Operands use bounded integer components, and division is constructed from an integer quotient and nonzero divisor. The generator stores integer real/imaginary result components in metadata. The intended score decreases as exp(-abs(student-reference)); exact finite answers earn 1.0, finite errors earn less than 1.0, and malformed or nonfinite submissions earn 0.0.",
+        "accepted_candidate_domain": "Optional[str]; normalized spaces/lowercase, outer parentheses, i/j notation, pure real/imaginary and two-component complex forms are parsed by parse_string_to_complex. Parser acceptance of nan is not intended mathematical correctness.",
+        "reference_domain": "entry[\"metadata\"][\"result\"] is a pair of finite integer-valued components (tuple upstream, JSON list in fixture); scoring constructs complex(*result).",
+        "required_entry_fields": [
+          "metadata.result"
+        ],
+        "full_reward_threshold": "Finite parsed answer at zero complex-plane distance from the reference (subject to host floating-point evaluation).",
+        "partial_credit": "For finite distance d>0, exp(-d), potentially underflowing to 0.0.",
+        "invalid_input_reward": 0.0,
+        "fixture_basis": "The (3.0,2.0) metadata fixture is the exact upstream unit-test fixture in test_complex_arithmetic_scoring."
+      },
+      "normative_source_evidence": [
+        {
+          "role": "prompt_templates",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 35,
+          "end_line": 40,
+          "excerpt": "    def __init__(self, config: ComplexArithmeticConfig):\n        self._prompt_templates = {\n            \"+\": \"Add the complex numbers: ({a}) + ({b})\",\n            \"-\": \"Subtract the complex numbers: ({a}) - ({b})\",\n            \"*\": \"Multiply the complex numbers: ({a}) × ({b})\",\n            \"/\": \"Divide the complex numbers: ({a}) ÷ ({b})\",",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L35-L40"
+        },
+        {
+          "role": "finite_integer_reference_generation",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 64,
+          "end_line": 100,
+          "excerpt": "        # Choose random operation\n        op = rng.choices(self.config.operations, weights=self.config.operations_weights, k=1)[0]\n\n        if op == \"/\":\n            # For division, first generate the quotient (a) and divisor (b)\n            # Then calculate the dividend (result) as a * b\n            a = self._generate_complex(rng)  # This will be the final result\n            b = self._generate_complex(rng)\n            while b == 0:  # Ensure non-zero divisor\n                b = self._generate_complex(rng)\n            result = a  # Store the intended result\n            a = result * b  # Calculate dividend to ensure whole number division\n        else:\n            # For other operations, generate numbers normally\n            a = self._generate_complex(rng)\n            b = self._generate_complex(rng)\n\n            # Calculate result\n            if op == \"+\":\n                result = a + b\n            elif op == \"-\":\n                result = a - b\n            else:  # op == \"*\"\n                result = a * b\n\n        question = self._prompt_templates[op].format(a=self._format_complex(a), b=self._format_complex(b))\n\n        return {\n            \"question\": question,\n            \"answer\": self._format_complex(result),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"num1\": (a.real, a.imag),\n                \"num2\": (b.real, b.imag),\n                \"operation\": op,\n                \"result\": (int(result.real), int(result.imag)),  # Convert to int since we ensure whole numbers",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L64-L100"
+        },
+        {
+          "role": "complete_parser_helper",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 111,
+          "end_line": 166,
+          "excerpt": "    @staticmethod\n    def parse_string_to_complex(answer: str) -> complex:\n        if answer is None:\n            return None\n\n        try:\n            # Normalize the answer string by removing spaces and converting to lowercase\n            answer = answer.replace(\" \", \"\").lower()\n\n            # remove brackets\n            while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n                answer = answer[1:-1]\n\n            # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n            answer = answer.replace(\"i\", \"j\")\n\n            # Handle real numbers (no imaginary part)\n            if \"j\" not in answer:\n                return complex(float(answer))\n\n            # Handle pure imaginary numbers\n            if answer == \"j\":\n                return complex(0, 1)\n            if answer == \"-j\":\n                return complex(0, -1)\n\n            # Handle cases like \"7j\" or \"-7j\" (no real part)\n            if (\n                answer.endswith(\"j\")\n                and not any(c in answer[:-1] for c in \"+-\")\n                or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n            ):\n                # Extract coefficient\n                coef = answer[:-1]\n                if coef == \"\":\n                    coef = \"1\"\n                elif coef == \"-\":\n                    coef = \"-1\"\n                return complex(0, float(coef))\n\n            # Handle complex numbers with both parts\n            # Make sure there's a + or - before j if it's not at the beginning\n            if \"j\" in answer and not answer.endswith(\"j\"):\n                return None  # Invalid format like \"3j+2\"\n\n            # Handle cases like \"3+j\" (implicit 1)\n            if \"+j\" in answer:\n                answer = answer.replace(\"+j\", \"+1j\")\n            if \"-j\" in answer:\n                answer = answer.replace(\"-j\", \"-1j\")\n\n            # Parse the normalized string into a complex number\n            return complex(answer)\n\n        except (ValueError, TypeError):\n            return None",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L111-L166"
+        },
+        {
+          "role": "buggy_reward",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 168,
+          "end_line": 183,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        metadata = entry[\"metadata\"]\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            expected_result = complex(*metadata[\"result\"])\n            # Calculate distance-based score using exponential decay\n            distance = abs(student_result - expected_result)\n            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n            return score\n\n        except (ValueError, TypeError):\n            return 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L168-L183"
+        },
+        {
+          "role": "original_exact_partial_invalid_contract",
+          "snapshot": "pr562_base",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "source_file": "upstream/pr562_base/tests/test_complex_arithmetic.py",
+          "start_line": 53,
+          "end_line": 83,
+          "excerpt": "def test_complex_arithmetic_scoring():\n    \"\"\"Test scoring function with various answer formats and accuracies.\"\"\"\n    config = ComplexArithmeticConfig(seed=42)\n    dataset = ComplexArithmeticDataset(config)\n\n    # Test case with answer 3 + 2i\n    entry = {\"metadata\": {\"result\": (3.0, 2.0)}}\n\n    # Test exact matches (should get score of 1.0)\n    assert dataset.score_answer(\"3 + 2i\", entry) == 1.0\n    assert dataset.score_answer(\"3+2i\", entry) == 1.0\n    assert dataset.score_answer(\"3.0 + 2.0i\", entry) == 1.0\n    assert dataset.score_answer(\"((3.0 + 2.0i ) )\", entry) == 1.0\n\n    # Test answers with small errors (should get high but < 1.0 scores)\n    print(dataset.score_answer(\"3.1 + 2i\", entry))\n    assert 0.9 < dataset.score_answer(\"3.1 + 2i\", entry) < 1.0\n    assert 0.9 < dataset.score_answer(\"3 + 2.1i\", entry) < 1.0\n    assert 0.7 < dataset.score_answer(\"3.1 + 2.1i\", entry) < 0.95\n\n    # Test answers with moderate errors (should get medium scores)\n    assert 0.3 < dataset.score_answer(\"4 + 2i\", entry) < 0.4\n    assert 0.3 < dataset.score_answer(\"3 + 3i\", entry) < 0.4\n\n    # Test answers with large errors (should get very low scores)\n    assert dataset.score_answer(\"10 + 10i\", entry) < 0.01\n\n    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_complex_arithmetic.py#L53-L83"
+        },
+        {
+          "role": "proposed_nonfinite_rejection_tests",
+          "snapshot": "pr562",
+          "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+          "source_file": "upstream/pr562/tests/test_complex_arithmetic.py",
+          "start_line": 80,
+          "end_line": 87,
+          "excerpt": "    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0\n    assert dataset.score_answer(\"nan\", entry) == 0.0\n    assert dataset.score_answer(\"1+nanj\", entry) == 0.0\n    assert dataset.score_answer(\"nan+2i\", entry) == 0.0\n    assert dataset.score_answer(\"inf\", entry) == 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/tests/test_complex_arithmetic.py#L80-L87"
+        },
+        {
+          "role": "complete_proposed_repair_method",
+          "snapshot": "pr562",
+          "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+          "source_file": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+          "start_line": 168,
+          "end_line": 187,
+          "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            if student_result is None:\n                return 0.0\n\n            expected_result = complex(*entry[\"metadata\"][\"result\"])\n            distance = abs(student_result - expected_result)\n\n            if not math.isfinite(distance):\n                return 0.0\n\n            return math.exp(-distance)\n\n        except (ValueError, TypeError):\n            return 0.0",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/reasoning_gym/algebra/complex_arithmetic.py#L168-L187"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    },
+    {
+      "subject_id": "control-palindrome-validity-main",
+      "contract_id": "C_PALINDROME_FULL",
+      "reviewed_contract": {
+        "task_meaning": "Form any palindrome from exactly the given lowercase-letter multiset, rather than merely repeat the chosen reference palindrome.",
+        "entry_domain": "metadata.letters is a nonempty list of lowercase ASCII letters that can form a palindrome; entry.answer is one valid construction.",
+        "answer_domain": "Optional string. For the full-credit mathematical contract, interpret strip().lower() as the accepted response normalization. A valid normalized response has no internal spaces or punctuation.",
+        "full_credit_properties": [
+          {
+            "id": "P1",
+            "statement": "Full credit requires that the normalized string equals its reverse."
+          },
+          {
+            "id": "P2",
+            "statement": "Full credit also requires exact equality of the response and supplied-letter multisets, including multiplicity; any valid ordering qualifies."
+          },
+          {
+            "id": "P3",
+            "statement": "Missing or non-string answers earn zero; nonempty wrong strings may receive the explicit partial rewards but never full credit."
+          }
+        ],
+        "legitimate_partial_credit": "The source explicitly awards 0.02 to a non-palindrome string and 0.05 to a palindrome using the wrong letter multiset. These positive rewards are not evidence of full-credit validity."
+      },
+      "normative_source_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 9,
+            "end": 18
+          },
+          "role": "task_template",
+          "excerpt": "If there are multiple possible answers, only respond with one of them. You must use all the letters provided."
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 64,
+            "end": 81
+          },
+          "role": "entry_construction",
+          "excerpt": "\"letters\": scrambled_letters,\n\"generated_palindrome\": palindrome,"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 84,
+            "end": 95
+          },
+          "role": "generator_semantics",
+          "excerpt": "return letters + [middle_letter] + letters[::-1]"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 97,
+            "end": 126
+          },
+          "role": "scorer",
+          "excerpt": "if answer != answer[::-1]:\n    return 0.02\n...\nif sorted(answer) != sorted(expected_letters):\n    return 0.05\nreturn 1.0"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    },
+    {
+      "subject_id": "control-group-anagrams-order-main",
+      "contract_id": "C_ANAGRAM_ORDER_CONDITIONAL",
+      "reviewed_contract": {
+        "task_meaning": "Partition every input word into exactly its anagram group; outer group order and word order within each group are irrelevant.",
+        "entry_domain": "A correctly generated or manually checked metadata.solution partition of distinct lowercase input words. Groups are nonempty lists of strings. Different anagram groups are disjoint.",
+        "answer_domain": "JSON serialization of a list of nonempty string lists for the semantic full-credit contract; arbitrary malformed strings and missing input are separately probed.",
+        "full_credit_properties": [
+          {
+            "id": "G1",
+            "statement": "Any permutation of the oracle groups and any permutation within each group receives full credit."
+          },
+          {
+            "id": "G2",
+            "statement": "A different partition, missing word or duplicate word cannot receive full credit after canonical ordering."
+          },
+          {
+            "id": "G3",
+            "statement": "Invalid JSON and missing input return zero. A well-formed but wrong partition may receive the deliberate 0.01 syntax credit."
+          }
+        ],
+        "legitimate_partial_credit": "0.01 is a deliberate reward for parseable/canonicalizable JSON that differs from the oracle; a positive scalar does not mean the grouping is correct."
+      },
+      "normative_source_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 19,
+            "end": 27
+          },
+          "role": "task_template",
+          "excerpt": "Your job is to group the anagrams together. You can return the answer in any order."
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 67,
+            "end": 86
+          },
+          "role": "oracle_and_canonicalizer",
+          "excerpt": "return sorted([sorted(sublist) for sublist in lst], key=lambda x: x[0] if x else \"\")"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 88,
+            "end": 103
+          },
+          "role": "scorer",
+          "excerpt": "answer = json.loads(answer)\noracle = entry[\"metadata\"][\"solution\"]\n...\nif answer_str == oracle_str:\n    reward = 1.0\nelse:\n    reward = 0.01  # json parsable"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 109,
+            "end": 129
+          },
+          "role": "entry_construction",
+          "excerpt": "answer = self._group_anagrams(words)\n...\n\"solution\": answer,"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "For GroupAnagrams, only order/content semantics on valid list-of-lists; not schema-safety negative."
+    },
+    {
+      "subject_id": "control-prime-factorization-main",
+      "contract_id": "C_PRIME_FACTORS_FULL",
+      "reviewed_contract": {
+        "task_meaning": "Return every prime factor of the positive integer, with multiplicities, separated by the multiplication sign ×. Factor order is immaterial.",
+        "entry_domain": "entry.answer represents the correct prime factorization of an integer >=2, as produced by _prime_factors or independently checked; factors here are [2,2,3] for 12.",
+        "answer_domain": "None or a finite string of positive integer tokens separated by ×, with optional surrounding token whitespace. Arbitrary nonnumeric tokens are outside this scoped scoring contract because the real helper raises ValueError.",
+        "full_credit_properties": [
+          {
+            "id": "F1",
+            "statement": "Full credit is granted exactly when sorted parsed response factors equal the oracle prime multiset, including multiplicity."
+          },
+          {
+            "id": "F2",
+            "statement": "A different factorization with the same product earns the explicit 0.5 partial reward, never full credit."
+          },
+          {
+            "id": "F3",
+            "statement": "A different product earns 0.01; missing input earns zero."
+          }
+        ],
+        "legitimate_partial_credit": "3 × 4 multiplies to 12 but 4 is composite, so 0.5 appropriately distinguishes a product-preserving decomposition from complete prime factorization. A wrong-product numeric answer receives the source-defined 0.01 minimum."
+      },
+      "normative_source_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+          "lines": {
+            "start": 35,
+            "end": 48
+          },
+          "role": "oracle_generator",
+          "excerpt": "while n % d == 0:\n    factors.append(d)\n    n //= d"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+          "lines": {
+            "start": 50,
+            "end": 70
+          },
+          "role": "normalizer_and_scorer",
+          "excerpt": "return sorted([int(factor.strip()) for factor in answer.split(\"×\") if factor.strip() != \"\"])\n...\nif oracle_answer_parsed == answer_parsed:\n    reward = 1.0\nelif math.prod(oracle_answer_parsed) == math.prod(answer_parsed):\n    reward = 0.5"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+          "lines": {
+            "start": 76,
+            "end": 99
+          },
+          "role": "task_and_entry_construction",
+          "excerpt": "Find the prime factorization of {number}. Write the factors separated by ×"
+        }
+      ],
+      "usage": "Reviewed task-contract evidence/gold for future specification experiments; do not silently supply it as LLM-inferred output.",
+      "qualification": "Specific declared contract only; not a global bug-free-function proof."
+    }
+  ]
+}

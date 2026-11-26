@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-11-09T02:49:26.942932+00:00",
+  "records": [
+    {
+      "repo": "haolpku/DataFlex-RL-Anonymous",
+      "commit": "ba6390ef3fadd7cf74cd8093b41771722f8c4605",
+      "paths": [
+        "results/science_logic_bench_plan.md"
+      ]
+    },
+    {
+      "repo": "Shekswess/tiny-reasoning-language-model",
+      "commit": "6824d651fd8b3cb102f4158068a64eb158fb700d",
+      "paths": []
+    },
+    {
+      "repo": "Unakar/Logic-RL",
+      "commit": "9d2c457525ec14639e85afa12d49bb16efb053a4",
+      "paths": [
+        "verl/utils/reward_score/__init__.py",
+        "verl/utils/reward_score/countdown.py",
+        "verl/utils/reward_score/gsm8k.py",
+        "verl/utils/reward_score/kk.py",
+        "verl/utils/reward_score/math.py",
+        "verl/utils/reward_score/multiply.py",
+        "verl/workers/reward_model/__init__.py",
+        "verl/workers/reward_model/base.py",
+        "verl/workers/reward_model/megatron/__init__.py",
+        "verl/workers/reward_model/megatron/reward_model.py"
+      ]
+    },
+    {
+      "repo": "Open-Reasoner-Zero/Open-Reasoner-Zero",
+      "commit": "3fdd9a07b4fb01e06005e6e74fc56690cde8a341",
+      "paths": []
+    },
+    {
+      "repo": "allenai/open-instruct",
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "metadata_only": true
+}

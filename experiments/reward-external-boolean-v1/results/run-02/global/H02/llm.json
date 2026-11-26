@@ -1,0 +1,39 @@
+{
+  "verdict": "unknown",
+  "active_obligations": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "per_obligation": [],
+  "violated_obligations": [],
+  "alarm_obligations": [],
+  "compiled_contract": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1,
+    "obligations": [
+      "valid_boolean_token",
+      "equals_reference"
+    ]
+  },
+  "input_fingerprint": null,
+  "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+  "unsupported_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+  "source_spans": [],
+  "target_source_executed": false,
+  "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+  "native_binding": null,
+  "binding_fingerprint": null,
+  "source_sha256": null,
+  "source_rewritten": false,
+  "answer_encoding_converted": false,
+  "method": "explicit_native_bindings_over_frozen_Boolean_paths_v1"
+}

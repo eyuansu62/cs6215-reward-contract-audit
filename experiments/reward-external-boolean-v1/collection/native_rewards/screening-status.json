@@ -1,0 +1,181 @@
+{
+  "created_utc": "2026-11-09T02:52:01.896455+00:00",
+  "lane": "native_rewards",
+  "selected": [],
+  "selected_count": 0,
+  "phase1_source_files": 12,
+  "phase1_exact_native_candidates": 0,
+  "phase2_source_files": 11,
+  "phase2_budget": 12,
+  "phase2_binding_compatible_truefalse_scalar_candidates": 0,
+  "real_source_projects_with_content": 7,
+  "phase1_rejections": [
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/gsm8k.py",
+      "url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/verl/utils/reward_score/gsm8k.py",
+      "source_sha256": "497c6e32b708d0bc8803b5a048ca5983de7756eb9c146abdc56e6f5d28767189",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Generic math/QA code; no current source proof of a native bare True/False task invocation."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/search_r1_like_qa_em.py",
+      "url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/verl/utils/reward_score/search_r1_like_qa_em.py",
+      "source_sha256": "8070e4d07719f23e626968b983c597918c73d15c6ab5b09c5346e7311d0cac83",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Generic math/QA code; no current source proof of a native bare True/False task invocation."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/math_verify.py",
+      "url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/verl/utils/reward_score/math_verify.py",
+      "source_sha256": "1242011cddc041ea6cb19fc9a1872ebab742d8ae7e8ebd3342f6b3b8b6e2ba15",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Generic math/QA code; no current source proof of a native bare True/False task invocation."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/math.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/examples/reward_function/math.py",
+      "source_sha256": "52a2fa60fca2a47466eb1d622357249f6d787699ff4b274782641d5d7eace134",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native reward_input/reward_inputs maps return dict/list reward records, not scalar numeric callback output."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/dapo.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/examples/reward_function/dapo.py",
+      "source_sha256": "0f8ec9be155051859157184f08d91a9a6f7f8aae28b1dcce9f91bbbd70633c67",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native reward_input/reward_inputs maps return dict/list reward records, not scalar numeric callback output."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/r1v.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/examples/reward_function/r1v.py",
+      "source_sha256": "694c4197e8dd5088732b702dc4796f80a10319a9abfc125d2bc3c024aa097c5b",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native reward_input/reward_inputs maps return dict/list reward records, not scalar numeric callback output."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "examples/python/reward_func.py",
+      "url": "https://raw.githubusercontent.com/OpenRLHF/OpenRLHF/26494490bc237f6c3af62dab6117e6bbb0a78dba/examples/python/reward_func.py",
+      "source_sha256": "2022dd85be9befba57d5110d5d6b6932cebb6aa08bed8dcab9d9890a7faf4086",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native batches/tensors and dict return; plain reward_func.py is a random-reward example, not a task correctness checker."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "examples/python/math_reward_func.py",
+      "url": "https://raw.githubusercontent.com/OpenRLHF/OpenRLHF/26494490bc237f6c3af62dab6117e6bbb0a78dba/examples/python/math_reward_func.py",
+      "source_sha256": "f21ff003d31e7436710099eae02d46db98d129e27301d93dfabf1e0048241214",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native batches/tensors and dict return; plain reward_func.py is a random-reward example, not a task correctness checker."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "environments/eval_environments/boolq_eval.py",
+      "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/environments/eval_environments/boolq_eval.py",
+      "source_sha256": "5cf4973db93b7910f97e766ed912ae020fd96684457180661d73adbbbc9f4f38",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Actual BoolQ prompt requests A/B or Yes/No and native gold is Yes/No; async item evaluation returns a dict."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/accuracy_reward.py",
+      "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/atroposlib/envs/reward_fns/accuracy_reward.py",
+      "source_sha256": "1e6e4579a624720c40ef3053a946445e34716185244fd64ebaeb6ff61eb25e5f",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native completion batches return lists; no source-grounded bare canonical Boolean task endpoint established."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/format_reward.py",
+      "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/atroposlib/envs/reward_fns/format_reward.py",
+      "source_sha256": "a050d0fd81217eda45580900ca47fcc75d5caebe30f9acd68963aaaf01ec969e",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native completion batches return lists; no source-grounded bare canonical Boolean task endpoint established."
+    },
+    {
+      "phase": "initial_exact_parameter_gate",
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/r1_reward.py",
+      "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/atroposlib/envs/reward_fns/r1_reward.py",
+      "source_sha256": "4d4a91fcab5a4331ed0b2f32f2b38b9dc2ef3ba6fa3f4859e516dfe59df9e2ac",
+      "eligible": false,
+      "reason": "Native API does not expose the frozen answer/entry scalar argument layout. Native completion batches return lists; no source-grounded bare canonical Boolean task endpoint established."
+    }
+  ],
+  "phase2_rejections": [
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "paths": [
+        "README.md",
+        "grpo.py",
+        "grpo_base.py",
+        "load_data.py"
+      ],
+      "eligible": false,
+      "reason": "Actual GRPO reward is continuation-token log probability plus optional length/think-format penalties, with model/self state and batch returns. BBH Boolean expressions appear only as downstream evaluation of information gain. Not a bare Boolean correctness reward endpoint."
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "paths": [
+        "README.md",
+        "verl/utils/reward_score/boolean/__init__.py",
+        "verl/utils/reward_score/__init__.py"
+      ],
+      "eligible": false,
+      "reason": "The custom boolean reward scores a predicted logical formula against a ground_truth_list of structural expressions. It returns a dict of score/acc/parse metadata, not a scalar True/False correctness callback. Function name Boolean does not establish Boolean-token answer domain."
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "paths": [
+        "README.md",
+        "ppo.py",
+        "prompt.py",
+        "utils.py"
+      ],
+      "eligible": false,
+      "reason": "Actual BoolQ prompts demand Yes/No in Judgement tags; MultiRC uses True/False inside Judgement tags. Training rewards combine model-dependent coverage/ROUGE/brevity or batch task metrics; no source-grounded bare True/False scalar endpoint identified. Exact_match scalar helper is used for SQuAD, not assumed to be a real Boolean-task reward."
+    }
+  ],
+  "original_phase1_freeze_preserved": true,
+  "all_23_files_sha_and_git_blob_verified": true,
+  "all_python_files_AST_parse": true,
+  "target_execution": false,
+  "model_requests": 0,
+  "analyzer_runs": 0,
+  "source_rewriting_or_renaming": false,
+  "boolean_label_or_output_format_conversion": false,
+  "reference_contracts_inferred": false,
+  "selection_limit": "Bounded candidate search only; not a proof that no external project has a usable endpoint. Current collection includes published code for curation, not test cases or performance evidence."
+}

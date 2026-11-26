@@ -1,0 +1,418 @@
+{
+  "status": "complete",
+  "bridge_sha256": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6",
+  "preserved_baseline": {
+    "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+    "files_sha256": {
+      "prepare_inputs.py": "32b7d1aef06f525a7aa76294a6aad36b46afd7687ed05466d9872890196561af",
+      "protocol/contracts-evaluation-freeze.json": "b2a688633864a35e702b9ab0536a5ddf08a7f54d44e20f3171df02d1bfec7e0e",
+      "protocol/contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+      "protocol/evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab",
+      "run_baselines.py": "211da806e4c9b092031652d54689a9d000f1dfa0d432dad8040bc8b64355e32a",
+      "test_study.py": "355bb8eaac02db7e2d98da705e61320b4a8e5a5fb66c652f3a304600c6f1fe5e",
+      "tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+      "tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "tools/test_semgrep_baseline.py": "ecdd607446186c788540a7b44902293c6176026a13255e50e41970ce22d2ff51",
+      "tools/test_symbolic_baseline.py": "2a2653686e307048ee77d1668388f7464f20d7239a77f99c6167720e2151181b",
+      "tools/tool-release.json": "ef27db9b8b76468126e040ebb188ac9a941158f960265ad7b7dc944378d54005"
+    },
+    "analyzer_files_unchanged": true,
+    "new_analyzer_semantics_or_rules": false
+  },
+  "imported_analyzers": {
+    "semgrep_module_path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/semgrep_baseline.py",
+    "symbolic_module_path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/symbolic_baseline.py",
+    "semgrep_code_sha256": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+    "symbolic_code_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+    "risky_rules_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+    "coverage_rules_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5",
+    "engine_expected_sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+    "semgrep_version": "1.183.0"
+  },
+  "source_units_sha256": "0a3e862043441c4bebdca46ea4ece79d2a5af71e96fd2a4e6e162bbec68c03b9",
+  "contracts_sha256": "480788eb63027327ed20bbf9a9480d177a5a021b534259dc23637bb815cb74d1",
+  "condition_output": "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality",
+  "contract_origin_passed_to_detectors": false,
+  "qualification": "The projection checks only a necessary condition: agreement with a trusted canonical True/False reference after the preserved strip/lower normalization. It does not validate how the task is solved, all output-format requirements, or an inferred partial-credit policy. The normalization is a weakening for this necessary condition, not a claim that the question permits it. Unsupported task types are interface limits, not extraction errors. Semgrep no_alarm is a completed pattern scan, not a semantic proof.",
+  "cases": [
+    {
+      "task_id": "rg-issue-544-original",
+      "projection": {
+        "supported": true,
+        "reason": null,
+        "contract_id": "C_BOOLEAN_FULL",
+        "qualification": "The projection checks only a necessary condition: agreement with a trusted canonical True/False reference after the preserved strip/lower normalization. It does not validate how the task is solved, all output-format requirements, or an inferred partial-credit policy. The normalization is a weakening for this necessary condition, not a claim that the question permits it. Unsupported task types are interface limits, not extraction errors. Semgrep no_alarm is a completed pattern scan, not a semantic proof."
+      },
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [
+            {
+              "rule_id": "reward-bool-truthiness-equality",
+              "function": "score_answer",
+              "span": [
+                14,
+                30,
+                14,
+                67
+              ],
+              "message": "Truthiness equality can award full credit to unequal Boolean strings."
+            }
+          ],
+          "all_findings": [
+            {
+              "check_id": "reward-bool-truthiness-equality",
+              "path": "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/0-109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py",
+              "start": {
+                "line": 14,
+                "col": 31,
+                "offset": 481
+              },
+              "end": {
+                "line": 14,
+                "col": 68,
+                "offset": 518
+              },
+              "extra": {
+                "metavars": {
+                  "$CANDIDATE": {
+                    "start": {
+                      "line": 14,
+                      "col": 36,
+                      "offset": 486
+                    },
+                    "end": {
+                      "line": 14,
+                      "col": 42,
+                      "offset": 492
+                    },
+                    "abstract_content": "answer"
+                  },
+                  "$REFERENCE": {
+                    "start": {
+                      "line": 14,
+                      "col": 52,
+                      "offset": 502
+                    },
+                    "end": {
+                      "line": 14,
+                      "col": 67,
+                      "offset": 517
+                    },
+                    "abstract_content": "entry[\"answer\"]"
+                  }
+                },
+                "engine_kind": "OSS",
+                "is_ignored": false,
+                "message": "Truthiness equality can award full credit to unequal Boolean strings.",
+                "severity": "WARNING",
+                "validation_state": "NO_VALIDATOR"
+              }
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "score_answer",
+                "source_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                16,
+                8,
+                16,
+                18
+              ],
+              [
+                17,
+                4,
+                17,
+                14
+              ]
+            ],
+            "function_count": 1,
+            "return_count": 2,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/0-109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/0-109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f",
+          "contract_id": "C_BOOLEAN_FULL",
+          "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/0-109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/0-109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.533491,
+          "bridge_wall_seconds": 0.534003
+        },
+        "symbolic": {
+          "verdict": "alarm",
+          "certificate": {
+            "kind": "native_boolean_path_counterexample",
+            "candidate_class": "fresh nonempty non-Boolean normalized string",
+            "trusted_reference": "True",
+            "argument": "The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed."
+          },
+          "evidence": [
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            }
+          ],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1",
+          "bridge_wall_seconds": 0.000699
+        }
+      },
+      "detector_input_sha256": "fd757565b0f75d0f3617d97dcf7bfad0987ea105bc5b10e8207a8ffd38de1074",
+      "unit_id": "109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f",
+      "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196"
+    },
+    {
+      "task_id": "rg-pr-561-proposed-repair",
+      "projection": {
+        "supported": true,
+        "reason": null,
+        "contract_id": "C_BOOLEAN_FULL",
+        "qualification": "The projection checks only a necessary condition: agreement with a trusted canonical True/False reference after the preserved strip/lower normalization. It does not validate how the task is solved, all output-format requirements, or an inferred partial-credit policy. The normalization is a weakening for this necessary condition, not a claim that the question permits it. Unsupported task types are interface limits, not extraction errors. Semgrep no_alarm is a completed pattern scan, not a semantic proof."
+      },
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "no_alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [],
+          "all_findings": [],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "score_answer",
+                "source_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                16,
+                8,
+                16,
+                18
+              ],
+              [
+                17,
+                4,
+                17,
+                14
+              ]
+            ],
+            "function_count": 1,
+            "return_count": 2,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/1-7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/1-7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b",
+          "contract_id": "C_BOOLEAN_FULL",
+          "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/1-7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/1-7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.526901,
+          "bridge_wall_seconds": 0.527362
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "boolean_normalized_equality_implication",
+                "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1",
+          "bridge_wall_seconds": 0.000746
+        }
+      },
+      "detector_input_sha256": "9549112e2003a77b73dd0ebd9b23759b2b1e8b71714bf9436172998c808b0d9c",
+      "unit_id": "7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b",
+      "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b"
+    }
+  ],
+  "summary": {
+    "tasks": 2,
+    "supported_projections": 2,
+    "verdict_counts": {
+      "semgrep": {
+        "alarm": 1,
+        "no_alarm": 1,
+        "unknown": 0
+      },
+      "symbolic": {
+        "alarm": 1,
+        "no_alarm": 1,
+        "unknown": 0
+      }
+    }
+  },
+  "target_scorers_executed": false,
+  "LLM_called_by_downstream": false,
+  "labels_read_by_downstream": false
+}

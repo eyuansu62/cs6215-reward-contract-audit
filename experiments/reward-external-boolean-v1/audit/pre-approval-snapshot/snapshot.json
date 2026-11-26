@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-09T04:17:06.178385+00:00",
+  "files_sha256": {
+    "data/dataset-scope.json": "2e5a8d6b06434f46030a89b72bcf3c38c30bde7809d1dd3aa816310fecfdcf04",
+    "data/preparation.json": "450f5cae5a7ceeaab2d718177481dc8ba1bfd41b992990b086ed793667713562",
+    "data/source-units.json": "c713e6e04d054f6cf99362fdff4c8aba30cf6f15048b9299e6c5affcd5a32d7d",
+    "protocol/study-plan.json": "3d4295611ebbc8270fe1ee20adf9fa0e05c3151582756e55c2c8550b01cfa537",
+    "results/status.json": "3e8b0c0e2e090b55737283a2832910637773d9f86a97914ee32aab8ccc43e9da",
+    "audit/study-review.json": "252b739378182a1c638db8a32e7c7f7f400d35ace38065b25f156c3818a4584e",
+    "audit/study-review.md": "2c3f0969f687cf776860eb28e4fcd430119824bffb26d1d423771718eeddf7df",
+    "PREPARATION.md": "5ea91157345ab8b480a6ba8acd733092d303fdd715f2b04b9853591dfb858489",
+    "README.md": "6bfeb1b63ecfbf0aa149e54e4c23755689fd18c908c88e205cc54151d251fc58"
+  },
+  "stage": "Prepared state before explicit user approval; preserved historical audit only"
+}

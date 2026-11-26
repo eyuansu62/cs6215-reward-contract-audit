@@ -1,0 +1,12 @@
+{
+  "query": "repo:open-thought/reasoning-gym is:pr coin_flip",
+  "results": [
+    {
+      "number": 507,
+      "title": "fix: Register missing `coin_flip`",
+      "html_url": "https://github.com/open-thought/reasoning-gym/pull/507",
+      "state": "closed"
+    }
+  ],
+  "interpretation": "OnlyPR507registrationfixreturned;notarepairforthescoreprefixdefect. Noverifiedupstreamscoringrepaircollected;notanexhaustivenonexistenceclaim."
+}

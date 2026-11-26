@@ -1,0 +1,28 @@
+test_valueless_annotation_does_not_assign_none (test_symbolic_baseline.SymbolicTests.test_valueless_annotation_does_not_assign_none) ... FAIL
+
+======================================================================
+FAIL: test_valueless_annotation_does_not_assign_none (test_symbolic_baseline.SymbolicTests.test_valueless_annotation_does_not_assign_none)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 135, in test_valueless_annotation_does_not_assign_none
+            self.verdict('''def score(answer, entry):
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        value: int
+        ^^^^^^^^^^
+    ...<2 lines>...
+        return 0
+        ^^^^^^^^
+    ''', "unknown")
+    ^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'alarm' != 'unknown'
+- alarm
++ unknown
+ : {'verdict': 'alarm', 'certificate': {'kind': 'native_boolean_path_counterexample', 'candidate_class': 'fresh nonempty non-Boolean normalized string', 'trusted_reference': 'True', 'argument': 'The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed.'}, 'evidence': [], 'source_spans': [{'line': 4, 'end_line': 4}], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

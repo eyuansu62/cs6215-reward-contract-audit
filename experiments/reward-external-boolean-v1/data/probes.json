@@ -1,0 +1,160 @@
+{
+  "probes": [
+    {
+      "id": "true-correct",
+      "reference": "True",
+      "answer": "True",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "true-opposite",
+      "reference": "True",
+      "answer": "False",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "true-invalid",
+      "reference": "True",
+      "answer": "banana",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "true-empty",
+      "reference": "True",
+      "answer": "",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "true-suffix",
+      "reference": "True",
+      "answer": "True extra",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "true-article",
+      "reference": "True",
+      "answer": "the True",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "true-punctuation",
+      "reference": "True",
+      "answer": "True!",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-correct",
+      "reference": "False",
+      "answer": "False",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-opposite",
+      "reference": "False",
+      "answer": "True",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-invalid",
+      "reference": "False",
+      "answer": "banana",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-empty",
+      "reference": "False",
+      "answer": "",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-suffix",
+      "reference": "False",
+      "answer": "False extra",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-article",
+      "reference": "False",
+      "answer": "the False",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    },
+    {
+      "id": "false-punctuation",
+      "reference": "False",
+      "answer": "False!",
+      "unit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "origin": "Systematic contract probe at native post-strip scalar metric boundary, not a claimed CivilComments row."
+    }
+  ],
+  "None_excluded": "Native caller always provides completion.text.strip() strings; None is outside that original call boundary.",
+  "predeclared_before_target_execution": true
+}

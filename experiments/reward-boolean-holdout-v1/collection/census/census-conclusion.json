@@ -1,0 +1,281 @@
+{
+  "created_utc": "2026-11-09T02:29:52.358952+00:00",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "scope": "Same pinned snapshot, nonvendored/non-rearc/data Python task-source structural census plus source-reviewed Boolean-like candidates. Not arbitrary-Python complete return-domain proof.",
+  "archive_bytes": 8596111,
+  "extracted_exact_git_blobs": 122,
+  "git_blob_verification": true,
+  "dataset_named_classes": 108,
+  "own_score_classes": 75,
+  "boolean_text_hint_classes": 13,
+  "answer_field_trace_classes": 108,
+  "confirmed_canonical_TrueFalse_task_families": [
+    "game_of_life_halting",
+    "isomorphic_strings",
+    "ransom_note",
+    "course_schedule"
+  ],
+  "all_confirmed_canonical_families_previously_exposed": true,
+  "confirmed_canonical_with_own_score": [
+    "game_of_life_halting"
+  ],
+  "new_eligible_distinct_canonical_scorers_confirmed": 0,
+  "selected_independent_test_cases": [],
+  "boolean_like_candidates": [
+    {
+      "path": "reasoning_gym/algorithmic/cryptarithm.py",
+      "class": "CryptarithmDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_mapping",
+      "eligible": false,
+      "reason": "Prompt asks comma-separated letter-to-digit mapping A=1,B=2,C=3; True/False appears only in config/validator docs.",
+      "literal_evidence": [
+        {
+          "span": [
+            1,
+            12
+          ],
+          "text": "\nCryptarithm puzzle generator (numbers -> letters approach).\n\nGenerates puzzles such that:\n   WORD1\n + WORD2\n [+ WORD3]\n ---------\n   RESULT\nwhere each letter corresponds to exactly one digit (0..9).\nNo leading letter can be zero (unless allow_leading_zero=True).\n"
+        },
+        {
+          "span": [
+            30,
+            42
+          ],
+          "text": "Validate if a letter-to-digit mapping satisfies the cryptarithm puzzle constraints.\n\n    Args:\n        mapping: Dictionary mapping letters to digits (e.g., {'A': 1, 'B': 2})\n        words_letters: List of word strings using letters (e.g., ['ABC', 'DE'])\n        result_letters: Result string using letters (e.g., 'FGH')\n        allow_leading_zero: Whether leading zeros are allowed\n\n    Returns:\n        (is_valid, failure_reason) tuple:\n        - is_valid: True if mapping satisfies all constraints\n        - failure_reason: String describing why validation failed (empty if valid)\n    "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+      "class": "GameOfLifeHaltingDataset",
+      "owns_score_answer": true,
+      "disposition": "already_exposed_canonical_boolean",
+      "eligible": false,
+      "reason": "Canonical True/False task, but it is the already-developed #544 scoring implementation.",
+      "literal_evidence": [
+        {
+          "span": [
+            360,
+            361
+          ],
+          "text": " steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\n\nInitial board:\n"
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/graph_color.py",
+      "class": "GraphColorDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_mapping",
+      "eligible": false,
+      "reason": "Prompt requests a JSON vertices-to-colors map; validator is Boolean internally.",
+      "literal_evidence": [
+        {
+          "span": [
+            61,
+            70
+          ],
+          "text": "\n    Verifies that a candidate coloring is a valid solution to the graph coloring puzzle.\n\n    Args:\n        puzzle (dict): The puzzle specification containing 'vertices', 'edges', and 'color_options'.\n        coloring (dict): A dictionary mapping each vertex to a color. The keys can be integers or strings.\n\n    Returns:\n        tuple: (is_valid, message) where is_valid is a boolean and message is a string explanation.\n    "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "class": "IsomorphicStringsDataset",
+      "owns_score_answer": false,
+      "disposition": "already_exposed_and_inherited",
+      "eligible": false,
+      "reason": "Canonical True/False, but previously exposed and inherits old default score.",
+      "literal_evidence": [
+        {
+          "span": [
+            16,
+            24
+          ],
+          "text": "Two strings are isomorphic if the characters in one string can be replaced to get the second string.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters.\n\nNo two characters may map to the same character, but a character may map to itself.\n\nReturn True if the following two strings are isomorphic, or False otherwise:\n{s} {t}\n"
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/jugs.py",
+      "class": "JugsDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_move_list",
+      "eligible": false,
+      "reason": "Prompt requests JSON-parsable list of jug moves; Boolean verifier result is not submission format.",
+      "literal_evidence": [
+        {
+          "span": [
+            119,
+            139
+          ],
+          "text": "\n    Verify a given solution for a multi-jug puzzle.\n\n    The puzzle is a dictionary with keys:\n      - \"jug_capacities\": list of capacities for each jug.\n      - \"target\": the target amount that must be in any one jug.\n\n    Moves should be a list of strings in the following formats:\n      - \"fill X\": Fill jug X to its capacity.\n      - \"empty X\": Empty jug X.\n      - \"pour X->Y\": Pour water from jug X to jug Y.\n\n    Jug labels are letters: jug 0 is \"A\", jug 1 is \"B\", etc.\n\n    The function simulates the moves starting from all jugs empty.\n\n    Returns a tuple (result, states) where:\n      - result is True if, after executing all moves, at least one jug has exactly\n        the target amount; otherwise False.\n      - states is a list of state tuples after each move.\n    "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "class": "RansomNoteDataset",
+      "owns_score_answer": false,
+      "disposition": "already_exposed_and_inherited",
+      "eligible": false,
+      "reason": "Canonical True/False, but previously exposed and inherits old default score.",
+      "literal_evidence": [
+        {
+          "span": [
+            15,
+            21
+          ],
+          "text": "Given two strings representing a ransom note and a magazine, return True if you can construct the ransom note using the letters in the magazine, and False otherwise.\n\nEach letter in the magazine string can only be used once in your ransom note.\n\nRansom note: {ransom_note}\nMagazine: {magazine}\n"
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arithmetic/bitwise_arithmetic.py",
+      "class": "BitwiseArithmeticDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_hex_number",
+      "eligible": false,
+      "reason": "Prompt requests final hexadecimal value; internal correctness verifier returns bool.",
+      "literal_evidence": [
+        {
+          "span": [
+            89,
+            99
+          ],
+          "text": "\n    Verify if the provided solution is correct for the given problem.\n\n    Parameters:\n        problem (str): The arithmetic expression (with hex numbers).\n        user_solution (str or int): The user's answer, either as a hex string (e.g., \"0xa\")\n            or an integer.\n\n    Returns:\n        bool: True if the user's answer matches the evaluated result, else False.\n    "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/games/tower_of_hanoi.py",
+      "class": "HanoiDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_move_sequence",
+      "eligible": false,
+      "reason": "Prompt requests newline-separated move instructions; move-validity helper returns bool.",
+      "literal_evidence": [
+        {
+          "span": [
+            331,
+            340
+          ],
+          "text": "\n        Validate that a move adheres to the Tower of Hanoi rules.\n\n        Args:\n            pegs_state (dict): Current state of the pegs.\n            move (str): Move instruction, e.g., \"Move disk 2 from Peg 1 to Peg 3\".\n\n        Returns:\n            bool: True if the move is valid, False otherwise.\n        "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/games/tsumego.py",
+      "class": "TsumegoDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_board_move",
+      "eligible": false,
+      "reason": "Submission is Go move coordinate; make-move helper returns bool.",
+      "literal_evidence": [
+        {
+          "span": [
+            146,
+            146
+          ],
+          "text": "Make a move and update ko point. Returns True if move was valid."
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "class": "CourseScheduleDataset",
+      "owns_score_answer": false,
+      "disposition": "already_exposed_and_inherited",
+      "eligible": false,
+      "reason": "Canonical True/False, but previously exposed and inherits old default score.",
+      "literal_evidence": [
+        {
+          "span": [
+            16,
+            22
+          ],
+          "text": "There are a total of {num_courses} courses you have to take, labeled from 0 to {last_index}.\n\nYou are given the following list of prerequisites, where prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i:\n{prerequisites}\n\nReturn True if you can finish all courses considering the prerequisites, or False otherwise.\n"
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/logic/circuit_logic.py",
+      "class": "CircuitLogicDataset",
+      "owns_score_answer": true,
+      "disposition": "boolean_but_wrong_native_encoding",
+      "eligible": false,
+      "reason": "Generated output is string 0/1, not canonical True/False. Fixed interface cannot translate.",
+      "literal_evidence": [
+        {
+          "span": [
+            82,
+            101
+          ],
+          "text": "\n    Generates random digital logic circuits (in ASCII) together with:\n      - a random Boolean expression,\n      - random input assignments,\n      - the final evaluated output.\n\n    Each item in the dataset is a dict with:\n       {\n           \"question\": <str>,\n           \"answer\": <str>,\n           \"metadata\": {\n               \"diagram\": <ASCII circuit diagram>,\n               \"expression\": <str>,\n               \"term_strings\": <list of term_strings>,\n               \"assignments\": <dict of input->0/1>,\n               \"final_gate\": <str>,\n               \"inputs\": <list of input names>,\n           }\n       }\n    "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/logic/self_reference.py",
+      "class": "SelfReferenceDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_solution_count",
+      "eligible": false,
+      "reason": "Submission is number of possible assignments; truth values appear in statement/helper logic.",
+      "literal_evidence": [
+        {
+          "span": [
+            12,
+            12
+          ],
+          "text": "Return True if n is a prime number, False otherwise."
+        },
+        {
+          "span": [
+            22,
+            25
+          ],
+          "text": "\n    Return True if n is composite.\n    (Composite means an integer greater than 1 that is not prime.)\n    "
+        },
+        {
+          "span": [
+            202,
+            224
+          ],
+          "text": "\n    Verifies a candidate solution for a dynamically generated puzzle.\n\n    The rules are:\n      - If a statement is marked True, then its claim must hold.\n      - If a statement is marked False, then its claim must fail.\n\n    The conditions are as follows:\n      1. \"At least a of these 7 statements are true.\"  => (T >= a)\n      2. \"At most b of these 7 statements are false.\"   => (F <= b)\n      3. \"Exactly c of these 7 statements are true.\"    => (T == c)\n      4. \"Exactly d of these 7 statements are false.\"   => (F == d)\n      5. \"Either Statement 3 or Statement 4 is true, but not both.\" => (solution[2] != solution[3])\n      6. \"The number of true statements is a prime number.\" => is_prime(T)\n      7. \"The number of false statements is a composite number.\" => is_composite(F)\n\n    Parameters:\n       puzzle (dict): The puzzle dictionary returned by generate_dynamic_puzzle.\n       solution (list of bool): A candidate assignment (length 7).\n\n    Returns:\n       bool: True if candidate is self-consistent; False otherwise.\n    "
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/probability/coin_flip.py",
+      "class": "CoinFlipDataset",
+      "owns_score_answer": true,
+      "disposition": "nonboolean_probability",
+      "eligible": false,
+      "reason": "Submission is numeric probability; config assertion contains True.",
+      "literal_evidence": [
+        {
+          "span": [
+            30,
+            30
+          ],
+          "text": "At least one of allow_exact or allow_at_least must be True"
+        }
+      ]
+    }
+  ],
+  "diagnosis": "No fresh canonical True/False task with an own unique scorer was identified by the full retained structural census and candidate review. The candidate shortage is not solved by the additional same-commit source inventory.",
+  "limits": [
+    "This is source availability/scope evidence, not a completed LLM/analyzer evaluation.",
+    "Structural answer traces are incomplete for arbitrary dynamic/delegated generators; lack of a hint is not a theorem of non-Boolean output.",
+    "Census excludes vendored, rearc generators/data and package initializers by prior amendment.",
+    "No independent test cases are invented from mutated sources, encoding translations or inherited duplicate functions.",
+    "No new-head source or different repository has been used."
+  ],
+  "model_calls": 0,
+  "analyzer_runs": 0,
+  "upstream_method_execution": false,
+  "analyzer_feature_changes": false,
+  "current_ref_metadata": "../current-ref-assessment.json"
+}

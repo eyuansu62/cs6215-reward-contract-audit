@@ -1,0 +1,11 @@
+{
+  "verdict": "unknown",
+  "certificate": {
+    "proved_full_credit_paths": []
+  },
+  "evidence": [],
+  "source_spans": [],
+  "unsupported_reason": "unsupported evaluated condition: unsupported ordered/numeric comparison",
+  "method": "bounded-static-source-path-certificates-v1",
+  "bridge_wall_seconds": 0.001634
+}

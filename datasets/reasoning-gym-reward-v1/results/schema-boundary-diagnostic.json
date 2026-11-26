@@ -1,0 +1,45 @@
+{
+  "subject": "control-group-anagrams-order-main",
+  "probe": {
+    "answer": "[{\"eat\":0,\"tea\":0},{\"nat\":0,\"tan\":0}]",
+    "entry": {
+      "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+      "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+      "metadata": {
+        "source_dataset": "group_anagrams",
+        "words": [
+          "eat",
+          "tea",
+          "tan",
+          "nat"
+        ],
+        "solution": [
+          [
+            "eat",
+            "tea"
+          ],
+          [
+            "nat",
+            "tan"
+          ]
+        ],
+        "anagram_groups": 2
+      }
+    }
+  },
+  "observed": {
+    "kind": "returned",
+    "reward": 1.0,
+    "python_type": "float",
+    "entry_unchanged": true,
+    "source_AST_identity_verified": true,
+    "upstream_module_imported": false,
+    "upstream_constructor_or_generator_executed": false
+  },
+  "strict_list_of_lists_predicate_satisfied": false,
+  "interpretation": "The prompt specifies list-of-lists. Dictionary groups preserve the correct word partition under Python key iteration but violate that representation. Whether permissive representation deserves full reward is contract-sensitive; this is not a confirmed new upstream issue or training exploit.",
+  "dataset_role": "Qualified semantic-order control for valid list inputs; exclude from unqualified schema-safety negatives.",
+  "upstream_source_changed": false,
+  "full_package_or_generator_executed": false,
+  "analyzer_or_model_run": false
+}

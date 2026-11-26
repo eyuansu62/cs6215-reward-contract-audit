@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "byte_identical_analytical_summary": true,
+  "method_freeze_sha256": "ea5e8da2c74637bea061938cdf3c3dc8ea343101dc1f9e44c103d772a1608cd0",
+  "model_response_freeze_sha256": "e3c70b987390a8ca9793b9700600fd2fe8edf818c30e1c6c22fbc69125585959",
+  "new_model_calls": 0,
+  "same_machine_only": true
+}

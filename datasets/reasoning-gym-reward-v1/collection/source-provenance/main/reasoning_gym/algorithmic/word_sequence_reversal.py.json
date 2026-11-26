@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "main",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "reasoning_gym/algorithmic/word_sequence_reversal.py",
+  "sha256": "912c346511855e7de945283420c472835e7d0397f74f3ef0d639d5d3b9d93e08",
+  "git_blob_sha1": "3a02f46aebd73bd6daec52c48ebdb26455225bb6",
+  "bytes": 3220,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/word_sequence_reversal.py",
+  "local_path": "upstream/main/reasoning_gym/algorithmic/word_sequence_reversal.py",
+  "fetched_utc": "2026-11-08T07:29:29.217964+00:00",
+  "git_blob_verified": true
+}

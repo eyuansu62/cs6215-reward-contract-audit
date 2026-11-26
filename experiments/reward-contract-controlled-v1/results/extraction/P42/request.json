@@ -1,0 +1,21 @@
+{
+  "task": {
+    "task_id": "P42",
+    "question_description": "The trusted reference records the correct answer as True or False. Remove whitespace at the outer edges of the response and ignore letter case when grading. Compare the response with the reference. This comparison covers the response from beginning to end. A match earns full credit, and a mismatch does not.",
+    "placeholder_notes": {}
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

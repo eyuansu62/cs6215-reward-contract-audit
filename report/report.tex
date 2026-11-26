@@ -1,0 +1,417 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{balance}
+\setcopyright{none}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\acmDOI{}
+\acmISBN{}
+\acmYear{2026}
+\copyrightyear{2026}
+\acmConference[CS6215 Course Project]{CS6215 Advanced Topics in Program Analysis}{November 2026}{National University of Singapore}
+\acmBooktitle{}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\Urlmuskip=0mu plus 1mu
+\newcommand{\Unknown}{\textsc{Unknown}}
+\newcommand{\Alarm}{\textsc{Alarm}}
+\newcommand{\NoAlarm}{\textsc{NoAlarm}}
+\newcommand{\blankfield}{\rule{28mm}{0.35pt}}
+\newcommand{\Valid}{\mathsf{valid}}
+\newcommand{\Equal}{\mathsf{equal}}
+
+\title{LLM-Proposed Contracts for Static Auditing of Python Reward Functions}
+\subtitle{Controlled coverage gains and limits in real scoring programs}
+\author{\texorpdfstring{\blankfield}{}}
+\authornote{NUS student identifier: \blankfield.}
+\affiliation{\institution{School of Computing, National University of Singapore}\city{Singapore}\country{Singapore}}
+
+\begin{document}
+\begin{abstract}
+A Python scorer in Reasoning Gym awarded full credit for the string \texttt{False} when the correct answer was \texttt{True}. Both strings are nonempty, so Python gives them the same truth value. This study asks whether a language model can extract conditions for full credit from a task description and help a symbolic checker find violations in scoring code. Semgrep, the source-pattern baseline, flagged all three known defects among seven inspected Reasoning Gym function versions and gave no warnings on the other four. The symbolic checker classified four versions correctly and could not decide the other three. To isolate the effect of contract extraction, a controlled study gave an LLM and a set of textual rules the same twelve descriptions of three scoring policies. Eight descriptions specified conditions the checker could express. The LLM recovered those conditions for all eight descriptions and the rules for one. Both abstained on the four descriptions that allowed unrestricted text. Applying the contracts recovered for those seven additional descriptions to the same three programs yielded ten alarms with reproducible counterexamples and eleven certificates for full-credit paths. In the HELM trial, the question left the required answer format unspecified, and the checker could not interpret parts of the scoring code. Whether LLM extraction improves detection on new real-world scorers remains open.
+\end{abstract}
+\keywords{static analysis, neuro-symbolic analysis, reward functions, specifications, large language models}
+\maketitle
+
+\noindent\textbf{Public artifact repository}\par\noindent\href{https://github.com/eyuansu62/cs6215-reward-contract-audit}{\nolinkurl{github.com/eyuansu62/cs6215-reward-contract-audit}}
+
+\section{Introduction}
+
+Consider two submissions to Reasoning Gym's GameOfLifeHalting task. The reference answer is \texttt{True}. One submission reads \texttt{False} and the other \texttt{banana}. The original scoring function gave both full credit because it compared the Python truth values of nonempty strings. The first answer has the requested format but gives the wrong answer. The second fails even the format check. Those two inputs give an auditor a way to distinguish two requirements that the same faulty comparison overlooks.
+
+What counts as incorrect full credit depends on what the task asks for. A scorer for a format exercise may quite properly accept either Boolean label. In a reasoning task, the same behavior can reward a wrong solution. This matters both when a score contributes to a benchmark result and when it supplies a training signal. R1-Zero, for example, used rules to reward accuracy and answer format~\cite{deepseekr1}. Reasoning Gym pairs procedural tasks with Python scoring functions~\cite{reasoninggym}.
+
+This study audits a single implication. Whenever the scorer returns full credit, which conditions must the submitted answer satisfy? An LLM reads the task description and proposes those conditions as a short contract. A symbolic checker follows paths through the Python code to look for a full-credit return that breaks the contract. An early compiler silently inserted a reference-equality check when the proposed contract asked only for valid formatting. Even a correct analysis of that compiled contract would answer the wrong question.
+
+The experiments use two comparisons (Table~\ref{tab:roles}). Semgrep searches scoring code for known risky patterns. Running it alongside the symbolic checker shows which defects those patterns catch and where reasoning about a path helps. A separate comparison holds the checker fixed and changes only its contract supplier. Textual rules and the LLM read the same policy, and each can decline to propose a contract. On the controlled set the LLM recovered a usable contract for seven more descriptions. The Reasoning Gym and HELM cases show what becomes harder when a real question leaves the scoring policy implicit or the checker encounters code it cannot interpret.
+
+\section{Analysis Problem and Baselines}
+
+\begin{table}[t]
+\caption{The three component roles. Only the contract extractor changes in the controlled LLM comparison.}
+\label{tab:roles}
+\centering\small
+\begin{tabular}{@{}p{0.23\columnwidth}p{0.32\columnwidth}p{0.37\columnwidth}@{}}
+\toprule
+Component & Input $\rightarrow$ output & Role in the comparison\\
+\midrule
+Semgrep CE & Source $\rightarrow$ pattern warnings & Existing tool baseline on real scoring functions.\\
+Symbolic checker & Source + obligations $\rightarrow$ result per atom & Reviewed contracts test what the shared checker can decide.\\
+Textual rules or LLM & Description $\rightarrow$ obligations or abstention & Fixed rules provide the baseline for LLM contract selection.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Full-credit contracts}
+
+Let $f(a,e)$ be the original scorer, where $a$ is a submitted answer and $e$ is a trusted reference record or an explicitly bound native reference. A contract $C(a,e)$ is the conjunction of the selected necessary conditions for full credit. For each in-scope normal numeric return $s$, the property is
+\begin{equation}
+  f(a,e)=s\ \land\ s\geq 1\quad\Longrightarrow\quad C(a,e).
+  \label{eq:target}
+\end{equation}
+A counterexample is an input on which the scorer returns at least one and at least one selected condition is false. Equation~\ref{eq:target} places no requirement on partial credit, the score of a correct answer, or whether the scorer returns on every input. A raised exception falls outside the normal returns covered by the implication. For concrete reproduction, the harness accepts finite native integers and floats and rejects Booleans, nonfinite values and containers.
+
+In the final Boolean interface, the candidate is a Python string or \texttt{None} and the trusted reference is the string \texttt{'True'} or \texttt{'False'}. The environment fixes the threshold at one and the normalization at $N(x)=\operatorname{lower}(\operatorname{strip}(x))$. The description determines which answer requirements apply. Write $V$ for token validity and $E$ for reference equality, defined by
+\begin{align}
+ \Valid(a)&\equiv a\text{ is a string}\ \land\ N(a)\in\{\texttt{true},\texttt{false}\},\\
+ \Equal(a,e)&\equiv a\text{ is a string}\ \land\ N(a)=N(e[\texttt{answer}]).
+\end{align}
+With a canonical reference, $E$ implies $V$, so dropping an explicit $V$ from $E+V$ leaves the accepted answers unchanged. The converse fails on the opposite Boolean token. Keeping the two obligations separate lets the checker identify which one a witness violates.
+
+The initial Reasoning Gym study used five reviewed contracts (Table~\ref{tab:contracts}). Each specifies its own reference assumptions and allowed normalizations. The probability contract fixes the public \texttt{tol} parameter at the source default of $10^{-4}$. A repair counts as a negative case only for its stated property. Two archived repairs were still open proposals in the collected snapshot.
+
+\begin{table}[t]
+\caption{Reviewed full-credit conditions in the initial baseline study. The final neural interface supports the two Boolean obligations.}
+\label{tab:contracts}
+\centering\small
+\begin{tabular}{@{}p{0.23\columnwidth}p{0.70\columnwidth}@{}}
+\toprule
+Class & Necessary full-credit condition and scope\\
+\midrule
+Boolean & A valid normalized token agrees with the trusted canonical reference.\\
+Complex & The candidate parses and both components are finite. The trusted reference is finite. The audit leaves accuracy among finite values open.\\
+Probability & A parsed finite value lies within $10^{-4}$ of a trusted probability. Wrong finite answers may earn partial credit.\\
+Palindrome & The normalized answer is a palindrome with exactly the trusted letter multiset. Scores of 0.02 and 0.05 can be legitimate.\\
+Prime factors & Parsed factors have the same prime-factor multiset as the trusted reference. Scores of 0.5 and 0.01 can be legitimate.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Interpreting an alarm or a certificate}
+
+The symbolic checker reports \Alarm{} when it finds a supported counterexample on a path admitted by its source model. To report \NoAlarm{}, it must certify the active contract across all relevant full-return paths in the declared native domain. Its certificate relies on the Python operations the checker models. If it obtains neither result, it reports \Unknown{}. Reasons include a missing or unsupported specification, an unresolved path or effect, and a resource limit.
+
+How a verdict bears on the task depends on the relation between the selected contract $C$ and the authoritative task condition $C^*$. For a violation of $C$ to imply a task violation, the required implication is $C^*\Rightarrow C$. A stronger proposal can raise an alarm on an acceptable answer. To conclude that satisfaction of $C$ guarantees the task condition, the implication runs the other way, $C\Rightarrow C^*$. A weaker proposal can overlook a required condition. Syntactic admission establishes neither implication in general, and the checker has no mechanized soundness proof for arbitrary Python.
+
+The artifact records a normal return, a target exception, a scope rejection and a static abstention as distinct outcomes. For example, a missing specification gives \Unknown{} even if a concrete execution returned zero and thus fell below the full-credit threshold. An expression the checker cannot model may still lead to a rewarding return, so it must keep that possibility open.
+
+\subsection{Existing source-pattern baseline}
+
+Semgrep Community Edition 1.183.0 runs the same three families of native Python search rules on every supported source packet. The rules use metavariables~\cite{semgrep} to match truthiness equality, \texttt{min(1.0, math.exp(-d))}, and division by the minimum of two string lengths. Pattern exclusions recognize simple adjacent guards that check for finite distance. The minimum-length pattern flags the division alone. Whether the numerator counts a prefix and whether the ratio can yield full credit require further reasoning. The experiment uses neither taint mode nor an LLM-assisted Semgrep feature.
+
+The baseline keeps every native warning. An AST check verifies source ownership and structural coverage of functions and returns. A version or hash mismatch, a parse error, incomplete coverage, a skipped rule, or a timeout yields \Unknown{}. For Semgrep, \NoAlarm{} means that the scan completed without a match. A pattern can match dead code or code that a redundant guard makes safe. Equivalent arithmetic, a distant guard, or a different way of awarding full credit can also escape the patterns.
+
+\subsection{Non-neural semantic control}
+
+The project checker represents expressions in the original source as terms and collects the paths to normal returns. Along each path it tracks assignments, branch conditions and supported string operations. It can prove implications involving normalized equality, recognize a palindrome check that uses reversal and an exact multiset, and check one factor-parser grammar against the helper's complete source. For a Boolean counterexample, it draws candidates from native semantic classes and literals in the source. A witness must satisfy the modeled path conditions, and each intermediate operation must be defined.
+
+The checker considers at most 128 paths. Exhausting the candidate search cannot establish safety. Loops, unknown calls, aliased mutation, unresolved exception paths, unsupported numeric operations and arbitrary helpers exceed what this checker can decide. Its results characterize this implementation, which uses no SMT solver. Later experiments change the obligation selector and use the same source theory. Even when the observation harness can execute a helper, symbolic analysis still requires a model of that helper.
+
+\section{Neuro-Symbolic Design}
+
+\subsection{One scorer, two policies}
+
+The \texttt{token\_only} scorer returns one when \texttt{answer == 'True'} or \texttt{answer == 'False'} and zero otherwise. Consider the candidate string \texttt{'False'} with reference string \texttt{'True'}. The second guard admits the candidate, so the scorer returns one. The token satisfies $V$ and violates $E$. Table~\ref{tab:policytrace} shows how two descriptions change the verdict on this same source.
+
+\begin{table}[t]
+\caption{Two recorded policies for the same scorer. Both use candidate \texttt{'False'}, reference \texttt{'True'} and native reward one. Neither appeared as an in-context demonstration.}
+\label{tab:policytrace}
+\centering\small
+\begin{tabular}{@{}p{0.38\columnwidth}p{0.18\columnwidth}p{0.35\columnwidth}@{}}
+\toprule
+Policy description & LLM selection & Source-based conclusion\\
+\midrule
+P84 allows only case and outer-space differences from the correct reference. & $E+V$ & \Alarm{}. The opposite token violates $E$.\\
+P91 accepts either Boolean token regardless of the reference. & $V$ & \NoAlarm{}. Every full-credit path requires a valid token.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For P84, this single witness establishes an \Alarm{}. For P91, the witness is an acceptable answer. The checker obtains a whole-scorer \NoAlarm{} for $V$ because every full-credit return requires one of the two valid tokens. The textual extractor abstains on both descriptions. Always requiring $E$ would reject P91's permitted answer, while always selecting just $V$ would miss P84's mismatch.
+
+\subsection{Description-only proposal}
+
+The extractor receives the exact task or scoring-policy description, an opaque identifier, documented placeholders, the fixed analysis environment and the obligation vocabulary (Figure~\ref{fig:pipeline}). The request contains no scoring code, repository paths, issue or repair identifiers, actual references, probe values, rewards, reviewed contracts or previous model answers. Placeholders stay unresolved. Each distinct template uses a fresh ephemeral session. A template shared by several metrics counts once.
+
+\begin{figure}[t]
+\centering\small
+\begin{tabular}{c}
+\fbox{\parbox{0.90\columnwidth}{\centering Task or scoring-policy description\\and fixed analysis environment}}\\[3pt]
+$\downarrow$\\[-1pt]
+\fbox{\parbox{0.90\columnwidth}{\centering LLM or fixed textual rules\\Select obligations or abstain}}\\[3pt]
+$\downarrow$\\[-1pt]
+\fbox{\parbox{0.90\columnwidth}{\centering Check the schema and quoted evidence\\Compile exactly the selected obligations}}\\[3pt]
+$\downarrow$\\[-1pt]
+\fbox{\parbox{0.90\columnwidth}{\centering Original scorer with explicit native bindings\\Shared bounded symbolic checker}}\\[3pt]
+$\downarrow$\\[-1pt]
+\fbox{\parbox{0.90\columnwidth}{\centering Per-obligation \Alarm{}, \NoAlarm{} or \Unknown{}}}\\[14pt]
+\parbox{0.90\columnwidth}{\centering Separate native executions record observed rewards.\\The static checker receives no observed scores.}
+\end{tabular}
+\Description{A description and fixed environment go to an extractor. The compiler passes selected obligations to a symbolic checker that analyzes the original scorer. A reviewed contract can enter at the compiler, and Semgrep scans the source separately.}
+\caption{LLM and textual proposals feed the same checker. Reviewed contracts enter at the compiler. Semgrep independently scans the source.}
+\label{fig:pipeline}
+\end{figure}
+
+The prompt allows abstention or a partial selection. It instructs the model to select an atom only when the description warrants it. Each selection needs a short reason and a nonempty exact quotation from the question body. Admission rejects quotations drawn only from placeholder notes. It can verify that the words appear in the description. Whether they entail the atom is a separate question.
+
+The six-description pilot asked about answer meaning, formatting, order, normalization, tolerance, partial rewards and unspecified details. Few of those fields affected what the checker actually tested. The final interface asks the model to choose from two supplied Boolean obligations and fixes most structural fields in advance. This design limits what the experiment can say about discovering specifications outside that vocabulary.
+
+\subsection{Compiling the selected contract}
+
+The intermediate representation records the input roles, domain, reference assumption, normalization, threshold and an explicit nonempty list of obligations. The compiler validates the fields and passes that list to the checker unchanged. A missing or empty selection, duplicate atom or unsupported atom yields \Unknown{}.
+
+For example, these proposals reach the checker as two different contracts.
+\begin{center}
+\texttt{[valid\_boolean\_token, equals\_reference]}\\
+\texttt{[valid\_boolean\_token]}
+\end{center}
+The first rejects an opposite but valid token because it disagrees with the reference. The second accepts that token. The compiler admits both integer \texttt{1} and float \texttt{1.0} as thresholds and preserves the original JSON type in the sealed proposal.
+
+In the initial compiler, Boolean type and token metadata always created a combined contract. Even after the extractor omitted equality, the checker still received it. Compiling the explicit list makes that omission observable without changing how the checker reasons about Python.
+
+\subsection{Checking paths and specified inputs}
+
+For each selected atom, the checker collects the same source paths whichever extractor produced the contract. It tests whether a supported guard implies the atom or whether a native counterexample satisfies the path conditions while falsifying it. A guard can imply an unselected atom without activating it. When testing equality, the checker prefers an opposite valid token so that the witness isolates the failure of reference agreement.
+
+The checker records the obligation ID, candidate and reference values or classes, return span, supporting conditions and any reason for uncertainty. One witness for an active atom establishes a global \Alarm{} even if other paths or atoms remain unresolved. A global \NoAlarm{} requires a bounded certificate covering every selected atom on every relevant full-return path. Unknown calls and effects cannot establish that a path is infeasible. The checker overapproximates exception handlers and retains possible continuations past expressions whose failure behavior it cannot establish.
+
+A separate check takes a specified candidate and reference along with the source and contract. It uses the same terms and paths to derive a numeric return where possible and identifies which selected obligations that input violates at full credit. Native executions supply a comparison for the derived reward. The early static and concrete checks used the same predicate code, which limits what agreement between them establishes. The controlled study also uses separately written predicates to check native returns and an analytically specified matrix of expected results. Observed rewards are withheld from the static checker in both cases.
+
+\subsection{Native bindings and source coverage}
+
+A binding identifies the native parameter or single literal-key field that plays the role of candidate or reference. For HELM, \texttt{pred} supplies the candidate and \texttt{gold} the reference. Both are native strings. The adapter records the bindings and maps admitted reads to the existing candidate and reference terms. It reads each scorer in its original form, with its native signature and return shape, and keeps the obligation predicates fixed.
+
+The checker tracks scalar reassignment. Aliasing, mutation, hidden state, unsupported signatures and dependence on unmodeled helpers still yield \Unknown{}. These bindings supply no semantics for conditional expressions (\texttt{IfExp}), regular expressions or batch returns. The harness matches ASTs to pinned source and runs only inspected definitions in a restricted subprocess. A correction made before the model runs admitted \texttt{startswith} to that execution namespace. The symbolic checker still lacks a model for it. This harness is specific to the inspected definitions and provides no general-purpose sandbox.
+
+\subsection{Abstentions and witness identity}
+
+The checker distinguishes a missing specification from unsupported source when it abstains. Both reasons leave the bug label open. In particular, a null reference contract stays missing. The artifact preserves the selected lists, original response bytes and source mappings so that a reviewer can trace an omitted obligation through compilation.
+
+A global \Alarm{} alone can conceal an invalid witness. A program may have a defect on one input even when the candidate named by the checker is acceptable under the intended policy. The controlled evaluation therefore checks the exact candidate, reference and violated obligation ID against the native reward and independently computed policy predicates.
+
+
+\section{Experimental Design}
+
+\subsection{Research questions and units of analysis}
+
+The first three questions concern the source and its specification. Which defects can the source analyzers detect under a fixed contract (RQ1)? What corrections do LLM drafts need after extraction (RQ2)? If a proposal omits an obligation, does the checker see the omission and attribute each violation to the right condition (RQ3)? The last two questions concern transfer to new real scorers (RQ4) and the effect of changing the contract extractor under controlled conditions (RQ5).
+
+A proposed repair shares code with its original. Likewise, two tasks may inherit the same scorer and two metrics may call the same helper. Table~\ref{tab:stages} identifies the unit used in each comparison. The six drafting templates had appeared by filename in directory listings before selection, although their question text had yet to be read. Exposure during model pretraining is unknown.
+
+\begin{table*}[t]
+\caption{Units of analysis and scope of each study. Counts exclude reruns and software regression tests.}
+\label{tab:stages}
+\centering\small
+\begin{tabular}{@{}p{0.18\textwidth}p{0.25\textwidth}p{0.48\textwidth}@{}}
+\toprule
+Group & Unit and scope & What it can establish\\
+\midrule
+Fixed-contract characterization & 7 previously inspected function versions from 5 Reasoning Gym families & Whether the source baselines flag 3 defects and leave 2 proposed repairs and 2 controls unflagged.\\
+Synthetic diagnostics & 8 purpose-built scoring functions & Which guards and arithmetic expressions cause false alarms, missed defects or abstentions.\\
+Description pilot & 6 question templates, 3 scorer bodies, 4 inherited entries & Whether drafts pass validation and what an AI-assisted review would revise.\\
+Omission and integration & One known Boolean defect and a proposed repair, 3 inputs & Whether removing equality changes the obligation reported on the same input.\\
+Eligibility census & 8 candidates, 122 files, 108 dataset classes, 75 scoring definitions & Whether the pinned source contains another eligible Boolean scorer.\\
+External policy trial & 3 HELM metrics, 1 question template, 14 probes per metric & Whether the question warrants the proposed format and whether the checker can analyze each metric.\\
+Controlled extraction & 12 authored descriptions, 4 phrasing families, 3 programs, 6 distinct policy/program pairs with an obligation & Which additional contracts the LLM supplies and which source decisions follow.\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Subjects, labels, and detector inputs}
+
+The original scorers and controls come from Reasoning Gym revision \texttt{49b07130}~\cite{rgsource}. The seven versions cover five families. CoinFlip, GameOfLifeHalting, and ComplexArithmetic each have a reported defect. The two proposed repairs come from separate pull requests for GameOfLifeHalting and ComplexArithmetic. Palindrome and PrimeFactorization served as controls. An ambiguous answer schema ruled out a negative label for grouped anagrams, so that candidate was excluded. A separate set of 63 executions checked the labels and controls. Both detectors ran without access to those observations.
+
+Semgrep and the symbolic checker received the same scorer source, helper source, and reviewed contracts. Neither method had access to observed rewards, issue descriptions, repair status, or gold labels during prediction. Semgrep searches for source patterns, while the symbolic checker reasons about the supplied obligations. In the direct comparison of contract extractors, both the checker and the binding of its inputs stay fixed.
+
+For each negative label in the initial cohort, the source had to justify the stated full-credit condition. Passing a finite set of probes alone cannot establish a negative label. Accuracy is $(TP+TN)/N$, including every subject in $N$. The results record abstentions separately for each class. An abstention earns no true negative and counts as a miss for positive recall. The later HELM trial lacks both an authoritative contract for the literal answer format and adjudicated bug labels, which prevents a paired estimate of detection quality.
+
+\subsection{Controlled extraction comparison}
+
+The test set contains four phrasings of each of three policies, giving twelve descriptions. Policy $E$ requires normalized equality to a canonical Boolean reference. Policy $V$ requires only a valid Boolean token. Policy $U$ explicitly permits unrestricted text, so neither obligation applies. Given a canonical reference, $E$ entails $V$. The evaluation credits $E$ and $E+V$ as equivalent. The compiler receives the original selection.
+
+Separate AI assistants drafted the rules and the test descriptions in parallel. The rule author used six development descriptions without seeing the test descriptions. The author of the test descriptions saw neither the rules nor the development material. The rules use bounded clause patterns to recognize agreement with a reference, correctness requirements, and token format. They account for local negation and clauses that require format alone, and abstain on requirements outside their scope. Most development descriptions used direct phrasing.
+
+The descriptions, labels, prompts, rules, probes, expected results and scripts were fixed before preflight or test prediction. The preflight checked whether the source analyzer could decide both $E$ and $V$ for each of three programs (the known truthiness scorer, its proposed equality repair, and an authored token-only scorer). Each combination had to produce the expected verdict, backed by a source certificate or an independently checked native witness. After all six passed, the model received each description once. The experiment retained its first response. All six conditions used the same checker. Three supplied the reference, rule-derived or LLM-derived contract. The other three supplied $E$, $V$ or a null contract for every description. Semgrep served as a source comparator in the earlier studies. The controlled trial compared the LLM with the textual extractor and involved no additional Semgrep scans. A malformed response counted separately from a valid abstention under $U$.
+
+Each comparison pairs decisions for the same description and program and checks the returned witness against the intended policy. The 24 cells with nonempty contracts repeat six distinct policy--program combinations. The twelve $U$ cells test abstention and are excluded from the true-negative count. The intended labels come from the AI-assisted authors' English descriptions. Neither a formal entailment check nor independent human adjudication established those labels. The constructed pairings cannot estimate the prevalence of bugs in real projects.
+
+\subsection{Model requests and native execution}
+
+The extractor submitted each request through Codex CLI 0.147.0 in a fresh ephemeral session with a read-only temporary directory, a response schema, and JSON event logging~\cite{codexexec}. User configuration and project-document loading were disabled. The explicit request supplied only the permitted question material and fixed environment. The event audit accepted successful turns containing only reasoning or messages and rejected tool actions. The archive includes the raw prompts, responses, event logs, standard error, service usage, and failures.
+
+The service did not identify the underlying model on any of the twenty completed requests. Temperature and seed were unrecorded. The controlled requests exited successfully and passed the event audit despite startup warnings about skills, the model cache schema, and Notion MCP authentication. Token counts include service context beyond the explicit request. Replaying saved proposals reproduces the recorded inputs to the checker. New requests to the default service may yield different proposals.
+
+For a specified input, the symbolic checker derives the score from source without seeing the observed reward. A separate process verifies the selected definitions, binds the original arguments without converting the answer, and executes the inspected code. It records a numeric return, an exception, or an out-of-scope result. A pair enters the comparison only when both results are determinate. An empty list of violations accompanying a null contract or an Unknown result does not count as agreement.
+
+\section{Results}
+
+\subsection{RQ1. Fixed contracts and baseline behavior}
+
+Semgrep flagged all three original defects and issued no warnings on the four scoped negatives (Table~\ref{tab:baseline}). The symbolic checker detected the Boolean truthiness defect and certified the normalized equality check in its proposed repair, the palindrome and character-multiset checks, and the factor parser. It abstained on the probability scorer and both complex arithmetic versions. The first call it could not interpret was \texttt{answer.replace} in the probability scorer. In both arithmetic versions the first such call was to the complex parser. Those cases would also require further numerical reasoning.
+
+\begin{table}[t]
+\caption{Classifications under fixed contracts. $U_+$ and $U_-$ count abstentions on positive and negative cases, respectively.}
+\label{tab:baseline}
+\centering\small
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Group & Method & TP & FP & FN & TN & $U_+$ & $U_-$\\
+\midrule
+Real 7 & Semgrep & 3&0&0&4&0&0\\
+ & Symbolic & 1&0&0&3&2&1\\
+\midrule
+Synthetic 8 & Semgrep & 2&3&1&2&0&0\\
+ & Symbolic & 1&0&0&3&2&2\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The native returns illustrate what the three positive labels mean. CoinFlip gave full credit to \texttt{0} against \texttt{0.875}, outside the declared tolerance, because it divided the length of a matching prefix by the shorter string length. ComplexArithmetic gave full credit to \texttt{nan} against finite components $(3,2)$. The nonfinite distance propagated through the exponential, and the final clamp returned one. GameOfLifeHalting gave full credit to \texttt{False} against \texttt{True} because both strings are truthy.
+
+Semgrep's warnings and their absence agreed with the labels on 7/7 versions. The symbolic checker reached a decision on 4/7 and all four were correct. Its positive recall including abstentions was 1/3. The Semgrep patterns were written after inspection of these scorers. An absence of warnings means none of those patterns matched. These seven cases provide no estimate of accuracy on unfamiliar code.
+
+On eight authored diagnostics, Semgrep raised three false alarms. One truthiness check followed a correct equality guard, another example placed the suspect branch under \texttt{if False}, and a third inserted an assignment after a finite-distance guard. Semgrep also missed a branch that gave full credit to a nonfinite value. The symbolic checker ruled out the first two Boolean false alarms and abstained on the numerical cases. Both methods classified four of the eight examples correctly. Semgrep issued decisions on all eight and the symbolic checker on four. The two Boolean false alarms disappeared through symbolic reasoning alone.
+
+\subsection{RQ2. Revisions to description-only drafts}
+
+The six pilot templates cover string isomorphism, ransom-note construction, course prerequisites, prime counting, sorting and fraction simplification. The task selection preceded inspection of the candidate scorers. Both the references and the reviews drew only on the descriptions and used AI assistance. They may share biases. The pilot had no independent human annotations or measurements of editing time.
+
+All six responses satisfied the schema and five passed the stricter evidence checks. Two reviews compared ten groups of semantic fields per task. The final review retained 59 of the 60 groups and identified one ambiguity. The word \emph{exactly} in a Boolean requirement could restrict the answer to the token alone or simply restate the permitted tokens. The final comparison recorded no definite substantive edit. Many fields were null or inapplicable, which limits what the count says about extraction accuracy.
+
+The sorting draft captured numerical order, multiplicity, and the use of strings for the elements. One quotation came from the supplied placeholder notes. The validator required a quotation from the question itself and rejected the response.
+
+The proposal and reference conditions produced identical downstream decisions. Only the three Boolean tasks could use the original contract interface, and all three yielded the same detector input. Four of the six tasks inherited the previously inspected default scorer, leaving just three distinct scorer bodies overall. In each condition, Semgrep issued no warning on the three supported tasks and returned Unknown for the three that the interface could not represent. The symbolic checker returned Unknown on all six.
+
+\subsection{RQ3. Preserving an omitted obligation}
+
+Reasoning Gym issue \#544 concerns the GameOfLifeHalting truthiness comparison. Pull request \#561 at \texttt{4ab6143b} proposed comparing normalized strings. With reference \texttt{True}, the original gave one to both \texttt{False} and \texttt{banana}, and the proposed repair gave zero to both. Both versions gave one to the correct token.
+
+The experiment compared the original and the proposed repair under the full contract (validity plus equality), under validity alone, and with the specification missing. Under the full contract the opposite valid token violates only equality. Removing equality leaves no violation for that input. On the original scorer, \texttt{banana} violates both obligations in the full contract and the sole obligation in the validity-only contract. The correct token violates neither. The proposed repair gives zero on the two incorrect inputs, so neither can violate a full-credit condition there. The checker returns Unknown whenever the specification is missing.
+
+The initial compiler silently added equality to the validity-only contract. The compiled bytes and detector inputs were identical for the two nonempty selections. Whole-function alarms alone would have missed this error. Even the weaker contract has a counterexample on the original scorer, since an invalid token can earn full credit.
+
+With explicit compilation, the two contracts differ only in the obligation list and yield distinct fingerprints at the checker input. On the original scorer the checker produced a separate witness for each obligation. On the proposed repair it certified each selected obligation from the source guard. The checker attributed violations as expected in all 18 combinations of two versions, three inputs, and three contracts. On the twelve combinations with a specification, the derived rewards agreed with native execution. With the specification missing, the checker returned Unknown on all six inputs and derived no reward.
+
+In a subsequent single request on the same task, the LLM selected both obligations and supplied exact quotations from the question. Its proposal reached the checker unchanged. For all six version/input pairs (twelve records across the two contract conditions), its verdict and set of violated obligations matched those under the reference contract. The LLM omitted no obligation on this example. The deliberate omission above tests whether compilation preserves the author's selection.
+
+\subsection{RQ4. Eligibility and transfer to HELM}
+
+The search for a fresh Reasoning Gym case required a canonical Boolean answer and a distinct, compatible scoring implementation. Eight candidate concepts used Yes/No, 0/1, expressions, counts, role assignments, or the previously seen default scorer. In that revision, 122 source files contained 108 top-level classes whose names end in \texttt{Dataset}, including base and composite classes. Of these, 75 defined their own scoring method. Text searches and traces of answer fields identified no further eligible implementation. This source-level screen could miss a Boolean answer domain established at runtime. With no selected cases, the holdout produced no detection metrics.
+
+The search in other projects turned up copied or delegated scorers, batch and structured outputs, tagged answers, and scorers without evidence of Boolean use. The protocol permitted explicit bindings for parameters and fields and excluded conversions of answer encodings or rewards and any rewriting of source. Three HELM evaluation metrics met these criteria~\cite{helm,helmsource}. All three belong to one metric family and evaluate one CivilComments question template. Their use as RL training rewards has not been established.
+
+HELM supplies canonical \texttt{True} and \texttt{False} references to its exact, normalized-exact, and prefix-exact metrics. The adapter binds \texttt{gold} and \texttt{pred} at the point where HELM has already stripped outer whitespace from the completion. Each metric received seven kinds of string with each reference, giving fourteen probes per metric. This boundary excludes \texttt{None}. The probes exercise the scalar metrics without running the complete request adapter or classifying actual comments.
+
+The question asks whether a passage is toxic. It does not specify how to write the answer. The AI-assisted reference therefore abstained, while the LLM proposed both literal obligations and quoted the binary question for each. The quotations appeared in the question and the response passed validation, but neither the quoted words nor the form of the reference answer requires the candidate to use a bare Boolean token. The full few-shot request could contain formatting guidance absent from the supplied template.
+
+\begin{table}[t]
+\caption{Native HELM scores on string probes. A conditional gap is a full-credit return that violates the model-proposed contract. The question does not establish that contract as a requirement.}
+\label{tab:helm}
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Policy & Probes & Full returns & Conditional gaps\\
+\midrule
+Exact & 14 & 2 & 0\\
+Normalized exact & 14 & 6 & 4\\
+Prefix exact & 14 & 6 & 4\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All 42 native calls returned integer zero or one (Table~\ref{tab:helm}). For reference \texttt{True}, normalized exact gave full credit to \texttt{the True} and \texttt{True!}. Prefix exact accepted \texttt{True extra} and \texttt{True!}. Both model-proposed obligations are false for each of these full-credit responses. The corresponding \texttt{False} probes behaved symmetrically. These eight full-credit returns follow the metrics' documented treatment of articles, punctuation, or suffixes. They show where the strict proposal disagrees with native scoring. Counting the two failed obligations separately would double-count each observation.
+
+Semgrep scanned all three functions and issued no risk-pattern warning. The symbolic checker returned Unknown on all three in each condition, for different reasons. The reference supplied no contract. With the LLM contract, the checker encountered an unsupported conditional expression (\texttt{IfExp}) or helper. Even a simple empty-string branch could not establish the result while another possible return remained unsupported. All 42 specified-input checks also yielded Unknown in each condition.
+
+The null reference left no pair of concrete contract judgments to compare, and the static checker produced no determinate pair on any probe. Agreement, precision, recall, and the change in detection quality are consequently undefined. Although the proposed obligations reached the checker, this trial left both their justification and their effect on detection unresolved.
+
+
+\subsection{RQ5. Which descriptions did the rules miss?}
+
+Eight controlled descriptions specified a Boolean obligation that the checker could express. The LLM selected the intended contract for all eight. The rules recognized one, P28, and abstained on the other seven. The remaining four descriptions explicitly allowed unrestricted text. Both extractors abstained on all four, bringing agreement with the intended policy class to 12/12 for the LLM and 5/12 for the rules. All twelve LLM responses passed validation. The checker received the selected atoms in their original order, including both $E$ and $V$ when the model supplied both.
+
+\begin{table}[t]
+\caption{Decisions for the eight descriptions with expressible contracts, each applied to the same three programs. The last column counts correct decisions backed by a path certificate or a returned counterexample that violates the intended policy. The four unrestricted-text descriptions are scored separately.}
+\label{tab:controlled}
+\centering\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Contract source & TP & FP & FN & TN & $U$ & Supported\\
+\midrule
+Reference &12&0&0&12&0&24\\
+LLM &12&0&0&12&0&24\\
+Rules &2&0&0&1&21&3\\
+Always $E$ &12&4&0&8&0&16\\
+Always $V$ &8&0&4&12&0&20\\
+Always null &0&0&0&0&24&0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As a preflight check, the symbolic checker gave the expected result for each of the six combinations of policy ($E$ or $V$) and program. It produced three alarms and three certificates. The preflight also recorded 27 fixed program/input observations and checked the returned counterexamples by executing the scoring functions. The comparison then applied each additional contract to the same three programs. Of the 21 decisions that replaced \Unknown{}, ten had a counterexample to the intended policy and eleven had a certificate that every modeled full-credit path satisfied it. The rules' three determinate decisions were already correct (Table~\ref{tab:controlled}).
+
+Two missed descriptions illustrate the limits of the rule set. In P46, 115 characters separate \texttt{response} from \texttt{matches}. The rule looks for that verb within 65 characters. P91 asks the scorer to require only that the entire response be True or False. The format rules recognize an instruction to produce an output, or a construction such as \emph{the response must be}. They abstained on P91. These limits are visible in the archived rules. The comparison measures the rule set developed on the six separate examples.
+
+A simpler baseline puts the size of the gain in perspective. Always selecting $V$ gives a supported decision in 20 of 24 cells. All four misses occur in the same situation. The description requires the correct answer, but the token-only scorer accepts either label (P84 in Table~\ref{tab:policytrace}). Four descriptions express this policy in different words. All four fixed-$V$ misses follow from the same missing equality check.
+
+Always selecting $E$ exposes a subtler error. Under P91's format policy, the truthiness scorer does have a defect. It awards full credit to a non-Boolean string. The equality check flags that scorer, but its counterexample is an opposite, valid Boolean token. P91 allows that answer. The LLM selected $V$, for which the checker returned a non-Boolean string that actually earned full credit. Checking the witness changes the interpretation of four apparent true positives for always-$E$. It gives 20 correct binary labels, including four alarms with invalid witnesses, so only 16 of its 24 decisions have the required evidence. The other four binary labels are false positives. On the unrestricted-text policies, always-$E$ and always-$V$ imposed unwarranted conditions on all four descriptions and produced eight and four alarms respectively. Those twelve description/program pairs have no applicable contract and are excluded from the binary counts.
+
+\subsection{Model usage and reproduction}
+
+The drafting pilot used six completed requests. The known Boolean case and the HELM question used one each. Together they consumed 205,819 input tokens (18,048 cached) and 1,987 output tokens. Their request times summed to 72.743 seconds. The twelve controlled requests consumed 303,662 input tokens (83,328 cached) and 1,834 output tokens. Up to three requests ran concurrently. The batch took 32.8394 seconds, and individual request times summed to 84.8577 seconds.
+
+Across the twenty completed requests, the service reported 509,481 input tokens and 3,821 output tokens. The 101,376 cached input tokens are included in the input total. The service separately reported 55 reasoning tokens for the earlier requests and zero for the controlled batch. Summed request time was 157.6007 seconds. Monetary cost is unknown. The ledger excludes a CLI failure before the first model turn and covers only experimental inference. The artifact contains the raw responses, validation decisions, source, predictions and replay records. Its default verification command checks the archived evidence. The documented environment for rerunning Semgrep is macOS ARM64 with the pinned native engine.
+
+\section{Discussion and Limitations}
+
+\subsection{What a description tells the checker}
+
+The controlled descriptions and the HELM question differ in what they tell the reader about format. P91 explicitly gives credit for either Boolean label. Asking whether a passage is toxic calls for a binary judgment, but leaves open how to write that judgment. Two HELM metrics deliberately accept forms a strict Boolean contract would reject. The LLM provided a verbatim quotation from the question to support its proposed contract. The validator could check that those words occurred in the question. Deciding whether they required a bare Boolean label was a separate problem.
+
+A missing condition can cause just as much trouble as an invented one. In the development experiment, removing equality from the contract ought to make an opposite valid token cease to be a counterexample. The original compiler put equality back. The global alarm alone gave little indication of the mistake because the scorer also accepted invalid tokens. Inspecting which obligation failed on which input exposed the error. For an auditor, the evidence behind an alarm includes the candidate, the reference, the full return and the particular obligation that failed.
+
+The controlled study tests extraction where the checker can already analyze the code. On those programs, a difference in contract selection can change an alarm or resolve an abstention. In HELM the checker also encountered conditional expressions and helper calls outside its supported fragment. Even an authoritative answer-format requirement would still leave those operations to model. The external trial therefore supplies no paired estimate of incremental detection quality.
+
+\subsection{Limits of the comparisons}
+
+The original Reasoning Gym sources were selected for known behaviors. Some tasks share a scoring method and others use versions of the same function. Source collection and preparation of the external input bindings overlapped, although the core checker was fixed and the packaging authors did not inspect the primary function bodies. The controlled corpus covers four families of phrasing and three already supported programs. Matching the reference on eight expressible descriptions tests a small choice of obligations under a supplied domain and normalization policy. Different wording or a rule set developed on a wider range of examples could change how often each method abstains.
+
+AI assistance contributed to the controlled descriptions, reference contracts and revision judgments. Their authors could share assumptions about what the wording implies. In the external trial, the reference author also received an incidental agent-status message, recorded in the artifact. In the drafting pilot, agreement on an inapplicable field required little semantic judgment. The study collected no independent human annotations or editing times. Each controlled description received one model response, and neither the exact deployed model nor its pretraining exposure was known.
+
+The static guarantees depend on trusted references, the declared native input types and the checker's models of pure Python operations. The checker has no mechanized soundness proof for general Python. Its certificates refer to internal terms and source spans. Multiple short-circuit paths can display the same source condition. The audited implication also leaves under-rewarding outside its scope. For example, an equality scorer may reject the opposite valid label even when a policy accepts either, yet all answers it rewards still have valid format. A no-alarm certificate for validity is consistent with that behavior.
+
+\section{Related Work}
+
+DeepSeek-R1-Zero uses rule-based accuracy and format rewards~\cite{deepseekr1}. Reasoning Gym publishes procedural tasks together with their verifiers~\cite{reasoninggym}. Both motivate checking the program that assigns a reward. The experiments here concern what individual scoring functions accept. HELM's standardized evaluation metrics~\cite{helm} also show why an audit must account for intentional differences in how strictly a scorer matches an answer.
+
+BenchShield studies reward integrity in infrastructure for evaluating LLM agents~\cite{benchshield}. Its analysis uses a finite model of the evaluation lifecycle, phase-aware taint analysis and observations from the running infrastructure. The present audit has a narrower unit of analysis, the normal return of a single Python scorer under a stated contract.
+
+LLMDFA studies how LLMs can infer dataflow facts~\cite{llmdfa}. IRIS uses LLM assistance in static vulnerability analysis~\cite{iris}. Here the LLM reads the task description, and a separate program reasons over the scoring source. The checker tracks a small set of properties of possible executions, an idea familiar from abstract interpretation~\cite{abstractinterpretation}. Its path certificates apply to the modeled Python fragment.
+
+\section{Conclusion}
+
+On eight descriptions that specified a Boolean contract, the LLM recovered the intended obligations in seven cases the textual rules could not decide. The symbolic checker and the three scoring functions were the same in both runs. The token-only scorer illustrates the consequence. Giving \texttt{False} full credit against a \texttt{True} reference violates an agreement requirement and satisfies a format requirement. Keeping that distinction through compilation makes the alarm, or its absence, open to inspection. On real scoring functions, the study still lacks evidence that LLM extraction uncovers additional defects. Both the wording of the task and the operations the checker can interpret limit what an auditor can conclude.
+
+\section*{AI Usage Statement}
+
+I used Codex throughout the project, from exploring the research question and finding literature to implementing the checker and designing its prompts and rules. Codex also helped collect source, run the experiments, analyze the results, prepare the figures, and draft and edit the report. AI assistants separately drafted the development rules and the controlled test descriptions. They also helped prepare the reference contracts and review the results. These references and reviews involved AI throughout. The twenty archived experimental responses account only for the extraction runs.
+
+I chose reward auditing as the research direction and specified the baseline comparisons. When the compiler restored a missing obligation, I required it to preserve the proposed list and asked for each finding to identify a concrete input and the obligation it violated. I also limited the adaptation of external scorers to argument and field bindings, approved the use of evaluation scorers, and chose to run one controlled batch with the earlier results preserved. Earlier work on reference leakage informed the choice of topic. The reward study uses its own symbolic checker and reports its own results.
+
+\label{end:main}
+\clearpage
+\balance
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

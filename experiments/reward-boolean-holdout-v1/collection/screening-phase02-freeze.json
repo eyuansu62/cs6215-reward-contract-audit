@@ -1,0 +1,17 @@
+{
+  "files_sha256": {
+    "screening-plan.json": "268b3e0139e5cdb9d962b0bc8c1b0fd2465481d00913f0178aefacfb6782fc92",
+    "screening-addendum-02.json": "d4c48673362c9f8840ae9a3edcd96f5e639a2b5e95581608f4170bf88af734f0",
+    "screening-results.json": "2304f3460449f554c97ef3f180b2f1a5e5ea754c2cc631b2862688903804d1b4",
+    "screening-results-phase02.json": "aaee0306d5d95929f9182fb22e4b4cfcf75853fb64236ce704c346c94f7fba27",
+    "source-exposure-inventory.json": "0f8308b2a0f7da708b14d056781c14554918871754517003ced48fb7dc8cef26",
+    "source-exposure-inventory-phase02.json": "e0677361a74babd22a30617b96abce734486b6316540c870da2e80ae367a6993",
+    "prior-score-fingerprints.json": "e9fbfb25bf6ad94b4f8a6b3b8bc81e298e64e918c93fd273df67c67c823fc94c",
+    "screen_sources.py": "e248fbd9d88cd7aa217f26fc40833c069354fc6a5d269d96204df1a2eeb926f7",
+    "screen_sources_phase02.py": "be876837960157098c1eacce057dae32882d8a5abde59ac8cd7a3be3a00d5c08",
+    "SCREENING.md": "6026c6dca63846f351847083ba75c4e8ba032010a0c0460c4c9f433da028afb2",
+    "current-ref-assessment.json": "202aa69ace4a64ea1738b6e6fdf385221b567dd1752f8651474687f9eb366109"
+  },
+  "models_or_analyzers_run": false,
+  "candidate_module_sources_executed": false
+}

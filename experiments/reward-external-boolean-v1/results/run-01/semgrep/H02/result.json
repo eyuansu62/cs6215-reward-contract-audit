@@ -1,0 +1,192 @@
+{
+  "method": "pinned_semgrep_CE_same_rules_native_source_packager",
+  "verdict": "no_alarm",
+  "status": "complete",
+  "errors": [],
+  "source_rewritten": false,
+  "source_executed": false,
+  "semantics_proved": false,
+  "source_semantics_filtering": false,
+  "qualification": "Same native CE/rules as frozen baseline; source packager accepts original native signatures and definition packets. No_alarm is no pattern, not contract proof.",
+  "engine": {
+    "version": "semgrep-core version: 1.183.0 (08c107344d)",
+    "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+    "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core"
+  },
+  "coverage": {
+    "status": "complete",
+    "functions": [
+      {
+        "name": "normalize_text",
+        "source_span": [
+          1,
+          0,
+          22,
+          43
+        ],
+        "engine_span": [
+          1,
+          0,
+          22,
+          43
+        ]
+      },
+      {
+        "name": "quasi_exact_match",
+        "source_span": [
+          24,
+          0,
+          28,
+          67
+        ],
+        "engine_span": [
+          24,
+          0,
+          28,
+          67
+        ]
+      },
+      {
+        "name": "remove_articles",
+        "source_span": [
+          6,
+          4,
+          7,
+          51
+        ],
+        "engine_span": [
+          6,
+          4,
+          7,
+          51
+        ]
+      },
+      {
+        "name": "white_space_fix",
+        "source_span": [
+          9,
+          4,
+          10,
+          37
+        ],
+        "engine_span": [
+          9,
+          4,
+          10,
+          37
+        ]
+      },
+      {
+        "name": "remove_punc",
+        "source_span": [
+          12,
+          4,
+          14,
+          62
+        ],
+        "engine_span": [
+          12,
+          4,
+          14,
+          62
+        ]
+      },
+      {
+        "name": "lower",
+        "source_span": [
+          16,
+          4,
+          17,
+          27
+        ],
+        "engine_span": [
+          16,
+          4,
+          17,
+          27
+        ]
+      }
+    ],
+    "return_spans": [
+      [
+        7,
+        8,
+        7,
+        51
+      ],
+      [
+        10,
+        8,
+        10,
+        37
+      ],
+      [
+        14,
+        8,
+        14,
+        62
+      ],
+      [
+        17,
+        8,
+        17,
+        27
+      ],
+      [
+        22,
+        4,
+        22,
+        43
+      ],
+      [
+        26,
+        8,
+        26,
+        16
+      ],
+      [
+        28,
+        4,
+        28,
+        67
+      ]
+    ],
+    "function_count": 6,
+    "return_count": 7,
+    "semantics_proved": false,
+    "mode": "search",
+    "source_rewritten": false,
+    "command": [
+      "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+      "-json_nodots",
+      "-j",
+      "1",
+      "-timeout",
+      "10",
+      "-lang",
+      "python",
+      "-rules",
+      "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H02/coverage-rules.json",
+      "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H02/source.py"
+    ],
+    "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+  },
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-json_nodots",
+    "-j",
+    "1",
+    "-timeout",
+    "10",
+    "-lang",
+    "python",
+    "-rules",
+    "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H02/scan-rules.json",
+    "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H02/source.py"
+  ],
+  "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+  "source_sha256": "432a4f8bce3d98cfcb300cb5bb6d71c7d8b8a1b3b32153e0b4d6ab7d0d593069",
+  "all_findings": [],
+  "findings": [],
+  "wall_seconds": 0.498473
+}

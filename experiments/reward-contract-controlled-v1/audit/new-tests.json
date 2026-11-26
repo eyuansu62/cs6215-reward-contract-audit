@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "new_test_cases": 21,
+  "syntax_checked": [
+    "common.py",
+    "manage.py",
+    "native_worker.py",
+    "rule_extractor.py",
+    "run_study.py",
+    "test_rule_extractor.py",
+    "test_study_scoring.py"
+  ],
+  "existing_analyzer_or_scorer_or_model_calls": 0,
+  "old_tests_rerun": false
+}

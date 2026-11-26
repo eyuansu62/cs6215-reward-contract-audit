@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "id": "coverage-function",
+      "languages": [
+        "python"
+      ],
+      "severity": "WARNING",
+      "message": "Function structural coverage.",
+      "mode": "search",
+      "pattern": "def $FUNCTION(...):\n    ..."
+    },
+    {
+      "id": "coverage-return",
+      "languages": [
+        "python"
+      ],
+      "severity": "WARNING",
+      "message": "Return structural coverage.",
+      "mode": "search",
+      "pattern-either": [
+        {
+          "pattern": "return $VALUE"
+        },
+        {
+          "pattern": "return"
+        }
+      ]
+    }
+  ]
+}

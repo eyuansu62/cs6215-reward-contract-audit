@@ -1,0 +1,125 @@
+{
+  "sha": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+  "node_id": "C_kwDON9lIotoAKGE3MzM0NmQwMjhiYTAzMzVhYTQyZGExMDQ5NzJjODZlNmNkMGZlNjk",
+  "commit": {
+    "author": {
+      "name": "YangHaoooooo",
+      "email": "[email omitted]",
+      "date": "2026-11-08T07:47:57Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "[email omitted]",
+      "date": "2026-11-08T07:47:57Z"
+    },
+    "message": "[trainer] fix ReMax crashes in the baseline merge and the advantage (#11030)\n\nSigned-off-by: YangHaoooooo <[email omitted]>\nCo-authored-by: YangHaoooooo <[email omitted]>\nCo-authored-by: Cursor <[email omitted]>",
+    "tree": {
+      "sha": "c000660cf051d23df6ac884af8e9515ead23a1c8",
+      "url": "https://api.github.com/repos/hiyouga/EasyR1/git/trees/c000660cf051d23df6ac884af8e9515ead23a1c8"
+    },
+    "url": "https://api.github.com/repos/hiyouga/EasyR1/git/commits/a73346d028ba0335aa42da104972c86e6cd0fe69",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq8CktCRC1aQ7uu5UhlAAAqMgQAJd4IIg98r38DaXQf6e3nIhC\nM96rC0w1d4VjYSqEozG9Gk/1/tgG8ZW6twJFhoL8NWD9CA7d/q1RHCqqaElI/NcZ\nFPDUzi1xUmhRMwC2TkFr66sdfAlkQt1uQ1plAwByatMNy0DeGoxh71niePAYpAUF\nzkDfvO2vGRL/b2Wel6lqe0AC2kSUwTRfJuEx/46hQEmdY00i0AQBGYBe/alTYJUv\ntET4stxQAGeFYGNVxnK2RmjKCKJwbCquWAFNHfCtto0VY73/ZvqTW5UZ2pqfnyPD\n6FTdXVkOALgMi76Lgje0I6o9w5YkW6Q5fQFYLnhEGFM9nEoN6RFwKVecVBzMvRmb\nodVDiDv8v2oHG2p20ihDP1ti/qwhnC502fL4nW6U8jeWemLPBK0elYkzgiwZ3eRw\nu616W1rZ0nGtO/8lmLcU5MrLxYCVqZ96hpavbO/r47niIBMGga5ufy9fWdcMI5bV\nVjp9WPSV6e0xYRQaCjikCYQcbb3lw8kmCYo/7jz/3lg/Hc/eRIRMRctkmZ3MxI40\nqlxN0Rd7v9zgNsdyhhkhPsyRG/blfjkTEWjZtfXO/UTjk1dYp+qEWEcbv7G81ksC\nqeqqYBSGjYE9UD8khKFX6L7Fn3SN9H5B1a6LLkYClFdaUOyXZW9gRrlskoDZFz1Q\n/QroFD6PtqG1TexjmXC5\n=bSzN\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree c000660cf051d23df6ac884af8e9515ead23a1c8\nparent 602a12820f69cf45ea98de08a63b3509313a7d02\nauthor YangHaoooooo <[email omitted]> 1794124077 +0800\ncommitter GitHub <[email omitted]> 1794124077 +0800\n\n[trainer] fix ReMax crashes in the baseline merge and the advantage (#11030)\n\nSigned-off-by: YangHaoooooo <[email omitted]>\nCo-authored-by: YangHaoooooo <[email omitted]>\nCo-authored-by: Cursor <[email omitted]>",
+      "verified_at": "2026-11-08T07:47:57Z"
+    }
+  },
+  "url": "https://api.github.com/repos/hiyouga/EasyR1/commits/a73346d028ba0335aa42da104972c86e6cd0fe69",
+  "html_url": "https://github.com/hiyouga/EasyR1/commit/a73346d028ba0335aa42da104972c86e6cd0fe69",
+  "comments_url": "https://api.github.com/repos/hiyouga/EasyR1/commits/a73346d028ba0335aa42da104972c86e6cd0fe69/comments",
+  "author": {
+    "login": "Hang-get",
+    "id": 233765393,
+    "node_id": "U_kgDODe76EQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/233765393?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Hang-get",
+    "html_url": "https://github.com/Hang-get",
+    "followers_url": "https://api.github.com/users/Hang-get/followers",
+    "following_url": "https://api.github.com/users/Hang-get/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Hang-get/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Hang-get/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Hang-get/subscriptions",
+    "organizations_url": "https://api.github.com/users/Hang-get/orgs",
+    "repos_url": "https://api.github.com/users/Hang-get/repos",
+    "events_url": "https://api.github.com/users/Hang-get/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Hang-get/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "602a12820f69cf45ea98de08a63b3509313a7d02",
+      "url": "https://api.github.com/repos/hiyouga/EasyR1/commits/602a12820f69cf45ea98de08a63b3509313a7d02",
+      "html_url": "https://github.com/hiyouga/EasyR1/commit/602a12820f69cf45ea98de08a63b3509313a7d02"
+    }
+  ],
+  "stats": {
+    "total": 46,
+    "additions": 42,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "e9213f9474b0f88d82dd5927c19361f038a4445e",
+      "filename": "tests/test_remax.py",
+      "status": "added",
+      "additions": 32,
+      "deletions": 0,
+      "changes": 32,
+      "blob_url": "https://github.com/hiyouga/EasyR1/blob/a73346d028ba0335aa42da104972c86e6cd0fe69/tests%2Ftest_remax.py",
+      "raw_url": "https://github.com/hiyouga/EasyR1/raw/a73346d028ba0335aa42da104972c86e6cd0fe69/tests%2Ftest_remax.py",
+      "contents_url": "https://api.github.com/repos/hiyouga/EasyR1/contents/tests%2Ftest_remax.py?ref=a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "patch": "@@ -0,0 +1,32 @@\n+# Copyright 2024 Bytedance Ltd. and/or its affiliates\n+#\n+# Licensed under the Apache License, Version 2.0 (the \"License\");\n+# you may not use this file except in compliance with the License.\n+# You may obtain a copy of the License at\n+#\n+#     http://www.apache.org/licenses/LICENSE-2.0\n+#\n+# Unless required by applicable law or agreed to in writing, software\n+# distributed under the License is distributed on an \"AS IS\" BASIS,\n+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n+# See the License for the specific language governing permissions and\n+# limitations under the License.\n+\n+import torch\n+\n+from verl.trainer.core_algos import compute_remax_outcome_advantage\n+\n+\n+def test_remax_advantage_for_a_batch():\n+    token_level_rewards = torch.tensor([[0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.5], [0.0, 0.0, 0.0, 0.0]])\n+    response_mask = torch.tensor([[1, 1, 0, 0], [1, 1, 1, 1], [1, 0, 0, 0]], dtype=torch.float32)\n+    reward_baselines = torch.tensor([0.25, 0.5, 1.0])\n+\n+    advantages, returns = compute_remax_outcome_advantage(\n+        token_level_rewards=token_level_rewards, reward_baselines=reward_baselines, response_mask=response_mask\n+    )\n+\n+    torch.testing.assert_close(advantages, torch.tensor([[0.75], [0.0], [-1.0]]) * response_mask)\n+    torch.testing.assert_close(\n+        returns, torch.tensor([[1.0, 1.0, 0.0, 0.0], [0.5, 0.5, 0.5, 0.5], [0.0, 0.0, 0.0, 0.0]])\n+    )"
+    },
+    {
+      "sha": "d9d95cb354123ca1da339bf9a2144c7d4570ac2c",
+      "filename": "verl/trainer/core_algos.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/hiyouga/EasyR1/blob/a73346d028ba0335aa42da104972c86e6cd0fe69/verl%2Ftrainer%2Fcore_algos.py",
+      "raw_url": "https://github.com/hiyouga/EasyR1/raw/a73346d028ba0335aa42da104972c86e6cd0fe69/verl%2Ftrainer%2Fcore_algos.py",
+      "contents_url": "https://api.github.com/repos/hiyouga/EasyR1/contents/verl%2Ftrainer%2Fcore_algos.py?ref=a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "patch": "@@ -365,7 +365,7 @@ def compute_remax_outcome_advantage(\n             shape: (bs, response_length)\n \n     \"\"\"\n-    advantages = (token_level_rewards.sum(dim=-1) - reward_baselines) * response_mask\n+    advantages = (token_level_rewards.sum(dim=-1) - reward_baselines).unsqueeze(-1) * response_mask\n     returns = (token_level_rewards * response_mask).flip(dims=(-1,)).cumsum(dim=-1).flip(dims=(-1,))\n     return advantages, returns\n \n@@ -488,8 +488,8 @@ def compute_policy_loss(\n     if loss_type == \"cispo\":\n         final_pg_loss = -advantages * log_probs * clipped_ratio.detach()\n     elif loss_type == \"sapo\":\n-        positive_token_mask =  (advantages >= 0).float()\n-        negative_token_mask =  (advantages < 0).float()\n+        positive_token_mask = (advantages >= 0).float()\n+        negative_token_mask = (advantages < 0).float()\n         gate_negative = 4.0 / tau_negative * torch.sigmoid(tau_negative * (ratio - 1.0))\n         gate_positive = 4.0 / tau_positive * torch.sigmoid(tau_positive * (ratio - 1.0))\n         final_pg_loss = -advantages * (positive_token_mask * gate_positive + negative_token_mask * gate_negative)"
+    },
+    {
+      "sha": "ec7085f3186f8be02207e24761d5e1819b1f03bd",
+      "filename": "verl/trainer/ray_trainer.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 1,
+      "changes": 8,
+      "blob_url": "https://github.com/hiyouga/EasyR1/blob/a73346d028ba0335aa42da104972c86e6cd0fe69/verl%2Ftrainer%2Fray_trainer.py",
+      "raw_url": "https://github.com/hiyouga/EasyR1/raw/a73346d028ba0335aa42da104972c86e6cd0fe69/verl%2Ftrainer%2Fray_trainer.py",
+      "contents_url": "https://api.github.com/repos/hiyouga/EasyR1/contents/verl%2Ftrainer%2Fray_trainer.py?ref=a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "patch": "@@ -506,7 +506,13 @@ def _make_batch_data(self, metrics: dict[str, Any]) -> DataProto:\n                 reward_baseline_tensor, _ = ray.get(self.reward_fn.compute_reward.remote(new_batch))\n                 reward_baseline_tensor = reward_baseline_tensor.sum(dim=-1)\n \n-                new_batch.pop(batch_keys=list(gen_baseline_output.batch.keys()))\n+                # remove everything the baseline output added, otherwise its temperature=0 in meta_info\n+                # conflicts with the meta_info of the log probs merged into the batch later\n+                new_batch.pop(\n+                    batch_keys=list(gen_baseline_output.batch.keys()),\n+                    non_tensor_batch_keys=list(gen_baseline_output.non_tensor_batch.keys()),\n+                    meta_info_keys=list(gen_baseline_output.meta_info.keys()),\n+                )\n                 new_batch.batch[\"reward_baselines\"] = reward_baseline_tensor\n                 del gen_baseline_batch, gen_baseline_output\n "
+    }
+  ]
+}

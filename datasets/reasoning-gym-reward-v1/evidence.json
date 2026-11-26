@@ -1,0 +1,1608 @@
+{
+  "canonical_replay": "results/replay-02",
+  "subjects": [
+    {
+      "subject_id": "rg-issue-543-original",
+      "function_family": "rg-issue-543",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": {
+        "number": 543,
+        "url": "https://github.com/open-thought/reasoning-gym/issues/543",
+        "title": "`coin_flip`: the constant answer \"0\" receives full reward",
+        "created_at": "2026-10-27T03:01:36Z",
+        "updated_at": "2026-10-27T03:01:36Z",
+        "state_at_collection": "open",
+        "closed_at": null,
+        "evidence_file": "collection/issue-543.json",
+        "comments_evidence_file": "collection/issue-543-comments.json",
+        "snapshot_commit_claimed_by_report": "49b0713",
+        "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+      },
+      "upstream_repair": {
+        "status": "no_verified_upstream_fix",
+        "fix_version": null,
+        "verified_merged_commit": null,
+        "reason": "Saved issue has no comments or linked repair, and this curation has no verified PR or fixed commit for issue543. Issue body suggests denominator/numeric changes, which are not an implemented upstream fix.",
+        "evidence_files": [
+          "collection/issue-543.json",
+          "collection/issue-543-comments.json"
+        ],
+        "search_completeness": "bounded evidence set; not a claim that no fix exists anywhere"
+      },
+      "source_review_snapshot": "records/bugs.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "counterexamples/constant-zero",
+          "answer": "0",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "less_than": 1.0,
+            "rationale": "numeric error0.875 > default tol"
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/short-prefix-08",
+          "answer": "0.8",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "less_than": 1.0,
+            "rationale": "numeric error0.075 > default tol"
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/short-prefix-087",
+          "answer": "0.87",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "less_than": 1.0,
+            "rationale": "numeric error0.005 > default tol"
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact-decimal",
+          "answer": "0.875",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/equivalent-fraction",
+          "answer": "7/8",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/within-tolerance",
+          "answer": "0.87505",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/ordinary-prefix-partial",
+          "answer": "0.85",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 0.75,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/no-common-prefix",
+          "answer": "1",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/invalid",
+          "answer": "banana",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/empty",
+          "answer": "",
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/missing",
+          "answer": null,
+          "entry": {
+            "answer": "0.875"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    },
+    {
+      "subject_id": "rg-issue-544-original",
+      "function_family": "rg-issue-544",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": {
+        "number": 544,
+        "url": "https://github.com/open-thought/reasoning-gym/issues/544",
+        "title": "`game_of_life_halting`: any non-empty answer receives full reward",
+        "created_at": "2026-10-27T05:32:55Z",
+        "updated_at": "2026-11-01T10:32:45Z",
+        "state_at_collection": "open",
+        "closed_at": null,
+        "evidence_file": "collection/issue-544.json",
+        "comments_evidence_file": "collection/issue-544-comments.json",
+        "snapshot_commit_claimed_by_report": "49b0713",
+        "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+      },
+      "upstream_repair": {
+        "status": "open_upstream_proposal_not_merged",
+        "number": 561,
+        "url": "https://github.com/open-thought/reasoning-gym/pull/561",
+        "title": "Fix bool conversion in game of life halting",
+        "created_at": "2026-11-01T10:31:35Z",
+        "updated_at": "2026-11-01T10:31:35Z",
+        "state_at_collection": "open",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": null,
+        "head_commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "head_repository": "mdjanbaz/reasoning-gym",
+        "base_repository": "open-thought/reasoning-gym",
+        "evidence_file": "collection/pr-561.json",
+        "patch_evidence_file": "collection/pr-561-files.json",
+        "api_merge_commit_sha_not_a_merged_fix": "c6eb5ae3f50ec8381da12cae354b85ff46a9526a",
+        "fix_version": null,
+        "fix_version_status": "no_merged_fix_or_release_verified",
+        "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "patch_comparison": {
+          "base_snapshot": "pr561_base",
+          "head_snapshot": "pr561",
+          "base_equals_issue_snapshot_byte_for_byte": true,
+          "base_module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+          "head_module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+          "module_unified_diff": "--- pr561_base/reasoning_gym/algorithmic/game_of_life_halting.py\n+++ pr561/reasoning_gym/algorithmic/game_of_life_halting.py\n@@ -395,7 +395,7 @@\n             float: The computed score between 0.0 and 1.0.\n         \"\"\"\n \n-        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n+        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n             # python's bool conversion is very tolerant and normally doesn't raise exceptions\n             return 1.0\n         return 0.0\n",
+          "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+        }
+      },
+      "source_review_snapshot": "records/bugs.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "counterexamples/opposite-false",
+          "answer": "False",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/nonboolean-banana",
+          "answer": "banana",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/opposite-true",
+          "answer": "True",
+          "entry": {
+            "answer": "False"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact-true",
+          "answer": "True",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact-false",
+          "answer": "False",
+          "entry": {
+            "answer": "False"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/missing",
+          "answer": null,
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/empty",
+          "answer": "",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    },
+    {
+      "subject_id": "rg-issue-545-original",
+      "function_family": "rg-issue-545",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": {
+        "number": 545,
+        "url": "https://github.com/open-thought/reasoning-gym/issues/545",
+        "title": "`complex_arithmetic`: the answer \"nan\" receives full reward",
+        "created_at": "2026-10-27T05:37:01Z",
+        "updated_at": "2026-11-01T10:52:34Z",
+        "state_at_collection": "open",
+        "closed_at": null,
+        "evidence_file": "collection/issue-545.json",
+        "comments_evidence_file": "collection/issue-545-comments.json",
+        "snapshot_commit_claimed_by_report": "49b0713",
+        "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+      },
+      "upstream_repair": {
+        "status": "open_upstream_proposal_not_merged",
+        "number": 562,
+        "url": "https://github.com/open-thought/reasoning-gym/pull/562",
+        "title": "Fix NaN values scoring in complex_arithmetic.py",
+        "created_at": "2026-11-01T10:51:19Z",
+        "updated_at": "2026-11-01T10:51:19Z",
+        "state_at_collection": "open",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": null,
+        "head_commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "head_repository": "mdjanbaz/reasoning-gym",
+        "base_repository": "open-thought/reasoning-gym",
+        "evidence_file": "collection/pr-562.json",
+        "patch_evidence_file": "collection/pr-562-files.json",
+        "api_merge_commit_sha_not_a_merged_fix": "870173c02dd1758286f1d1720d80231ce8124473",
+        "fix_version": null,
+        "fix_version_status": "no_merged_fix_or_release_verified",
+        "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "patch_comparison": {
+          "base_snapshot": "pr562_base",
+          "head_snapshot": "pr562",
+          "base_equals_issue_snapshot_byte_for_byte": true,
+          "base_module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+          "head_module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+          "module_unified_diff": "--- pr562_base/reasoning_gym/algebra/complex_arithmetic.py\n+++ pr562/reasoning_gym/algebra/complex_arithmetic.py\n@@ -170,14 +170,18 @@\n         if answer is None:\n             return 0.0\n \n-        metadata = entry[\"metadata\"]\n         try:\n             student_result = self.parse_string_to_complex(answer)\n-            expected_result = complex(*metadata[\"result\"])\n-            # Calculate distance-based score using exponential decay\n+            if student_result is None:\n+                return 0.0\n+\n+            expected_result = complex(*entry[\"metadata\"][\"result\"])\n             distance = abs(student_result - expected_result)\n-            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n-            return score\n+\n+            if not math.isfinite(distance):\n+                return 0.0\n+\n+            return math.exp(-distance)\n \n         except (ValueError, TypeError):\n             return 0.0\n",
+          "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+        }
+      },
+      "source_review_snapshot": "records/bugs.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "counterexamples/nan-real",
+          "answer": "nan",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/nan-imaginary",
+          "answer": "1+nanj",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/nan-i-notation",
+          "answer": "nan+2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": true,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": false,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact",
+          "answer": "3 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/equivalent-parentheses",
+          "answer": "((3.0 + 2.0i ) )",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/finite-partial",
+          "answer": "4 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.36787944117144233,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/invalid",
+          "answer": "invalid",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/missing",
+          "answer": null,
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/infinity",
+          "answer": "inf + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    },
+    {
+      "subject_id": "rg-pr-561-proposed-repair",
+      "function_family": "rg-issue-544",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": {
+        "number": 544,
+        "url": "https://github.com/open-thought/reasoning-gym/issues/544",
+        "title": "`game_of_life_halting`: any non-empty answer receives full reward",
+        "created_at": "2026-10-27T05:32:55Z",
+        "updated_at": "2026-11-01T10:32:45Z",
+        "state_at_collection": "open",
+        "closed_at": null,
+        "evidence_file": "collection/issue-544.json",
+        "comments_evidence_file": "collection/issue-544-comments.json",
+        "snapshot_commit_claimed_by_report": "49b0713",
+        "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+      },
+      "upstream_repair": {
+        "status": "open_upstream_proposal_not_merged",
+        "number": 561,
+        "url": "https://github.com/open-thought/reasoning-gym/pull/561",
+        "title": "Fix bool conversion in game of life halting",
+        "created_at": "2026-11-01T10:31:35Z",
+        "updated_at": "2026-11-01T10:31:35Z",
+        "state_at_collection": "open",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": null,
+        "head_commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "head_repository": "mdjanbaz/reasoning-gym",
+        "base_repository": "open-thought/reasoning-gym",
+        "evidence_file": "collection/pr-561.json",
+        "patch_evidence_file": "collection/pr-561-files.json",
+        "api_merge_commit_sha_not_a_merged_fix": "c6eb5ae3f50ec8381da12cae354b85ff46a9526a",
+        "fix_version": null,
+        "fix_version_status": "no_merged_fix_or_release_verified",
+        "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "original_source": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "original_method_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+        "head_method_ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+        "patch_comparison": {
+          "base_snapshot": "pr561_base",
+          "head_snapshot": "pr561",
+          "base_equals_issue_snapshot_byte_for_byte": true,
+          "base_module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+          "head_module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+          "module_unified_diff": "--- pr561_base/reasoning_gym/algorithmic/game_of_life_halting.py\n+++ pr561/reasoning_gym/algorithmic/game_of_life_halting.py\n@@ -395,7 +395,7 @@\n             float: The computed score between 0.0 and 1.0.\n         \"\"\"\n \n-        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n+        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n             # python's bool conversion is very tolerant and normally doesn't raise exceptions\n             return 1.0\n         return 0.0\n",
+          "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+        }
+      },
+      "source_review_snapshot": "records/bugs.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "counterexamples/opposite-false",
+          "answer": "False",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": true,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/nonboolean-banana",
+          "answer": "banana",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": true,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/opposite-true",
+          "answer": "True",
+          "entry": {
+            "answer": "False"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": true,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact-true",
+          "answer": "True",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact-false",
+          "answer": "False",
+          "entry": {
+            "answer": "False"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/missing",
+          "answer": null,
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/empty",
+          "answer": "",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/normalized-correct",
+          "answer": "  true  ",
+          "entry": {
+            "answer": "True"
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    },
+    {
+      "subject_id": "rg-pr-562-proposed-repair",
+      "function_family": "rg-issue-545",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": {
+        "number": 545,
+        "url": "https://github.com/open-thought/reasoning-gym/issues/545",
+        "title": "`complex_arithmetic`: the answer \"nan\" receives full reward",
+        "created_at": "2026-10-27T05:37:01Z",
+        "updated_at": "2026-11-01T10:52:34Z",
+        "state_at_collection": "open",
+        "closed_at": null,
+        "evidence_file": "collection/issue-545.json",
+        "comments_evidence_file": "collection/issue-545-comments.json",
+        "snapshot_commit_claimed_by_report": "49b0713",
+        "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+      },
+      "upstream_repair": {
+        "status": "open_upstream_proposal_not_merged",
+        "number": 562,
+        "url": "https://github.com/open-thought/reasoning-gym/pull/562",
+        "title": "Fix NaN values scoring in complex_arithmetic.py",
+        "created_at": "2026-11-01T10:51:19Z",
+        "updated_at": "2026-11-01T10:51:19Z",
+        "state_at_collection": "open",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": null,
+        "head_commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "head_repository": "mdjanbaz/reasoning-gym",
+        "base_repository": "open-thought/reasoning-gym",
+        "evidence_file": "collection/pr-562.json",
+        "patch_evidence_file": "collection/pr-562-files.json",
+        "api_merge_commit_sha_not_a_merged_fix": "870173c02dd1758286f1d1720d80231ce8124473",
+        "fix_version": null,
+        "fix_version_status": "no_merged_fix_or_release_verified",
+        "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "original_source": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "original_method_ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+        "head_method_ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea",
+        "patch_comparison": {
+          "base_snapshot": "pr562_base",
+          "head_snapshot": "pr562",
+          "base_equals_issue_snapshot_byte_for_byte": true,
+          "base_module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+          "head_module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+          "module_unified_diff": "--- pr562_base/reasoning_gym/algebra/complex_arithmetic.py\n+++ pr562/reasoning_gym/algebra/complex_arithmetic.py\n@@ -170,14 +170,18 @@\n         if answer is None:\n             return 0.0\n \n-        metadata = entry[\"metadata\"]\n         try:\n             student_result = self.parse_string_to_complex(answer)\n-            expected_result = complex(*metadata[\"result\"])\n-            # Calculate distance-based score using exponential decay\n+            if student_result is None:\n+                return 0.0\n+\n+            expected_result = complex(*entry[\"metadata\"][\"result\"])\n             distance = abs(student_result - expected_result)\n-            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n-            return score\n+\n+            if not math.isfinite(distance):\n+                return 0.0\n+\n+            return math.exp(-distance)\n \n         except (ValueError, TypeError):\n             return 0.0\n",
+          "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+        }
+      },
+      "source_review_snapshot": "records/bugs.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "counterexamples/nan-real",
+          "answer": "nan",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": true,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/nan-imaginary",
+          "answer": "1+nanj",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": true,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "counterexamples/nan-i-notation",
+          "answer": "nan+2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": {
+            "equals": 0.0
+          },
+          "declared_expectation_satisfied": true,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/exact",
+          "answer": "3 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/equivalent-parentheses",
+          "answer": "((3.0 + 2.0i ) )",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/finite-partial",
+          "answer": "4 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.36787944117144233,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/invalid",
+          "answer": "invalid",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/missing",
+          "answer": null,
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/infinity",
+          "answer": "inf + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "normal_controls/nonfinite-imaginary",
+          "answer": "nanj",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    },
+    {
+      "subject_id": "control-palindrome-validity-main",
+      "function_family": "PalindromeDataset.score_answer",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": null,
+      "upstream_repair": null,
+      "source_review_snapshot": "records/controls.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "p-valid-reference",
+          "answer": "abba",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "p-valid-alternative",
+          "answer": "baab",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "p-normalized-valid",
+          "answer": " ABBA ",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "p-wrong-order",
+          "answer": "aabb",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 0.02,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "p-wrong-letters",
+          "answer": "aaaa",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 0.05,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "p-missing",
+          "answer": null,
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "p-empty",
+          "answer": "",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    },
+    {
+      "subject_id": "control-group-anagrams-order-main",
+      "function_family": "GroupAnagramsDataset.score_answer",
+      "primary_eligible": false,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": null,
+      "upstream_repair": null,
+      "source_review_snapshot": "records/controls.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "g-valid-reference",
+          "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "g-valid-reordered",
+          "answer": "[[\"tan\", \"nat\"], [\"tea\", \"eat\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "g-wrong-partition",
+          "answer": "[[\"eat\", \"tan\"], [\"tea\", \"nat\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "actual_reward": 0.01,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "g-missing-word",
+          "answer": "[[\"eat\", \"tea\"], [\"nat\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "actual_reward": 0.01,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "g-invalid-json",
+          "answer": "not JSON",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "g-missing",
+          "answer": null,
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": "results/schema-boundary-diagnostic.json"
+    },
+    {
+      "subject_id": "control-prime-factorization-main",
+      "function_family": "PrimeFactorizationDataset.score_answer",
+      "primary_eligible": true,
+      "evidence_levels": [
+        "source_reviewed",
+        "exact_scoring_AST_executed_in_isolated_harness"
+      ],
+      "upstream_report": null,
+      "upstream_repair": null,
+      "source_review_snapshot": "records/controls.json",
+      "execution_status": "executed_real_method_with_source_identity_and_declared_native_context",
+      "full_package_or_generator_execution": false,
+      "observations": [
+        {
+          "id": "f-valid-reference",
+          "answer": "2 × 2 × 3",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "f-valid-permutation",
+          "answer": " 3 × 2 × 2 ",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "actual_reward": 1.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "f-composite-factor",
+          "answer": "3 × 4",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "actual_reward": 0.5,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "f-wrong-product",
+          "answer": "2 × 3",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "actual_reward": 0.01,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        },
+        {
+          "id": "f-missing",
+          "answer": null,
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "actual_reward": 0.0,
+          "source_behavior_matches": true,
+          "full_credit_contract_violation": false,
+          "declared_contract_expectation": null,
+          "declared_expectation_satisfied": null,
+          "input_origin": "Explicit minimal source-shaped fixture; no generator/seed sample claimed."
+        }
+      ],
+      "global_cleanliness_proved": false,
+      "actual_RL_exploitation_or_training_effect_established": false,
+      "schema_diagnostic": null
+    }
+  ],
+  "additional_diagnostic": {
+    "subject": "control-group-anagrams-order-main",
+    "probe": {
+      "answer": "[{\"eat\":0,\"tea\":0},{\"nat\":0,\"tan\":0}]",
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      }
+    },
+    "observed": {
+      "kind": "returned",
+      "reward": 1.0,
+      "python_type": "float",
+      "entry_unchanged": true,
+      "source_AST_identity_verified": true,
+      "upstream_module_imported": false,
+      "upstream_constructor_or_generator_executed": false
+    },
+    "strict_list_of_lists_predicate_satisfied": false,
+    "interpretation": "The prompt specifies list-of-lists. Dictionary groups preserve the correct word partition under Python key iteration but violate that representation. Whether permissive representation deserves full reward is contract-sensitive; this is not a confirmed new upstream issue or training exploit.",
+    "dataset_role": "Qualified semantic-order control for valid list inputs; exclude from unqualified schema-safety negatives.",
+    "upstream_source_changed": false,
+    "full_package_or_generator_executed": false,
+    "analyzer_or_model_run": false
+  },
+  "validator_correction": "audit/contract-validator-correction.json",
+  "prior_replay_retained": "results/replay-01",
+  "curator_snapshot_status_note": "Pending execution fields in raw records reflect authorship before root replay; this consolidated evidence is authoritative for current execution status."
+}

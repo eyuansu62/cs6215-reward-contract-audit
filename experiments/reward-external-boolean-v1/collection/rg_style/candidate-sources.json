@@ -1,0 +1,135 @@
+{
+  "created_utc": "2026-11-09T02:40:58.268342+00:00",
+  "role": "RG-style external source candidate curation, not benchmark selection",
+  "records": [
+    {
+      "repo": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "records": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/EnvCommons/ReasoningGym/460ae1a987c40d4bd9c1964566affb3daf99198f/README.md",
+          "sha256": "662af807c47a0865ec1f92d8cc859fbc4021c9d03c664741ed9a7b04ee53de1f",
+          "bytes": 3778,
+          "status": "fetched",
+          "local_path": "raw/EnvCommons__ReasoningGym/README.md"
+        },
+        {
+          "path": "environment.py",
+          "url": "https://raw.githubusercontent.com/EnvCommons/ReasoningGym/460ae1a987c40d4bd9c1964566affb3daf99198f/environment.py",
+          "status": "fetch_failed",
+          "error": "HTTP Error 404: Not Found"
+        }
+      ],
+      "subject_executed": false
+    },
+    {
+      "repo": "huggingface/OpenEnv",
+      "commit": "9fac2a9acae682d5c18857198eac7152d7bf1a63",
+      "records": [
+        {
+          "path": "envs/reasoning_gym_env/README.md",
+          "url": "https://raw.githubusercontent.com/huggingface/OpenEnv/9fac2a9acae682d5c18857198eac7152d7bf1a63/envs/reasoning_gym_env/README.md",
+          "sha256": "ea81ed3b2dc574edbb9f25b4d1f23b54f58426eed68cc4b843728903e322362a",
+          "bytes": 9555,
+          "status": "fetched",
+          "local_path": "raw/huggingface__OpenEnv/envs/reasoning_gym_env/README.md"
+        },
+        {
+          "path": "envs/reasoning_gym_env/server/reasoning_gym_environment.py",
+          "url": "https://raw.githubusercontent.com/huggingface/OpenEnv/9fac2a9acae682d5c18857198eac7152d7bf1a63/envs/reasoning_gym_env/server/reasoning_gym_environment.py",
+          "sha256": "fc278bc9463ea06097b3ea1663aa361d05d4331410523596491fb08cc43b64dd",
+          "bytes": 10046,
+          "status": "fetched",
+          "local_path": "raw/huggingface__OpenEnv/envs/reasoning_gym_env/server/reasoning_gym_environment.py"
+        }
+      ],
+      "subject_executed": false
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "records": [
+        {
+          "path": "environments/reasoning_gym_environment/README.md",
+          "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/environments/reasoning_gym_environment/README.md",
+          "sha256": "a60e9efd32fe2ca3ddf921150d7068d1b1209fcaad59063f21eb8f8ce4c7487d",
+          "bytes": 14718,
+          "status": "fetched",
+          "local_path": "raw/NousResearch__atropos/environments/reasoning_gym_environment/README.md"
+        },
+        {
+          "path": "environments/reasoning_gym_environment/reasoning_gym_environment.py",
+          "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/environments/reasoning_gym_environment/reasoning_gym_environment.py",
+          "sha256": "f10a6560c39a120a6d6cddbcb1c298fca9e570e72a6fa6b15d5eb48cd27eeb82",
+          "bytes": 100213,
+          "status": "fetched",
+          "local_path": "raw/NousResearch__atropos/environments/reasoning_gym_environment/reasoning_gym_environment.py"
+        }
+      ],
+      "subject_executed": false
+    },
+    {
+      "repo": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "records": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/apple/ml-multilingual-reasoning-gym/260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4/README.md",
+          "sha256": "ce23f6500b7629d50873eca6af572a5fb977e3ce9f6bf4be3cb8dd44e532f849",
+          "bytes": 7543,
+          "status": "fetched",
+          "local_path": "raw/apple__ml-multilingual-reasoning-gym/README.md"
+        },
+        {
+          "path": "reasoning_gym/dataset.py",
+          "url": "https://raw.githubusercontent.com/apple/ml-multilingual-reasoning-gym/260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4/reasoning_gym/dataset.py",
+          "sha256": "0e5d35a3a157ff9312ed00c43d529ab990537045f15d9e8a820c7c239e0baae5",
+          "bytes": 5126,
+          "status": "fetched",
+          "local_path": "raw/apple__ml-multilingual-reasoning-gym/reasoning_gym/dataset.py"
+        },
+        {
+          "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+          "url": "https://raw.githubusercontent.com/apple/ml-multilingual-reasoning-gym/260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "sha256": "e52abbb650a0cc8a560b254bb347b15fe36491903f0b28dc4c83a66cf4d33257",
+          "bytes": 16416,
+          "status": "fetched",
+          "local_path": "raw/apple__ml-multilingual-reasoning-gym/reasoning_gym/algorithmic/game_of_life_halting.py"
+        }
+      ],
+      "subject_executed": false
+    },
+    {
+      "repo": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "records": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/researchim-ai/reasoning-gym-ru/a66a7e796552ff23410508a6c696a6f1a70a9988/README.md",
+          "sha256": "3a50e09a5fc39af456951c64163696d01852b3670dbb90ccc90413c4d6106268",
+          "bytes": 2971,
+          "status": "fetched",
+          "local_path": "raw/researchim-ai__reasoning-gym-ru/README.md"
+        },
+        {
+          "path": "reasoning_gym/dataset.py",
+          "url": "https://raw.githubusercontent.com/researchim-ai/reasoning-gym-ru/a66a7e796552ff23410508a6c696a6f1a70a9988/reasoning_gym/dataset.py",
+          "sha256": "b8b8abd6bec41504e7ba07c7905568df7481e1cab2a66792efb07fa785dc837a",
+          "bytes": 4618,
+          "status": "fetched",
+          "local_path": "raw/researchim-ai__reasoning-gym-ru/reasoning_gym/dataset.py"
+        },
+        {
+          "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+          "url": "https://raw.githubusercontent.com/researchim-ai/reasoning-gym-ru/a66a7e796552ff23410508a6c696a6f1a70a9988/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "status": "fetch_failed",
+          "error": "HTTP Error 404: Not Found"
+        }
+      ],
+      "subject_executed": false
+    }
+  ],
+  "new_model_or_analyzer_calls": 0,
+  "target_executions": 0
+}

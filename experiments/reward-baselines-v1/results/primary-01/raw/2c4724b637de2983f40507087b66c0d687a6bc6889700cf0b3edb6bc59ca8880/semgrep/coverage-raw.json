@@ -1,0 +1,306 @@
+{
+  "version": "1.183.0",
+  "results": [
+    {
+      "check_id": "coverage-function",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 30,
+        "col": 15,
+        "offset": 1069
+      },
+      "extra": {
+        "metavars": {
+          "$FUNCTION": {
+            "start": {
+              "line": 1,
+              "col": 5,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "col": 17,
+              "offset": 16
+            },
+            "abstract_content": "score_answer"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Function structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+      "start": {
+        "line": 13,
+        "col": 9,
+        "offset": 627
+      },
+      "end": {
+        "line": 13,
+        "col": 19,
+        "offset": 637
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 13,
+              "col": 16,
+              "offset": 634
+            },
+            "end": {
+              "line": 13,
+              "col": 19,
+              "offset": 637
+            },
+            "abstract_content": "0.0"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+      "start": {
+        "line": 16,
+        "col": 9,
+        "offset": 687
+      },
+      "end": {
+        "line": 16,
+        "col": 19,
+        "offset": 697
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 16,
+              "col": 16,
+              "offset": 694
+            },
+            "end": {
+              "line": 16,
+              "col": 19,
+              "offset": 697
+            },
+            "abstract_content": "0.0"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+      "start": {
+        "line": 24,
+        "col": 9,
+        "offset": 893
+      },
+      "end": {
+        "line": 24,
+        "col": 20,
+        "offset": 904
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 24,
+              "col": 16,
+              "offset": 900
+            },
+            "end": {
+              "line": 24,
+              "col": 20,
+              "offset": 904
+            },
+            "abstract_content": "0.02"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+      "start": {
+        "line": 28,
+        "col": 9,
+        "offset": 1042
+      },
+      "end": {
+        "line": 28,
+        "col": 20,
+        "offset": 1053
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 28,
+              "col": 16,
+              "offset": 1049
+            },
+            "end": {
+              "line": 28,
+              "col": 20,
+              "offset": 1053
+            },
+            "abstract_content": "0.05"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+      "start": {
+        "line": 30,
+        "col": 5,
+        "offset": 1059
+      },
+      "end": {
+        "line": 30,
+        "col": 15,
+        "offset": 1069
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 30,
+              "col": 12,
+              "offset": 1066
+            },
+            "end": {
+              "line": 30,
+              "col": 15,
+              "offset": 1069
+            },
+            "abstract_content": "1.0"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 0.0002110004425048828,
+    "profiling_times": {},
+    "parsing_time": {
+      "total_time": 0.003979921340942383,
+      "per_file_time": {
+        "mean": 0.0019899606704711914,
+        "std_dev": 3.959943470022154e-06
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.005547046661376953,
+      "per_file_time": {
+        "mean": 0.005547046661376953,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0014519691467285156,
+      "per_file_and_rule_time": {
+        "mean": 0.0007259845733642578,
+        "std_dev": 4.956864927407878e-07
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.0,
+      "rules_selected_ratio": 1.0,
+      "rules_matched_ratio": 1.0
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 93801472
+  },
+  "rules_by_engine": [
+    [
+      "coverage-function",
+      "OSS"
+    ],
+    [
+      "coverage-return",
+      "OSS"
+    ]
+  ],
+  "engine_requested": "OSS",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "profiling_results": []
+}

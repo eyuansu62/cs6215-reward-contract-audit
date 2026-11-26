@@ -1,0 +1,21 @@
+{
+  "task": {
+    "task_id": "P84",
+    "question_description": "For full credit, the only permitted departures from the trusted correct True-or-False reference are capitalization and whitespace at the beginning or end of the response. Extra words are not permitted, and the opposite label does not qualify. Responses satisfying this whole-response match, after trimming and lowercasing, receive full credit.",
+    "placeholder_notes": {}
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$HOME/.local/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--json",
+    "--output-schema",
+    "$TMPDIR/external-Boolean-description-xfxafyg6/schema.json",
+    "--output-last-message",
+    "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/extraction-01/response.json",
+    "--cd",
+    "$TMPDIR/external-Boolean-description-xfxafyg6",
+    "-"
+  ],
+  "stdin_sha256": "8f1797c791b8efae878fca8e2e92c490fe160f0cc3f56ca8e8d266cc170d455b"
+}

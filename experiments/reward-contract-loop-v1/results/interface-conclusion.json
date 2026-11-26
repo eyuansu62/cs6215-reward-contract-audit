@@ -1,0 +1,32 @@
+{
+  "scope": "One known development bug family with fixed-witness evaluation and whole-source interface inspection",
+  "case": "Reasoning Gym issue544 / frozen PR561 proposal",
+  "primary_witness": {
+    "answer": "False",
+    "reference": "True",
+    "original_reward": 1.0,
+    "proposed_repair_reward": 0.0
+  },
+  "primary_witness_expectation": {
+    "correct": "full_credit_violation on original",
+    "missing": "wrapper policy: no contract audit / Unknown",
+    "omitted_equality": "not a violation of weaker valid-token-only obligation"
+  },
+  "feasibility": {
+    "fixed_complete_boolean_contract": true,
+    "explicit_missing_contract_status": true,
+    "faithful_equality_omission": false,
+    "three_condition_contract_sensitive_static_closed_loop": false
+  },
+  "evidence": "Correct and omitted contracts differ before projection but become byte-identical C_BOOLEAN_FULL and detector inputs; deleted reference equality is reintroduced.",
+  "global_alarm_warning": "Original still has a banana/True validity violation under weak contract. Equal aggregate alarms do not by themselves diagnose contract sensitivity.",
+  "missing_policy_warning": "Native Semgrep syntax search does not intrinsically need a contract. Missing-spec Unknown is wrapper policy; reward0 is observably not full reward.",
+  "minimal_future_requirements_not_implemented": [
+    "Preserve valid-token and reference-equality obligations separately",
+    "Reject unrepresentable contracts as Unknown instead of silently strengthening",
+    "Attribute evidence to an obligation and witness"
+  ],
+  "analyzers_or_bridge_changed": false,
+  "new_LLM_calls": 0,
+  "evidence_sha256": "e32b013f02fd62365a9a051f1de3177acacb33a99854b4079444f8870c0bee08"
+}

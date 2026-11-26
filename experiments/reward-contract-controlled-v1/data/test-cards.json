@@ -1,0 +1,64 @@
+{
+  "tasks": [
+    {
+      "task_id": "P35",
+      "question_description": "Accept either True or False for full credit. Trim leading and trailing whitespace and ignore capitalization, but require the entire remaining response to be one of those two labels. The trusted correct reference must not affect the score: either label earns full credit even when it disagrees with that reference.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P28",
+      "question_description": "If the whole response equals the trusted correct True-or-False reference after both are trimmed at their outer edges and lowercased, award full credit. Otherwise, do not award full credit. In particular, a correct label followed by an explanation fails this check, and so does the opposite label on its own.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P91",
+      "question_description": "Do not use agreement with the trusted correct reference as a condition for full credit. Require only that the entire response be True or False after outer whitespace is removed and case is ignored. Both labels receive full credit; an explanation or any other text does not satisfy this format requirement.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P73",
+      "question_description": "This is an open-response participation item. Natural-language explanations and unrestricted text are accepted. Every submitted text response earns full credit. There is no required wording or format. The trusted correct True-or-False reference is available as background, but it is not used to grade the response.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P96",
+      "question_description": "If removing outer whitespace and ignoring letter case leaves the entire response as True or False, award full credit. If any other text remains, do not award full credit. Apply this rule regardless of the trusted correct reference: a valid label that disagrees with it still receives full credit.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P46",
+      "question_description": "Give full credit to a response exactly when its entire text, after trimming leading and trailing whitespace and converting letters to lowercase, matches the trusted correct reference label treated the same way. The reference is either True or False. An added explanation or the opposite label does not earn full credit.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P17",
+      "question_description": "There are two accepted response labels: True and False. Remove whitespace at the ends and ignore capitalization. The resulting response must consist entirely of one accepted label to receive full credit. Either label receives full credit. Whether it agrees with the trusted correct reference has no effect on grading.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P42",
+      "question_description": "The trusted reference records the correct answer as True or False. Remove whitespace at the outer edges of the response and ignore letter case when grading. Compare the response with the reference. This comparison covers the response from beginning to end. A match earns full credit, and a mismatch does not.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P23",
+      "question_description": "Give full credit to every submitted text response, including a plain-language explanation or other unrestricted prose. Apply no wording or format restriction to text submissions. The response need not be True or False and need not reproduce the trusted correct reference; arbitrary text earns full credit as well.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P62",
+      "question_description": "If the candidate is a text response, award full credit without checking its wording or format. This applies whether the response is a Boolean label, a natural-language explanation, or any other string. Even if its entire text differs from the trusted correct reference, it still earns full credit.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P59",
+      "question_description": "The True-or-False reference does not limit the answer format or determine the score for this item. Do not withhold full credit because a response uses natural prose, includes an explanation, or differs from the trusted correct reference. Every text response receives full credit without further conditions; a standalone Boolean label is not required.",
+      "placeholder_notes": {}
+    },
+    {
+      "task_id": "P84",
+      "question_description": "For full credit, the only permitted departures from the trusted correct True-or-False reference are capitalization and whitespace at the beginning or end of the response. Extra words are not permitted, and the opposite label does not qualify. Responses satisfying this whole-response match, after trimming and lowercasing, receive full credit.",
+      "placeholder_notes": {}
+    }
+  ]
+}

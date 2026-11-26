@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$HOME/.local/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--json",
+    "--output-schema",
+    "$TMPDIR/rg-contract-blind-qx_ertcl/schema.json",
+    "--output-last-message",
+    "$ARTIFACT_ROOT/experiments/reward-contract-extraction-v1/results/extraction-01/T01/response.json",
+    "--cd",
+    "$TMPDIR/rg-contract-blind-qx_ertcl",
+    "-"
+  ],
+  "stdin_sha256": "47ae86360ab38615c5f928ab3d92d0b7454a528706b9b67c78c588a9c23a87ca"
+}

@@ -1,0 +1,176 @@
+{
+  "method": "semgrep-ce-fixed-risky-idioms-v1",
+  "verdict": "alarm",
+  "status": "complete",
+  "errors": [],
+  "findings": [
+    {
+      "rule_id": "reward-prefix-shorter-length-ratio",
+      "function": "score_answer",
+      "span": [
+        35,
+        13,
+        35,
+        69
+      ],
+      "message": "Prefix-style credit divided by the shorter length can reach full credit for a strict prefix."
+    }
+  ],
+  "all_findings": [
+    {
+      "check_id": "reward-prefix-shorter-length-ratio",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py",
+      "start": {
+        "line": 35,
+        "col": 14,
+        "offset": 1043
+      },
+      "end": {
+        "line": 35,
+        "col": 70,
+        "offset": 1099
+      },
+      "extra": {
+        "metavars": {
+          "$MATCH": {
+            "start": {
+              "line": 35,
+              "col": 14,
+              "offset": 1043
+            },
+            "end": {
+              "line": 35,
+              "col": 23,
+              "offset": 1052
+            },
+            "abstract_content": "match_len"
+          },
+          "$LEFT": {
+            "start": {
+              "line": 35,
+              "col": 34,
+              "offset": 1063
+            },
+            "end": {
+              "line": 35,
+              "col": 51,
+              "offset": 1080
+            },
+            "abstract_content": "oracle_answer_str"
+          },
+          "$RIGHT": {
+            "start": {
+              "line": 35,
+              "col": 58,
+              "offset": 1087
+            },
+            "end": {
+              "line": 35,
+              "col": 68,
+              "offset": 1097
+            },
+            "abstract_content": "answer_str"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Prefix-style credit divided by the shorter length can reach full credit for a strict prefix.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "functions": [
+      {
+        "name": "score_answer",
+        "source_span": [
+          1,
+          0,
+          37,
+          17
+        ],
+        "engine_span": [
+          1,
+          0,
+          37,
+          17
+        ]
+      }
+    ],
+    "return_spans": [
+      [
+        10,
+        8,
+        10,
+        21
+      ],
+      [
+        19,
+        8,
+        19,
+        21
+      ],
+      [
+        22,
+        8,
+        22,
+        18
+      ],
+      [
+        37,
+        4,
+        37,
+        17
+      ]
+    ],
+    "function_count": 1,
+    "return_count": 4,
+    "semantics_proved": false,
+    "mode": "search",
+    "source_rewritten": false,
+    "command": [
+      "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+      "-json_nodots",
+      "-j",
+      "1",
+      "-timeout",
+      "10",
+      "-lang",
+      "python",
+      "-rules",
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/coverage-rules.json",
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py"
+    ],
+    "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+  },
+  "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+  "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+  "source_executed": false,
+  "source_rewritten": false,
+  "unit_id": "531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6",
+  "contract_id": "C_PROBABILITY_FULL",
+  "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+  "engine": {
+    "version": "semgrep-core version: 1.183.0 (08c107344d)",
+    "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+    "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "metrics": "off"
+  },
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-json_nodots",
+    "-j",
+    "1",
+    "-timeout",
+    "10",
+    "-lang",
+    "python",
+    "-rules",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/scan-rules.json",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py"
+  ],
+  "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+  "wall_seconds": 0.594387
+}

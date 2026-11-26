@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "verification_scope": "Curation/source/hash eligibility audit only; requested independent benchmark not started",
+  "exact_source_blobs_verified": 122,
+  "Dataset_suffix_classes": 108,
+  "own_score_definitions": 75,
+  "specific_candidate_domains_reviewed": 8,
+  "selected_independent_functions": 0,
+  "model_calls": 0,
+  "Semgrep_scans": 0,
+  "symbolic_runs": 0,
+  "target_executions": 0,
+  "metrics_undefined": true,
+  "previous_payloads_unchanged": 2938,
+  "archives_unchanged": 6,
+  "eligibility_freeze_sha256": "c20fdb5e8ee53fa763726920046e22217ec583021ada0a8a5316641204879a1d",
+  "report_sha256": "dd3bfa97b30a40743c0506f4f6c70519c276bbe0bfdc7dfc02f08e273847bb4d",
+  "limits": [
+    "Not a complete runtime answer-domain proof",
+    "Fixed snapshot and recorded exclusions only",
+    "Only native canonical True/False supported by frozen interface",
+    "Source curation broadens future exposure",
+    "Data shortage is not LLM accuracy evidence"
+  ]
+}

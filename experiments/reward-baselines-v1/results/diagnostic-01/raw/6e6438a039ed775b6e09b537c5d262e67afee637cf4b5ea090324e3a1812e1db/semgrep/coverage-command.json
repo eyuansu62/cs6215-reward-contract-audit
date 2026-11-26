@@ -1,0 +1,17 @@
+{
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-json_nodots",
+    "-j",
+    "1",
+    "-timeout",
+    "10",
+    "-lang",
+    "python",
+    "-rules",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/diagnostic-01/raw/6e6438a039ed775b6e09b537c5d262e67afee637cf4b5ea090324e3a1812e1db/semgrep/coverage-rules.json",
+    "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/diagnostic-01/raw/6e6438a039ed775b6e09b537c5d262e67afee637cf4b5ea090324e3a1812e1db/semgrep/source.py"
+  ],
+  "timeout_seconds": 30,
+  "returncode": 0
+}

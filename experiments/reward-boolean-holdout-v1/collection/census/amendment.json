@@ -1,0 +1,12 @@
+{
+  "phase": "separate_same_commit_structural_census",
+  "reason": "The eight concept-selected candidates yield zero fresh own canonical-True/False scoring implementations; verify whether shortage is only filename sampling before any model/analyzer outcome.",
+  "authorized_scope": "Parent explicitly authorized one codeload archive and static metadata census of same pinned snapshot. Source curation expands; analyzer capabilities and experimental prompt/interface stay frozen.",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "archive_limit_bytes": 60000000,
+  "allowed_extraction": "Regular reasoning_gym/*.py members whose exact git blob SHA1 matches the cached pinned tree; exclude contrib, rearc utilities/generators, data, and other non-task support scopes from task census.",
+  "first_pass": "Class/function/bases/own-score metadata and question/generator string literals containing True/False or Boolean instructions; scorer bodies excluded from prompt-text search. No subject imports or method execution, no analyzer/model calls, no reward observations.",
+  "second_pass": "Source-reviewed canonical Boolean candidate question/reference-domain plus own-score uniqueness only, if structural first pass identifies candidates. No version/project switch or encoding translation.",
+  "old_phases_preserved": true,
+  "source_exposure": "Every extracted raw module is now exposed for future selection, even when excluded. This is not an independent outcome-based method test."
+}

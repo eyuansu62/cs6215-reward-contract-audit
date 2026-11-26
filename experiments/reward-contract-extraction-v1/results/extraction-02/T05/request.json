@@ -1,0 +1,8 @@
+{
+  "task_id": "T05",
+  "question_description": "Sort these numbers in {direction} order: {numbers}\nPlease follow the instruction below:\n## 1. Let all your answers be a list of numbers. Instead of reporting your answer as -69, -13, 1, 7, 11, 43, 59, 61, use ['-69', '-13', '1', '7', '11', '43', '59', '61'] instead\n## 2. Convert all numbers in the square brackets as strings. For example, ['-69', '-13', '1', '7', '11', '43', '59', '61']\n",
+  "placeholder_notes": {
+    "direction": "instance-specific 'ascending' or 'descending'",
+    "numbers": "instance-specific comma-separated input numbers"
+  }
+}

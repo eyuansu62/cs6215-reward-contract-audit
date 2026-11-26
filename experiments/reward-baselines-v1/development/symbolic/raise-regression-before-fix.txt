@@ -1,0 +1,52 @@
+test_raise_expression_effects_are_not_skipped (test_symbolic_baseline.SymbolicTests.test_raise_expression_effects_are_not_skipped) ... 
+  test_raise_expression_effects_are_not_skipped (test_symbolic_baseline.SymbolicTests.test_raise_expression_effects_are_not_skipped) (statement="raise entry.update({'answer': ''})") ... FAIL
+  test_raise_expression_effects_are_not_skipped (test_symbolic_baseline.SymbolicTests.test_raise_expression_effects_are_not_skipped) (statement="raise ValueError from entry.update({'answer': ''})") ... FAIL
+
+======================================================================
+FAIL: test_raise_expression_effects_are_not_skipped (test_symbolic_baseline.SymbolicTests.test_raise_expression_effects_are_not_skipped) (statement="raise entry.update({'answer': ''})")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 93, in test_raise_expression_effects_are_not_skipped
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        try:
+        ^^^^
+    ...<4 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % statement, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 0, 'paths': [], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+======================================================================
+FAIL: test_raise_expression_effects_are_not_skipped (test_symbolic_baseline.SymbolicTests.test_raise_expression_effects_are_not_skipped) (statement="raise ValueError from entry.update({'answer': ''})")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 93, in test_raise_expression_effects_are_not_skipped
+                    self.verdict('''def score(answer, entry):
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        try:
+        ^^^^
+    ...<4 lines>...
+        return 0
+        ^^^^^^^^
+    ''' % statement, "unknown")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ARTIFACT_ROOT/experiments/reward-baselines-v1/tools/test_symbolic_baseline.py", line 22, in verdict
+    self.assertEqual(result["verdict"], expected, result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'no_alarm' != 'unknown'
+- no_alarm
++ unknown
+ : {'verdict': 'no_alarm', 'certificate': {'kind': 'all_normal_full_credit_paths_certified', 'full_credit_path_count': 0, 'paths': [], 'argument': 'All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation.'}, 'evidence': [], 'source_spans': [], 'unsupported_reason': None, 'method': 'bounded-static-source-path-certificates-v1'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=2)

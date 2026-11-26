@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "approved_scope": "Single HELM evaluation-scorer policy compatibility test; not RL training reward or multproject generalization",
+  "source_implementations": 3,
+  "task_templates": 1,
+  "successful_model_requests": 1,
+  "manual_model_contract_repairs": 0,
+  "auto_completed_obligations": 0,
+  "reference_contract": null,
+  "model_selected_obligations": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "primary_native_scorer_executions": 42,
+  "replay_native_scorer_executions": 42,
+  "primary_Semgrep_scans": 3,
+  "replay_Semgrep_scans": 3,
+  "condition_witness_rows_per_run": 84,
+  "paired_reference_LLM_oracle_eligible": 0,
+  "agreement_quality_metric": null,
+  "conditional_model_proposal_native_incompatibilities": 8,
+  "adjudicated_upstream_bugs_from_these_cases": null,
+  "extra_static_detections": 0,
+  "regression_test_methods_passed": 41,
+  "compilation_passed": true,
+  "full_parsed_replay_equal": true,
+  "new_model_requests_by_replay": 0,
+  "previous_payloads_unchanged": 3116,
+  "old_archives_unchanged": 7,
+  "method_freeze_sha256": "45e4c5359710e3dafcf893982c4f9ec147d57eb684ca1b5ba9d47be85b3f2f8a",
+  "model_response_freeze_sha256": "6774759d8ca3d2f22523405c7d22ed6cc305067576e14428c6e6e14f726c65e3",
+  "report_sha256": "8ed0675cc401ea0d796442920ce9a09e0298cfeb250404f0bb54316d29517a4f",
+  "readme_sha256": "d8837990f59c643c0826d15d95e19d996156d27f6c922b892d8597f76ffa74c9",
+  "limits": [
+    "One task and related metric implementations",
+    "Question packet may omit native fewshot format context",
+    "Reference AI-assisted abstention not human gold; disclosed exposure deviation",
+    "LLM structural validity does not prove semantic entailment",
+    "Frozen IfExp/helper limitations remainUnknown",
+    "Shared predicate implementation",
+    "Exact service model identity unknown"
+  ]
+}

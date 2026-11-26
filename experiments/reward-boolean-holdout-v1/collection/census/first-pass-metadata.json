@@ -1,0 +1,2645 @@
+{
+  "created_utc": "2026-11-09T02:25:57.355202+00:00",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "scope": "Static class/own-score metadata plus non-score string literals. No method/target/model/analyzer execution. Text matches are candidate hints, not domain conclusions.",
+  "task_dataset_classes": 108,
+  "own_score_classes": 75,
+  "boolean_text_classes": 13,
+  "records": [
+    {
+      "path": "reasoning_gym/algebra/complex_arithmetic.py",
+      "class": "ComplexArithmeticDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_complex",
+        "_format_complex",
+        "__getitem__",
+        "parse_string_to_complex",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        168,
+        183
+      ],
+      "score_ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+      "alpha_implementation_sha256": "b0d356b49e095a5e0008dd97022f421c87e1e5e4ba57a26d0ecac3d08062e32f",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algebra/intermediate_integration.py",
+      "class": "IntermediateIntegrationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_outer_constant",
+        "_generate_linear_substitution_problem",
+        "_generate_exponential_substitution",
+        "_generate_radical_substitution",
+        "_generate_trigonometric_substitution",
+        "_generate_polynomial_exp_trig",
+        "_generate_log_inverse_trig",
+        "_generate_cyclic_integral",
+        "_generate_repeated_parts",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        251,
+        270
+      ],
+      "score_ast_sha256": "881cb26530b777a636488ed8b460e82adce085dcf79f93081aff2e86841d7b3d",
+      "alpha_implementation_sha256": "e58b253e086adf2e9fe2f6c10382763ca58770c2326ca16727080500f7646e2f",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algebra/polynomial_equations.py",
+      "class": "PolynomialEquationsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_get_variable",
+        "_generate_polynomial_expr",
+        "_parse_score_to_list",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        211,
+        278
+      ],
+      "score_ast_sha256": "a42de5e426448dbb2d90f21bd416e631ec2ba4a4f232be0639364a4caeea1092",
+      "alpha_implementation_sha256": "b4b464c5af91fadaa5123ea219695797d360781d2ce9244dff6dd159400a2e14",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algebra/polynomial_multiplication.py",
+      "class": "PolynomialMultiplicationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_get_monomials",
+        "_generate_polynomial",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        162,
+        174
+      ],
+      "score_ast_sha256": "f276adbdf8b01ff6a41f573af5d0160f9e5714b08564d0be2b9f426ffad54821",
+      "alpha_implementation_sha256": "8c5e66f678d42723bc450519431eead0cdb8a76d78370757f3827609aabdd43a",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algebra/simple_equations.py",
+      "class": "SimpleEquationsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_get_variable",
+        "_generate_equation"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algebra/simple_integration.py",
+      "class": "SimpleIntegrationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_coefficient",
+        "_generate_polynomial",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        98,
+        117
+      ],
+      "score_ast_sha256": "d98109c7ad77d98462b137f34b05404c9c0f7319ef0dae26d6fc0e5c3b2aeef8",
+      "alpha_implementation_sha256": "93f46a20c0df95f28f81fe6cabc0e0ec96754edc780f5a6c778ec80cce1dc664",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ab.py",
+      "class": "ABDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        129,
+        144
+      ],
+      "score_ast_sha256": "176d893937ef3a0501f57ab13857f79269850ad93ec8b70944883b2ad7c4253b",
+      "alpha_implementation_sha256": "df519704da74b459cc2346af9034121179279363839f75108cca6fc5dc8b6122",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/base_conversion.py",
+      "class": "BaseConversionDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_format_base_name",
+        "_generate_conversion",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_alternation.py",
+      "class": "BinaryAlternationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_binary_string",
+        "_get_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_matrix.py",
+      "class": "BinaryMatrixDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_binary_matrix",
+        "_get_distances",
+        "_matrix_to_str",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        102,
+        116
+      ],
+      "score_ast_sha256": "09f59ae04a00fdc924944452a5038966de51911ed2805634e66859d709e93549",
+      "alpha_implementation_sha256": "585c5599c7cfdaec20ca47fa40020e469317fe6b0aa91cba2815958065a47bb8",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/caesar_cipher.py",
+      "class": "CaesarCipherDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_caesar_encrypt",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "class": "CountPrimesDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_primes",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/cryptarithm.py",
+      "class": "CryptarithmDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_create_single_puzzle",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            1,
+            12
+          ],
+          "text": "\nCryptarithm puzzle generator (numbers -> letters approach).\n\nGenerates puzzles such that:\n   WORD1\n + WORD2\n [+ WORD3]\n ---------\n   RESULT\nwhere each letter corresponds to exactly one digit (0..9).\nNo leading letter can be zero (unless allow_leading_zero=True).\n"
+        },
+        {
+          "span": [
+            30,
+            42
+          ],
+          "text": "Validate if a letter-to-digit mapping satisfies the cryptarithm puzzle constraints.\n\n    Args:\n        mapping: Dictionary mapping letters to digits (e.g., {'A': 1, 'B': 2})\n        words_letters: List of word strings using letters (e.g., ['ABC', 'DE'])\n        result_letters: Result string using letters (e.g., 'FGH')\n        allow_leading_zero: Whether leading zeros are allowed\n\n    Returns:\n        (is_valid, failure_reason) tuple:\n        - is_valid: True if mapping satisfies all constraints\n        - failure_reason: String describing why validation failed (empty if valid)\n    "
+        }
+      ],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        287,
+        331
+      ],
+      "score_ast_sha256": "e07a5cba7a30e9422424f29c92811165877b6058274be507f6f2ae4bd41e2474",
+      "alpha_implementation_sha256": "99b268d797245d76ad0daed0d3e8deb68e49b4d60a666e1a02852c05b6875995",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life.py",
+      "class": "GameOfLifeDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        101,
+        155
+      ],
+      "score_ast_sha256": "2bcc11b5a1b4dc96568f71dedfe8412364ca5ba0cebf0576a749f5a5bbec9a23",
+      "alpha_implementation_sha256": "4e3a74e3fcea9bd24a60c3744ce8b1aa61b0248fb848c082c31519c59c3ba38b",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+      "class": "GameOfLifeHaltingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            360,
+            361
+          ],
+          "text": " steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\n\nInitial board:\n"
+        }
+      ],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        385,
+        401
+      ],
+      "score_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "alpha_implementation_sha256": "a1945bcba679e3fa232237c70e50becb360ca2efd125094967b147beb9a7f214",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/graph_color.py",
+      "class": "GraphColorDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            61,
+            70
+          ],
+          "text": "\n    Verifies that a candidate coloring is a valid solution to the graph coloring puzzle.\n\n    Args:\n        puzzle (dict): The puzzle specification containing 'vertices', 'edges', and 'color_options'.\n        coloring (dict): A dictionary mapping each vertex to a color. The keys can be integers or strings.\n\n    Returns:\n        tuple: (is_valid, message) where is_valid is a boolean and message is a string explanation.\n    "
+        }
+      ],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        230,
+        255
+      ],
+      "score_ast_sha256": "8d1203801c4493d52283a379400aea3b085405b7ddc54141211df6f6f94dda7e",
+      "alpha_implementation_sha256": "f2bf321d749ad33458d2968aac8fa5304457a02ec7df1ae903f852328068b6e8",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/group_anagrams.py",
+      "class": "GroupAnagramsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_anagram_words",
+        "_sort_nested_list",
+        "_group_anagrams",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        88,
+        103
+      ],
+      "score_ast_sha256": "86e18b876068ca355beec75be86c324dabd1fdb71084334aafc60ae10fd557ad",
+      "alpha_implementation_sha256": "19cfacb1b71e18772d0aac1ddef226886290750ef32c69d46179547cbac83e24",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "class": "IsomorphicStringsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_check_isomorphic",
+        "_generate_inputs",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            16,
+            24
+          ],
+          "text": "Two strings are isomorphic if the characters in one string can be replaced to get the second string.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters.\n\nNo two characters may map to the same character, but a character may map to itself.\n\nReturn True if the following two strings are isomorphic, or False otherwise:\n{s} {t}\n"
+        }
+      ],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/jugs.py",
+      "class": "JugsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            119,
+            139
+          ],
+          "text": "\n    Verify a given solution for a multi-jug puzzle.\n\n    The puzzle is a dictionary with keys:\n      - \"jug_capacities\": list of capacities for each jug.\n      - \"target\": the target amount that must be in any one jug.\n\n    Moves should be a list of strings in the following formats:\n      - \"fill X\": Fill jug X to its capacity.\n      - \"empty X\": Empty jug X.\n      - \"pour X->Y\": Pour water from jug X to jug Y.\n\n    Jug labels are letters: jug 0 is \"A\", jug 1 is \"B\", etc.\n\n    The function simulates the moves starting from all jugs empty.\n\n    Returns a tuple (result, states) where:\n      - result is True if, after executing all moves, at least one jug has exactly\n        the target amount; otherwise False.\n      - states is a list of state tuples after each move.\n    "
+        }
+      ],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        297,
+        321
+      ],
+      "score_ast_sha256": "79bb6dff6c6f8a24430050c9622f43c96ada2af2e47a87bc28484b401f2b7942",
+      "alpha_implementation_sha256": "c0c3ee5d28b47a49788a52c089258c191a0b1fd61aeb9aa09054d154a78e229d",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/letter_counting.py",
+      "class": "LetterCountingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/letter_jumble.py",
+      "class": "LetterJumbleDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_scramble_word",
+        "__getitem__",
+        "partial",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        143,
+        165
+      ],
+      "score_ast_sha256": "e0ee887cd78276cae6e243b906b8e5a104da4e4cc219f8896870de51e3af5bc8",
+      "alpha_implementation_sha256": "7e8ff2c893643bd97e65baa8db395a59e710f7f6978c44376c92b1df125b5c21",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/manipulate_matrix.py",
+      "class": "ManipulateMatrixDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_matrix",
+        "_matrix_to_str",
+        "score_answer",
+        "_identity",
+        "_rot90",
+        "_rot180",
+        "_rot270",
+        "_hmirror",
+        "_vmirror",
+        "_dmirror",
+        "_cmirror",
+        "_map",
+        "_zero_divisible",
+        "_crop",
+        "_remove_every_nth_row",
+        "_remove_every_nth_col",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        134,
+        149
+      ],
+      "score_ast_sha256": "9864b9151762804d38eaafb2f952375edd819a8074deddc70e4dce7af5f3895b",
+      "alpha_implementation_sha256": "cfae0b2e4b00a845208033fa3ef305481b8993a7d9a2d1f6e90f0bd77c652e52",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/number_filtering.py",
+      "class": "NumberFilteringDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_format_number",
+        "_generate_numbers",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "class": "NumberSortingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_numbers",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        102,
+        162
+      ],
+      "score_ast_sha256": "03664ee09ca3260c1b3e696843ff7aea28c388e3142e6736a79ba88c1b3739c8",
+      "alpha_implementation_sha256": "c62e63f2df1b3f83c42fc8ce39993e3ac8a70c6439c09a045b2ed1bd3800ca44",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/palindrome_generation.py",
+      "class": "PalindromeDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_palindrome_letters",
+        "_assemble_palindrome",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        97,
+        126
+      ],
+      "score_ast_sha256": "9c6fc330cea2c8195759eb0dab0a239a219c47992d317034c09beabf9e9e4c21",
+      "alpha_implementation_sha256": "f13bb30733bb0693c690afec3129d64a971e1db4b1d2ddf7e26489915abe79a3",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/palindrome_partitioning.py",
+      "class": "PalindromePartitioningDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_sort_list",
+        "to_set_of_tuples",
+        "_palindrome_partitioning",
+        "score_answer",
+        "_generate_palindrome_letters",
+        "_get_string",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        97,
+        107
+      ],
+      "score_ast_sha256": "2a7e7c5a98b59bf688a0935d64e594ae2cb87cf86001d583f47286158410253d",
+      "alpha_implementation_sha256": "19d4cafcf1d42ac6470d340f3c1175031fd20fc9dba136d3225f5f45f3726397",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/pool_matrix.py",
+      "class": "PoolMatrixDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_matrix_to_str",
+        "_max_pool",
+        "_average_pool",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        81,
+        97
+      ],
+      "score_ast_sha256": "674a72b30ba5f8276df0d92115ec51afaf956222f18fdd315c7976b369e33417",
+      "alpha_implementation_sha256": "af6f0f01ae5a32b72e4b99ea6b67ce92af536609ceb5d19a8be7633710377bce",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "class": "RansomNoteDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_inputs",
+        "_can_construct",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            15,
+            21
+          ],
+          "text": "Given two strings representing a ransom note and a magazine, return True if you can construct the ransom note using the letters in the magazine, and False otherwise.\n\nEach letter in the magazine string can only be used once in your ransom note.\n\nRansom note: {ransom_note}\nMagazine: {magazine}\n"
+        }
+      ],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/rotate_matrix.py",
+      "class": "RotateMatrixDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_matrix",
+        "_rot90",
+        "_get_rotated",
+        "_matrix_to_str",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/rotten_oranges.py",
+      "class": "RottenOrangesDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_matrix_to_str",
+        "_get_initial_matrix",
+        "_get_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/sentence_reordering.py",
+      "class": "SentenceReorderingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_sentence_dataset",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        105,
+        124
+      ],
+      "score_ast_sha256": "0444acd910d2b04338c1216144141216ba2d58bcea8b348f7f4a040afca68620",
+      "alpha_implementation_sha256": "9775de3cd702bef1aaf45139afb65fa840f978f5dc7a061ed2cf344beb3e4242",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/spell_backward.py",
+      "class": "SpellBackwardDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        67,
+        90
+      ],
+      "score_ast_sha256": "ac14f315375f52680b1e6475d231ee7655c86c0d87925b28df5ca745250d56f0",
+      "alpha_implementation_sha256": "620be85b248216f4467303838959567de2481f183a5bb8a1b2cf0e751cb7c819",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/spiral_matrix.py",
+      "class": "SpiralMatrixDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_matrix",
+        "_get_spiral",
+        "_matrix_to_str",
+        "_list_to_str",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        130,
+        149
+      ],
+      "score_ast_sha256": "4d129322104bf68bb078c334abf6259784f8e1394ed609ef4d9cac692d82bd0a",
+      "alpha_implementation_sha256": "01579708e6edf80f31c2e35ec576f368e6b02189d388ce16ce679b87f1519aca",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_insertion.py",
+      "class": "StringInsertionDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_answer",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        79,
+        93
+      ],
+      "score_ast_sha256": "56cea6d2dfe8c495fba0c2398221668295eee4c2e4271879a22e1e0c0686b524",
+      "alpha_implementation_sha256": "7785dcbd151a784d6d11e8075192a5205e9ef44f5a204793daddaa51e69fa8e5",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_manipulation.py",
+      "class": "StringManipulationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_apply_rule",
+        "_get_all_transforms",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_splitting.py",
+      "class": "StringSplittingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_apply_rule",
+        "_get_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_synthesis.py",
+      "class": "StringSynthesisDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_apply_rule",
+        "_get_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_ladder.py",
+      "class": "WordLadderDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_load_words_from_csv",
+        "_get_neighbors",
+        "_build_word_graph",
+        "_find_path",
+        "_generate_word_pair",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        237,
+        273
+      ],
+      "score_ast_sha256": "b447b5d77349a05a6b49a5030214e63a7ad1c861ad0852e4b98cac52422a1fe8",
+      "alpha_implementation_sha256": "840c5663f35f2c82af5410438cbd0ba9d30e63ed6438115ec576c70e281a586d",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "class": "WordSequenceReversalDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_sorting.py",
+      "class": "WordSortingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_transform_word",
+        "_generate_words",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        126,
+        146
+      ],
+      "score_ast_sha256": "f851c067ff380c8f8b51e9d647f1a43d01638c5ba0227a646509f0b842dedd8c",
+      "alpha_implementation_sha256": "210be0fc4dc73a68f56bcec0c76a1156cf9296acca698ce357d943af5dbe5ae9",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arc/arc_1d.py",
+      "class": "Arc1DDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arc/arc_agi.py",
+      "class": "ArcAgiDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_create_augmentation_fn",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        214,
+        226
+      ],
+      "score_ast_sha256": "3931946b347c5e4e1139d65e216a66db00704aa076a1300d677c56fdea29a846",
+      "alpha_implementation_sha256": "db1a55854e91444a72ed5fc28d66fc017b6873dd0a48926972ea723da6bcced4",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arc/rearc.py",
+      "class": "ReArcDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "get_rng_difficulty",
+        "__len__",
+        "format_rearc_input",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        140,
+        152
+      ],
+      "score_ast_sha256": "0fe29acd659e7d717a316baf777e96c4b20bae669f0709761d41c03b9b1549dc",
+      "alpha_implementation_sha256": "db1a55854e91444a72ed5fc28d66fc017b6873dd0a48926972ea723da6bcced4",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/basic_arithmetic.py",
+      "class": "BasicArithmeticDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_complex_task",
+        "_generate_simple_task",
+        "_format_question"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/bitwise_arithmetic.py",
+      "class": "BitwiseArithmeticDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            89,
+            99
+          ],
+          "text": "\n    Verify if the provided solution is correct for the given problem.\n\n    Parameters:\n        problem (str): The arithmetic expression (with hex numbers).\n        user_solution (str or int): The user's answer, either as a hex string (e.g., \"0xa\")\n            or an integer.\n\n    Returns:\n        bool: True if the user's answer matches the evaluated result, else False.\n    "
+        }
+      ],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        168,
+        183
+      ],
+      "score_ast_sha256": "72e8d668e074b779577aecf789a52df74a1aa681779a168ee5ab64ce5b1fb89d",
+      "alpha_implementation_sha256": "26d561ae80dc54c2ea7422ce7a29f9d321233b6e8a602e9d482c272b6831d919",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/calendar_arithmetic.py",
+      "class": "CalendarArithmeticDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_weekday_offset",
+        "_weekday_of_date",
+        "_weekday_of_date_from_first_date",
+        "_recurring_event_day",
+        "_count_days",
+        "_count_business_days",
+        "_is_leap_year",
+        "_random_date_for_year",
+        "_random_date_between",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        439,
+        494
+      ],
+      "score_ast_sha256": "41bf6e675b115f50923cf4241e9468fdf33026023dee2c396c180fa9fe74db7e",
+      "alpha_implementation_sha256": "e63d11614da8653109eaf5ce75568af0a1ecc1c3b33035ebf8fbbef67e7e3dad",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/chain_sum.py",
+      "class": "ChainSumDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_task",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        119,
+        121
+      ],
+      "score_ast_sha256": "fb6435d976db5e22e1358a6d14fcb02d35e58fa9ee283e3d22c08592cd23b32c",
+      "alpha_implementation_sha256": "1a99f34b116936378b1a3680635f2cfec83fcb31211c3cb1381425d915d857b2",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/count_bits.py",
+      "class": "CountBitsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "class": "DecimalArithmeticDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        205,
+        229
+      ],
+      "score_ast_sha256": "95ac429748d2a90676ee55d37f1007503f763f453418da7f1299da066c0c80d0",
+      "alpha_implementation_sha256": "18ce1e6318685cd0162dd7e9e82f8bf1fa67db12f812350d5c15d1efd4c57479",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/arithmetic/decimal_chain_sum.py",
+      "class": "DecimalChainSumDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_task",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        147,
+        168
+      ],
+      "score_ast_sha256": "78622672aa45fc7c4c3fec34895c12445589571666769a9c94612355b143b09c",
+      "alpha_implementation_sha256": "b484dc5edf2c973c6ecd4d1a46abe02bc087de4a365309a1865d251c1bb10eaa",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/dice.py",
+      "class": "DiceDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        139,
+        156
+      ],
+      "score_ast_sha256": "562921cea8b166af01670a3251e580e1baef6361fdcc7e203e55f5123ba655e4",
+      "alpha_implementation_sha256": "3618f0917b180afaa81f03509f8847b3491325cefc8ce74bb61cdb7c68f346df",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "class": "FractionSimplificationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_fraction",
+        "_format_fraction",
+        "__getitem__",
+        "_extract_fraction",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        147,
+        162
+      ],
+      "score_ast_sha256": "084fc8c7c954f4932b20b458d4475689d5755e121560e61c43ab276257fbc07b",
+      "alpha_implementation_sha256": "90d9138633712aa6eb2cbb8d540200c61a2f809457baa882262abd07ea1b0683",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gcd.py",
+      "class": "GCDDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_generate_numbers",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/gsm_symbolic.py",
+      "class": "GSMSymbolicDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "generators",
+        "_load_generators",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        160,
+        178
+      ],
+      "score_ast_sha256": "896b98f2d881109bcc4a2801cf2f564a047d38ae42721aa216aa2a602fa7c28c",
+      "alpha_implementation_sha256": "65a3e6860fc282eb28636902958f83957a0d8b2b203542003cb3e24a5b942af1",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/lcm.py",
+      "class": "LCMDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_generate_numbers",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/leg_counting.py",
+      "class": "LegCountingDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_generate_animals",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/number_format.py",
+      "class": "NumberFormatDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_candidates",
+        "_transform_candidates",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        72,
+        82
+      ],
+      "score_ast_sha256": "ca76278f09bbc6c3bc8a40d7c3ee03829858a8f53c3f9057e879c916ac544f77",
+      "alpha_implementation_sha256": "cdde88061f5023655bcdaf53cf71b720e59cdccdc32542e15ee6028d4c555244",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/power_function.py",
+      "class": "PowerFunctionDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_format_sig_figs",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        50,
+        65
+      ],
+      "score_ast_sha256": "8ffd9244e95604d81e43eb3e9fe231fb926ce144071ae81f76be253af8ddf284",
+      "alpha_implementation_sha256": "a6258ec78824161e3a3860b061b54a277d06c6419e185756231dfbdac80a918d",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/prime_factorization.py",
+      "class": "PrimeFactorizationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_prime_factors",
+        "_normalize_answer",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        57,
+        70
+      ],
+      "score_ast_sha256": "661669714196aab3f91c599b55a1176332a5c765abd8589982a156dfcf20d0a4",
+      "alpha_implementation_sha256": "e43346c2fb83190b7feaea56c305db8aceddaf38b8c5237462a1fd67cfa76091",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/arithmetic/products.py",
+      "class": "ProductsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_task",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        111,
+        113
+      ],
+      "score_ast_sha256": "fb6435d976db5e22e1358a6d14fcb02d35e58fa9ee283e3d22c08592cd23b32c",
+      "alpha_implementation_sha256": "1a99f34b116936378b1a3680635f2cfec83fcb31211c3cb1381425d915d857b2",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/arithmetic/time_intervals.py",
+      "class": "TimeIntervalsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_times",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        252,
+        328
+      ],
+      "score_ast_sha256": "5114e23f154e48388b500d471a49b681420d7dcce0acf47107191b5aad06940b",
+      "alpha_implementation_sha256": "e6a6e1a0106627205aad7be8176b5c308c1e266288b6248ccbb6961ccc071e6b",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/code/bf.py",
+      "class": "BFDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "generate_bfit_code",
+        "compile_bfit_code_to_bf"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/code/codeio.py",
+      "class": "CodeIODataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_io_pair",
+        "__getitem__",
+        "_json_to_tree",
+        "_compute_json_similarity",
+        "_score_answer_json",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        225,
+        254
+      ],
+      "score_ast_sha256": "50c6d20ddbc16d528cd7089a5b99fe97cf62726389f6ca5ebef06f918466f4c8",
+      "alpha_implementation_sha256": "0d9a92572c692f564f9b26dc5a6c9e2f57e9ca13692994ab78e76d7cc9d13f85",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/cognition/color_cube_rotation.py",
+      "class": "ColorCubeRotationDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_cube",
+        "_rotate_to_top",
+        "_generate_story",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        201,
+        213
+      ],
+      "score_ast_sha256": "1ab268f6e69a8431c4e61287b798970cdb9d22ba1f97aa12ed0dc507d4ae1adc",
+      "alpha_implementation_sha256": "d031485a8e98b75427bbaee8702a57b7c2128fa77b2d817bcc3bd4495cf686b9",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/cognition/figlet_fonts.py",
+      "class": "FigletFontDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        201,
+        233
+      ],
+      "score_ast_sha256": "9485f00cea1c66d48c6ae6e009dc5bdedd53704abb55e77500119c8102c3a477",
+      "alpha_implementation_sha256": "544fdb01214456f51eaa7fd8e30f57d20ec6a5cf97a966837fbb69762cd2ee84",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/cognition/modulo_grid.py",
+      "class": "ModuloGridDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/needle_haystack.py",
+      "class": "NeedleHaystackDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        119,
+        139
+      ],
+      "score_ast_sha256": "4233b3eb5c1174eba40a99762980b4667192da5dbcf03bf86f58c6459a07306e",
+      "alpha_implementation_sha256": "4c59963ad53b2ff542e88635ff8e9312e48ff0f0d507bf559b632c89f1729766",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/cognition/number_sequences.py",
+      "class": "NumberSequenceDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/cognition/rectangle_count.py",
+      "class": "RectangleCountDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        136,
+        159
+      ],
+      "score_ast_sha256": "47ac059b4b5cbe6a558c978087eafa095d58968525e2afaa69433eeec9bfd258",
+      "alpha_implementation_sha256": "41d78d87b5d8f9ea54a245c423f39505c6851a49e86ca4ceac534b7ad18613cf",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/cognition/rubiks_cube.py",
+      "class": "RubiksCubeDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_random_moves",
+        "__getitem__",
+        "partial_score",
+        "score_answer",
+        "remove_ansi",
+        "expand_moves"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        144,
+        167
+      ],
+      "score_ast_sha256": "e13f83ea094f736e80362bc8db6b0bdc6a3e1184920968ea7666a96d2e6d6e3b",
+      "alpha_implementation_sha256": "b346c607d34bb4139d2f2d666552627a50cbc84e0aff2090e1597bbc26824285",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/composite.py",
+      "class": "CompositeDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "update_dataset_config",
+        "update_dataset_weight",
+        "score_answer",
+        "add_dataset",
+        "remove_dataset",
+        "resolve_entry_id",
+        "score_answer_with_id"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        201,
+        204
+      ],
+      "score_ast_sha256": "1d5ffa42db5c7f3c6df349e13001559802d6d6b669c1c3fc6e04e1869eb61620",
+      "alpha_implementation_sha256": "e84d9a0711b36b0a5178d31e63ed08060dbcbd8f45c0c8ab52a7d316d4cc261b",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/dataset.py",
+      "class": "ProceduralDataset",
+      "bases": [
+        "ABC",
+        "Sized",
+        "Iterable[dict[str, Any]]"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "category",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "__getitem__",
+        "score_answer",
+        "score_answer_cascade"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        63,
+        72
+      ],
+      "score_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+      "alpha_implementation_sha256": "00fc54b2447baa02213fae1c463d6e9de0e783c63fcc63213664f051138c0543",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/dataset.py",
+      "class": "ReseedingDataset",
+      "bases": [
+        "Iterable[dict[str, Any]]"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_create_chunk",
+        "__iter__",
+        "__next__",
+        "score_answer",
+        "score_answer_cascade"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        142,
+        144
+      ],
+      "score_ast_sha256": "ccbad8d60f8943e27533e4f5bafc98a2f5bd77a7df74cafde9f28e83a3ad3fdb",
+      "alpha_implementation_sha256": "4ef6feb5c3151fc87eac6b3feaa655e909fbd50f02355e303063feac8218d2f2",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/games/boxnet.py",
+      "class": "BoxnetDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_boxnet",
+        "surround_index_func",
+        "state_update_func",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        204,
+        225
+      ],
+      "score_ast_sha256": "408bd0699f834c6837fbc6f2dec8dfc882defc3d45769bbbcb43222a62237981",
+      "alpha_implementation_sha256": "30bb9fe6ffa23ff2a24ca8605195ee157ace85b6dd8bca238f460313521e1317",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/countdown.py",
+      "class": "CountdownDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_candidate_expression",
+        "_generate_expression",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        213,
+        233
+      ],
+      "score_ast_sha256": "84448633ee756f044534de8e249864c4f1285b0be7b81bb3840e373eeb104049",
+      "alpha_implementation_sha256": "8de808eec11d101a55da27cb4a792a9a766526e6c3d706980155fa8a89f96746",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/emoji_mystery.py",
+      "class": "EmojiMysteryDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "variance_selector_to_byte",
+        "decode",
+        "byte_to_variance_selector",
+        "encode",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        235,
+        248
+      ],
+      "score_ast_sha256": "a9326425afb6487da47a792b7059c27c81ce3d7edc1c9fb26a38f4da4ae1ec6b",
+      "alpha_implementation_sha256": "e565444ed24c90c77d039dc99edb3a781d1ed2bba13309df1b8f64ca77b8c1e6",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/futoshiki.py",
+      "class": "FutoshikiDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "__getitem__",
+        "_puzzle_to_string",
+        "_solve_logical",
+        "_solve",
+        "_is_valid",
+        "_generate_random_solution",
+        "_generate_random_constraints",
+        "count_solutions",
+        "_remove_clues",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        635,
+        670
+      ],
+      "score_ast_sha256": "4989e1652acd11646f8b11f459773f21cec5e194467b7163518613d16489c119",
+      "alpha_implementation_sha256": "ba9f9ded3f8ebd1307821ac10c2081c569b58dbb35850fa74c9b60f3ba7c11d7",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/kakurasu.py",
+      "class": "KakurasuDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "__getitem__",
+        "_generate_random_grid",
+        "_calculate_row_col_sums",
+        "_repair_grid",
+        "_count_solutions",
+        "score_answer",
+        "_parse_grid"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        187,
+        216
+      ],
+      "score_ast_sha256": "20058fd162f8af13089e5e64bde94c447125c8391941de7bd72ea0d6a49ffa40",
+      "alpha_implementation_sha256": "ad382ef47d4832bcec87a7954655d8d6192cd441dba4826303b35706ab1a2f29",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/knight_swap.py",
+      "class": "KnightSwapDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_format_board",
+        "_format_moves",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        316,
+        402
+      ],
+      "score_ast_sha256": "f9734bd62759d38e2dd428f181c561eb60fd239f9b8c05407f4252685bead8bf",
+      "alpha_implementation_sha256": "8bcbe148c73d76375efab853531532e2725f2cceda31c8113f4c7fcc9f1a18ff",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/mahjong.py",
+      "class": "MahjongPuzzleDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_initial_string",
+        "_check_peng",
+        "_check_chi",
+        "_simulate_game",
+        "_get_article",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/maze.py",
+      "class": "MazeDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_get_random_chars",
+        "_generate_random_maze",
+        "_random_floor_cell",
+        "_bfs_shortest_path",
+        "_maze_to_str"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/games/mini_sudoku.py",
+      "class": "MiniSudokuDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "_is_valid",
+        "_solve",
+        "_find_empty",
+        "_generate_solved_board",
+        "_count_solutions",
+        "_create_puzzle",
+        "_board_to_string",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        209,
+        244
+      ],
+      "score_ast_sha256": "3de27564d3d6115070958989e89634a6af1f42792ab1b971743a4313cc941f8f",
+      "alpha_implementation_sha256": "33f2681c3462fffc278b35671a4c9fd0e75b3fc2e07bbf315f853fccd7ffa6bd",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/n_queens.py",
+      "class": "NQueensDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_all_solutions",
+        "_create_puzzle",
+        "_board_to_string",
+        "_string_to_board",
+        "_is_tractable_solution",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        149,
+        160
+      ],
+      "score_ast_sha256": "d2e518add3b5abc620246d29011ec9e0ca70cc423c3602a657b997406ffd5630",
+      "alpha_implementation_sha256": "f2f57af6e8a8acada773ddac92a88afdb520b494dc1fda141c50d517e2466048",
+      "alpha_matches_prior_exposed_score": true
+    },
+    {
+      "path": "reasoning_gym/games/puzzle24.py",
+      "class": "Puzzle24Dataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_generate_candidate_expression",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        114,
+        132
+      ],
+      "score_ast_sha256": "4d07390177f906d93e4c30ba6bfd8708f61838127359e846e0819c9379b4c0e7",
+      "alpha_implementation_sha256": "91255a5d6498ac82dd679f8e74f51d907d7afbaafc6605500478690bdf06d8e9",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/rush_hour.py",
+      "class": "RushHourDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        175,
+        200
+      ],
+      "score_ast_sha256": "0cb89b42770855f475e9839ce1af3ddf2635b233917aa57fd948196cc72bbd15",
+      "alpha_implementation_sha256": "d58b0871aebfc9c9223fa4100fffd0a42bd166efb008945821b22ed6a3a95cd6",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/sokoban.py",
+      "class": "SokobanDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        112,
+        144
+      ],
+      "score_ast_sha256": "a55d409278506d61f021cf3209a93e84d0f2752c8438b2b7afe009956ebb191e",
+      "alpha_implementation_sha256": "e220d27cd5dacbbb0962850ebafd8f49c2f48745230a0e503d8e78e9cef77103",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/sudoku.py",
+      "class": "SudokuDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "_is_valid",
+        "_get_possible_values",
+        "_solve",
+        "_find_empty",
+        "_generate_solved_board",
+        "_count_solutions",
+        "_create_puzzle",
+        "_board_to_string",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        228,
+        263
+      ],
+      "score_ast_sha256": "3de27564d3d6115070958989e89634a6af1f42792ab1b971743a4313cc941f8f",
+      "alpha_implementation_sha256": "33f2681c3462fffc278b35671a4c9fd0e75b3fc2e07bbf315f853fccd7ffa6bd",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/survo.py",
+      "class": "SurvoDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "__getitem__",
+        "_generate_valid_matrix",
+        "score_answer",
+        "_parse_grid"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        132,
+        148
+      ],
+      "score_ast_sha256": "3aa0b5936a9861d992ec3f549fc8e6b3e850121b3704ff6f38b6fa97e22a678c",
+      "alpha_implementation_sha256": "826aee5c19a3a79f6b8277abd2d33e8bf2599bcee3a9f2bfd0130bf441bd7c0f",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/tower_of_hanoi.py",
+      "class": "HanoiDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_visualize_state",
+        "_validate_move",
+        "_parse_move",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            331,
+            340
+          ],
+          "text": "\n        Validate that a move adheres to the Tower of Hanoi rules.\n\n        Args:\n            pegs_state (dict): Current state of the pegs.\n            move (str): Move instruction, e.g., \"Move disk 2 from Peg 1 to Peg 3\".\n\n        Returns:\n            bool: True if the move is valid, False otherwise.\n        "
+        }
+      ],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        390,
+        446
+      ],
+      "score_ast_sha256": "b937dab8cc4db80644b8cf854b5ae779619db705d180539ad57db34597c1a8d6",
+      "alpha_implementation_sha256": "ab70136ac1dc4d23df63d3cff62e47c9082fdbbb4f1931042cd5369a7044ca92",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/games/tsumego.py",
+      "class": "TsumegoDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_copy_board",
+        "_get_liberties",
+        "_get_group",
+        "_count_liberties",
+        "_would_capture",
+        "_is_valid_move",
+        "_make_move",
+        "_generate_capture_problem",
+        "_board_to_string",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            146,
+            146
+          ],
+          "text": "Make a move and update ko point. Returns True if move was valid."
+        }
+      ],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        286,
+        301
+      ],
+      "score_ast_sha256": "48674864702439e313a3a9d172182f66d1c32e6af3b1bc47969a481e6c25650d",
+      "alpha_implementation_sha256": "c1ab9006cb41af0b4a27a73dd810af544932fd619a9d90c4cf2e25e9c73d5adb",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/geometry/advanced_geometry.py",
+      "class": "AdvancedGeometryDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_non_degenerate_triangle",
+        "_build_orthocenter_task",
+        "_build_incircle_radius_task",
+        "_build_angle_measure_task",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        233,
+        283
+      ],
+      "score_ast_sha256": "005eae59ce80a37b37779dfecfc66eb03792ce4aa93f4def5f4655f5ba0ec901",
+      "alpha_implementation_sha256": "7e4ea19ab72ad60e7efe704bd77af132adf11ad01cb5c87763de726339892858",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/geometry/simple_geometry.py",
+      "class": "SimpleGeometryDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_valid_angles"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "class": "CourseScheduleDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_can_finish",
+        "_create_prerequisites",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            16,
+            22
+          ],
+          "text": "There are a total of {num_courses} courses you have to take, labeled from 0 to {last_index}.\n\nYou are given the following list of prerequisites, where prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i:\n{prerequisites}\n\nReturn True if you can finish all courses considering the prerequisites, or False otherwise.\n"
+        }
+      ],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/graphs/family_relationships.py",
+      "class": "FamilyRelationshipsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_family",
+        "_get_relationship_question",
+        "_generate_story",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        366,
+        376
+      ],
+      "score_ast_sha256": "fd03837cd964126baee748098e3b90487d922b21cdadda6555d3ee776e14a736",
+      "alpha_implementation_sha256": "e806b18a2bac9fbc3758774b2054fdfbe1b1ecebf04ae2eee53db88eda30c194",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/graphs/largest_island.py",
+      "class": "LargestIslandDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_is_valid_cell",
+        "_create_grid",
+        "_get_largest_island",
+        "_grid_to_string",
+        "_string_to_board",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/graphs/path_star.py",
+      "class": "PathStarDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        61,
+        70
+      ],
+      "score_ast_sha256": "a82b35c0445c87aaaabc35ff39498629e79eb81653203f364bfcefdbf5524a13",
+      "alpha_implementation_sha256": "1d5efe98c4c9d862ec52f08d534578e4f4ef752fac63830599b31df3d5eebb64",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/graphs/quantum_lock.py",
+      "class": "QuantumLockDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "generate_quantum_puzzle",
+        "score_answer",
+        "simulate_sequence",
+        "format_puzzle"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        173,
+        199
+      ],
+      "score_ast_sha256": "c7a422d293f9f912c7fe661ae201f82c5d639e72f3da898848b08f15a6f9b4cf",
+      "alpha_implementation_sha256": "9b1d90020ae0bf1e2ac01e8aa1b8d754144281457c465be8be07185d07f3b120",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/graphs/shortest_path.py",
+      "class": "ShortestPathDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "_get_grid",
+        "_matrix_to_str",
+        "_get_answer",
+        "_is_valid_path",
+        "score_answer",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        125,
+        147
+      ],
+      "score_ast_sha256": "10bf84c72af4986ccc623f355bd90fea80be2114367382b89879a4ec6d5ee2f2",
+      "alpha_implementation_sha256": "d10d755c14595104edbf6d106e2539469fe4b7fff63b9868aca8d651c373bc85",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/induction/acre/acre.py",
+      "class": "ACREDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_generate_questions",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/list_functions.py",
+      "class": "ListFunctionsDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "generators",
+        "_load_generators",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false
+    },
+    {
+      "path": "reasoning_gym/logic/aiw.py",
+      "class": "AliceInWonderlandDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_aiw",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/circuit_logic.py",
+      "class": "CircuitLogicDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_generate_circuit",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            82,
+            101
+          ],
+          "text": "\n    Generates random digital logic circuits (in ASCII) together with:\n      - a random Boolean expression,\n      - random input assignments,\n      - the final evaluated output.\n\n    Each item in the dataset is a dict with:\n       {\n           \"question\": <str>,\n           \"answer\": <str>,\n           \"metadata\": {\n               \"diagram\": <ASCII circuit diagram>,\n               \"expression\": <str>,\n               \"term_strings\": <list of term_strings>,\n               \"assignments\": <dict of input->0/1>,\n               \"final_gate\": <str>,\n               \"inputs\": <list of input names>,\n           }\n       }\n    "
+        }
+      ],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        400,
+        408
+      ],
+      "score_ast_sha256": "1e01b767345918fdaa2aeb27e22edeec66fb94005ec174a0f7efa16e92f93d02",
+      "alpha_implementation_sha256": "91960a41bb458bc39c5906a13d1c6eeafa8728537bf8325a4554d41f0e2d7c1d",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/logic/knights_knaves.py",
+      "class": "KnightsKnavesDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "find_solution",
+        "test_satisfiability",
+        "__getitem__",
+        "__generate_problem",
+        "_normalize_answer",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        501,
+        522
+      ],
+      "score_ast_sha256": "877897ee4ac8752251c6f0787f7d7a1ea154ec37858e5d53ebf9cb0cb1b40ed8",
+      "alpha_implementation_sha256": "a84361cde0381a48b61de0a7be12937897922abf2892d75882984079c6394922",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/logic/propositional_logic.py",
+      "class": "PropositionalLogicDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__len__",
+        "__iter__",
+        "__next__",
+        "__getitem__",
+        "_generate_premises",
+        "_generate_expression",
+        "_find_valid_conclusion",
+        "_is_valid_conclusion",
+        "_collect_variables",
+        "_generate_assignments",
+        "_measure_complexity",
+        "score_answer",
+        "_is_trivial"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        308,
+        331
+      ],
+      "score_ast_sha256": "bd4faf8c1e168811c37181ce10ce05342c431582baa52588890fe60d22e1b6cb",
+      "alpha_implementation_sha256": "2f4e9900a6b409ffcd9fcbf7162ae0074370abe3ba1531754c2310220a33d53d",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/logic/self_reference.py",
+      "class": "SelfReferenceDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            12,
+            12
+          ],
+          "text": "Return True if n is a prime number, False otherwise."
+        },
+        {
+          "span": [
+            22,
+            25
+          ],
+          "text": "\n    Return True if n is composite.\n    (Composite means an integer greater than 1 that is not prime.)\n    "
+        },
+        {
+          "span": [
+            202,
+            224
+          ],
+          "text": "\n    Verifies a candidate solution for a dynamically generated puzzle.\n\n    The rules are:\n      - If a statement is marked True, then its claim must hold.\n      - If a statement is marked False, then its claim must fail.\n\n    The conditions are as follows:\n      1. \"At least a of these 7 statements are true.\"  => (T >= a)\n      2. \"At most b of these 7 statements are false.\"   => (F <= b)\n      3. \"Exactly c of these 7 statements are true.\"    => (T == c)\n      4. \"Exactly d of these 7 statements are false.\"   => (F == d)\n      5. \"Either Statement 3 or Statement 4 is true, but not both.\" => (solution[2] != solution[3])\n      6. \"The number of true statements is a prime number.\" => is_prime(T)\n      7. \"The number of false statements is a composite number.\" => is_composite(F)\n\n    Parameters:\n       puzzle (dict): The puzzle dictionary returned by generate_dynamic_puzzle.\n       solution (list of bool): A candidate assignment (length 7).\n\n    Returns:\n       bool: True if candidate is self-consistent; False otherwise.\n    "
+        }
+      ],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        358,
+        374
+      ],
+      "score_ast_sha256": "fc24fd082f17a70e2034ddbac713323a1e49f3275c91f43cdb89e3215c677381",
+      "alpha_implementation_sha256": "7c1562b6b15b96b880aab04dd9096a20f0a4ed40cadfecb613e1f1765be3c229",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/logic/syllogisms.py",
+      "class": "SyllogismDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": false,
+      "methods": [
+        "__init__",
+        "_get_allowed_quantifiers",
+        "_is_valid_syllogism",
+        "_format_quantifier_statement",
+        "_check_logical_equivalence",
+        "_generate_syllogism",
+        "__getitem__"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": true
+    },
+    {
+      "path": "reasoning_gym/logic/zebra_puzzles.py",
+      "class": "ZebraDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "score_answer"
+      ],
+      "candidate_boolean_text": false,
+      "question_or_generator_literal_matches": [],
+      "previous_content_exposed_before_census": false,
+      "score_span": [
+        62,
+        78
+      ],
+      "score_ast_sha256": "883478cb58cc285e30a29b1e81f2ccb271c5263a5d9b4370d13b758919e17a44",
+      "alpha_implementation_sha256": "3618f0917b180afaa81f03509f8847b3491325cefc8ce74bb61cdb7c68f346df",
+      "alpha_matches_prior_exposed_score": false
+    },
+    {
+      "path": "reasoning_gym/probability/coin_flip.py",
+      "class": "CoinFlipDataset",
+      "bases": [
+        "ProceduralDataset"
+      ],
+      "owns_score_answer": true,
+      "methods": [
+        "__init__",
+        "__getitem__",
+        "_prob_exact_heads",
+        "_prob_at_least_heads",
+        "_rational_numerator",
+        "score_answer"
+      ],
+      "candidate_boolean_text": true,
+      "question_or_generator_literal_matches": [
+        {
+          "span": [
+            30,
+            30
+          ],
+          "text": "At least one of allow_exact or allow_at_least must be True"
+        }
+      ],
+      "previous_content_exposed_before_census": true,
+      "score_span": [
+        113,
+        149
+      ],
+      "score_ast_sha256": "25d747080224c4cdb953bf9d00a070a38b2a3ee4cc1be3e49b850249802f19d0",
+      "alpha_implementation_sha256": "ca5d92d5e1f79aa197ecd158e69193aa77708c85a51769638ddc6f7acaa20bd1",
+      "alpha_matches_prior_exposed_score": true
+    }
+  ]
+}

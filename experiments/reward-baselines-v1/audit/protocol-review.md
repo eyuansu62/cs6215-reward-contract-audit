@@ -1,0 +1,15 @@
+# Independent protocol review
+
+Verdict: **pass for a bounded, source-exposed fixed-contract characterization**. No blocking contract, information-parity, label-circularity or scoring issue was found in the frozen protocol and oracle. This is a preimplementation assessment; actual detector inputs and code still need inspection.
+
+The primary set is seven function-version/contract cases from five correlated families: three bug originals, two open proposed repairs and two property-scoped normal controls. GroupAnagrams is excluded. Protocol/oracle/subjects agree, and the frozen file hashes match. Original execution probes remain label-validation evidence rather than inputs or independent cases.
+
+The labels are consistent with the selected source and stated necessary full-credit requirements. Truthiness allows wrong Boolean answers; shorter-prefix division allows wrong probabilities; NaN handling can grant full complex credit. The proposed Boolean equality guard and nonfinite-distance guard address only their target properties. Palindrome full credit requires both reversal and multiset equality; prime-factor full credit requires normalized equality to a trusted prime factorization. These latter labels have source-level bases, not just an absence of counterexamples. The complex contract checks finite parseability, not complete correctness of every finite result.
+
+The target is a normal reward return **>=1**, never merely a positive partial score. Scorer exceptions do not establish full reward or an outer-wrapper fail-open. Unknown must remain separate, cannot count as TN and is a recall miss on a positive. A completed Semgrep scan without findings is not a semantic safety certificate; only the symbolic method may report a bounded implication certificate, and unsupported reasoning must remain Unknown.
+
+The protocol supplies both methods exact scorer/helper source and the same fixed reviewed contracts. It excludes witnesses, observed rewards, issue/PR metadata, dispositions and ID-based classification. No asymmetry is apparent in these documents. Before interpreting outcomes, inspect the actual projection and adapters: contract semantics must reach both methods, and labels or case IDs must not substitute for source reasoning. These contracts are supplied reviewed specifications; the study does not test LLM contract acquisition or support a neural-benefit claim.
+
+One precision recommendation: explicitly state in the native assumptions that the probability scorer uses its default `tol=1e-4`. Its contract already specifies this tolerance, but the Python signature also permits an explicit argument.
+
+No target methods, detectors or models were executed for this review; no network or new dependencies were used. All inspected data remain exposed development material from one project. Full-package behavior, training, arbitrary-Python proof and held-out generalization remain outside scope. Hash checks verify current contents; freeze chronology is a process assertion, not a cryptographic timestamp.

@@ -1,0 +1,275 @@
+{
+  "created_utc": "2026-11-09T02:48:13.123992+00:00",
+  "records": [
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/kbwal/rl-next-tokens/5c6cd2fb617ca117caeba1828addd1a63d6501cf/README.md",
+      "source_sha256": "c2ecfea84af4867fb17e7dde4aef283724e323a1f5477325d83c4ffe4eecdcbe",
+      "git_blob_sha1": "d6b628ba03f38b7e334e8b9906c5810ca57cb598",
+      "source_local": "binding_phase/kbwal__rl-next-tokens/sources/README.md"
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "grpo.py",
+      "url": "https://raw.githubusercontent.com/kbwal/rl-next-tokens/5c6cd2fb617ca117caeba1828addd1a63d6501cf/grpo.py",
+      "source_sha256": "c1fc2d13d31c19273c108c27ef00256390933eae6e2bacc557fdc98e0353e07f",
+      "git_blob_sha1": "1a620093bbbf52c90f00dcdb3033b6553999cb07",
+      "source_local": "binding_phase/kbwal__rl-next-tokens/sources/grpo.py",
+      "relevant_definitions": []
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "grpo_base.py",
+      "url": "https://raw.githubusercontent.com/kbwal/rl-next-tokens/5c6cd2fb617ca117caeba1828addd1a63d6501cf/grpo_base.py",
+      "source_sha256": "e313f93d540afe7f2fd27d34ad3af6f11917350204ded7be57de4af6963b9322",
+      "git_blob_sha1": "0fc6ba7af888006e440d9120bb12b601c4844b27",
+      "source_local": "binding_phase/kbwal__rl-next-tokens/sources/grpo_base.py",
+      "relevant_definitions": []
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "load_data.py",
+      "url": "https://raw.githubusercontent.com/kbwal/rl-next-tokens/5c6cd2fb617ca117caeba1828addd1a63d6501cf/load_data.py",
+      "source_sha256": "b49bb7722ccacca54ccc4673f4375dcd84ac13579344c22237a191dcbafea897",
+      "git_blob_sha1": "757bc90661080c03d0beeea59ad05f7244f5f1bd",
+      "source_local": "binding_phase/kbwal__rl-next-tokens/sources/load_data.py",
+      "relevant_definitions": [
+        {
+          "name": "format_grpo_base_prompt",
+          "params": [
+            "prefix",
+            "instruction"
+          ],
+          "span": [
+            12,
+            13
+          ],
+          "source": "def format_grpo_base_prompt(prefix: str, instruction: str) -> str:\n    return instruction.strip() + \"\\n\\n\" + prefix"
+        },
+        {
+          "name": "score_document",
+          "params": [
+            "scorer_model",
+            "token_ids",
+            "scorer_device",
+            "score_window_len"
+          ],
+          "span": [
+            68,
+            100
+          ],
+          "source": "def score_document(\n    scorer_model: Any,\n    token_ids: list[int],\n    scorer_device: Any = \"cuda:0\",\n    score_window_len: int = 16,\n) -> tuple[torch.Tensor, torch.Tensor] | None:\n    if scorer_model is None:\n        return None\n\n    device = scorer_device\n    full_ids = torch.tensor([token_ids], dtype=torch.long, device=device)\n    with torch.no_grad():\n        outputs = scorer_model(input_ids=full_ids)\n        logits = outputs.logits[:, :-1, :]\n        log_probs = F.log_softmax(logits, dim=-1)\n        targets = full_ids[:, 1:]\n        token_log_probs = log_probs.gather(2, targets.unsqueeze(-1)).squeeze(\n            -1\n        )  # (1, T-1)\n\n        if score_window_len > 1 and token_log_probs.shape[-1] >= score_window_len:\n            k_len = score_window_len\n            kernel = (\n                torch.ones(1, 1, k_len, device=device, dtype=token_log_probs.dtype)\n                / k_len\n            )\n            conv_out = (\n                F.conv1d(token_log_probs.unsqueeze(1), kernel).squeeze(0).squeeze(0)\n            )  # (T - k_len,)\n        else:\n            conv_out = token_log_probs.squeeze(0)\n\n        return token_log_probs.squeeze(0), conv_out"
+        },
+        {
+          "name": "score_document",
+          "params": [
+            "self",
+            "token_ids"
+          ],
+          "span": [
+            591,
+            620
+          ],
+          "source": "def score_document(\n        self, token_ids: list[int]\n    ) -> tuple[torch.Tensor, torch.Tensor] | None:\n        if self.scorer_model is None:\n            return None\n\n        device = self.scorer_device\n        full_ids = torch.tensor([token_ids], dtype=torch.long, device=device)\n        with torch.no_grad():\n            outputs = self.scorer_model(input_ids=full_ids)\n            logits = outputs.logits[:, :-1, :]\n            log_probs = F.log_softmax(logits, dim=-1)\n            targets = full_ids[:, 1:]\n            token_log_probs = log_probs.gather(2, targets.unsqueeze(-1)).squeeze(\n                -1\n            )  # (1, T-1)\n\n            if self.score_window_len > 1:\n                k_len = self.score_window_len\n                kernel = (\n                    torch.ones(1, 1, k_len, device=device, dtype=token_log_probs.dtype)\n                    / k_len\n                )\n                conv_out = (\n                    F.conv1d(token_log_probs.unsqueeze(1), kernel).squeeze(0).squeeze(0)\n                )  # (T - k_len,)\n            else:\n                conv_out = token_log_probs.squeeze(0)\n\n            return token_log_probs.squeeze(0), conv_out"
+        }
+      ]
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/zzx-peter/Multiple-Solution-TTRL/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/README.md",
+      "source_sha256": "3c63ca299727dd66521e657446d1c3a8ef52c43bb477db36f404f06171479b14",
+      "git_blob_sha1": "8fec9e3098a398040048f07bb43b1fd5d2add079",
+      "source_local": "binding_phase/zzx-peter__Multiple-Solution-TTRL/sources/README.md"
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "verl/utils/reward_score/boolean/__init__.py",
+      "url": "https://raw.githubusercontent.com/zzx-peter/Multiple-Solution-TTRL/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/verl/utils/reward_score/boolean/__init__.py",
+      "source_sha256": "333020760ca232b931482850bbe5283c50aeca866c20a285b5910d1af8cf4f1f",
+      "git_blob_sha1": "8350f254754583af76af0f2fb4c90f21259d3795",
+      "source_local": "binding_phase/zzx-peter__Multiple-Solution-TTRL/sources/verl/utils/reward_score/boolean/__init__.py",
+      "relevant_definitions": [
+        {
+          "name": "_extract_expression_line",
+          "params": [
+            "solution_str"
+          ],
+          "span": [
+            189,
+            198
+          ],
+          "source": "def _extract_expression_line(solution_str: str) -> Optional[str]:\n    answer_matches = re.findall(r\"<answer>(.*?)</answer>\", solution_str, flags=re.DOTALL | re.IGNORECASE)\n    if answer_matches:\n        solution_str = answer_matches[-1]\n\n    expression_matches = re.findall(r\"(?im)^\\s*Expression\\s*:\\s*(.+?)\\s*$\", solution_str)\n    if expression_matches:\n        return expression_matches[-1].strip()\n    lines = [line.strip() for line in solution_str.splitlines() if line.strip()]\n    return lines[-1] if lines else None"
+        },
+        {
+          "name": "compute_score",
+          "params": [
+            "solution_str",
+            "ground_truth",
+            "format_score",
+            "score"
+          ],
+          "span": [
+            229,
+            275
+          ],
+          "source": "def compute_score(solution_str, ground_truth, format_score=0.0, score=1.0):\n    \"\"\"Return structural-expression accuracy and mode-recovery fields.\"\"\"\n    ground_truth_list = _get_ground_truth_list(ground_truth)\n    variables = ground_truth.get(\"variables\", [\"x\", \"y\"]) if isinstance(ground_truth, dict) else [\"x\", \"y\"]\n    operators = (\n        ground_truth.get(\"operators\", [\"AND\", \"OR\", \"NOT\"])\n        if isinstance(ground_truth, dict)\n        else [\"AND\", \"OR\", \"NOT\"]\n    )\n    max_depth = ground_truth.get(\"max_depth\") if isinstance(ground_truth, dict) else None\n    if max_depth is not None:\n        max_depth = int(max_depth)\n\n    valid_expressions = set()\n    for item in ground_truth_list:\n        formula = _ground_truth_expression(item)\n        if formula is None:\n            continue\n        expression = _parse_formula(formula, variables=variables, operators=operators, max_depth=max_depth)\n        if expression is not None:\n            valid_expressions.add(expression)\n\n    prediction = _parse_prediction(\n        solution_str,\n        variables=variables,\n        operators=operators,\n        max_depth=max_depth,\n    )\n    if prediction is None:\n        return {\n            \"score\": format_score,\n            \"acc\": format_score,\n            \"boolean_parse_success\": 0.0,\n            \"boolean_valid\": 0.0,\n            \"boolean_pred\": \"\",\n            \"boolean_n_ground_truths\": len(valid_expressions),\n        }\n\n    valid_score = score if prediction in valid_expressions else format_score\n    return {\n        \"score\": valid_score,\n        \"acc\": valid_score,\n        \"boolean_parse_success\": 1.0,\n        \"boolean_valid\": float(prediction in valid_expressions),\n        \"boolean_pred\": _expression_key(prediction),\n        \"boolean_n_ground_truths\": len(valid_expressions),\n    }"
+        }
+      ]
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "verl/utils/reward_score/__init__.py",
+      "url": "https://raw.githubusercontent.com/zzx-peter/Multiple-Solution-TTRL/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/verl/utils/reward_score/__init__.py",
+      "source_sha256": "bffda41d9d8ef4f91a368bb424419135e8336423b23340eb78b6209cf86051b3",
+      "git_blob_sha1": "9c0aa41691c47dc11feee73c087d89c7a582f488",
+      "source_local": "binding_phase/zzx-peter__Multiple-Solution-TTRL/sources/verl/utils/reward_score/__init__.py",
+      "relevant_definitions": [
+        {
+          "name": "default_compute_score",
+          "params": [
+            "data_source",
+            "solution_str",
+            "ground_truth",
+            "extra_info",
+            "sandbox_fusion_url",
+            "concurrent_semaphore",
+            "memory_limit_mb"
+          ],
+          "span": [
+            19,
+            130
+          ],
+          "source": "def default_compute_score(\n    data_source,\n    solution_str,\n    ground_truth,\n    extra_info=None,\n    sandbox_fusion_url=None,\n    concurrent_semaphore=None,\n    memory_limit_mb=None,\n    **kwargs,\n):\n    \"\"\"Compute the score for a given solution based on the data source.\n\n    Args:\n        data_source (str): The source dataset identifier which determines the scoring method.\n        solution_str (str): The solution string to be evaluated.\n        ground_truth (str): The ground truth answer for comparison.\n        extra_info (dict, optional): Additional information that might be needed for scoring. Defaults to None.\n\n    Returns:\n        float: The computed score as a floating point number. If the result is a dictionary,\n               it returns the dictionary instead.\n\n    Raises:\n        NotImplementedError: If the reward function is not implemented for the given data source.\n    \"\"\"\n    if data_source == \"openai/gsm8k\":\n        from . import gsm8k\n\n        res = gsm8k.compute_score(solution_str, ground_truth)\n    elif data_source in [\"lighteval/MATH\", \"DigitalLearningGmbH/MATH-lighteval\", \"HuggingFaceH4/MATH-500\"]:\n        from . import math_reward\n\n        res = math_reward.compute_score(solution_str, ground_truth)\n        # [Optional] Math-Verify Integration\n        # For enhanced accuracy, consider utilizing Math-Verify (https://github.com/huggingface/Math-Verify).\n        # Note: Math-Verify needs to be manually installed via pip: `pip install math-verify`.\n        # To use it, override the `compute_score` function with the following implementation:\n\n        # from . import math_verify\n        # res = math_verify.compute_score(solution_str, ground_truth)\n    elif data_source == \"mace_math\":\n        from . import mace_math\n\n        res = mace_math.compute_score(solution_str, ground_truth)\n    elif data_source in [\"math_dapo\", \"math\", \"math_dapo_reasoning\"] or data_source.startswith(\"aime\"):\n        from . import math_dapo\n\n        res = math_dapo.compute_score(solution_str, ground_truth)\n    elif data_source in [\n        \"numina_aops_forum\",\n        \"numina_synthetic_math\",\n        \"numina_amc_aime\",\n        \"numina_synthetic_amc\",\n        \"numina_cn_k12\",\n        \"numina_olympiads\",\n    ]:\n        from . import prime_math\n\n        res = prime_math.compute_score(solution_str, ground_truth)\n    elif data_source in [\"codecontests\", \"apps\", \"codeforces\", \"taco\"]:\n        # Use the passed sandbox_fusion_url if available\n        if sandbox_fusion_url:\n            from . import sandbox_fusion\n\n            # Pass the URL directly, ground_truth likely contains test cases here\n            res = sandbox_fusion.compute_score(\n                sandbox_fusion_url, concurrent_semaphore, memory_limit_mb, solution_str, ground_truth, continuous=True\n            )\n        else:\n            # If no sandbox URL is provided, fall back to prime_code or raise error\n            from . import prime_code\n\n            # Assuming prime_code doesn't need the URL\n            res = prime_code.compute_score(solution_str, ground_truth, continuous=True)\n    elif data_source in [\"hiyouga/geometry3k\"]:\n        from . import geo3k\n\n        res = geo3k.compute_score(solution_str, ground_truth)\n    elif data_source == \"causal\":\n        from . import causal\n\n        res = causal.compute_score(solution_str, ground_truth)\n    elif data_source == \"3d\":\n        from . import three_d\n\n        res = three_d.compute_score(solution_str, ground_truth)\n    elif data_source == \"boolean\":\n        from . import boolean\n\n        res = boolean.compute_score(solution_str, ground_truth)\n    elif data_source in [\n        \"searchR1_nq\",\n        \"searchR1_triviaqa\",\n        \"searchR1_popqa\",\n        \"searchR1_hotpotqa\",\n        \"searchR1_2wikimultihopqa\",\n        \"searchR1_musique\",\n        \"searchR1_bamboogle\",\n    ]:\n        from . import search_r1_like_qa_em\n\n        res = search_r1_like_qa_em.compute_score(solution_str, ground_truth)\n\n    else:\n        raise NotImplementedError(f\"Reward function is not implemented for {data_source=}\")\n\n    if isinstance(res, dict):\n        return res\n    elif isinstance(res, int | float | bool):\n        return float(res)\n    else:\n        return float(res[0])"
+        },
+        {
+          "name": "_default_compute_score",
+          "params": [
+            "data_source",
+            "solution_str",
+            "ground_truth",
+            "extra_info",
+            "sandbox_fusion_url",
+            "concurrent_semaphore",
+            "memory_limit_mb"
+          ],
+          "span": [
+            134,
+            148
+          ],
+          "source": "def _default_compute_score(\n    data_source,\n    solution_str,\n    ground_truth,\n    extra_info=None,\n    sandbox_fusion_url=None,\n    concurrent_semaphore=None,\n    memory_limit_mb=None,\n):\n    \"\"\"\n    Legacy function API to be deprecated. Please use `default_compute_score` instead.\n    \"\"\"\n    return default_compute_score(\n        data_source, solution_str, ground_truth, extra_info, sandbox_fusion_url, concurrent_semaphore, memory_limit_mb\n    )"
+        },
+        {
+          "name": "get_default_compute_score",
+          "params": [
+            "reward_name"
+          ],
+          "span": [
+            151,
+            153
+          ],
+          "source": "def get_default_compute_score(reward_name: str | None):\n    \"\"\"Get the default compute_score function based on the reward manager type.\"\"\"\n    return default_compute_score"
+        }
+      ]
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/coder-qicao/RL4GLUE/2ad8bc53f663797bef091db108175fc8651cf538/README.md",
+      "source_sha256": "ee8e607eb0b125d7ae1488dc20c664df1187265b0802e45ad2ef23ed60ce9327",
+      "git_blob_sha1": "f70d58cc8280fae9d01711879ee927ffed1cc4b6",
+      "source_local": "binding_phase/coder-qicao__RL4GLUE/sources/README.md"
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "ppo.py",
+      "url": "https://raw.githubusercontent.com/coder-qicao/RL4GLUE/2ad8bc53f663797bef091db108175fc8651cf538/ppo.py",
+      "source_sha256": "683a2e9093892f9f656284e630210f0b78f8ffd3b6b4251aee6e2423e86c990f",
+      "git_blob_sha1": "7eb30222f7183d763928a0b231e8f4f29163338d",
+      "source_local": "binding_phase/coder-qicao__RL4GLUE/sources/ppo.py",
+      "relevant_definitions": []
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "prompt.py",
+      "url": "https://raw.githubusercontent.com/coder-qicao/RL4GLUE/2ad8bc53f663797bef091db108175fc8651cf538/prompt.py",
+      "source_sha256": "ed177ec6c44b19913c5c258eaaeb86025c9a85be052300cb36586a24ca64fb71",
+      "git_blob_sha1": "84f44b329af8d36575d915b4b7ba7d50e6534999",
+      "source_local": "binding_phase/coder-qicao__RL4GLUE/sources/prompt.py",
+      "relevant_definitions": []
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "utils.py",
+      "url": "https://raw.githubusercontent.com/coder-qicao/RL4GLUE/2ad8bc53f663797bef091db108175fc8651cf538/utils.py",
+      "source_sha256": "d946cbb04c68fd88443fbd475b37d98da88bcaa6050ebb332c35a4468b32d8f7",
+      "git_blob_sha1": "260130069e950b5c7442f8691ba6133f60d6a81c",
+      "source_local": "binding_phase/coder-qicao__RL4GLUE/sources/utils.py",
+      "relevant_definitions": [
+        {
+          "name": "compute_final_reward",
+          "params": [
+            "prediction",
+            "reference",
+            "model",
+            "alpha",
+            "beta",
+            "gamma"
+          ],
+          "span": [
+            51,
+            57
+          ],
+          "source": "def compute_final_reward(prediction: str, reference: str, model, alpha=0.5, beta=0.25, gamma=0.25):\n    accuracy = compute_rouge_f1(prediction, reference)\n    coverage = compute_coverage(prediction, reference, model)\n    brevity = compute_brevity(prediction, reference)\n    \n    final_reward = alpha * accuracy + beta * coverage + gamma * brevity\n    return final_reward"
+        },
+        {
+          "name": "normalize_answer",
+          "params": [
+            "s"
+          ],
+          "span": [
+            63,
+            68
+          ],
+          "source": "def normalize_answer(s):\n    s = s.lower()\n    s = re.sub(r\"\\b(a|an|the)\\b\", \" \", s)\n    s = \"\".join(ch for ch in s if ch not in string.punctuation)\n    s = \" \".join(s.split())\n    return s"
+        },
+        {
+          "name": "f1_score",
+          "params": [
+            "prediction",
+            "ground_truth"
+          ],
+          "span": [
+            73,
+            88
+          ],
+          "source": "def f1_score(prediction, ground_truth):\n    pred_tokens = normalize_answer(prediction).split()\n    gt_tokens = normalize_answer(ground_truth).split()\n\n    common = Counter(pred_tokens) & Counter(gt_tokens)\n    num_same = sum(common.values())\n\n    if len(pred_tokens) == 0 or len(gt_tokens) == 0:\n        return int(pred_tokens == gt_tokens)\n    if num_same == 0:\n        return 0\n\n    precision = num_same / len(pred_tokens)\n    recall = num_same / len(gt_tokens)\n    f1 = 2 * (precision * recall) / (precision + recall)\n    return f1"
+        },
+        {
+          "name": "extract_evaluation_scores",
+          "params": [
+            "text"
+          ],
+          "span": [
+            222,
+            236
+          ],
+          "source": "def extract_evaluation_scores(text):\n    evaluation_match = re.search(r\"<Evaluation>(.*?)</Evaluation>\", text, re.DOTALL)\n    \n    if not evaluation_match:\n        return None\n    \n    evaluation_content = evaluation_match.group(1).strip() \n\n    scores = {}\n    matches = re.findall(r\"Response\\s*(\\d+):\\s*([1-5])\", evaluation_content)\n\n    for response_id, score in matches:\n        scores[int(response_id)] = int(score)\n\n    return scores"
+        }
+      ]
+    }
+  ],
+  "model_analyzer_target_execution": false
+}

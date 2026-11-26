@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-09T02:20:10.912059+00:00",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "candidate_paths": [
+    "reasoning_gym/logic/syllogisms.py",
+    "reasoning_gym/logic/propositional_logic.py",
+    "reasoning_gym/logic/circuit_logic.py",
+    "reasoning_gym/logic/self_reference.py",
+    "reasoning_gym/logic/knights_knaves.py",
+    "reasoning_gym/induction/acre/acre.py"
+  ],
+  "max_content_fetches": 8,
+  "selection_gate": "Fresh task content, canonical True/False answer domain, own real scoring implementation distinct from all prior implementations and other selected tasks. No execution/analyzer outcomes used.",
+  "fallback": "Report feasibility deficit if fewer than two eligible implementations; do not replace using synthetic or inherited duplicates."
+}

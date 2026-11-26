@@ -1,0 +1,443 @@
+{
+  "id": "rg-issue-545-original",
+  "family_id": "rg-issue-545",
+  "kind": "reported_bug_original",
+  "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+  "source_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+  "extracted_methods": [
+    {
+      "name": "parse_string_to_complex",
+      "source_path": "extracted/rg-issue-545-original/parse_string_to_complex.py",
+      "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+      "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+      "extraction": {
+        "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+        "start_line": 111,
+        "end_line": 166,
+        "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+        "module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    },
+    {
+      "name": "score_answer",
+      "source_path": "extracted/rg-issue-545-original/score_answer.py",
+      "source_sha256": "02ce23747621aa9e4abc88f2f9ff37a1e57ef455ca8ea54ddb89375a8ed23a62",
+      "ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+      "extraction": {
+        "qualified_name": "ComplexArithmeticDataset.score_answer",
+        "start_line": 168,
+        "end_line": 183,
+        "source_sha256": "02ce23747621aa9e4abc88f2f9ff37a1e57ef455ca8ea54ddb89375a8ed23a62",
+        "module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    }
+  ],
+  "evidence_level": "extracted_real_method_executed",
+  "all_source_expectations_matched": true,
+  "full_credit_violating_probes": 4,
+  "probes": [
+    {
+      "id": "counterexamples/nan-real",
+      "role": "counterexamples",
+      "answer": "nan",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": {
+        "equals": 0.0
+      },
+      "declared_expectation_satisfied": false,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": true,
+      "original_bug_probe": true,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "counterexamples/nan-real"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "counterexamples/nan-imaginary",
+      "role": "counterexamples",
+      "answer": "1+nanj",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": {
+        "equals": 0.0
+      },
+      "declared_expectation_satisfied": false,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": true,
+      "original_bug_probe": true,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "counterexamples/nan-imaginary"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "counterexamples/nan-i-notation",
+      "role": "counterexamples",
+      "answer": "nan+2i",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": {
+        "equals": 0.0
+      },
+      "declared_expectation_satisfied": false,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": true,
+      "original_bug_probe": true,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "counterexamples/nan-i-notation"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "normal_controls/exact",
+      "role": "normal_controls",
+      "answer": "3 + 2i",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "normal_controls/exact"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "normal_controls/equivalent-parentheses",
+      "role": "normal_controls",
+      "answer": "((3.0 + 2.0i ) )",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": true,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "normal_controls/equivalent-parentheses"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "normal_controls/finite-partial",
+      "role": "normal_controls",
+      "answer": "4 + 2i",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.36787944117144233,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "formula": "exp(-1)",
+        "strictly_between": [
+          0.3,
+          0.4
+        ]
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "normal_controls/finite-partial"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "normal_controls/invalid",
+      "role": "normal_controls",
+      "answer": "invalid",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "normal_controls/invalid"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "normal_controls/missing",
+      "role": "normal_controls",
+      "answer": null,
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "normal_controls/missing"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "normal_controls/infinity",
+      "role": "normal_controls",
+      "answer": "inf + 2i",
+      "entry": {
+        "metadata": {
+          "result": [
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "rg-issue-545-original",
+        "--probe",
+        "normal_controls/infinity"
+      ],
+      "stderr": ""
+    }
+  ]
+}

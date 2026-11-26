@@ -1,0 +1,7 @@
+{
+  "task_id": "T01",
+  "question_description": "{comment_text}\nQuestion: Is the passage above toxic?",
+  "placeholder_notes": {
+    "comment_text": "The passage to classify; an instance-specific comment, not an answer or example label. Do not classify this placeholder."
+  }
+}

@@ -1,0 +1,11 @@
+# Independent contract-field comparison
+
+Reviewed all six raw responses against the frozen AI-assisted reference and exact question descriptions, without reading scorer/generator source, downstream outcomes or the root agent's comparison decisions. All 60 preregistered semantic field groups were reviewed.
+
+Confirmed substantive semantic revisions: **0/60**. Kept: **59/60**. One group remains uncertain: T01 output format says “Return exactly the Boolean token True or False.” The statement supplies the tokens but does not explicitly give an answer-only rule. “Exactly” may overrestrict explanatory text, or may simply emphasize canonical spelling. I would soften it; the ambiguity is preserved rather than scored as a definite error or silently counted as correct. Confirmed task-level semantic revisions are 0/6; T01 is one possible revision case.
+
+The remaining core semantics agree with the reference: consistent injective positional replacement; magazine occurrence counts; prerequisite direction and all-course feasibility; inclusive prime counts; numeric sorting in requested direction with input multiplicities and string elements; equivalent lowest-terms fractions. Shorter wording and omission of a redundant gcd expansion are not errors. All responses correctly leave unstated normalization, tolerance and partial rewards unspecified.
+
+Schema validity and operational evidence validation are separate. **6/6** responses are schema-valid; **5/6** are strictly accepted. T05 quotes `instance-specific 'ascending' or 'descending'`, which is present in placeholder notes but is not an exact substring of `question_description`. That violates the fixed evidence rule. Its semantic fields are correct, but the rejection remains in force; this review does not repair the quote, regenerate the response or admit it downstream. Quote repair is one protocol issue outside the 60 semantic field groups.
+
+These are AI-assisted reference/adjudication results, not real-human annotations or measured effort savings. The result supplies a descriptive revision-burden proxy only. It does not establish reduced human labor, independent generalization, or downstream detection improvement. Detailed per-group keep/uncertain decisions, raw values, evidence and limitations are in `independent-field-review.json`.

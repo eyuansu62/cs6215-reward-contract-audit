@@ -1,0 +1,870 @@
+{
+  "purpose": "Future studies must regard all these raw sources/callables and saved issue/PR snippets as exposed, including exclusions. No pretrained-model novelty claim.",
+  "sources": [
+    {
+      "path": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+      "git_blob_sha1": "fa4b0b34effe333dd25037e236f1c5ca5515f564",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py",
+      "functions": [
+        {
+          "qualified_name": "ComplexArithmeticConfig.validate",
+          "ast_sha256": "17747d2a8133c8d34fb9c68beea4c999754b3392ecf553470e004ddd7fa21648"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.__init__",
+          "ast_sha256": "349e23504b6e834096e9775af92ed4f8c27dc6b5d688e3559ef7a194d38c683c"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset._generate_complex",
+          "ast_sha256": "4448971182e926713d71227f9d6541adcf17ae8548e16c8b302d46a194d32815"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset._format_complex",
+          "ast_sha256": "093c85da669b6157e81bd02dd7890a7157387a1c4b65edccdb93c5021474ae1a"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.__getitem__",
+          "ast_sha256": "c179c3c9151286401da8c50102da61214d93684fb9adb8c56a49ee213f9eaf83"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.score_answer",
+          "ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa"
+        },
+        {
+          "qualified_name": "ComplexArithmeticCurriculum.__init__",
+          "ast_sha256": "80e5695a616ae1353c643c7aaf66215263c2f8e3d4303a434d6aee1ee2cdda09"
+        }
+      ]
+    },
+    {
+      "path": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "git_blob_sha1": "d676f63c0947976e832eb335e16f56dac68d172a",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "functions": [
+        {
+          "qualified_name": "GameOfLifeHaltingConfig.validate",
+          "ast_sha256": "9ba8f854e5bf560ced0a4f903ca89fdf1304789e160fa04168dc97ec9a6584c9"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.__init__",
+          "ast_sha256": "b5db8b90ec91ea5cf8ab126fd96a42bbf77d8bbd27d69445b69e44eeba727656"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.__getitem__",
+          "ast_sha256": "bf78ea01880fd91dcedc0cbfd22cea60fcc81c067b239d5cacd8fac95cd53f93"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+          "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingCurriculum.__init__",
+          "ast_sha256": "33a07ac95f9de962fbc4a587a5cc086b833e515a049be2753ad23341bbc6959c"
+        }
+      ]
+    },
+    {
+      "path": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+      "git_blob_sha1": "6aeac2321f40859e1cbfdad951fc90c63e410870",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py",
+      "functions": [
+        {
+          "qualified_name": "CoinFlipConfig.validate",
+          "ast_sha256": "ca0f8b6bc9ae2ecc06c3c6039588b8a633fb6a34110687c73d2f888dc0f67042"
+        },
+        {
+          "qualified_name": "CoinFlipDataset.__init__",
+          "ast_sha256": "5c707848f53908c323282aebb63e9da6dd7aa5b4e0d34760fa9e14a6d5f52f56"
+        },
+        {
+          "qualified_name": "CoinFlipDataset.__getitem__",
+          "ast_sha256": "652682456fdd1a1f6640cdb83c941bfdb2b0805cb6e2de9057cfdb1be1a47f8b"
+        },
+        {
+          "qualified_name": "CoinFlipDataset._prob_exact_heads",
+          "ast_sha256": "3b33f72fc6165d6934a0fb394d1f5ab3dc36d50fd6a232fa4829a798f4140c24"
+        },
+        {
+          "qualified_name": "CoinFlipDataset._prob_at_least_heads",
+          "ast_sha256": "4109e17cb6b8c809af29e4d249413aabb47bdbfff28c0963acf09bec6f055f2b"
+        },
+        {
+          "qualified_name": "CoinFlipDataset._rational_numerator",
+          "ast_sha256": "a11e604c0b65d47c44356154129e038c23e39da9042b2863f239310e921afa80"
+        },
+        {
+          "qualified_name": "CoinFlipDataset.score_answer",
+          "ast_sha256": "25d747080224c4cdb953bf9d00a070a38b2a3ee4cc1be3e49b850249802f19d0"
+        },
+        {
+          "qualified_name": "CoinFlipCurriculum.__init__",
+          "ast_sha256": "3b08196ba791f7b5468b240cf1890deb2f0f30cbb8527b843a6b47ddc5e99dee"
+        }
+      ]
+    },
+    {
+      "path": "upstream/issue_snapshot/tests/test_coin_flip.py",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "535173847fc263d828d97a04aa953f16d5b5034826a0fa3ef96f0fe81c8dafca",
+      "git_blob_sha1": "29f41abed451571afc31b033fa74a90565aa2d41",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_coin_flip.py",
+      "functions": [
+        {
+          "qualified_name": "test_coin_flip_config_validation",
+          "ast_sha256": "e46ce52eb9727e8355721f940fd22342c745cd21201d94c169b50ca6b34c7557"
+        },
+        {
+          "qualified_name": "test_coin_flip_deterministic",
+          "ast_sha256": "94d7ae9e1b0f31b43250f4ca8a8f52eb6ee7373d0a988433f4ea01735381e4c0"
+        },
+        {
+          "qualified_name": "test_coin_flip_items",
+          "ast_sha256": "16bc018063012272e4e9a42f0c3d8832459d95cfe6df2aa3ea9bf1ffcacc20d8"
+        },
+        {
+          "qualified_name": "test_coin_flip_score_answer",
+          "ast_sha256": "dfae984ada0751e4d59d9765996d2230928391ece42eb6c7298704f1841afd1d"
+        },
+        {
+          "qualified_name": "test_coin_flip_curriculum",
+          "ast_sha256": "c1c1e67d34d87bd98ae110b9d1889aaf0104d6a07209f5788ea136973bb16f84"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/LICENSE",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/LICENSE",
+      "functions": []
+    },
+    {
+      "path": "upstream/main/reasoning_gym/__init__.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "b62c9b9ce67ec3234444cc88ea45a57e5be1869ede95ca7c77aa263dc5b3c1b7",
+      "git_blob_sha1": "b0dbca4f785ac299e4f420e25a8aa2d4d34932c9",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/__init__.py",
+      "functions": []
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algebra/__init__.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "f9616996d2be6494b4fbefe54ecc657c9f1e0e6b022614237f7b9a33291131f2",
+      "git_blob_sha1": "51013bf84f7833e0ebb74573a3b2ae7d6104f24c",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/__init__.py",
+      "functions": []
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algorithmic/__init__.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "f77492da35192df6b595e57978c18d669aa2310c2c25f813cea7624dcef0015f",
+      "git_blob_sha1": "1816ddaeb18174f8358898b645b13f87ab82df4c",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/__init__.py",
+      "functions": []
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algorithmic/binary_matrix.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "0697d49b6cb8812731713e2d930469023e9281c8c4354400655376a0becb6491",
+      "git_blob_sha1": "db1f6088520c77045cdd1d626b8b0cf1f208228e",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/binary_matrix.py",
+      "functions": [
+        {
+          "qualified_name": "BinaryMatrixConfig.validate",
+          "ast_sha256": "7a3930319abfa14ad2dd3a95043578c9166cc1dcc3a8c233b39306f2d15e65ca"
+        },
+        {
+          "qualified_name": "BinaryMatrixDataset.__init__",
+          "ast_sha256": "67383d0ba3b6b17da490af29c784ae04bf4c29c23eaeaae1899118d3518fada6"
+        },
+        {
+          "qualified_name": "BinaryMatrixDataset._get_binary_matrix",
+          "ast_sha256": "235a7fa5c0c6cf5f597de61ccec9295944a9c49cc1ab95ca392e63f82db5c239"
+        },
+        {
+          "qualified_name": "BinaryMatrixDataset._get_distances",
+          "ast_sha256": "8d2cb52d401e46b490c4d82b38f91f1e53cca67a388184dcf560fb994ef3e654"
+        },
+        {
+          "qualified_name": "BinaryMatrixDataset._matrix_to_str",
+          "ast_sha256": "31f2d99c59023547731f5271976bea57d466057fab92e6e5006c8e45d3c0b170"
+        },
+        {
+          "qualified_name": "BinaryMatrixDataset.score_answer",
+          "ast_sha256": "09f59ae04a00fdc924944452a5038966de51911ed2805634e66859d709e93549"
+        },
+        {
+          "qualified_name": "BinaryMatrixDataset.__getitem__",
+          "ast_sha256": "ee7b7f8cac3934e1e1809a337a04954d91e32a7e27c13cd51db504aaf9729ed2"
+        },
+        {
+          "qualified_name": "BinaryMatrixCurriculum.__init__",
+          "ast_sha256": "75c440228f88621c471fe912c250c3f1723268051dfb0a13fad709ae3afccfc1"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+      "git_blob_sha1": "665408470a416984d696a2bf797cb4922ea74a30",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/group_anagrams.py",
+      "functions": [
+        {
+          "qualified_name": "GroupAnagramsConfig.validate",
+          "ast_sha256": "4baf5499c3434bb980b35f48d559feeb8aad4abecf50c42ad3b1a61221a9d409"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset.__init__",
+          "ast_sha256": "1e331983422101fe6b9298545a39d4bb53a65412bc8f197ef39bd18c7b8fcb37"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset._get_anagram_words",
+          "ast_sha256": "b6fe91d87780c431de4fc6d7ab37f89c4d13584a5449017cfa566057dbfc933d"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset._sort_nested_list",
+          "ast_sha256": "e71e8121e893ea6c4ad688cdd8ec7719f396ca36b61d42bcb0481327f54e375b"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset._group_anagrams",
+          "ast_sha256": "b399736a16733d87169349463faaa2beec78305a0e34de66f10f19a66e25eb75"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset._group_anagrams._codify",
+          "ast_sha256": "9462bff0a19d873fd77dfeaa86f4ce533f51a03ed5d558521207d205c806734a"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset.score_answer",
+          "ast_sha256": "86e18b876068ca355beec75be86c324dabd1fdb71084334aafc60ae10fd557ad"
+        },
+        {
+          "qualified_name": "GroupAnagramsDataset.__getitem__",
+          "ast_sha256": "9e6cfced5cecc411c8c508359f0a8953eada2ec6e3b6be3593f96bb53cd14515"
+        },
+        {
+          "qualified_name": "GroupAnagramsCurriculum.__init__",
+          "ast_sha256": "3d702cacbe95322b1fa10ead382953771f1b38c522d4eac14ae301506ba3bf26"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+      "git_blob_sha1": "9385c0893c9d42a7f6145c2f36ab276668a5fc51",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/palindrome_generation.py",
+      "functions": [
+        {
+          "qualified_name": "PalindromeConfig.validate",
+          "ast_sha256": "240679a03866ebee09d286af35177b0edc662a92e4f6a106dc8d156278219a8b"
+        },
+        {
+          "qualified_name": "PalindromeDataset.__init__",
+          "ast_sha256": "91d33434ec8d0572b87796958515966dc056fd119efee4a2619ffba5f51ef75e"
+        },
+        {
+          "qualified_name": "PalindromeDataset.__getitem__",
+          "ast_sha256": "e9bf41db655bcdda422090e0afc1f13ee88b785a3896b8aabbdf7ce583b7d0c3"
+        },
+        {
+          "qualified_name": "PalindromeDataset._generate_palindrome_letters",
+          "ast_sha256": "3a77575dd00eee5b51bd8df8603bd2d83b5593a45c86dd3ec096f2e4062be376"
+        },
+        {
+          "qualified_name": "PalindromeDataset._assemble_palindrome",
+          "ast_sha256": "0ca14c88f01ea81b11c911ac50b0fe53165711fa153c626e6baeeda2f9a8f973"
+        },
+        {
+          "qualified_name": "PalindromeDataset.score_answer",
+          "ast_sha256": "9c6fc330cea2c8195759eb0dab0a239a219c47992d317034c09beabf9e9e4c21"
+        },
+        {
+          "qualified_name": "PalindromeCurriculum.__init__",
+          "ast_sha256": "6521dd224990a41e827d6b65d9503115fe432baf8a927aae92971fe58e60cfe4"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algorithmic/spell_backward.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "a27f14e886fad4d7dd1bf0506644be70c095bb71201a5e8d71128647901d9773",
+      "git_blob_sha1": "ab26f843a7f3e3162307414f0e6c374c748385ec",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/spell_backward.py",
+      "functions": [
+        {
+          "qualified_name": "SpellBackwardConfig.validate",
+          "ast_sha256": "b55176ab0428542ea872f65683a6b0ba93fa7165424955c846fd29f9f763d39b"
+        },
+        {
+          "qualified_name": "SpellBackwardDataset.__init__",
+          "ast_sha256": "148017ec90162d6c2be5a1d719b5bdb5ac8e8ab42eb9eb376566975e68104388"
+        },
+        {
+          "qualified_name": "SpellBackwardDataset.__getitem__",
+          "ast_sha256": "9198160ba940a108c687c52b8a2a8e692e671d49c9898d30619ee57bf6467bee"
+        },
+        {
+          "qualified_name": "SpellBackwardDataset.score_answer",
+          "ast_sha256": "ac14f315375f52680b1e6475d231ee7655c86c0d87925b28df5ca745250d56f0"
+        },
+        {
+          "qualified_name": "SpellBackwardCurriculum.__init__",
+          "ast_sha256": "b1a3aad02c01ec5da48eaab37d11a75d58870dea1ec1a0ce9322e2e54d33ee18"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "912c346511855e7de945283420c472835e7d0397f74f3ef0d639d5d3b9d93e08",
+      "git_blob_sha1": "3a02f46aebd73bd6daec52c48ebdb26455225bb6",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "functions": [
+        {
+          "qualified_name": "WordSequenceReversalConfig.validate",
+          "ast_sha256": "daaabb15f9ee67ef5f4dee4d8a3d68ebadadb034983ad7c8eb242f4367e13578"
+        },
+        {
+          "qualified_name": "WordSequenceReversalDataset.__init__",
+          "ast_sha256": "11b3b0fa401ba4a835653440e681480192402a6a6e8cea3bf74ea0c7242870f3"
+        },
+        {
+          "qualified_name": "WordSequenceReversalDataset.__getitem__",
+          "ast_sha256": "abfe57acdb2b7aea8feb05440f8eb7e340cc35a35766dee6c275e45475cbacd6"
+        },
+        {
+          "qualified_name": "WordSequenceReversalCurriculum.__init__",
+          "ast_sha256": "0bda47537fdc4e9158a36e27df27eba376ac7eab80416d3c8ac19d20d0d804d6"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/arithmetic/__init__.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "1e0d8a82d615504f73bad10e75552bdda4ed17e2b0369f4ae7d009737659b209",
+      "git_blob_sha1": "487052799169da7bb0eef77c35c4b6e9fb527267",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/__init__.py",
+      "functions": []
+    },
+    {
+      "path": "upstream/main/reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "e56416e0c10bb55f46961e93ef55826f419d1a0186ff75b6bb367d098dcca245",
+      "git_blob_sha1": "93dc0c8a3cc7d168d03f06ea83de97dfe8c4f973",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "functions": [
+        {
+          "qualified_name": "DecimalArithmeticConfig.validate",
+          "ast_sha256": "30ab39aaa7bd65685d60d1251da004a003c1329db5eeb5c329eb84a8a219a8be"
+        },
+        {
+          "qualified_name": "build_grouped_expression",
+          "ast_sha256": "5c5659cfdf5e9214cb4a00529dbd234895dca05cfdec053d5a1e9ba4369d035e"
+        },
+        {
+          "qualified_name": "generate_arithmetic_problem",
+          "ast_sha256": "4912cd02530c90a6fc220ea8fa316c501a85369836d44aae339ce3537116acf9"
+        },
+        {
+          "qualified_name": "evaluate_expression",
+          "ast_sha256": "4184e44eefc4bf17f9e929c13ef5d3a529cccd6f2e5d346c910658223f169965"
+        },
+        {
+          "qualified_name": "_eval_ast",
+          "ast_sha256": "2f4d886ab28b90bf8cbbe33c0c7d0ee52442aff583c172181ed982c5ad53a65f"
+        },
+        {
+          "qualified_name": "DecimalArithmeticDataset.__init__",
+          "ast_sha256": "4177f38d5805fbb36480af9c893002a6160acf56fcddc4a89d3edf874eb76b7c"
+        },
+        {
+          "qualified_name": "DecimalArithmeticDataset.__getitem__",
+          "ast_sha256": "d3838151c2b88e2a99c110eb7dd302feb9affbae2f41fe8154d8845e236471b0"
+        },
+        {
+          "qualified_name": "DecimalArithmeticDataset.score_answer",
+          "ast_sha256": "95ac429748d2a90676ee55d37f1007503f763f453418da7f1299da066c0c80d0"
+        },
+        {
+          "qualified_name": "DecimalArithmeticCurriculum.__init__",
+          "ast_sha256": "4f2835d8ace127389b82022c519b5bb002b70433c23bfc3cfcc29e8862fd9263"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+      "git_blob_sha1": "0a3072842bbb46de951a99659954691a8ffa1b55",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/prime_factorization.py",
+      "functions": [
+        {
+          "qualified_name": "PrimeFactorizationConfig.validate",
+          "ast_sha256": "40070da57f471ef57866b12971de2e663a6523448f25f2a35b8e53420a4b98cd"
+        },
+        {
+          "qualified_name": "PrimeFactorizationDataset.__init__",
+          "ast_sha256": "9a61c8009918fb45769ac797e46ce01addc286338b102564d90c8c0c4b0cc2d6"
+        },
+        {
+          "qualified_name": "PrimeFactorizationDataset._prime_factors",
+          "ast_sha256": "e183f648bd4e6d815c8282a727d82954bc0cf9bb5c36fa934e29a77851e0e141"
+        },
+        {
+          "qualified_name": "PrimeFactorizationDataset._normalize_answer",
+          "ast_sha256": "f5eef7c9b8eebf48757f5168ff872436f9294c2544725dd1bfa9d850f41f33fd"
+        },
+        {
+          "qualified_name": "PrimeFactorizationDataset.score_answer",
+          "ast_sha256": "661669714196aab3f91c599b55a1176332a5c765abd8589982a156dfcf20d0a4"
+        },
+        {
+          "qualified_name": "PrimeFactorizationDataset.__getitem__",
+          "ast_sha256": "fdaf0306da473e07b92335b780006f5e6a8c5fe9f56f5754d54d15ec8a5bee99"
+        },
+        {
+          "qualified_name": "PrimeFactorizationCurriculum.__init__",
+          "ast_sha256": "13e42f78990a4d4f33e92c0f8c8a875f4234f4086550f8000a684ddaeb3587d6"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/dataset.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "6e29c6f83cba9174631bd0fd10b86c5fbdd9de5904ace54d2554c92ee80371b4",
+      "git_blob_sha1": "7cef17ce2277ad58f81501531246b79017374d98",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/dataset.py",
+      "functions": [
+        {
+          "qualified_name": "ProceduralDataset.__init__",
+          "ast_sha256": "539c8ed62e92365771973ecee0e346a9b7486830f164907ae05dbe8026cb2cf0"
+        },
+        {
+          "qualified_name": "ProceduralDataset.category",
+          "ast_sha256": "35f99a5529b1daddae945a0c555d4a7497c79fb1677cac486a96b5f51a052013"
+        },
+        {
+          "qualified_name": "ProceduralDataset.__len__",
+          "ast_sha256": "d5b7b6bebeea4fda8fbe682febde121dbc55ee08371071c45f7b705e3a0e49c7"
+        },
+        {
+          "qualified_name": "ProceduralDataset.__iter__",
+          "ast_sha256": "ec658115cc35f354472b4486ef56e848a598b1d52b8dcf553e2528beadb258ff"
+        },
+        {
+          "qualified_name": "ProceduralDataset.__next__",
+          "ast_sha256": "334789936bdd219e698684a0b1b31469ac49546342c6600911296f7340502315"
+        },
+        {
+          "qualified_name": "ProceduralDataset.__getitem__",
+          "ast_sha256": "e4d9f00cc555d6ec1b05f53989aa03c4a759a9bdc8374fc5d6186f1fe068008c"
+        },
+        {
+          "qualified_name": "ProceduralDataset.score_answer",
+          "ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b"
+        },
+        {
+          "qualified_name": "ProceduralDataset.score_answer_cascade",
+          "ast_sha256": "a92e34a6a72ac402227419100dd0bba9126daa4b4c7ea143c77558e5390b6d43"
+        },
+        {
+          "qualified_name": "ReseedingDataset.__init__",
+          "ast_sha256": "d70706347e7244e1dab766ac1917ebd96d73dfa48b623977465d26db8431e263"
+        },
+        {
+          "qualified_name": "ReseedingDataset._create_chunk",
+          "ast_sha256": "e2296a4c14f4c8dfde48a8167ef5d7fd737418b8c3cc0dca64733e246cec9b8c"
+        },
+        {
+          "qualified_name": "ReseedingDataset.__iter__",
+          "ast_sha256": "b13893ba018e481c66edc24b302f76745299db94e1b271c4c8c7853dd59647e3"
+        },
+        {
+          "qualified_name": "ReseedingDataset.__next__",
+          "ast_sha256": "7e1f54f60c5745857eed1e47fc9b1286d5eea75e2cc1bb6a1ac7048f147f7ece"
+        },
+        {
+          "qualified_name": "ReseedingDataset.score_answer",
+          "ast_sha256": "ccbad8d60f8943e27533e4f5bafc98a2f5bd77a7df74cafde9f28e83a3ad3fdb"
+        },
+        {
+          "qualified_name": "ReseedingDataset.score_answer_cascade",
+          "ast_sha256": "92c3b60aae8788d76f78e9d3abb11b1348438ca301b1f7e4d6d5e0a36f4e8fa3"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/factory.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "fc651cc93205fafab926526a7d2c7a88c9dfa569af6e895135a1db48765e75bf",
+      "git_blob_sha1": "3d2f39a6c01e4c17a280033f9acfe7ab08fb966d",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/factory.py",
+      "functions": [
+        {
+          "qualified_name": "register_dataset",
+          "ast_sha256": "b75827a116648184cad8c7f33075c92e6373a5329c9fd456dd35e2fdf8a3c675"
+        },
+        {
+          "qualified_name": "create_dataset",
+          "ast_sha256": "7541a94fe341fa096a907a788d0984f0c64e547a223d4fd4f42f224eb13f9701"
+        },
+        {
+          "qualified_name": "create_curriculum",
+          "ast_sha256": "0c998539e3daa72cab109101e18cbb59011df054734a869f0cb67360a10caa54"
+        },
+        {
+          "qualified_name": "has_curriculum",
+          "ast_sha256": "efc7715b2b0d9d4a0458c23b92227db291aabb98ecca79ac9ea2ab650c143045"
+        },
+        {
+          "qualified_name": "get_score_answer_fn",
+          "ast_sha256": "0e59b35655fe758b62c5a234a6253932017cb1cc80a538bae21f0caa6bd11dca"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/games/n_queens.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "2738aad6232b45f21e57c0cb6d58dbcd1752a97e95e7abb8cf8c1002a4bf4c64",
+      "git_blob_sha1": "06e53f0c44559fbae6a1b7eeb32010ad75450c99",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/games/n_queens.py",
+      "functions": [
+        {
+          "qualified_name": "NQueensConfig.validate",
+          "ast_sha256": "9fbbec733b564dbbf7fd91a32b92a3a2ebf1be3c32eb2839bd259e8668c31856"
+        },
+        {
+          "qualified_name": "NQueensDataset.__init__",
+          "ast_sha256": "c06bc087616573c8d0c6c89b0ef3bd6e18fd266ab3559becb5435fd79ba5b018"
+        },
+        {
+          "qualified_name": "NQueensDataset._get_all_solutions",
+          "ast_sha256": "f48be43bb8501bd7f3b99582b57bd82eb14aa23c79905cc4c126630400cc7724"
+        },
+        {
+          "qualified_name": "NQueensDataset._get_all_solutions.backtrack",
+          "ast_sha256": "1995ed6384e32ca3b1e351c39904d658bdb0d0bfc1cc1e0ad2d83e4cc93b3a31"
+        },
+        {
+          "qualified_name": "NQueensDataset._create_puzzle",
+          "ast_sha256": "64620fcf1f50982cb08b6dfd5ad27fefbe487739f769d4199f6cd3be9965bbfb"
+        },
+        {
+          "qualified_name": "NQueensDataset._board_to_string",
+          "ast_sha256": "037df5942c69b0b6e437347f4b3abd855c5347a1fe8b94bf3d3659a9a59aacb6"
+        },
+        {
+          "qualified_name": "NQueensDataset._string_to_board",
+          "ast_sha256": "9a3fdbd4f27e8b49968760f426188d19280584e1ebf7b9de8f13496f7d8db6bf"
+        },
+        {
+          "qualified_name": "NQueensDataset._is_tractable_solution",
+          "ast_sha256": "927227b3c957c26de6fc87a463690cffb0a82a0b1acb12bb52302883caa2e612"
+        },
+        {
+          "qualified_name": "NQueensDataset.__getitem__",
+          "ast_sha256": "aec62045b6874cb3495d851cd425f1011978916751d3da0aaa6427cefccfda64"
+        },
+        {
+          "qualified_name": "NQueensDataset.score_answer",
+          "ast_sha256": "d2e518add3b5abc620246d29011ec9e0ca70cc423c3602a657b997406ffd5630"
+        },
+        {
+          "qualified_name": "NQueensCurriculum.__init__",
+          "ast_sha256": "64f8c08c8b8f1850e02f07f881884032aabe0ca18c129987374e2c541ed190b1"
+        }
+      ]
+    },
+    {
+      "path": "upstream/main/reasoning_gym/probability/__init__.py",
+      "snapshot": "main",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "7e1d0f8cebf8bebf2a4027cf2a43ebd98daeea9a6e40604ac45ec780f43ef926",
+      "git_blob_sha1": "e08e34bdc2ba56c82eaf2ec91e64b2346c07b561",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/__init__.py",
+      "functions": []
+    },
+    {
+      "path": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "snapshot": "pr561",
+      "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+      "git_blob_sha1": "5d4d6c609024a35a6af8ac15380e8ca0d53a153f",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "functions": [
+        {
+          "qualified_name": "GameOfLifeHaltingConfig.validate",
+          "ast_sha256": "9ba8f854e5bf560ced0a4f903ca89fdf1304789e160fa04168dc97ec9a6584c9"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.__init__",
+          "ast_sha256": "b5db8b90ec91ea5cf8ab126fd96a42bbf77d8bbd27d69445b69e44eeba727656"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.__getitem__",
+          "ast_sha256": "bf78ea01880fd91dcedc0cbfd22cea60fcc81c067b239d5cacd8fac95cd53f93"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+          "ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingCurriculum.__init__",
+          "ast_sha256": "33a07ac95f9de962fbc4a587a5cc086b833e515a049be2753ad23341bbc6959c"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr561/tests/test_game_of_life_halting.py",
+      "snapshot": "pr561",
+      "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "sha256": "926c925101d849fe0276d1a93a5eb94a5d3b847ebf20e97f777aada99a475870",
+      "git_blob_sha1": "7da3977f7f7c501cc35751b22cc147b75a30bb90",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/tests/test_game_of_life_halting.py",
+      "functions": [
+        {
+          "qualified_name": "test_game_of_life",
+          "ast_sha256": "b0d564b29ebfa304e213ffd3a414fe6d8862db92ec21b1861b27674ceaec5746"
+        },
+        {
+          "qualified_name": "test_game_of_life_halting_deterministic",
+          "ast_sha256": "213ef23b7c53ffeb42740063e87c70a9bb4e1f79850721c51c8d95ec5c18ad35"
+        },
+        {
+          "qualified_name": "test_game_of_life_halting_curriculum",
+          "ast_sha256": "585f7b6db0df34297e2a9a2ee49108d5584365bff1d0e63ca34a5eaff63da353"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr561_base/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "snapshot": "pr561_base",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "git_blob_sha1": "d676f63c0947976e832eb335e16f56dac68d172a",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "functions": [
+        {
+          "qualified_name": "GameOfLifeHaltingConfig.validate",
+          "ast_sha256": "9ba8f854e5bf560ced0a4f903ca89fdf1304789e160fa04168dc97ec9a6584c9"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.__init__",
+          "ast_sha256": "b5db8b90ec91ea5cf8ab126fd96a42bbf77d8bbd27d69445b69e44eeba727656"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.__getitem__",
+          "ast_sha256": "bf78ea01880fd91dcedc0cbfd22cea60fcc81c067b239d5cacd8fac95cd53f93"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+          "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630"
+        },
+        {
+          "qualified_name": "GameOfLifeHaltingCurriculum.__init__",
+          "ast_sha256": "33a07ac95f9de962fbc4a587a5cc086b833e515a049be2753ad23341bbc6959c"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr561_base/tests/test_game_of_life_halting.py",
+      "snapshot": "pr561_base",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "c6b63892161191d02729a2deb7ec60f5da414146928b8c2fe9bb40366e93321b",
+      "git_blob_sha1": "7ee78b378a460eb4f047269ee5c58b7e74f858b7",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_game_of_life_halting.py",
+      "functions": [
+        {
+          "qualified_name": "test_game_of_life",
+          "ast_sha256": "83763aaf2ce0e3e6ee09577f4b5afcc875c9ee42d6dc4c171ef94de38d701842"
+        },
+        {
+          "qualified_name": "test_game_of_life_halting_deterministic",
+          "ast_sha256": "213ef23b7c53ffeb42740063e87c70a9bb4e1f79850721c51c8d95ec5c18ad35"
+        },
+        {
+          "qualified_name": "test_game_of_life_halting_curriculum",
+          "ast_sha256": "585f7b6db0df34297e2a9a2ee49108d5584365bff1d0e63ca34a5eaff63da353"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+      "snapshot": "pr562",
+      "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+      "git_blob_sha1": "bb70835c314c9fffa8398ee90ec3a77d8773daf2",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/reasoning_gym/algebra/complex_arithmetic.py",
+      "functions": [
+        {
+          "qualified_name": "ComplexArithmeticConfig.validate",
+          "ast_sha256": "17747d2a8133c8d34fb9c68beea4c999754b3392ecf553470e004ddd7fa21648"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.__init__",
+          "ast_sha256": "349e23504b6e834096e9775af92ed4f8c27dc6b5d688e3559ef7a194d38c683c"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset._generate_complex",
+          "ast_sha256": "4448971182e926713d71227f9d6541adcf17ae8548e16c8b302d46a194d32815"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset._format_complex",
+          "ast_sha256": "093c85da669b6157e81bd02dd7890a7157387a1c4b65edccdb93c5021474ae1a"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.__getitem__",
+          "ast_sha256": "c179c3c9151286401da8c50102da61214d93684fb9adb8c56a49ee213f9eaf83"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.score_answer",
+          "ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea"
+        },
+        {
+          "qualified_name": "ComplexArithmeticCurriculum.__init__",
+          "ast_sha256": "80e5695a616ae1353c643c7aaf66215263c2f8e3d4303a434d6aee1ee2cdda09"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr562/tests/test_complex_arithmetic.py",
+      "snapshot": "pr562",
+      "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "sha256": "340ae4df772ad8ee012c5f53f4309017a1d598949c37b15230fa2c4aec61fbe6",
+      "git_blob_sha1": "9f2cc252c9db2ca442f3f6f218568035be392a4b",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/tests/test_complex_arithmetic.py",
+      "functions": [
+        {
+          "qualified_name": "test_complex_arithmetic_basic",
+          "ast_sha256": "4a61c164b4573c080981cc8313f18349d377f6d885fdb7cd0a36a16828407cab"
+        },
+        {
+          "qualified_name": "test_complex_arithmetic_scoring",
+          "ast_sha256": "3dae5ad865d3558bf25bf7084321c0e75493aa2d41436b864b32e287d75d557c"
+        },
+        {
+          "qualified_name": "test_complex_arithmetic_division_by_zero",
+          "ast_sha256": "e286a6f7bb4459c307e65709c098927fb79d2da4ab40c323828bab5dffbb274c"
+        },
+        {
+          "qualified_name": "test_parse_string_to_complex",
+          "ast_sha256": "39b1e34fee0f3a7d19ce9ca24b550e4cb6ac15c7e8194eeac2ddc8899a8373a4"
+        },
+        {
+          "qualified_name": "test_complex_arithmetic_curriculum",
+          "ast_sha256": "8d57b08d5bbc8af2694c9b278a557efe88ca537e5831eef713528300718dfb99"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr562_base/reasoning_gym/algebra/complex_arithmetic.py",
+      "snapshot": "pr562_base",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+      "git_blob_sha1": "fa4b0b34effe333dd25037e236f1c5ca5515f564",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py",
+      "functions": [
+        {
+          "qualified_name": "ComplexArithmeticConfig.validate",
+          "ast_sha256": "17747d2a8133c8d34fb9c68beea4c999754b3392ecf553470e004ddd7fa21648"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.__init__",
+          "ast_sha256": "349e23504b6e834096e9775af92ed4f8c27dc6b5d688e3559ef7a194d38c683c"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset._generate_complex",
+          "ast_sha256": "4448971182e926713d71227f9d6541adcf17ae8548e16c8b302d46a194d32815"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset._format_complex",
+          "ast_sha256": "093c85da669b6157e81bd02dd7890a7157387a1c4b65edccdb93c5021474ae1a"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.__getitem__",
+          "ast_sha256": "c179c3c9151286401da8c50102da61214d93684fb9adb8c56a49ee213f9eaf83"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5"
+        },
+        {
+          "qualified_name": "ComplexArithmeticDataset.score_answer",
+          "ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa"
+        },
+        {
+          "qualified_name": "ComplexArithmeticCurriculum.__init__",
+          "ast_sha256": "80e5695a616ae1353c643c7aaf66215263c2f8e3d4303a434d6aee1ee2cdda09"
+        }
+      ]
+    },
+    {
+      "path": "upstream/pr562_base/tests/test_complex_arithmetic.py",
+      "snapshot": "pr562_base",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "sha256": "733a2178e40a550195dd9d922e6bfc16e8b148c0130735cf4f2d836914261b35",
+      "git_blob_sha1": "a3e3638a81b4b2789e169010bf2184cf79d478a2",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_complex_arithmetic.py",
+      "functions": [
+        {
+          "qualified_name": "test_complex_arithmetic_basic",
+          "ast_sha256": "4a61c164b4573c080981cc8313f18349d377f6d885fdb7cd0a36a16828407cab"
+        },
+        {
+          "qualified_name": "test_complex_arithmetic_scoring",
+          "ast_sha256": "6c9925423381834a68d9886ba080e271c10b7d08cff2b06fe2f272fa001f75b2"
+        },
+        {
+          "qualified_name": "test_complex_arithmetic_division_by_zero",
+          "ast_sha256": "e286a6f7bb4459c307e65709c098927fb79d2da4ab40c323828bab5dffbb274c"
+        },
+        {
+          "qualified_name": "test_parse_string_to_complex",
+          "ast_sha256": "39b1e34fee0f3a7d19ce9ca24b550e4cb6ac15c7e8194eeac2ddc8899a8373a4"
+        },
+        {
+          "qualified_name": "test_complex_arithmetic_curriculum",
+          "ast_sha256": "8d57b08d5bbc8af2694c9b278a557efe88ca537e5831eef713528300718dfb99"
+        }
+      ]
+    }
+  ],
+  "files": 28,
+  "callable_occurrences": 147,
+  "metadata_snippet_exposure": "collection/*commit.json,pr-*-files.json and issue/comment bodies may contain additional source snippets; retain them in exposure accounting."
+}

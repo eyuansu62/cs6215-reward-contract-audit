@@ -1,0 +1,44 @@
+test_analyzer_input_drops_identity_origin_and_probe_metadata (test_study.HarnessTests.test_analyzer_input_drops_identity_origin_and_probe_metadata) ... ok
+test_condition_must_equal_sealed_raw_and_accepted_model_contract (test_study.HarnessTests.test_condition_must_equal_sealed_raw_and_accepted_model_contract) ... ok
+test_exact_native_ast_and_identity_are_required (test_study.HarnessTests.test_exact_native_ast_and_identity_are_required) ... ok
+test_failed_extraction_never_activates_raw_or_reference_contract (test_study.HarnessTests.test_failed_extraction_never_activates_raw_or_reference_contract) ... ok
+test_helper_execution_does_not_add_static_analysis_support (test_study.HarnessTests.test_helper_execution_does_not_add_static_analysis_support) ... ok
+test_native_prefix_method_runs_without_adding_static_model (test_study.HarnessTests.test_native_prefix_method_runs_without_adding_static_model) ... ERROR
+test_native_scope_rejects_effects_and_unknown_globals (test_study.HarnessTests.test_native_scope_rejects_effects_and_unknown_globals) ... ok
+test_native_target_exception_is_not_hidden_as_scope_rejection (test_study.HarnessTests.test_native_target_exception_is_not_hidden_as_scope_rejection) ... ok
+test_native_values_execute_without_encoding_or_reward_coercion (test_study.HarnessTests.test_native_values_execute_without_encoding_or_reward_coercion) ... ok
+test_null_reference_and_model_contracts_stay_null (test_study.HarnessTests.test_null_reference_and_model_contracts_stay_null) ... ok
+test_probe_shapes_are_not_coerced (test_study.HarnessTests.test_probe_shapes_are_not_coerced) ... ok
+test_raw_numeric_representation_is_not_silently_rewritten (test_study.HarnessTests.test_raw_numeric_representation_is_not_silently_rewritten) ... ok
+test_replay_normalizes_timing_paths_but_not_verdicts (test_study.HarnessTests.test_replay_normalizes_timing_paths_but_not_verdicts) ... ok
+test_semgrep_coverage_error_is_unknown (test_study.HarnessTests.test_semgrep_coverage_error_is_unknown) ... ok
+test_semgrep_retains_every_finding_without_semantic_filter (test_study.HarnessTests.test_semgrep_retains_every_finding_without_semantic_filter) ... ok
+test_shared_mapping_fields_preserve_source_and_values (test_study.HarnessTests.test_shared_mapping_fields_preserve_source_and_values) ... ok
+test_structured_bool_and_nonfinite_rewards_are_not_converted (test_study.HarnessTests.test_structured_bool_and_nonfinite_rewards_are_not_converted) ... ok
+test_synthetic_run_handles_null_reference_without_filling_it (test_study.HarnessTests.test_synthetic_run_handles_null_reference_without_filling_it) ... ok
+test_unknown_oracles_do_not_count_as_agreement_or_violation_difference (test_study.HarnessTests.test_unknown_oracles_do_not_count_as_agreement_or_violation_difference) ... ok
+test_unknown_static_result_is_not_determinate_agreement (test_study.HarnessTests.test_unknown_static_result_is_not_determinate_agreement) ... ok
+
+======================================================================
+ERROR: test_native_prefix_method_runs_without_adding_static_model (test_study.HarnessTests.test_native_prefix_method_runs_without_adding_static_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/run_study.py", line 297, in execute_native
+    guard = guard_native_source(tree, declared, unit['stdlib_bindings'])
+  File "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/run_study.py", line 270, in guard_native_source
+    raise ValueError('Native attribute outside inspected whitelist: '+node.attr)
+ValueError: Native attribute outside inspected whitelist: startswith
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/tests/test_study.py", line 97, in test_native_prefix_method_runs_without_adding_static_model
+    result=study.execute_native(unit,{'id':'p','answer':'True trailing','reference':'True'})
+  File "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/run_study.py", line 299, in execute_native
+    raise NativeScopeError(str(error)) from error
+run_study.NativeScopeError: Native attribute outside inspected whitelist: startswith
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.035s
+
+FAILED (errors=1)

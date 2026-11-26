@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0-independent-implementation-review",
+  "created_utc": "2026-11-08T14:45:25.698349+00:00",
+  "reviewer": "Independent Codex native subagent; no detector implementation ownership",
+  "verdict": "pass_for_bounded_source_exposed_fixed_contract_run_after_pre_freeze_corrections",
+  "blocking_findings": [],
+  "review_stage": "Before method freeze and primary predictions; no primary detector units or outcomes inspected or analyzed in this implementation stage.",
+  "information_parity": {
+    "passed": true,
+    "basis": "prepare_inputs constructs only exact source/helpers, source-derived stdlib bindings and literal defaults, fixed reviewed contracts and content-derived IDs. predict passes a deep copy of each identical unit to both methods. Oracle/unit-map reads belong to the separate scoring operation.",
+    "probability_default": "tol is extracted from the native signature and asserted equal to absolute_tolerance=0.0001.",
+    "forbidden_detector_inputs_found": [],
+    "id_use": "Content-derived IDs are output/log identifiers. Neither detector selects verdicts from case IDs, issue/PR disposition, oracle labels or archived witness/reward values."
+  },
+  "semgrep_review": {
+    "passed": true,
+    "native_engine": "Pinned Semgrep CE 1.183.0 native core, SHA-256 checked before scan.",
+    "rules": "All three fixed search-mode risky-idiom rules are applied identically to each contract/unit. AST validates the source envelope and source spans; it does not replace the detector or suppress findings semantically.",
+    "coverage": "Independent engine function/return coverage is checked against declared source AST spans; empty/missing coverage, parse/engine errors, skipped rules and timeouts become Unknown.",
+    "no_alarm_meaning": "Completed native pattern scan without these fixed findings, not a semantic correctness proof. No dedicated palindrome/multiset or prime/product semantic coverage.",
+    "verification": {
+      "authored_synthetic_suite_tests": 28,
+      "passed": true,
+      "command": "python3 -m unittest -q test_semgrep_baseline.py",
+      "primary_units_run_by_reviewer": 0
+    }
+  },
+  "symbolic_review": {
+    "passed": true,
+    "boundary": "Native str/None candidate, trusted native reference fields, declared exact helpers/stdlib and pure source boundary. No monkeypatching, dynamic module initializer or outer wrapper model.",
+    "certificates": "Boolean strip/lower equality; palindrome normalized reversal plus exact letter multiset; exact-source integer-factor parser plus equality to trusted prime factor multiset. Unknown arbitrary numeric/complex/loop semantics are accepted limitations.",
+    "correction_policy": "Whole-function unsupported binders are rejected. Unsupported evaluated conditions, calls, assignments and mutations stop the affected path with an Unknown exit rather than permit stale assumptions to erase it. Valueless annotations, explicit raise expression/cause and effectful/shadowed/unverified handler types are conservative Unknown.",
+    "verification": {
+      "authored_synthetic_suite_tests": 28,
+      "passed": true,
+      "command": "python3 -m unittest -q test_symbolic_baseline.py",
+      "independent_adversarial_synthetic_units": 8,
+      "all_adversarial_units_now_unknown": true,
+      "independent_controls": 3,
+      "all_controls_passed": true,
+      "primary_units_run_by_reviewer": 0
+    }
+  },
+  "runner_review": {
+    "passed": true,
+    "basis": "Frozen method/input/source/contract identities, unique exact unit set and both method keys checked before scoring; oracle joined only after predictions. Frozen code/protocol, input bytes, unit map, diagnostic sources and tool-release metadata are included.",
+    "metrics": "Unknown remains outside TP/FP/FN/TN but inside accuracy/coverage denominators; positive Unknown reduces recall and F1. Arbitrary verdict text is rejected.",
+    "independent_nonprimary_tests": 4,
+    "independent_nonprimary_tests_passed": true,
+    "projection_test": "Read its test source but deliberately did not run it, to avoid inspecting primary inputs in this stage. Root reports all five study tests passing."
+  },
+  "resolved_pre_freeze_findings": [
+    {
+      "id": "whole-function-local-binding",
+      "severity_before_fix": "material_alarm_reachability",
+      "status": "resolved_and_independently_retested",
+      "finding": "Except-target/import and other lexical binders could shadow native builtins before their textual statement and cause a false executable counterexample.",
+      "resolution": "Whole-function unsupported binding/control exclusions and exception-target local discovery; dedicated regression subcases."
+    },
+    {
+      "id": "opaque-term-infeasibility",
+      "severity_before_fix": "material_false_no_alarm",
+      "status": "resolved_and_independently_retested",
+      "finding": "Unsupported calls with identical function spelling but different arguments collapsed and could incorrectly establish contradictions.",
+      "resolution": "Unknown terms cannot prove consistency/infeasibility; evaluated unsupported conditions create an Unknown exit."
+    },
+    {
+      "id": "stale-reference-after-effects",
+      "severity_before_fix": "material_false_no_alarm",
+      "status": "resolved_and_independently_retested",
+      "finding": "Unmodeled input mutation or call effects left trusted-reference facts active; later path pruning/folding could erase full-credit paths.",
+      "resolution": "Unsupported evaluated effects and mutations stop the active path with an Unknown exit."
+    },
+    {
+      "id": "valueless-annotation-definedness",
+      "severity_before_fix": "material_alarm_reachability",
+      "status": "resolved_and_independently_retested",
+      "finding": "A valueless local annotation was treated as assigning None, permitting a counterexample through a native UnboundLocalError.",
+      "resolution": "Valueless AnnAssign is Unknown."
+    },
+    {
+      "id": "exception-expression-effects",
+      "severity_before_fix": "material_false_no_alarm",
+      "status": "resolved_and_independently_retested",
+      "finding": "Evaluating raise exception/cause or except-type expressions can mutate native reference state before a handler; ignoring these effects allowed false no_alarm.",
+      "resolution": "Explicit raise expressions/causes are Unknown; handler types must be unshadowed whitelisted native exception names/tuples or bare except."
+    }
+  ],
+  "independent_adversarial_cases": [
+    {
+      "id": "except-local-builtin-shadow",
+      "source": "def score(answer, entry):\n    if bool(answer) == bool(entry[\"answer\"]):\n        return 1\n    try:\n        return 0\n    except Exception as bool:\n        return 0\n",
+      "pre_fix_observed_verdict": "alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "unsupported evaluated condition: unverified call: bool; unverified call: bool",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "import-local-builtin-shadow",
+      "source": "def score(answer, entry):\n    if bool(answer) == bool(entry[\"answer\"]):\n        return 1\n    import builtins as bool\n    return 0\n",
+      "pre_fix_observed_verdict": "alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": null,
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "unsupported whole-function binding/control surface: Import",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "opaque-call-collision",
+      "source": "def score(answer, entry):\n    if answer.startswith(\"b\"):\n        if not answer.startswith(\"a\"):\n            return 1\n    return 0\n",
+      "pre_fix_observed_verdict": "no_alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "unsupported evaluated condition: unverified call: answer.startswith",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "mutation-stale-equality",
+      "source": "def score(answer, entry):\n    if answer != entry[\"answer\"]:\n        entry[\"answer\"] = answer\n        if answer == entry[\"answer\"]:\n            return 1\n    return 0\n",
+      "pre_fix_observed_verdict": "no_alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "assignment may mutate aliased input/reference",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "mutation-stale-reference-fold",
+      "source": "def score(answer, entry):\n    entry[\"answer\"] = \"\"\n    if not bool(entry[\"answer\"]):\n        return 1\n    return 0\n",
+      "pre_fix_observed_verdict": "no_alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "assignment may mutate aliased input/reference",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "valueless-annotation",
+      "source": "def score(answer, entry):\n    x: int\n    if x is None:\n        return 1\n    return 0\n",
+      "pre_fix_observed_verdict": "alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "valueless annotation does not assign a runtime value",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "raise-expression-effect",
+      "source": "def score(answer, entry):\n    try:\n        raise entry.update({\"answer\": \"\"})\n    except Exception:\n        if not bool(entry[\"answer\"]):\n            return 1\n    return 0\n",
+      "pre_fix_observed_verdict": "no_alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "explicit raise exception/cause evaluation is unsupported",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "except-type-expression-effect",
+      "source": "def score(answer, entry):\n    try:\n        raise\n    except (entry.update({\"answer\": \"\"}) or Exception):\n        if not bool(entry[\"answer\"]):\n            return 1\n    return 0\n",
+      "pre_fix_observed_verdict": "no_alarm",
+      "final_expected_verdict": "unknown",
+      "final_result": {
+        "verdict": "unknown",
+        "certificate": {
+          "proved_full_credit_paths": []
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": "exception handler type is effectful, shadowed, or unverified",
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    }
+  ],
+  "independent_controls": [
+    {
+      "id": "truthiness-alarm",
+      "expected_verdict": "alarm",
+      "result": {
+        "verdict": "alarm",
+        "certificate": {
+          "kind": "native_boolean_path_counterexample",
+          "candidate_class": "fresh nonempty non-Boolean normalized string",
+          "trusted_reference": "True",
+          "argument": "The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed."
+        },
+        "evidence": [
+          {
+            "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+            "required_truth": true,
+            "source_span": {
+              "line": 2,
+              "end_line": 2
+            }
+          },
+          {
+            "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+            "required_truth": true,
+            "source_span": {
+              "line": 2,
+              "end_line": 2
+            }
+          }
+        ],
+        "source_spans": [
+          {
+            "line": 3,
+            "end_line": 3
+          },
+          {
+            "line": 2,
+            "end_line": 2
+          },
+          {
+            "line": 2,
+            "end_line": 2
+          }
+        ],
+        "unsupported_reason": null,
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "normalized-equality-certificate",
+      "expected_verdict": "no_alarm",
+      "result": {
+        "verdict": "no_alarm",
+        "certificate": {
+          "kind": "all_normal_full_credit_paths_certified",
+          "full_credit_path_count": 1,
+          "paths": [
+            {
+              "kind": "boolean_normalized_equality_implication",
+              "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.",
+              "return_span": {
+                "line": 3,
+                "end_line": 3
+              },
+              "conditions": [
+                {
+                  "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                  "required_truth": true,
+                  "source_span": {
+                    "line": 2,
+                    "end_line": 2
+                  }
+                },
+                {
+                  "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                  "required_truth": true,
+                  "source_span": {
+                    "line": 2,
+                    "end_line": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+        },
+        "evidence": [],
+        "source_spans": [
+          {
+            "line": 3,
+            "end_line": 3
+          }
+        ],
+        "unsupported_reason": null,
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    },
+    {
+      "id": "legitimate-partial-credit",
+      "expected_verdict": "no_alarm",
+      "result": {
+        "verdict": "no_alarm",
+        "certificate": {
+          "kind": "all_normal_full_credit_paths_certified",
+          "full_credit_path_count": 0,
+          "paths": [],
+          "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+        },
+        "evidence": [],
+        "source_spans": [],
+        "unsupported_reason": null,
+        "method": "bounded-static-source-path-certificates-v1"
+      }
+    }
+  ],
+  "review_actions": {
+    "target_scorers_or_helpers_executed": false,
+    "primary_inputs_analyzed": false,
+    "primary_predictions_or_results_read": false,
+    "primary_detector_runs": 0,
+    "model_calls": 0,
+    "network_used": false,
+    "new_dependencies_installed": false,
+    "implementation_files_modified_by_reviewer": false,
+    "synthetic_detector_tests_executed": true
+  },
+  "residual_limits": [
+    "This is a bounded source review and synthetic regression audit, not a formal proof of all Python semantics. Freeze and interpret only within the explicit native input/reference/library boundary.",
+    "The custom checker implements a deliberately small theory. Numeric, complex, helper or loop Unknown outcomes do not establish a need for neural methods.",
+    "Semgrep no_alarm has only complete fixed-rule scan meaning; detector outputs cannot be equated to semantic certificates.",
+    "Both methods receive supplied reviewed specifications. Contract acquisition is not evaluated, and no LLM benefit, RL exploitation, wrapper fail-open or independent generalization claim follows.",
+    "The seven primary cases from five correlated families remain source-exposed development examples from one project.",
+    "Actual projected primary inputs and outcomes were deliberately not inspected during this implementation review; projection parity was assessed from code and protocol."
+  ],
+  "reviewed_files_sha256": {
+    "prepare_inputs.py": "32b7d1aef06f525a7aa76294a6aad36b46afd7687ed05466d9872890196561af",
+    "run_baselines.py": "211da806e4c9b092031652d54689a9d000f1dfa0d432dad8040bc8b64355e32a",
+    "test_study.py": "355bb8eaac02db7e2d98da705e61320b4a8e5a5fb66c652f3a304600c6f1fe5e",
+    "tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+    "tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+    "tools/test_semgrep_baseline.py": "ecdd607446186c788540a7b44902293c6176026a13255e50e41970ce22d2ff51",
+    "tools/test_symbolic_baseline.py": "2a2653686e307048ee77d1668388f7464f20d7239a77f99c6167720e2151181b",
+    "tools/tool-release.json": "ef27db9b8b76468126e040ebb188ac9a941158f960265ad7b7dc944378d54005",
+    "protocol/contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+    "protocol/evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab",
+    "protocol/contracts-evaluation-freeze.json": "b2a688633864a35e702b9ab0536a5ddf08a7f54d44e20f3171df02d1bfec7e0e",
+    "development/semgrep/METHOD.md": "be430f51918589a68f8b81fcfe422e563beaddc3b219f545f536f94f8e0eb8f8",
+    "development/symbolic/README.md": "2343ce68563a48175910685a8521a78192ce167f5ab4d352bfd9610a0ba646ae"
+  }
+}

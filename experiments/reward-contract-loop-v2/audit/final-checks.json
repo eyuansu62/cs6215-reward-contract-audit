@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "regression_test_methods_passed": 33,
+  "independent_extra_synthetics": 12,
+  "compilation_passed": true,
+  "method_freeze_sha256": "e6db263e27555a1b68aa15389e94ce6f1cb4468ddf6d2cc6b88b3489fccb49da",
+  "primary_native_scorer_executions": 6,
+  "witness_contract_rows": 18,
+  "nonmissing_static_return_checks": 12,
+  "missing_contract_Unknown_checks": 6,
+  "global_static_rows": 6,
+  "all_obligation_attributions_match": true,
+  "actual_contract_and_consumer_input_fingerprints_differ": true,
+  "omitted_equality_added_or_reported": false,
+  "old_AST_and_old_bridge_files_modified": false,
+  "new_minimal_IR_and_Boolean_obligation_consumer": true,
+  "previous_payloads_preserved": 2805,
+  "new_LLM_extraction_requests": 0,
+  "new_semgrep_scans": 0,
+  "Semgrep_finding_filtering": false,
+  "report_sha256": "d0cd423970e561eccf209ab3678cd892df890a663bd6800f8b9a185a11a50fb5",
+  "readme_sha256": "9d768b44bd5f45c84e2f671bf793872da084daa5996b58767e76a72822a928d3",
+  "limits": [
+    "one known development bug family",
+    "concrete and static witness paths share predicate code",
+    "helpers, fixed configuration, unsupported operations/types remainUnknown",
+    "v1 nested formatter tag retained; topmethodv2",
+    "no model-gain, generalization or human-effort claim"
+  ]
+}

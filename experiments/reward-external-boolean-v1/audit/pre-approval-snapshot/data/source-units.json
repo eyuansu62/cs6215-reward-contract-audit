@@ -1,0 +1,133 @@
+{
+  "status": "prepared_candidate_dataset_scope_approval_pending",
+  "units": [
+    {
+      "id": "H01",
+      "task_id": "T01",
+      "entry_name": "exact_match",
+      "source": "def exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if gold.strip() == pred.strip() else 0\n",
+      "score_source": "def exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if gold.strip() == pred.strip() else 0\n",
+      "all_source": "def exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if gold.strip() == pred.strip() else 0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true,
+      "native_binding": {
+        "candidate": {
+          "parameter": "pred",
+          "field": null
+        },
+        "reference": {
+          "parameter": "gold",
+          "field": null
+        }
+      },
+      "original_source_file": "experiments/reward-external-boolean-v1/collection/scalar_evaluators/stanford-crfm__helm/source/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "original_source_sha256": "fe73a9bd5cc3224b05590063dfec2c46453a10ea31c17688cb63f08dd745c231",
+      "definitions": [
+        {
+          "name": "exact_match",
+          "source": "def exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if gold.strip() == pred.strip() else 0\n",
+          "ast_sha256": "a5bc32db11274c237befe591939375ffc154d6f42827b1457db92c45f33eac68",
+          "source_lines": [
+            67,
+            71
+          ]
+        }
+      ],
+      "native_purpose": "Evaluation scalar metric registered for CivilComments, not an RL training reward",
+      "source_scope": "Metric input after native completion.text.strip; gold is CivilComments canonical annotation label. No output preprocessing added by study."
+    },
+    {
+      "id": "H02",
+      "task_id": "T01",
+      "entry_name": "quasi_exact_match",
+      "source": "def normalize_text(text: str, should_remove_articles: bool = True) -> str:\n    \"\"\"Lower text and remove punctuation, articles and extra whitespace.\n    Copied from the [QuAC](http://quac.ai/) evaluation script found at\n    https://s3.amazonaws.com/my89public/quac/scorer.py\"\"\"\n\n    def remove_articles(text: str) -> str:\n        return re.sub(r\"\\b(a|an|the)\\b\", \" \", text)\n\n    def white_space_fix(text: str) -> str:\n        return \" \".join(text.split())\n\n    def remove_punc(text: str) -> str:\n        exclude = set(string.punctuation)\n        return \"\".join(ch for ch in text if ch not in exclude)\n\n    def lower(text: str) -> str:\n        return text.lower()\n\n    normalized_text = remove_punc(lower(text))\n    if should_remove_articles:\n        normalized_text = remove_articles(normalized_text)\n    return white_space_fix(normalized_text)\n\ndef quasi_exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if normalize_text(gold) == normalize_text(pred) else 0\n",
+      "score_source": "def quasi_exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if normalize_text(gold) == normalize_text(pred) else 0\n",
+      "all_source": "def normalize_text(text: str, should_remove_articles: bool = True) -> str:\n    \"\"\"Lower text and remove punctuation, articles and extra whitespace.\n    Copied from the [QuAC](http://quac.ai/) evaluation script found at\n    https://s3.amazonaws.com/my89public/quac/scorer.py\"\"\"\n\n    def remove_articles(text: str) -> str:\n        return re.sub(r\"\\b(a|an|the)\\b\", \" \", text)\n\n    def white_space_fix(text: str) -> str:\n        return \" \".join(text.split())\n\n    def remove_punc(text: str) -> str:\n        exclude = set(string.punctuation)\n        return \"\".join(ch for ch in text if ch not in exclude)\n\n    def lower(text: str) -> str:\n        return text.lower()\n\n    normalized_text = remove_punc(lower(text))\n    if should_remove_articles:\n        normalized_text = remove_articles(normalized_text)\n    return white_space_fix(normalized_text)\n\ndef quasi_exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if normalize_text(gold) == normalize_text(pred) else 0\n",
+      "helpers": [
+        {
+          "name": "normalize_text",
+          "source": "def normalize_text(text: str, should_remove_articles: bool = True) -> str:\n    \"\"\"Lower text and remove punctuation, articles and extra whitespace.\n    Copied from the [QuAC](http://quac.ai/) evaluation script found at\n    https://s3.amazonaws.com/my89public/quac/scorer.py\"\"\"\n\n    def remove_articles(text: str) -> str:\n        return re.sub(r\"\\b(a|an|the)\\b\", \" \", text)\n\n    def white_space_fix(text: str) -> str:\n        return \" \".join(text.split())\n\n    def remove_punc(text: str) -> str:\n        exclude = set(string.punctuation)\n        return \"\".join(ch for ch in text if ch not in exclude)\n\n    def lower(text: str) -> str:\n        return text.lower()\n\n    normalized_text = remove_punc(lower(text))\n    if should_remove_articles:\n        normalized_text = remove_articles(normalized_text)\n    return white_space_fix(normalized_text)\n"
+        }
+      ],
+      "stdlib_bindings": {
+        "re": "re",
+        "string": "string"
+      },
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true,
+      "native_binding": {
+        "candidate": {
+          "parameter": "pred",
+          "field": null
+        },
+        "reference": {
+          "parameter": "gold",
+          "field": null
+        }
+      },
+      "original_source_file": "experiments/reward-external-boolean-v1/collection/scalar_evaluators/stanford-crfm__helm/source/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "original_source_sha256": "fe73a9bd5cc3224b05590063dfec2c46453a10ea31c17688cb63f08dd745c231",
+      "definitions": [
+        {
+          "name": "normalize_text",
+          "source": "def normalize_text(text: str, should_remove_articles: bool = True) -> str:\n    \"\"\"Lower text and remove punctuation, articles and extra whitespace.\n    Copied from the [QuAC](http://quac.ai/) evaluation script found at\n    https://s3.amazonaws.com/my89public/quac/scorer.py\"\"\"\n\n    def remove_articles(text: str) -> str:\n        return re.sub(r\"\\b(a|an|the)\\b\", \" \", text)\n\n    def white_space_fix(text: str) -> str:\n        return \" \".join(text.split())\n\n    def remove_punc(text: str) -> str:\n        exclude = set(string.punctuation)\n        return \"\".join(ch for ch in text if ch not in exclude)\n\n    def lower(text: str) -> str:\n        return text.lower()\n\n    normalized_text = remove_punc(lower(text))\n    if should_remove_articles:\n        normalized_text = remove_articles(normalized_text)\n    return white_space_fix(normalized_text)\n",
+          "ast_sha256": "a04241aa44591dc2fd8f5e1587c351be54f141ae97437c09a9fbf2ffa1f956bd",
+          "source_lines": [
+            43,
+            64
+          ]
+        },
+        {
+          "name": "quasi_exact_match",
+          "source": "def quasi_exact_match(gold: str, pred: str) -> float:\n    if not pred:\n        return 0\n\n    return 1 if normalize_text(gold) == normalize_text(pred) else 0\n",
+          "ast_sha256": "b34f1b067d30cc9f4695c994d2465ea704c86491b52569d374e66e88b7c5034d",
+          "source_lines": [
+            74,
+            78
+          ]
+        }
+      ],
+      "native_purpose": "Evaluation scalar metric registered for CivilComments, not an RL training reward",
+      "source_scope": "Metric input after native completion.text.strip; gold is CivilComments canonical annotation label. No output preprocessing added by study."
+    },
+    {
+      "id": "H03",
+      "task_id": "T01",
+      "entry_name": "prefix_exact_match",
+      "source": "def prefix_exact_match(gold: str, pred: str) -> float:\n    \"\"\"\n    The `prefix_exact_match` metric is particularly useful in the zero-shot setting, where the model is\n    not given examples of the expected outputs and tends to output more tokens than it should.\n\n    For example, for this zero-shot prompt from BoolQ,\n\n    Passage: Elmendorf Air Force Base (IATA: EDF, ICAO: PAED, FAA LID: EDF) is a United States military facility\n    in Anchorage, the largest city in Alaska. Originally known as Elmendorf Field, it became Elmendorf Air Force\n    Base after World War II, and in 2010 it merged with nearby Fort Richardson to form Joint Base Elmendorf-Richardson.\n    Question: Is there an air force base in anchorage alaska?\n    Answer:\n\n    the model could output up to `max_tokens` number of tokens \"Yes, Elmendorf\" instead of just \"Yes\".\n    \"\"\"\n    if not pred:\n        return 0\n\n    return 1 if pred.strip().startswith(gold.strip()) else 0\n",
+      "score_source": "def prefix_exact_match(gold: str, pred: str) -> float:\n    \"\"\"\n    The `prefix_exact_match` metric is particularly useful in the zero-shot setting, where the model is\n    not given examples of the expected outputs and tends to output more tokens than it should.\n\n    For example, for this zero-shot prompt from BoolQ,\n\n    Passage: Elmendorf Air Force Base (IATA: EDF, ICAO: PAED, FAA LID: EDF) is a United States military facility\n    in Anchorage, the largest city in Alaska. Originally known as Elmendorf Field, it became Elmendorf Air Force\n    Base after World War II, and in 2010 it merged with nearby Fort Richardson to form Joint Base Elmendorf-Richardson.\n    Question: Is there an air force base in anchorage alaska?\n    Answer:\n\n    the model could output up to `max_tokens` number of tokens \"Yes, Elmendorf\" instead of just \"Yes\".\n    \"\"\"\n    if not pred:\n        return 0\n\n    return 1 if pred.strip().startswith(gold.strip()) else 0\n",
+      "all_source": "def prefix_exact_match(gold: str, pred: str) -> float:\n    \"\"\"\n    The `prefix_exact_match` metric is particularly useful in the zero-shot setting, where the model is\n    not given examples of the expected outputs and tends to output more tokens than it should.\n\n    For example, for this zero-shot prompt from BoolQ,\n\n    Passage: Elmendorf Air Force Base (IATA: EDF, ICAO: PAED, FAA LID: EDF) is a United States military facility\n    in Anchorage, the largest city in Alaska. Originally known as Elmendorf Field, it became Elmendorf Air Force\n    Base after World War II, and in 2010 it merged with nearby Fort Richardson to form Joint Base Elmendorf-Richardson.\n    Question: Is there an air force base in anchorage alaska?\n    Answer:\n\n    the model could output up to `max_tokens` number of tokens \"Yes, Elmendorf\" instead of just \"Yes\".\n    \"\"\"\n    if not pred:\n        return 0\n\n    return 1 if pred.strip().startswith(gold.strip()) else 0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true,
+      "native_binding": {
+        "candidate": {
+          "parameter": "pred",
+          "field": null
+        },
+        "reference": {
+          "parameter": "gold",
+          "field": null
+        }
+      },
+      "original_source_file": "experiments/reward-external-boolean-v1/collection/scalar_evaluators/stanford-crfm__helm/source/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "original_source_sha256": "fe73a9bd5cc3224b05590063dfec2c46453a10ea31c17688cb63f08dd745c231",
+      "definitions": [
+        {
+          "name": "prefix_exact_match",
+          "source": "def prefix_exact_match(gold: str, pred: str) -> float:\n    \"\"\"\n    The `prefix_exact_match` metric is particularly useful in the zero-shot setting, where the model is\n    not given examples of the expected outputs and tends to output more tokens than it should.\n\n    For example, for this zero-shot prompt from BoolQ,\n\n    Passage: Elmendorf Air Force Base (IATA: EDF, ICAO: PAED, FAA LID: EDF) is a United States military facility\n    in Anchorage, the largest city in Alaska. Originally known as Elmendorf Field, it became Elmendorf Air Force\n    Base after World War II, and in 2010 it merged with nearby Fort Richardson to form Joint Base Elmendorf-Richardson.\n    Question: Is there an air force base in anchorage alaska?\n    Answer:\n\n    the model could output up to `max_tokens` number of tokens \"Yes, Elmendorf\" instead of just \"Yes\".\n    \"\"\"\n    if not pred:\n        return 0\n\n    return 1 if pred.strip().startswith(gold.strip()) else 0\n",
+          "ast_sha256": "f72fbfb9d682ce292c3d76cfdfa447d281ee92383d34eeea426e7c35087275b4",
+          "source_lines": [
+            92,
+            110
+          ]
+        }
+      ],
+      "native_purpose": "Evaluation scalar metric registered for CivilComments, not an RL training reward",
+      "source_scope": "Metric input after native completion.text.strip; gold is CivilComments canonical annotation label. No output preprocessing added by study."
+    }
+  ]
+}

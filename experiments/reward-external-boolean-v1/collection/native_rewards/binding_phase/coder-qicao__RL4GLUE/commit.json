@@ -1,0 +1,61 @@
+{
+  "sha": "2ad8bc53f663797bef091db108175fc8651cf538",
+  "node_id": "C_kwDOPFwXT9oAKDJhZDhiYzUzZjY2Mzc5N2JlZjA5MWRiMTA4MTc1ZmM4NjUxY2Y1Mzg",
+  "commit": {
+    "author": {
+      "name": "coder-qicao",
+      "email": "[email omitted]",
+      "date": "2025-07-02T20:08:27Z"
+    },
+    "committer": {
+      "name": "coder-qicao",
+      "email": "[email omitted]",
+      "date": "2025-07-02T20:08:27Z"
+    },
+    "message": "add training data",
+    "tree": {
+      "sha": "1f48cb8b87100ded2729124faad040687cbc5b7b",
+      "url": "https://api.github.com/repos/coder-qicao/RL4GLUE/git/trees/1f48cb8b87100ded2729124faad040687cbc5b7b"
+    },
+    "url": "https://api.github.com/repos/coder-qicao/RL4GLUE/git/commits/2ad8bc53f663797bef091db108175fc8651cf538",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/coder-qicao/RL4GLUE/commits/2ad8bc53f663797bef091db108175fc8651cf538",
+  "html_url": "https://github.com/coder-qicao/RL4GLUE/commit/2ad8bc53f663797bef091db108175fc8651cf538",
+  "comments_url": "https://api.github.com/repos/coder-qicao/RL4GLUE/commits/2ad8bc53f663797bef091db108175fc8651cf538/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "3f569556c7c0236e1fe01edb14aa4867f1f5584c",
+      "url": "https://api.github.com/repos/coder-qicao/RL4GLUE/commits/3f569556c7c0236e1fe01edb14aa4867f1f5584c",
+      "html_url": "https://github.com/coder-qicao/RL4GLUE/commit/3f569556c7c0236e1fe01edb14aa4867f1f5584c"
+    }
+  ],
+  "stats": {
+    "total": 32,
+    "additions": 32,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "f70d58cc8280fae9d01711879ee927ffed1cc4b6",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 32,
+      "deletions": 0,
+      "changes": 32,
+      "blob_url": "https://github.com/coder-qicao/RL4GLUE/blob/2ad8bc53f663797bef091db108175fc8651cf538/README.md",
+      "raw_url": "https://github.com/coder-qicao/RL4GLUE/raw/2ad8bc53f663797bef091db108175fc8651cf538/README.md",
+      "contents_url": "https://api.github.com/repos/coder-qicao/RL4GLUE/contents/README.md?ref=2ad8bc53f663797bef091db108175fc8651cf538",
+      "patch": "@@ -111,4 +111,36 @@ bash fewshot.sh\n \n # Run Zero-Shot Prompting\n bash inference.sh\n+```\n+\n+## Training Data\n+The preprocessed training data for GLUE and SuperGLUE tasks used in this project is available for download:\n+\n+[\ud83d\udd17 Download Training Data](https://drive.google.com/file/d/1-BMnA9DofZ-Tx-FS-LerCslwV1uG18Ir/view?usp=sharing)\n+\n+### Data Structure\n+After downloading and unzipping the data, place it in the `data/` directory with the following structure:\n+```bash\n+data/\n+\u251c\u2500\u2500 GLUE/\n+\u2502 \u251c\u2500\u2500 AX/\n+\u2502 \u251c\u2500\u2500 CoLA/\n+\u2502 \u251c\u2500\u2500 MNLI-m/\n+\u2502 \u251c\u2500\u2500 MNLI-mm/\n+\u2502 \u251c\u2500\u2500 MRPC/\n+\u2502 \u251c\u2500\u2500 QNLI/\n+\u2502 \u251c\u2500\u2500 QQP/\n+\u2502 \u251c\u2500\u2500 RTE/\n+\u2502 \u251c\u2500\u2500 SST/\n+\u2502 \u251c\u2500\u2500 STS-B/\n+\u2502 \u2514\u2500\u2500 WNLI/\n+\u2514\u2500\u2500 SuperGLUE/\n+\u251c\u2500\u2500 BoolQ/\n+\u251c\u2500\u2500 CB/\n+\u251c\u2500\u2500 COPA/\n+\u251c\u2500\u2500 MultiRC/\n+\u251c\u2500\u2500 ReCoRD/\n+\u251c\u2500\u2500 RTE/\n+\u251c\u2500\u2500 WiC/\n+\u2514\u2500\u2500 WSC/\n ```\n\\ No newline at end of file"
+    }
+  ]
+}

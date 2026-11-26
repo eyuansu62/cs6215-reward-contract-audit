@@ -1,0 +1,55 @@
+{
+  "packet_kind": "blind_question_description_only",
+  "unit": "task-family question template, not a randomly generated concrete instance",
+  "instructions": "Infer task-level answer semantics, full-credit necessary conditions, explicitly stated answer format and any explicitly stated normalization. Do not solve placeholders. Mark absent reward thresholds, partial-credit policy and normalization as unspecified rather than inventing scorer behavior. This packet contains no scorer, gold/reference answers, issue/repair status or model output.",
+  "tasks": [
+    {
+      "task_id": "T01",
+      "question_description": "Two strings are isomorphic if the characters in one string can be replaced to get the second string.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters.\n\nNo two characters may map to the same character, but a character may map to itself.\n\nReturn True if the following two strings are isomorphic, or False otherwise:\n{s} {t}\n",
+      "placeholder_notes": {
+        "s": "instance-specific first string",
+        "t": "instance-specific second string"
+      }
+    },
+    {
+      "task_id": "T02",
+      "question_description": "Given two strings representing a ransom note and a magazine, return True if you can construct the ransom note using the letters in the magazine, and False otherwise.\n\nEach letter in the magazine string can only be used once in your ransom note.\n\nRansom note: {ransom_note}\nMagazine: {magazine}\n",
+      "placeholder_notes": {
+        "ransom_note": "instance-specific ransom-note string",
+        "magazine": "instance-specific available-letter string"
+      }
+    },
+    {
+      "task_id": "T03",
+      "question_description": "There are a total of {num_courses} courses you have to take, labeled from 0 to {last_index}.\n\nYou are given the following list of prerequisites, where prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i:\n{prerequisites}\n\nReturn True if you can finish all courses considering the prerequisites, or False otherwise.\n",
+      "placeholder_notes": {
+        "num_courses": "instance-specific total number of courses",
+        "last_index": "num_courses - 1",
+        "prerequisites": "instance-specific list of course-index prerequisite pairs"
+      }
+    },
+    {
+      "task_id": "T04",
+      "question_description": "Count how many prime numbers there are between {start} and {end} (inclusive) ?",
+      "placeholder_notes": {
+        "start": "instance-specific interval start integer",
+        "end": "instance-specific interval end integer, not below start"
+      }
+    },
+    {
+      "task_id": "T05",
+      "question_description": "Sort these numbers in {direction} order: {numbers}\nPlease follow the instruction below:\n## 1. Let all your answers be a list of numbers. Instead of reporting your answer as -69, -13, 1, 7, 11, 43, 59, 61, use ['-69', '-13', '1', '7', '11', '43', '59', '61'] instead\n## 2. Convert all numbers in the square brackets as strings. For example, ['-69', '-13', '1', '7', '11', '43', '59', '61']\n",
+      "placeholder_notes": {
+        "direction": "instance-specific 'ascending' or 'descending'",
+        "numbers": "instance-specific comma-separated input numbers"
+      }
+    },
+    {
+      "task_id": "T06",
+      "question_description": "Simplify the fraction {question_fraction} to its lowest terms. Give only the simplified fraction as your final answer.",
+      "placeholder_notes": {
+        "question_fraction": "instance-specific input fraction in its displayed representation"
+      }
+    }
+  ]
+}

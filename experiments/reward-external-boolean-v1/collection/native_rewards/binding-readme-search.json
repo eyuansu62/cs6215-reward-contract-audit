@@ -1,0 +1,265 @@
+{
+  "created_utc": "2026-11-09T02:47:04.743757+00:00",
+  "searches": [
+    {
+      "query": "boolean_expressions grpo in:readme",
+      "total_count": 6,
+      "items": [
+        {
+          "repo": "kbwal/rl-next-tokens",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "lew624/novelty_rl",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "Wugz01/Daily-paper",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "zzx-peter/Multiple-Solution-TTRL",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "umscai/portfolio",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "Heisenberg22077/obito",
+          "description": null,
+          "default_branch": "genspark_ai_developer"
+        }
+      ]
+    },
+    {
+      "query": "boolq reward in:readme language:Python",
+      "total_count": 89,
+      "items": [
+        {
+          "repo": "babylm/evaluation-pipeline-2025",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "aws/nova-forge-sdk",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "Shekswess/tiny-reasoning-language-model",
+          "description": "Code repository dedicated to experimenting and research with tiny reasoning language model",
+          "default_branch": "main"
+        },
+        {
+          "repo": "nitinvetcha/DeGAML-LLM",
+          "description": "DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for Large Language Models",
+          "default_branch": "main"
+        },
+        {
+          "repo": "arnabgho/rlcd-lite",
+          "description": "Simplified RL for Calibrated Decisions: parallel constrained JSON decoding + GRPO with proper-scoring-rule rewards + calibration eval (Jev/RLCD reconstruction)",
+          "default_branch": "main"
+        },
+        {
+          "repo": "anthony-maio/eve-rlcd",
+          "description": "code",
+          "default_branch": "main"
+        },
+        {
+          "repo": "he-jev/laya",
+          "description": "open source jev by laya",
+          "default_branch": "main"
+        },
+        {
+          "repo": "hwfengcs/any2jev",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "notmyname16/MPDistil",
+          "description": "Source code for MPDistil",
+          "default_branch": "main"
+        },
+        {
+          "repo": "coder-qicao/RL4GLUE",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "SPAR-Self-Forecasting/gemma2-boolq-calibration",
+          "description": "RL training of Gemma 2 2B IT for calibrated YES/NO probability estimates on BoolQ using GRPO",
+          "default_branch": "main"
+        },
+        {
+          "repo": "fledor/self-align-to-explain",
+          "description": "Self-Align to Explain: Comparing Post-Training Methods for Counterfactual Generation",
+          "default_branch": "main"
+        },
+        {
+          "repo": "rlisml/latentharness",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "dragondoodler222/2881r-final-project",
+          "description": "An experiment on adversarial and incentivized obfuscation of interpretability.",
+          "default_branch": "main"
+        },
+        {
+          "repo": "dsdanielpark/all-about-llm",
+          "description": "dsdanielpark's curation and categorization of resources on large language models, along with documentation.",
+          "default_branch": "main"
+        }
+      ]
+    },
+    {
+      "query": "bbh RLVR in:readme language:Python",
+      "total_count": 20,
+      "items": [
+        {
+          "repo": "allenai/open-instruct",
+          "description": "AllenAI's post-training codebase",
+          "default_branch": "main"
+        },
+        {
+          "repo": "InternScience/GraphGen",
+          "description": "GraphGen: Enhancing Supervised Fine-Tuning for LLMs with Knowledge-Driven Synthetic Data Generation",
+          "default_branch": "main"
+        },
+        {
+          "repo": "Sphere-AI-Lab/PEFT-Arena",
+          "description": "Official repository of PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective",
+          "default_branch": "release"
+        },
+        {
+          "repo": "rockmatrix-ai/EdgeRock",
+          "description": "EdgeRock: Strong Reasoning at Constant Memory. Multimodal models with O(N) generation and O(1) persistent history. Inference and evaluation code.",
+          "default_branch": "main"
+        },
+        {
+          "repo": "jialeuuz/askbench",
+          "description": "AskBench: LLM question-asking/clarification benchmark & dataset with evaluation and training code (paper: arXiv 2602.11199).",
+          "default_branch": "main"
+        },
+        {
+          "repo": "jmanhype/vgee-verification-gated-epistemic-exploration",
+          "description": "PyTorch implementation of Verification-Gated Epistemic Exploration (VGEE) \u2014 Conditional KL-Regularizer for RLVR training. Generated by autonomous research pipeline: investigate \u2192 denario \u2192 paper2code.",
+          "default_branch": "main"
+        },
+        {
+          "repo": "YuweiYin/IA",
+          "description": "Improving Language Models with Intentional Analysis",
+          "default_branch": "master"
+        },
+        {
+          "repo": "haolpku/DataFlex-RL-Anonymous",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "michaeljiang0530/CERA-MoA",
+          "description": "Official code release for **CERA-MoA** (Co-Evolving Routing mechanisms with continually learning Agents for Mixture-of-Agents).",
+          "default_branch": "main"
+        },
+        {
+          "repo": "teddytennant/lrd-reason",
+          "description": "Latent Recurrent Diffusion reasoning hybrid \u2014 frozen LLM backbone + trainable recurrent state + latent rectified-flow refinement, trained via three-stage RLVR curriculum",
+          "default_branch": "main"
+        },
+        {
+          "repo": "tue09/awesome-reasoning-generalization",
+          "description": "Awesome paper list for reasoning generalization in LLMs.",
+          "default_branch": "main"
+        },
+        {
+          "repo": "VEraTimes/SiRAS",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "rubenrosales/graphgen",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "mESmaC/mcl4-coe-ncm",
+          "description": "MCL4-COE + Next-Concept Modeling (NCM): Markov Chain Local-4 Attention, Single-Softmax Cognitive Operator Ensemble, Donor-Anchored NCM Grafting, and 180B NVFP4 Mitotic JIT RL",
+          "default_branch": "main"
+        },
+        {
+          "repo": "jackwarren430/twin-models",
+          "description": null,
+          "default_branch": "main"
+        }
+      ]
+    },
+    {
+      "query": "boolean_expressions reward in:readme language:Python",
+      "total_count": 11,
+      "items": [
+        {
+          "repo": "amazon-science/EvoMAS",
+          "description": "Evolutionary Generation of Multi-Agent Systems; Yuntong Hu, Yuting Zhang, Matthew Trager, Yi Zhang, Shuo Yang, Wei Xia, Stefano Soatto, ICML 2026",
+          "default_branch": "main"
+        },
+        {
+          "repo": "Thedatababbler/codename_ayumi",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "hartvigsen-group/benchalign",
+          "description": "Codebase for Benchmark Alignment (NeurIPS'26)",
+          "default_branch": "main"
+        },
+        {
+          "repo": "weels007/bounty-board",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "kbwal/rl-next-tokens",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "ramonpereira/FD-BLP-Plan",
+          "description": "Factored Deep BLP Planner (FD-BLP-Plan)",
+          "default_branch": "master"
+        },
+        {
+          "repo": "albert-jin/TRACE-MAS",
+          "description": "The official implementation of paper: \"TRACE-MAS\"",
+          "default_branch": "main"
+        },
+        {
+          "repo": "zzx-peter/Multiple-Solution-TTRL",
+          "description": null,
+          "default_branch": "main"
+        },
+        {
+          "repo": "miquelramirez/FD-SAT-Plan",
+          "description": "Factored Deep SAT Planner (FD-SAT-Plan)",
+          "default_branch": "master"
+        },
+        {
+          "repo": "nik-hz/perpetual-research-plugin",
+          "description": "Auto research mode for claude code. Specifically designed to take care of overnight LLM finetuning runs, restart runs and iterate on research hypotheses.",
+          "default_branch": "main"
+        },
+        {
+          "repo": "ecallen21/Stat-Reference-Code",
+          "description": null,
+          "default_branch": "main"
+        }
+      ]
+    }
+  ],
+  "metadata_only": true
+}

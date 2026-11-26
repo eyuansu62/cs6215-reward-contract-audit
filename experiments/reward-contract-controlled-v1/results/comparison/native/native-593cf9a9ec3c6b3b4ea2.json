@@ -1,0 +1,19 @@
+{
+  "execution_id": "native-593cf9a9ec3c6b3b4ea2",
+  "request": {
+    "program_id": "truthiness",
+    "answer": "banana",
+    "reference": "True",
+    "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16"
+  },
+  "argv": [
+    "$HOMEBREW/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "$ARTIFACT_ROOT/experiments/reward-contract-controlled-v1/native_worker.py"
+  ],
+  "timeout_seconds": 8,
+  "returncode": 0,
+  "stdout": "1.0\n",
+  "stderr": ""
+}

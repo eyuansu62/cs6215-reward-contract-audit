@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-11-09T02:43:43.828275+00:00",
+  "authorization": "User/root now permits only explicit source-grounded parameter/reference-field binding. No source rewrite, candidate output-format conversion, label relabeling or analyzer AST feature extension.",
+  "original_phase1_preserved": true,
+  "new_source_read_budget": 12,
+  "selection_gate": "Real bare True/False task use with independent numeric reward callback and grounded native invocation/data schema; helper semantics unsupported may be Unknown.",
+  "no_analyzer_or_model_outcomes_used": true
+}

@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "main",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "reasoning_gym/arithmetic/decimal_arithmetic.py",
+  "sha256": "e56416e0c10bb55f46961e93ef55826f419d1a0186ff75b6bb367d098dcca245",
+  "git_blob_sha1": "93dc0c8a3cc7d168d03f06ea83de97dfe8c4f973",
+  "bytes": 10040,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/decimal_arithmetic.py",
+  "local_path": "upstream/main/reasoning_gym/arithmetic/decimal_arithmetic.py",
+  "fetched_utc": "2026-11-08T07:29:30.168388+00:00",
+  "git_blob_verified": true
+}

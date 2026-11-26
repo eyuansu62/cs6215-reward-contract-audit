@@ -1,0 +1,53 @@
+{
+  "labels": [
+    {
+      "id": "diag-bool-truthiness",
+      "unit_id": "a9766b3bd64ff7201e7207aa401e07ace3f15d3e2c9e5fa14d1b4e2ce5c9a488",
+      "expected_violation": true,
+      "rationale": "Opposite nonempty Boolean strings have equal truthiness and receive full reward."
+    },
+    {
+      "id": "diag-bool-semantic-guard",
+      "unit_id": "6e6438a039ed775b6e09b537c5d262e67afee637cf4b5ea090324e3a1812e1db",
+      "expected_violation": false,
+      "rationale": "Every full reward is dominated by actual normalized Boolean equality; truthiness test is redundant."
+    },
+    {
+      "id": "diag-dead-truthiness",
+      "unit_id": "d5a9c747dca03e4f48010d948886b673656f4a9be0c179f25d2dc6ab29bf4c7a",
+      "expected_violation": false,
+      "rationale": "The only full return is inside a constant-false branch."
+    },
+    {
+      "id": "diag-finite-adjacent-guard",
+      "unit_id": "d3703523ac6dd95cd6307242d4a82c6d1d5496a69ddf71c50ed2577a9e12158d",
+      "expected_violation": false,
+      "rationale": "A nonfinite parsed candidate gives nonfinite distance to a trusted finite reference and returns zero before clamp."
+    },
+    {
+      "id": "diag-finite-nonadjacent-guard",
+      "unit_id": "af872225da126dca2bfa6dca3c37753b19b680880e9c03386cedbaa07a338d34",
+      "expected_violation": false,
+      "rationale": "Same finite guard dominates the clamp; an unrelated assignment does not invalidate it."
+    },
+    {
+      "id": "diag-finite-rebound-guard",
+      "unit_id": "0b16f1695dcf5783fc4d8f2c69a90c9ca2148a6c83ea90c408f9fe43fdf8e769",
+      "expected_violation": true,
+      "rationale": "The guard checks constant zero; distance is then replaced by candidate-derived NaN before clamp. Invalid NaN candidate can receive full reward."
+    },
+    {
+      "id": "diag-finite-else-full",
+      "unit_id": "d389f17ef2236e855f295d711e3490dc627d19278e33f885e21fe3de7d1d980c",
+      "expected_violation": true,
+      "rationale": "Nonfinite candidate takes the unguarded final full-reward return; guarding only the finite clamp is insufficient."
+    },
+    {
+      "id": "diag-legitimate-partial",
+      "unit_id": "7f48ac3dad45cf2a4bafb3cbc29613c7a6b0ee9436c3931f22027a6cf69d782c",
+      "expected_violation": false,
+      "rationale": "This one-sided full-credit contract is never violated because no path can return full reward. This is not a completeness or useful-reward guarantee."
+    }
+  ],
+  "separate_from_primary": true
+}

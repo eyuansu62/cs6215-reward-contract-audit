@@ -1,0 +1,33 @@
+{
+  "scope": "Minimal versioned Boolean obligation interface for the existing one-bug development case. Preserve all prior frozen source/results in place.",
+  "regression": "v1 proves correct and omitted-equality contracts compile to identical inputs with equality reintroduced. New compiler must retain exactly the supplied obligations.",
+  "obligations": ["valid_boolean_token", "equals_reference"],
+  "contract_shape": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": ["strip", "lower"],
+    "full_credit_threshold": 1.0,
+    "obligations": ["valid_boolean_token", "equals_reference"]
+  },
+  "missing_or_unrepresentable": "Unknown, explicit reason. No inference from answer_kind, tokens or free-text clauses; no hidden obligation defaults. Empty/unknown/duplicate obligations rejected.",
+  "static_consumer": "Reuse hash-pinned old AST/Term/path collection/native Boolean semantics through a narrow subclass/adapter. Evaluate and certify each active obligation separately; attach obligation ID and source-derived witness. Do not add source operations, loops, numeric, helper, SDK or library semantics. Counterexample absence cannot prove safety.",
+  "witness_validation": "Separate concrete oracle checks the same six known input/return observations by active obligation. Where supported, static path witness attribution evaluates only old Term models without executing source. Do not pass reward observations/gold labels to global static analyzer.",
+  "semgrep": "Preserve/refer to v1 source-pattern results as unchanged baseline. Do not delete or contract-filter native findings to manufacture sensitivity, and do not relabel heuristics as obligation proofs.",
+  "case": "Same #544 original and pinned PR561 proposal, opposite False/True, banana/True, exact True/True only. One known development bug family; no new independent dataset or LLM extraction requests.",
+  "acceptance": [
+    "Correct and omitted-equality compiled contracts and actual consumer inputs differ solely by explicit obligation list.",
+    "Original False/True at reward1: equals_reference violation under full contract, no violation under valid-token-only contract.",
+    "Original banana/True at reward1: validity violation under both contracts; under full contract equality also false.",
+    "Patch returns0 on wrong/invalid inputs: no full-credit obligation violated, even if predicate itself false.",
+    "Correct True/True returns1 and violates neither obligation.",
+    "Missing contract -> explicit Unknown; whole-source weak contract may still Alarm from invalid token.",
+    "No inactive obligation evaluated or emitted as a required/violated condition; unknown cases stay Unknown.",
+    "All original freezes/manifests/archives preserved; regressions, independent review, frozen rerun and obligation-level tables retained."
+  ],
+  "no_new_dependencies": true,
+  "no_other_features": true
+}

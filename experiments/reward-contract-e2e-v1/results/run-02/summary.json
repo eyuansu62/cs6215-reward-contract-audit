@@ -1,0 +1,1741 @@
+{
+  "passed": true,
+  "method_freeze_sha256": "ea5e8da2c74637bea061938cdf3c3dc8ea343101dc1f9e44c103d772a1608cd0",
+  "model_response_freeze_sha256": "e3c70b987390a8ca9793b9700600fd2fe8edf818c30e1c6c22fbc69125585959",
+  "reference_contract": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "obligations": [
+      "valid_boolean_token",
+      "equals_reference"
+    ]
+  },
+  "model_contract": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1,
+    "obligations": [
+      "valid_boolean_token",
+      "equals_reference"
+    ]
+  },
+  "model_status": "complete",
+  "raw_model_contract_preserved": true,
+  "selected_obligations_match_reference_as_set": true,
+  "missing_reference_obligations": [],
+  "missing_id_interpretation": "Structural list difference, not necessarily semantic insufficiency: equals_reference implies token validity under the fixed canonical reference.",
+  "global_results": [
+    {
+      "source_id": "rg-issue-544-original",
+      "condition": "reference",
+      "verdict": "alarm",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "alarm",
+          "certificate": {
+            "kind": "native_boolean_obligation_path_counterexample",
+            "obligation_id": "valid_boolean_token",
+            "candidate": "__not_a_boolean_token__",
+            "candidate_class": "source/contract-derived native string or None value",
+            "trusted_reference": "True",
+            "reward": 1.0,
+            "violated_obligations": [
+              "valid_boolean_token"
+            ],
+            "argument": "This native value satisfies every supported path fact and intermediate-definedness condition and reaches the literal full reward while the active obligation is false. No scorer was executed."
+          },
+          "evidence": [
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            }
+          ],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "verdict": "alarm",
+          "certificate": {
+            "kind": "native_boolean_obligation_path_counterexample",
+            "obligation_id": "equals_reference",
+            "candidate": "False",
+            "candidate_class": "source/contract-derived native string or None value",
+            "trusted_reference": "True",
+            "reward": 1.0,
+            "violated_obligations": [
+              "equals_reference"
+            ],
+            "argument": "This native value satisfies every supported path fact and intermediate-definedness condition and reaches the literal full reward while the active obligation is false. No scorer was executed."
+          },
+          "evidence": [
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            }
+          ],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        }
+      ],
+      "alarm_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "compiled_contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+      "input_fingerprint": "b1e7e0cab7cb7105dd3c86f4e1895ab5c2875ea1c03e6248cbb9115cb260cd38",
+      "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        }
+      ],
+      "target_source_executed": false,
+      "unsupported_reason": null,
+      "method": "explicit_boolean_obligations_over_preserved_paths_v2",
+      "qualification": "Only the declared obligation is checked in each result. Unproved paths stay Unknown; bounded counterexample search does not prove absence."
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "condition": "llm",
+      "verdict": "alarm",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "alarm",
+          "certificate": {
+            "kind": "native_boolean_obligation_path_counterexample",
+            "obligation_id": "valid_boolean_token",
+            "candidate": "__not_a_boolean_token__",
+            "candidate_class": "source/contract-derived native string or None value",
+            "trusted_reference": "True",
+            "reward": 1.0,
+            "violated_obligations": [
+              "valid_boolean_token"
+            ],
+            "argument": "This native value satisfies every supported path fact and intermediate-definedness condition and reaches the literal full reward while the active obligation is false. No scorer was executed."
+          },
+          "evidence": [
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            }
+          ],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "verdict": "alarm",
+          "certificate": {
+            "kind": "native_boolean_obligation_path_counterexample",
+            "obligation_id": "equals_reference",
+            "candidate": "False",
+            "candidate_class": "source/contract-derived native string or None value",
+            "trusted_reference": "True",
+            "reward": 1.0,
+            "violated_obligations": [
+              "equals_reference"
+            ],
+            "argument": "This native value satisfies every supported path fact and intermediate-definedness condition and reaches the literal full reward while the active obligation is false. No scorer was executed."
+          },
+          "evidence": [
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            }
+          ],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        }
+      ],
+      "alarm_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "compiled_contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+      "input_fingerprint": "8e4d852a1ede9aa714540fd97dbf51e95f26b41cac02404ba10b5517efc8dbf6",
+      "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "line": 14,
+          "end_line": 14
+        }
+      ],
+      "target_source_executed": false,
+      "unsupported_reason": null,
+      "method": "explicit_boolean_obligations_over_preserved_paths_v2",
+      "qualification": "Only the declared obligation is checked in each result. Unproved paths stay Unknown; bounded counterexample search does not prove absence."
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "condition": "reference",
+      "verdict": "no_alarm",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "source_guard_implies_active_boolean_obligation",
+                "obligation_id": "valid_boolean_token",
+                "source_proof": {
+                  "kind": "boolean_normalized_equality_implication",
+                  "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False."
+                },
+                "argument": "The source equality guard and trusted canonical reference imply only the requested obligation; no omitted obligation is required.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "source_guard_implies_active_boolean_obligation",
+                "obligation_id": "equals_reference",
+                "source_proof": {
+                  "kind": "boolean_normalized_equality_implication",
+                  "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False."
+                },
+                "argument": "The source equality guard and trusted canonical reference imply only the requested obligation; no omitted obligation is required.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        }
+      ],
+      "alarm_obligations": [],
+      "compiled_contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+      "input_fingerprint": "18dbcfa27c23d9912aa917f64a2f99bd0851aef4cfc219db9ee1b2b682540164",
+      "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 16,
+          "end_line": 16
+        }
+      ],
+      "target_source_executed": false,
+      "unsupported_reason": null,
+      "method": "explicit_boolean_obligations_over_preserved_paths_v2",
+      "qualification": "Only the declared obligation is checked in each result. Unproved paths stay Unknown; bounded counterexample search does not prove absence."
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "condition": "llm",
+      "verdict": "no_alarm",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "source_guard_implies_active_boolean_obligation",
+                "obligation_id": "valid_boolean_token",
+                "source_proof": {
+                  "kind": "boolean_normalized_equality_implication",
+                  "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False."
+                },
+                "argument": "The source equality guard and trusted canonical reference imply only the requested obligation; no omitted obligation is required.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "source_guard_implies_active_boolean_obligation",
+                "obligation_id": "equals_reference",
+                "source_proof": {
+                  "kind": "boolean_normalized_equality_implication",
+                  "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False."
+                },
+                "argument": "The source equality guard and trusted canonical reference imply only the requested obligation; no omitted obligation is required.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1"
+        }
+      ],
+      "alarm_obligations": [],
+      "compiled_contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+      "input_fingerprint": "a58b73a1bac59f4facf443a1aa5e5b3f82dc32e39745be45b18925e572bc3d0b",
+      "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "source_spans": [
+        {
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "line": 16,
+          "end_line": 16
+        }
+      ],
+      "target_source_executed": false,
+      "unsupported_reason": null,
+      "method": "explicit_boolean_obligations_over_preserved_paths_v2",
+      "qualification": "Only the declared obligation is checked in each result. Unproved paths stay Unknown; bounded counterexample search does not prove absence."
+    }
+  ],
+  "witness_rows": [
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "conditions": {
+        "reference": {
+          "static": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "equals_reference"
+            ],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1.0,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+            "input_fingerprint": "b1e7e0cab7cb7105dd3c86f4e1895ab5c2875ea1c03e6248cbb9115cb260cd38",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "equals_reference"
+            ],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        },
+        "llm": {
+          "static": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "equals_reference"
+            ],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+            "input_fingerprint": "8e4d852a1ede9aa714540fd97dbf51e95f26b41cac02404ba10b5517efc8dbf6",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "equals_reference"
+            ],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        }
+      },
+      "same_witness_verdict": true,
+      "same_violated_obligation_ids": true,
+      "reference_violations_not_attributed_by_model_contract": [],
+      "extra_model_contract_violation_ids": []
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "conditions": {
+        "reference": {
+          "static": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1.0,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+            "input_fingerprint": "b1e7e0cab7cb7105dd3c86f4e1895ab5c2875ea1c03e6248cbb9115cb260cd38",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        },
+        "llm": {
+          "static": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+            "input_fingerprint": "8e4d852a1ede9aa714540fd97dbf51e95f26b41cac02404ba10b5517efc8dbf6",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "full_credit_violation",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": true,
+                "violated": true
+              }
+            ],
+            "violated_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        }
+      },
+      "same_witness_verdict": true,
+      "same_violated_obligation_ids": true,
+      "reference_violations_not_attributed_by_model_contract": [],
+      "extra_model_contract_violation_ids": []
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "conditions": {
+        "reference": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1.0,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+            "input_fingerprint": "b1e7e0cab7cb7105dd3c86f4e1895ab5c2875ea1c03e6248cbb9115cb260cd38",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        },
+        "llm": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+            "input_fingerprint": "8e4d852a1ede9aa714540fd97dbf51e95f26b41cac02404ba10b5517efc8dbf6",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        }
+      },
+      "same_witness_verdict": true,
+      "same_violated_obligation_ids": true,
+      "reference_violations_not_attributed_by_model_contract": [],
+      "extra_model_contract_violation_ids": []
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "executed_reward": 0.0,
+      "conditions": {
+        "reference": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": false,
+            "unsupported_reason": null,
+            "reward": 0.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 17,
+                "end_line": 17
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1.0,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+            "input_fingerprint": "18dbcfa27c23d9912aa917f64a2f99bd0851aef4cfc219db9ee1b2b682540164",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 0.0,
+            "full_credit_event": false,
+            "unsupported_reason": null
+          }
+        },
+        "llm": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": false,
+            "unsupported_reason": null,
+            "reward": 0.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 17,
+                "end_line": 17
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+            "input_fingerprint": "a58b73a1bac59f4facf443a1aa5e5b3f82dc32e39745be45b18925e572bc3d0b",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 0.0,
+            "full_credit_event": false,
+            "unsupported_reason": null
+          }
+        }
+      },
+      "same_witness_verdict": true,
+      "same_violated_obligation_ids": true,
+      "reference_violations_not_attributed_by_model_contract": [],
+      "extra_model_contract_violation_ids": []
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "executed_reward": 0.0,
+      "conditions": {
+        "reference": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": false,
+            "unsupported_reason": null,
+            "reward": 0.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 17,
+                "end_line": 17
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1.0,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+            "input_fingerprint": "18dbcfa27c23d9912aa917f64a2f99bd0851aef4cfc219db9ee1b2b682540164",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 0.0,
+            "full_credit_event": false,
+            "unsupported_reason": null
+          }
+        },
+        "llm": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": false,
+            "unsupported_reason": null,
+            "reward": 0.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 17,
+                "end_line": 17
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+            "input_fingerprint": "a58b73a1bac59f4facf443a1aa5e5b3f82dc32e39745be45b18925e572bc3d0b",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": false,
+                "full_credit_event": false,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 0.0,
+            "full_credit_event": false,
+            "unsupported_reason": null
+          }
+        }
+      },
+      "same_witness_verdict": true,
+      "same_violated_obligation_ids": true,
+      "reference_violations_not_attributed_by_model_contract": [],
+      "extra_model_contract_violation_ids": []
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "executed_reward": 1.0,
+      "conditions": {
+        "reference": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1.0,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "a548ec99a8a3d3c257e4cbe45bd7fba036c5f32e9c8c5452eff9dbeae5b02805",
+            "input_fingerprint": "18dbcfa27c23d9912aa917f64a2f99bd0851aef4cfc219db9ee1b2b682540164",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        },
+        "llm": {
+          "static": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "full_credit_event": true,
+            "unsupported_reason": null,
+            "reward": 1.0,
+            "reward_origin": "preserved_source_term_path",
+            "source_spans": [
+              {
+                "line": 16,
+                "end_line": 16
+              }
+            ],
+            "compiled_contract": {
+              "schema": "boolean-obligations-v1",
+              "candidate_arg": "answer",
+              "reference_arg": "entry",
+              "reference_key": "answer",
+              "candidate_domain": "native_str_or_none",
+              "trusted_reference": "canonical_True_False",
+              "normalization": [
+                "strip",
+                "lower"
+              ],
+              "full_credit_threshold": 1,
+              "obligations": [
+                "valid_boolean_token",
+                "equals_reference"
+              ]
+            },
+            "contract_fingerprint": "2eac65630beb286ad3e6c52e71e462135d5f924730762d2fc0693c90b7ed391c",
+            "input_fingerprint": "a58b73a1bac59f4facf443a1aa5e5b3f82dc32e39745be45b18925e572bc3d0b",
+            "target_source_executed": false,
+            "legacy_source_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+          },
+          "concrete_oracle": {
+            "verdict": "no_violation_for_this_witness",
+            "active_obligations": [
+              "valid_boolean_token",
+              "equals_reference"
+            ],
+            "per_obligation": [
+              {
+                "obligation_id": "valid_boolean_token",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              },
+              {
+                "obligation_id": "equals_reference",
+                "predicate_satisfied": true,
+                "full_credit_event": true,
+                "violated": false
+              }
+            ],
+            "violated_obligations": [],
+            "observed_reward": 1.0,
+            "full_credit_event": true,
+            "unsupported_reason": null
+          }
+        }
+      },
+      "same_witness_verdict": true,
+      "same_violated_obligation_ids": true,
+      "reference_violations_not_attributed_by_model_contract": [],
+      "extra_model_contract_violation_ids": []
+    }
+  ],
+  "native_scorer_executions": 6,
+  "condition_witness_rows": 12,
+  "same_witness_verdicts": 6,
+  "same_violated_obligation_id_sets": 6,
+  "all_available_static_rewards_match_native_execution": true,
+  "no_auto_completion": true,
+  "v2_interface_and_analyzer_changes": false,
+  "new_model_calls_by_downstream": 0,
+  "qualification": "Single known development case with a supplied two-atom vocabulary/profile. Matching reference results establishes this integration only, not neural gain or generalization."
+}

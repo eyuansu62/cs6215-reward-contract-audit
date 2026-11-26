@@ -1,0 +1,193 @@
+{
+  "sha": "6824d651fd8b3cb102f4158068a64eb158fb700d",
+  "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/6824d651fd8b3cb102f4158068a64eb158fb700d",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "390ae1b806ecf52a80c78923e7f2f724a9008746",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/390ae1b806ecf52a80c78923e7f2f724a9008746"
+    },
+    {
+      "path": ".github/dependabot.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07630ecca250faacdea5a730acc5cb62bbdf4e7d",
+      "size": 237,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/07630ecca250faacdea5a730acc5cb62bbdf4e7d"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3222598fae50d83076faff974f5b1403c2d64199",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/3222598fae50d83076faff974f5b1403c2d64199"
+    },
+    {
+      "path": ".github/workflows/uv-ci.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229361dff3349bdddfed10bfda1db4d434c35d3b",
+      "size": 408,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/229361dff3349bdddfed10bfda1db4d434c35d3b"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f51056c5f9d2926baa553a6d12bde89e8048258",
+      "size": 1806,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/6f51056c5f9d2926baa553a6d12bde89e8048258"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36326da92d8346001aa19fd717852f1aec5e9e08",
+      "size": 1468,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/36326da92d8346001aa19fd717852f1aec5e9e08"
+    },
+    {
+      "path": ".python-version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4fba2183587225f216eeada4c78dfab6b2e65f5",
+      "size": 5,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/e4fba2183587225f216eeada4c78dfab6b2e65f5"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4f95213b0252c45f0293f8069583c18042aab34",
+      "size": 12770,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/f4f95213b0252c45f0293f8069583c18042aab34"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73ad2c360887dbac6a01e21c9342b20bcd60459f",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/73ad2c360887dbac6a01e21c9342b20bcd60459f"
+    },
+    {
+      "path": "data/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "485f75d23a961dcff836dcbfc9c733b339ee90bb",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/485f75d23a961dcff836dcbfc9c733b339ee90bb"
+    },
+    {
+      "path": "data/config/stage_1.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "317d9abfc346b40b14f249e506e48a16af771c7d",
+      "size": 1078,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/317d9abfc346b40b14f249e506e48a16af771c7d"
+    },
+    {
+      "path": "data/config/stage_2.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b54a0f8bb6d08de71500af58c656d33632dbef49",
+      "size": 1112,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/b54a0f8bb6d08de71500af58c656d33632dbef49"
+    },
+    {
+      "path": "data/config/stage_3.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cfd70d3edc0f4f8a5688e59f43f995488464fe0",
+      "size": 414,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/9cfd70d3edc0f4f8a5688e59f43f995488464fe0"
+    },
+    {
+      "path": "data/data_collection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fed6574f42817f16e7090cd0c4d07567a5ebfacc",
+      "size": 27315,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/fed6574f42817f16e7090cd0c4d07567a5ebfacc"
+    },
+    {
+      "path": "interesting_examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25c2d1bce0440ff98df5aec041cd2635681b7fd0",
+      "size": 12077,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/25c2d1bce0440ff98df5aec041cd2635681b7fd0"
+    },
+    {
+      "path": "post_training",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa62fec0ed60edb9791cf58a47ae85b179a9eb31",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/aa62fec0ed60edb9791cf58a47ae85b179a9eb31"
+    },
+    {
+      "path": "post_training/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bcaf223d89a1f85c27cbae4dd25497727c6215ac",
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/trees/bcaf223d89a1f85c27cbae4dd25497727c6215ac"
+    },
+    {
+      "path": "post_training/config/stage_1.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85d64623006e2a3fa9544f7857a0de99cf43f75d",
+      "size": 1376,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/85d64623006e2a3fa9544f7857a0de99cf43f75d"
+    },
+    {
+      "path": "post_training/config/stage_2.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f052391ccfc4a829df51aadff575fa88236c45a",
+      "size": 1640,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/4f052391ccfc4a829df51aadff575fa88236c45a"
+    },
+    {
+      "path": "post_training/config/stage_3.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45925a65d4aa1e2b5d4c193e984d76567a9d51ee",
+      "size": 1707,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/45925a65d4aa1e2b5d4c193e984d76567a9d51ee"
+    },
+    {
+      "path": "post_training/dpo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "627e8b604d004950aeae71208c0a5d28a76ce25b",
+      "size": 2419,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/627e8b604d004950aeae71208c0a5d28a76ce25b"
+    },
+    {
+      "path": "post_training/sft.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "434b1504a85d5844b96e7fd4d6cdcea92045125e",
+      "size": 4284,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/434b1504a85d5844b96e7fd4d6cdcea92045125e"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0881766e974630ec43dcad0b376e9ca817f8175a",
+      "size": 2540,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/0881766e974630ec43dcad0b376e9ca817f8175a"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a36e8bc1e0c3670fe204eea49035455f1e09b65d",
+      "size": 463199,
+      "url": "https://api.github.com/repos/Shekswess/tiny-reasoning-language-model/git/blobs/a36e8bc1e0c3670fe204eea49035455f1e09b65d"
+    }
+  ],
+  "truncated": false
+}

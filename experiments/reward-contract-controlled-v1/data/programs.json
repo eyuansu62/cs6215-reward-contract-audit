@@ -1,0 +1,45 @@
+{
+  "programs": [
+    {
+      "task_id": "rg-issue-544-original",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true,
+      "program_id": "truthiness",
+      "provenance": "Previously studied real RG #544 source"
+    },
+    {
+      "task_id": "rg-pr-561-proposed-repair",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n    \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n    if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n        # python's bool conversion is very tolerant and normally doesn't raise exceptions\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true,
+      "program_id": "equality",
+      "provenance": "Previously studied proposed PR561 repair, not verified released"
+    },
+    {
+      "program_id": "token_only",
+      "task_id": "existing-authored-token-only-control",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    if answer == 'True' or answer == 'False':\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer, entry):\n    if answer == 'True' or answer == 'False':\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "stdlib_bindings": {},
+      "fixed_parameters": {},
+      "trusted_reference_canonical_boolean": true,
+      "provenance": "Exact source literal in frozen test_known_literal_token_guard_can_certify_validity_without_reference_equality; authored control, not upstream bug"
+    }
+  ],
+  "frozen_origins": {
+    "experiments/reward-contract-loop-v2/inputs.json": "15ad8ec1bea5ca36126fe207ebf90b666053a9e2c6d501c6e441ab6a3b945c04",
+    "experiments/reward-contract-loop-v2/tests/test_boolean_checker.py": "3481ade0cb358b98061f4ad2c4db75131245d1d02e72dc9b7913de290a9611ab"
+  },
+  "no_source_rewriting": true
+}

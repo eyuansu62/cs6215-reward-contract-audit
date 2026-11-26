@@ -1,0 +1,66 @@
+{
+  "origin": "Deliberately authored development ablation, not actual LLM outputs. Shared normalization is the previously reviewed policy, not freshly inferred from short task wording.",
+  "variants": {
+    "correct": {
+      "task_id": "assigned_per_source_version",
+      "status": "extracted",
+      "answer_kind": "boolean",
+      "boolean_tokens": {
+        "true": "True",
+        "false": "False"
+      },
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [
+        "Boolean token True or False."
+      ],
+      "full_credit_requirements": [
+        "A full-reward answer must normalize to a valid Boolean token: true or false.",
+        "A full-reward answer must equal the trusted Boolean reference after strip/lower normalization."
+      ],
+      "allowed_normalizations": [
+        "strip",
+        "lower"
+      ],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Only the full-credit necessary condition is audited; generator correctness and other reward behavior are outside scope."
+      ],
+      "evidence": [],
+      "abstention_reason": null
+    },
+    "missing": null,
+    "omitted_equality": {
+      "task_id": "assigned_per_source_version",
+      "status": "extracted",
+      "answer_kind": "boolean",
+      "boolean_tokens": {
+        "true": "True",
+        "false": "False"
+      },
+      "collection_element_kind": null,
+      "order_requirement": "not_applicable",
+      "output_format_requirements": [
+        "Boolean token True or False."
+      ],
+      "full_credit_requirements": [
+        "A full-reward answer must normalize to a valid Boolean token: true or false."
+      ],
+      "allowed_normalizations": [
+        "strip",
+        "lower"
+      ],
+      "numeric_tolerance": null,
+      "partial_credit_policy": "unspecified",
+      "partial_credit_details": null,
+      "not_specified": [
+        "Only the full-credit necessary condition is audited; generator correctness and other reward behavior are outside scope."
+      ],
+      "evidence": [],
+      "abstention_reason": null
+    }
+  },
+  "single_edit": "Delete only full_credit_requirements[1] (reference equality), leaving metadata and valid-token obligation unchanged."
+}

@@ -1,0 +1,1319 @@
+{
+  "passed": true,
+  "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16",
+  "preflight_sha256": "b3ab3525ec241bc01d447b53ecf0fec89073df290e7fa14354a69c232ce635c3",
+  "model_response_freeze_sha256": "53e4bd50a17cca13638a47f67efa608377e984448050bc2e815cb3afdc0a3ec3",
+  "analyzer_calls": 216,
+  "units": {
+    "description_cards": 12,
+    "linguistic_families": 4,
+    "programs": 3,
+    "nonnull_semantic_program_combinations": 6,
+    "semantic_global_cells_per_condition": 24,
+    "administrative_U_cells_per_condition": 12,
+    "conditions": 6
+  },
+  "interpretation": "Researcher-authored controlled descriptions; repeated program/semantic cells are dependent. U is administrative abstention, never a true negative. Fixed policies are assumptions, not extractors. Binary TP alone is not a semantic extraction success or witness-supported gain.",
+  "frozen_analyzer_unchanged": true,
+  "raw_contracts_unchanged": true,
+  "observed_rewards_passed_to_analyzer": false,
+  "new_model_calls": 0,
+  "semgrep_runs": 0,
+  "native_execution_count": 28,
+  "witness_rows": 336,
+  "conditions": {
+    "reference": {
+      "semantic_cells": 24,
+      "binary_confusion": {
+        "TP": 12,
+        "FP": 0,
+        "FN": 0,
+        "TN": 12,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 24,
+      "binary_accuracy": 1.0,
+      "binary_coverage": 1.0,
+      "witness_validated_alarms": 12,
+      "unjustified_alarm_witnesses": 0,
+      "alarm_cells_without_gold_violating_returned_witness": 0,
+      "witness_supported_correct_cells": 24,
+      "administrative_U": {
+        "cells": 12,
+        "valid_abstentions": 12,
+        "invalid_outputs": 0,
+        "unjustified_contracts": 0,
+        "unjustified_alarms": 0,
+        "included_in_binary_denominator": false
+      },
+      "contract_class_confusion": {
+        "E": {
+          "E": 4,
+          "V": 0,
+          "U": 0,
+          "INVALID": 0
+        },
+        "V": {
+          "E": 0,
+          "V": 4,
+          "U": 0,
+          "INVALID": 0
+        },
+        "U": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        }
+      },
+      "contract_class_correct_cards": 12,
+      "contract_class_denominator": 12,
+      "correct_global_vectors_nonnull_cards": 8,
+      "correct_global_vectors_nonnull_denominator": 8,
+      "witness_supported_correct_vectors_nonnull_cards": 8,
+      "fully_correct_cards_with_U_administration": 12
+    },
+    "rules": {
+      "semantic_cells": 24,
+      "binary_confusion": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1,
+        "Unknown": 21
+      },
+      "binary_correct_cells": 3,
+      "binary_accuracy": 0.125,
+      "binary_coverage": 0.125,
+      "witness_validated_alarms": 2,
+      "unjustified_alarm_witnesses": 0,
+      "alarm_cells_without_gold_violating_returned_witness": 0,
+      "witness_supported_correct_cells": 3,
+      "administrative_U": {
+        "cells": 12,
+        "valid_abstentions": 12,
+        "invalid_outputs": 0,
+        "unjustified_contracts": 0,
+        "unjustified_alarms": 0,
+        "included_in_binary_denominator": false
+      },
+      "contract_class_confusion": {
+        "E": {
+          "E": 1,
+          "V": 0,
+          "U": 3,
+          "INVALID": 0
+        },
+        "V": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        },
+        "U": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        }
+      },
+      "contract_class_correct_cards": 5,
+      "contract_class_denominator": 12,
+      "correct_global_vectors_nonnull_cards": 1,
+      "correct_global_vectors_nonnull_denominator": 8,
+      "witness_supported_correct_vectors_nonnull_cards": 1,
+      "fully_correct_cards_with_U_administration": 5
+    },
+    "llm": {
+      "semantic_cells": 24,
+      "binary_confusion": {
+        "TP": 12,
+        "FP": 0,
+        "FN": 0,
+        "TN": 12,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 24,
+      "binary_accuracy": 1.0,
+      "binary_coverage": 1.0,
+      "witness_validated_alarms": 12,
+      "unjustified_alarm_witnesses": 0,
+      "alarm_cells_without_gold_violating_returned_witness": 0,
+      "witness_supported_correct_cells": 24,
+      "administrative_U": {
+        "cells": 12,
+        "valid_abstentions": 12,
+        "invalid_outputs": 0,
+        "unjustified_contracts": 0,
+        "unjustified_alarms": 0,
+        "included_in_binary_denominator": false
+      },
+      "contract_class_confusion": {
+        "E": {
+          "E": 4,
+          "V": 0,
+          "U": 0,
+          "INVALID": 0
+        },
+        "V": {
+          "E": 0,
+          "V": 4,
+          "U": 0,
+          "INVALID": 0
+        },
+        "U": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        }
+      },
+      "contract_class_correct_cards": 12,
+      "contract_class_denominator": 12,
+      "correct_global_vectors_nonnull_cards": 8,
+      "correct_global_vectors_nonnull_denominator": 8,
+      "witness_supported_correct_vectors_nonnull_cards": 8,
+      "fully_correct_cards_with_U_administration": 12
+    },
+    "fixed_E": {
+      "semantic_cells": 24,
+      "binary_confusion": {
+        "TP": 12,
+        "FP": 4,
+        "FN": 0,
+        "TN": 8,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 20,
+      "binary_accuracy": 0.8333333333333334,
+      "binary_coverage": 1.0,
+      "witness_validated_alarms": 8,
+      "unjustified_alarm_witnesses": 8,
+      "alarm_cells_without_gold_violating_returned_witness": 8,
+      "witness_supported_correct_cells": 16,
+      "administrative_U": {
+        "cells": 12,
+        "valid_abstentions": 0,
+        "invalid_outputs": 0,
+        "unjustified_contracts": 12,
+        "unjustified_alarms": 8,
+        "included_in_binary_denominator": false
+      },
+      "contract_class_confusion": {
+        "E": {
+          "E": 4,
+          "V": 0,
+          "U": 0,
+          "INVALID": 0
+        },
+        "V": {
+          "E": 4,
+          "V": 0,
+          "U": 0,
+          "INVALID": 0
+        },
+        "U": {
+          "E": 4,
+          "V": 0,
+          "U": 0,
+          "INVALID": 0
+        }
+      },
+      "contract_class_correct_cards": 4,
+      "contract_class_denominator": 12,
+      "correct_global_vectors_nonnull_cards": 4,
+      "correct_global_vectors_nonnull_denominator": 8,
+      "witness_supported_correct_vectors_nonnull_cards": 4,
+      "fully_correct_cards_with_U_administration": 4
+    },
+    "fixed_V": {
+      "semantic_cells": 24,
+      "binary_confusion": {
+        "TP": 8,
+        "FP": 0,
+        "FN": 4,
+        "TN": 12,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 20,
+      "binary_accuracy": 0.8333333333333334,
+      "binary_coverage": 1.0,
+      "witness_validated_alarms": 8,
+      "unjustified_alarm_witnesses": 0,
+      "alarm_cells_without_gold_violating_returned_witness": 0,
+      "witness_supported_correct_cells": 20,
+      "administrative_U": {
+        "cells": 12,
+        "valid_abstentions": 0,
+        "invalid_outputs": 0,
+        "unjustified_contracts": 12,
+        "unjustified_alarms": 4,
+        "included_in_binary_denominator": false
+      },
+      "contract_class_confusion": {
+        "E": {
+          "E": 0,
+          "V": 4,
+          "U": 0,
+          "INVALID": 0
+        },
+        "V": {
+          "E": 0,
+          "V": 4,
+          "U": 0,
+          "INVALID": 0
+        },
+        "U": {
+          "E": 0,
+          "V": 4,
+          "U": 0,
+          "INVALID": 0
+        }
+      },
+      "contract_class_correct_cards": 4,
+      "contract_class_denominator": 12,
+      "correct_global_vectors_nonnull_cards": 4,
+      "correct_global_vectors_nonnull_denominator": 8,
+      "witness_supported_correct_vectors_nonnull_cards": 4,
+      "fully_correct_cards_with_U_administration": 4
+    },
+    "fixed_null": {
+      "semantic_cells": 24,
+      "binary_confusion": {
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "Unknown": 24
+      },
+      "binary_correct_cells": 0,
+      "binary_accuracy": 0.0,
+      "binary_coverage": 0.0,
+      "witness_validated_alarms": 0,
+      "unjustified_alarm_witnesses": 0,
+      "alarm_cells_without_gold_violating_returned_witness": 0,
+      "witness_supported_correct_cells": 0,
+      "administrative_U": {
+        "cells": 12,
+        "valid_abstentions": 12,
+        "invalid_outputs": 0,
+        "unjustified_contracts": 0,
+        "unjustified_alarms": 0,
+        "included_in_binary_denominator": false
+      },
+      "contract_class_confusion": {
+        "E": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        },
+        "V": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        },
+        "U": {
+          "E": 0,
+          "V": 0,
+          "U": 4,
+          "INVALID": 0
+        }
+      },
+      "contract_class_correct_cards": 4,
+      "contract_class_denominator": 12,
+      "correct_global_vectors_nonnull_cards": 0,
+      "correct_global_vectors_nonnull_denominator": 8,
+      "witness_supported_correct_vectors_nonnull_cards": 0,
+      "fully_correct_cards_with_U_administration": 4
+    }
+  },
+  "llm_vs_rules_cells": [
+    {
+      "task_id": "P17",
+      "program_id": "equality",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P17",
+      "program_id": "token_only",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P17",
+      "program_id": "truthiness",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "V"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P23",
+      "program_id": "equality",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P23",
+      "program_id": "token_only",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P23",
+      "program_id": "truthiness",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P28",
+      "program_id": "equality",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "TN",
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "E",
+      "rules_contract_class": "E",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P28",
+      "program_id": "token_only",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "TP",
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "E",
+      "rules_contract_class": "E",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "equals_reference",
+          "answer": "True",
+          "reference": "False",
+          "native_reward": 1.0,
+          "native_execution_id": "native-b028bc6644008befda5e",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": [
+        {
+          "obligation_id": "equals_reference",
+          "answer": "True",
+          "reference": "False",
+          "native_reward": 1.0,
+          "native_execution_id": "native-b028bc6644008befda5e",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ]
+    },
+    {
+      "task_id": "P28",
+      "program_id": "truthiness",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "TP",
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "E",
+      "rules_contract_class": "E",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "answer": "False",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-549e9d65dcd11f0df90c",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "answer": "False",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-549e9d65dcd11f0df90c",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ]
+    },
+    {
+      "task_id": "P35",
+      "program_id": "equality",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P35",
+      "program_id": "token_only",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P35",
+      "program_id": "truthiness",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "V"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P42",
+      "program_id": "equality",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P42",
+      "program_id": "token_only",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "equals_reference",
+          "answer": "True",
+          "reference": "False",
+          "native_reward": 1.0,
+          "native_execution_id": "native-b028bc6644008befda5e",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P42",
+      "program_id": "truthiness",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "answer": "False",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-549e9d65dcd11f0df90c",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P46",
+      "program_id": "equality",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P46",
+      "program_id": "token_only",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "equals_reference",
+          "answer": "True",
+          "reference": "False",
+          "native_reward": 1.0,
+          "native_execution_id": "native-b028bc6644008befda5e",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P46",
+      "program_id": "truthiness",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "answer": "False",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-549e9d65dcd11f0df90c",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P59",
+      "program_id": "equality",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P59",
+      "program_id": "token_only",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P59",
+      "program_id": "truthiness",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P62",
+      "program_id": "equality",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P62",
+      "program_id": "token_only",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P62",
+      "program_id": "truthiness",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P73",
+      "program_id": "equality",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P73",
+      "program_id": "token_only",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P73",
+      "program_id": "truthiness",
+      "gold_class": "U",
+      "evaluation": "administrative_abstention",
+      "llm_outcome": null,
+      "rules_outcome": null,
+      "llm_supported_correct": true,
+      "rules_supported_correct": true,
+      "llm_vs_rules": "tie",
+      "llm_contract_class": "U",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P84",
+      "program_id": "equality",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P84",
+      "program_id": "token_only",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "equals_reference",
+          "answer": "True",
+          "reference": "False",
+          "native_reward": 1.0,
+          "native_execution_id": "native-b028bc6644008befda5e",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P84",
+      "program_id": "truthiness",
+      "gold_class": "E",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "E",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        },
+        {
+          "obligation_id": "equals_reference",
+          "answer": "False",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-549e9d65dcd11f0df90c",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "E"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P91",
+      "program_id": "equality",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P91",
+      "program_id": "token_only",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P91",
+      "program_id": "truthiness",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "V"
+        }
+      ],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P96",
+      "program_id": "equality",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P96",
+      "program_id": "token_only",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TN",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [],
+      "rules_returned_witnesses": []
+    },
+    {
+      "task_id": "P96",
+      "program_id": "truthiness",
+      "gold_class": "V",
+      "evaluation": "witness_supported_global",
+      "llm_outcome": "TP",
+      "rules_outcome": "Unknown",
+      "llm_supported_correct": true,
+      "rules_supported_correct": false,
+      "llm_vs_rules": "win",
+      "llm_contract_class": "V",
+      "rules_contract_class": "U",
+      "llm_returned_witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "V"
+        }
+      ],
+      "rules_returned_witnesses": []
+    }
+  ],
+  "llm_vs_rules_cards": [
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "llm_class": "V",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "llm_class": "U",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "tie",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": true,
+      "cell_win_loss": {
+        "tie": 3
+      }
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "llm_class": "E",
+      "rules_class": "E",
+      "extraction_class_llm_vs_rules": "tie",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": true,
+      "cell_win_loss": {
+        "tie": 3
+      }
+    },
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "llm_class": "V",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "llm_class": "E",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "llm_class": "E",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "llm_class": "U",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "tie",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": true,
+      "cell_win_loss": {
+        "tie": 3
+      }
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "llm_class": "U",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "tie",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": true,
+      "cell_win_loss": {
+        "tie": 3
+      }
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "llm_class": "U",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "tie",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": true,
+      "cell_win_loss": {
+        "tie": 3
+      }
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "llm_class": "E",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "llm_class": "V",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "llm_class": "V",
+      "rules_class": "U",
+      "extraction_class_llm_vs_rules": "win",
+      "llm_all_three_supported_correct": true,
+      "rules_all_three_supported_correct": false,
+      "cell_win_loss": {
+        "win": 3
+      }
+    }
+  ],
+  "llm_vs_rules_nonnull_counts": {
+    "win": 21,
+    "tie": 3
+  },
+  "llm_vs_rules_U_administrative_counts": {
+    "tie": 12
+  }
+}

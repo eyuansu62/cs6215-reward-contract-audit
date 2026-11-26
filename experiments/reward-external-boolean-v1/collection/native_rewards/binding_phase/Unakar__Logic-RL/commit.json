@@ -1,0 +1,101 @@
+{
+  "sha": "9d2c457525ec14639e85afa12d49bb16efb053a4",
+  "node_id": "C_kwDONzHLNdoAKDlkMmM0NTc1MjVlYzE0NjM5ZTg1YWZhMTJkNDliYjE2ZWZiMDUzYTQ",
+  "commit": {
+    "author": {
+      "name": "hollow1knight",
+      "email": "[email omitted]",
+      "date": "2025-03-20T06:24:21Z"
+    },
+    "committer": {
+      "name": "hollow1knight",
+      "email": "[email omitted]",
+      "date": "2025-03-20T06:24:21Z"
+    },
+    "message": "ADORA",
+    "tree": {
+      "sha": "e01b405037976ec1908161417bc1959757608d74",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/git/trees/e01b405037976ec1908161417bc1959757608d74"
+    },
+    "url": "https://api.github.com/repos/Unakar/Logic-RL/git/commits/9d2c457525ec14639e85afa12d49bb16efb053a4",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/Unakar/Logic-RL/commits/9d2c457525ec14639e85afa12d49bb16efb053a4",
+  "html_url": "https://github.com/Unakar/Logic-RL/commit/9d2c457525ec14639e85afa12d49bb16efb053a4",
+  "comments_url": "https://api.github.com/repos/Unakar/Logic-RL/commits/9d2c457525ec14639e85afa12d49bb16efb053a4/comments",
+  "author": {
+    "login": "ShadeCloak",
+    "id": 136049151,
+    "node_id": "U_kgDOCBvx_w",
+    "avatar_url": "https://avatars.githubusercontent.com/u/136049151?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ShadeCloak",
+    "html_url": "https://github.com/ShadeCloak",
+    "followers_url": "https://api.github.com/users/ShadeCloak/followers",
+    "following_url": "https://api.github.com/users/ShadeCloak/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ShadeCloak/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ShadeCloak/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ShadeCloak/subscriptions",
+    "organizations_url": "https://api.github.com/users/ShadeCloak/orgs",
+    "repos_url": "https://api.github.com/users/ShadeCloak/repos",
+    "events_url": "https://api.github.com/users/ShadeCloak/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ShadeCloak/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ShadeCloak",
+    "id": 136049151,
+    "node_id": "U_kgDOCBvx_w",
+    "avatar_url": "https://avatars.githubusercontent.com/u/136049151?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ShadeCloak",
+    "html_url": "https://github.com/ShadeCloak",
+    "followers_url": "https://api.github.com/users/ShadeCloak/followers",
+    "following_url": "https://api.github.com/users/ShadeCloak/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ShadeCloak/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ShadeCloak/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ShadeCloak/subscriptions",
+    "organizations_url": "https://api.github.com/users/ShadeCloak/orgs",
+    "repos_url": "https://api.github.com/users/ShadeCloak/repos",
+    "events_url": "https://api.github.com/users/ShadeCloak/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ShadeCloak/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "67b863c56be8b9454f0fb42f8bcd23303ee96370",
+      "url": "https://api.github.com/repos/Unakar/Logic-RL/commits/67b863c56be8b9454f0fb42f8bcd23303ee96370",
+      "html_url": "https://github.com/Unakar/Logic-RL/commit/67b863c56be8b9454f0fb42f8bcd23303ee96370"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 2,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "0edf12f5d7dfb4b2180c1535e28a6a38dcb37870",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/Unakar/Logic-RL/blob/9d2c457525ec14639e85afa12d49bb16efb053a4/README.md",
+      "raw_url": "https://github.com/Unakar/Logic-RL/raw/9d2c457525ec14639e85afa12d49bb16efb053a4/README.md",
+      "contents_url": "https://api.github.com/repos/Unakar/Logic-RL/contents/README.md?ref=9d2c457525ec14639e85afa12d49bb16efb053a4",
+      "patch": "@@ -7,6 +7,8 @@ Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning\n ---\n \n ## News\n+[2025/03/20] We release the [ADORA: A Scalable Paradigm for Steering Learning Trajectories ](https://github.com/ShadeCloak/ADORA?tab=readme-ov-file).\n+\n [2025/03/19] For stable length control, refer to https://github.com/lblankl/Short-RL\n \n <table>"
+    }
+  ]
+}

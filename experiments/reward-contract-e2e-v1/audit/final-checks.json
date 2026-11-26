@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "new_integration_tests_passed": 9,
+  "compilation_passed": true,
+  "successful_model_requests": 1,
+  "response_driven_retries": 0,
+  "accepted_tool_actions": 0,
+  "selected_obligations": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "raw_model_IR_unchanged": true,
+  "automatic_obligation_additions": 0,
+  "manual_contract_repairs": 0,
+  "paired_witnesses_per_run": 6,
+  "condition_rows_per_run": 12,
+  "same_verdict_pairs": 6,
+  "same_violated_ID_pairs": 6,
+  "downstream_runs": 2,
+  "native_source_executions_per_run": 6,
+  "total_native_source_executions_before_packaging": 12,
+  "byte_identical_downstream_replay": true,
+  "new_model_calls_by_replay": 0,
+  "frozen_v2_files_changed": false,
+  "previous_manifest_payloads_unchanged": 2858,
+  "method_freeze_sha256": "ea5e8da2c74637bea061938cdf3c3dc8ea343101dc1f9e44c103d772a1608cd0",
+  "model_response_freeze_sha256": "e3c70b987390a8ca9793b9700600fd2fe8edf818c30e1c6c22fbc69125585959",
+  "report_sha256": "04bdca393a67b37b3200a31e45c596dc9621210381e468c859e4f2e77b509e25",
+  "readme_sha256": "dbfef23873610d04aea16638ad47b20211812abb7abd3912ccdd2e9cc3c4cc58",
+  "model_identity_reported": null,
+  "usage": {
+    "input_tokens": 27044,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 197,
+    "reasoning_output_tokens": 0
+  },
+  "qualifications": [
+    "Known-case integration only, not heldout/neuralgain",
+    "Fixed two-atom menu/profile supplied",
+    "No actually omitted model atom in this response; omission regression only",
+    "Exact underlying model identity unknown",
+    "Shared predicate implementation, manual reference expectations and native return validation retained"
+  ]
+}

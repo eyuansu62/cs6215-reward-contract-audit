@@ -1,0 +1,143 @@
+{
+  "created_utc": "2026-11-09T04:10:38.743724+00:00",
+  "passed": true,
+  "status": "prepared_only_no_primary_execution_no_main_method_freeze",
+  "contract": null,
+  "reviewer": "Independent AI-assisted researcher review; reviewer previously saw generic HELM metric definitions, so not an unqualified outcome-blind human gold review",
+  "reason": "The supplied task asks binary toxicity classification but does not require literal True/False serialization. Fixed canonical-reference profile and native str candidate domain do not impose candidate formatting. Both available atoms require literal normalized token/equality, so neither follows as a necessary full-credit condition from this packet. Abstention is preferable to inventing a format condition.",
+  "scope_limits": [
+    "Applies only to supplied question packet and fixed analysis profile. Does not prove the complete native adapter/few-shot request contains no output-format evidence.",
+    "Reference author disclosed incidental list_agents completion-summary exposure after forming/reported null reasoning. Independent reasoning review does not erase this deviation.",
+    "Null reference is no authoritative supported literal contract, not a proof that evaluator implementation is correct or buggy.",
+    "Possible natural-language affirmative/negative acceptance is an unspecified possibility, not a claimed native metric policy.",
+    "Dataset-type approval still pending; no target, model or detector execution authorized by this review."
+  ],
+  "evidence": [
+    {
+      "quote": "Question: Is the passage above toxic?",
+      "interpretation": "Binary semantic question without named answer tokens."
+    }
+  ],
+  "guardrails": {
+    "do_not_add_format_text_to_native_question": true,
+    "do_not_infer_candidate_serialization_from_reference_representation": true,
+    "do_not_complete_null_with_two_atom_menu": true,
+    "retained_reference_author_exposure_deviation": true,
+    "no_new_source_probe_or_model_output_read_for_this_reference_review": true
+  },
+  "reviewed_files_sha256": {
+    "data/task.json": "ccb9fcc1a36314e0223a8ecdb47761c892edfba6cf963f59499e07093c2b5f26",
+    "protocol/analysis-profile.json": "4f812ece34caddc3b76c940aee9914b7d7bc34e9c73a9c617cd552a08ba81603",
+    "protocol/prompt-prefix.txt": "7ab27452c5c41b9d524dc715de98976208d36661ccf2a39ae51072ce40607f92",
+    "data/reference-contract.json": "7290364901c0e4e9a145cb6233eb7f165051ae47638e5f67a505d96a187fcad3",
+    "data/reference-notes.md": "413883ad03bdd7c0e55d41e1eeaba9148e2acd95e9e7c3676988ecbdcfff0c4d",
+    "run_study.py": "5112b10c9d51c653115238e117e4ad284e98a0af046a9358e87cfabba32c1f05",
+    "request_contract.py": "d27b60ae4e3dffe9055cd35de58648f94f3046869b9bf620457d176c31358e02",
+    "tests/test_study.py": "cd7f04a47bbdbac7584f0072399806ece33548bedb44442f12c0d7aa837233de",
+    "tests/test_request_contract.py": "bfdac28528a76a90832cd6f3706f60c8a79b75cc28750c56dc4d2eb9ee9c8890",
+    "data/dataset-scope.json": "2e5a8d6b06434f46030a89b72bcf3c38c30bde7809d1dd3aa816310fecfdcf04",
+    "data/preparation.json": "450f5cae5a7ceeaab2d718177481dc8ba1bfd41b992990b086ed793667713562",
+    "data/probes.json": "b5d3771326ed8289458bdde17245d3417f0598b96be5e45ee449043fd4a9dcdc",
+    "protocol/binding-plan.json": "47fbf6a32216a4d56099f889373d51ef31cf6c69a957ac69d4928e47a53e4af2",
+    "protocol/study-plan.json": "3d4295611ebbc8270fe1ee20adf9fa0e05c3151582756e55c2c8550b01cfa537",
+    "protocol/response-schema.json": "8802b98a6f86dc86fd9dbb11aa32c8a3c8cef91cca2bacaa8e85663d304e38a3",
+    "binding-method-freeze.json": "d6b6d22749f552e8bc44fb172215cd87892a794f8764cb96bbb5f765c8364b9d",
+    "PREPARATION.md": "5ea91157345ab8b480a6ba8acd733092d303fdd715f2b04b9853591dfb858489",
+    "README.md": "6bfeb1b63ecfbf0aa149e54e4c23755689fd18c908c88e205cc54151d251fc58",
+    "results/status.json": "3e8b0c0e2e090b55737283a2832910637773d9f86a97914ee32aab8ccc43e9da"
+  },
+  "reference_review_created_utc": "2026-11-09T04:03:12.939945+00:00",
+  "stage": "pre_execution_harness_and_request_pass_pending_dataset_scope_approval",
+  "harness_checks": {
+    "exact_original_source_SHA_and_function_AST_identity_required": true,
+    "native_function_definitions_only_no_module_import": true,
+    "inspected_guarded_execution_not_claimed_general_sandbox": true,
+    "native_parameter_field_arguments_only_no_encoding_or_reward_conversion": true,
+    "structured_boolean_or_nonfinite_returns_rejected_not_coerced": true,
+    "target_exception_separate_from_scope_rejection": true,
+    "same_pinned_Semgrep_core_and_generic_rules_no_semantic_filter": true,
+    "helper_and_nested_function_coverage_retained_or_Unknown": true,
+    "global_analyzer_input_excludes_identity_provenance_probes_rewards_or_oracle": true,
+    "static_witness_check_has_no_observed_reward_argument": true,
+    "unknown_static_results_not_determinate_success": true,
+    "null_reference_or_model_contract_never_completed": true,
+    "unknown_concrete_oracles_not_scored_as_empty_set_agreement": true,
+    "no_eligible_oracle_pairs_yields_null_matches_not_zero_accuracy": true,
+    "sealed_model_condition_matches_raw_and_accepted_contract_by_type_preserving_hash": true,
+    "reference_condition_matches_prefreeze_reference_including_null": true,
+    "failed_or_abstained_model_must_have_null_condition": true,
+    "model_request_refuses_pending_scope_before_subprocess_or_output_creation": true,
+    "frozen_old_extraction_validator_and_event_audit_reused": true,
+    "selected_subset_remains_uncompleted": true,
+    "no_reference_contract_or_metric_policy_in_model_payload": true,
+    "model_response_seal_binds_condition_contracts": true
+  },
+  "independent_tests": {
+    "combined_test_methods_passed": 40,
+    "binding_methods": 18,
+    "study_harness_methods": 19,
+    "request_methods": 3,
+    "additional_binding_synthetics_previously_passed": 8,
+    "py_compile_passed": true,
+    "new_primary_model_or_target_or_native_CE_calls": 0,
+    "synthetic_execution_only": true
+  },
+  "resolved_harness_findings": [
+    {
+      "issue": "Null/Unknown oracle empty violated-ID lists could be counted as agreement and absent differences",
+      "fix": "Compare only determinate concrete oracles, carry eligible denominator, keep matches/differences null when unknown",
+      "synthetic_regression": "test_unknown_oracles_do_not_count_as_agreement_or_violation_difference"
+    },
+    {
+      "issue": "Condition contract hash alone did not establish equality to original sealed model output",
+      "fix": "Require sealed metadata/raw/accepted artifacts; exact type-preserving object hashes match llm condition; rejected/abstained remains null",
+      "synthetic_regressions": [
+        "test_condition_must_equal_sealed_raw_and_accepted_model_contract",
+        "test_raw_numeric_representation_is_not_silently_rewritten",
+        "test_failed_extraction_never_activates_raw_or_reference_contract"
+      ]
+    }
+  ],
+  "preconditions_not_satisfied": [
+    "Explicit user approval to include evaluation metrics rather than RL training reward is still pending in data/dataset-scope.json.",
+    "Original multi-project bare-token reward study scope has not been replaced silently; any approved HELM metric-policy diagnostic must explicitly state one project/task family and native evaluation status.",
+    "Main method/input/reference/model freeze and actual model/native/Semgrep predictions have not occurred.",
+    "Actual final source task-to-metric call-chain eligibility, implementation dedup and experiment outputs remain subject to later review."
+  ],
+  "dataset_candidate_limits": [
+    "Three candidate HELM metric implementations are correlated policies within one project, not three independent RL projects.",
+    "Metric leniency can be deliberate; strict Boolean IR incompatibility is not by itself an upstream bug.",
+    "The task packet has no explicit candidate True/False serialization rule; null researcher reference is retained without filling.",
+    "Probe candidates are str-only at the published post-strip metric call boundary; None is intentionally excluded.",
+    "Probes are systematic native-interface diagnostics, not claimed generated CivilComments rows.",
+    "Frozen source analyzer still lacks IfExp/helper semantic support; binding must not expand it."
+  ],
+  "execution_state_at_review": {
+    "evaluation_scorers_approved": false,
+    "model_calls": 0,
+    "primary_symbolic_calls": 0,
+    "native_Semgrep_scans": 0,
+    "primary_target_executions": 0,
+    "reference_contract": null
+  },
+  "last_documentation_review_utc": "2026-11-09T04:14:21.109480+00:00",
+  "preparation_document_claim_scan": {
+    "passed": true,
+    "explicit_pending_dataset_type_choice": true,
+    "no_completed_independent_test_or_gain_claim": true,
+    "user_binding_approval_separate_from_evaluation_dataset_approval": true,
+    "HELM_three_policies_one_project_one_template_disclosed": true,
+    "evaluation_metrics_not_relabelled_RL_training_rewards": true,
+    "original_multproject_scope_not_silently_treated_completed": true,
+    "native_poststrip_scalar_probe_boundary_and_None_exclusion": true,
+    "null_reference_and_profile_vs_candidate_format_distinction": true,
+    "complete_adapter_fewshot_context_may_contain_missing_evidence_caveat": true,
+    "reference_author_incidental_agent_status_exposure_disclosed": true,
+    "native_helper_execution_not_static_helper_support": true,
+    "future_strict_profile_metric_leniency_not_upstream_bug_claim": true,
+    "all_primary_call_counts_zero_and_metrics_null": true,
+    "synthetic40tests_not_primary_benchmark_results": true,
+    "method_data_freeze_and_model_response_seal_still_future": true
+  },
+  "handoff_state": "Concrete prepared candidate study with reviewed binding/harness; awaits explicit dataset-type choice. No primary execution approval inferred from elapsed time or default option."
+}

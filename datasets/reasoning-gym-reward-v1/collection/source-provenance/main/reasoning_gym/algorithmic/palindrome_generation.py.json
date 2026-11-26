@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "main",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "reasoning_gym/algorithmic/palindrome_generation.py",
+  "sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+  "git_blob_sha1": "9385c0893c9d42a7f6145c2f36ab276668a5fc51",
+  "bytes": 5181,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/palindrome_generation.py",
+  "local_path": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+  "fetched_utc": "2026-11-08T07:29:30.572241+00:00",
+  "git_blob_verified": true
+}

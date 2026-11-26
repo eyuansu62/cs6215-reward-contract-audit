@@ -1,0 +1,60 @@
+{
+  "completed_utc": "2026-11-13T02:53:54.867244+00:00",
+  "passed": true,
+  "scope": "Single precommitted controlled experiment; no real-project effectiveness claim",
+  "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16",
+  "model_response_freeze_sha256": "53e4bd50a17cca13638a47f67efa608377e984448050bc2e815cb3afdc0a3ec3",
+  "preflight_standard_combinations": 6,
+  "experimental_model_requests": 12,
+  "model_completed_turns": 12,
+  "model_retries": 0,
+  "analyzer_or_compiler_changes": false,
+  "outcome_based_prompt_rule_description_tuning": false,
+  "new_test_cases_passed": 21,
+  "prior_files_unchanged": 47285,
+  "independent_results_review_passed": true,
+  "figure_review_passed": true,
+  "LLM_vs_rules": {
+    "semantic_class_correct": [
+      12,
+      5
+    ],
+    "semantic_class_denominator": 12,
+    "witness_supported_correct": [
+      24,
+      3
+    ],
+    "downstream_denominator": 24,
+    "Unknown": [
+      0,
+      21
+    ],
+    "paired_wins": 21,
+    "paired_losses": 0,
+    "paired_ties": 3,
+    "all_wins_resolve_rule_abstention": true,
+    "extra_verified_alarms": 10,
+    "extra_necessary_condition_certificates": 11,
+    "U_administration_not_in_binary_denominator": true
+  },
+  "limits": [
+    "Synthetic authored policy descriptions and constructed source pairings",
+    "Only6distinct nonnull semantic/program combinations across4languagefamilies",
+    "One finite regex baseline developed on6directlywordedcards",
+    "Single sample perdescription, exactservice modelidentity notexposed",
+    "No measuredhuman-effort saving, newupstreambugs orreal-project generalization",
+    "No_alarm provesonlynecessary fullcreditobligation, notfullrewardpolicy"
+  ],
+  "report_and_evidence_sha256": {
+    "REPORT.md": "31e2aef94a75e3cc12628f3af179e6742c5facdff61b71b65fea5b348a605c6b",
+    "SUPPLEMENT.md": "8d38252e3c38928c543a67e150f043c8f306aba8a024391cbc896f96bd463d6d",
+    "README.md": "4b59e1645432c3e71e420adf1497a9f6166c4d7eebb20dac5d89c7695addb838",
+    "analysis/resource-ledger.json": "67e6c3f3c2e4b1da82f0ebd75246377fe26948658a052783790fc6cdb6b4fece",
+    "figures/downstream-comparison.png": "152897c9f722f893cfafdfa34da5302c5b10e38695f794673a4b098b2c550d26",
+    "audit/pre-model-review.json": "22d98d9375e16c96720e394def53d2da7da95dd9c5ec443cc6bdaf3840872856",
+    "audit/results-review.json": "28107c0d54b82aaa3bf5d2f1c14a2cc6b60d33a7fac9e59a8927961d0acb3e4b",
+    "audit/final-preservation.json": "c698b30ce2de556c903cabd44a6da95347b83e7418b9ea45c9e4541e1d0b137a",
+    "audit/figure-review.json": "2829bd4d4feca15da052e8a43b9dfd1af631c4f4c8b6bbbc0c57600d2128ee5e",
+    "results/comparison/summary.json": "7139f06ad12d0803cd63c7a14656e231641fc0900d190ca18bd62922853903db"
+  }
+}

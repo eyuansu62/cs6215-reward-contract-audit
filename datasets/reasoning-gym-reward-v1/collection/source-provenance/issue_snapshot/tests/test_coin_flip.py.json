@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "issue_snapshot",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "tests/test_coin_flip.py",
+  "sha256": "535173847fc263d828d97a04aa953f16d5b5034826a0fa3ef96f0fe81c8dafca",
+  "git_blob_sha1": "29f41abed451571afc31b033fa74a90565aa2d41",
+  "bytes": 3393,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_coin_flip.py",
+  "local_path": "upstream/issue_snapshot/tests/test_coin_flip.py",
+  "fetched_utc": "2026-11-08T07:29:18.037133+00:00",
+  "git_blob_verified": true
+}

@@ -1,0 +1,380 @@
+{
+  "id": "control-palindrome-validity-main",
+  "family_id": "PalindromeDataset.score_answer",
+  "kind": "normal_control",
+  "source_file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+  "source_sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+  "extracted_methods": [
+    {
+      "name": "score_answer",
+      "source_path": "extracted/control-palindrome-validity-main/score_answer.py",
+      "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+      "ast_sha256": "9c6fc330cea2c8195759eb0dab0a239a219c47992d317034c09beabf9e9e4c21",
+      "extraction": {
+        "qualified_name": "PalindromeDataset.score_answer",
+        "start_line": 97,
+        "end_line": 126,
+        "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+        "module_sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    }
+  ],
+  "evidence_level": "extracted_real_method_executed",
+  "all_source_expectations_matched": true,
+  "full_credit_violating_probes": 0,
+  "probes": [
+    {
+      "id": "p-valid-reference",
+      "role": "normal_control_probe",
+      "answer": "abba",
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-valid-reference"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "p-valid-alternative",
+      "role": "normal_control_probe",
+      "answer": "baab",
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-valid-alternative"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "p-normalized-valid",
+      "role": "normal_control_probe",
+      "answer": " ABBA ",
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-normalized-valid"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "p-wrong-order",
+      "role": "normal_control_probe",
+      "answer": "aabb",
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.02,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.02
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-wrong-order"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "p-wrong-letters",
+      "role": "normal_control_probe",
+      "answer": "aaaa",
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.05,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.05
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-wrong-letters"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "p-missing",
+      "role": "normal_control_probe",
+      "answer": null,
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-missing"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "p-empty",
+      "role": "normal_control_probe",
+      "answer": "",
+      "entry": {
+        "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+        "answer": "abba",
+        "metadata": {
+          "source_dataset": "palindrome_generation",
+          "letters": [
+            "a",
+            "a",
+            "b",
+            "b"
+          ],
+          "generated_palindrome": "abba",
+          "length": 4
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-palindrome-validity-main",
+        "--probe",
+        "p-empty"
+      ],
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "created_utc": "2026-11-08T15:25:22.951931+00:00",
+  "author": "Root AI-assisted independent semantic review before reading other reviewer decisions",
+  "basis": "Frozen reference, exact descriptions and raw responses only; no scorer/downstream outcomes read",
+  "reference_sha256": "0eab3063bbae805ed513f5816450dc0851f49667ff53e0d1c0ccabc3ec7392f0",
+  "model_response_freeze_sha256": "96548066b9f89362d1f05d08591e7bb0ec5427ca40dde9b93c86f357975f6ba5",
+  "field_groups": [
+    "answer_kind",
+    "boolean_tokens",
+    "collection_element_kind",
+    "order_requirement",
+    "output_format_requirements",
+    "full_credit_requirements",
+    "allowed_normalizations",
+    "numeric_tolerance",
+    "partial_credit_policy_and_details",
+    "not_specified"
+  ],
+  "cases": [
+    {
+      "task_id": "T01",
+      "fields": [
+        {
+          "field_group": "answer_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Boolean type and native True/False tokens agree."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "order_requirement",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "action": "uncertain",
+          "required_substantive_revision": null,
+          "reason": "The model says exactly the Boolean token. This could mean a stricter no-extra-text rule than the question states; the reference leaves explanatory text acceptance unspecified. Clarify/remove exactly before claiming strict equivalence. It may also be read as harmless restatement of the requested Boolean result, so record uncertainty rather than a definite error."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Consistent injective position-preserving mapping, repeated-character consistency, self-mapping and both truth outcomes all covered."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "not_specified",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "No case/whitespace normalization or reward policy invented; the open-ended uncertainty list need not enumerate every unstated parser choice."
+        }
+      ]
+    },
+    {
+      "task_id": "T02",
+      "fields": [
+        {
+          "field_group": "answer_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "order_requirement",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Per-letter multiplicities and single use imply exactly the specified multiset containment; Boolean output covers both outcomes."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "not_specified",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        }
+      ]
+    },
+    {
+      "task_id": "T03",
+      "fields": [
+        {
+          "field_group": "answer_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "order_requirement",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "All courses must be feasible and b_i precedes a_i, matching prerequisite direction."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "not_specified",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        }
+      ]
+    },
+    {
+      "task_id": "T04",
+      "fields": [
+        {
+          "field_group": "answer_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "A count is inherently integer, without asserting integer-only serialization."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "order_requirement",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Empty array correctly avoids inventing output serialization."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Closed interval count preserves endpoint inclusion."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "not_specified",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        }
+      ]
+    },
+    {
+      "task_id": "T05",
+      "fields": [
+        {
+          "field_group": "answer_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "String representations of numbers is semantically the same element type as reference string."
+        },
+        {
+          "field_group": "order_requirement",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Bracketed list with string elements matches the explicit wording without requiring a particular quote delimiter."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Sort the given numbers numerically as requested, keeping multiplicity; sorting the given collection implies no introduced elements."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "not_specified",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        }
+      ]
+    },
+    {
+      "task_id": "T06",
+      "fields": [
+        {
+          "field_group": "answer_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "boolean_tokens",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "collection_element_kind",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "order_requirement",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "output_format_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "full_credit_requirements",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Equivalent rational value and lowest terms are sufficient; explicit gcd expansion is not required."
+        },
+        {
+          "field_group": "allowed_normalizations",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "numeric_tolerance",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "partial_credit_policy_and_details",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Semantically consistent with the frozen description-only reference; no substantive revision established."
+        },
+        {
+          "field_group": "not_specified",
+          "action": "keep",
+          "required_substantive_revision": false,
+          "reason": "Unstated denominator/sign conventions, normalization, tolerance and reward policy appropriately remain unspecified."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "field_groups": 60,
+    "keep": 59,
+    "definite_substantive_revisions": 0,
+    "uncertain_groups": 1,
+    "possible_substantive_revision_range": [
+      0,
+      1
+    ]
+  },
+  "protocol_issues": [
+    {
+      "task_id": "T05",
+      "field": "evidence[4].quote",
+      "quote": "instance-specific 'ascending' or 'descending'",
+      "class": "allowed_input_field_provenance_mismatch",
+      "not_fabricated": true,
+      "explanation": "Exact quote appears in supplied placeholder notes, not question_description. Frozen validator and prompt require question-description substrings only. Preserve rejection; a future editorial fix could delete the redundant evidence item. No prompt retry or corrected prediction is used."
+    }
+  ],
+  "human_effort_measured": false,
+  "downstream_performance_inferred": false
+}

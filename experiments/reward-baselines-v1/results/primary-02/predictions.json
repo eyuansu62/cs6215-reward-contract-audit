@@ -1,0 +1,1367 @@
+{
+  "status": "complete",
+  "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "inputs_sha256": "af88535cfd0a330b5787fba4d9e1c1bf9cc2a782478ac53f6fc760da5d24d631",
+  "diagnostic": false,
+  "origin_output": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02",
+  "oracle_read_by_prediction": false,
+  "LLM_runs": 0,
+  "target_scorer_executed": false,
+  "units": [
+    {
+      "unit_id": "531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6",
+      "contract_id": "C_PROBABILITY_FULL",
+      "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [
+            {
+              "rule_id": "reward-prefix-shorter-length-ratio",
+              "function": "score_answer",
+              "span": [
+                35,
+                13,
+                35,
+                69
+              ],
+              "message": "Prefix-style credit divided by the shorter length can reach full credit for a strict prefix."
+            }
+          ],
+          "all_findings": [
+            {
+              "check_id": "reward-prefix-shorter-length-ratio",
+              "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py",
+              "start": {
+                "line": 35,
+                "col": 14,
+                "offset": 1043
+              },
+              "end": {
+                "line": 35,
+                "col": 70,
+                "offset": 1099
+              },
+              "extra": {
+                "metavars": {
+                  "$MATCH": {
+                    "start": {
+                      "line": 35,
+                      "col": 14,
+                      "offset": 1043
+                    },
+                    "end": {
+                      "line": 35,
+                      "col": 23,
+                      "offset": 1052
+                    },
+                    "abstract_content": "match_len"
+                  },
+                  "$LEFT": {
+                    "start": {
+                      "line": 35,
+                      "col": 34,
+                      "offset": 1063
+                    },
+                    "end": {
+                      "line": 35,
+                      "col": 51,
+                      "offset": 1080
+                    },
+                    "abstract_content": "oracle_answer_str"
+                  },
+                  "$RIGHT": {
+                    "start": {
+                      "line": 35,
+                      "col": 58,
+                      "offset": 1087
+                    },
+                    "end": {
+                      "line": 35,
+                      "col": 68,
+                      "offset": 1097
+                    },
+                    "abstract_content": "answer_str"
+                  }
+                },
+                "engine_kind": "OSS",
+                "is_ignored": false,
+                "message": "Prefix-style credit divided by the shorter length can reach full credit for a strict prefix.",
+                "severity": "WARNING",
+                "validation_state": "NO_VALIDATOR"
+              }
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "score_answer",
+                "source_span": [
+                  1,
+                  0,
+                  37,
+                  17
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  37,
+                  17
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                10,
+                8,
+                10,
+                21
+              ],
+              [
+                19,
+                8,
+                19,
+                21
+              ],
+              [
+                22,
+                8,
+                22,
+                18
+              ],
+              [
+                37,
+                4,
+                37,
+                17
+              ]
+            ],
+            "function_count": 1,
+            "return_count": 4,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6",
+          "contract_id": "C_PROBABILITY_FULL",
+          "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.594387
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "certificate": {
+            "proved_full_credit_paths": []
+          },
+          "evidence": [],
+          "source_spans": [],
+          "unsupported_reason": "unsupported evaluated assignment: unverified call: answer.replace",
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.001794
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py",
+        "rules": "raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/scan-rules.json",
+        "coverage_rules": "raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/coverage-rules.json"
+      }
+    },
+    {
+      "unit_id": "109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f",
+      "contract_id": "C_BOOLEAN_FULL",
+      "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [
+            {
+              "rule_id": "reward-bool-truthiness-equality",
+              "function": "score_answer",
+              "span": [
+                14,
+                30,
+                14,
+                67
+              ],
+              "message": "Truthiness equality can award full credit to unequal Boolean strings."
+            }
+          ],
+          "all_findings": [
+            {
+              "check_id": "reward-bool-truthiness-equality",
+              "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py",
+              "start": {
+                "line": 14,
+                "col": 31,
+                "offset": 481
+              },
+              "end": {
+                "line": 14,
+                "col": 68,
+                "offset": 518
+              },
+              "extra": {
+                "metavars": {
+                  "$CANDIDATE": {
+                    "start": {
+                      "line": 14,
+                      "col": 36,
+                      "offset": 486
+                    },
+                    "end": {
+                      "line": 14,
+                      "col": 42,
+                      "offset": 492
+                    },
+                    "abstract_content": "answer"
+                  },
+                  "$REFERENCE": {
+                    "start": {
+                      "line": 14,
+                      "col": 52,
+                      "offset": 502
+                    },
+                    "end": {
+                      "line": 14,
+                      "col": 67,
+                      "offset": 517
+                    },
+                    "abstract_content": "entry[\"answer\"]"
+                  }
+                },
+                "engine_kind": "OSS",
+                "is_ignored": false,
+                "message": "Truthiness equality can award full credit to unequal Boolean strings.",
+                "severity": "WARNING",
+                "validation_state": "NO_VALIDATOR"
+              }
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "score_answer",
+                "source_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                16,
+                8,
+                16,
+                18
+              ],
+              [
+                17,
+                4,
+                17,
+                14
+              ]
+            ],
+            "function_count": 1,
+            "return_count": 2,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f",
+          "contract_id": "C_BOOLEAN_FULL",
+          "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.490196
+        },
+        "symbolic": {
+          "verdict": "alarm",
+          "certificate": {
+            "kind": "native_boolean_path_counterexample",
+            "candidate_class": "fresh nonempty non-Boolean normalized string",
+            "trusted_reference": "True",
+            "argument": "The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed."
+          },
+          "evidence": [
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+              "required_truth": true,
+              "source_span": {
+                "line": 14,
+                "end_line": 14
+              }
+            }
+          ],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            },
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.000666
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/source.py",
+        "rules": "raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/scan-rules.json",
+        "coverage_rules": "raw/109a2d1b67e99f84aaefb9c7b946d021da2dad7d4413b8dabafc38e93daef95f/semgrep/coverage-rules.json"
+      }
+    },
+    {
+      "unit_id": "5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3",
+      "contract_id": "C_COMPLEX_FINITE",
+      "source_sha256": "7a17c19ddf7db86efaf06a0ce264b0b90a4bebd1342676673779a21bbd6f5956",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [
+            {
+              "rule_id": "reward-nonfinite-exp-clamp",
+              "function": "score_answer",
+              "span": [
+                69,
+                16,
+                69,
+                45
+              ],
+              "message": "Clamping an exponential with min(1.0, ...) can promote a nonfinite distance to full credit."
+            }
+          ],
+          "all_findings": [
+            {
+              "check_id": "reward-nonfinite-exp-clamp",
+              "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/source.py",
+              "start": {
+                "line": 69,
+                "col": 17,
+                "offset": 2334
+              },
+              "end": {
+                "line": 69,
+                "col": 46,
+                "offset": 2363
+              },
+              "extra": {
+                "metavars": {
+                  "$D": {
+                    "start": {
+                      "line": 69,
+                      "col": 36,
+                      "offset": 2353
+                    },
+                    "end": {
+                      "line": 69,
+                      "col": 44,
+                      "offset": 2361
+                    },
+                    "abstract_content": "distance",
+                    "propagated_value": {
+                      "svalue_start": {
+                        "line": 68,
+                        "col": 20,
+                        "offset": 2280
+                      },
+                      "svalue_end": {
+                        "line": 68,
+                        "col": 57,
+                        "offset": 2317
+                      },
+                      "svalue_abstract_content": "abs(student_result-expected_result)"
+                    }
+                  }
+                },
+                "engine_kind": "OSS",
+                "is_ignored": false,
+                "message": "Clamping an exponential with min(1.0, ...) can promote a nonfinite distance to full credit.",
+                "severity": "WARNING",
+                "validation_state": "NO_VALIDATOR"
+              }
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "parse_string_to_complex",
+                "source_span": [
+                  2,
+                  0,
+                  56,
+                  19
+                ],
+                "engine_span": [
+                  1,
+                  1,
+                  56,
+                  19
+                ]
+              },
+              {
+                "name": "score_answer",
+                "source_span": [
+                  58,
+                  0,
+                  73,
+                  18
+                ],
+                "engine_span": [
+                  58,
+                  0,
+                  73,
+                  18
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                4,
+                8,
+                4,
+                19
+              ],
+              [
+                19,
+                12,
+                19,
+                41
+              ],
+              [
+                23,
+                12,
+                23,
+                32
+              ],
+              [
+                25,
+                12,
+                25,
+                33
+              ],
+              [
+                39,
+                12,
+                39,
+                42
+              ],
+              [
+                44,
+                12,
+                44,
+                23
+              ],
+              [
+                53,
+                8,
+                53,
+                30
+              ],
+              [
+                56,
+                8,
+                56,
+                19
+              ],
+              [
+                61,
+                8,
+                61,
+                18
+              ],
+              [
+                70,
+                8,
+                70,
+                20
+              ],
+              [
+                73,
+                8,
+                73,
+                18
+              ]
+            ],
+            "function_count": 2,
+            "return_count": 11,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3",
+          "contract_id": "C_COMPLEX_FINITE",
+          "source_sha256": "7a17c19ddf7db86efaf06a0ce264b0b90a4bebd1342676673779a21bbd6f5956",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.501548
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "certificate": {
+            "proved_full_credit_paths": []
+          },
+          "evidence": [],
+          "source_spans": [],
+          "unsupported_reason": "unsupported evaluated assignment: unverified call: self.parse_string_to_complex",
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.000957
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/source.py",
+        "rules": "raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/scan-rules.json",
+        "coverage_rules": "raw/5c04001a2c4803f16ae9ace026b14104531f29221598b3addf20cace5d3f41f3/semgrep/coverage-rules.json"
+      }
+    },
+    {
+      "unit_id": "7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b",
+      "contract_id": "C_BOOLEAN_FULL",
+      "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "no_alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [],
+          "all_findings": [],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "score_answer",
+                "source_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  17,
+                  14
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                16,
+                8,
+                16,
+                18
+              ],
+              [
+                17,
+                4,
+                17,
+                14
+              ]
+            ],
+            "function_count": 1,
+            "return_count": 2,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b",
+          "contract_id": "C_BOOLEAN_FULL",
+          "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.500381
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "boolean_normalized_equality_implication",
+                "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 16,
+              "end_line": 16
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.000613
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/source.py",
+        "rules": "raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/scan-rules.json",
+        "coverage_rules": "raw/7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/coverage-rules.json"
+      }
+    },
+    {
+      "unit_id": "3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603",
+      "contract_id": "C_COMPLEX_FINITE",
+      "source_sha256": "c98e6fd7c1b26f62eacddc4e076e81731efcd6e8259195478cce3dd2ed17908a",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "no_alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [],
+          "all_findings": [],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "parse_string_to_complex",
+                "source_span": [
+                  2,
+                  0,
+                  56,
+                  19
+                ],
+                "engine_span": [
+                  1,
+                  1,
+                  56,
+                  19
+                ]
+              },
+              {
+                "name": "score_answer",
+                "source_span": [
+                  58,
+                  0,
+                  77,
+                  18
+                ],
+                "engine_span": [
+                  58,
+                  0,
+                  77,
+                  18
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                4,
+                8,
+                4,
+                19
+              ],
+              [
+                19,
+                12,
+                19,
+                41
+              ],
+              [
+                23,
+                12,
+                23,
+                32
+              ],
+              [
+                25,
+                12,
+                25,
+                33
+              ],
+              [
+                39,
+                12,
+                39,
+                42
+              ],
+              [
+                44,
+                12,
+                44,
+                23
+              ],
+              [
+                53,
+                8,
+                53,
+                30
+              ],
+              [
+                56,
+                8,
+                56,
+                19
+              ],
+              [
+                61,
+                8,
+                61,
+                18
+              ],
+              [
+                66,
+                12,
+                66,
+                22
+              ],
+              [
+                72,
+                12,
+                72,
+                22
+              ],
+              [
+                74,
+                8,
+                74,
+                34
+              ],
+              [
+                77,
+                8,
+                77,
+                18
+              ]
+            ],
+            "function_count": 2,
+            "return_count": 13,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603",
+          "contract_id": "C_COMPLEX_FINITE",
+          "source_sha256": "c98e6fd7c1b26f62eacddc4e076e81731efcd6e8259195478cce3dd2ed17908a",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.489227
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "certificate": {
+            "proved_full_credit_paths": []
+          },
+          "evidence": [],
+          "source_spans": [],
+          "unsupported_reason": "unsupported evaluated assignment: unverified call: self.parse_string_to_complex",
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.000977
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/source.py",
+        "rules": "raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/scan-rules.json",
+        "coverage_rules": "raw/3311e2407fffc4eb8c698bd9d238bfc980f5b9a91ec7bcc49889d17798ae1603/semgrep/coverage-rules.json"
+      }
+    },
+    {
+      "unit_id": "2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880",
+      "contract_id": "C_PALINDROME_FULL",
+      "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "no_alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [],
+          "all_findings": [],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "score_answer",
+                "source_span": [
+                  1,
+                  0,
+                  30,
+                  14
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  30,
+                  14
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                13,
+                8,
+                13,
+                18
+              ],
+              [
+                16,
+                8,
+                16,
+                18
+              ],
+              [
+                24,
+                8,
+                24,
+                19
+              ],
+              [
+                28,
+                8,
+                28,
+                19
+              ],
+              [
+                30,
+                4,
+                30,
+                14
+              ]
+            ],
+            "function_count": 1,
+            "return_count": 5,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880",
+          "contract_id": "C_PALINDROME_FULL",
+          "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.498044
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "palindrome_and_exact_multiset_implication",
+                "argument": "Every full-credit path has equality to the reverse of the normalized candidate and equality of sorted normalized candidate/trusted letters. Both contract requirements follow.",
+                "return_span": {
+                  "line": 30,
+                  "end_line": 30
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is None or not isinstance(answer, str)",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 12,
+                      "end_line": 12
+                    }
+                  },
+                  {
+                    "condition": "answer is None or not isinstance(answer, str)",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 12,
+                      "end_line": 12
+                    }
+                  },
+                  {
+                    "condition": "answer == ''",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 15,
+                      "end_line": 15
+                    }
+                  },
+                  {
+                    "condition": "answer != answer[::-1]",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 23,
+                      "end_line": 23
+                    }
+                  },
+                  {
+                    "condition": "sorted(answer) != sorted(expected_letters)",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 27,
+                      "end_line": 27
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 30,
+              "end_line": 30
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.000968
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/source.py",
+        "rules": "raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/scan-rules.json",
+        "coverage_rules": "raw/2c4724b637de2983f40507087b66c0d687a6bc6889700cf0b3edb6bc59ca8880/semgrep/coverage-rules.json"
+      }
+    },
+    {
+      "unit_id": "271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393",
+      "contract_id": "C_PRIME_FACTORS_FULL",
+      "source_sha256": "24f8f6872817b7f65f2c1bd1a64965d0f14eedd83ec75cdfbc86cbce709e158b",
+      "methods": {
+        "semgrep": {
+          "method": "semgrep-ce-fixed-risky-idioms-v1",
+          "verdict": "no_alarm",
+          "status": "complete",
+          "errors": [],
+          "findings": [],
+          "all_findings": [],
+          "coverage": {
+            "status": "complete",
+            "functions": [
+              {
+                "name": "_normalize_answer",
+                "source_span": [
+                  1,
+                  0,
+                  6,
+                  97
+                ],
+                "engine_span": [
+                  1,
+                  0,
+                  6,
+                  97
+                ]
+              },
+              {
+                "name": "score_answer",
+                "source_span": [
+                  8,
+                  0,
+                  21,
+                  17
+                ],
+                "engine_span": [
+                  8,
+                  0,
+                  21,
+                  17
+                ]
+              }
+            ],
+            "return_spans": [
+              [
+                4,
+                8,
+                4,
+                17
+              ],
+              [
+                6,
+                4,
+                6,
+                97
+              ],
+              [
+                21,
+                4,
+                21,
+                17
+              ]
+            ],
+            "function_count": 2,
+            "return_count": 3,
+            "semantics_proved": false,
+            "mode": "search",
+            "source_rewritten": false,
+            "command": [
+              "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+              "-json_nodots",
+              "-j",
+              "1",
+              "-timeout",
+              "10",
+              "-lang",
+              "python",
+              "-rules",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/coverage-rules.json",
+              "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/source.py"
+            ],
+            "rule_sha256": "d930f6055e0f5face2f75d487098571f52b11d95e386c40a63af5f34735265d5"
+          },
+          "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+          "explanation": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "source_executed": false,
+          "source_rewritten": false,
+          "unit_id": "271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393",
+          "contract_id": "C_PRIME_FACTORS_FULL",
+          "source_sha256": "24f8f6872817b7f65f2c1bd1a64965d0f14eedd83ec75cdfbc86cbce709e158b",
+          "engine": {
+            "version": "semgrep-core version: 1.183.0 (08c107344d)",
+            "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+            "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "metrics": "off"
+          },
+          "command": [
+            "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+            "-json_nodots",
+            "-j",
+            "1",
+            "-timeout",
+            "10",
+            "-lang",
+            "python",
+            "-rules",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/scan-rules.json",
+            "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-02/raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/source.py"
+          ],
+          "rule_sha256": "7db489abf43d2fd01f44895bfba30358d300853c9fc5d2b0e65073143d244361",
+          "wall_seconds": 0.494096
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "certificate": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "source_certified_prime_factor_multiset_equality",
+                "argument": "Source-certified parsing preserves every integer factor and multiplicity. Equality to the trusted prime-factor multiset implies prime factors and equal reference product.",
+                "helper_certificate": {
+                  "kind": "integer_factor_multiset_parser",
+                  "helper": "_normalize_answer",
+                  "source_span": {
+                    "line": 1,
+                    "end_line": 6
+                  },
+                  "grammar": "split ×; strip; discard empty; native int; sorted, multiplicity preserved"
+                },
+                "return_span": {
+                  "line": 14,
+                  "end_line": 14
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 4,
+                      "end_line": 4
+                    }
+                  },
+                  {
+                    "condition": "oracle_answer_parsed == answer_parsed",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 7,
+                      "end_line": 7
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          },
+          "evidence": [],
+          "source_spans": [
+            {
+              "line": 14,
+              "end_line": 14
+            }
+          ],
+          "unsupported_reason": null,
+          "method": "bounded-static-source-path-certificates-v1",
+          "wall_seconds": 0.000976
+        }
+      },
+      "semgrep_artifacts": {
+        "source": "raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/source.py",
+        "rules": "raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/scan-rules.json",
+        "coverage_rules": "raw/271e61f45761595ec8e1ac1f74bd5dfadbddba510160b4c5597565518e335393/semgrep/coverage-rules.json"
+      }
+    }
+  ]
+}

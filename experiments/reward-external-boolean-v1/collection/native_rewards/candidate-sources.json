@@ -1,0 +1,594 @@
+{
+  "created_utc": "2026-11-09T02:41:19.620409+00:00",
+  "fixed_source_files": 12,
+  "records": [
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/gsm8k.py",
+      "source_url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/verl/utils/reward_score/gsm8k.py",
+      "source_sha256": "497c6e32b708d0bc8803b5a048ca5983de7756eb9c146abdc56e6f5d28767189",
+      "git_blob_sha1": "98a8c24dc8c66922ec0518ee31072691db81d4e5",
+      "source_local": "sources/volcengine__verl/verl/utils/reward_score/gsm8k.py",
+      "definitions": [
+        {
+          "name": "extract_solution",
+          "async": false,
+          "parameters": [
+            "solution_str",
+            "method"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            20,
+            49
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "compute_score",
+          "async": false,
+          "parameters": [
+            "solution_str",
+            "ground_truth",
+            "method",
+            "format_score",
+            "score"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            52,
+            72
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/search_r1_like_qa_em.py",
+      "source_url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/verl/utils/reward_score/search_r1_like_qa_em.py",
+      "source_sha256": "8070e4d07719f23e626968b983c597918c73d15c6ab5b09c5346e7311d0cac83",
+      "git_blob_sha1": "56782fcb34329ba23a77881237c8a58478098a13",
+      "source_local": "sources/volcengine__verl/verl/utils/reward_score/search_r1_like_qa_em.py",
+      "definitions": [
+        {
+          "name": "extract_solution",
+          "async": false,
+          "parameters": [
+            "solution_str"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            66,
+            86
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "compute_score",
+          "async": false,
+          "parameters": [
+            "solution_str",
+            "ground_truth",
+            "method",
+            "format_score",
+            "score"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            96,
+            128
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "compute_score_subem",
+          "async": false,
+          "parameters": [
+            "solution_str",
+            "ground_truth",
+            "method",
+            "format_score",
+            "score"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            131,
+            156
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "verl/utils/reward_score/math_verify.py",
+      "source_url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/verl/utils/reward_score/math_verify.py",
+      "source_sha256": "1242011cddc041ea6cb19fc9a1872ebab742d8ae7e8ebd3342f6b3b8b6e2ba15",
+      "git_blob_sha1": "7071dacc02b86eba67ddf3b18b0faec863536f62",
+      "source_local": "sources/volcengine__verl/verl/utils/reward_score/math_verify.py",
+      "definitions": [
+        {
+          "name": "compute_score",
+          "async": false,
+          "parameters": [
+            "model_output",
+            "ground_truth",
+            "timeout_score",
+            "timeout"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            57,
+            67
+          ],
+          "return_annotation": "float",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/math.py",
+      "source_url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/examples/reward_function/math.py",
+      "source_sha256": "52a2fa60fca2a47466eb1d622357249f6d787699ff4b274782641d5d7eace134",
+      "git_blob_sha1": "f983357ef942233b1c41b231862ed78f97c5e3c2",
+      "source_local": "sources/hiyouga__EasyR1/examples/reward_function/math.py",
+      "definitions": [
+        {
+          "name": "format_reward",
+          "async": false,
+          "parameters": [
+            "response"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            26,
+            29
+          ],
+          "return_annotation": "float",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "accuracy_reward",
+          "async": false,
+          "parameters": [
+            "response",
+            "ground_truth"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            32,
+            34
+          ],
+          "return_annotation": "float",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "compute_score",
+          "async": false,
+          "parameters": [
+            "reward_inputs",
+            "format_weight"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            37,
+            51
+          ],
+          "return_annotation": "list[dict[str, float]]",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/dapo.py",
+      "source_url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/examples/reward_function/dapo.py",
+      "source_sha256": "0f8ec9be155051859157184f08d91a9a6f7f8aae28b1dcce9f91bbbd70633c67",
+      "git_blob_sha1": "fc1cc4d21c04eb816a1a94ed478789f70b370943",
+      "source_local": "sources/hiyouga__EasyR1/examples/reward_function/dapo.py",
+      "definitions": [
+        {
+          "name": "accuracy_reward",
+          "async": false,
+          "parameters": [
+            "response",
+            "ground_truth"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            124,
+            130
+          ],
+          "return_annotation": "float",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "compute_score",
+          "async": false,
+          "parameters": [
+            "reward_inputs",
+            "max_response_length",
+            "overlong_buffer_length",
+            "overlong_penalty_factor"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            143,
+            165
+          ],
+          "return_annotation": "list[dict[str, float]]",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "examples/reward_function/r1v.py",
+      "source_url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/examples/reward_function/r1v.py",
+      "source_sha256": "694c4197e8dd5088732b702dc4796f80a10319a9abfc125d2bc3c024aa097c5b",
+      "git_blob_sha1": "bd6104e18c758bcf4912c6896d513e50cd22f13f",
+      "source_local": "sources/hiyouga__EasyR1/examples/reward_function/r1v.py",
+      "definitions": [
+        {
+          "name": "format_reward",
+          "async": false,
+          "parameters": [
+            "response"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            26,
+            29
+          ],
+          "return_annotation": "float",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "accuracy_reward",
+          "async": false,
+          "parameters": [
+            "response",
+            "ground_truth"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            32,
+            42
+          ],
+          "return_annotation": "float",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "compute_score",
+          "async": false,
+          "parameters": [
+            "reward_input",
+            "format_weight"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            45,
+            52
+          ],
+          "return_annotation": "dict[str, float]",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "examples/python/reward_func.py",
+      "source_url": "https://raw.githubusercontent.com/OpenRLHF/OpenRLHF/26494490bc237f6c3af62dab6117e6bbb0a78dba/examples/python/reward_func.py",
+      "source_sha256": "2022dd85be9befba57d5110d5d6b6932cebb6aa08bed8dcab9d9890a7faf4086",
+      "git_blob_sha1": "98282f0a4e08fd8bdedb1d66126cc6a7583980e3",
+      "source_local": "sources/OpenRLHF__OpenRLHF/examples/python/reward_func.py",
+      "definitions": [
+        {
+          "name": "reward_func",
+          "async": false,
+          "parameters": [
+            "queries",
+            "prompts",
+            "labels"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            4,
+            31
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "examples/python/math_reward_func.py",
+      "source_url": "https://raw.githubusercontent.com/OpenRLHF/OpenRLHF/26494490bc237f6c3af62dab6117e6bbb0a78dba/examples/python/math_reward_func.py",
+      "source_sha256": "f21ff003d31e7436710099eae02d46db98d129e27301d93dfabf1e0048241214",
+      "git_blob_sha1": "5f5d5a0f8b63a3c6c47c0529e93ae16adecf2183",
+      "source_local": "sources/OpenRLHF__OpenRLHF/examples/python/math_reward_func.py",
+      "definitions": [
+        {
+          "name": "reward_func",
+          "async": false,
+          "parameters": [
+            "queries",
+            "prompts",
+            "labels"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            13,
+            52
+          ],
+          "return_annotation": "dict",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "environments/eval_environments/boolq_eval.py",
+      "source_url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/environments/eval_environments/boolq_eval.py",
+      "source_sha256": "5cf4973db93b7910f97e766ed912ae020fd96684457180661d73adbbbc9f4f38",
+      "git_blob_sha1": "7610d7196bf7b87645171f181e90be64ea4452bd",
+      "source_local": "sources/NousResearch__atropos/environments/eval_environments/boolq_eval.py",
+      "definitions": [
+        {
+          "name": "_format_prompt",
+          "async": false,
+          "parameters": [
+            "self",
+            "item"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            187,
+            208
+          ],
+          "return_annotation": "str",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "_extract_answer",
+          "async": false,
+          "parameters": [
+            "self",
+            "response"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            218,
+            307
+          ],
+          "return_annotation": "Tuple[Optional[str], str]",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "_evaluate_single_item",
+          "async": true,
+          "parameters": [
+            "self",
+            "item",
+            "idx"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            338,
+            384
+          ],
+          "return_annotation": "Dict",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "evaluate",
+          "async": true,
+          "parameters": [
+            "self"
+          ],
+          "vararg": "args",
+          "kwarg": "kwargs",
+          "line_span": [
+            386,
+            467
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "score",
+          "async": true,
+          "parameters": [
+            "self"
+          ],
+          "vararg": "args",
+          "kwarg": "kwargs",
+          "line_span": [
+            482,
+            483
+          ],
+          "return_annotation": null,
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/accuracy_reward.py",
+      "source_url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/atroposlib/envs/reward_fns/accuracy_reward.py",
+      "source_sha256": "1e6e4579a624720c40ef3053a946445e34716185244fd64ebaeb6ff61eb25e5f",
+      "git_blob_sha1": "4c53f16893107d2341c7780eddefc01dfa79f1df",
+      "source_local": "sources/NousResearch__atropos/atroposlib/envs/reward_fns/accuracy_reward.py",
+      "definitions": [
+        {
+          "name": "_extract_final_answer",
+          "async": false,
+          "parameters": [
+            "text"
+          ],
+          "vararg": null,
+          "kwarg": null,
+          "line_span": [
+            21,
+            45
+          ],
+          "return_annotation": "str",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "accuracy_reward",
+          "async": false,
+          "parameters": [
+            "completions",
+            "solution",
+            "ground_truth"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            275,
+            296
+          ],
+          "return_annotation": "List[float]",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/format_reward.py",
+      "source_url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/atroposlib/envs/reward_fns/format_reward.py",
+      "source_sha256": "a050d0fd81217eda45580900ca47fcc75d5caebe30f9acd68963aaaf01ec969e",
+      "git_blob_sha1": "21a59a513a9b38c1dac3f78ca4298d8d338af0a3",
+      "source_local": "sources/NousResearch__atropos/atroposlib/envs/reward_fns/format_reward.py",
+      "definitions": [
+        {
+          "name": "format_reward",
+          "async": false,
+          "parameters": [
+            "completions",
+            "preferred_tags"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            90,
+            105
+          ],
+          "return_annotation": "List[float]",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "atroposlib/envs/reward_fns/r1_reward.py",
+      "source_url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/atroposlib/envs/reward_fns/r1_reward.py",
+      "source_sha256": "4d4a91fcab5a4331ed0b2f32f2b38b9dc2ef3ba6fa3f4859e516dfe59df9e2ac",
+      "git_blob_sha1": "8b9f858df2c0accddfe8c0cca5ad2d856ea18c18",
+      "source_local": "sources/NousResearch__atropos/atroposlib/envs/reward_fns/r1_reward.py",
+      "definitions": [
+        {
+          "name": "format_reasoning_reward",
+          "async": false,
+          "parameters": [
+            "completions"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            315,
+            327
+          ],
+          "return_annotation": "List[float]",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "accuracy_reward",
+          "async": false,
+          "parameters": [
+            "completions",
+            "solution"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            330,
+            345
+          ],
+          "return_annotation": "List[float]",
+          "has_exact_answer_entry_parameters": false
+        },
+        {
+          "name": "r1_reward",
+          "async": false,
+          "parameters": [
+            "completions",
+            "solution"
+          ],
+          "vararg": null,
+          "kwarg": "kwargs",
+          "line_span": [
+            348,
+            363
+          ],
+          "return_annotation": "List[float]",
+          "has_exact_answer_entry_parameters": false
+        }
+      ],
+      "has_any_native_exact_candidate": false
+    }
+  ],
+  "target_execution": false,
+  "model_or_analyzer_runs": 0
+}

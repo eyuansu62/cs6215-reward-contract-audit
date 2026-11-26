@@ -1,0 +1,26 @@
+test_determinism_and_input_immutability (test_rule_extractor.DevelopmentRulesTest.test_determinism_and_input_immutability) ... ok
+test_development_labels_and_raw_response_shape (test_rule_extractor.DevelopmentRulesTest.test_development_labels_and_raw_response_shape) ... ok
+test_documented_source_hash (test_rule_extractor.DevelopmentRulesTest.test_documented_source_hash) ... ok
+test_six_balanced_authored_cards (test_rule_extractor.DevelopmentRulesTest.test_six_balanced_authored_cards) ... ok
+test_binary_unknown_and_semantic_fn_are_distinct (test_study_scoring.AggregationTests.test_binary_unknown_and_semantic_fn_are_distinct) ... ok
+test_correct_reference_has_twenty_four_binary_and_twelve_administrative_cells (test_study_scoring.AggregationTests.test_correct_reference_has_twenty_four_binary_and_twelve_administrative_cells) ... ok
+test_invalid_u_is_not_a_correct_abstention_or_gain (test_study_scoring.AggregationTests.test_invalid_u_is_not_a_correct_abstention_or_gain) ... ok
+test_lucky_true_positive_without_gold_violating_witness_is_not_supported (test_study_scoring.AggregationTests.test_lucky_true_positive_without_gold_violating_witness_is_not_supported) ... ok
+test_null_never_receives_twenty_four_free_true_negatives (test_study_scoring.AggregationTests.test_null_never_receives_twenty_four_free_true_negatives) ... ok
+test_unjustified_u_contracts_are_administrative_not_false_positives (test_study_scoring.AggregationTests.test_unjustified_u_contracts_are_administrative_not_false_positives) ... ok
+test_failed_partial_json_is_retained_as_invalid_without_parsing (test_study_scoring.ExtractionTests.test_failed_partial_json_is_retained_as_invalid_without_parsing) ... ok
+test_metadata_abstention_cannot_cover_extracted_contract (test_study_scoring.ExtractionTests.test_metadata_abstention_cannot_cover_extracted_contract) ... ok
+test_nominal_success_with_malformed_json_becomes_invalid (test_study_scoring.ExtractionTests.test_nominal_success_with_malformed_json_becomes_invalid) ... ok
+test_raw_response_and_accepted_contract_must_agree (test_study_scoring.ExtractionTests.test_raw_response_and_accepted_contract_must_agree) ... ok
+test_valid_abstention_and_invalid_output_are_not_conflated (test_study_scoring.ExtractionTests.test_valid_abstention_and_invalid_output_are_not_conflated) ... ok
+test_case_and_boundary_whitespace_are_normalized (test_study_scoring.IndependentOracleTests.test_case_and_boundary_whitespace_are_normalized) ... ok
+test_e_and_e_plus_v_have_one_semantic_class_without_rewriting (test_study_scoring.IndependentOracleTests.test_e_and_e_plus_v_have_one_semantic_class_without_rewriting) ... ok
+test_native_type_guards (test_study_scoring.IndependentOracleTests.test_native_type_guards) ... ok
+test_none_and_fresh_generated_tokens_are_invalid (test_study_scoring.IndependentOracleTests.test_none_and_fresh_generated_tokens_are_invalid) ... ok
+test_only_active_ids_are_evaluated_and_threshold_matters (test_study_scoring.IndependentOracleTests.test_only_active_ids_are_evaluated_and_threshold_matters) ... ok
+test_opposite_label_is_valid_but_not_equal (test_study_scoring.IndependentOracleTests.test_opposite_label_is_valid_but_not_equal) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.007s
+
+OK

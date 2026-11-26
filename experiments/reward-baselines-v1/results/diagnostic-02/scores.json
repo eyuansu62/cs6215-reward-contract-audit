@@ -1,0 +1,294 @@
+{
+  "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "predictions_sha256": "b9141ce9bafcd3622a36598e0432c7546597577e2258e0f3cdc601fd85b45ef3",
+  "oracle_sha256": "98d6d7a3d6f36a94484fdf7ab708c6522c218fffe1a2bfc696f03cea5941a7fe",
+  "diagnostic": true,
+  "overall": {
+    "semgrep": {
+      "tp": 2,
+      "fp": 3,
+      "fn": 1,
+      "tn": 2,
+      "unknown_positive": 0,
+      "unknown_negative": 0,
+      "total": 8,
+      "unknown": 0,
+      "correct": 4,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "precision": 0.4,
+      "recall_with_unknown": 0.6666666666666666,
+      "f1_with_unknown": 0.5
+    },
+    "symbolic": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 3,
+      "unknown_positive": 2,
+      "unknown_negative": 2,
+      "total": 8,
+      "unknown": 4,
+      "correct": 4,
+      "accuracy": 0.5,
+      "coverage": 0.5,
+      "precision": 1.0,
+      "recall_with_unknown": 0.3333333333333333,
+      "f1_with_unknown": 0.5
+    }
+  },
+  "symbolic_paired_vs_semgrep": {
+    "gain_ids": [
+      "diag-bool-semantic-guard",
+      "diag-dead-truthiness"
+    ],
+    "loss_ids": [
+      "diag-finite-adjacent-guard",
+      "diag-finite-rebound-guard"
+    ]
+  },
+  "cases": [
+    {
+      "id": "diag-bool-truthiness",
+      "function_family": "diag-bool-truthiness",
+      "contract_id": "C_BOOLEAN_FULL",
+      "expected_violation": true,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "native_boolean_path_counterexample",
+            "candidate_class": "fresh nonempty non-Boolean normalized string",
+            "trusted_reference": "True",
+            "argument": "The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed."
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-bool-semantic-guard",
+      "function_family": "diag-bool-semantic-guard",
+      "contract_id": "C_BOOLEAN_FULL",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": false,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "boolean_normalized_equality_implication",
+                "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.",
+                "return_span": {
+                  "line": 4,
+                  "end_line": 4
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 2,
+                      "end_line": 2
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and bool(answer) == bool(entry['answer'])",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 2,
+                      "end_line": 2
+                    }
+                  },
+                  {
+                    "condition": "answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 3,
+                      "end_line": 3
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-dead-truthiness",
+      "function_family": "diag-dead-truthiness",
+      "contract_id": "C_BOOLEAN_FULL",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": false,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 0,
+            "paths": [],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-finite-adjacent-guard",
+      "function_family": "diag-finite-adjacent-guard",
+      "contract_id": "C_COMPLEX_FINITE",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: abs",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-finite-nonadjacent-guard",
+      "function_family": "diag-finite-nonadjacent-guard",
+      "contract_id": "C_COMPLEX_FINITE",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": false,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: abs",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-finite-rebound-guard",
+      "function_family": "diag-finite-rebound-guard",
+      "contract_id": "C_COMPLEX_FINITE",
+      "expected_violation": true,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated condition: unverified call: math.isfinite",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-finite-else-full",
+      "function_family": "diag-finite-else-full",
+      "contract_id": "C_COMPLEX_FINITE",
+      "expected_violation": true,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": false,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: abs",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "diag-legitimate-partial",
+      "function_family": "diag-legitimate-partial",
+      "contract_id": "C_PALINDROME_FULL",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 0,
+            "paths": [],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          }
+        }
+      }
+    }
+  ],
+  "source_exposed_development": true,
+  "LLM_tested": false,
+  "qualification": "NoAlarm is operational no-warning/source-certificate status, not arbitrary-Python safety. Unknowns remain in denominators; synthetic diagnostics separate."
+}

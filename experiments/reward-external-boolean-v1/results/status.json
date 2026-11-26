@@ -1,0 +1,24 @@
+{
+  "status": "approved_evaluation_policy_study_executed",
+  "source_implementations": 3,
+  "source_projects": 1,
+  "task_templates": 1,
+  "successful_model_requests": 1,
+  "reference_contract": null,
+  "model_contract_selected": [
+    "valid_boolean_token",
+    "equals_reference"
+  ],
+  "primary_native_executions": 42,
+  "primary_Semgrep_scans": 3,
+  "global_symbolic_condition_results": 6,
+  "condition_witness_results": 84,
+  "replay_native_executions": 42,
+  "replay_Semgrep_scans": 3,
+  "replay_same_model_response": true,
+  "new_model_requests_by_replay": 0,
+  "comparison_eligible_pairs": 0,
+  "gain_metrics": null,
+  "upstream_bug_metrics": null,
+  "old_frozen_results_modified": false
+}

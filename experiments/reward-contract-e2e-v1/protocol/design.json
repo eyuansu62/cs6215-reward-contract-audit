@@ -1,0 +1,48 @@
+{
+  "study": "one-known-case-description-to-explicit-obligation-end-to-end-v1",
+  "scope": "One known #544/PR561 development case. No fresh task/generalization/LLM advantage experiment. No analyzer or obligation semantic changes.",
+  "flow": [
+    "Frozen actual task prompt plus fixed analysis environment",
+    "One fresh isolated LLM request selecting explicit obligations",
+    "Strict schema/domain/evidence validation with no repairs or defaults",
+    "Unmodified v2 compile/analyze/check_witness",
+    "Same six source/return observations and per-obligation reference comparison"
+  ],
+  "model_input": [
+    "opaque B01 ID",
+    "exact task question template with named placeholders",
+    "placeholder notes",
+    "fixed native environment/profile, supplied by researcher",
+    "generic two-obligation vocabulary and schema"
+  ],
+  "model_excluded": [
+    "scorer/helpers/generator code",
+    "issue/repair identities/status",
+    "source paths",
+    "reference contract/selected reference obligations",
+    "concrete candidate/reference answers",
+    "curated probe values/reward observations",
+    "baseline predictions"
+  ],
+  "reference": "Existing reviewed v2 fullcontract copied before model; AI-assisted researcher reference, not independent human annotation.",
+  "one_shot": "One successful model request; no response-driven prompt retries. Pre-model transport failures may retry same frozen prompt preserving log.",
+  "acceptance": "Preserve selected list exactly. A schema-valid contract missing equality remains missing equality. Status abstain, invalid evidence/IR, empty/unknown/duplicate obligations causeUnknown, never complete from reference or oldC_BOOLEAN_FULL.",
+  "comparison": [
+    "contract field/active obligation equality and omissions relative reference",
+    "actual compiled IR equals raw model contract, with no added obligations",
+    "global per-active-obligation results",
+    "per known witness predicate truth, reward>=1 flags, violated IDs",
+    "reference-violated IDs missed due omitted obligations; not automatically imputed into modelcontract"
+  ],
+  "counts": "2 versions x 3 witnesses x 2 conditions=12 correlated rows; one bug family. Global4condition/versionrows. Replays reuse saved model response.",
+  "known_limits": [
+    "Only two prompted Boolean obligation options",
+    "All structural profile fields including normalization/threshold supplied",
+    "same public known task, possible model prior knowledge",
+    "exact model identity unknown if service does not report",
+    "predicate implementations reused across static validation/oracle, manualexpectedreference+native returns retained",
+    "No randomized human-effort or RL evaluation"
+  ],
+  "no_new_dependencies": true,
+  "no_new_analyzer_functions": true
+}

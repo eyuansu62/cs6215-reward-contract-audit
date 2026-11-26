@@ -1,0 +1,18 @@
+{
+  "validation_only_no_target_execution_or_contract_analysis": true,
+  "rows": [
+    {
+      "id": "H01",
+      "native_source_guard": "passed"
+    },
+    {
+      "id": "H02",
+      "native_source_guard": "passed"
+    },
+    {
+      "id": "H03",
+      "native_source_guard": "rejected",
+      "error": "ValueError: Native attribute outside inspected whitelist: startswith"
+    }
+  ]
+}

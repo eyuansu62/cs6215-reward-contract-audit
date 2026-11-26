@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$HOME/.local/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--json",
+    "--output-schema",
+    "$TMPDIR/rg-contract-blind-py8474kx/schema.json",
+    "--output-last-message",
+    "$ARTIFACT_ROOT/experiments/reward-contract-extraction-v1/results/extraction-02/T03/response.json",
+    "--cd",
+    "$TMPDIR/rg-contract-blind-py8474kx",
+    "-"
+  ],
+  "stdin_sha256": "cc9fb67f59185b8d04b89a5e40285c198a87821b984cef5977a768676ca9550a"
+}

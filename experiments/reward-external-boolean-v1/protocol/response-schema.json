@@ -1,0 +1,149 @@
+{
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "extracted",
+        "abstain"
+      ]
+    },
+    "contract": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "boolean-obligations-v1"
+              ]
+            },
+            "candidate_arg": {
+              "type": "string",
+              "enum": [
+                "answer"
+              ]
+            },
+            "reference_arg": {
+              "type": "string",
+              "enum": [
+                "entry"
+              ]
+            },
+            "reference_key": {
+              "type": "string",
+              "enum": [
+                "answer"
+              ]
+            },
+            "candidate_domain": {
+              "type": "string",
+              "enum": [
+                "native_str_or_none"
+              ]
+            },
+            "trusted_reference": {
+              "type": "string",
+              "enum": [
+                "canonical_True_False"
+              ]
+            },
+            "normalization": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "strip",
+                  "lower"
+                ]
+              }
+            },
+            "full_credit_threshold": {
+              "type": "number",
+              "enum": [
+                1.0
+              ]
+            },
+            "obligations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "valid_boolean_token",
+                  "equals_reference"
+                ]
+              }
+            }
+          },
+          "required": [
+            "schema",
+            "candidate_arg",
+            "reference_arg",
+            "reference_key",
+            "candidate_domain",
+            "trusted_reference",
+            "normalization",
+            "full_credit_threshold",
+            "obligations"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "obligation_id": {
+            "type": "string",
+            "enum": [
+              "valid_boolean_token",
+              "equals_reference"
+            ]
+          },
+          "quote": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "obligation_id",
+          "quote",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "not_specified": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "abstention_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "task_id",
+    "status",
+    "contract",
+    "evidence",
+    "not_specified",
+    "abstention_reason"
+  ],
+  "additionalProperties": false
+}

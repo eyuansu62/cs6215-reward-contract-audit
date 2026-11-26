@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-09T04:17:06.178803+00:00",
+  "reason": "Explicit user data-type approval after external native RL reward screening did not establish eligible endpoints.",
+  "supersedes_scope_fields_in": "protocol/study-plan.json (historical original goal retained)",
+  "approved_scope": {
+    "evaluation_scorers_approved": true,
+    "status": "explicitly_approved_before_primary_execution",
+    "user_message": "纳入试一下",
+    "approval_context": "In response to adopting HELM evaluation scalar metrics, not claiming established RL-training rewards. Earlier user separately approved native parameter/field bindings.",
+    "source_project": "stanford-crfm/helm",
+    "commit": "63754d05db6f874e41a395880fb573890a13e791",
+    "selected_metrics": [
+      "exact_match",
+      "quasi_exact_match",
+      "prefix_exact_match"
+    ],
+    "project_count": 1,
+    "task_template_count": 1,
+    "distinct_score_implementations": 3,
+    "interpretation": "Native evaluation policy / strict Boolean IR compatibility, not confirmed upstream bug discovery or RL-training reward evaluation.",
+    "reference_abstention_preserved": true,
+    "no_analyzer_features_added": true,
+    "recorded_utc": "2026-11-09T04:17:06.178587+00:00"
+  },
+  "selection": "First three native get_exact_match_metric_specs entries in published order. One-project correlated metric policies, not three projects or three independently extracted tasks.",
+  "native_boundary": "Metric pred argument after original completion.text.strip; original gold.output.text canonical True/False. No transformation supplied by experiment beyond explicit pred/gold bindings.",
+  "task_packet_limit": "Question template only, not complete original few-shot prompt; does not establish bare-token syntax. Retain AI-assisted reference contract=null, no semantic/format supplementation.",
+  "output_rules": [
+    "Same prompt/schema/profile bytes",
+    "Single fresh request for one question template shared across three scorers",
+    "Raw LLM contract retained including abstention/invalid response",
+    "Reference stays null; null-oracle pairs are not eligible agreement metrics",
+    "Native-policy leniency is intentional; strict-profile differences are not upstream bugs",
+    "Unsupported IfExp/helper source staysUnknown; no retuning or AST extension"
+  ]
+}

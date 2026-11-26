@@ -1,0 +1,202 @@
+{
+  "prior_collection_metadata_jsons_checked": 81,
+  "selected_path_records_in_prior_metadata": [
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562-tree.json",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562-tree.json",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562-tree.json",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562-tree.json",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562-tree.json",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562-tree.json",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/issue_snapshot-tree.json",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/issue_snapshot-tree.json",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/issue_snapshot-tree.json",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/issue_snapshot-tree.json",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/issue_snapshot-tree.json",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/issue_snapshot-tree.json",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562_base-tree.json",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562_base-tree.json",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562_base-tree.json",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562_base-tree.json",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562_base-tree.json",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr562_base-tree.json",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561-tree.json",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561-tree.json",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561-tree.json",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561-tree.json",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561-tree.json",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561-tree.json",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/main-tree.json",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/main-tree.json",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/main-tree.json",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/main-tree.json",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/main-tree.json",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/main-tree.json",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561_base-tree.json",
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561_base-tree.json",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561_base-tree.json",
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561_base-tree.json",
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561_base-tree.json",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "patch_present": false
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/collection/pr561_base-tree.json",
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "patch_present": false
+    }
+  ],
+  "previous_full_source_path_inventory_checked": 28,
+  "freshness_claim": "New to recorded task question/scorer content exposure; all six filenames already appeared in old tree listings. No prior selected-file patch found in 81 checked collection JSONs. No pretrained-model novelty claim.",
+  "new_exposed_task_paths": [
+    "reasoning_gym/algorithmic/count_primes.py",
+    "reasoning_gym/algorithmic/isomorphic_strings.py",
+    "reasoning_gym/algorithmic/number_sorting.py",
+    "reasoning_gym/algorithmic/ransom_note.py",
+    "reasoning_gym/arithmetic/fraction_simplification.py",
+    "reasoning_gym/graphs/course_schedule.py"
+  ],
+  "scorer_text_disclosed": false,
+  "new_task_raw_sources_saved": true,
+  "raw_sources_parsed_as_data_only": true,
+  "upstream_code_executed": false,
+  "prior_selected_name_metadata_occurrences": 36,
+  "prior_selected_patch_occurrences": 0,
+  "prior_source_paths_found_in_outputs_submission_work": 0
+}

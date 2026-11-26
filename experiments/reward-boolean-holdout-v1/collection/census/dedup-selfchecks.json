@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "global_bool_vs_str_kept_distinct": true,
+  "parameter_alpha_rename_same": true,
+  "source_imported_or_executed": false,
+  "fingerprint_claim": "heuristic only; no semantic equivalence proof"
+}

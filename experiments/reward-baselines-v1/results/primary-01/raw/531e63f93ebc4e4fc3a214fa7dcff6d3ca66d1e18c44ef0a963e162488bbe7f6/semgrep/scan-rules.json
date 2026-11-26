@@ -1,0 +1,73 @@
+{
+  "rules": [
+    {
+      "id": "reward-bool-truthiness-equality",
+      "languages": [
+        "python"
+      ],
+      "severity": "WARNING",
+      "message": "Truthiness equality can award full credit to unequal Boolean strings.",
+      "mode": "search",
+      "pattern": "bool($CANDIDATE) == bool($REFERENCE)"
+    },
+    {
+      "id": "reward-nonfinite-exp-clamp",
+      "languages": [
+        "python"
+      ],
+      "severity": "WARNING",
+      "message": "Clamping an exponential with min(1.0, ...) can promote a nonfinite distance to full credit.",
+      "mode": "search",
+      "pattern-either": [
+        {
+          "patterns": [
+            {
+              "pattern": "min(1.0, math.exp(-$D))"
+            },
+            {
+              "metavariable-regex": {
+                "metavariable": "$D",
+                "regex": "^[A-Za-z_]\\w*$"
+              }
+            },
+            {
+              "pattern-not-inside": "if not math.isfinite($D):\n    return 0.0\n$S = min(1.0, math.exp(-$D))"
+            },
+            {
+              "pattern-not-inside": "if math.isfinite($D):\n    $S = min(1.0, math.exp(-$D))"
+            },
+            {
+              "pattern-not-inside": "if not math.isfinite($D):\n    return 0.0\nreturn min(1.0, math.exp(-$D))"
+            },
+            {
+              "pattern-not-inside": "if math.isfinite($D):\n    return min(1.0, math.exp(-$D))"
+            }
+          ]
+        },
+        {
+          "patterns": [
+            {
+              "pattern": "min(1.0, math.exp(-$D))"
+            },
+            {
+              "metavariable-regex": {
+                "metavariable": "$D",
+                "regex": "^(?![A-Za-z_]\\w*$)[\\s\\S]+$"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reward-prefix-shorter-length-ratio",
+      "languages": [
+        "python"
+      ],
+      "severity": "WARNING",
+      "message": "Prefix-style credit divided by the shorter length can reach full credit for a strict prefix.",
+      "mode": "search",
+      "pattern": "$MATCH / min(len($LEFT), len($RIGHT))"
+    }
+  ]
+}

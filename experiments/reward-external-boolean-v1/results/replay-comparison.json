@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "method_freeze_sha256": "45e4c5359710e3dafcf893982c4f9ec147d57eb684ca1b5ba9d47be85b3f2f8a",
+  "model_response_freeze_sha256": "6774759d8ca3d2f22523405c7d22ed6cc305067576e14428c6e6e14f726c65e3",
+  "full_analytical_outputs_equal": true,
+  "completed_Semgrep_scan_pairs_verified": 3,
+  "normalization": [
+    "wall_seconds",
+    "run directory paths",
+    "commands checked separately for flags and source/rule bytes"
+  ],
+  "new_model_calls": 0,
+  "same_machine_only": true
+}

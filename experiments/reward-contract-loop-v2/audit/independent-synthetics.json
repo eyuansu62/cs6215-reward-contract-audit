@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "name": "literal-validity",
+      "source": "def score_answer(self, answer, entry):\n    if answer == 'True':\n        return 1\n    return 0\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "no_alarm",
+      "actual": "no_alarm"
+    },
+    {
+      "name": "literal-equality",
+      "source": "def score_answer(self, answer, entry):\n    if answer == 'True':\n        return 1\n    return 0\n",
+      "obligations": [
+        "equals_reference"
+      ],
+      "expected": "alarm",
+      "actual": "alarm"
+    },
+    {
+      "name": "reference-guard-implies-validity",
+      "source": "def score_answer(self, answer, entry):\n    if answer == entry['answer']:\n        return 1\n    return 0\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "no_alarm",
+      "actual": "no_alarm"
+    },
+    {
+      "name": "source-overwrites-candidate",
+      "source": "def score_answer(self, answer, entry):\n    answer = 'True'\n    return 1\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "alarm",
+      "actual": "alarm"
+    },
+    {
+      "name": "unknown-call",
+      "source": "def score_answer(self, answer, entry):\n    mystery(answer)\n    return 1\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "unknown-condition",
+      "source": "def score_answer(self, answer, entry):\n    if mystery(answer):\n        return 1\n    return 0\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "dead-unsupported-condition",
+      "source": "def score_answer(self, answer, entry):\n    if False and mystery(answer):\n        return 1\n    return 0\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "no_alarm",
+      "actual": "no_alarm"
+    },
+    {
+      "name": "valid-but-wrong-token-only",
+      "source": "def score_answer(self, answer, entry):\n    return 0\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "no_alarm",
+      "actual": "no_alarm"
+    },
+    {
+      "name": "huge-native-literal",
+      "source": "def score_answer(self, answer, entry):\n    return 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\n",
+      "obligations": [
+        "equals_reference"
+      ],
+      "expected": "alarm",
+      "actual": "alarm"
+    },
+    {
+      "name": "later-local-except-shadow",
+      "source": "def score_answer(self, answer, entry):\n    if bool(answer):\n        return 1\n    try:\n        return 0\n    except Exception as bool:\n        return 0\n",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "literal-source-fixed-witness-valid_boolean_token",
+      "obligations": [
+        "valid_boolean_token"
+      ],
+      "answer": "True",
+      "reference": "False",
+      "expected": "no_violation_for_this_witness",
+      "actual": "no_violation_for_this_witness"
+    },
+    {
+      "name": "literal-source-fixed-witness-equals_reference",
+      "obligations": [
+        "equals_reference"
+      ],
+      "answer": "True",
+      "reference": "False",
+      "expected": "full_credit_violation",
+      "actual": "full_credit_violation"
+    }
+  ],
+  "source_programs_executed": false,
+  "primary_units_analyzed": false
+}

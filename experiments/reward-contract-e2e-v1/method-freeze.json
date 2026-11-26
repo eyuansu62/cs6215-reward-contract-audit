@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-09T02:12:48.138055+00:00",
+  "files_sha256": {
+    "archived-observations.json": "db7fe7043d672cbecc5f4fa79035386823ba76bb796618ecb2bd3ccd391c86fa",
+    "audit/description-provenance.json": "8b2e4ac8aa3b2833dbd70518911e4168924dd7f89533f17101b2a0ce44898a6a",
+    "inputs.json": "15ad8ec1bea5ca36126fe207ebf90b666053a9e2c6d501c6e441ab6a3b945c04",
+    "protocol/analysis-profile.json": "4f812ece34caddc3b76c940aee9914b7d7bc34e9c73a9c617cd552a08ba81603",
+    "protocol/design.json": "bcdd7df0e9ad1113e2281b6c8a352b7cef5eb4543b957316e50072b573944694",
+    "protocol/prompt-prefix.txt": "7ab27452c5c41b9d524dc715de98976208d36661ccf2a39ae51072ce40607f92",
+    "protocol/reference-contract.json": "84ee85217d7a10a09c75ff7ac367c40e879d442c5e80b3b1853e057816f9aaa7",
+    "protocol/reference-expected.json": "8f18780c589bc4a12c67f86c38e18f195e23f4ca4abc3375430d5968c1feffa1",
+    "protocol/response-schema.json": "8802b98a6f86dc86fd9dbb11aa32c8a3c8cef91cca2bacaa8e85663d304e38a3",
+    "protocol/task.json": "946e1585fad42eb102ad4d750ca60463acbd214ac221f821761141a6b79e025c",
+    "run_e2e.py": "58657b6059f664a55e5b8783d7d07dc2bf0bac471212ab2579d08a977c16dc73",
+    "tests/test_e2e.py": "f45b54069a14c548bfe3f6a112cfe087c61d18578ef5bd3f2f6810529ce6d4a3"
+  },
+  "preserved_previous": {
+    "v2_method_sha256": "e6db263e27555a1b68aa15389e94ce6f1cb4468ddf6d2cc6b88b3489fccb49da",
+    "v2_manifest_sha256": "942cb0fb09b2ed05219c2900baea671645c6cc0d8b6dd01f6e8b93e897080e93",
+    "preserved_payloads": 2858,
+    "transport_sha256": "2f87c1461c9b50ac621a838425042d59a7ade098109b58bbc02d3f4617dac4cb",
+    "worker_sha256": "ceca17ce0e0b413821fb223ebcf9d967e56f42e1714c4040e46f467e68be780d"
+  },
+  "reference_and_prompt_frozen_before_model_response": true,
+  "one_known_case_one_model_request": true,
+  "new_analyzer_semantics": false
+}

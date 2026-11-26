@@ -1,0 +1,2693 @@
+{
+  "scope": "Curated native-input witnesses/controls, not generator samples, model prompts, static predictions or an unseen dataset.",
+  "subjects": [
+    {
+      "id": "rg-issue-543-original",
+      "family_id": "rg-issue-543",
+      "kind": "reported_bug_original",
+      "split": "development_source_exposed",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+      "source_sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+      "class": "CoinFlipDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "globals": [
+        "Fraction"
+      ],
+      "record_file": "records/bugs.json",
+      "probes": [
+        {
+          "id": "counterexamples/constant-zero",
+          "role": "counterexamples",
+          "answer": "0",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "less_than": 1.0,
+            "rationale": "numeric error0.875 > default tol"
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "constant-zero",
+            "candidate_answer": "0",
+            "entry": {
+              "answer": "0.875"
+            },
+            "contract_expected_reward": {
+              "less_than": 1.0,
+              "rationale": "numeric error0.875 > default tol"
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_explicit_example",
+              "evidence": "collection/issue-543.json",
+              "report_context": "Issue explicitly uses oracle0.875; also reports 0 full credit on7/8 generated instances at seed42,size8"
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "counterexamples/short-prefix-08",
+          "role": "counterexamples",
+          "answer": "0.8",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "less_than": 1.0,
+            "rationale": "numeric error0.075 > default tol"
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "short-prefix-08",
+            "candidate_answer": "0.8",
+            "entry": {
+              "answer": "0.875"
+            },
+            "contract_expected_reward": {
+              "less_than": 1.0,
+              "rationale": "numeric error0.075 > default tol"
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_explicit_example",
+              "evidence": "collection/issue-543.json"
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "counterexamples/short-prefix-087",
+          "role": "counterexamples",
+          "answer": "0.87",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "less_than": 1.0,
+            "rationale": "numeric error0.005 > default tol"
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "short-prefix-087",
+            "candidate_answer": "0.87",
+            "entry": {
+              "answer": "0.875"
+            },
+            "contract_expected_reward": {
+              "less_than": 1.0,
+              "rationale": "numeric error0.005 > default tol"
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_explicit_example",
+              "evidence": "collection/issue-543.json"
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "normal_controls/exact-decimal",
+          "role": "normal_controls",
+          "answer": "0.875",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact-decimal",
+            "candidate_answer": "0.875",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "correct probability",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/equivalent-fraction",
+          "role": "normal_controls",
+          "answer": "7/8",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "equivalent-fraction",
+            "candidate_answer": "7/8",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "legitimate alternate numeric representation",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/within-tolerance",
+          "role": "normal_controls",
+          "answer": "0.87505",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "within-tolerance",
+            "candidate_answer": "0.87505",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "legitimate small numeric error",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/ordinary-prefix-partial",
+          "role": "normal_controls",
+          "answer": "0.85",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.75
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "ordinary-prefix-partial",
+            "candidate_answer": "0.85",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 0.75
+            },
+            "purpose": "partial prefix credit below1:3 matching characters out of4",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/no-common-prefix",
+          "role": "normal_controls",
+          "answer": "1",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "no-common-prefix",
+            "candidate_answer": "1",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "wrong answer with no canonical prefix",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/invalid",
+          "role": "normal_controls",
+          "answer": "banana",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "invalid",
+            "candidate_answer": "banana",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "Fraction parse rejection",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/empty",
+          "role": "normal_controls",
+          "answer": "",
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "empty",
+            "candidate_answer": "",
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "empty answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/missing",
+          "role": "normal_controls",
+          "answer": null,
+          "entry": {
+            "answer": "0.875"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "missing",
+            "candidate_answer": null,
+            "entry": {
+              "answer": "0.875"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "missing answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        }
+      ],
+      "contract": {
+        "short": "Score the probability of exactly k or at least k heads in n fair flips; a wrong decimal prefix is not a full solution.",
+        "detailed": "For exactly k heads the generator computes C(n,k)/2^n; for at least k heads it sums C(n,i)/2^n for i=k..n. It stores the decimal with .10g formatting and rational numerator/denominator metadata. Full credit is explicitly returned when absolute numeric error is at most tol (default 1e-4); the fallback is described as partial credit. Therefore a prefix such as 0 for reference 0.875, whose error exceeds tol, must not obtain 1.0. The precise corrected partial-credit curve is not specified by the task or issue, so counterexample expectations require <1 rather than inventing a fixed partial score.",
+        "accepted_candidate_domain": "Optional[str]; after deleting commas, fractions.Fraction must parse the candidate and reference, then conversion to float must succeed. Decimal and rational forms are supported. Docstring says extra text, but the implementation does not extract numbers from arbitrary surrounding prose; no such acceptance is assumed.",
+        "reference_domain": "Generated oracle is a finite probability in (0,1] for n>=1 and 0<=k<=n, formatted with .10g. The explicit 0.875 fixture is valid for n=3, at least k=1 (7/8).",
+        "required_entry_fields": [
+          "answer"
+        ],
+        "full_reward_threshold": "Absolute numeric error <= tol (default 0.0001) is an explicit sufficient condition. Intended rejection of full reward for wrong prefixes outside tol is supported by the partial-credit label and issue; no stronger universal iff claim is made.",
+        "partial_credit": "Existing fallback counts common leading characters of .10g canonical floats and divides by min(string lengths); this denominator can improperly produce 1.0. No corrected universal partial-credit curve is asserted.",
+        "tolerance_default": 0.0001,
+        "numeric_canonicalization": ".10g after Fraction-to-float; commas stripped before parsing."
+      },
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-543-original/score_answer.py",
+          "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+          "ast_sha256": "25d747080224c4cdb953bf9d00a070a38b2a3ee4cc1be3e49b850249802f19d0",
+          "extraction": {
+            "qualified_name": "CoinFlipDataset.score_answer",
+            "start_line": 113,
+            "end_line": 149,
+            "source_sha256": "a0f10fca1822cd4e64550475765a45e42e3ef3af4fbc3b31c15a924a3299d858",
+            "module_sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rg-issue-544-original",
+      "family_id": "rg-issue-544",
+      "kind": "reported_bug_original",
+      "split": "development_source_exposed",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "class": "GameOfLifeHaltingDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "globals": [],
+      "record_file": "records/bugs.json",
+      "probes": [
+        {
+          "id": "counterexamples/opposite-false",
+          "role": "counterexamples",
+          "answer": "False",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "opposite-false",
+            "candidate_answer": "False",
+            "entry": {
+              "answer": "True"
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_with_curated_minimal_entry",
+              "evidence": "collection/issue-544.json",
+              "report_context": "seed=42,size=5; opposite True/False and banana both reported to score 1.0 for every generated instance",
+              "exact_fixture_generated": false
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "counterexamples/nonboolean-banana",
+          "role": "counterexamples",
+          "answer": "banana",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "nonboolean-banana",
+            "candidate_answer": "banana",
+            "entry": {
+              "answer": "True"
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_with_curated_minimal_entry",
+              "evidence": "collection/issue-544.json",
+              "exact_fixture_generated": false
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "counterexamples/opposite-true",
+          "role": "counterexamples",
+          "answer": "True",
+          "entry": {
+            "answer": "False"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "opposite-true",
+            "candidate_answer": "True",
+            "entry": {
+              "answer": "False"
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_with_curated_minimal_entry",
+              "evidence": "collection/issue-544.json",
+              "exact_fixture_generated": false
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "normal_controls/exact-true",
+          "role": "normal_controls",
+          "answer": "True",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact-true",
+            "candidate_answer": "True",
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "legitimate correct answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/exact-false",
+          "role": "normal_controls",
+          "answer": "False",
+          "entry": {
+            "answer": "False"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact-false",
+            "candidate_answer": "False",
+            "entry": {
+              "answer": "False"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "False must also be a legitimate correct answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/missing",
+          "role": "normal_controls",
+          "answer": null,
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "missing",
+            "candidate_answer": null,
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "missing answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/empty",
+          "role": "normal_controls",
+          "answer": "",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "empty",
+            "candidate_answer": "",
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "empty answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        }
+      ],
+      "contract": {
+        "short": "Judge the requested Game of Life halting truth value, not Python string truthiness.",
+        "detailed": "The question defines halting as no live cells at or before the configured step bound, with Moore neighborhood and wrapping topology. It explicitly requests True for halting and False otherwise. The generator stores str(not should_oscillate). A correct Boolean answer earns 1.0 and an opposite value or unrelated text earns 0.0. This record checks answer-verifier semantics relative to the supplied reference; it does not verify board dynamics or the generator's oracle.",
+        "accepted_candidate_domain": "Optional[str]; task answers are True or False. PR561 additionally accepts surrounding whitespace and case variations. The original method accepts every nonempty string due to the bug, which is implementation behavior rather than the intended answer domain.",
+        "reference_domain": "entry[\"answer\"] is one of the nonempty strings \"True\" and \"False\".",
+        "required_entry_fields": [
+          "answer"
+        ],
+        "full_reward_threshold": "Semantically equal truth values (PR561 implements answer.strip().lower() == entry[\"answer\"].strip().lower()).",
+        "partial_credit": "None; reward is binary 0.0 or 1.0.",
+        "normalization_evidence": "Whitespace/case tolerance is explicitly tested only in proposed PR561; exact True/False semantics are already stated by original question."
+      },
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-544-original/score_answer.py",
+          "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+          "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+            "module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rg-issue-545-original",
+      "family_id": "rg-issue-545",
+      "kind": "reported_bug_original",
+      "split": "development_source_exposed",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+      "class": "ComplexArithmeticDataset",
+      "method": "score_answer",
+      "helpers": [
+        "parse_string_to_complex"
+      ],
+      "globals": [
+        "math"
+      ],
+      "record_file": "records/bugs.json",
+      "probes": [
+        {
+          "id": "counterexamples/nan-real",
+          "role": "counterexamples",
+          "answer": "nan",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "nan-real",
+            "candidate_answer": "nan",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_plus_upstream_unit_test_reference",
+              "evidence": "collection/issue-545.json",
+              "report_context": "seed=42,size=5; nan reported to produce [1.0,1.0,1.0,1.0,1.0]",
+              "reference_fixture_source": "upstream/pr562_base/tests/test_complex_arithmetic.py:59",
+              "exact_report_fixture": false
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "counterexamples/nan-imaginary",
+          "role": "counterexamples",
+          "answer": "1+nanj",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "nan-imaginary",
+            "candidate_answer": "1+nanj",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_plus_upstream_unit_test_reference",
+              "evidence": "collection/issue-545.json",
+              "report_context": "issue explicitly states partial NaN 1+nanj also scores 1.0",
+              "exact_report_fixture": false
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "counterexamples/nan-i-notation",
+          "role": "counterexamples",
+          "answer": "nan+2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": true,
+          "upstream_probe_metadata": {
+            "id": "nan-i-notation",
+            "candidate_answer": "nan+2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "source_review_predicted_reward": 1.0,
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "curated_extension_present_in_proposed_upstream_test",
+              "evidence": "upstream/pr562/tests/test_complex_arithmetic.py:86",
+              "reported_original_actual": false
+            },
+            "applies_to_version": "original"
+          }
+        },
+        {
+          "id": "normal_controls/exact",
+          "role": "normal_controls",
+          "answer": "3 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact",
+            "candidate_answer": "3 + 2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "upstream exact-answer test",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/equivalent-parentheses",
+          "role": "normal_controls",
+          "answer": "((3.0 + 2.0i ) )",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "equivalent-parentheses",
+            "candidate_answer": "((3.0 + 2.0i ) )",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "valid normalization from upstream test",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/finite-partial",
+          "role": "normal_controls",
+          "answer": "4 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "formula": "exp(-1)",
+            "strictly_between": [
+              0.3,
+              0.4
+            ]
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "finite-partial",
+            "candidate_answer": "4 + 2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "formula": "exp(-1)",
+              "strictly_between": [
+                0.3,
+                0.4
+              ]
+            },
+            "purpose": "legitimate partial credit for one-unit error",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/invalid",
+          "role": "normal_controls",
+          "answer": "invalid",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "invalid",
+            "candidate_answer": "invalid",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "parser rejection",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/missing",
+          "role": "normal_controls",
+          "answer": null,
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "missing",
+            "candidate_answer": null,
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "missing answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/infinity",
+          "role": "normal_controls",
+          "answer": "inf + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "infinity",
+            "candidate_answer": "inf + 2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "existing original nonfinite rejection control; parser replaces i in inf as well",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        }
+      ],
+      "contract": {
+        "short": "Reward finite complex arithmetic answers by exponential distance from the finite reference.",
+        "detailed": "Prompts ask addition, subtraction, multiplication, or division of complex numbers. Operands use bounded integer components, and division is constructed from an integer quotient and nonzero divisor. The generator stores integer real/imaginary result components in metadata. The intended score decreases as exp(-abs(student-reference)); exact finite answers earn 1.0, finite errors earn less than 1.0, and malformed or nonfinite submissions earn 0.0.",
+        "accepted_candidate_domain": "Optional[str]; normalized spaces/lowercase, outer parentheses, i/j notation, pure real/imaginary and two-component complex forms are parsed by parse_string_to_complex. Parser acceptance of nan is not intended mathematical correctness.",
+        "reference_domain": "entry[\"metadata\"][\"result\"] is a pair of finite integer-valued components (tuple upstream, JSON list in fixture); scoring constructs complex(*result).",
+        "required_entry_fields": [
+          "metadata.result"
+        ],
+        "full_reward_threshold": "Finite parsed answer at zero complex-plane distance from the reference (subject to host floating-point evaluation).",
+        "partial_credit": "For finite distance d>0, exp(-d), potentially underflowing to 0.0.",
+        "invalid_input_reward": 0.0,
+        "fixture_basis": "The (3.0,2.0) metadata fixture is the exact upstream unit-test fixture in test_complex_arithmetic_scoring."
+      },
+      "extracted_methods": [
+        {
+          "name": "parse_string_to_complex",
+          "source_path": "extracted/rg-issue-545-original/parse_string_to_complex.py",
+          "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+            "start_line": 111,
+            "end_line": 166,
+            "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+            "module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-545-original/score_answer.py",
+          "source_sha256": "02ce23747621aa9e4abc88f2f9ff37a1e57ef455ca8ea54ddb89375a8ed23a62",
+          "ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.score_answer",
+            "start_line": 168,
+            "end_line": 183,
+            "source_sha256": "02ce23747621aa9e4abc88f2f9ff37a1e57ef455ca8ea54ddb89375a8ed23a62",
+            "module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "family_id": "rg-issue-544",
+      "kind": "proposed_upstream_repair",
+      "split": "development_source_exposed",
+      "source_file": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+      "class": "GameOfLifeHaltingDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "globals": [],
+      "record_file": "records/bugs.json",
+      "probes": [
+        {
+          "id": "counterexamples/opposite-false",
+          "role": "counterexamples",
+          "answer": "False",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "opposite-false",
+            "candidate_answer": "False",
+            "entry": {
+              "answer": "True"
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_with_curated_minimal_entry",
+              "evidence": "collection/issue-544.json",
+              "report_context": "seed=42,size=5; opposite True/False and banana both reported to score 1.0 for every generated instance",
+              "exact_fixture_generated": false
+            },
+            "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+            "reported_or_predicted_base_reward": 1.0,
+            "source_review_predicted_reward": 0.0
+          }
+        },
+        {
+          "id": "counterexamples/nonboolean-banana",
+          "role": "counterexamples",
+          "answer": "banana",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "nonboolean-banana",
+            "candidate_answer": "banana",
+            "entry": {
+              "answer": "True"
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_with_curated_minimal_entry",
+              "evidence": "collection/issue-544.json",
+              "exact_fixture_generated": false
+            },
+            "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+            "reported_or_predicted_base_reward": 1.0,
+            "source_review_predicted_reward": 0.0
+          }
+        },
+        {
+          "id": "counterexamples/opposite-true",
+          "role": "counterexamples",
+          "answer": "True",
+          "entry": {
+            "answer": "False"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "opposite-true",
+            "candidate_answer": "True",
+            "entry": {
+              "answer": "False"
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_with_curated_minimal_entry",
+              "evidence": "collection/issue-544.json",
+              "exact_fixture_generated": false
+            },
+            "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+            "reported_or_predicted_base_reward": 1.0,
+            "source_review_predicted_reward": 0.0
+          }
+        },
+        {
+          "id": "normal_controls/exact-true",
+          "role": "normal_controls",
+          "answer": "True",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact-true",
+            "candidate_answer": "True",
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "legitimate correct answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/exact-false",
+          "role": "normal_controls",
+          "answer": "False",
+          "entry": {
+            "answer": "False"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact-false",
+            "candidate_answer": "False",
+            "entry": {
+              "answer": "False"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "False must also be a legitimate correct answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/missing",
+          "role": "normal_controls",
+          "answer": null,
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "missing",
+            "candidate_answer": null,
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "missing answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/empty",
+          "role": "normal_controls",
+          "answer": "",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "empty",
+            "candidate_answer": "",
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "empty answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/normalized-correct",
+          "role": "normal_controls",
+          "answer": "  true  ",
+          "entry": {
+            "answer": "True"
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "normalized-correct",
+            "candidate_answer": "  true  ",
+            "entry": {
+              "answer": "True"
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "proposed upstream normalization test",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        }
+      ],
+      "contract": {
+        "short": "Judge the requested Game of Life halting truth value, not Python string truthiness.",
+        "detailed": "The question defines halting as no live cells at or before the configured step bound, with Moore neighborhood and wrapping topology. It explicitly requests True for halting and False otherwise. The generator stores str(not should_oscillate). A correct Boolean answer earns 1.0 and an opposite value or unrelated text earns 0.0. This record checks answer-verifier semantics relative to the supplied reference; it does not verify board dynamics or the generator's oracle.",
+        "accepted_candidate_domain": "Optional[str]; task answers are True or False. PR561 additionally accepts surrounding whitespace and case variations. The original method accepts every nonempty string due to the bug, which is implementation behavior rather than the intended answer domain.",
+        "reference_domain": "entry[\"answer\"] is one of the nonempty strings \"True\" and \"False\".",
+        "required_entry_fields": [
+          "answer"
+        ],
+        "full_reward_threshold": "Semantically equal truth values (PR561 implements answer.strip().lower() == entry[\"answer\"].strip().lower()).",
+        "partial_credit": "None; reward is binary 0.0 or 1.0.",
+        "normalization_evidence": "Whitespace/case tolerance is explicitly tested only in proposed PR561; exact True/False semantics are already stated by original question."
+      },
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-pr-561-proposed-repair/score_answer.py",
+          "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+          "ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+            "module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "family_id": "rg-issue-545",
+      "kind": "proposed_upstream_repair",
+      "split": "development_source_exposed",
+      "source_file": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+      "class": "ComplexArithmeticDataset",
+      "method": "score_answer",
+      "helpers": [
+        "parse_string_to_complex"
+      ],
+      "globals": [
+        "math"
+      ],
+      "record_file": "records/bugs.json",
+      "probes": [
+        {
+          "id": "counterexamples/nan-real",
+          "role": "counterexamples",
+          "answer": "nan",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "nan-real",
+            "candidate_answer": "nan",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_plus_upstream_unit_test_reference",
+              "evidence": "collection/issue-545.json",
+              "report_context": "seed=42,size=5; nan reported to produce [1.0,1.0,1.0,1.0,1.0]",
+              "reference_fixture_source": "upstream/pr562_base/tests/test_complex_arithmetic.py:59",
+              "exact_report_fixture": false
+            },
+            "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+            "reported_or_predicted_base_reward": 1.0,
+            "source_review_predicted_reward": 0.0
+          }
+        },
+        {
+          "id": "counterexamples/nan-imaginary",
+          "role": "counterexamples",
+          "answer": "1+nanj",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "nan-imaginary",
+            "candidate_answer": "1+nanj",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "official_issue_report_plus_upstream_unit_test_reference",
+              "evidence": "collection/issue-545.json",
+              "report_context": "issue explicitly states partial NaN 1+nanj also scores 1.0",
+              "exact_report_fixture": false
+            },
+            "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+            "reported_or_predicted_base_reward": 1.0,
+            "source_review_predicted_reward": 0.0
+          }
+        },
+        {
+          "id": "counterexamples/nan-i-notation",
+          "role": "counterexamples",
+          "answer": "nan+2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": {
+            "equals": 0.0
+          },
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "nan-i-notation",
+            "candidate_answer": "nan+2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "contract_expected_reward": {
+              "equals": 0.0
+            },
+            "actual_observed_reward": null,
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated_by_this_curation": false,
+            "witness_origin": {
+              "kind": "curated_extension_present_in_proposed_upstream_test",
+              "evidence": "upstream/pr562/tests/test_complex_arithmetic.py:86",
+              "reported_original_actual": false
+            },
+            "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+            "reported_or_predicted_base_reward": 1.0,
+            "source_review_predicted_reward": 0.0
+          }
+        },
+        {
+          "id": "normal_controls/exact",
+          "role": "normal_controls",
+          "answer": "3 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "exact",
+            "candidate_answer": "3 + 2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "upstream exact-answer test",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/equivalent-parentheses",
+          "role": "normal_controls",
+          "answer": "((3.0 + 2.0i ) )",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "equivalent-parentheses",
+            "candidate_answer": "((3.0 + 2.0i ) )",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 1.0
+            },
+            "purpose": "valid normalization from upstream test",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/finite-partial",
+          "role": "normal_controls",
+          "answer": "4 + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "formula": "exp(-1)",
+            "strictly_between": [
+              0.3,
+              0.4
+            ]
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "finite-partial",
+            "candidate_answer": "4 + 2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "formula": "exp(-1)",
+              "strictly_between": [
+                0.3,
+                0.4
+              ]
+            },
+            "purpose": "legitimate partial credit for one-unit error",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/invalid",
+          "role": "normal_controls",
+          "answer": "invalid",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "invalid",
+            "candidate_answer": "invalid",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "parser rejection",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/missing",
+          "role": "normal_controls",
+          "answer": null,
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "missing",
+            "candidate_answer": null,
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "missing answer",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/infinity",
+          "role": "normal_controls",
+          "answer": "inf + 2i",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "infinity",
+            "candidate_answer": "inf + 2i",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "existing original nonfinite rejection control; parser replaces i in inf as well",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        },
+        {
+          "id": "normal_controls/nonfinite-imaginary",
+          "role": "normal_controls",
+          "answer": "nanj",
+          "entry": {
+            "metadata": {
+              "result": [
+                3.0,
+                2.0
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "nonfinite-imaginary",
+            "candidate_answer": "nanj",
+            "entry": {
+              "metadata": {
+                "result": [
+                  3.0,
+                  2.0
+                ]
+              }
+            },
+            "expected_current_reward": {
+              "equals": 0.0
+            },
+            "purpose": "pure imaginary NaN accepted by parser, rejected by proposed finite-distance guard; source-reviewed only",
+            "execution_status": "pending_root_source_only_reproduction",
+            "validated": false,
+            "expected_basis": "source_review"
+          }
+        }
+      ],
+      "contract": {
+        "short": "Reward finite complex arithmetic answers by exponential distance from the finite reference.",
+        "detailed": "Prompts ask addition, subtraction, multiplication, or division of complex numbers. Operands use bounded integer components, and division is constructed from an integer quotient and nonzero divisor. The generator stores integer real/imaginary result components in metadata. The intended score decreases as exp(-abs(student-reference)); exact finite answers earn 1.0, finite errors earn less than 1.0, and malformed or nonfinite submissions earn 0.0.",
+        "accepted_candidate_domain": "Optional[str]; normalized spaces/lowercase, outer parentheses, i/j notation, pure real/imaginary and two-component complex forms are parsed by parse_string_to_complex. Parser acceptance of nan is not intended mathematical correctness.",
+        "reference_domain": "entry[\"metadata\"][\"result\"] is a pair of finite integer-valued components (tuple upstream, JSON list in fixture); scoring constructs complex(*result).",
+        "required_entry_fields": [
+          "metadata.result"
+        ],
+        "full_reward_threshold": "Finite parsed answer at zero complex-plane distance from the reference (subject to host floating-point evaluation).",
+        "partial_credit": "For finite distance d>0, exp(-d), potentially underflowing to 0.0.",
+        "invalid_input_reward": 0.0,
+        "fixture_basis": "The (3.0,2.0) metadata fixture is the exact upstream unit-test fixture in test_complex_arithmetic_scoring."
+      },
+      "extracted_methods": [
+        {
+          "name": "parse_string_to_complex",
+          "source_path": "extracted/rg-pr-562-proposed-repair/parse_string_to_complex.py",
+          "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+            "start_line": 111,
+            "end_line": 166,
+            "source_sha256": "3cf71c42fb55828b4886377379772ab59ef60097dfa912e467b709483ad4f5c4",
+            "module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-pr-562-proposed-repair/score_answer.py",
+          "source_sha256": "bbd11031b433de4bfc9b6664295511f62d3ad366e71b92f8c2045f022da3a9d8",
+          "ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea",
+          "extraction": {
+            "qualified_name": "ComplexArithmeticDataset.score_answer",
+            "start_line": 168,
+            "end_line": 187,
+            "source_sha256": "bbd11031b433de4bfc9b6664295511f62d3ad366e71b92f8c2045f022da3a9d8",
+            "module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "family_id": "PalindromeDataset.score_answer",
+      "kind": "normal_control",
+      "split": "development_source_exposed",
+      "source_file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+      "source_sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+      "class": "PalindromeDataset",
+      "method": "score_answer",
+      "helpers": [],
+      "globals": [],
+      "record_file": "records/controls.json",
+      "probes": [
+        {
+          "id": "p-valid-reference",
+          "role": "normal_control_probe",
+          "answer": "abba",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-valid-reference",
+            "entry_id": "letters-aabb",
+            "answer": "abba",
+            "expected_reward": 1.0,
+            "purpose": "Reference palindrome uses exactly a,a,b,b.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "p-valid-alternative",
+          "role": "normal_control_probe",
+          "answer": "baab",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-valid-alternative",
+            "entry_id": "letters-aabb",
+            "answer": "baab",
+            "expected_reward": 1.0,
+            "purpose": "Different valid palindrome; establishes semantic validation rather than strict oracle equality.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "p-normalized-valid",
+          "role": "normal_control_probe",
+          "answer": " ABBA ",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-normalized-valid",
+            "entry_id": "letters-aabb",
+            "answer": " ABBA ",
+            "expected_reward": 1.0,
+            "purpose": "Documents accepted outer-whitespace and case normalization.",
+            "kind": "normalization",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "p-wrong-order",
+          "role": "normal_control_probe",
+          "answer": "aabb",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.02
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-wrong-order",
+            "entry_id": "letters-aabb",
+            "answer": "aabb",
+            "expected_reward": 0.02,
+            "purpose": "Correct letters but not a palindrome; intended partial reward.",
+            "kind": "legitimate_partial_credit",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "p-wrong-letters",
+          "role": "normal_control_probe",
+          "answer": "aaaa",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.05
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-wrong-letters",
+            "entry_id": "letters-aabb",
+            "answer": "aaaa",
+            "expected_reward": 0.05,
+            "purpose": "Palindrome with the wrong multiset; intended partial reward.",
+            "kind": "legitimate_partial_credit",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "p-missing",
+          "role": "normal_control_probe",
+          "answer": null,
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-missing",
+            "entry_id": "letters-aabb",
+            "answer": null,
+            "expected_reward": 0.0,
+            "purpose": "Missing answer is explicitly rejected.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "p-empty",
+          "role": "normal_control_probe",
+          "answer": "",
+          "entry": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "p-empty",
+            "entry_id": "letters-aabb",
+            "answer": "",
+            "expected_reward": 0.0,
+            "purpose": "Empty string is explicitly rejected.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        }
+      ],
+      "contract": {
+        "task_meaning": "Form any palindrome from exactly the given lowercase-letter multiset, rather than merely repeat the chosen reference palindrome.",
+        "entry_domain": "metadata.letters is a nonempty list of lowercase ASCII letters that can form a palindrome; entry.answer is one valid construction.",
+        "answer_domain": "Optional string. For the full-credit mathematical contract, interpret strip().lower() as the accepted response normalization. A valid normalized response has no internal spaces or punctuation.",
+        "full_credit_properties": [
+          {
+            "id": "P1",
+            "statement": "Full credit requires that the normalized string equals its reverse."
+          },
+          {
+            "id": "P2",
+            "statement": "Full credit also requires exact equality of the response and supplied-letter multisets, including multiplicity; any valid ordering qualifies."
+          },
+          {
+            "id": "P3",
+            "statement": "Missing or non-string answers earn zero; nonempty wrong strings may receive the explicit partial rewards but never full credit."
+          }
+        ],
+        "legitimate_partial_credit": "The source explicitly awards 0.02 to a non-palindrome string and 0.05 to a palindrome using the wrong letter multiset. These positive rewards are not evidence of full-credit validity."
+      },
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/control-palindrome-validity-main/score_answer.py",
+          "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+          "ast_sha256": "9c6fc330cea2c8195759eb0dab0a239a219c47992d317034c09beabf9e9e4c21",
+          "extraction": {
+            "qualified_name": "PalindromeDataset.score_answer",
+            "start_line": 97,
+            "end_line": 126,
+            "source_sha256": "9fa38ac81d0d4160e49b0f407552b175e8b07c383e9c5c4b73b64967f146391f",
+            "module_sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "control-group-anagrams-order-main",
+      "family_id": "GroupAnagramsDataset.score_answer",
+      "kind": "normal_control",
+      "split": "development_source_exposed",
+      "source_file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+      "source_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+      "class": "GroupAnagramsDataset",
+      "method": "score_answer",
+      "helpers": [
+        "_sort_nested_list"
+      ],
+      "globals": [
+        "json"
+      ],
+      "record_file": "records/controls.json",
+      "probes": [
+        {
+          "id": "g-valid-reference",
+          "role": "normal_control_probe",
+          "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "g-valid-reference",
+            "entry_id": "two-anagram-groups",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "expected_reward": 1.0,
+            "purpose": "Reference partition.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "g-valid-reordered",
+          "role": "normal_control_probe",
+          "answer": "[[\"tan\", \"nat\"], [\"tea\", \"eat\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "g-valid-reordered",
+            "entry_id": "two-anagram-groups",
+            "answer": "[[\"tan\", \"nat\"], [\"tea\", \"eat\"]]",
+            "expected_reward": 1.0,
+            "purpose": "Same partition with both levels reordered.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "g-wrong-partition",
+          "role": "normal_control_probe",
+          "answer": "[[\"eat\", \"tan\"], [\"tea\", \"nat\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.01
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "g-wrong-partition",
+            "entry_id": "two-anagram-groups",
+            "answer": "[[\"eat\", \"tan\"], [\"tea\", \"nat\"]]",
+            "expected_reward": 0.01,
+            "purpose": "JSON syntax is valid but unrelated words are grouped; intended syntax-only credit.",
+            "kind": "legitimate_partial_credit",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "g-missing-word",
+          "role": "normal_control_probe",
+          "answer": "[[\"eat\", \"tea\"], [\"nat\"]]",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.01
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "g-missing-word",
+            "entry_id": "two-anagram-groups",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\"]]",
+            "expected_reward": 0.01,
+            "purpose": "Omitting tan changes canonical partition.",
+            "kind": "legitimate_partial_credit",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "g-invalid-json",
+          "role": "normal_control_probe",
+          "answer": "not JSON",
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "g-invalid-json",
+            "entry_id": "two-anagram-groups",
+            "answer": "not JSON",
+            "expected_reward": 0.0,
+            "purpose": "Decoder rejects malformed input.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "g-missing",
+          "role": "normal_control_probe",
+          "answer": null,
+          "entry": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "g-missing",
+            "entry_id": "two-anagram-groups",
+            "answer": null,
+            "expected_reward": 0.0,
+            "purpose": "Missing answer.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        }
+      ],
+      "contract": {
+        "task_meaning": "Partition every input word into exactly its anagram group; outer group order and word order within each group are irrelevant.",
+        "entry_domain": "A correctly generated or manually checked metadata.solution partition of distinct lowercase input words. Groups are nonempty lists of strings. Different anagram groups are disjoint.",
+        "answer_domain": "JSON serialization of a list of nonempty string lists for the semantic full-credit contract; arbitrary malformed strings and missing input are separately probed.",
+        "full_credit_properties": [
+          {
+            "id": "G1",
+            "statement": "Any permutation of the oracle groups and any permutation within each group receives full credit."
+          },
+          {
+            "id": "G2",
+            "statement": "A different partition, missing word or duplicate word cannot receive full credit after canonical ordering."
+          },
+          {
+            "id": "G3",
+            "statement": "Invalid JSON and missing input return zero. A well-formed but wrong partition may receive the deliberate 0.01 syntax credit."
+          }
+        ],
+        "legitimate_partial_credit": "0.01 is a deliberate reward for parseable/canonicalizable JSON that differs from the oracle; a positive scalar does not mean the grouping is correct."
+      },
+      "extracted_methods": [
+        {
+          "name": "_sort_nested_list",
+          "source_path": "extracted/control-group-anagrams-order-main/_sort_nested_list.py",
+          "source_sha256": "f9bf93062ffb17a6f5e76a5da364e14c00229900322f8f2830c4bb4eb03f96ec",
+          "ast_sha256": "e71e8121e893ea6c4ad688cdd8ec7719f396ca36b61d42bcb0481327f54e375b",
+          "extraction": {
+            "qualified_name": "GroupAnagramsDataset._sort_nested_list",
+            "start_line": 67,
+            "end_line": 69,
+            "source_sha256": "f9bf93062ffb17a6f5e76a5da364e14c00229900322f8f2830c4bb4eb03f96ec",
+            "module_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/control-group-anagrams-order-main/score_answer.py",
+          "source_sha256": "a9f4a4026ba2589cbda5576381ad62f2813e0e931ae7e511093e4fc197cf5182",
+          "ast_sha256": "86e18b876068ca355beec75be86c324dabd1fdb71084334aafc60ae10fd557ad",
+          "extraction": {
+            "qualified_name": "GroupAnagramsDataset.score_answer",
+            "start_line": 88,
+            "end_line": 103,
+            "source_sha256": "a9f4a4026ba2589cbda5576381ad62f2813e0e931ae7e511093e4fc197cf5182",
+            "module_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "family_id": "PrimeFactorizationDataset.score_answer",
+      "kind": "normal_control",
+      "split": "development_source_exposed",
+      "source_file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+      "source_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+      "class": "PrimeFactorizationDataset",
+      "method": "score_answer",
+      "helpers": [
+        "_normalize_answer"
+      ],
+      "globals": [
+        "math"
+      ],
+      "record_file": "records/controls.json",
+      "probes": [
+        {
+          "id": "f-valid-reference",
+          "role": "normal_control_probe",
+          "answer": "2 × 2 × 3",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "f-valid-reference",
+            "entry_id": "factor-twelve",
+            "answer": "2 × 2 × 3",
+            "expected_reward": 1.0,
+            "purpose": "Correct prime factors and multiplicity.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "f-valid-permutation",
+          "role": "normal_control_probe",
+          "answer": " 3 × 2 × 2 ",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 1.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "f-valid-permutation",
+            "entry_id": "factor-twelve",
+            "answer": " 3 × 2 × 2 ",
+            "expected_reward": 1.0,
+            "purpose": "Prime factors reordered with token whitespace.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "f-composite-factor",
+          "role": "normal_control_probe",
+          "answer": "3 × 4",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.5
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "f-composite-factor",
+            "entry_id": "factor-twelve",
+            "answer": "3 × 4",
+            "expected_reward": 0.5,
+            "purpose": "Product is right, decomposition is not fully prime; intended partial credit.",
+            "kind": "legitimate_partial_credit",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "f-wrong-product",
+          "role": "normal_control_probe",
+          "answer": "2 × 3",
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.01
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "f-wrong-product",
+            "entry_id": "factor-twelve",
+            "answer": "2 × 3",
+            "expected_reward": 0.01,
+            "purpose": "Missing one factor of 2 changes product and multiset.",
+            "kind": "legitimate_partial_credit",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        },
+        {
+          "id": "f-missing",
+          "role": "normal_control_probe",
+          "answer": null,
+          "entry": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          },
+          "source_behavior_expectation": {
+            "equals": 0.0
+          },
+          "contract_expectation": null,
+          "intended_original_bug_probe": false,
+          "upstream_probe_metadata": {
+            "id": "f-missing",
+            "entry_id": "factor-twelve",
+            "answer": null,
+            "expected_reward": 0.0,
+            "purpose": "Missing answer returns zero.",
+            "kind": "contract",
+            "execution_status": "pending_root_isolated_harness"
+          }
+        }
+      ],
+      "contract": {
+        "task_meaning": "Return every prime factor of the positive integer, with multiplicities, separated by the multiplication sign ×. Factor order is immaterial.",
+        "entry_domain": "entry.answer represents the correct prime factorization of an integer >=2, as produced by _prime_factors or independently checked; factors here are [2,2,3] for 12.",
+        "answer_domain": "None or a finite string of positive integer tokens separated by ×, with optional surrounding token whitespace. Arbitrary nonnumeric tokens are outside this scoped scoring contract because the real helper raises ValueError.",
+        "full_credit_properties": [
+          {
+            "id": "F1",
+            "statement": "Full credit is granted exactly when sorted parsed response factors equal the oracle prime multiset, including multiplicity."
+          },
+          {
+            "id": "F2",
+            "statement": "A different factorization with the same product earns the explicit 0.5 partial reward, never full credit."
+          },
+          {
+            "id": "F3",
+            "statement": "A different product earns 0.01; missing input earns zero."
+          }
+        ],
+        "legitimate_partial_credit": "3 × 4 multiplies to 12 but 4 is composite, so 0.5 appropriately distinguishes a product-preserving decomposition from complete prime factorization. A wrong-product numeric answer receives the source-defined 0.01 minimum."
+      },
+      "extracted_methods": [
+        {
+          "name": "_normalize_answer",
+          "source_path": "extracted/control-prime-factorization-main/_normalize_answer.py",
+          "source_sha256": "721226999b692ae252e39d7d76f048c92f2a2e1ff6caed646ea19fab0c6a2cc4",
+          "ast_sha256": "f5eef7c9b8eebf48757f5168ff872436f9294c2544725dd1bfa9d850f41f33fd",
+          "extraction": {
+            "qualified_name": "PrimeFactorizationDataset._normalize_answer",
+            "start_line": 50,
+            "end_line": 55,
+            "source_sha256": "721226999b692ae252e39d7d76f048c92f2a2e1ff6caed646ea19fab0c6a2cc4",
+            "module_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        },
+        {
+          "name": "score_answer",
+          "source_path": "extracted/control-prime-factorization-main/score_answer.py",
+          "source_sha256": "5de0f48c97d1210672df760b3b68823449782ed6deae50eb7c2cd6bcd11352a1",
+          "ast_sha256": "661669714196aab3f91c599b55a1176332a5c765abd8589982a156dfcf20d0a4",
+          "extraction": {
+            "qualified_name": "PrimeFactorizationDataset.score_answer",
+            "start_line": 57,
+            "end_line": 70,
+            "source_sha256": "5de0f48c97d1210672df760b3b68823449782ed6deae50eb7c2cd6bcd11352a1",
+            "module_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    }
+  ],
+  "subject_count": 8,
+  "function_families": 6,
+  "probe_count": 63,
+  "all_scoring_asts_identical_to_pinned_source": true
+}

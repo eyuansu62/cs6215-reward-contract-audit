@@ -1,0 +1,181 @@
+{
+  "units": [
+    {
+      "unit_id": "a9766b3bd64ff7201e7207aa401e07ace3f15d3e2c9e5fa14d1b4e2ce5c9a488",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    if answer is not None and bool(answer) == bool(entry['answer']):\n        return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer, entry):\n    if answer is not None and bool(answer) == bool(entry['answer']):\n        return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "stdlib_bindings": {},
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "6e6438a039ed775b6e09b537c5d262e67afee637cf4b5ea090324e3a1812e1db",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    if answer is not None and bool(answer) == bool(entry['answer']):\n        if answer.strip().lower() == entry['answer'].strip().lower():\n            return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer, entry):\n    if answer is not None and bool(answer) == bool(entry['answer']):\n        if answer.strip().lower() == entry['answer'].strip().lower():\n            return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "stdlib_bindings": {},
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "d5a9c747dca03e4f48010d948886b673656f4a9be0c179f25d2dc6ab29bf4c7a",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    if False:\n        if bool(answer) == bool(entry['answer']):\n            return 1.0\n    return 0.0\n",
+      "score_source": "def score_answer(self, answer, entry):\n    if False:\n        if bool(answer) == bool(entry['answer']):\n            return 1.0\n    return 0.0\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_BOOLEAN_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "entry.answer is canonical True/False string",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+        "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+      },
+      "stdlib_bindings": {},
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "d3703523ac6dd95cd6307242d4a82c6d1d5496a69ddf71c50ed2577a9e12158d",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    if not math.isfinite(distance):\n        return 0.0\n    reward = min(1.0, math.exp(-distance))\n    return reward\n",
+      "score_source": "def score_answer(self, answer, entry):\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    if not math.isfinite(distance):\n        return 0.0\n    reward = min(1.0, math.exp(-distance))\n    return reward\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_COMPLEX_FINITE",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite complex result in entry.metadata.result",
+        "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+        "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+      },
+      "stdlib_bindings": {
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "af872225da126dca2bfa6dca3c37753b19b680880e9c03386cedbaa07a338d34",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    if not math.isfinite(distance):\n        return 0.0\n    unrelated = 0\n    reward = min(1.0, math.exp(-distance))\n    return reward\n",
+      "score_source": "def score_answer(self, answer, entry):\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    if not math.isfinite(distance):\n        return 0.0\n    unrelated = 0\n    reward = min(1.0, math.exp(-distance))\n    return reward\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_COMPLEX_FINITE",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite complex result in entry.metadata.result",
+        "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+        "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+      },
+      "stdlib_bindings": {
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "0b16f1695dcf5783fc4d8f2c69a90c9ca2148a6c83ea90c408f9fe43fdf8e769",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    distance = 0.0\n    if not math.isfinite(distance):\n        return 0.0\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    reward = min(1.0, math.exp(-distance))\n    return reward\n",
+      "score_source": "def score_answer(self, answer, entry):\n    distance = 0.0\n    if not math.isfinite(distance):\n        return 0.0\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    reward = min(1.0, math.exp(-distance))\n    return reward\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_COMPLEX_FINITE",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite complex result in entry.metadata.result",
+        "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+        "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+      },
+      "stdlib_bindings": {
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "d389f17ef2236e855f295d711e3490dc627d19278e33f885e21fe3de7d1d980c",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    if math.isfinite(distance):\n        return min(1.0, math.exp(-distance))\n    return 1.0\n",
+      "score_source": "def score_answer(self, answer, entry):\n    distance = abs(complex(answer) - complex(*entry['metadata']['result']))\n    if math.isfinite(distance):\n        return min(1.0, math.exp(-distance))\n    return 1.0\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_COMPLEX_FINITE",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "finite complex result in entry.metadata.result",
+        "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+        "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+      },
+      "stdlib_bindings": {
+        "math": "math"
+      },
+      "fixed_parameters": {}
+    },
+    {
+      "unit_id": "7f48ac3dad45cf2a4bafb3cbc29613c7a6b0ee9436c3931f22027a6cf69d782c",
+      "entry_name": "score_answer",
+      "source": "def score_answer(self, answer, entry):\n    return 0.05\n",
+      "score_source": "def score_answer(self, answer, entry):\n    return 0.05\n",
+      "helpers": [],
+      "contract": {
+        "id": "C_PALINDROME_FULL",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "full_credit_threshold": 1.0,
+        "candidate": "native str or None",
+        "trusted_reference": "nonempty lowercase ASCII multiset in entry.metadata.letters, with a valid palindrome construction",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_requires": "normalized candidate is a palindrome with exactly the given letter multiset",
+        "allowed_partial_credit": "0.02 non-palindrome and0.05 wrong letters are legitimate and must not be flagged solely because positive."
+      },
+      "stdlib_bindings": {},
+      "fixed_parameters": {}
+    }
+  ],
+  "synthetic": true
+}

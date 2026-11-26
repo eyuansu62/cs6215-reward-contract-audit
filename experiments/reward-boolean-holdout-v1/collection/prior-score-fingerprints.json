@@ -1,0 +1,113 @@
+{
+  "normalization": "Drop annotations/docstrings; alpha-normalize local/global identifiers consistently; preserve literals, operations, attributes, control flow. Helper closure checked separately when applicable.",
+  "records": [
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+      "class": "ComplexArithmeticDataset",
+      "score_ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+      "alpha_implementation_sha256": "b0d356b49e095a5e0008dd97022f421c87e1e5e4ba57a26d0ecac3d08062e32f"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "class": "GameOfLifeHaltingDataset",
+      "score_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "alpha_implementation_sha256": "a1945bcba679e3fa232237c70e50becb360ca2efd125094967b147beb9a7f214"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+      "class": "CoinFlipDataset",
+      "score_ast_sha256": "25d747080224c4cdb953bf9d00a070a38b2a3ee4cc1be3e49b850249802f19d0",
+      "alpha_implementation_sha256": "ca5d92d5e1f79aa197ecd158e69193aa77708c85a51769638ddc6f7acaa20bd1"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/algorithmic/binary_matrix.py",
+      "class": "BinaryMatrixDataset",
+      "score_ast_sha256": "09f59ae04a00fdc924944452a5038966de51911ed2805634e66859d709e93549",
+      "alpha_implementation_sha256": "585c5599c7cfdaec20ca47fa40020e469317fe6b0aa91cba2815958065a47bb8"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+      "class": "GroupAnagramsDataset",
+      "score_ast_sha256": "86e18b876068ca355beec75be86c324dabd1fdb71084334aafc60ae10fd557ad",
+      "alpha_implementation_sha256": "19cfacb1b71e18772d0aac1ddef226886290750ef32c69d46179547cbac83e24"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+      "class": "PalindromeDataset",
+      "score_ast_sha256": "9c6fc330cea2c8195759eb0dab0a239a219c47992d317034c09beabf9e9e4c21",
+      "alpha_implementation_sha256": "f13bb30733bb0693c690afec3129d64a971e1db4b1d2ddf7e26489915abe79a3"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/algorithmic/spell_backward.py",
+      "class": "SpellBackwardDataset",
+      "score_ast_sha256": "ac14f315375f52680b1e6475d231ee7655c86c0d87925b28df5ca745250d56f0",
+      "alpha_implementation_sha256": "620be85b248216f4467303838959567de2481f183a5bb8a1b2cf0e751cb7c819"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "class": "DecimalArithmeticDataset",
+      "score_ast_sha256": "95ac429748d2a90676ee55d37f1007503f763f453418da7f1299da066c0c80d0",
+      "alpha_implementation_sha256": "18ce1e6318685cd0162dd7e9e82f8bf1fa67db12f812350d5c15d1efd4c57479"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+      "class": "PrimeFactorizationDataset",
+      "score_ast_sha256": "661669714196aab3f91c599b55a1176332a5c765abd8589982a156dfcf20d0a4",
+      "alpha_implementation_sha256": "e43346c2fb83190b7feaea56c305db8aceddaf38b8c5237462a1fd67cfa76091"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/dataset.py",
+      "class": "ProceduralDataset",
+      "score_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+      "alpha_implementation_sha256": "00fc54b2447baa02213fae1c463d6e9de0e783c63fcc63213664f051138c0543"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/dataset.py",
+      "class": "ReseedingDataset",
+      "score_ast_sha256": "ccbad8d60f8943e27533e4f5bafc98a2f5bd77a7df74cafde9f28e83a3ad3fdb",
+      "alpha_implementation_sha256": "4ef6feb5c3151fc87eac6b3feaa655e909fbd50f02355e303063feac8218d2f2"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/games/n_queens.py",
+      "class": "NQueensDataset",
+      "score_ast_sha256": "d2e518add3b5abc620246d29011ec9e0ca70cc423c3602a657b997406ffd5630",
+      "alpha_implementation_sha256": "f2f57af6e8a8acada773ddac92a88afdb520b494dc1fda141c50d517e2466048"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "class": "GameOfLifeHaltingDataset",
+      "score_ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+      "alpha_implementation_sha256": "745be4ab569d1513005df8db97891bfd084770e37e551817dc8cb8c64a2f5f72"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/pr561_base/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "class": "GameOfLifeHaltingDataset",
+      "score_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "alpha_implementation_sha256": "a1945bcba679e3fa232237c70e50becb360ca2efd125094967b147beb9a7f214"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+      "class": "ComplexArithmeticDataset",
+      "score_ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea",
+      "alpha_implementation_sha256": "d21cef7f49eddef308c96459d56fc3ab2d46f13beaac28186565c3ebd30eee96"
+    },
+    {
+      "file": "datasets/reasoning-gym-reward-v1/upstream/pr562_base/reasoning_gym/algebra/complex_arithmetic.py",
+      "class": "ComplexArithmeticDataset",
+      "score_ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+      "alpha_implementation_sha256": "b0d356b49e095a5e0008dd97022f421c87e1e5e4ba57a26d0ecac3d08062e32f"
+    },
+    {
+      "file": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/algorithmic/number_sorting.py",
+      "class": "NumberSortingDataset",
+      "score_ast_sha256": "03664ee09ca3260c1b3e696843ff7aea28c388e3142e6736a79ba88c1b3739c8",
+      "alpha_implementation_sha256": "c62e63f2df1b3f83c42fc8ce39993e3ac8a70c6439c09a045b2ed1bd3800ca44"
+    },
+    {
+      "file": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/arithmetic/fraction_simplification.py",
+      "class": "FractionSimplificationDataset",
+      "score_ast_sha256": "084fc8c7c954f4932b20b458d4475689d5755e121560e61c43ab276257fbc07b",
+      "alpha_implementation_sha256": "90d9138633712aa6eb2cbb8d540200c61a2f809457baa882262abd07ea1b0683"
+    }
+  ]
+}

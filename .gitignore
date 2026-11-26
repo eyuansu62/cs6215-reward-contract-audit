@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+work/
+local-runs/
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.log
+report/*.out

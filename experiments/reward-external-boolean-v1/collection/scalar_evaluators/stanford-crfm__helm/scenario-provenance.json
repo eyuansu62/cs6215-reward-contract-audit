@@ -1,0 +1,33 @@
+{
+  "records": [
+    {
+      "path": "src/helm/benchmark/scenarios/bbh_scenario.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "path": "src/helm/benchmark/run_specs/__init__.py",
+      "status": "fetched",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/run_specs/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "src/helm/benchmark/run_specs/classic_run_specs.py",
+      "status": "fetched",
+      "sha256": "7def7c1e1ccc91f9682a93996e2fe620ca751e2f9c96fdb6ae0593f84752d1ee",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/run_specs/classic_run_specs.py",
+      "bytes": 53743
+    },
+    {
+      "path": "src/helm/benchmark/run_specs/bbh_run_specs.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "path": "src/helm/benchmark/run_specs/big_bench_run_specs.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+  ]
+}

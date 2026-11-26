@@ -1,0 +1,1404 @@
+{
+  "records": [
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P35",
+      "gold_class": "V",
+      "family": "direct_instruction",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "condition": "rules",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P28",
+      "gold_class": "E",
+      "family": "conditional_policy",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P91",
+      "gold_class": "V",
+      "family": "scope_negation",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "condition": "reference",
+      "contract": null,
+      "class": "U",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "condition": "llm",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P73",
+      "gold_class": "U",
+      "family": "distributed_requirements",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P96",
+      "gold_class": "V",
+      "family": "conditional_policy",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P46",
+      "gold_class": "E",
+      "family": "direct_instruction",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P17",
+      "gold_class": "V",
+      "family": "distributed_requirements",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P42",
+      "gold_class": "E",
+      "family": "distributed_requirements",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "condition": "reference",
+      "contract": null,
+      "class": "U",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "condition": "llm",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P23",
+      "gold_class": "U",
+      "family": "direct_instruction",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "condition": "reference",
+      "contract": null,
+      "class": "U",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "condition": "llm",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P62",
+      "gold_class": "U",
+      "family": "conditional_policy",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "condition": "reference",
+      "contract": null,
+      "class": "U",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "condition": "llm",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P59",
+      "gold_class": "U",
+      "family": "scope_negation",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "condition": "reference",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "researcher_reference",
+      "error": null
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "condition": "rules",
+      "contract": null,
+      "class": "U",
+      "status": "abstained",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "condition": "llm",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1,
+        "obligations": [
+          "valid_boolean_token",
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "complete",
+      "error": null,
+      "raw_contract_unchanged": true
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "condition": "fixed_E",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "equals_reference"
+        ]
+      },
+      "class": "E",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "condition": "fixed_V",
+      "contract": {
+        "schema": "boolean-obligations-v1",
+        "candidate_arg": "answer",
+        "reference_arg": "entry",
+        "reference_key": "answer",
+        "candidate_domain": "native_str_or_none",
+        "trusted_reference": "canonical_True_False",
+        "normalization": [
+          "strip",
+          "lower"
+        ],
+        "full_credit_threshold": 1.0,
+        "obligations": [
+          "valid_boolean_token"
+        ]
+      },
+      "class": "V",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    },
+    {
+      "task_id": "P84",
+      "gold_class": "E",
+      "family": "scope_negation",
+      "condition": "fixed_null",
+      "contract": null,
+      "class": "U",
+      "status": "assumed",
+      "policy_kind": "fixed assumption; not a description extractor",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "predictions_sha256": "e730893201c14e7c96cb73ef7fd77c8cf79371fc3d6041c7a02c34c7bfcaf05c",
+  "oracle_sha256": "1fb258b1dd0780177b8b714982e6135307d3339a45b44ae288a840571771a371",
+  "diagnostic": false,
+  "overall": {
+    "semgrep": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "unknown_positive": 0,
+      "unknown_negative": 0,
+      "total": 7,
+      "unknown": 0,
+      "correct": 7,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "precision": 1.0,
+      "recall_with_unknown": 1.0,
+      "f1_with_unknown": 1.0
+    },
+    "symbolic": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 3,
+      "unknown_positive": 2,
+      "unknown_negative": 1,
+      "total": 7,
+      "unknown": 3,
+      "correct": 4,
+      "accuracy": 0.5714285714285714,
+      "coverage": 0.5714285714285714,
+      "precision": 1.0,
+      "recall_with_unknown": 0.3333333333333333,
+      "f1_with_unknown": 0.5
+    }
+  },
+  "symbolic_paired_vs_semgrep": {
+    "gain_ids": [],
+    "loss_ids": [
+      "rg-issue-543-original",
+      "rg-issue-545-original",
+      "rg-pr-562-proposed-repair"
+    ]
+  },
+  "cases": [
+    {
+      "id": "rg-issue-543-original",
+      "function_family": "rg-issue-543",
+      "contract_id": "C_PROBABILITY_FULL",
+      "expected_violation": true,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: answer.replace",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "rg-issue-544-original",
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "expected_violation": true,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "native_boolean_path_counterexample",
+            "candidate_class": "fresh nonempty non-Boolean normalized string",
+            "trusted_reference": "True",
+            "argument": "The displayed native string/None class satisfies every modeled path condition and reaches a literal full reward, while normalized Boolean equality is false. No subject code was executed."
+          }
+        }
+      }
+    },
+    {
+      "id": "rg-issue-545-original",
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "expected_violation": true,
+      "methods": {
+        "semgrep": {
+          "verdict": "alarm",
+          "correct": true,
+          "reason": "A fixed risky source idiom matched; this is not an executable violation witness.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: self.parse_string_to_complex",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "function_family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "boolean_normalized_equality_implication",
+                "argument": "Equality of native candidate/reference strings after only strip/lower implies equal normalized Boolean tokens; reference is trusted canonical True/False.",
+                "return_span": {
+                  "line": 16,
+                  "end_line": 16
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  },
+                  {
+                    "condition": "answer is not None and answer.strip().lower() == entry['answer'].strip().lower()",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 14,
+                      "end_line": 14
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          }
+        }
+      }
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "function_family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "correct": false,
+          "reason": "unsupported evaluated assignment: unverified call: self.parse_string_to_complex",
+          "unexpected_error": null,
+          "evidence": {
+            "proved_full_credit_paths": []
+          }
+        }
+      }
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "function_family": "PalindromeDataset.score_answer",
+      "contract_id": "C_PALINDROME_FULL",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "palindrome_and_exact_multiset_implication",
+                "argument": "Every full-credit path has equality to the reverse of the normalized candidate and equality of sorted normalized candidate/trusted letters. Both contract requirements follow.",
+                "return_span": {
+                  "line": 30,
+                  "end_line": 30
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is None or not isinstance(answer, str)",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 12,
+                      "end_line": 12
+                    }
+                  },
+                  {
+                    "condition": "answer is None or not isinstance(answer, str)",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 12,
+                      "end_line": 12
+                    }
+                  },
+                  {
+                    "condition": "answer == ''",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 15,
+                      "end_line": 15
+                    }
+                  },
+                  {
+                    "condition": "answer != answer[::-1]",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 23,
+                      "end_line": 23
+                    }
+                  },
+                  {
+                    "condition": "sorted(answer) != sorted(expected_letters)",
+                    "required_truth": false,
+                    "source_span": {
+                      "line": 27,
+                      "end_line": 27
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          }
+        }
+      }
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "function_family": "PrimeFactorizationDataset.score_answer",
+      "contract_id": "C_PRIME_FACTORS_FULL",
+      "expected_violation": false,
+      "methods": {
+        "semgrep": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": "All declared function and return spans were covered; no fixed risky idiom matched.",
+          "unexpected_error": null,
+          "evidence": null
+        },
+        "symbolic": {
+          "verdict": "no_alarm",
+          "correct": true,
+          "reason": null,
+          "unexpected_error": null,
+          "evidence": {
+            "kind": "all_normal_full_credit_paths_certified",
+            "full_credit_path_count": 1,
+            "paths": [
+              {
+                "kind": "source_certified_prime_factor_multiset_equality",
+                "argument": "Source-certified parsing preserves every integer factor and multiplicity. Equality to the trusted prime-factor multiset implies prime factors and equal reference product.",
+                "helper_certificate": {
+                  "kind": "integer_factor_multiset_parser",
+                  "helper": "_normalize_answer",
+                  "source_span": {
+                    "line": 1,
+                    "end_line": 6
+                  },
+                  "grammar": "split ×; strip; discard empty; native int; sorted, multiplicity preserved"
+                },
+                "return_span": {
+                  "line": 14,
+                  "end_line": 14
+                },
+                "conditions": [
+                  {
+                    "condition": "answer is not None",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 4,
+                      "end_line": 4
+                    }
+                  },
+                  {
+                    "condition": "oracle_answer_parsed == answer_parsed",
+                    "required_truth": true,
+                    "source_span": {
+                      "line": 7,
+                      "end_line": 7
+                    }
+                  }
+                ]
+              }
+            ],
+            "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+          }
+        }
+      }
+    }
+  ],
+  "source_exposed_development": true,
+  "LLM_tested": false,
+  "qualification": "NoAlarm is operational no-warning/source-certificate status, not arbitrary-Python safety. Unknowns remain in denominators; synthetic diagnostics separate."
+}

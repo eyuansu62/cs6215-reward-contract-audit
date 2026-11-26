@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-08T15:19:23.634868+00:00",
+  "files_sha256": {
+    "run_extraction.py": "2f87c1461c9b50ac621a838425042d59a7ade098109b58bbc02d3f4617dac4cb",
+    "test_extraction.py": "2dceafc755552567de7ddd1672e7071bbba2fa7c504a7f1caf43233a72b88cb5",
+    "reference/contracts.json": "0eab3063bbae805ed513f5816450dc0851f49667ff53e0d1c0ccabc3ec7392f0",
+    "reference/review.json": "d75cbc6939eff56e92604674346ab85cc0ca239975801e4db078388021c986df",
+    "reference/annotation-notes.md": "4d9e24e694475b46a4acc33931e791d9c26b8e7c285be8ee75ce541621aff692",
+    "collection/blind-task-descriptions.json": "fea9db1afd4d95a8fbc20adc4d0e43802203c7156de261433dbb06a9fc3113ff",
+    "collection/description-packet-freeze.json": "aab81cc76774bc2b502b9f0ba05af3bc6ef8f92209662899bd3d69f318ae8b23",
+    "protocol/design.json": "e62b0cd6658b304708faad3b12307a899b33b1965367763de833ba098d903ba1",
+    "protocol/prompt-prefix.txt": "0e3aa2aa2f67d3d885102728578cfb80df80a5cc8d3ebf6d45af9ab93775cb5c",
+    "protocol/response-schema.json": "ad171b9e6a734c0a1d086d5a38f10766db044fe83e71cf6c88370d40aaa3dbe7"
+  },
+  "old_method_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "reference_frozen_before_model_responses": true,
+  "reference_authorship": "AI-assisted researcher reference; no actual human annotation",
+  "scorer_content_not_read_before_extraction": true,
+  "model_selection": "Codex CLI service default with user config ignored; actual identity recorded if exposed",
+  "requests": 6,
+  "outcome_tuning_or_retries": false
+}

@@ -1,0 +1,2124 @@
+{
+  "created_utc": "2026-11-09T02:30:27.158517+00:00",
+  "fully_extracted_AST_inspected_source_paths": [
+    "reasoning_gym/algebra/complex_arithmetic.py",
+    "reasoning_gym/algebra/intermediate_integration.py",
+    "reasoning_gym/algebra/polynomial_equations.py",
+    "reasoning_gym/algebra/polynomial_multiplication.py",
+    "reasoning_gym/algebra/simple_equations.py",
+    "reasoning_gym/algebra/simple_integration.py",
+    "reasoning_gym/algorithmic/ab.py",
+    "reasoning_gym/algorithmic/base_conversion.py",
+    "reasoning_gym/algorithmic/binary_alternation.py",
+    "reasoning_gym/algorithmic/binary_matrix.py",
+    "reasoning_gym/algorithmic/caesar_cipher.py",
+    "reasoning_gym/algorithmic/count_primes.py",
+    "reasoning_gym/algorithmic/cryptarithm.py",
+    "reasoning_gym/algorithmic/game_of_life.py",
+    "reasoning_gym/algorithmic/game_of_life_halting.py",
+    "reasoning_gym/algorithmic/graph_color.py",
+    "reasoning_gym/algorithmic/group_anagrams.py",
+    "reasoning_gym/algorithmic/isomorphic_strings.py",
+    "reasoning_gym/algorithmic/jugs.py",
+    "reasoning_gym/algorithmic/letter_counting.py",
+    "reasoning_gym/algorithmic/letter_jumble.py",
+    "reasoning_gym/algorithmic/manipulate_matrix.py",
+    "reasoning_gym/algorithmic/number_filtering.py",
+    "reasoning_gym/algorithmic/number_sorting.py",
+    "reasoning_gym/algorithmic/palindrome_generation.py",
+    "reasoning_gym/algorithmic/palindrome_partitioning.py",
+    "reasoning_gym/algorithmic/pool_matrix.py",
+    "reasoning_gym/algorithmic/ransom_note.py",
+    "reasoning_gym/algorithmic/rotate_matrix.py",
+    "reasoning_gym/algorithmic/rotten_oranges.py",
+    "reasoning_gym/algorithmic/sentence_reordering.py",
+    "reasoning_gym/algorithmic/spell_backward.py",
+    "reasoning_gym/algorithmic/spiral_matrix.py",
+    "reasoning_gym/algorithmic/string_insertion.py",
+    "reasoning_gym/algorithmic/string_manipulation.py",
+    "reasoning_gym/algorithmic/string_splitting.py",
+    "reasoning_gym/algorithmic/string_synthesis.py",
+    "reasoning_gym/algorithmic/word_ladder.py",
+    "reasoning_gym/algorithmic/word_sequence_reversal.py",
+    "reasoning_gym/algorithmic/word_sorting.py",
+    "reasoning_gym/arc/arc_1d.py",
+    "reasoning_gym/arc/arc_1d_tasks.py",
+    "reasoning_gym/arc/arc_agi.py",
+    "reasoning_gym/arc/board_format.py",
+    "reasoning_gym/arc/rearc.py",
+    "reasoning_gym/arithmetic/basic_arithmetic.py",
+    "reasoning_gym/arithmetic/bitwise_arithmetic.py",
+    "reasoning_gym/arithmetic/calendar_arithmetic.py",
+    "reasoning_gym/arithmetic/chain_sum.py",
+    "reasoning_gym/arithmetic/count_bits.py",
+    "reasoning_gym/arithmetic/decimal_arithmetic.py",
+    "reasoning_gym/arithmetic/decimal_chain_sum.py",
+    "reasoning_gym/arithmetic/dice.py",
+    "reasoning_gym/arithmetic/fraction_simplification.py",
+    "reasoning_gym/arithmetic/gcd.py",
+    "reasoning_gym/arithmetic/gsm_symbolic/gsm_symbolic.py",
+    "reasoning_gym/arithmetic/lcm.py",
+    "reasoning_gym/arithmetic/leg_counting.py",
+    "reasoning_gym/arithmetic/number_format.py",
+    "reasoning_gym/arithmetic/power_function.py",
+    "reasoning_gym/arithmetic/prime_factorization.py",
+    "reasoning_gym/arithmetic/products.py",
+    "reasoning_gym/arithmetic/time_intervals.py",
+    "reasoning_gym/coaching/attributes.py",
+    "reasoning_gym/coaching/base_curriculum.py",
+    "reasoning_gym/coaching/curriculum_config.py",
+    "reasoning_gym/coaching/experiment.py",
+    "reasoning_gym/coaching/registry.py",
+    "reasoning_gym/coaching/score_board.py",
+    "reasoning_gym/code/bf.py",
+    "reasoning_gym/code/codeio.py",
+    "reasoning_gym/cognition/color_cube_rotation.py",
+    "reasoning_gym/cognition/figlet_fonts.py",
+    "reasoning_gym/cognition/modulo_grid.py",
+    "reasoning_gym/cognition/needle_data.py",
+    "reasoning_gym/cognition/needle_haystack.py",
+    "reasoning_gym/cognition/number_sequences.py",
+    "reasoning_gym/cognition/rectangle_count.py",
+    "reasoning_gym/cognition/rubiks_cube.py",
+    "reasoning_gym/composite.py",
+    "reasoning_gym/dataset.py",
+    "reasoning_gym/factory.py",
+    "reasoning_gym/games/boxnet.py",
+    "reasoning_gym/games/countdown.py",
+    "reasoning_gym/games/emoji_mystery.py",
+    "reasoning_gym/games/futoshiki.py",
+    "reasoning_gym/games/kakurasu.py",
+    "reasoning_gym/games/knight_swap.py",
+    "reasoning_gym/games/mahjong.py",
+    "reasoning_gym/games/maze.py",
+    "reasoning_gym/games/mini_sudoku.py",
+    "reasoning_gym/games/n_queens.py",
+    "reasoning_gym/games/puzzle24.py",
+    "reasoning_gym/games/rush_hour.py",
+    "reasoning_gym/games/sokoban.py",
+    "reasoning_gym/games/sudoku.py",
+    "reasoning_gym/games/survo.py",
+    "reasoning_gym/games/tower_of_hanoi.py",
+    "reasoning_gym/games/tsumego.py",
+    "reasoning_gym/geometry/advanced_geometry.py",
+    "reasoning_gym/geometry/simple_geometry.py",
+    "reasoning_gym/graphs/course_schedule.py",
+    "reasoning_gym/graphs/family_relationships.py",
+    "reasoning_gym/graphs/largest_island.py",
+    "reasoning_gym/graphs/path_star.py",
+    "reasoning_gym/graphs/quantum_lock.py",
+    "reasoning_gym/graphs/shortest_path.py",
+    "reasoning_gym/induction/acre/acre.py",
+    "reasoning_gym/induction/acre/blicket.py",
+    "reasoning_gym/induction/acre/const.py",
+    "reasoning_gym/induction/list_functions/list_functions.py",
+    "reasoning_gym/logic/aiw.py",
+    "reasoning_gym/logic/circuit_logic.py",
+    "reasoning_gym/logic/knights_knaves.py",
+    "reasoning_gym/logic/propositional_logic.py",
+    "reasoning_gym/logic/self_reference.py",
+    "reasoning_gym/logic/syllogisms.py",
+    "reasoning_gym/logic/zebra_puzzles.py",
+    "reasoning_gym/probability/coin_flip.py",
+    "reasoning_gym/scoring.py",
+    "reasoning_gym/utils.py",
+    "reasoning_gym/version_manager.py"
+  ],
+  "fully_inspected_count": 122,
+  "archive_only_not_content_inspected": [
+    {
+      "path": ".gitattributes",
+      "bytes": 31,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": ".github/workflows/pre-commit.yml",
+      "bytes": 997,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 663,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 443,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "bytes": 515,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 4295,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "GALLERY.md",
+      "bytes": 382367,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 3193,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9003,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "assets/examples.png",
+      "bytes": 737108,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "assets/icon.png",
+      "bytes": 711322,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/.gitignore",
+      "bytes": 9,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/README.md",
+      "bytes": 6726,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/dry_run.py",
+      "bytes": 900,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/eval.py",
+      "bytes": 37321,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/eval_config.py",
+      "bytes": 7221,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/example_config.json",
+      "bytes": 942,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/example_config.yaml",
+      "bytes": 766,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/generate_config.py",
+      "bytes": 4600,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/requirements-eval.txt",
+      "bytes": 59,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/visualize_results.py",
+      "bytes": 30495,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/claude-3.5-sonnet.yaml",
+      "bytes": 3196,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/claude-3.7-sonnet.yaml",
+      "bytes": 3216,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/claude-3.7-sonnet_thinking.yaml",
+      "bytes": 3224,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/deepseek-r1.yaml",
+      "bytes": 3206,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/google-gemma-3-27b-it.yaml",
+      "bytes": 3210,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/llama-3.1-8b-instruct.yaml",
+      "bytes": 3218,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/llama-3.3-70b-instruct.yaml",
+      "bytes": 3223,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/llama-4-maverick.yaml",
+      "bytes": 3215,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/openai-o1.yaml",
+      "bytes": 3195,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/openai-o3-mini.yaml",
+      "bytes": 3200,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/easy/qwen-qwq-32b.yaml",
+      "bytes": 3201,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/claude-3.5-sonnet.yaml",
+      "bytes": 11727,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/claude-3.7-sonnet_thinking.yaml",
+      "bytes": 11736,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/deepseek-r1.yaml",
+      "bytes": 11717,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/gemini-2.0-flash.yaml",
+      "bytes": 11734,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/gemma-3-12b.yaml",
+      "bytes": 11728,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/gemma-3-27b.yaml",
+      "bytes": 11728,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/gemma-3-4b.yaml",
+      "bytes": 11727,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/grok-3-mini.yaml",
+      "bytes": 11715,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/llama-3.1-8b.yaml",
+      "bytes": 11739,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/llama-3.2-3b.yaml",
+      "bytes": 11739,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/llama-3.3-70b.yaml",
+      "bytes": 11739,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/llama-4-maverick.yaml",
+      "bytes": 11733,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/llama-4-scout.yaml",
+      "bytes": 11731,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/mistral-small-3.1-24b.yaml",
+      "bytes": 11779,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/o3-mini.yaml",
+      "bytes": 11711,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/optimus-alpha.yaml",
+      "bytes": 11722,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "eval/yaml/hard/qwen-qwq-32b.yaml",
+      "bytes": 11719,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/trl/README.md",
+      "bytes": 1444,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/trl/config/ds_zero2.yaml",
+      "bytes": 494,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/trl/config/grpo.yaml",
+      "bytes": 945,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/trl/grpo.py",
+      "bytes": 9097,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/trl/set_env.sh",
+      "bytes": 712,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/trl/train.sh",
+      "bytes": 673,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/unsloth/README.md",
+      "bytes": 1164,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/unsloth/requirements.txt",
+      "bytes": 25,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/unsloth/train_grpo_lora.py",
+      "bytes": 6773,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/veRL/README.md",
+      "bytes": 2218,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/veRL/config/grpo_trainer.yaml",
+      "bytes": 7143,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/veRL/grpo_train.py",
+      "bytes": 12773,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/verifiers/README.md",
+      "bytes": 769,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/verifiers/requirements.txt",
+      "bytes": 15,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/verifiers/vf_rg.py",
+      "bytes": 945,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "examples/verifiers/zero3.yaml",
+      "bytes": 498,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/check-collisions-in-reasoning-gym-dataset.ipynb",
+      "bytes": 74756,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/codeio.ipynb",
+      "bytes": 28017,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/codeio/.gitignore",
+      "bytes": 19,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/codeio/PreprocessCode.ipynb",
+      "bytes": 49521,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/codeio/ReformatAndFilter.ipynb",
+      "bytes": 22691,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/collisions/collisions.txt",
+      "bytes": 1531,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/generate_anagrams.ipynb",
+      "bytes": 2958,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/gsm-symbolic-cot.txt",
+      "bytes": 18110,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/gsm_symbolic.ipynb",
+      "bytes": 28400,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/plot_curriculum.ipynb",
+      "bytes": 55215,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/test_generator_files.py",
+      "bytes": 1939,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "notebooks/verify_gsm_symbolic.ipynb",
+      "bytes": 38940,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1764,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/__init__.py",
+      "bytes": 852,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/algebra/__init__.py",
+      "bytes": 1301,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/algorithmic/__init__.py",
+      "bytes": 6302,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/__init__.py",
+      "bytes": 396,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/dsl.py",
+      "bytes": 35151,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/__init__.py",
+      "bytes": 134,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_00_99.py",
+      "bytes": 120701,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_100_199.py",
+      "bytes": 118939,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_200_299.py",
+      "bytes": 145569,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/generators/generators_300_399.py",
+      "bytes": 193233,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/utils.py",
+      "bytes": 3996,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arc/rearc_utils/verifiers.py",
+      "bytes": 276614,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/__init__.py",
+      "bytes": 3128,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/__init__.py",
+      "bytes": 144,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/generators_00_49.py",
+      "bytes": 172378,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/generators_50_99.py",
+      "bytes": 170045,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/coaching/__init__.py",
+      "bytes": 666,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/__init__.py",
+      "bytes": 277,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/BF-it.py",
+      "bytes": 1833,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Compiler.py",
+      "bytes": 8907,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Exceptions.py",
+      "bytes": 86,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/FunctionCompiler.py",
+      "bytes": 52833,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Functions.py",
+      "bytes": 1259,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/General.py",
+      "bytes": 45608,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Globals.py",
+      "bytes": 2558,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Lexical_analyzer.py",
+      "bytes": 7763,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/LibraryFunctionCompiler.py",
+      "bytes": 4003,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Minify.py",
+      "bytes": 301,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Node.py",
+      "bytes": 18579,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Optimizer.py",
+      "bytes": 4031,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Parser.py",
+      "bytes": 5033,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/Token.py",
+      "bytes": 1648,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Compiler/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/Interpreter.py",
+      "bytes": 2500,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/LICENSE.md",
+      "bytes": 1065,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/README.md",
+      "bytes": 3596,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/code/contrib/bfit/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/cognition/__init__.py",
+      "bytes": 1283,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/__init__.py",
+      "bytes": 1015,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/acre_objects.json",
+      "bytes": 6047,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/anagrams.jsonl",
+      "bytes": 8027234,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/codeio-hq.jsonl.gz",
+      "bytes": 2594920,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/codeio.jsonl.gz",
+      "bytes": 2350897,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/holdout_words.txt",
+      "bytes": 3000,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/in_the_year_2889.txt",
+      "bytes": 52851,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/rush_18k.txt",
+      "bytes": 809802,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/wordle_words.py",
+      "bytes": 30114,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/words.csv",
+      "bytes": 60734,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/data/words3to10.txt",
+      "bytes": 1338903,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/__init__.py",
+      "bytes": 2596,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/LICENSE",
+      "bytes": 1070,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/README.md",
+      "bytes": 2405,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/astar.py",
+      "bytes": 2955,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/bfs.py",
+      "bytes": 2201,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/box.py",
+      "bytes": 1215,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/game.py",
+      "bytes": 6358,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/generator.py",
+      "bytes": 4191,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/player.py",
+      "bytes": 4311,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/games/contrib/sokoban/src/utils.py",
+      "bytes": 5916,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/geometry/__init__.py",
+      "bytes": 405,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/graphs/__init__.py",
+      "bytes": 1094,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/induction/__init__.py",
+      "bytes": 296,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/__init__.py",
+      "bytes": 154,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/generators.py",
+      "bytes": 10540,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/__init__.py",
+      "bytes": 1329,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/README.md",
+      "bytes": 736,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/clues.py",
+      "bytes": 8295,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/generate.py",
+      "bytes": 15718,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/literals.py",
+      "bytes": 17104,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/puzzle.py",
+      "bytes": 11746,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/logic/contrib/logic_puzzle/sat_utils.py",
+      "bytes": 5083,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "reasoning_gym/probability/__init__.py",
+      "bytes": 184,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 121,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "scripts/debug_curricula.py",
+      "bytes": 7236,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "scripts/generate_gallery.py",
+      "bytes": 2789,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "scripts/hf_dataset/example_hf_dataset_config.yaml",
+      "bytes": 1125,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "scripts/hf_dataset/save_hf_dataset.py",
+      "bytes": 7938,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 30,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/coaching/test_curriculum_experiment.py",
+      "bytes": 4895,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_ab.py",
+      "bytes": 4119,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_acre.py",
+      "bytes": 1982,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_advanced_geometry.py",
+      "bytes": 4214,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_aiw.py",
+      "bytes": 5083,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_arc_1d.py",
+      "bytes": 6498,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_arc_1d_tasks.py",
+      "bytes": 4317,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_arc_agi.py",
+      "bytes": 8313,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_base_conversion.py",
+      "bytes": 7191,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_basic_arithmetic.py",
+      "bytes": 7385,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_bf.py",
+      "bytes": 1667,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_binary_alternation.py",
+      "bytes": 4183,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_binary_matrix.py",
+      "bytes": 4963,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_bitwise_arithmetic.py",
+      "bytes": 5445,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_boxnet.py",
+      "bytes": 7720,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_caesar_cipher.py",
+      "bytes": 4580,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_calendar_arithmetic.py",
+      "bytes": 7977,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_chain_sum.py",
+      "bytes": 5871,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_circuit_logic.py",
+      "bytes": 9339,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_codeio.py",
+      "bytes": 2135,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_coin_flip.py",
+      "bytes": 3393,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_color_cube_rotation.py",
+      "bytes": 3879,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_complex_arithmetic.py",
+      "bytes": 8738,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_composite.py",
+      "bytes": 8594,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_count_bits.py",
+      "bytes": 3236,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_count_primes.py",
+      "bytes": 3684,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_countdown.py",
+      "bytes": 6789,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_course_schedule.py",
+      "bytes": 6128,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_cryptarithm.py",
+      "bytes": 12256,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_dataset.py",
+      "bytes": 1992,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_dataset_common.py",
+      "bytes": 708,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_decimal_arithmetic.py",
+      "bytes": 3276,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_decimal_chain_sum.py",
+      "bytes": 10522,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_dice.py",
+      "bytes": 1841,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_emoji_mystery.py",
+      "bytes": 4638,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_family_relationships.py",
+      "bytes": 5402,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_figlet_fonts.py",
+      "bytes": 2575,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_fraction_simplification.py",
+      "bytes": 5970,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_futoshiki.py",
+      "bytes": 10690,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_game_of_life.py",
+      "bytes": 6456,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_game_of_life_halting.py",
+      "bytes": 2615,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_gcd.py",
+      "bytes": 5128,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_get_score_answer_fn.py",
+      "bytes": 2126,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_graph_color.py",
+      "bytes": 3193,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_group_anagrams.py",
+      "bytes": 5843,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_gsm_symbolic.py",
+      "bytes": 3207,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_intermediate_integration.py",
+      "bytes": 8019,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_isomorphic_strings.py",
+      "bytes": 4189,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_jugs.py",
+      "bytes": 3261,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_kakurasu.py",
+      "bytes": 7211,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_knight_swap.py",
+      "bytes": 7179,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_knights_knaves.py",
+      "bytes": 10193,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_largest_island.py",
+      "bytes": 5860,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_lcm.py",
+      "bytes": 5086,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_leg_counting.py",
+      "bytes": 4037,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_letter_counting.py",
+      "bytes": 3456,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_letter_jumble.py",
+      "bytes": 5561,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_list_functions.py",
+      "bytes": 2585,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_mahjong_puzzle.py",
+      "bytes": 4022,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_manipulate_matrix.py",
+      "bytes": 7687,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_maze.py",
+      "bytes": 4619,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_mini_sudoku.py",
+      "bytes": 4704,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_modulo_grid.py",
+      "bytes": 1904,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_n_queens.py",
+      "bytes": 5912,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_needle_haystack.py",
+      "bytes": 3675,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_number_filtering.py",
+      "bytes": 5549,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_number_format.py",
+      "bytes": 5514,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_number_sequences.py",
+      "bytes": 3816,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_number_sorting.py",
+      "bytes": 7191,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_palindrome.py",
+      "bytes": 4140,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_palindrome_partitioning.py",
+      "bytes": 5360,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_path_star.py",
+      "bytes": 6979,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_polynomial_equations.py",
+      "bytes": 6219,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_polynomial_multiplication.py",
+      "bytes": 11511,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_pool_matrix.py",
+      "bytes": 6766,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_power_function.py",
+      "bytes": 4432,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_prime_factorization.py",
+      "bytes": 5018,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_products.py",
+      "bytes": 6641,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_propositional_logic.py",
+      "bytes": 5048,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_puzzle24.py",
+      "bytes": 4421,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_quantum_lock.py",
+      "bytes": 6479,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_ransom_note.py",
+      "bytes": 5330,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_rearc.py",
+      "bytes": 5368,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_rectangle_count.py",
+      "bytes": 1717,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_rotate_matrix.py",
+      "bytes": 5249,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_rotten_oranges.py",
+      "bytes": 4366,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_rubiks_cube.py",
+      "bytes": 3412,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_rush_hour.py",
+      "bytes": 4740,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_score_board.py",
+      "bytes": 7222,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_scoring.py",
+      "bytes": 8551,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_self_reference.py",
+      "bytes": 4717,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_sentence_reordering.py",
+      "bytes": 2662,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_shortest_path.py",
+      "bytes": 6779,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_simple_equations.py",
+      "bytes": 7806,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_simple_geometry.py",
+      "bytes": 4006,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_simple_integration.py",
+      "bytes": 5909,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_sokoban.py",
+      "bytes": 5640,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_spell_backward.py",
+      "bytes": 2814,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_spiral_matrix.py",
+      "bytes": 3896,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_string_insertion.py",
+      "bytes": 4480,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_string_manipulation.py",
+      "bytes": 10519,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_string_splitting.py",
+      "bytes": 4361,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_string_synthesis.py",
+      "bytes": 4863,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_sudoku.py",
+      "bytes": 4602,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_survo.py",
+      "bytes": 5175,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_syllogisms.py",
+      "bytes": 13189,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_time_intervals.py",
+      "bytes": 4414,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_tower_of_hanoi.py",
+      "bytes": 11267,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_tsumego.py",
+      "bytes": 12812,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_utils.py",
+      "bytes": 1763,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_word_ladder.py",
+      "bytes": 14996,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_word_sequence_reversal.py",
+      "bytes": 3555,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_word_sorting.py",
+      "bytes": 6953,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tests/test_zebra.py",
+      "bytes": 4467,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/README.md",
+      "bytes": 1554,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/cli/__init__.py",
+      "bytes": 0,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/cli/rgc/__init__.py",
+      "bytes": 74,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/cli/rgc/client.py",
+      "bytes": 4305,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/cli/rgc/main.py",
+      "bytes": 8326,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/__init__.py",
+      "bytes": 195,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/config.py",
+      "bytes": 665,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/middleware.py",
+      "bytes": 803,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/models.py",
+      "bytes": 2619,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/server.py",
+      "bytes": 6424,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/tests/__init__.py",
+      "bytes": 42,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/tests/test_config.py",
+      "bytes": 639,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/tests/test_endpoints.py",
+      "bytes": 8269,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "tools/server/tests/test_registry.py",
+      "bytes": 1458,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/README.md",
+      "bytes": 6784,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/curriculum/knights_knaves_curriculum.yaml",
+      "bytes": 6690,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/curriculum/knights_knaves_noncurriculum.yaml",
+      "bytes": 6820,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/curriculum/spell_backward.yaml",
+      "bytes": 6783,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/external_benchmarks/maths_llama_3b.yaml",
+      "bytes": 7143,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/inter_generalisation/algebra_qwen_3b.yaml",
+      "bytes": 7045,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/inter_generalisation/algorithmic_qwen_3b.yaml",
+      "bytes": 7460,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/inter_generalisation/games_qwen_3b.yaml",
+      "bytes": 7053,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/inter_generalisation/logic_qwen_3b.yaml",
+      "bytes": 7029,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/intra_generalisation/algebra_qwen_3b.yaml",
+      "bytes": 7189,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/intra_generalisation/algorithmic_qwen_3b.yaml",
+      "bytes": 7282,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/intra_generalisation/arithmetic_qwen_3b.yaml",
+      "bytes": 7300,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/intra_generalisation/cognition_qwen_3b.yaml",
+      "bytes": 7105,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/intra_generalisation/games_qwen_3b.yaml",
+      "bytes": 7441,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/configs/intra_generalisation/graphs_qwen_3b.yaml",
+      "bytes": 7248,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/curriculum/knights_knaves.yaml",
+      "bytes": 1114,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/evaluate_model.py",
+      "bytes": 8966,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/algebra.yaml",
+      "bytes": 1203,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/algorithmic.yaml",
+      "bytes": 1772,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/arc.yaml",
+      "bytes": 925,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/arithmetic.yaml",
+      "bytes": 1766,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/cognition.yaml",
+      "bytes": 1224,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/games.yaml",
+      "bytes": 1247,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/geometry.yaml",
+      "bytes": 904,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/inter_generalisation/graphs.yaml",
+      "bytes": 1089,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/intra-generalisation/eval_algebraic_composite.yaml",
+      "bytes": 619,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/intra-generalisation/eval_algorithmic_composite.yaml",
+      "bytes": 635,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/intra-generalisation/eval_arithmetic_composite.yaml",
+      "bytes": 531,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/intra-generalisation/eval_cognition_composite.yaml",
+      "bytes": 973,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/intra-generalisation/eval_games_composite.yaml",
+      "bytes": 575,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/lmeh/gsm8k_cot_rg.yaml",
+      "bytes": 4083,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/evaluations/lmeh/llama_math_algebra.yaml",
+      "bytes": 1698,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/rewards/__init__.py",
+      "bytes": 67,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/rewards/reward.py",
+      "bytes": 3112,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/train_grpo.py",
+      "bytes": 5143,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/trainers/__init__.py",
+      "bytes": 75,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/trainers/ray_grpo_trainer.py",
+      "bytes": 18466,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/utils/__init__.py",
+      "bytes": 107,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/utils/datasets.py",
+      "bytes": 4856,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    },
+    {
+      "path": "training/utils/load_fsdp_to_hf.py",
+      "bytes": 1104,
+      "content_read_or_parsed_by_census": false,
+      "retention": "archive-only; filename/size metadata inspected"
+    }
+  ],
+  "archive_only_count": 332,
+  "scope_note": "The complete public archive is retained. Only the122 listed .py blobs were extracted/AST-parsed. Other member names/sizes were listed, but their source/data content was not inspected or used for candidate selection. Do not conflate these levels in future freshness audits."
+}

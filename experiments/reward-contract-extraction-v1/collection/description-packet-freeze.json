@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-08T15:10:10.398786+00:00",
+  "files_sha256": {
+    "selection-freeze.json": "5c64ab8219eb46094c419abcc16fd7110a8cd0c039b99967aa7ba532e57fa566",
+    "blind-task-descriptions.json": "fea9db1afd4d95a8fbc20adc4d0e43802203c7156de261433dbb06a9fc3113ff",
+    "human-annotation-packet.md": "8d73eaf54f49a1774b2c324b190d3eb601f3ace0ecca586f5759a1fad3551c7e",
+    "task-provenance-private.json": "d400634ce8b1467d56fb9f51648c17427b0c982c38894654519802b838cf4364",
+    "description-source-fragments.json": "b86cf2fc682cdf9dad3013a4a19fc81c8b02b589fd99fb6c0680aae3aaf1a89d",
+    "exposure-audit.json": "1efe6598d7fc327cb6d4541d368467c127e561d6633a7866170e6ff0d0d773ec",
+    "tree.json": "8f10189dd449de90971bf0ab09f515fab4d611d7b40e7d66f85e192dbfbe1015"
+  },
+  "sealed_sources_sha256": {
+    "reasoning_gym/algorithmic/isomorphic_strings.py": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76",
+    "reasoning_gym/algorithmic/ransom_note.py": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866",
+    "reasoning_gym/graphs/course_schedule.py": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c",
+    "reasoning_gym/algorithmic/count_primes.py": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd",
+    "reasoning_gym/algorithmic/number_sorting.py": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+    "reasoning_gym/arithmetic/fraction_simplification.py": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab"
+  },
+  "human_and_model_input_source": "blind-task-descriptions.json only; human prose packet is identical questions with annotation blanks",
+  "scorer_source_text_shown_to_preparer": false,
+  "upstream_code_executed": false
+}

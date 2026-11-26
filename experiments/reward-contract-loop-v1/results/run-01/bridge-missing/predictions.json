@@ -1,0 +1,95 @@
+{
+  "status": "complete",
+  "bridge_sha256": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6",
+  "preserved_baseline": {
+    "method_freeze_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+    "files_sha256": {
+      "prepare_inputs.py": "32b7d1aef06f525a7aa76294a6aad36b46afd7687ed05466d9872890196561af",
+      "protocol/contracts-evaluation-freeze.json": "b2a688633864a35e702b9ab0536a5ddf08a7f54d44e20f3171df02d1bfec7e0e",
+      "protocol/contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+      "protocol/evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab",
+      "run_baselines.py": "211da806e4c9b092031652d54689a9d000f1dfa0d432dad8040bc8b64355e32a",
+      "test_study.py": "355bb8eaac02db7e2d98da705e61320b4a8e5a5fb66c652f3a304600c6f1fe5e",
+      "tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+      "tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+      "tools/test_semgrep_baseline.py": "ecdd607446186c788540a7b44902293c6176026a13255e50e41970ce22d2ff51",
+      "tools/test_symbolic_baseline.py": "2a2653686e307048ee77d1668388f7464f20d7239a77f99c6167720e2151181b",
+      "tools/tool-release.json": "ef27db9b8b76468126e040ebb188ac9a941158f960265ad7b7dc944378d54005"
+    },
+    "analyzer_files_unchanged": true,
+    "new_analyzer_semantics_or_rules": false
+  },
+  "imported_analyzers": null,
+  "source_units_sha256": "0a3e862043441c4bebdca46ea4ece79d2a5af71e96fd2a4e6e162bbec68c03b9",
+  "contracts_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "condition_output": "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-missing",
+  "contract_origin_passed_to_detectors": false,
+  "qualification": "The projection checks only a necessary condition: agreement with a trusted canonical True/False reference after the preserved strip/lower normalization. It does not validate how the task is solved, all output-format requirements, or an inferred partial-credit policy. The normalization is a weakening for this necessary condition, not a claim that the question permits it. Unsupported task types are interface limits, not extraction errors. Semgrep no_alarm is a completed pattern scan, not a semantic proof.",
+  "cases": [
+    {
+      "task_id": "rg-issue-544-original",
+      "projection": {
+        "supported": false,
+        "reason": "missing_contract",
+        "contract_id": null,
+        "qualification": "The projection checks only a necessary condition: agreement with a trusted canonical True/False reference after the preserved strip/lower normalization. It does not validate how the task is solved, all output-format requirements, or an inferred partial-credit policy. The normalization is a weakening for this necessary condition, not a claim that the question permits it. Unsupported task types are interface limits, not extraction errors. Semgrep no_alarm is a completed pattern scan, not a semantic proof."
+      },
+      "methods": {
+        "semgrep": {
+          "verdict": "unknown",
+          "reason": "missing_contract",
+          "source_executed": false,
+          "status": "projection_unsupported"
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "reason": "missing_contract",
+          "source_executed": false,
+          "status": "projection_unsupported"
+        }
+      }
+    },
+    {
+      "task_id": "rg-pr-561-proposed-repair",
+      "projection": {
+        "supported": false,
+        "reason": "missing_contract",
+        "contract_id": null,
+        "qualification": "The projection checks only a necessary condition: agreement with a trusted canonical True/False reference after the preserved strip/lower normalization. It does not validate how the task is solved, all output-format requirements, or an inferred partial-credit policy. The normalization is a weakening for this necessary condition, not a claim that the question permits it. Unsupported task types are interface limits, not extraction errors. Semgrep no_alarm is a completed pattern scan, not a semantic proof."
+      },
+      "methods": {
+        "semgrep": {
+          "verdict": "unknown",
+          "reason": "missing_contract",
+          "source_executed": false,
+          "status": "projection_unsupported"
+        },
+        "symbolic": {
+          "verdict": "unknown",
+          "reason": "missing_contract",
+          "source_executed": false,
+          "status": "projection_unsupported"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "tasks": 2,
+    "supported_projections": 0,
+    "verdict_counts": {
+      "semgrep": {
+        "alarm": 0,
+        "no_alarm": 0,
+        "unknown": 2
+      },
+      "symbolic": {
+        "alarm": 0,
+        "no_alarm": 0,
+        "unknown": 2
+      }
+    }
+  },
+  "target_scorers_executed": false,
+  "LLM_called_by_downstream": false,
+  "labels_read_by_downstream": false
+}

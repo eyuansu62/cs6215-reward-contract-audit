@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-11-09T02:50:20.590578+00:00",
+  "purpose": "Real scalar evaluation scorer feasibility, not assumed training reward",
+  "records": [
+    {
+      "repo": "google/BIG-bench",
+      "path": "bigbench/api/metrics.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repo": "EleutherAI/lm-evaluation-harness",
+      "path": "lm_eval/api/metrics.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repo": "suzgunmirac/BIG-Bench-Hard",
+      "path": "bbh/boolean_expressions.json",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+    }
+  ]
+}

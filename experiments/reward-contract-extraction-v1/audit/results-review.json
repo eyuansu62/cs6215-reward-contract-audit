@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-11-08T15:35:54.566010+00:00",
+  "passed": true,
+  "verdict": "pass_for_bounded_description-extraction_feasibility_and_unchanged-analyzer_characterization",
+  "reviewer": "Independent AI-assisted Codex review; no subject execution, model rerun, source editing or wider analyzer support",
+  "blocking_findings": [],
+  "reference_and_protocol": {
+    "reference_before_model": true,
+    "reference_authorship": "AI-assisted researcher reference, not human gold or measured human effort",
+    "prior_pre_model_review": "audit/protocol-review.json",
+    "reference_review": "reference/review.json",
+    "all_frozen_extraction_bridge_input_and_model_files_match": true,
+    "chronology_qualification": "Reference/description/method freeze chronology is recorded process evidence, not a trusted cryptographic timestamp attestation."
+  },
+  "model_run_audit": {
+    "successful_model_turns": 6,
+    "unique_thread_ids": 6,
+    "schema_valid_tasks": 6,
+    "strictly_accepted_tasks": 5,
+    "accepted_tool_or_action_events": 0,
+    "explicit_abstentions": 0,
+    "exact_request_and_prompt_bytes_match_frozen_description_only_builder": true,
+    "input_tokens": 151804,
+    "output_tokens": 1604,
+    "reasoning_output_tokens_as_reported": 55,
+    "model_identity": "Codex CLI service default; exact model not reported",
+    "sampling_settings": "Provider/CLI default; no invented temperature or exact deterministic-generation claim",
+    "one_preserved_initialization_failure": {
+      "attempt": "results/extraction-01/T01",
+      "completed_model_turns": 0,
+      "model_output_existed": false,
+      "same_prompt_on_successful_retry": true,
+      "note": "model_called in metadata means process attempt; successful turns counted from JSONL events"
+    },
+    "T05_rejection": {
+      "reason": "one evidence quote is in placeholder notes rather than question_description",
+      "raw_semantics_accepted_by_review": true,
+      "not_repaired_or_regenerated": true,
+      "excluded_from_accepted_condition": true
+    }
+  },
+  "contract_comparison": {
+    "root_and_independent_reviews_agree": true,
+    "field_groups": 60,
+    "keep": 59,
+    "confirmed_substantive_revisions": 0,
+    "uncertain": 1,
+    "uncertain_case": "T01 output_format_requirements: exactly may add an unstated answer-only restriction or merely emphasize canonical tokens",
+    "evidence_protocol_repairs_outside_semantic_groups": 1,
+    "no_human_savings_or_time_measurement": true,
+    "interpretation": "Near-reference drafts in this small assisted comparison; not independently collected human accuracy or causal review-cost savings."
+  },
+  "source_preparation": {
+    "task_templates": 6,
+    "source_units": 6,
+    "exact_extracted_function_ASTs_verified": 7,
+    "distinct_scorer_bodies": 3,
+    "previously_exposed_inherited_scorer_units": 4,
+    "inherited_same_scorer_task_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04"
+    ],
+    "Boolean_reference_shape_confirmed": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "canonical_shape_only": "Each displayed normal producer return is Boolean, tail return excludes implicit None, and generator answer field is native str(answer). Solver correctness is not established.",
+    "T05_source_preparation_unknown": "Actual scorer contains eval; source retained without execution. The non-Boolean projection is independently unsupported.",
+    "freshness_qualification": "Six new task-description contents, not six unseen scorer implementations; filenames were previously listed and pretrained novelty is unknown.",
+    "targets_imported_or_executed": false
+  },
+  "downstream": {
+    "preserved_baseline_method_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+    "preserved_baseline_archive_sha256": "8cc39df03a1702245edc96f6576db7f76d59e955613dcc825a7d94490b51b17d",
+    "old_code_rules_and_frozen_inputs_unchanged": true,
+    "conditions": [
+      "reference",
+      "llm"
+    ],
+    "runs_per_condition": 2,
+    "supported_projections_per_condition": 3,
+    "distinct_supported_detector_inputs_per_condition": 1,
+    "per_condition_verdict_counts": {
+      "semgrep": {
+        "alarm": 0,
+        "no_alarm": 3,
+        "unknown": 3
+      },
+      "symbolic": {
+        "alarm": 0,
+        "no_alarm": 0,
+        "unknown": 6
+      }
+    },
+    "changed_verdicts_between_conditions": 0,
+    "supported_compiled_inputs_equal_between_conditions": true,
+    "unsupported_nonBoolean_tasks": [
+      "T04",
+      "T05",
+      "T06"
+    ],
+    "T05_llm_reason": "missing_contract after strict evidence rejection; reference list projection is independently unsupported",
+    "symbolic_first_unsupported_operation": "len(answer) > 0 ordered/numeric comparison in the shared inherited default scorer",
+    "unexpected_analyzer_errors": 0,
+    "completed_Semgrep_scans_across_four_runs": 12,
+    "pattern_and_coverage_native_commands_verified": 24,
+    "version_commands_verified": 12,
+    "core_binary_SHA256_verified": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+    "raw_source_rule_bytes_command_flags_JSON_stdout_and_coverage_verified": true,
+    "scan_errors_skipped_rules_timeouts": 0,
+    "both_same_machine_replays_full_parsed_records_equal": true,
+    "accuracy_TP_FP_FN_TN_calculated": false,
+    "reason_no_accuracy": "There is no frozen independent full-task positive/negative oracle; Semgrep no_alarm is not semantic correctness.",
+    "demonstrated_detection_gain": false,
+    "projection_limit": "Only necessary agreement with trusted canonical Boolean reference is consumed. Task-solving semantics, complete output format and other answer kinds are not validated; strip/lower is a weakening, not inferred permission."
+  },
+  "independently_run_synthetic_tests": {
+    "protocol_tests": 5,
+    "bridge_tests": 11,
+    "targets_or_model_calls": 0,
+    "bridge_test_elapsed_seconds": 1.193
+  },
+  "limits": [
+    "Reference construction and both semantic reviews use AI assistance and can share model/ecosystem biases; no independent human ground truth or real human-time data.",
+    "Six purposive templates from one project; only three distinct scorer bodies and one distinct supported detector input. Do not inflate task families into independent source-code detection samples.",
+    "The default evaluated model identity and decoding settings were not exposed; response replay is reproducible, but exact regeneration is not established.",
+    "T05 has a protocol rejection despite semantically plausible extraction; preserve this operational failure without repair.",
+    "Unchanged projections/verdicts do not demonstrate a downstream benefit or impossibility of future LLM utility.",
+    "Symbolic Unknowns are implementation/interface limits, not neural necessity or evidence of extraction failure.",
+    "No full-task accuracy, new bug-discovery, RL training impact, cross-platform or broad-generalization claim follows."
+  ],
+  "reviewed_files_sha256": {
+    "extraction-freeze.json": "2271f85f77ff26b263d0b543ad43c3ed2dd087e53286698a0a51e34120ea6828",
+    "downstream-method-freeze.json": "233bea8f896625243234a2ba2e8aeb80905647989f093681af8ea4b96ae73cbb",
+    "downstream-input-freeze.json": "5d8bf96dc7d4f1912c0aec38ba58c1c6e1d25865bebfa1bceef9a7c70d660e63",
+    "results/model-response-freeze.json": "96548066b9f89362d1f05d08591e7bb0ec5427ca40dde9b93c86f357975f6ba5",
+    "reference/contracts.json": "0eab3063bbae805ed513f5816450dc0851f49667ff53e0d1c0ccabc3ec7392f0",
+    "reference/review.json": "d75cbc6939eff56e92604674346ab85cc0ca239975801e4db078388021c986df",
+    "reference/annotation-notes.md": "4d9e24e694475b46a4acc33931e791d9c26b8e7c285be8ee75ce541621aff692",
+    "comparison/root-field-review.json": "59b2f3f85e821c0ed0aec1f9933dc8cac8df41da2c72086051ac5114c71240c8",
+    "comparison/independent-field-review.json": "bec6342ddf04579eab2cc2b28bf3d5cbf32830871b5a49b27f18d875dac7f1f5",
+    "collection/blind-task-descriptions.json": "fea9db1afd4d95a8fbc20adc4d0e43802203c7156de261433dbb06a9fc3113ff",
+    "collection/source-units.json": "02ec500fc53c5b12a70af9f958c8d871e5004d57706c6a80f3d50c51a8bda44d",
+    "collection/source-unit-provenance.json": "f7da9c56f745835fb09ed19291c0fe6d2ffb202351eb3d7468a4ccb85d228226",
+    "collection/canonical-reference-evidence.json": "3e54c37298969e8d6d4bd3e7d2ade5586acfbe01a6974b5f0729b494e556112f",
+    "collection/source-preparation-checks.json": "59a74c17c213d3fe8425c385d9cefd50f0961cac266050a56fc982b0860bfaa0",
+    "tools/downstream.py": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6",
+    "tools/test_downstream.py": "7b6d2ea84ecc8716405c47de83d1e38f38a39c5337f63a5b6f0ed44efc5969f9",
+    "run_downstream.py": "18388978f7cb90b443b8b3a26a1ea10cade2fe4986d307544590c0f51b70d0c3",
+    "results/condition-inputs.json": "d13be057f8ee4a1c364307789664d2a7a2cf369b6647c99d23dc012453ed421b",
+    "results/downstream-comparison.json": "32810291a87df2dbad21eff01c121caf99d1f8c6c9337df2fc996ded897a69d5",
+    "results/reference-replay-comparison.json": "274997276075cda7cb0e0e53841c054afb138c8befd5be92fea1a7cf5c86e647",
+    "results/llm-replay-comparison.json": "274997276075cda7cb0e0e53841c054afb138c8befd5be92fea1a7cf5c86e647",
+    "results/downstream-reference-01/predictions.json": "e1d7729eb8e8ec6b754f9b89520c02a36b5a60003235d158fd796cded3d68492",
+    "results/downstream-reference-02/predictions.json": "8f019b8d219adeeb4d127cbc91980ad5511d04c34116ac8708d19d78f2d362aa",
+    "results/downstream-llm-01/predictions.json": "d72aaf98b17503db2ebd8cee18eeb7eaecbce7fe87808e25bda2dcc1df871d15",
+    "results/downstream-llm-02/predictions.json": "6232bd7e234b46f4fc42aa56a8edf57bfb50e73d0ffd1c26ceab552875842078",
+    "REPORT.md": "53ddcc94ae7ad0b0c1d4fb74e7568e0008bc86a0b62cf94f3746cd58fd8d835d",
+    "README.md": "293e19cedfa5ad00896ba9f3dc0c19c538f88879b3f0ecb4ed2e7b3cf1125d42"
+  },
+  "final_document_claim_scan": {
+    "passed": true,
+    "reviewed_utc": "2026-11-08T15:36:35.165029+00:00",
+    "files": [
+      "REPORT.md",
+      "README.md"
+    ],
+    "checks": [
+      "Explicit AI-assisted reference and adjudication; no genuine human-time or causal labor-savings claim.",
+      "Schema6/strict5, 59 keep/0definite/1uncertain and T05quote issue separated.",
+      "New descriptions versus shared previously exposed inherited scorer distinction preserved; 3distinctscorebodies and1supporteddetectorinput stated.",
+      "No full-task gold labels or accuracy/TP/FP claims; no alarm is not no bug.",
+      "Unchanged downstream verdicts and weaker necessary-condition projection correctly prevent detection-gain claim.",
+      "Exact model identity/temperature unknown, failed initialization retained, response replay versus regeneration distinction stated.",
+      "No further analyzer expansion and no independent-generalization/RL impact claims."
+    ],
+    "interpretation": "The observed six-template assisted-reference agreement supports a tentative draft-generation feasibility observation only; all stronger claims are explicitly withheld."
+  }
+}

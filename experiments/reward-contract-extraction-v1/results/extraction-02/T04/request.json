@@ -1,0 +1,8 @@
+{
+  "task_id": "T04",
+  "question_description": "Count how many prime numbers there are between {start} and {end} (inclusive) ?",
+  "placeholder_notes": {
+    "start": "instance-specific interval start integer",
+    "end": "instance-specific interval end integer, not below start"
+  }
+}

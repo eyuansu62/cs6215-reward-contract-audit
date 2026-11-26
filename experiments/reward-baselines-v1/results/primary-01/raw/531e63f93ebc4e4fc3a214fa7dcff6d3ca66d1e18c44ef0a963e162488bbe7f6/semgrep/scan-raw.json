@@ -1,0 +1,156 @@
+{
+  "version": "1.183.0",
+  "results": [
+    {
+      "check_id": "reward-prefix-shorter-length-ratio",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py",
+      "start": {
+        "line": 35,
+        "col": 14,
+        "offset": 1043
+      },
+      "end": {
+        "line": 35,
+        "col": 70,
+        "offset": 1099
+      },
+      "extra": {
+        "metavars": {
+          "$MATCH": {
+            "start": {
+              "line": 35,
+              "col": 14,
+              "offset": 1043
+            },
+            "end": {
+              "line": 35,
+              "col": 23,
+              "offset": 1052
+            },
+            "abstract_content": "match_len"
+          },
+          "$LEFT": {
+            "start": {
+              "line": 35,
+              "col": 34,
+              "offset": 1063
+            },
+            "end": {
+              "line": 35,
+              "col": 51,
+              "offset": 1080
+            },
+            "abstract_content": "oracle_answer_str"
+          },
+          "$RIGHT": {
+            "start": {
+              "line": 35,
+              "col": 58,
+              "offset": 1087
+            },
+            "end": {
+              "line": 35,
+              "col": 68,
+              "offset": 1097
+            },
+            "abstract_content": "answer_str"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Prefix-style credit divided by the shorter length can reach full credit for a strict prefix.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/primary-01/raw/531e63f93ebc4e4fc3a214fa7dcff6d3ca66d1e18c44ef0a963e162488bbe7f6/semgrep/source.py"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 0.0003829002380371094,
+    "profiling_times": {},
+    "parsing_time": {
+      "total_time": 0.004042148590087891,
+      "per_file_time": {
+        "mean": 0.004042148590087891,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.005593776702880859,
+      "per_file_time": {
+        "mean": 0.005593776702880859,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0014209747314453125,
+      "per_file_and_rule_time": {
+        "mean": 0.0014209747314453125,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 1.0,
+      "rules_selected_ratio": 0.3333333333333333,
+      "rules_matched_ratio": 0.3333333333333333
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 91433984
+  },
+  "rules_by_engine": [
+    [
+      "reward-bool-truthiness-equality",
+      "OSS"
+    ],
+    [
+      "reward-nonfinite-exp-clamp",
+      "OSS"
+    ],
+    [
+      "reward-prefix-shorter-length-ratio",
+      "OSS"
+    ]
+  ],
+  "engine_requested": "OSS",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "profiling_results": []
+}

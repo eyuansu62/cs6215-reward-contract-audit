@@ -1,0 +1,31 @@
+{
+  "sha": "1627938c5e72feff7d3e954f18593bca21ba5d47",
+  "url": "https://api.github.com/repos/lew624/novelty_rl/git/trees/1627938c5e72feff7d3e954f18593bca21ba5d47",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e001250662684de9bdc9d80937513fb9c79f5235",
+      "size": 424,
+      "url": "https://api.github.com/repos/lew624/novelty_rl/git/blobs/e001250662684de9bdc9d80937513fb9c79f5235"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9f318850ff73336fdf994e3017f42dc3c869b77",
+      "size": 2264,
+      "url": "https://api.github.com/repos/lew624/novelty_rl/git/blobs/c9f318850ff73336fdf994e3017f42dc3c869b77"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eeefe5bdb0396b7fb60e3491f8a1665c989349e",
+      "size": 1207,
+      "url": "https://api.github.com/repos/lew624/novelty_rl/git/blobs/5eeefe5bdb0396b7fb60e3491f8a1665c989349e"
+    }
+  ],
+  "truncated": false
+}

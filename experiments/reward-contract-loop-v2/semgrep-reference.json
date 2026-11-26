@@ -1,0 +1,33 @@
+{
+  "origin": "Unchanged previously executed v1 correct-contract native source scans; no new Semgrep method or per-obligation reinterpretation.",
+  "records": [
+    {
+      "source_id": "rg-issue-544-original",
+      "verdict": "alarm",
+      "origin_file": "experiments/reward-contract-loop-v1/results/run-01/bridge-correct/predictions.json",
+      "origin_sha256": "b8bb40cbb81be3397165e67043dac68b97628304289200cbcc91d2e85fbe69fb",
+      "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+      "engine": {
+        "version": "semgrep-core version: 1.183.0 (08c107344d)",
+        "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+        "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+        "metrics": "off"
+      },
+      "qualification": "Preserved source-pattern baseline, not new obligation-aware verdict. No contract-driven findings removed."
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "verdict": "no_alarm",
+      "origin_file": "experiments/reward-contract-loop-v1/results/run-01/bridge-correct/predictions.json",
+      "origin_sha256": "b8bb40cbb81be3397165e67043dac68b97628304289200cbcc91d2e85fbe69fb",
+      "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+      "engine": {
+        "version": "semgrep-core version: 1.183.0 (08c107344d)",
+        "sha256": "8b0c1fa10fa70372ea64ca0dc9cf3de0fd53db9c2556f6af5f973e8df12d4995",
+        "path": "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+        "metrics": "off"
+      },
+      "qualification": "Preserved source-pattern baseline, not new obligation-aware verdict. No contract-driven findings removed."
+    }
+  ]
+}

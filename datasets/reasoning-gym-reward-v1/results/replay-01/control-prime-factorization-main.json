@@ -1,0 +1,286 @@
+{
+  "id": "control-prime-factorization-main",
+  "family_id": "PrimeFactorizationDataset.score_answer",
+  "kind": "normal_control",
+  "source_file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+  "source_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+  "extracted_methods": [
+    {
+      "name": "_normalize_answer",
+      "source_path": "extracted/control-prime-factorization-main/_normalize_answer.py",
+      "source_sha256": "721226999b692ae252e39d7d76f048c92f2a2e1ff6caed646ea19fab0c6a2cc4",
+      "ast_sha256": "f5eef7c9b8eebf48757f5168ff872436f9294c2544725dd1bfa9d850f41f33fd",
+      "extraction": {
+        "qualified_name": "PrimeFactorizationDataset._normalize_answer",
+        "start_line": 50,
+        "end_line": 55,
+        "source_sha256": "721226999b692ae252e39d7d76f048c92f2a2e1ff6caed646ea19fab0c6a2cc4",
+        "module_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    },
+    {
+      "name": "score_answer",
+      "source_path": "extracted/control-prime-factorization-main/score_answer.py",
+      "source_sha256": "5de0f48c97d1210672df760b3b68823449782ed6deae50eb7c2cd6bcd11352a1",
+      "ast_sha256": "661669714196aab3f91c599b55a1176332a5c765abd8589982a156dfcf20d0a4",
+      "extraction": {
+        "qualified_name": "PrimeFactorizationDataset.score_answer",
+        "start_line": 57,
+        "end_line": 70,
+        "source_sha256": "5de0f48c97d1210672df760b3b68823449782ed6deae50eb7c2cd6bcd11352a1",
+        "module_sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    }
+  ],
+  "evidence_level": "extracted_real_method_executed",
+  "all_source_expectations_matched": true,
+  "full_credit_violating_probes": 0,
+  "probes": [
+    {
+      "id": "f-valid-reference",
+      "role": "normal_control_probe",
+      "answer": "2 × 2 × 3",
+      "entry": {
+        "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+        "answer": "2 × 2 × 3",
+        "metadata": {
+          "source_dataset": "prime_factorization",
+          "number": 12,
+          "factors": [
+            2,
+            2,
+            3
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-prime-factorization-main",
+        "--probe",
+        "f-valid-reference"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "f-valid-permutation",
+      "role": "normal_control_probe",
+      "answer": " 3 × 2 × 2 ",
+      "entry": {
+        "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+        "answer": "2 × 2 × 3",
+        "metadata": {
+          "source_dataset": "prime_factorization",
+          "number": 12,
+          "factors": [
+            2,
+            2,
+            3
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-prime-factorization-main",
+        "--probe",
+        "f-valid-permutation"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "f-composite-factor",
+      "role": "normal_control_probe",
+      "answer": "3 × 4",
+      "entry": {
+        "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+        "answer": "2 × 2 × 3",
+        "metadata": {
+          "source_dataset": "prime_factorization",
+          "number": 12,
+          "factors": [
+            2,
+            2,
+            3
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.5,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.5
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-prime-factorization-main",
+        "--probe",
+        "f-composite-factor"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "f-wrong-product",
+      "role": "normal_control_probe",
+      "answer": "2 × 3",
+      "entry": {
+        "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+        "answer": "2 × 2 × 3",
+        "metadata": {
+          "source_dataset": "prime_factorization",
+          "number": 12,
+          "factors": [
+            2,
+            2,
+            3
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.01,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.01
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-prime-factorization-main",
+        "--probe",
+        "f-wrong-product"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "f-missing",
+      "role": "normal_control_probe",
+      "answer": null,
+      "entry": {
+        "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+        "answer": "2 × 2 × 3",
+        "metadata": {
+          "source_dataset": "prime_factorization",
+          "number": 12,
+          "factors": [
+            2,
+            2,
+            3
+          ]
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-prime-factorization-main",
+        "--probe",
+        "f-missing"
+      ],
+      "stderr": ""
+    }
+  ]
+}

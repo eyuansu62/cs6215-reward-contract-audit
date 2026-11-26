@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-08T15:37:54.765289+00:00",
+  "protocol_and_bridge_tests_passed": 16,
+  "py_compile_passed": true,
+  "independent_field_reviews_agree_on_all_60": true,
+  "semantic_keep": 59,
+  "semantic_uncertain": 1,
+  "confirmed_semantic_revisions": 0,
+  "schema_valid_tasks": 6,
+  "strictly_accepted_tasks": 5,
+  "model_turns_completed": 6,
+  "new_model_calls_during_replay": 0,
+  "actual_human_time_or_annotations_collected": false,
+  "reference_is_AI_assisted": true,
+  "native_task_source_executions": 0,
+  "analyzer_changes": false,
+  "downstream_verdict_changes": 0,
+  "same_machine_replays_passed": 2,
+  "source_task_families": 6,
+  "distinct_native_scorer_bodies": 3,
+  "distinct_supported_detector_inputs": 1,
+  "old_manifested_payloads_preserved": 2380,
+  "freeze_sha256": {
+    "extraction-freeze.json": "2271f85f77ff26b263d0b543ad43c3ed2dd087e53286698a0a51e34120ea6828",
+    "results/model-response-freeze.json": "96548066b9f89362d1f05d08591e7bb0ec5427ca40dde9b93c86f357975f6ba5",
+    "downstream-method-freeze.json": "233bea8f896625243234a2ba2e8aeb80905647989f093681af8ea4b96ae73cbb",
+    "downstream-input-freeze.json": "5d8bf96dc7d4f1912c0aec38ba58c1c6e1d25865bebfa1bceef9a7c70d660e63"
+  },
+  "report_sha256": "53ddcc94ae7ad0b0c1d4fb74e7568e0008bc86a0b62cf94f3746cd58fd8d835d",
+  "readme_sha256": "293e19cedfa5ad00896ba9f3dc0c19c538f88879b3f0ecb4ed2e7b3cf1125d42",
+  "qualifications": [
+    "AI-assisted reference and adjudication, not independent human-effort study",
+    "short common task templates; no pretrained novelty assurance",
+    "default service does not disclose exact model identity",
+    "same scorer reused and richer contracts not consumed",
+    "no full-contract bug labels, accuracy or detection gain claim",
+    "external pinned macOS ARM64 Semgrep binary required"
+  ]
+}

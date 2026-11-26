@@ -1,0 +1,178 @@
+{
+  "origin": "Reference expectations retained from frozen v2 before current model call; not supplied to model.",
+  "witness_rows": [
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "violated_obligations": [
+        "equals_reference"
+      ],
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "expected_witness_verdict": "full_credit_violation"
+    },
+    {
+      "source_id": "rg-issue-544-original",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/opposite-false",
+      "answer": "False",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "counterexamples/nonboolean-banana",
+      "answer": "banana",
+      "reference": "True",
+      "reward": 0.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    },
+    {
+      "source_id": "rg-pr-561-proposed-repair",
+      "probe_id": "normal_controls/exact-true",
+      "answer": "True",
+      "reference": "True",
+      "reward": 1.0,
+      "contract": "correct",
+      "active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "violated_obligations": [],
+      "expected_witness_verdict": "no_violation_for_this_witness"
+    }
+  ]
+}

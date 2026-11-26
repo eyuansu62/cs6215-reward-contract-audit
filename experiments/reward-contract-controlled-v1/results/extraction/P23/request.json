@@ -1,0 +1,21 @@
+{
+  "task": {
+    "task_id": "P23",
+    "question_description": "Give full credit to every submitted text response, including a plain-language explanation or other unrestricted prose. Apply no wording or format restriction to text submissions. The response need not be True or False and need not reproduce the trusted correct reference; arbitrary text earns full credit as well.",
+    "placeholder_notes": {}
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

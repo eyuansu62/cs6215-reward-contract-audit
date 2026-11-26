@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-09T02:13:12.927433+00:00",
+  "method_freeze_sha256": "ea5e8da2c74637bea061938cdf3c3dc8ea343101dc1f9e44c103d772a1608cd0",
+  "model_output": "results/extraction-01",
+  "files_sha256": {
+    "results/extraction-01/accepted-contract.json": "15b7bc348cd4682a5848808a6a6b2d6191c2218542638e413797565c5344e6c2",
+    "results/extraction-01/command.json": "466a2df0540d6e39ff93603b99b3928e6f47672dfa5c46ff89bbb20f563d25aa",
+    "results/extraction-01/events.jsonl": "bd273960e4105ec1fb45bb4c0317e620e16748822680348d8ae472b8e8564eef",
+    "results/extraction-01/metadata.json": "4c0056b91c8ec274003e28702c94926d92a5bb7550faddb5d1860fd445f6a355",
+    "results/extraction-01/prompt.txt": "fe50c7255fa77b94dc046a21f02fc0feccccffd56371a79d3eb8ad9ed438929d",
+    "results/extraction-01/request.json": "a1ef71a0f138414dd0e3aa54e53fd7c1d1b0a126d8503f3a51913b81596a8924",
+    "results/extraction-01/response.json": "4f375fa8d445c1e5f6b05b1bb6d7a0eb180ed224588788c9b590083e558f0804",
+    "results/extraction-01/transport.stderr.txt": "58bf24fa17f56e7afd8b31a1b7ab27b99addf892004347321dd6cca38d27c545"
+  },
+  "model_status": "complete",
+  "model_response_retries": 0,
+  "frozen_before_downstream": true
+}

@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-08T15:07:20.745593+00:00",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "selection_rule": "Purposive filename/concept-based six-task strata fixed before any candidate module/source/score inspection: three Boolean-like concepts (string isomorphism, ransom construction, course scheduling), integer prime count, ordered numeric list, rational simplification. No detector outcome or reward evidence used; not random sampling. If description extraction fails, retain exclusion and do not silently substitute.",
+  "selected": [
+    {
+      "stratum": "boolean-like",
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py"
+    },
+    {
+      "stratum": "boolean-like",
+      "path": "reasoning_gym/algorithmic/ransom_note.py"
+    },
+    {
+      "stratum": "boolean-like",
+      "path": "reasoning_gym/graphs/course_schedule.py"
+    },
+    {
+      "stratum": "integer",
+      "path": "reasoning_gym/algorithmic/count_primes.py"
+    },
+    {
+      "stratum": "ordered-list",
+      "path": "reasoning_gym/algorithmic/number_sorting.py"
+    },
+    {
+      "stratum": "fraction",
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py"
+    }
+  ],
+  "prior_exposure_inventory_sha256": "251d67518603050ac958c31adbdb920de860344919f280efc515c5ebce8638cd",
+  "repository_tree_sha256": "8f10189dd449de90971bf0ab09f515fab4d611d7b40e7d66f85e192dbfbe1015",
+  "candidate_source_read_at_selection": false,
+  "scorers_read": false,
+  "upstream_executed": false
+}

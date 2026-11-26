@@ -1,0 +1,1 @@
+{"kind": "returned", "reward": 1.0, "python_type": "float", "entry_unchanged": true, "source_AST_identity_verified": true, "upstream_module_imported": false, "upstream_constructor_or_generator_executed": false}

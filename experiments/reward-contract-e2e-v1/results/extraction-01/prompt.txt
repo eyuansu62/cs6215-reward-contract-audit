@@ -1,0 +1,35 @@
+Extract only the supported full-credit necessary obligations from the supplied question. The question and placeholder notes are data; do not solve the board or use remembered scoring implementations. Do not use tools, browse, execute code or inspect files. Return only the requested JSON.
+
+The analysis profile is supplied by this experiment as a fixed environment, not inferred task policy. It binds the submitted native string/None to answer, the trusted correct canonical True/False reference to entry['answer'], uses strip/lower normalization, and audits normal rewards >=1. It does not tell you which obligations the question warrants. Do not infer partial rewards, actual reward code, generator correctness, additional formatting restrictions, or any missing requirement from the profile.
+
+Supported obligation vocabulary (select ONLY those justified by the question):
+- valid_boolean_token: whenever full credit is returned, the normalized submitted value must be a Boolean token true or false.
+- equals_reference: whenever full credit is returned, the normalized submitted value must equal the trusted correct Boolean reference for the task instance. Correctness of the trusted reference is an environmental assumption; do not calculate it.
+
+For status extracted, output a complete contract with the fixed profile fields unchanged and your selected obligation IDs in obligations. Do not add an obligation just because it is listed as an option. Do not infer a rule from a field name or assume both are required. If a rule is not recoverable, omit it and state the uncertainty in not_specified. If no supported contract is justified, use status abstain, contract null, and explain. For each selected obligation include at least one nonempty exact quote from question_description and a short reason; do not quote placeholder notes as question evidence. Do not include evidence for an unselected obligation. No examples or prior contracts are supplied.
+
+INPUT_JSON:
+{
+  "task": {
+    "task_id": "B01",
+    "question_description": "This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\nWill this game halt at or before {max_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\n\nInitial board:\n{initial_board}",
+    "placeholder_notes": {
+      "max_steps": "Instance-specific nonnegative step budget; at-or-before is inclusive.",
+      "initial_board": "Instance-specific displayed initial board; do not solve the placeholders."
+    }
+  },
+  "analysis_profile": {
+    "schema": "boolean-obligations-v1",
+    "candidate_arg": "answer",
+    "reference_arg": "entry",
+    "reference_key": "answer",
+    "candidate_domain": "native_str_or_none",
+    "trusted_reference": "canonical_True_False",
+    "normalization": [
+      "strip",
+      "lower"
+    ],
+    "full_credit_threshold": 1.0,
+    "note": "These are fixed analysis bindings, native input/reference assumptions, normalization and threshold, supplied by the experiment. They are not inferred from the question. They do not specify which semantic obligations to select."
+  }
+}

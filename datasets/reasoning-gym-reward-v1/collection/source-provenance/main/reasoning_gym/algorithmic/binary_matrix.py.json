@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "main",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "reasoning_gym/algorithmic/binary_matrix.py",
+  "sha256": "0697d49b6cb8812731713e2d930469023e9281c8c4354400655376a0becb6491",
+  "git_blob_sha1": "db1f6088520c77045cdd1d626b8b0cf1f208228e",
+  "bytes": 5899,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/binary_matrix.py",
+  "local_path": "upstream/main/reasoning_gym/algorithmic/binary_matrix.py",
+  "fetched_utc": "2026-11-08T07:30:07.993360+00:00",
+  "git_blob_verified": true
+}

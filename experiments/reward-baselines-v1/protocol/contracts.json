@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-11-08T14:12:04.557628+00:00",
+  "scope": "Fixed human-readable reviewed contracts supplied equally to both non-neural methods. No LLM contract acquisition tested.",
+  "full_credit_threshold": 1.0,
+  "violation": "There exists a source-compatible normal-return path with native reward>=1.0 while its stated full-credit requirement is false.",
+  "execution_boundary": "Pure scorer and declared helpers/standard libraries only, exact native arguments, no hooks/monkeypatching. No outer training wrapper or package initializer modeled.",
+  "exceptions": "A scorer exception is not a full-reward return. Totality, outer catch behavior and general fail-open detection are outside this dataset experiment. Unsupported exception reasoning must not imply safe.",
+  "contracts": {
+    "C_BOOLEAN_FULL": {
+      "candidate": "native str or None",
+      "trusted_reference": "entry.answer is canonical True/False string",
+      "normalization": [
+        "strip",
+        "lower"
+      ],
+      "full_credit_requires": "normalized candidate is a Boolean token equal to normalized reference",
+      "allowed_partial_credit": "No partial Boolean rewards claimed; this experiment primarily checks invalid/wrong full credit."
+    },
+    "C_COMPLEX_FINITE": {
+      "candidate": "native str or None",
+      "trusted_reference": "finite complex result in entry.metadata.result",
+      "full_credit_requires": "candidate is parseable and its mathematical real and imaginary components are finite",
+      "allowed_partial_credit": "Finite inaccurate results may earn a positive exponential partial reward. Exact finite-correctness/range/totality not audited."
+    },
+    "C_PROBABILITY_FULL": {
+      "candidate": "native str or None",
+      "trusted_reference": "finite probability in [0,1] in entry.answer",
+      "normalization": [
+        "comma removal",
+        "rational/decimal interpretation"
+      ],
+      "absolute_tolerance": 0.0001,
+      "full_credit_requires": "candidate parses to a finite number within the stated absolute tolerance of reference",
+      "allowed_partial_credit": "Wrong finite answers may receive a positive score strictly below full credit."
+    },
+    "C_PALINDROME_FULL": {
+      "candidate": "native str or None",
+      "trusted_reference": "nonempty lowercase ASCII multiset in entry.metadata.letters, with a valid palindrome construction",
+      "normalization": [
+        "strip",
+        "lower"
+      ],
+      "full_credit_requires": "normalized candidate is a palindrome with exactly the given letter multiset",
+      "allowed_partial_credit": "0.02 non-palindrome and0.05 wrong letters are legitimate and must not be flagged solely because positive."
+    },
+    "C_PRIME_FACTORS_FULL": {
+      "candidate": "native str or None",
+      "trusted_reference": "entry.answer gives correct prime factors of an integer>=2",
+      "normalization": [
+        "split multiplication sign",
+        "strip factors",
+        "ignore empty separator tokens",
+        "parse native integers",
+        "ignore factor order"
+      ],
+      "full_credit_requires": "parsed factors are prime and their product equals the reference product, preserving multiplicity",
+      "allowed_partial_credit": "0.5 correct product but incomplete factorization;0.01 other numeric answers. Parsing exceptions do not establish fail-open."
+    }
+  },
+  "primary_subject_ids": [
+    "rg-issue-543-original",
+    "rg-issue-544-original",
+    "rg-issue-545-original",
+    "rg-pr-561-proposed-repair",
+    "rg-pr-562-proposed-repair",
+    "control-palindrome-validity-main",
+    "control-prime-factorization-main"
+  ],
+  "qualified_excluded_from_primary": [
+    "control-group-anagrams-order-main"
+  ],
+  "qualification": "Repairs are open proposals and negatives only for the stated target property; normal controls are not globally bug-free."
+}

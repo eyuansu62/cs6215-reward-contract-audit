@@ -1,0 +1,1842 @@
+[
+  {
+    "schema_version": "1.0-curation",
+    "project": "reasoning-gym",
+    "project_repository": "https://github.com/open-thought/reasoning-gym",
+    "evidence_level": "source_reviewed",
+    "source_execution_status": "pending_root_source_only_reproduction",
+    "independence_unit_note": "Version pairs and multiple probes of one issue are correlated; count by issue family, not as independent bugs.",
+    "analyzer_or_model_run": false,
+    "id": "rg-issue-543-original",
+    "family_id": "rg-issue-543",
+    "record_kind": "reported_bug_original",
+    "source": {
+      "repository": "open-thought/reasoning-gym",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+      "module": "reasoning_gym.probability.coin_flip",
+      "class": "CoinFlipDataset",
+      "method": "score_answer",
+      "qualified_name": "CoinFlipDataset.score_answer",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py",
+      "source_provenance": "collection/source-provenance/issue_snapshot/reasoning_gym/probability/coin_flip.py.json",
+      "source_file_sha256": "a6e6ebe348bdd289bbf06bfe9360e4e1187453c82a973e2545b58a94a4b7b740",
+      "git_blob_sha1": "6aeac2321f40859e1cbfdad951fc90c63e410870",
+      "start_line": 113,
+      "end_line": 149,
+      "source_span_sha256": "bcc174b5223bd85396786de368761a056f622f7e349e034f25e9ffed258555f1",
+      "ast_sha256": "25d747080224c4cdb953bf9d00a070a38b2a3ee4cc1be3e49b850249802f19d0",
+      "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+      "full_method_source": "    def score_answer(self, answer: Optional[str], entry: dict, tol: float = 1e-4) -> float:\n        \"\"\"\n        Compute reward for LLM answer against oracle probability.\n        Handles decimals, fractions, small numeric errors, and extra text.\n        \"\"\"\n        reward = 0.0\n        oracle_answer = entry[\"answer\"]\n\n        if answer is None or len(answer.strip()) == 0:\n            return reward\n\n        answer = answer.replace(\",\", \"\")\n        oracle_answer = oracle_answer.replace(\",\", \"\")\n\n        try:\n            answer_float = float(Fraction(answer))\n            oracle_answer_float = float(Fraction(oracle_answer))\n        except (ValueError, ZeroDivisionError):\n            return reward\n\n        if abs(answer_float - oracle_answer_float) <= tol:\n            return 1.0\n\n        answer_str = f\"{answer_float:.10g}\"\n        oracle_answer_str = f\"{oracle_answer_float:.10g}\"\n\n        # Partial Reward for matching prefix\n        match_len = 0\n        for a_char, o_char in zip(answer_str, oracle_answer_str):\n            if a_char == o_char:\n                match_len += 1\n            else:\n                break\n\n        reward = match_len / min(len(oracle_answer_str), len(answer_str))\n\n        return reward\n",
+      "ast_hash_runtime": {
+        "python_version": "3.14.3",
+        "implementation": "cpython"
+      }
+    },
+    "issue": {
+      "number": 543,
+      "url": "https://github.com/open-thought/reasoning-gym/issues/543",
+      "title": "`coin_flip`: the constant answer \"0\" receives full reward",
+      "created_at": "2026-10-27T03:01:36Z",
+      "updated_at": "2026-10-27T03:01:36Z",
+      "state_at_collection": "open",
+      "closed_at": null,
+      "evidence_file": "collection/issue-543.json",
+      "comments_evidence_file": "collection/issue-543-comments.json",
+      "snapshot_commit_claimed_by_report": "49b0713",
+      "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+    },
+    "repair": {
+      "status": "no_verified_upstream_fix",
+      "fix_version": null,
+      "verified_merged_commit": null,
+      "reason": "Saved issue has no comments or linked repair, and this curation has no verified PR or fixed commit for issue543. Issue body suggests denominator/numeric changes, which are not an implemented upstream fix.",
+      "evidence_files": [
+        "collection/issue-543.json",
+        "collection/issue-543-comments.json"
+      ],
+      "search_completeness": "bounded evidence set; not a claim that no fix exists anywhere"
+    },
+    "label": {
+      "kind": "known_bug",
+      "property": "numerically_wrong_short_probability_prefix_must_not_receive_full_reward",
+      "basis": [
+        "upstream_reported",
+        "source_reviewed"
+      ],
+      "global_cleanliness_claim": false
+    },
+    "contract": {
+      "short": "Score the probability of exactly k or at least k heads in n fair flips; a wrong decimal prefix is not a full solution.",
+      "detailed": "For exactly k heads the generator computes C(n,k)/2^n; for at least k heads it sums C(n,i)/2^n for i=k..n. It stores the decimal with .10g formatting and rational numerator/denominator metadata. Full credit is explicitly returned when absolute numeric error is at most tol (default 1e-4); the fallback is described as partial credit. Therefore a prefix such as 0 for reference 0.875, whose error exceeds tol, must not obtain 1.0. The precise corrected partial-credit curve is not specified by the task or issue, so counterexample expectations require <1 rather than inventing a fixed partial score.",
+      "accepted_candidate_domain": "Optional[str]; after deleting commas, fractions.Fraction must parse the candidate and reference, then conversion to float must succeed. Decimal and rational forms are supported. Docstring says extra text, but the implementation does not extract numbers from arbitrary surrounding prose; no such acceptance is assumed.",
+      "reference_domain": "Generated oracle is a finite probability in (0,1] for n>=1 and 0<=k<=n, formatted with .10g. The explicit 0.875 fixture is valid for n=3, at least k=1 (7/8).",
+      "required_entry_fields": [
+        "answer"
+      ],
+      "full_reward_threshold": "Absolute numeric error <= tol (default 0.0001) is an explicit sufficient condition. Intended rejection of full reward for wrong prefixes outside tol is supported by the partial-credit label and issue; no stronger universal iff claim is made.",
+      "partial_credit": "Existing fallback counts common leading characters of .10g canonical floats and divides by min(string lengths); this denominator can improperly produce 1.0. No corrected universal partial-credit curve is asserted.",
+      "tolerance_default": 0.0001,
+      "numeric_canonicalization": ".10g after Fraction-to-float; commas stripped before parsing."
+    },
+    "normative_evidence": [
+      {
+        "role": "task_templates_and_reference",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+        "start_line": 54,
+        "end_line": 88,
+        "excerpt": "        # Pick number of trials\n        n = rng.randint(self.config.min_trials, self.config.max_trials)\n\n        available_types = []\n        if self.config.allow_exact:\n            available_types.append(\"exact\")\n        if self.config.allow_at_least:\n            available_types.append(\"at_least\")\n\n        problem_type = rng.choice(available_types)\n\n        if problem_type == \"exact\":\n            k = rng.randint(0, n)\n            question = f\"What is the probability of getting exactly {k} heads in {n} fair coin flips?\"\n            prob = self._prob_exact_heads(n, k)  # compute actual answer as float\n\n        else:\n            k = rng.randint(0, n)\n            question = f\"What is the probability of getting at least {k} heads in {n} fair coin flips?\"\n            prob = self._prob_at_least_heads(n, k)  # compute actual answer as float\n\n        answer_str = format(prob, \".10g\")\n\n        return {\n            \"question\": question,\n            \"answer\": answer_str,\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"num_trials\": n,\n                \"k_heads\": k,\n                \"problem_type\": problem_type,\n                \"rational\": {\n                    \"numerator\": self._rational_numerator(n, k, problem_type),\n                    \"denominator\": 2**n,",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py#L54-L88"
+      },
+      {
+        "role": "probability_helpers",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+        "start_line": 96,
+        "end_line": 111,
+        "excerpt": "    def _prob_exact_heads(self, n: int, k: int) -> float:\n        \"\"\"Return probability of exactly k heads in n fair coin tosses.\"\"\"\n        comb = math.comb(n, k)\n        return comb * (0.5**n)\n\n    def _prob_at_least_heads(self, n: int, k: int) -> float:\n        \"\"\"Return probability of at least k heads in n fair coin tosses.\"\"\"\n        total = sum(math.comb(n, i) for i in range(k, n + 1))\n        return total * (0.5**n)\n\n    def _rational_numerator(self, n: int, k: int, problem_type: str) -> int:\n        \"\"\"Return the numerator of the probability as a rational number.\"\"\"\n        if problem_type == \"exact\":\n            return math.comb(n, k)\n        else:\n            return sum(math.comb(n, i) for i in range(k, n + 1))",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py#L96-L111"
+      },
+      {
+        "role": "complete_reward_and_tolerance",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/probability/coin_flip.py",
+        "start_line": 113,
+        "end_line": 149,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict, tol: float = 1e-4) -> float:\n        \"\"\"\n        Compute reward for LLM answer against oracle probability.\n        Handles decimals, fractions, small numeric errors, and extra text.\n        \"\"\"\n        reward = 0.0\n        oracle_answer = entry[\"answer\"]\n\n        if answer is None or len(answer.strip()) == 0:\n            return reward\n\n        answer = answer.replace(\",\", \"\")\n        oracle_answer = oracle_answer.replace(\",\", \"\")\n\n        try:\n            answer_float = float(Fraction(answer))\n            oracle_answer_float = float(Fraction(oracle_answer))\n        except (ValueError, ZeroDivisionError):\n            return reward\n\n        if abs(answer_float - oracle_answer_float) <= tol:\n            return 1.0\n\n        answer_str = f\"{answer_float:.10g}\"\n        oracle_answer_str = f\"{oracle_answer_float:.10g}\"\n\n        # Partial Reward for matching prefix\n        match_len = 0\n        for a_char, o_char in zip(answer_str, oracle_answer_str):\n            if a_char == o_char:\n                match_len += 1\n            else:\n                break\n\n        reward = match_len / min(len(oracle_answer_str), len(answer_str))\n\n        return reward",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/probability/coin_flip.py#L113-L149"
+      },
+      {
+        "role": "original_full_partial_reward_tests",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/tests/test_coin_flip.py",
+        "start_line": 60,
+        "end_line": 79,
+        "excerpt": "def test_coin_flip_score_answer():\n    \"\"\"Test full and partial reward behavior\"\"\"\n    config = CoinFlipConfig(size=200, seed=42)\n    dataset = CoinFlipDataset(config)\n\n    for i in range(len(dataset)):\n        entry = dataset[i]\n        answer = entry[\"answer\"]\n\n        # Exact answer -> full reward\n        reward = dataset.score_answer(answer, entry)\n        assert reward == 1.0\n\n        # Slightly wrong answer -> partial reward\n        if float(answer) + 0.01 <= 1.0:\n            slightly_wrong = str(float(answer) + 0.01)\n        else:\n            slightly_wrong = str(float(answer) - 0.01)\n        reward_partial = dataset.score_answer(slightly_wrong, entry)\n        assert 0.0 <= reward_partial <= 1.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_coin_flip.py#L60-L79"
+      }
+    ],
+    "source_review": {
+      "mechanism": "For answer 0 and oracle0.875, numeric error0.875 exceeds tol. Canonical strings are 0 and 0.875; match_len=1 and min length=1, yielding 1.0. For 0.8 and 0.87 the entire shorter canonical string also matches, yielding 1.0.",
+      "repair_warning": "Issue suggestion to divide by oracle length is not a verified patch and would target short-prefix full credit only; it is not evidence of a globally correct scoring function.",
+      "admissibility": "Fixture 0.875 is the exact oracle example in issue543 and a legal n3,at_least1 reference. This is an explicit scoring input, not a generated benchmark row."
+    },
+    "counterexamples": [
+      {
+        "id": "constant-zero",
+        "candidate_answer": "0",
+        "entry": {
+          "answer": "0.875"
+        },
+        "contract_expected_reward": {
+          "less_than": 1.0,
+          "rationale": "numeric error0.875 > default tol"
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_explicit_example",
+          "evidence": "collection/issue-543.json",
+          "report_context": "Issue explicitly uses oracle0.875; also reports 0 full credit on7/8 generated instances at seed42,size8"
+        },
+        "applies_to_version": "original"
+      },
+      {
+        "id": "short-prefix-08",
+        "candidate_answer": "0.8",
+        "entry": {
+          "answer": "0.875"
+        },
+        "contract_expected_reward": {
+          "less_than": 1.0,
+          "rationale": "numeric error0.075 > default tol"
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_explicit_example",
+          "evidence": "collection/issue-543.json"
+        },
+        "applies_to_version": "original"
+      },
+      {
+        "id": "short-prefix-087",
+        "candidate_answer": "0.87",
+        "entry": {
+          "answer": "0.875"
+        },
+        "contract_expected_reward": {
+          "less_than": 1.0,
+          "rationale": "numeric error0.005 > default tol"
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_explicit_example",
+          "evidence": "collection/issue-543.json"
+        },
+        "applies_to_version": "original"
+      }
+    ],
+    "normal_controls": [
+      {
+        "id": "exact-decimal",
+        "candidate_answer": "0.875",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "correct probability",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "equivalent-fraction",
+        "candidate_answer": "7/8",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "legitimate alternate numeric representation",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "within-tolerance",
+        "candidate_answer": "0.87505",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "legitimate small numeric error",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "ordinary-prefix-partial",
+        "candidate_answer": "0.85",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 0.75
+        },
+        "purpose": "partial prefix credit below1:3 matching characters out of4",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "no-common-prefix",
+        "candidate_answer": "1",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "wrong answer with no canonical prefix",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "invalid",
+        "candidate_answer": "banana",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "Fraction parse rejection",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "empty",
+        "candidate_answer": "",
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "empty answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "missing",
+        "candidate_answer": null,
+        "entry": {
+          "answer": "0.875"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "missing answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      }
+    ],
+    "extraction": {
+      "strategy": "Extract the exact score_answer AST only. Do not execute upstream module, constructor, generator, class body, or probability helpers.",
+      "necessary_helpers": [],
+      "required_self_attributes": [],
+      "required_globals": [
+        "Fraction"
+      ],
+      "required_stdlib_imports": [
+        "from fractions import Fraction"
+      ],
+      "builtins_used": [
+        "float",
+        "len",
+        "abs",
+        "zip",
+        "min"
+      ],
+      "annotation_handling": "Drop annotations or use a harness future-annotations preamble; Optional is annotation-only. Preserve tol default1e-4.",
+      "upstream_imports_not_needed": [
+        "math",
+        "random",
+        "dataclasses",
+        "coaching",
+        "factory",
+        "dataset"
+      ],
+      "self_binding": "An inert object is sufficient; method never reads self."
+    },
+    "collected_utc": "2026-11-08T07:28:07.749654+00:00"
+  },
+  {
+    "schema_version": "1.0-curation",
+    "project": "reasoning-gym",
+    "project_repository": "https://github.com/open-thought/reasoning-gym",
+    "evidence_level": "source_reviewed",
+    "source_execution_status": "pending_root_source_only_reproduction",
+    "independence_unit_note": "Version pairs and multiple probes of one issue are correlated; count by issue family, not as independent bugs.",
+    "analyzer_or_model_run": false,
+    "id": "rg-issue-544-original",
+    "family_id": "rg-issue-544",
+    "record_kind": "reported_bug_original",
+    "source": {
+      "repository": "open-thought/reasoning-gym",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+      "module": "reasoning_gym.algorithmic.game_of_life_halting",
+      "class": "GameOfLifeHaltingDataset",
+      "method": "score_answer",
+      "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_provenance": "collection/source-provenance/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py.json",
+      "source_file_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "git_blob_sha1": "d676f63c0947976e832eb335e16f56dac68d172a",
+      "start_line": 385,
+      "end_line": 401,
+      "source_span_sha256": "d194de0097bee9d5ebedd3a868b08fddeca9857377c55e50d6e35de001ecf8a6",
+      "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+      "full_method_source": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0\n",
+      "ast_hash_runtime": {
+        "python_version": "3.14.3",
+        "implementation": "cpython"
+      }
+    },
+    "issue": {
+      "number": 544,
+      "url": "https://github.com/open-thought/reasoning-gym/issues/544",
+      "title": "`game_of_life_halting`: any non-empty answer receives full reward",
+      "created_at": "2026-10-27T05:32:55Z",
+      "updated_at": "2026-11-01T10:32:45Z",
+      "state_at_collection": "open",
+      "closed_at": null,
+      "evidence_file": "collection/issue-544.json",
+      "comments_evidence_file": "collection/issue-544-comments.json",
+      "snapshot_commit_claimed_by_report": "49b0713",
+      "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+    },
+    "repair": {
+      "status": "open_upstream_proposal_not_merged",
+      "number": 561,
+      "url": "https://github.com/open-thought/reasoning-gym/pull/561",
+      "title": "Fix bool conversion in game of life halting",
+      "created_at": "2026-11-01T10:31:35Z",
+      "updated_at": "2026-11-01T10:31:35Z",
+      "state_at_collection": "open",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "head_commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "head_repository": "mdjanbaz/reasoning-gym",
+      "base_repository": "open-thought/reasoning-gym",
+      "evidence_file": "collection/pr-561.json",
+      "patch_evidence_file": "collection/pr-561-files.json",
+      "api_merge_commit_sha_not_a_merged_fix": "c6eb5ae3f50ec8381da12cae354b85ff46a9526a",
+      "fix_version": null,
+      "fix_version_status": "no_merged_fix_or_release_verified",
+      "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "patch_comparison": {
+        "base_snapshot": "pr561_base",
+        "head_snapshot": "pr561",
+        "base_equals_issue_snapshot_byte_for_byte": true,
+        "base_module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+        "head_module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+        "module_unified_diff": "--- pr561_base/reasoning_gym/algorithmic/game_of_life_halting.py\n+++ pr561/reasoning_gym/algorithmic/game_of_life_halting.py\n@@ -395,7 +395,7 @@\n             float: The computed score between 0.0 and 1.0.\n         \"\"\"\n \n-        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n+        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n             # python's bool conversion is very tolerant and normally doesn't raise exceptions\n             return 1.0\n         return 0.0\n",
+        "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+      }
+    },
+    "label": {
+      "kind": "known_bug",
+      "property": "incorrect_nonempty_boolean_answer_must_not_receive_full_reward",
+      "basis": [
+        "upstream_reported",
+        "source_reviewed"
+      ],
+      "global_cleanliness_claim": false
+    },
+    "contract": {
+      "short": "Judge the requested Game of Life halting truth value, not Python string truthiness.",
+      "detailed": "The question defines halting as no live cells at or before the configured step bound, with Moore neighborhood and wrapping topology. It explicitly requests True for halting and False otherwise. The generator stores str(not should_oscillate). A correct Boolean answer earns 1.0 and an opposite value or unrelated text earns 0.0. This record checks answer-verifier semantics relative to the supplied reference; it does not verify board dynamics or the generator's oracle.",
+      "accepted_candidate_domain": "Optional[str]; task answers are True or False. PR561 additionally accepts surrounding whitespace and case variations. The original method accepts every nonempty string due to the bug, which is implementation behavior rather than the intended answer domain.",
+      "reference_domain": "entry[\"answer\"] is one of the nonempty strings \"True\" and \"False\".",
+      "required_entry_fields": [
+        "answer"
+      ],
+      "full_reward_threshold": "Semantically equal truth values (PR561 implements answer.strip().lower() == entry[\"answer\"].strip().lower()).",
+      "partial_credit": "None; reward is binary 0.0 or 1.0.",
+      "normalization_evidence": "Whitespace/case tolerance is explicitly tested only in proposed PR561; exact True/False semantics are already stated by original question."
+    },
+    "normative_evidence": [
+      {
+        "role": "task_semantics",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 39,
+        "end_line": 49,
+        "excerpt": "class GameOfLifeHaltingDataset(ProceduralDataset):\n    \"\"\"Generates Game of Life games with configurable parameters\n\n    This is a variant of the Game of Life task, which rather than trying to test the algorithmic simulation, tests\n    the ability of the model to do explanatory reasoning of the board. The idea is that a model with good\n    explanatory reasoning will be able to see that a game will not halt without simulating it into the future.\n\n    The task presents a GoL board, and the model is asked to predict if the board will halt (die, all cells zero)\n    after n steps. Sometimes, the board will be made up of 'oscillators', isolated structures which never die.\n    Othertimes, it is filled with non-oscillators, structures which will always die after a few steps. The model\n    should deduce which case the presented board is.",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L39-L49"
+      },
+      {
+        "role": "question_and_reference_generation",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 357,
+        "end_line": 366,
+        "excerpt": "        # Create the question string.\n        question = (\n            f\"This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\\n\"\n            f\"Will this game halt at or before {self.config.max_simulation_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\\n\\n\"\n            f\"Initial board:\\n{board_str}\"\n        )\n\n        return {\n            \"question\": question,\n            \"answer\": str(not should_oscillate),",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L357-L366"
+      },
+      {
+        "role": "claimed_correctness_and_buggy_reward",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 385,
+        "end_line": 401,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L385-L401"
+      },
+      {
+        "role": "proposed_repair_expected_behavior",
+        "snapshot": "pr561",
+        "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "source_file": "upstream/pr561/tests/test_game_of_life_halting.py",
+        "start_line": 29,
+        "end_line": 38,
+        "excerpt": "        # Test the scoring\n        correct_answer = item[\"answer\"]\n        wrong_answer = \"False\" if correct_answer == \"True\" else \"True\"\n\n        assert dataset.score_answer(answer=correct_answer, entry=item) == 1.0\n        assert dataset.score_answer(answer=f\"  {correct_answer.lower()}  \", entry=item) == 1.0\n        assert dataset.score_answer(answer=wrong_answer, entry=item) == 0.0\n        assert dataset.score_answer(answer=\"banana\", entry=item) == 0.0\n        assert dataset.score_answer(answer=\"\", entry=item) == 0.0\n        assert dataset.score_answer(answer=None, entry=item) == 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/tests/test_game_of_life_halting.py#L29-L38"
+      }
+    ],
+    "source_review": {
+      "mechanism": "Both legal reference strings are truthy; for every nonempty candidate bool(answer)==bool(entry[\"answer\"]) is True, including the opposite truth value and banana.",
+      "pr_patch_scope": "PR561 replaces bool equality with whitespace-stripped, lowercase string equality. It targets string truthiness only, and does not change or validate the Game of Life generator.",
+      "admissibility": "Minimal entry fixtures preserve the only entry field consumed by the score method and a legal generated reference value. They are projections, not generated or simulated board records."
+    },
+    "counterexamples": [
+      {
+        "id": "opposite-false",
+        "candidate_answer": "False",
+        "entry": {
+          "answer": "True"
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_with_curated_minimal_entry",
+          "evidence": "collection/issue-544.json",
+          "report_context": "seed=42,size=5; opposite True/False and banana both reported to score 1.0 for every generated instance",
+          "exact_fixture_generated": false
+        },
+        "applies_to_version": "original"
+      },
+      {
+        "id": "nonboolean-banana",
+        "candidate_answer": "banana",
+        "entry": {
+          "answer": "True"
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_with_curated_minimal_entry",
+          "evidence": "collection/issue-544.json",
+          "exact_fixture_generated": false
+        },
+        "applies_to_version": "original"
+      },
+      {
+        "id": "opposite-true",
+        "candidate_answer": "True",
+        "entry": {
+          "answer": "False"
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_with_curated_minimal_entry",
+          "evidence": "collection/issue-544.json",
+          "exact_fixture_generated": false
+        },
+        "applies_to_version": "original"
+      }
+    ],
+    "normal_controls": [
+      {
+        "id": "exact-true",
+        "candidate_answer": "True",
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "legitimate correct answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "exact-false",
+        "candidate_answer": "False",
+        "entry": {
+          "answer": "False"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "False must also be a legitimate correct answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "missing",
+        "candidate_answer": null,
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "missing answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "empty",
+        "candidate_answer": "",
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "empty answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      }
+    ],
+    "extraction": {
+      "strategy": "Extract the exact score_answer AST node; do not execute the upstream module, imports, class body, constructor, or generator.",
+      "necessary_helpers": [],
+      "required_self_attributes": [],
+      "required_globals": [],
+      "required_stdlib_imports": [],
+      "builtins_used": [
+        "bool"
+      ],
+      "annotation_handling": "Drop annotations or use a harness future-annotations preamble; Optional/Dict/any are annotations, not runtime scorer dependencies.",
+      "upstream_imports_not_needed": [
+        "cellpylib",
+        "coaching",
+        "factory",
+        "random",
+        "dataclasses"
+      ],
+      "self_binding": "An inert object is sufficient; method never reads self.",
+      "entry_fixture_type_note": "Dict answer string; no board array or third-party objects required."
+    },
+    "collected_utc": "2026-11-08T07:28:07.749654+00:00"
+  },
+  {
+    "schema_version": "1.0-curation",
+    "project": "reasoning-gym",
+    "project_repository": "https://github.com/open-thought/reasoning-gym",
+    "evidence_level": "source_reviewed",
+    "source_execution_status": "pending_root_source_only_reproduction",
+    "independence_unit_note": "Version pairs and multiple probes of one issue are correlated; count by issue family, not as independent bugs.",
+    "analyzer_or_model_run": false,
+    "id": "rg-issue-545-original",
+    "family_id": "rg-issue-545",
+    "record_kind": "reported_bug_original",
+    "source": {
+      "repository": "open-thought/reasoning-gym",
+      "snapshot": "issue_snapshot",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+      "module": "reasoning_gym.algebra.complex_arithmetic",
+      "class": "ComplexArithmeticDataset",
+      "method": "score_answer",
+      "qualified_name": "ComplexArithmeticDataset.score_answer",
+      "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_provenance": "collection/source-provenance/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py.json",
+      "source_file_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+      "git_blob_sha1": "fa4b0b34effe333dd25037e236f1c5ca5515f564",
+      "start_line": 168,
+      "end_line": 183,
+      "source_span_sha256": "210549e636793b5129afff648b6839427ba3311b5f521f7522198027dfa1784a",
+      "ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+      "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+      "full_method_source": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        metadata = entry[\"metadata\"]\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            expected_result = complex(*metadata[\"result\"])\n            # Calculate distance-based score using exponential decay\n            distance = abs(student_result - expected_result)\n            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n            return score\n\n        except (ValueError, TypeError):\n            return 0.0\n",
+      "ast_hash_runtime": {
+        "python_version": "3.14.3",
+        "implementation": "cpython"
+      }
+    },
+    "issue": {
+      "number": 545,
+      "url": "https://github.com/open-thought/reasoning-gym/issues/545",
+      "title": "`complex_arithmetic`: the answer \"nan\" receives full reward",
+      "created_at": "2026-10-27T05:37:01Z",
+      "updated_at": "2026-11-01T10:52:34Z",
+      "state_at_collection": "open",
+      "closed_at": null,
+      "evidence_file": "collection/issue-545.json",
+      "comments_evidence_file": "collection/issue-545-comments.json",
+      "snapshot_commit_claimed_by_report": "49b0713",
+      "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+    },
+    "repair": {
+      "status": "open_upstream_proposal_not_merged",
+      "number": 562,
+      "url": "https://github.com/open-thought/reasoning-gym/pull/562",
+      "title": "Fix NaN values scoring in complex_arithmetic.py",
+      "created_at": "2026-11-01T10:51:19Z",
+      "updated_at": "2026-11-01T10:51:19Z",
+      "state_at_collection": "open",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "head_commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "head_repository": "mdjanbaz/reasoning-gym",
+      "base_repository": "open-thought/reasoning-gym",
+      "evidence_file": "collection/pr-562.json",
+      "patch_evidence_file": "collection/pr-562-files.json",
+      "api_merge_commit_sha_not_a_merged_fix": "870173c02dd1758286f1d1720d80231ce8124473",
+      "fix_version": null,
+      "fix_version_status": "no_merged_fix_or_release_verified",
+      "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "patch_comparison": {
+        "base_snapshot": "pr562_base",
+        "head_snapshot": "pr562",
+        "base_equals_issue_snapshot_byte_for_byte": true,
+        "base_module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+        "head_module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+        "module_unified_diff": "--- pr562_base/reasoning_gym/algebra/complex_arithmetic.py\n+++ pr562/reasoning_gym/algebra/complex_arithmetic.py\n@@ -170,14 +170,18 @@\n         if answer is None:\n             return 0.0\n \n-        metadata = entry[\"metadata\"]\n         try:\n             student_result = self.parse_string_to_complex(answer)\n-            expected_result = complex(*metadata[\"result\"])\n-            # Calculate distance-based score using exponential decay\n+            if student_result is None:\n+                return 0.0\n+\n+            expected_result = complex(*entry[\"metadata\"][\"result\"])\n             distance = abs(student_result - expected_result)\n-            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n-            return score\n+\n+            if not math.isfinite(distance):\n+                return 0.0\n+\n+            return math.exp(-distance)\n \n         except (ValueError, TypeError):\n             return 0.0\n",
+        "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+      }
+    },
+    "label": {
+      "kind": "known_bug",
+      "property": "nonfinite_complex_submission_must_not_receive_full_reward",
+      "basis": [
+        "upstream_reported",
+        "source_reviewed"
+      ],
+      "global_cleanliness_claim": false
+    },
+    "contract": {
+      "short": "Reward finite complex arithmetic answers by exponential distance from the finite reference.",
+      "detailed": "Prompts ask addition, subtraction, multiplication, or division of complex numbers. Operands use bounded integer components, and division is constructed from an integer quotient and nonzero divisor. The generator stores integer real/imaginary result components in metadata. The intended score decreases as exp(-abs(student-reference)); exact finite answers earn 1.0, finite errors earn less than 1.0, and malformed or nonfinite submissions earn 0.0.",
+      "accepted_candidate_domain": "Optional[str]; normalized spaces/lowercase, outer parentheses, i/j notation, pure real/imaginary and two-component complex forms are parsed by parse_string_to_complex. Parser acceptance of nan is not intended mathematical correctness.",
+      "reference_domain": "entry[\"metadata\"][\"result\"] is a pair of finite integer-valued components (tuple upstream, JSON list in fixture); scoring constructs complex(*result).",
+      "required_entry_fields": [
+        "metadata.result"
+      ],
+      "full_reward_threshold": "Finite parsed answer at zero complex-plane distance from the reference (subject to host floating-point evaluation).",
+      "partial_credit": "For finite distance d>0, exp(-d), potentially underflowing to 0.0.",
+      "invalid_input_reward": 0.0,
+      "fixture_basis": "The (3.0,2.0) metadata fixture is the exact upstream unit-test fixture in test_complex_arithmetic_scoring."
+    },
+    "normative_evidence": [
+      {
+        "role": "prompt_templates",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 35,
+        "end_line": 40,
+        "excerpt": "    def __init__(self, config: ComplexArithmeticConfig):\n        self._prompt_templates = {\n            \"+\": \"Add the complex numbers: ({a}) + ({b})\",\n            \"-\": \"Subtract the complex numbers: ({a}) - ({b})\",\n            \"*\": \"Multiply the complex numbers: ({a}) × ({b})\",\n            \"/\": \"Divide the complex numbers: ({a}) ÷ ({b})\",",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L35-L40"
+      },
+      {
+        "role": "finite_integer_reference_generation",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 64,
+        "end_line": 100,
+        "excerpt": "        # Choose random operation\n        op = rng.choices(self.config.operations, weights=self.config.operations_weights, k=1)[0]\n\n        if op == \"/\":\n            # For division, first generate the quotient (a) and divisor (b)\n            # Then calculate the dividend (result) as a * b\n            a = self._generate_complex(rng)  # This will be the final result\n            b = self._generate_complex(rng)\n            while b == 0:  # Ensure non-zero divisor\n                b = self._generate_complex(rng)\n            result = a  # Store the intended result\n            a = result * b  # Calculate dividend to ensure whole number division\n        else:\n            # For other operations, generate numbers normally\n            a = self._generate_complex(rng)\n            b = self._generate_complex(rng)\n\n            # Calculate result\n            if op == \"+\":\n                result = a + b\n            elif op == \"-\":\n                result = a - b\n            else:  # op == \"*\"\n                result = a * b\n\n        question = self._prompt_templates[op].format(a=self._format_complex(a), b=self._format_complex(b))\n\n        return {\n            \"question\": question,\n            \"answer\": self._format_complex(result),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"num1\": (a.real, a.imag),\n                \"num2\": (b.real, b.imag),\n                \"operation\": op,\n                \"result\": (int(result.real), int(result.imag)),  # Convert to int since we ensure whole numbers",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L64-L100"
+      },
+      {
+        "role": "complete_parser_helper",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 111,
+        "end_line": 166,
+        "excerpt": "    @staticmethod\n    def parse_string_to_complex(answer: str) -> complex:\n        if answer is None:\n            return None\n\n        try:\n            # Normalize the answer string by removing spaces and converting to lowercase\n            answer = answer.replace(\" \", \"\").lower()\n\n            # remove brackets\n            while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n                answer = answer[1:-1]\n\n            # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n            answer = answer.replace(\"i\", \"j\")\n\n            # Handle real numbers (no imaginary part)\n            if \"j\" not in answer:\n                return complex(float(answer))\n\n            # Handle pure imaginary numbers\n            if answer == \"j\":\n                return complex(0, 1)\n            if answer == \"-j\":\n                return complex(0, -1)\n\n            # Handle cases like \"7j\" or \"-7j\" (no real part)\n            if (\n                answer.endswith(\"j\")\n                and not any(c in answer[:-1] for c in \"+-\")\n                or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n            ):\n                # Extract coefficient\n                coef = answer[:-1]\n                if coef == \"\":\n                    coef = \"1\"\n                elif coef == \"-\":\n                    coef = \"-1\"\n                return complex(0, float(coef))\n\n            # Handle complex numbers with both parts\n            # Make sure there's a + or - before j if it's not at the beginning\n            if \"j\" in answer and not answer.endswith(\"j\"):\n                return None  # Invalid format like \"3j+2\"\n\n            # Handle cases like \"3+j\" (implicit 1)\n            if \"+j\" in answer:\n                answer = answer.replace(\"+j\", \"+1j\")\n            if \"-j\" in answer:\n                answer = answer.replace(\"-j\", \"-1j\")\n\n            # Parse the normalized string into a complex number\n            return complex(answer)\n\n        except (ValueError, TypeError):\n            return None",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L111-L166"
+      },
+      {
+        "role": "buggy_reward",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 168,
+        "end_line": 183,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        metadata = entry[\"metadata\"]\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            expected_result = complex(*metadata[\"result\"])\n            # Calculate distance-based score using exponential decay\n            distance = abs(student_result - expected_result)\n            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n            return score\n\n        except (ValueError, TypeError):\n            return 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L168-L183"
+      },
+      {
+        "role": "original_exact_partial_invalid_contract",
+        "snapshot": "pr562_base",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/pr562_base/tests/test_complex_arithmetic.py",
+        "start_line": 53,
+        "end_line": 83,
+        "excerpt": "def test_complex_arithmetic_scoring():\n    \"\"\"Test scoring function with various answer formats and accuracies.\"\"\"\n    config = ComplexArithmeticConfig(seed=42)\n    dataset = ComplexArithmeticDataset(config)\n\n    # Test case with answer 3 + 2i\n    entry = {\"metadata\": {\"result\": (3.0, 2.0)}}\n\n    # Test exact matches (should get score of 1.0)\n    assert dataset.score_answer(\"3 + 2i\", entry) == 1.0\n    assert dataset.score_answer(\"3+2i\", entry) == 1.0\n    assert dataset.score_answer(\"3.0 + 2.0i\", entry) == 1.0\n    assert dataset.score_answer(\"((3.0 + 2.0i ) )\", entry) == 1.0\n\n    # Test answers with small errors (should get high but < 1.0 scores)\n    print(dataset.score_answer(\"3.1 + 2i\", entry))\n    assert 0.9 < dataset.score_answer(\"3.1 + 2i\", entry) < 1.0\n    assert 0.9 < dataset.score_answer(\"3 + 2.1i\", entry) < 1.0\n    assert 0.7 < dataset.score_answer(\"3.1 + 2.1i\", entry) < 0.95\n\n    # Test answers with moderate errors (should get medium scores)\n    assert 0.3 < dataset.score_answer(\"4 + 2i\", entry) < 0.4\n    assert 0.3 < dataset.score_answer(\"3 + 3i\", entry) < 0.4\n\n    # Test answers with large errors (should get very low scores)\n    assert dataset.score_answer(\"10 + 10i\", entry) < 0.01\n\n    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_complex_arithmetic.py#L53-L83"
+      },
+      {
+        "role": "proposed_nonfinite_rejection_tests",
+        "snapshot": "pr562",
+        "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "source_file": "upstream/pr562/tests/test_complex_arithmetic.py",
+        "start_line": 80,
+        "end_line": 87,
+        "excerpt": "    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0\n    assert dataset.score_answer(\"nan\", entry) == 0.0\n    assert dataset.score_answer(\"1+nanj\", entry) == 0.0\n    assert dataset.score_answer(\"nan+2i\", entry) == 0.0\n    assert dataset.score_answer(\"inf\", entry) == 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/tests/test_complex_arithmetic.py#L80-L87"
+      }
+    ],
+    "source_review": {
+      "mechanism": "float(\"nan\") or complex forms containing NaN parse successfully. Subtracting a finite reference and taking abs yields NaN, math.exp(-distance) stays NaN, and min(1.0, NaN) retains its first argument 1.0 under Python comparison behavior. This bypasses mathematical distance semantics.",
+      "pr_patch_scope": "PR562 explicitly rejects a None parser result and any distance failing math.isfinite, then returns math.exp(-distance). The claim is scoped to these NaN/nonfinite probes against finite references.",
+      "admissibility": "Minimal metadata fixture copied from the upstream test; [3,2] is a legal finite arithmetic result, for example (1+i)+(2+i). No task generator was executed."
+    },
+    "counterexamples": [
+      {
+        "id": "nan-real",
+        "candidate_answer": "nan",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_plus_upstream_unit_test_reference",
+          "evidence": "collection/issue-545.json",
+          "report_context": "seed=42,size=5; nan reported to produce [1.0,1.0,1.0,1.0,1.0]",
+          "reference_fixture_source": "upstream/pr562_base/tests/test_complex_arithmetic.py:59",
+          "exact_report_fixture": false
+        },
+        "applies_to_version": "original"
+      },
+      {
+        "id": "nan-imaginary",
+        "candidate_answer": "1+nanj",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_plus_upstream_unit_test_reference",
+          "evidence": "collection/issue-545.json",
+          "report_context": "issue explicitly states partial NaN 1+nanj also scores 1.0",
+          "exact_report_fixture": false
+        },
+        "applies_to_version": "original"
+      },
+      {
+        "id": "nan-i-notation",
+        "candidate_answer": "nan+2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "source_review_predicted_reward": 1.0,
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "curated_extension_present_in_proposed_upstream_test",
+          "evidence": "upstream/pr562/tests/test_complex_arithmetic.py:86",
+          "reported_original_actual": false
+        },
+        "applies_to_version": "original"
+      }
+    ],
+    "normal_controls": [
+      {
+        "id": "exact",
+        "candidate_answer": "3 + 2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "upstream exact-answer test",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "equivalent-parentheses",
+        "candidate_answer": "((3.0 + 2.0i ) )",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "valid normalization from upstream test",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "finite-partial",
+        "candidate_answer": "4 + 2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "formula": "exp(-1)",
+          "strictly_between": [
+            0.3,
+            0.4
+          ]
+        },
+        "purpose": "legitimate partial credit for one-unit error",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "invalid",
+        "candidate_answer": "invalid",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "parser rejection",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "missing",
+        "candidate_answer": null,
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "missing answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "infinity",
+        "candidate_answer": "inf + 2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "existing original nonfinite rejection control; parser replaces i in inf as well",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      }
+    ],
+    "extraction": {
+      "strategy": "Extract the exact score_answer AST and the exact static parser helper only; bind helper as staticmethod. Do not execute the module, class body, constructor, or generator.",
+      "necessary_helpers": [
+        {
+          "repository": "open-thought/reasoning-gym",
+          "snapshot": "issue_snapshot",
+          "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+          "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+          "module": "reasoning_gym.algebra.complex_arithmetic",
+          "class": "ComplexArithmeticDataset",
+          "method": "parse_string_to_complex",
+          "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+          "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py",
+          "source_provenance": "collection/source-provenance/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py.json",
+          "source_file_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+          "git_blob_sha1": "fa4b0b34effe333dd25037e236f1c5ca5515f564",
+          "start_line": 111,
+          "end_line": 166,
+          "source_span_sha256": "73a67a9d46aba8164dec7fd2a9b14159694dabbcd7d9923d8d8f960b8a2b017c",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+          "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+          "full_method_source": "    @staticmethod\n    def parse_string_to_complex(answer: str) -> complex:\n        if answer is None:\n            return None\n\n        try:\n            # Normalize the answer string by removing spaces and converting to lowercase\n            answer = answer.replace(\" \", \"\").lower()\n\n            # remove brackets\n            while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n                answer = answer[1:-1]\n\n            # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n            answer = answer.replace(\"i\", \"j\")\n\n            # Handle real numbers (no imaginary part)\n            if \"j\" not in answer:\n                return complex(float(answer))\n\n            # Handle pure imaginary numbers\n            if answer == \"j\":\n                return complex(0, 1)\n            if answer == \"-j\":\n                return complex(0, -1)\n\n            # Handle cases like \"7j\" or \"-7j\" (no real part)\n            if (\n                answer.endswith(\"j\")\n                and not any(c in answer[:-1] for c in \"+-\")\n                or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n            ):\n                # Extract coefficient\n                coef = answer[:-1]\n                if coef == \"\":\n                    coef = \"1\"\n                elif coef == \"-\":\n                    coef = \"-1\"\n                return complex(0, float(coef))\n\n            # Handle complex numbers with both parts\n            # Make sure there's a + or - before j if it's not at the beginning\n            if \"j\" in answer and not answer.endswith(\"j\"):\n                return None  # Invalid format like \"3j+2\"\n\n            # Handle cases like \"3+j\" (implicit 1)\n            if \"+j\" in answer:\n                answer = answer.replace(\"+j\", \"+1j\")\n            if \"-j\" in answer:\n                answer = answer.replace(\"-j\", \"-1j\")\n\n            # Parse the normalized string into a complex number\n            return complex(answer)\n\n        except (ValueError, TypeError):\n            return None\n",
+          "ast_hash_runtime": {
+            "python_version": "3.14.3",
+            "implementation": "cpython"
+          }
+        }
+      ],
+      "required_self_attributes": [
+        "parse_string_to_complex (staticmethod callable; exact source helper)"
+      ],
+      "required_globals": [
+        "math"
+      ],
+      "required_stdlib_imports": [
+        "import math"
+      ],
+      "builtins_used": [
+        "complex",
+        "abs",
+        "min",
+        "any",
+        "len",
+        "float"
+      ],
+      "annotation_handling": "Drop annotations or use a harness future-annotations preamble; Optional is an annotation only. Preserve staticmethod binding for parser.",
+      "upstream_imports_not_needed": [
+        "cmath",
+        "random",
+        "dataclasses",
+        "coaching",
+        "factory"
+      ],
+      "entry_fixture_type_note": "JSON list [3.0,2.0] is accepted by complex(*components), preserving the upstream tuple values."
+    },
+    "collected_utc": "2026-11-08T07:28:07.749654+00:00"
+  },
+  {
+    "schema_version": "1.0-curation",
+    "project": "reasoning-gym",
+    "project_repository": "https://github.com/open-thought/reasoning-gym",
+    "evidence_level": "source_reviewed",
+    "source_execution_status": "pending_root_source_only_reproduction",
+    "independence_unit_note": "Version pairs and multiple probes of one issue are correlated; count by issue family, not as independent bugs.",
+    "analyzer_or_model_run": false,
+    "id": "rg-pr-561-proposed-repair",
+    "family_id": "rg-issue-544",
+    "record_kind": "proposed_upstream_repair",
+    "source": {
+      "repository": "open-thought/reasoning-gym",
+      "snapshot": "pr561",
+      "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "tree": "677fb315de12c5f2840b65b5c3e12c8abd63bf0e",
+      "module": "reasoning_gym.algorithmic.game_of_life_halting",
+      "class": "GameOfLifeHaltingDataset",
+      "method": "score_answer",
+      "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+      "source_file": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "source_provenance": "collection/source-provenance/pr561/reasoning_gym/algorithmic/game_of_life_halting.py.json",
+      "source_file_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+      "git_blob_sha1": "5d4d6c609024a35a6af8ac15380e8ca0d53a153f",
+      "start_line": 385,
+      "end_line": 401,
+      "source_span_sha256": "9559e045797b2365889a90868a60a0af6ae806296acd054d08c92a94b7ab6897",
+      "ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+      "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+      "full_method_source": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0\n",
+      "ast_hash_runtime": {
+        "python_version": "3.14.3",
+        "implementation": "cpython"
+      }
+    },
+    "issue": {
+      "number": 544,
+      "url": "https://github.com/open-thought/reasoning-gym/issues/544",
+      "title": "`game_of_life_halting`: any non-empty answer receives full reward",
+      "created_at": "2026-10-27T05:32:55Z",
+      "updated_at": "2026-11-01T10:32:45Z",
+      "state_at_collection": "open",
+      "closed_at": null,
+      "evidence_file": "collection/issue-544.json",
+      "comments_evidence_file": "collection/issue-544-comments.json",
+      "snapshot_commit_claimed_by_report": "49b0713",
+      "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+    },
+    "repair": {
+      "status": "open_upstream_proposal_not_merged",
+      "number": 561,
+      "url": "https://github.com/open-thought/reasoning-gym/pull/561",
+      "title": "Fix bool conversion in game of life halting",
+      "created_at": "2026-11-01T10:31:35Z",
+      "updated_at": "2026-11-01T10:31:35Z",
+      "state_at_collection": "open",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "head_commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "head_repository": "mdjanbaz/reasoning-gym",
+      "base_repository": "open-thought/reasoning-gym",
+      "evidence_file": "collection/pr-561.json",
+      "patch_evidence_file": "collection/pr-561-files.json",
+      "api_merge_commit_sha_not_a_merged_fix": "c6eb5ae3f50ec8381da12cae354b85ff46a9526a",
+      "fix_version": null,
+      "fix_version_status": "no_merged_fix_or_release_verified",
+      "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "original_source": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "original_method_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "head_method_ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+      "patch_comparison": {
+        "base_snapshot": "pr561_base",
+        "head_snapshot": "pr561",
+        "base_equals_issue_snapshot_byte_for_byte": true,
+        "base_module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+        "head_module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+        "module_unified_diff": "--- pr561_base/reasoning_gym/algorithmic/game_of_life_halting.py\n+++ pr561/reasoning_gym/algorithmic/game_of_life_halting.py\n@@ -395,7 +395,7 @@\n             float: The computed score between 0.0 and 1.0.\n         \"\"\"\n \n-        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n+        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n             # python's bool conversion is very tolerant and normally doesn't raise exceptions\n             return 1.0\n         return 0.0\n",
+        "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+      }
+    },
+    "label": {
+      "kind": "property_scoped_normal_candidate",
+      "property": "incorrect_nonempty_boolean_answer_must_not_receive_full_reward",
+      "basis": [
+        "upstream_proposed_repair",
+        "source_reviewed"
+      ],
+      "global_cleanliness_claim": false,
+      "validation_status": "pending_root_source_only_reproduction"
+    },
+    "contract": {
+      "short": "Judge the requested Game of Life halting truth value, not Python string truthiness.",
+      "detailed": "The question defines halting as no live cells at or before the configured step bound, with Moore neighborhood and wrapping topology. It explicitly requests True for halting and False otherwise. The generator stores str(not should_oscillate). A correct Boolean answer earns 1.0 and an opposite value or unrelated text earns 0.0. This record checks answer-verifier semantics relative to the supplied reference; it does not verify board dynamics or the generator's oracle.",
+      "accepted_candidate_domain": "Optional[str]; task answers are True or False. PR561 additionally accepts surrounding whitespace and case variations. The original method accepts every nonempty string due to the bug, which is implementation behavior rather than the intended answer domain.",
+      "reference_domain": "entry[\"answer\"] is one of the nonempty strings \"True\" and \"False\".",
+      "required_entry_fields": [
+        "answer"
+      ],
+      "full_reward_threshold": "Semantically equal truth values (PR561 implements answer.strip().lower() == entry[\"answer\"].strip().lower()).",
+      "partial_credit": "None; reward is binary 0.0 or 1.0.",
+      "normalization_evidence": "Whitespace/case tolerance is explicitly tested only in proposed PR561; exact True/False semantics are already stated by original question."
+    },
+    "normative_evidence": [
+      {
+        "role": "task_semantics",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 39,
+        "end_line": 49,
+        "excerpt": "class GameOfLifeHaltingDataset(ProceduralDataset):\n    \"\"\"Generates Game of Life games with configurable parameters\n\n    This is a variant of the Game of Life task, which rather than trying to test the algorithmic simulation, tests\n    the ability of the model to do explanatory reasoning of the board. The idea is that a model with good\n    explanatory reasoning will be able to see that a game will not halt without simulating it into the future.\n\n    The task presents a GoL board, and the model is asked to predict if the board will halt (die, all cells zero)\n    after n steps. Sometimes, the board will be made up of 'oscillators', isolated structures which never die.\n    Othertimes, it is filled with non-oscillators, structures which will always die after a few steps. The model\n    should deduce which case the presented board is.",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L39-L49"
+      },
+      {
+        "role": "question_and_reference_generation",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 357,
+        "end_line": 366,
+        "excerpt": "        # Create the question string.\n        question = (\n            f\"This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\\n\"\n            f\"Will this game halt at or before {self.config.max_simulation_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\\n\\n\"\n            f\"Initial board:\\n{board_str}\"\n        )\n\n        return {\n            \"question\": question,\n            \"answer\": str(not should_oscillate),",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L357-L366"
+      },
+      {
+        "role": "claimed_correctness_and_buggy_reward",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 385,
+        "end_line": 401,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/game_of_life_halting.py#L385-L401"
+      },
+      {
+        "role": "proposed_repair_expected_behavior",
+        "snapshot": "pr561",
+        "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "source_file": "upstream/pr561/tests/test_game_of_life_halting.py",
+        "start_line": 29,
+        "end_line": 38,
+        "excerpt": "        # Test the scoring\n        correct_answer = item[\"answer\"]\n        wrong_answer = \"False\" if correct_answer == \"True\" else \"True\"\n\n        assert dataset.score_answer(answer=correct_answer, entry=item) == 1.0\n        assert dataset.score_answer(answer=f\"  {correct_answer.lower()}  \", entry=item) == 1.0\n        assert dataset.score_answer(answer=wrong_answer, entry=item) == 0.0\n        assert dataset.score_answer(answer=\"banana\", entry=item) == 0.0\n        assert dataset.score_answer(answer=\"\", entry=item) == 0.0\n        assert dataset.score_answer(answer=None, entry=item) == 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/tests/test_game_of_life_halting.py#L29-L38"
+      },
+      {
+        "role": "complete_proposed_repair_method",
+        "snapshot": "pr561",
+        "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+        "source_file": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+        "start_line": 385,
+        "end_line": 401,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0/reasoning_gym/algorithmic/game_of_life_halting.py#L385-L401"
+      }
+    ],
+    "source_review": {
+      "mechanism": "Both legal reference strings are truthy; for every nonempty candidate bool(answer)==bool(entry[\"answer\"]) is True, including the opposite truth value and banana.",
+      "pr_patch_scope": "PR561 replaces bool equality with whitespace-stripped, lowercase string equality. It targets string truthiness only, and does not change or validate the Game of Life generator.",
+      "admissibility": "Minimal entry fixtures preserve the only entry field consumed by the score method and a legal generated reference value. They are projections, not generated or simulated board records.",
+      "current_version_scope": "Only PR561 head4ab6143 is checked as an open proposed repair; no merged or release-level fix is claimed."
+    },
+    "counterexamples": [
+      {
+        "id": "opposite-false",
+        "candidate_answer": "False",
+        "entry": {
+          "answer": "True"
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_with_curated_minimal_entry",
+          "evidence": "collection/issue-544.json",
+          "report_context": "seed=42,size=5; opposite True/False and banana both reported to score 1.0 for every generated instance",
+          "exact_fixture_generated": false
+        },
+        "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+        "reported_or_predicted_base_reward": 1.0,
+        "source_review_predicted_reward": 0.0
+      },
+      {
+        "id": "nonboolean-banana",
+        "candidate_answer": "banana",
+        "entry": {
+          "answer": "True"
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_with_curated_minimal_entry",
+          "evidence": "collection/issue-544.json",
+          "exact_fixture_generated": false
+        },
+        "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+        "reported_or_predicted_base_reward": 1.0,
+        "source_review_predicted_reward": 0.0
+      },
+      {
+        "id": "opposite-true",
+        "candidate_answer": "True",
+        "entry": {
+          "answer": "False"
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_with_curated_minimal_entry",
+          "evidence": "collection/issue-544.json",
+          "exact_fixture_generated": false
+        },
+        "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+        "reported_or_predicted_base_reward": 1.0,
+        "source_review_predicted_reward": 0.0
+      }
+    ],
+    "normal_controls": [
+      {
+        "id": "exact-true",
+        "candidate_answer": "True",
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "legitimate correct answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "exact-false",
+        "candidate_answer": "False",
+        "entry": {
+          "answer": "False"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "False must also be a legitimate correct answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "missing",
+        "candidate_answer": null,
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "missing answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "empty",
+        "candidate_answer": "",
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "empty answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "normalized-correct",
+        "candidate_answer": "  true  ",
+        "entry": {
+          "answer": "True"
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "proposed upstream normalization test",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      }
+    ],
+    "extraction": {
+      "strategy": "Extract the exact score_answer AST node; do not execute the upstream module, imports, class body, constructor, or generator.",
+      "necessary_helpers": [],
+      "required_self_attributes": [],
+      "required_globals": [],
+      "required_stdlib_imports": [],
+      "builtins_used": [],
+      "annotation_handling": "Drop annotations or use a harness future-annotations preamble; Optional/Dict/any are annotations, not runtime scorer dependencies.",
+      "upstream_imports_not_needed": [
+        "cellpylib",
+        "coaching",
+        "factory",
+        "random",
+        "dataclasses"
+      ],
+      "self_binding": "An inert object is sufficient; method never reads self.",
+      "entry_fixture_type_note": "Dict answer string; no board array or third-party objects required."
+    },
+    "paired_original_record_id": "rg-issue-544-original",
+    "collected_utc": "2026-11-08T07:28:07.749654+00:00"
+  },
+  {
+    "schema_version": "1.0-curation",
+    "project": "reasoning-gym",
+    "project_repository": "https://github.com/open-thought/reasoning-gym",
+    "evidence_level": "source_reviewed",
+    "source_execution_status": "pending_root_source_only_reproduction",
+    "independence_unit_note": "Version pairs and multiple probes of one issue are correlated; count by issue family, not as independent bugs.",
+    "analyzer_or_model_run": false,
+    "id": "rg-pr-562-proposed-repair",
+    "family_id": "rg-issue-545",
+    "record_kind": "proposed_upstream_repair",
+    "source": {
+      "repository": "open-thought/reasoning-gym",
+      "snapshot": "pr562",
+      "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "tree": "ab0f8007fbde37a3a94b816f1a194e250a958d89",
+      "module": "reasoning_gym.algebra.complex_arithmetic",
+      "class": "ComplexArithmeticDataset",
+      "method": "score_answer",
+      "qualified_name": "ComplexArithmeticDataset.score_answer",
+      "source_file": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/reasoning_gym/algebra/complex_arithmetic.py",
+      "source_provenance": "collection/source-provenance/pr562/reasoning_gym/algebra/complex_arithmetic.py.json",
+      "source_file_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+      "git_blob_sha1": "bb70835c314c9fffa8398ee90ec3a77d8773daf2",
+      "start_line": 168,
+      "end_line": 187,
+      "source_span_sha256": "cdf7185762319ee0907601a0475f9a31ffbe815b36cc97a1fca2027d54b5eb99",
+      "ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea",
+      "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+      "full_method_source": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            if student_result is None:\n                return 0.0\n\n            expected_result = complex(*entry[\"metadata\"][\"result\"])\n            distance = abs(student_result - expected_result)\n\n            if not math.isfinite(distance):\n                return 0.0\n\n            return math.exp(-distance)\n\n        except (ValueError, TypeError):\n            return 0.0\n",
+      "ast_hash_runtime": {
+        "python_version": "3.14.3",
+        "implementation": "cpython"
+      }
+    },
+    "issue": {
+      "number": 545,
+      "url": "https://github.com/open-thought/reasoning-gym/issues/545",
+      "title": "`complex_arithmetic`: the answer \"nan\" receives full reward",
+      "created_at": "2026-10-27T05:37:01Z",
+      "updated_at": "2026-11-01T10:52:34Z",
+      "state_at_collection": "open",
+      "closed_at": null,
+      "evidence_file": "collection/issue-545.json",
+      "comments_evidence_file": "collection/issue-545-comments.json",
+      "snapshot_commit_claimed_by_report": "49b0713",
+      "resolved_full_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7"
+    },
+    "repair": {
+      "status": "open_upstream_proposal_not_merged",
+      "number": 562,
+      "url": "https://github.com/open-thought/reasoning-gym/pull/562",
+      "title": "Fix NaN values scoring in complex_arithmetic.py",
+      "created_at": "2026-11-01T10:51:19Z",
+      "updated_at": "2026-11-01T10:51:19Z",
+      "state_at_collection": "open",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "head_commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "base_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "head_repository": "mdjanbaz/reasoning-gym",
+      "base_repository": "open-thought/reasoning-gym",
+      "evidence_file": "collection/pr-562.json",
+      "patch_evidence_file": "collection/pr-562-files.json",
+      "api_merge_commit_sha_not_a_merged_fix": "870173c02dd1758286f1d1720d80231ce8124473",
+      "fix_version": null,
+      "fix_version_status": "no_merged_fix_or_release_verified",
+      "comparison_url": "https://github.com/open-thought/reasoning-gym/compare/49b07130b3fcd12f2d064bba7c43869543a0e7e7...758f7fb8e0c732571d3ab6b67f78207f203f3502",
+      "original_source": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+      "original_method_ast_sha256": "8ac7c759cbd399d2008ea8df0a9e83f34abeb1d7b1073f3942a04f525844faaa",
+      "head_method_ast_sha256": "a70582e9c1d6e340fdded89ba493abddeed4b6f22b670fe5ceba476c86dc80ea",
+      "patch_comparison": {
+        "base_snapshot": "pr562_base",
+        "head_snapshot": "pr562",
+        "base_equals_issue_snapshot_byte_for_byte": true,
+        "base_module_sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a",
+        "head_module_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+        "module_unified_diff": "--- pr562_base/reasoning_gym/algebra/complex_arithmetic.py\n+++ pr562/reasoning_gym/algebra/complex_arithmetic.py\n@@ -170,14 +170,18 @@\n         if answer is None:\n             return 0.0\n \n-        metadata = entry[\"metadata\"]\n         try:\n             student_result = self.parse_string_to_complex(answer)\n-            expected_result = complex(*metadata[\"result\"])\n-            # Calculate distance-based score using exponential decay\n+            if student_result is None:\n+                return 0.0\n+\n+            expected_result = complex(*entry[\"metadata\"][\"result\"])\n             distance = abs(student_result - expected_result)\n-            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n-            return score\n+\n+            if not math.isfinite(distance):\n+                return 0.0\n+\n+            return math.exp(-distance)\n \n         except (ValueError, TypeError):\n             return 0.0\n",
+        "reviewed_scope": "Entire module; changes confined to score_answer. Generator and parser unchanged."
+      }
+    },
+    "label": {
+      "kind": "property_scoped_normal_candidate",
+      "property": "nonfinite_complex_submission_must_not_receive_full_reward",
+      "basis": [
+        "upstream_proposed_repair",
+        "source_reviewed"
+      ],
+      "global_cleanliness_claim": false,
+      "validation_status": "pending_root_source_only_reproduction"
+    },
+    "contract": {
+      "short": "Reward finite complex arithmetic answers by exponential distance from the finite reference.",
+      "detailed": "Prompts ask addition, subtraction, multiplication, or division of complex numbers. Operands use bounded integer components, and division is constructed from an integer quotient and nonzero divisor. The generator stores integer real/imaginary result components in metadata. The intended score decreases as exp(-abs(student-reference)); exact finite answers earn 1.0, finite errors earn less than 1.0, and malformed or nonfinite submissions earn 0.0.",
+      "accepted_candidate_domain": "Optional[str]; normalized spaces/lowercase, outer parentheses, i/j notation, pure real/imaginary and two-component complex forms are parsed by parse_string_to_complex. Parser acceptance of nan is not intended mathematical correctness.",
+      "reference_domain": "entry[\"metadata\"][\"result\"] is a pair of finite integer-valued components (tuple upstream, JSON list in fixture); scoring constructs complex(*result).",
+      "required_entry_fields": [
+        "metadata.result"
+      ],
+      "full_reward_threshold": "Finite parsed answer at zero complex-plane distance from the reference (subject to host floating-point evaluation).",
+      "partial_credit": "For finite distance d>0, exp(-d), potentially underflowing to 0.0.",
+      "invalid_input_reward": 0.0,
+      "fixture_basis": "The (3.0,2.0) metadata fixture is the exact upstream unit-test fixture in test_complex_arithmetic_scoring."
+    },
+    "normative_evidence": [
+      {
+        "role": "prompt_templates",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 35,
+        "end_line": 40,
+        "excerpt": "    def __init__(self, config: ComplexArithmeticConfig):\n        self._prompt_templates = {\n            \"+\": \"Add the complex numbers: ({a}) + ({b})\",\n            \"-\": \"Subtract the complex numbers: ({a}) - ({b})\",\n            \"*\": \"Multiply the complex numbers: ({a}) × ({b})\",\n            \"/\": \"Divide the complex numbers: ({a}) ÷ ({b})\",",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L35-L40"
+      },
+      {
+        "role": "finite_integer_reference_generation",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 64,
+        "end_line": 100,
+        "excerpt": "        # Choose random operation\n        op = rng.choices(self.config.operations, weights=self.config.operations_weights, k=1)[0]\n\n        if op == \"/\":\n            # For division, first generate the quotient (a) and divisor (b)\n            # Then calculate the dividend (result) as a * b\n            a = self._generate_complex(rng)  # This will be the final result\n            b = self._generate_complex(rng)\n            while b == 0:  # Ensure non-zero divisor\n                b = self._generate_complex(rng)\n            result = a  # Store the intended result\n            a = result * b  # Calculate dividend to ensure whole number division\n        else:\n            # For other operations, generate numbers normally\n            a = self._generate_complex(rng)\n            b = self._generate_complex(rng)\n\n            # Calculate result\n            if op == \"+\":\n                result = a + b\n            elif op == \"-\":\n                result = a - b\n            else:  # op == \"*\"\n                result = a * b\n\n        question = self._prompt_templates[op].format(a=self._format_complex(a), b=self._format_complex(b))\n\n        return {\n            \"question\": question,\n            \"answer\": self._format_complex(result),\n            \"metadata\": {\n                \"source_dataset\": DATASET_NAME,\n                \"source_index\": idx,\n                \"num1\": (a.real, a.imag),\n                \"num2\": (b.real, b.imag),\n                \"operation\": op,\n                \"result\": (int(result.real), int(result.imag)),  # Convert to int since we ensure whole numbers",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L64-L100"
+      },
+      {
+        "role": "complete_parser_helper",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 111,
+        "end_line": 166,
+        "excerpt": "    @staticmethod\n    def parse_string_to_complex(answer: str) -> complex:\n        if answer is None:\n            return None\n\n        try:\n            # Normalize the answer string by removing spaces and converting to lowercase\n            answer = answer.replace(\" \", \"\").lower()\n\n            # remove brackets\n            while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n                answer = answer[1:-1]\n\n            # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n            answer = answer.replace(\"i\", \"j\")\n\n            # Handle real numbers (no imaginary part)\n            if \"j\" not in answer:\n                return complex(float(answer))\n\n            # Handle pure imaginary numbers\n            if answer == \"j\":\n                return complex(0, 1)\n            if answer == \"-j\":\n                return complex(0, -1)\n\n            # Handle cases like \"7j\" or \"-7j\" (no real part)\n            if (\n                answer.endswith(\"j\")\n                and not any(c in answer[:-1] for c in \"+-\")\n                or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n            ):\n                # Extract coefficient\n                coef = answer[:-1]\n                if coef == \"\":\n                    coef = \"1\"\n                elif coef == \"-\":\n                    coef = \"-1\"\n                return complex(0, float(coef))\n\n            # Handle complex numbers with both parts\n            # Make sure there's a + or - before j if it's not at the beginning\n            if \"j\" in answer and not answer.endswith(\"j\"):\n                return None  # Invalid format like \"3j+2\"\n\n            # Handle cases like \"3+j\" (implicit 1)\n            if \"+j\" in answer:\n                answer = answer.replace(\"+j\", \"+1j\")\n            if \"-j\" in answer:\n                answer = answer.replace(\"-j\", \"-1j\")\n\n            # Parse the normalized string into a complex number\n            return complex(answer)\n\n        except (ValueError, TypeError):\n            return None",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L111-L166"
+      },
+      {
+        "role": "buggy_reward",
+        "snapshot": "issue_snapshot",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/issue_snapshot/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 168,
+        "end_line": 183,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        metadata = entry[\"metadata\"]\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            expected_result = complex(*metadata[\"result\"])\n            # Calculate distance-based score using exponential decay\n            distance = abs(student_result - expected_result)\n            score = min(1.0, math.exp(-distance))  # Add 'import math' at the top\n            return score\n\n        except (ValueError, TypeError):\n            return 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algebra/complex_arithmetic.py#L168-L183"
+      },
+      {
+        "role": "original_exact_partial_invalid_contract",
+        "snapshot": "pr562_base",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "source_file": "upstream/pr562_base/tests/test_complex_arithmetic.py",
+        "start_line": 53,
+        "end_line": 83,
+        "excerpt": "def test_complex_arithmetic_scoring():\n    \"\"\"Test scoring function with various answer formats and accuracies.\"\"\"\n    config = ComplexArithmeticConfig(seed=42)\n    dataset = ComplexArithmeticDataset(config)\n\n    # Test case with answer 3 + 2i\n    entry = {\"metadata\": {\"result\": (3.0, 2.0)}}\n\n    # Test exact matches (should get score of 1.0)\n    assert dataset.score_answer(\"3 + 2i\", entry) == 1.0\n    assert dataset.score_answer(\"3+2i\", entry) == 1.0\n    assert dataset.score_answer(\"3.0 + 2.0i\", entry) == 1.0\n    assert dataset.score_answer(\"((3.0 + 2.0i ) )\", entry) == 1.0\n\n    # Test answers with small errors (should get high but < 1.0 scores)\n    print(dataset.score_answer(\"3.1 + 2i\", entry))\n    assert 0.9 < dataset.score_answer(\"3.1 + 2i\", entry) < 1.0\n    assert 0.9 < dataset.score_answer(\"3 + 2.1i\", entry) < 1.0\n    assert 0.7 < dataset.score_answer(\"3.1 + 2.1i\", entry) < 0.95\n\n    # Test answers with moderate errors (should get medium scores)\n    assert 0.3 < dataset.score_answer(\"4 + 2i\", entry) < 0.4\n    assert 0.3 < dataset.score_answer(\"3 + 3i\", entry) < 0.4\n\n    # Test answers with large errors (should get very low scores)\n    assert dataset.score_answer(\"10 + 10i\", entry) < 0.01\n\n    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/tests/test_complex_arithmetic.py#L53-L83"
+      },
+      {
+        "role": "proposed_nonfinite_rejection_tests",
+        "snapshot": "pr562",
+        "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "source_file": "upstream/pr562/tests/test_complex_arithmetic.py",
+        "start_line": 80,
+        "end_line": 87,
+        "excerpt": "    # Test invalid answers (should get 0.0)\n    assert dataset.score_answer(\"invalid\", entry) == 0.0\n    assert dataset.score_answer(None, entry) == 0.0\n    assert dataset.score_answer(\"inf + 2i\", entry) == 0.0\n    assert dataset.score_answer(\"nan\", entry) == 0.0\n    assert dataset.score_answer(\"1+nanj\", entry) == 0.0\n    assert dataset.score_answer(\"nan+2i\", entry) == 0.0\n    assert dataset.score_answer(\"inf\", entry) == 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/tests/test_complex_arithmetic.py#L80-L87"
+      },
+      {
+        "role": "complete_proposed_repair_method",
+        "snapshot": "pr562",
+        "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+        "source_file": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+        "start_line": 168,
+        "end_line": 187,
+        "excerpt": "    def score_answer(self, answer: Optional[str], entry: dict) -> float:\n        \"\"\"Score the answer using exponential distance-based scoring.\"\"\"\n        if answer is None:\n            return 0.0\n\n        try:\n            student_result = self.parse_string_to_complex(answer)\n            if student_result is None:\n                return 0.0\n\n            expected_result = complex(*entry[\"metadata\"][\"result\"])\n            distance = abs(student_result - expected_result)\n\n            if not math.isfinite(distance):\n                return 0.0\n\n            return math.exp(-distance)\n\n        except (ValueError, TypeError):\n            return 0.0",
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/reasoning_gym/algebra/complex_arithmetic.py#L168-L187"
+      }
+    ],
+    "source_review": {
+      "mechanism": "float(\"nan\") or complex forms containing NaN parse successfully. Subtracting a finite reference and taking abs yields NaN, math.exp(-distance) stays NaN, and min(1.0, NaN) retains its first argument 1.0 under Python comparison behavior. This bypasses mathematical distance semantics.",
+      "pr_patch_scope": "PR562 explicitly rejects a None parser result and any distance failing math.isfinite, then returns math.exp(-distance). The claim is scoped to these NaN/nonfinite probes against finite references.",
+      "admissibility": "Minimal metadata fixture copied from the upstream test; [3,2] is a legal finite arithmetic result, for example (1+i)+(2+i). No task generator was executed.",
+      "current_version_scope": "Only PR562 head758f7fb is checked as an open proposed repair; no merged or release-level fix is claimed."
+    },
+    "counterexamples": [
+      {
+        "id": "nan-real",
+        "candidate_answer": "nan",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_plus_upstream_unit_test_reference",
+          "evidence": "collection/issue-545.json",
+          "report_context": "seed=42,size=5; nan reported to produce [1.0,1.0,1.0,1.0,1.0]",
+          "reference_fixture_source": "upstream/pr562_base/tests/test_complex_arithmetic.py:59",
+          "exact_report_fixture": false
+        },
+        "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+        "reported_or_predicted_base_reward": 1.0,
+        "source_review_predicted_reward": 0.0
+      },
+      {
+        "id": "nan-imaginary",
+        "candidate_answer": "1+nanj",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "official_issue_report_plus_upstream_unit_test_reference",
+          "evidence": "collection/issue-545.json",
+          "report_context": "issue explicitly states partial NaN 1+nanj also scores 1.0",
+          "exact_report_fixture": false
+        },
+        "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+        "reported_or_predicted_base_reward": 1.0,
+        "source_review_predicted_reward": 0.0
+      },
+      {
+        "id": "nan-i-notation",
+        "candidate_answer": "nan+2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "contract_expected_reward": {
+          "equals": 0.0
+        },
+        "actual_observed_reward": null,
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated_by_this_curation": false,
+        "witness_origin": {
+          "kind": "curated_extension_present_in_proposed_upstream_test",
+          "evidence": "upstream/pr562/tests/test_complex_arithmetic.py:86",
+          "reported_original_actual": false
+        },
+        "applies_to_version": "proposed_head_recheck_of_original_counterexample",
+        "reported_or_predicted_base_reward": 1.0,
+        "source_review_predicted_reward": 0.0
+      }
+    ],
+    "normal_controls": [
+      {
+        "id": "exact",
+        "candidate_answer": "3 + 2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "upstream exact-answer test",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "equivalent-parentheses",
+        "candidate_answer": "((3.0 + 2.0i ) )",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 1.0
+        },
+        "purpose": "valid normalization from upstream test",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "finite-partial",
+        "candidate_answer": "4 + 2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "formula": "exp(-1)",
+          "strictly_between": [
+            0.3,
+            0.4
+          ]
+        },
+        "purpose": "legitimate partial credit for one-unit error",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "invalid",
+        "candidate_answer": "invalid",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "parser rejection",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "missing",
+        "candidate_answer": null,
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "missing answer",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "infinity",
+        "candidate_answer": "inf + 2i",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "existing original nonfinite rejection control; parser replaces i in inf as well",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      },
+      {
+        "id": "nonfinite-imaginary",
+        "candidate_answer": "nanj",
+        "entry": {
+          "metadata": {
+            "result": [
+              3.0,
+              2.0
+            ]
+          }
+        },
+        "expected_current_reward": {
+          "equals": 0.0
+        },
+        "purpose": "pure imaginary NaN accepted by parser, rejected by proposed finite-distance guard; source-reviewed only",
+        "execution_status": "pending_root_source_only_reproduction",
+        "validated": false,
+        "expected_basis": "source_review"
+      }
+    ],
+    "extraction": {
+      "strategy": "Extract the exact score_answer AST and the exact static parser helper only; bind helper as staticmethod. Do not execute the module, class body, constructor, or generator.",
+      "necessary_helpers": [
+        {
+          "repository": "open-thought/reasoning-gym",
+          "snapshot": "pr562",
+          "commit": "758f7fb8e0c732571d3ab6b67f78207f203f3502",
+          "tree": "ab0f8007fbde37a3a94b816f1a194e250a958d89",
+          "module": "reasoning_gym.algebra.complex_arithmetic",
+          "class": "ComplexArithmeticDataset",
+          "method": "parse_string_to_complex",
+          "qualified_name": "ComplexArithmeticDataset.parse_string_to_complex",
+          "source_file": "upstream/pr562/reasoning_gym/algebra/complex_arithmetic.py",
+          "source_url": "https://github.com/open-thought/reasoning-gym/blob/758f7fb8e0c732571d3ab6b67f78207f203f3502/reasoning_gym/algebra/complex_arithmetic.py",
+          "source_provenance": "collection/source-provenance/pr562/reasoning_gym/algebra/complex_arithmetic.py.json",
+          "source_file_sha256": "f88c4146dfb1397df9a6d4dd4cfcdb98e5978a5855db8981d9c2759d1dd7425d",
+          "git_blob_sha1": "bb70835c314c9fffa8398ee90ec3a77d8773daf2",
+          "start_line": 111,
+          "end_line": 166,
+          "source_span_sha256": "73a67a9d46aba8164dec7fd2a9b14159694dabbcd7d9923d8d8f960b8a2b017c",
+          "ast_sha256": "60fb21bec557b914f426e8c2d9b0553965f40e2c0af4bd9530b80db4b5dd23c5",
+          "ast_hash_format": "sha256(ast.dump(node, annotate_fields=True, include_attributes=False).encode())",
+          "full_method_source": "    @staticmethod\n    def parse_string_to_complex(answer: str) -> complex:\n        if answer is None:\n            return None\n\n        try:\n            # Normalize the answer string by removing spaces and converting to lowercase\n            answer = answer.replace(\" \", \"\").lower()\n\n            # remove brackets\n            while len(answer) > 1 and answer[0] == \"(\" and answer[-1] == \")\":\n                answer = answer[1:-1]\n\n            # Convert mathematical notation 'i' to Python's 'j' for complex numbers\n            answer = answer.replace(\"i\", \"j\")\n\n            # Handle real numbers (no imaginary part)\n            if \"j\" not in answer:\n                return complex(float(answer))\n\n            # Handle pure imaginary numbers\n            if answer == \"j\":\n                return complex(0, 1)\n            if answer == \"-j\":\n                return complex(0, -1)\n\n            # Handle cases like \"7j\" or \"-7j\" (no real part)\n            if (\n                answer.endswith(\"j\")\n                and not any(c in answer[:-1] for c in \"+-\")\n                or (answer.startswith(\"-\") and not any(c in answer[1:-1] for c in \"+-\"))\n            ):\n                # Extract coefficient\n                coef = answer[:-1]\n                if coef == \"\":\n                    coef = \"1\"\n                elif coef == \"-\":\n                    coef = \"-1\"\n                return complex(0, float(coef))\n\n            # Handle complex numbers with both parts\n            # Make sure there's a + or - before j if it's not at the beginning\n            if \"j\" in answer and not answer.endswith(\"j\"):\n                return None  # Invalid format like \"3j+2\"\n\n            # Handle cases like \"3+j\" (implicit 1)\n            if \"+j\" in answer:\n                answer = answer.replace(\"+j\", \"+1j\")\n            if \"-j\" in answer:\n                answer = answer.replace(\"-j\", \"-1j\")\n\n            # Parse the normalized string into a complex number\n            return complex(answer)\n\n        except (ValueError, TypeError):\n            return None\n",
+          "ast_hash_runtime": {
+            "python_version": "3.14.3",
+            "implementation": "cpython"
+          }
+        }
+      ],
+      "required_self_attributes": [
+        "parse_string_to_complex (staticmethod callable; exact source helper)"
+      ],
+      "required_globals": [
+        "math"
+      ],
+      "required_stdlib_imports": [
+        "import math"
+      ],
+      "builtins_used": [
+        "complex",
+        "abs",
+        "any",
+        "len",
+        "float"
+      ],
+      "annotation_handling": "Drop annotations or use a harness future-annotations preamble; Optional is an annotation only. Preserve staticmethod binding for parser.",
+      "upstream_imports_not_needed": [
+        "cmath",
+        "random",
+        "dataclasses",
+        "coaching",
+        "factory"
+      ],
+      "entry_fixture_type_note": "JSON list [3.0,2.0] is accepted by complex(*components), preserving the upstream tuple values."
+    },
+    "paired_original_record_id": "rg-issue-545-original",
+    "collected_utc": "2026-11-08T07:28:07.749654+00:00"
+  }
+]

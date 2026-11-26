@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-13T02:45:25.303553+00:00",
+  "review_kind": "Independent pre-model scientific and code review",
+  "reviewer": "controlled_pre_model_review native subagent",
+  "authorization": "Proceed to method freeze and six-combination preflight; model requests remain conditional on that preflight passing.",
+  "reviewed_method_files_sha256": {
+    "common.py": "93868bbc26ae19d548b099886acea47fd0f0d14ff61c577a4568eda6b176acda",
+    "data/description-provenance.md": "a433e45c73d92d257b2c0d6f1e1096dee7df01bce880dfffa3b453ed32d53165",
+    "data/labels.json": "ee1a588cd75d68578793bfb6646426957095bae6c28d113654f8f0264e0f4c72",
+    "data/programs.json": "f9641f134c1d1adcfeedc215473dc0b3504ac3e8b2a856ead120bb3ddbb84525",
+    "data/test-cards.json": "b71b5e1e01d7b2280f1c53c1ef8e2baa902aedeae85ed0dde605a99a4538d218",
+    "development/dev-cards.json": "1811d522f5aadad6a58b0909006d30ea9c53fa4ce14b794365ed12ddfee400cb",
+    "development/rule-design.md": "fd3429465321ffb92569f823fba6faf3dd345e7a19d0abe943d69038b96de04d",
+    "manage.py": "e449269f707ebd1f6cb71ca718f6ca142c3015313bdb2fc954704f8bbd111734",
+    "native_worker.py": "e8c39d2ce4b76aa27420165f16cd85438887191e9ecf528f324807bff1385cd5",
+    "protocol/analysis-profile.json": "4f812ece34caddc3b76c940aee9914b7d7bc34e9c73a9c617cd552a08ba81603",
+    "protocol/dependencies.json": "2fe8855c270333fee9cdad021fcab2deeb59bebb8235ecfa1c4bdb2ed56d765e",
+    "protocol/expected.json": "4906f71cdd7b6109ff0fe9e9b51141c0033fd9834bbc0917f61cf3b48fbc57d9",
+    "protocol/probes.json": "2d2d22fa962536c5e0cad5351dcf640b4ba74e8e9cef5546bb1bf5535465e3eb",
+    "protocol/prompt-prefix.txt": "8318a65f893bcce502c0d023a8b770edf7ddd880949b3274ed19b212eeab62c2",
+    "protocol/response-schema.json": "8802b98a6f86dc86fd9dbb11aa32c8a3c8cef91cca2bacaa8e85663d304e38a3",
+    "protocol/study-plan.json": "9c3fc7b2d13d0df5ed08a1c10b26d1c519e749d15e463c5f964b613aa10e22a7",
+    "rule_extractor.py": "a5df99a95000fc402cd703909bba7d92ff78fdfd36e7f8eff0be67ebbee5ab85",
+    "run_study.py": "e12120a476260035347ba6f305ea66a349b3d1dd1d3de54a73fec07a0c334e4c",
+    "tests/test_rule_extractor.py": "2242f867bc585b54b0a2dbbd95e992a956c2d42b4880eed40e3f473b92d38062",
+    "tests/test_study_scoring.py": "70800d8298e9c2e159d52b64fa858933c1e5bc93b1815b83aa6f997c1b238b5d"
+  },
+  "reviewed_method_file_count": 20,
+  "checks": [
+    {
+      "id": "gold_semantics",
+      "passed": true,
+      "detail": "Read every card, rationale, and ambiguity audit. E expressly requires normalized whole-response reference equality; V expressly requires either whole Boolean token while permitting reference disagreement; U positively grants full credit to arbitrary strings/prose. All quoted evidence is an exact substring."
+    },
+    {
+      "id": "balanced_dependent_design",
+      "passed": true,
+      "detail": "Twelve unique descriptions cross four language families with E/V/U once each: four per class. The 24 nonnull cells repeat six semantic/program combinations; the documents forbid iid generalization and new upstream bug claims."
+    },
+    {
+      "id": "semantic_equivalence_and_null",
+      "passed": true,
+      "detail": "E plus V is class E only in evaluation; ordered raw obligations remain unchanged. U is administrative abstention, excluded from binary TN/FP denominators. Invalid output is INVALID, never a successful U."
+    },
+    {
+      "id": "one_sided_matrix",
+      "passed": true,
+      "detail": "The analytical matrix is correct for necessary full-credit implications only. No_alarm does not establish complete reward correctness or rule out under-rewarding. U has no formal binary static label."
+    },
+    {
+      "id": "fixed_rules",
+      "passed": true,
+      "detail": "The rule baseline has substantive reference/correctness, token, scoped-negation, permission, format-only and output-representation rules, six balanced development cards, and documented limitations. No test-ID lookup or deliberately weakened path was found. No held-out predictions were executed in this review."
+    },
+    {
+      "id": "blinded_transport_and_admission",
+      "passed": true,
+      "detail": "Inputs contain description, opaque administrative task ID, empty notes, and fixed profile only. Fresh ephemeral read-only working directory, ignored user configuration, project-doc disabling, exact schema and unchanged event audit reject tool/action traces. Compiler/validator admit or reject without repair; malformed/partial failed outputs stay INVALID."
+    },
+    {
+      "id": "freeze_and_preflight_gates",
+      "passed": true,
+      "detail": "freeze requires this exact reviewed method hash mapping. Preflight runs exactly six standard analyze combinations, checks expected determinate results, source certificates and native counterexamples, preserves failure, and does not auto-fix. Rules and all twelve requests require passed preflight for the same freeze. Single-batch/write-new gates prevent outcome-driven overwrites or retries."
+    },
+    {
+      "id": "native_static_boundary",
+      "passed": true,
+      "detail": "Read exact-source native subprocess wrapper and all analyzer call sites. Native rewards enter only independent evaluation; analyze accepts only source and selected contract, check_witness additionally only candidate/reference. Independent predicate truth is implemented separately from the preserved oracle."
+    },
+    {
+      "id": "gold_witness_attribution",
+      "passed": true,
+      "detail": "Gold V with truthiness is buggy on banana, but an E-only extraction can return False versus True, which does not violate V. certify_global records gold_predicate_violated for every returned witness; supported_correct does not credit that coincidental TP without a returned gold-violating witness. Extra unjustified witnesses are separately counted."
+    },
+    {
+      "id": "fixed_controls",
+      "passed": true,
+      "detail": "fixed_E, fixed_V and fixed_null are explicitly labeled assumed policies, not evidence-qualified extractors. Reference is researcher-assigned. Raw class accuracy, binary outcomes and witness-supported outcomes remain distinct."
+    },
+    {
+      "id": "preservation",
+      "passed": true,
+      "detail": "Read-only hash inspection checked all 47,285 prior snapshot files with zero mismatches; all five dependency pins and two source-origin pins match. The two copied real source definitions match the prior inputs; token-only source matches its frozen unit-test literal. No old files were changed by this reviewer."
+    }
+  ],
+  "open_blockers": [],
+  "resolved_before_freeze": [
+    "Aligned provenance and labels with the opaque administrative ID actually required by the unchanged schema.",
+    "Bound freeze approval to exact current method file hashes.",
+    "Made necessary-full-credit-only scope explicit, including under-rewarding counterexamples.",
+    "Handled failed/rejected partial JSON without aborting evaluation or repairing output; added two infrastructure regression cases."
+  ],
+  "verification": {
+    "reviewer_model_requests": 0,
+    "reviewer_analyzer_calls": 0,
+    "reviewer_scorer_calls": 0,
+    "reviewer_test_runs": 0,
+    "reviewer_imported_new_study_modules": false,
+    "read_only_json_quote_balance_and_hash_inspection": true,
+    "prior_files_checked": 47285,
+    "prior_file_mismatches": [],
+    "dependency_mismatches": [],
+    "frozen_origin_mismatches": [],
+    "copied_source_matches": {
+      "truthiness": true,
+      "equality": true
+    },
+    "owner_test_evidence": {
+      "new_test_cases": 21,
+      "passed": true,
+      "source": "audit/new-tests.json",
+      "sha256": "3c6a31877156c7c3e9f9706907f32e6af69b4d2bf8a4c58e9bb0bf8a986ea79e",
+      "raw_stderr_sha256": "fe81a27bb429d391f887389ca608644f7ba00eb7a5777765b98601a188b6bdf0",
+      "raw_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "note": "Read the owner-produced logs; reviewer did not rerun tests."
+    },
+    "observed_before_freeze_and_results": true
+  },
+  "limits": [
+    "Natural-language labels are a defensible researcher reading, not machine-proved semantic implication or a soundness theorem.",
+    "Documented mutual author blinding is a provenance claim; this independent reviewer intentionally read both descriptions and rules.",
+    "Only twelve authored descriptions, four linguistic families, three source definitions and six nonnull combinations are studied. Do not count repeated cells as independent discoveries.",
+    "The deterministic baseline is bounded and trained on six authored development cards. Results compare these frozen methods on this set, not all rule systems or general language understanding.",
+    "The default model service may not expose exact identity, temperature or seed; transport metadata must preserve that uncertainty.",
+    "Static review does not predict that runtime preflight or model transport will succeed. On preflight failure preserve artifacts and stop; do not tune method or analyzer."
+  ]
+}

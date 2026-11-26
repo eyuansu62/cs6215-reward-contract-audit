@@ -1,0 +1,70 @@
+{
+  "verdict": "no_alarm",
+  "certificate": {
+    "kind": "all_normal_full_credit_paths_certified",
+    "full_credit_path_count": 1,
+    "paths": [
+      {
+        "kind": "palindrome_and_exact_multiset_implication",
+        "argument": "Every full-credit path has equality to the reverse of the normalized candidate and equality of sorted normalized candidate/trusted letters. Both contract requirements follow.",
+        "return_span": {
+          "line": 30,
+          "end_line": 30
+        },
+        "conditions": [
+          {
+            "condition": "answer is None or not isinstance(answer, str)",
+            "required_truth": false,
+            "source_span": {
+              "line": 12,
+              "end_line": 12
+            }
+          },
+          {
+            "condition": "answer is None or not isinstance(answer, str)",
+            "required_truth": true,
+            "source_span": {
+              "line": 12,
+              "end_line": 12
+            }
+          },
+          {
+            "condition": "answer == ''",
+            "required_truth": false,
+            "source_span": {
+              "line": 15,
+              "end_line": 15
+            }
+          },
+          {
+            "condition": "answer != answer[::-1]",
+            "required_truth": false,
+            "source_span": {
+              "line": 23,
+              "end_line": 23
+            }
+          },
+          {
+            "condition": "sorted(answer) != sorted(expected_letters)",
+            "required_truth": false,
+            "source_span": {
+              "line": 27,
+              "end_line": 27
+            }
+          }
+        ]
+      }
+    ],
+    "argument": "All collected normal full-credit returns imply the fixed contract; known partial returns and exceptions are outside the violation."
+  },
+  "evidence": [],
+  "source_spans": [
+    {
+      "line": 30,
+      "end_line": 30
+    }
+  ],
+  "unsupported_reason": null,
+  "method": "bounded-static-source-path-certificates-v1",
+  "wall_seconds": 0.000968
+}

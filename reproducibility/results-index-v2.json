@@ -1,0 +1,889 @@
+{
+  "schema": "reward-contract-final-saved-result-index-v2",
+  "legacy_result_index_preserved": "reproducibility/results-index.json",
+  "A_known_RG_contracts": {
+    "source": "experiments/reward-baselines-v1/results/primary-01/scores.json",
+    "unit": "source-exposed function-version/contract case",
+    "cases": 7,
+    "families": 5,
+    "positive_labels": 3,
+    "negative_labels": 4,
+    "methods": {
+      "semgrep": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "unknown_positive": 0,
+        "unknown_negative": 0,
+        "correct": 7,
+        "total": 7
+      },
+      "symbolic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "unknown_positive": 2,
+        "unknown_negative": 1,
+        "correct": 4,
+        "total": 7
+      }
+    },
+    "neural_method_tested_in_this_stage": false
+  },
+  "A_authored_diagnostics": {
+    "source": "experiments/reward-baselines-v1/results/diagnostic-01/scores.json",
+    "cases": 8,
+    "methods": {
+      "semgrep": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 1,
+        "tn": 2,
+        "unknown_positive": 0,
+        "unknown_negative": 0,
+        "correct": 4,
+        "total": 8
+      },
+      "symbolic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "unknown_positive": 2,
+        "unknown_negative": 2,
+        "correct": 4,
+        "total": 8
+      }
+    },
+    "unit": "authored synthetic diagnostic; separate from real cases and no neural gain claim"
+  },
+  "B_description_pilot": {
+    "source": "experiments/reward-contract-extraction-v1/comparison/summary.json",
+    "tasks": 6,
+    "schema_valid_responses": 6,
+    "strictly_accepted_responses": 5,
+    "field_groups": 60,
+    "keep": 59,
+    "confirmed_substantive_edits": 0,
+    "uncertain": 1,
+    "protocol_evidence_rejected_task": "T05",
+    "supported_projections": 3,
+    "distinct_supported_detector_inputs": 1,
+    "distinct_scorer_bodies": 3,
+    "inherited_scorer_tasks": 4,
+    "changed_downstream_method_verdicts": 0,
+    "human_effort_measured": false,
+    "reference_authorship": "AI-assisted researcher reference"
+  },
+  "C_development_interface": {
+    "sources": [
+      "experiments/reward-contract-loop-v1/results/run-01/summary.json",
+      "experiments/reward-contract-loop-v2/results/run-01/summary.json"
+    ],
+    "bug_families": 1,
+    "versions": 2,
+    "probes": 3,
+    "conditions": 3,
+    "witness_contract_rows": 18,
+    "nonmissing_static_reward_rows": 12,
+    "missing_contract_Unknown_rows": 6,
+    "old_projection_reintroduced_equality": true,
+    "explicit_v2_preserves_omission": true,
+    "experimental_model_turns": 0
+  },
+  "D_known_case_LLM_integration": {
+    "source": "experiments/reward-contract-e2e-v1/results/run-01/summary.json",
+    "task_templates": 1,
+    "experimental_model_turns": 1,
+    "selected_atoms": [
+      "valid_boolean_token",
+      "equals_reference"
+    ],
+    "paired_witness_version_inputs": 6,
+    "condition_rows": 12,
+    "same_verdict_pairs": 6,
+    "same_violated_ID_pairs": 6,
+    "raw_contract_preserved": true,
+    "held_out_bug_evaluation": false
+  },
+  "E_RG_eligibility_audit": {
+    "source": "experiments/reward-boolean-holdout-v1/results/status.json",
+    "candidate_modules": 8,
+    "parsed_source_files": 122,
+    "Dataset_suffix_classes_including_base_composite": 108,
+    "own_score_definitions": 75,
+    "selected_cases": 0,
+    "experiment_started": false,
+    "performance_metrics": null
+  },
+  "F_HELM_policy_transfer": {
+    "source": "experiments/reward-external-boolean-v1/results/run-01/summary.json",
+    "project_count": 1,
+    "task_templates": 1,
+    "related_metric_implementations": 3,
+    "experimental_model_turns": 1,
+    "reference_contract": null,
+    "model_atoms": [
+      "valid_boolean_token",
+      "equals_reference"
+    ],
+    "native_return_rows": 42,
+    "condition_witness_rows": 84,
+    "source_global_counts": {
+      "reference": {
+        "unknown": 3
+      },
+      "llm": {
+        "unknown": 3
+      }
+    },
+    "Semgrep_counts": {
+      "no_alarm": 3
+    },
+    "per_metric_native_counts": {
+      "H01": {
+        "native_return_rows": 14,
+        "full_rewards": 2,
+        "conditional_policy_incompatibilities": 0,
+        "probe_ids": []
+      },
+      "H02": {
+        "native_return_rows": 14,
+        "full_rewards": 6,
+        "conditional_policy_incompatibilities": 4,
+        "probe_ids": [
+          "true-article",
+          "true-punctuation",
+          "false-article",
+          "false-punctuation"
+        ]
+      },
+      "H03": {
+        "native_return_rows": 14,
+        "full_rewards": 6,
+        "conditional_policy_incompatibilities": 4,
+        "probe_ids": [
+          "true-suffix",
+          "true-punctuation",
+          "false-suffix",
+          "false-punctuation"
+        ]
+      }
+    },
+    "conditional_policy_incompatibilities": 8,
+    "eligible_reference_model_pairs": 0,
+    "quality_metrics": null,
+    "qualification": "Native interface probes, not actual CivilComments examples. Intentional normalization/prefix leniency is not an adjudicated upstream bug. Reference abstention is not a negative contract label."
+  },
+  "G_controlled_contract_selection": {
+    "source": "experiments/reward-contract-controlled-v1/results/comparison/summary.json",
+    "unit": "Researcher-authored synthetic policy-control description; repeated source/policy cells are dependent",
+    "description_cards": 12,
+    "linguistic_families": 4,
+    "class_balance": {
+      "E": 4,
+      "U": 4,
+      "V": 4
+    },
+    "known_source_definitions": 3,
+    "unique_nonnull_policy_source_combinations": 6,
+    "semantic_cells_per_condition": 24,
+    "administrative_U_cells_per_condition": 12,
+    "U_is_binary_true_negative": false,
+    "conditions": {
+      "reference": {
+        "semantic_cells": 24,
+        "binary_confusion": {
+          "TP": 12,
+          "FP": 0,
+          "FN": 0,
+          "TN": 12,
+          "Unknown": 0
+        },
+        "binary_correct_cells": 24,
+        "binary_accuracy": 1.0,
+        "binary_coverage": 1.0,
+        "witness_validated_alarms": 12,
+        "unjustified_alarm_witnesses": 0,
+        "alarm_cells_without_gold_violating_returned_witness": 0,
+        "witness_supported_correct_cells": 24,
+        "administrative_U": {
+          "cells": 12,
+          "valid_abstentions": 12,
+          "invalid_outputs": 0,
+          "unjustified_contracts": 0,
+          "unjustified_alarms": 0,
+          "included_in_binary_denominator": false
+        },
+        "contract_class_confusion": {
+          "E": {
+            "E": 4,
+            "V": 0,
+            "U": 0,
+            "INVALID": 0
+          },
+          "V": {
+            "E": 0,
+            "V": 4,
+            "U": 0,
+            "INVALID": 0
+          },
+          "U": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          }
+        },
+        "contract_class_correct_cards": 12,
+        "contract_class_denominator": 12,
+        "correct_global_vectors_nonnull_cards": 8,
+        "correct_global_vectors_nonnull_denominator": 8,
+        "witness_supported_correct_vectors_nonnull_cards": 8,
+        "fully_correct_cards_with_U_administration": 12
+      },
+      "rules": {
+        "semantic_cells": 24,
+        "binary_confusion": {
+          "TP": 2,
+          "FP": 0,
+          "FN": 0,
+          "TN": 1,
+          "Unknown": 21
+        },
+        "binary_correct_cells": 3,
+        "binary_accuracy": 0.125,
+        "binary_coverage": 0.125,
+        "witness_validated_alarms": 2,
+        "unjustified_alarm_witnesses": 0,
+        "alarm_cells_without_gold_violating_returned_witness": 0,
+        "witness_supported_correct_cells": 3,
+        "administrative_U": {
+          "cells": 12,
+          "valid_abstentions": 12,
+          "invalid_outputs": 0,
+          "unjustified_contracts": 0,
+          "unjustified_alarms": 0,
+          "included_in_binary_denominator": false
+        },
+        "contract_class_confusion": {
+          "E": {
+            "E": 1,
+            "V": 0,
+            "U": 3,
+            "INVALID": 0
+          },
+          "V": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          },
+          "U": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          }
+        },
+        "contract_class_correct_cards": 5,
+        "contract_class_denominator": 12,
+        "correct_global_vectors_nonnull_cards": 1,
+        "correct_global_vectors_nonnull_denominator": 8,
+        "witness_supported_correct_vectors_nonnull_cards": 1,
+        "fully_correct_cards_with_U_administration": 5
+      },
+      "llm": {
+        "semantic_cells": 24,
+        "binary_confusion": {
+          "TP": 12,
+          "FP": 0,
+          "FN": 0,
+          "TN": 12,
+          "Unknown": 0
+        },
+        "binary_correct_cells": 24,
+        "binary_accuracy": 1.0,
+        "binary_coverage": 1.0,
+        "witness_validated_alarms": 12,
+        "unjustified_alarm_witnesses": 0,
+        "alarm_cells_without_gold_violating_returned_witness": 0,
+        "witness_supported_correct_cells": 24,
+        "administrative_U": {
+          "cells": 12,
+          "valid_abstentions": 12,
+          "invalid_outputs": 0,
+          "unjustified_contracts": 0,
+          "unjustified_alarms": 0,
+          "included_in_binary_denominator": false
+        },
+        "contract_class_confusion": {
+          "E": {
+            "E": 4,
+            "V": 0,
+            "U": 0,
+            "INVALID": 0
+          },
+          "V": {
+            "E": 0,
+            "V": 4,
+            "U": 0,
+            "INVALID": 0
+          },
+          "U": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          }
+        },
+        "contract_class_correct_cards": 12,
+        "contract_class_denominator": 12,
+        "correct_global_vectors_nonnull_cards": 8,
+        "correct_global_vectors_nonnull_denominator": 8,
+        "witness_supported_correct_vectors_nonnull_cards": 8,
+        "fully_correct_cards_with_U_administration": 12
+      },
+      "fixed_E": {
+        "semantic_cells": 24,
+        "binary_confusion": {
+          "TP": 12,
+          "FP": 4,
+          "FN": 0,
+          "TN": 8,
+          "Unknown": 0
+        },
+        "binary_correct_cells": 20,
+        "binary_accuracy": 0.8333333333333334,
+        "binary_coverage": 1.0,
+        "witness_validated_alarms": 8,
+        "unjustified_alarm_witnesses": 8,
+        "alarm_cells_without_gold_violating_returned_witness": 8,
+        "witness_supported_correct_cells": 16,
+        "administrative_U": {
+          "cells": 12,
+          "valid_abstentions": 0,
+          "invalid_outputs": 0,
+          "unjustified_contracts": 12,
+          "unjustified_alarms": 8,
+          "included_in_binary_denominator": false
+        },
+        "contract_class_confusion": {
+          "E": {
+            "E": 4,
+            "V": 0,
+            "U": 0,
+            "INVALID": 0
+          },
+          "V": {
+            "E": 4,
+            "V": 0,
+            "U": 0,
+            "INVALID": 0
+          },
+          "U": {
+            "E": 4,
+            "V": 0,
+            "U": 0,
+            "INVALID": 0
+          }
+        },
+        "contract_class_correct_cards": 4,
+        "contract_class_denominator": 12,
+        "correct_global_vectors_nonnull_cards": 4,
+        "correct_global_vectors_nonnull_denominator": 8,
+        "witness_supported_correct_vectors_nonnull_cards": 4,
+        "fully_correct_cards_with_U_administration": 4
+      },
+      "fixed_V": {
+        "semantic_cells": 24,
+        "binary_confusion": {
+          "TP": 8,
+          "FP": 0,
+          "FN": 4,
+          "TN": 12,
+          "Unknown": 0
+        },
+        "binary_correct_cells": 20,
+        "binary_accuracy": 0.8333333333333334,
+        "binary_coverage": 1.0,
+        "witness_validated_alarms": 8,
+        "unjustified_alarm_witnesses": 0,
+        "alarm_cells_without_gold_violating_returned_witness": 0,
+        "witness_supported_correct_cells": 20,
+        "administrative_U": {
+          "cells": 12,
+          "valid_abstentions": 0,
+          "invalid_outputs": 0,
+          "unjustified_contracts": 12,
+          "unjustified_alarms": 4,
+          "included_in_binary_denominator": false
+        },
+        "contract_class_confusion": {
+          "E": {
+            "E": 0,
+            "V": 4,
+            "U": 0,
+            "INVALID": 0
+          },
+          "V": {
+            "E": 0,
+            "V": 4,
+            "U": 0,
+            "INVALID": 0
+          },
+          "U": {
+            "E": 0,
+            "V": 4,
+            "U": 0,
+            "INVALID": 0
+          }
+        },
+        "contract_class_correct_cards": 4,
+        "contract_class_denominator": 12,
+        "correct_global_vectors_nonnull_cards": 4,
+        "correct_global_vectors_nonnull_denominator": 8,
+        "witness_supported_correct_vectors_nonnull_cards": 4,
+        "fully_correct_cards_with_U_administration": 4
+      },
+      "fixed_null": {
+        "semantic_cells": 24,
+        "binary_confusion": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "Unknown": 24
+        },
+        "binary_correct_cells": 0,
+        "binary_accuracy": 0.0,
+        "binary_coverage": 0.0,
+        "witness_validated_alarms": 0,
+        "unjustified_alarm_witnesses": 0,
+        "alarm_cells_without_gold_violating_returned_witness": 0,
+        "witness_supported_correct_cells": 0,
+        "administrative_U": {
+          "cells": 12,
+          "valid_abstentions": 12,
+          "invalid_outputs": 0,
+          "unjustified_contracts": 0,
+          "unjustified_alarms": 0,
+          "included_in_binary_denominator": false
+        },
+        "contract_class_confusion": {
+          "E": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          },
+          "V": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          },
+          "U": {
+            "E": 0,
+            "V": 0,
+            "U": 4,
+            "INVALID": 0
+          }
+        },
+        "contract_class_correct_cards": 4,
+        "contract_class_denominator": 12,
+        "correct_global_vectors_nonnull_cards": 0,
+        "correct_global_vectors_nonnull_denominator": 8,
+        "witness_supported_correct_vectors_nonnull_cards": 0,
+        "fully_correct_cards_with_U_administration": 4
+      }
+    },
+    "llm_vs_rules_nonnull_counts": {
+      "win": 21,
+      "tie": 3
+    },
+    "llm_vs_rules_U_administrative_counts": {
+      "tie": 12
+    },
+    "wins_resolving_rule_abstention": 21,
+    "wins_correcting_wrong_determinate_rule_verdict": 0,
+    "resolved_abstentions": {
+      "gold_witness_supported_alarms": 10,
+      "no_alarm_certificates": 11
+    },
+    "fixed_E_binary_TP_without_gold_violating_returned_witness": 4,
+    "method_prompt_rules_labels_frozen_before_preflight_and_requests": true,
+    "passed_preflight_combinations": 6,
+    "analyzer_unchanged": true,
+    "experimental_model_turns": 12,
+    "historical_comparison_analyzer_calls": 216,
+    "historical_comparison_native_executions": 28,
+    "historical_comparison_witness_rows": 336,
+    "new_real_bug_or_generalization_claim": false,
+    "human_effort_measured": false,
+    "qualification": "This positive controlled contrast concerns contract selection and abstention resolution against one frozen rule extractor. It does not overturn the negative/inconclusive real-code stages, establish performance against all rule systems, prove soundness or natural-language entailment, or show human-time savings or RL training improvement."
+  },
+  "resources": {
+    "completed_experimental_model_turns": 20,
+    "input_tokens": 509481,
+    "output_tokens": 3821,
+    "cached_input_tokens": 101376,
+    "cache_write_input_tokens": 0,
+    "reasoning_output_tokens": 55,
+    "sum_request_wall_seconds": 157.6007,
+    "subtotals": {
+      "A-F": {
+        "completed_experimental_model_turns": 8,
+        "input_tokens": 205819,
+        "output_tokens": 1987,
+        "cached_input_tokens": 18048,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 55,
+        "sum_request_wall_seconds": 72.743
+      },
+      "G": {
+        "completed_experimental_model_turns": 12,
+        "input_tokens": 303662,
+        "output_tokens": 1834,
+        "cached_input_tokens": 83328,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "sum_request_wall_seconds": 84.8577
+      }
+    },
+    "controlled_parallel_batch_elapsed_seconds": 32.8394,
+    "controlled_batch_parallelism": 3,
+    "pre_model_initialization_failures_not_counted": 1,
+    "exact_model_identity_known": false,
+    "requests_with_unknown_model_identity": 20,
+    "temperature_and_seed": "not controlled/reported",
+    "cached_input_is_subset_of_input": true,
+    "reasoning_output_tokens_recorded_separately_not_added_to_output": true,
+    "scope": "Experimental completed-request subtotal only, including one evidence-rejected pilot response. Excludes earlier v10 and ideation, source research, coding, review and writing AI use. Service context is included in input usage. Request seconds are summed latency, not human effort, billing, or project elapsed time.",
+    "requests": [
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T01/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 26288,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 322,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 11.2492,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T02/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24322,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 253,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 9.443,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T03/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 26314,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 266,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 9.5875,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T04/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24272,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 180,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.4208,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T05/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "failed",
+        "usage": {
+          "input_tokens": 26344,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 365,
+          "reasoning_output_tokens": 55
+        },
+        "wall_seconds": 11.347,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T06/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24264,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 218,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.9322,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-contract-e2e-v1/results/extraction-01/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 27044,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 197,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.4625,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "A-F",
+        "metadata": "experiments/reward-external-boolean-v1/results/extraction-01/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 26971,
+          "cached_input_tokens": 18048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 186,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 8.3008,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P17/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24672,
+          "cached_input_tokens": 15488,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 151,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.388,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P23/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "abstained",
+        "usage": {
+          "input_tokens": 24465,
+          "cached_input_tokens": 12288,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 64,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 3.9282,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P28/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 27271,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 210,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 8.2242,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P35/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 27265,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 145,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.6193,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P42/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24672,
+          "cached_input_tokens": 12288,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 225,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.8518,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P46/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24673,
+          "cached_input_tokens": 15488,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 226,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.6996,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P59/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "abstained",
+        "usage": {
+          "input_tokens": 24680,
+          "cached_input_tokens": 12288,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 83,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 6.4618,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P62/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "abstained",
+        "usage": {
+          "input_tokens": 24671,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 95,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 5.5517,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P73/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "abstained",
+        "usage": {
+          "input_tokens": 24673,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 98,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 5.3934,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P84/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24679,
+          "cached_input_tokens": 15488,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 197,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 10.1986,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P91/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 27268,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 164,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.5947,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "stage": "G",
+        "metadata": "experiments/reward-contract-controlled-v1/results/extraction/P96/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24673,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 176,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 6.9464,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      }
+    ]
+  },
+  "scope": "A-F retain their original evidence and limitations. G is an already-completed controlled description study on known source semantics. Never pool independent cases, correlated variants, probes, cards, cells, fields, replays or tests. No new experiments were performed during final integration."
+}

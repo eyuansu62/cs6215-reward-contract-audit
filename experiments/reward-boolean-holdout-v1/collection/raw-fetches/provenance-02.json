@@ -1,0 +1,20 @@
+[
+  {
+    "path": "reasoning_gym/logic/aiw.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/logic/aiw.py",
+    "retrieved_utc": "2026-11-09T02:23:24.870829+00:00",
+    "bytes": 9841,
+    "sha256": "2c51c0ed6e89251f1e375023b336a43c8ea04a6f6ce34a6b5b608082104f3e4e",
+    "saved_path": "sealed-upstream/reasoning_gym/logic/aiw.py",
+    "transport": "public raw GitHub host read"
+  },
+  {
+    "path": "reasoning_gym/algorithmic/binary_alternation.py",
+    "url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/binary_alternation.py",
+    "retrieved_utc": "2026-11-09T02:23:25.215482+00:00",
+    "bytes": 4973,
+    "sha256": "84cfba9930234cfe989c83a02533df1428d77e397dcd6d6b4c930ab482280464",
+    "saved_path": "sealed-upstream/reasoning_gym/algorithmic/binary_alternation.py",
+    "transport": "public raw GitHub host read"
+  }
+]

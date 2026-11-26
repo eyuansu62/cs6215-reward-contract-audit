@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "previous_manifested_payloads_unchanged": 3116,
+  "archive_sha256": {
+    "experiments/reward-boolean-holdout-v1.zip": "ad74c4b3c75f67e39aac42a66c9121650c41eb3cddbdeb60b97956ebce8ecf85",
+    "experiments/reward-contract-e2e-v1.zip": "2b95123837b60e95c65d35bc798d6d389fa4729d3a1fbc00a132029adc74f57b",
+    "experiments/reward-contract-loop-v2.zip": "e42c983d75d820ceae49f6068605d642ac27c7bbc099ba5826907ff28f5335f4",
+    "experiments/reward-contract-extraction-v1.zip": "a3832dd0f80e26e9027e00990a6dbb830fae33f5a6264955de1af899ba400f1f",
+    "experiments/reward-baselines-v1.zip": "8cc39df03a1702245edc96f6576db7f76d59e955613dcc825a7d94490b51b17d",
+    "datasets/reasoning-gym-reward-v1.zip": "35d974538ac87f7bb7419512632dd9d97ffed2387dc474c84f1901b07841d880",
+    "outputs/main-experiment-v10.zip": "1ec556817897134f2c9f46f53ef9771caf251ef2394998c604aa00f9a391ed32"
+  },
+  "old_core_source_and_IR_preserved": true,
+  "old_and_new_preflight_freezes_retained": true
+}

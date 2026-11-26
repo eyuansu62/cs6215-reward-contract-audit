@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-08T15:22:08.062515+00:00",
+  "files_sha256": {
+    "tools/downstream.py": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6",
+    "tools/test_downstream.py": "7b6d2ea84ecc8716405c47de83d1e38f38a39c5337f63a5b6f0ed44efc5969f9",
+    "protocol/design.json": "e62b0cd6658b304708faad3b12307a899b33b1965367763de833ba098d903ba1"
+  },
+  "preserved_baseline_method_sha256": "0925274a7d4b18780fabc611d75c03e0dc9066ef426781ca1a85a2b33edeb1de",
+  "frozen_before_native_source_inspection_and_downstream_runs": true,
+  "analyzer_changes": false
+}

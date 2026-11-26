@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-11-08T15:36:34.806385+00:00",
+  "future_exclusion": "All six task descriptions, complete selected raw modules, default inherited scorer, source-derived helpers/generators, reference contracts and model outputs are now exposed; do not call them held-out in later experiments.",
+  "task_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06"
+  ],
+  "raw_source_files": [
+    "collection/sealed-upstream/reasoning_gym/algorithmic/count_primes.py",
+    "collection/sealed-upstream/reasoning_gym/algorithmic/isomorphic_strings.py",
+    "collection/sealed-upstream/reasoning_gym/algorithmic/number_sorting.py",
+    "collection/sealed-upstream/reasoning_gym/algorithmic/ransom_note.py",
+    "collection/sealed-upstream/reasoning_gym/arithmetic/fraction_simplification.py",
+    "collection/sealed-upstream/reasoning_gym/graphs/course_schedule.py"
+  ],
+  "source_provenance": "collection/source-unit-provenance.json",
+  "prior_filename_exposure": true,
+  "pretrained_novelty_not_established": true,
+  "fresh_description_templates_not_six_novel_scorers": true,
+  "distinct_native_scorer_bodies": 3,
+  "supported_distinct_detector_inputs": 1
+}

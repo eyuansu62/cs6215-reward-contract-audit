@@ -1,0 +1,22 @@
+{
+  "matrix": {
+    "E": {
+      "equality": "no_alarm",
+      "token_only": "alarm",
+      "truthiness": "alarm"
+    },
+    "V": {
+      "equality": "no_alarm",
+      "token_only": "no_alarm",
+      "truthiness": "alarm"
+    }
+  },
+  "derivation": {
+    "equality": "Every full return is guarded by native normalized reference equality, which entails E and V under the supplied canonical reference assumption.",
+    "token_only": "Every full return has exact True or False, proving V. Candidate False with reference True reaches full return and violates E.",
+    "truthiness": "Candidate False with reference True reaches full return and violates E; candidate banana with reference True reaches full return and violates V."
+  },
+  "U_policy": "No justified expressible obligation. null is an administrative abstention; it has no binary static bug label and never counts as TN.",
+  "origin": "Analytical predictions from the three inspected source definitions and designed formal policies; not analyzer-generated labels. Native probes can validate witnesses but cannot prove safety.",
+  "one_sided_scope": "Only necessary full-credit implications, not biconditional reward correctness. Equality under V and token_only under normalized format may under-reward valid submissions, which is outside this audit."
+}

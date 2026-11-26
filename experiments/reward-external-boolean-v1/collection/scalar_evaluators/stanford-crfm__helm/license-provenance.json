@@ -1,0 +1,6 @@
+{
+  "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/LICENSE",
+  "commit": "63754d05db6f874e41a395880fb573890a13e791",
+  "sha256": "6c989acbb367e521d0da7ff86484f7004d16d511aae0eee9c4e029801b1a4fae",
+  "purpose": "Preserve upstream attribution/license with exact source copies; no experimental source/method change"
+}

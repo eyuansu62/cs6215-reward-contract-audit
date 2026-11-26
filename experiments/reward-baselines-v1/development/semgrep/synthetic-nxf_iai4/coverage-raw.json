@@ -1,0 +1,15 @@
+{
+  "version": "1.183.0",
+  "results": [],
+  "paths": {
+    "scanned": [
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/development/semgrep/synthetic-nxf_iai4/source.py"
+    ]
+  },
+  "errors": [
+    {
+      "type": "PartialParsing",
+      "message": "synthetic engine error"
+    }
+  ]
+}

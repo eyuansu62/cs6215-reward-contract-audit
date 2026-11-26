@@ -1,0 +1,9 @@
+{
+  "task_id": "T03",
+  "question_description": "There are a total of {num_courses} courses you have to take, labeled from 0 to {last_index}.\n\nYou are given the following list of prerequisites, where prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i:\n{prerequisites}\n\nReturn True if you can finish all courses considering the prerequisites, or False otherwise.\n",
+  "placeholder_notes": {
+    "num_courses": "instance-specific total number of courses",
+    "last_index": "num_courses - 1",
+    "prerequisites": "instance-specific list of course-index prerequisite pairs"
+  }
+}

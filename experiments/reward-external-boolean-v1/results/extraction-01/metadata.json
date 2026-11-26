@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "method_freeze_sha256": "45e4c5359710e3dafcf893982c4f9ec147d57eb684ca1b5ba9d47be85b3f2f8a",
+  "request_attempted": true,
+  "successful_model_turns": 1,
+  "prompt_sha256": "8f1797c791b8efae878fca8e2e92c490fe160f0cc3f56ca8e8d266cc170d455b",
+  "source_policy_reference_contract_and_probes_excluded": true,
+  "no_obligations_added_or_repaired": true,
+  "cli_version": "codex-cli 0.147.0",
+  "wall_seconds": 8.3008,
+  "returncode": 0,
+  "model_reported": null,
+  "usage": {
+    "input_tokens": 26971,
+    "cached_input_tokens": 18048,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 186,
+    "reasoning_output_tokens": 0
+  },
+  "event_count": 4,
+  "accepted_tool_actions": 0,
+  "response_sha256": "cafc00a6d0728d9ad1a1bd34810a467aaf1b374b94d5f8f7b5134c76318c1af2",
+  "selected_obligations": [
+    "valid_boolean_token",
+    "equals_reference"
+  ]
+}

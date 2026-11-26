@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-11-08T16:04:48.941253+00:00",
+  "passed": true,
+  "stage": "final_results_and_documentation_pass",
+  "results_review_pending": false,
+  "reviewer": "Independent Codex native subagent; AI-assisted source/design review, not human annotation",
+  "blocking_findings": [],
+  "scope": {
+    "bug_families": 1,
+    "source_versions": 2,
+    "primary_witness": "counterexamples/opposite-false",
+    "additional_known_controls": [
+      "counterexamples/nonboolean-banana",
+      "normal_controls/exact-true"
+    ],
+    "source_exposed_development": true,
+    "new_LLM_calls": false,
+    "analyzer_edits": false
+  },
+  "checks": {
+    "real_issue_and_pinned_proposed_repair": true,
+    "archived_replay_records_support_primary_rewards_1_and_0": true,
+    "weak_contract_is_exactly_one_obligation_deletion": true,
+    "witness_expectations_keep_missing_policy_separate": true,
+    "banana_weak_contract_bug_is_explicit": true,
+    "whole_source_same_alarm_not_used_alone_as_interface_failure": true,
+    "projection_identity_reintroduced_equality_is_the_decisive_interface_test": true,
+    "new_oracle_is_concrete_evaluation_not_static_analyzer": true,
+    "no_upstream_import_constructor_generator_or_model_in_runner": true
+  },
+  "expected_primary_witness": {
+    "original_reward": 1.0,
+    "proposed_repair_reward": 0.0,
+    "correct_original": "full_credit_violation",
+    "weak_original": "no_violation_for_this_witness",
+    "missing_both": "unknown_missing_spec by declared input policy",
+    "correct_and_weak_repair": "no_violation_for_this_witness"
+  },
+  "interface_assessment": "Frozen bridge dispatches on status/kind/tokens/canonical-reference flag and loads full C_BOOLEAN_FULL, ignoring free-text full_credit_requirements. It can represent correct CF1 and missing status, but not faithfully preserve deletion of reference equality. Identical global alarms are independently inconclusive because banana still violates validity-only contract.",
+  "precision_notes": [
+    "Missing-spec Unknown is administrative even when reward0; reward<1 independently excludes full-credit violation for that returned value. Documentation should not call that arithmetic fact unknown.",
+    "Unknown on absent contract is wrapper policy, not native Semgrep syntax-rule incapability.",
+    "Correct contract is the scoped one-sided full-credit necessary condition, not a complete task/reward correctness proof.",
+    "PR561 status is frozen-snapshot proposed repair, not a current merged-release claim.",
+    "Ablated contracts are authored controls, not observed LLM extraction failures."
+  ],
+  "reviewed_files_sha256": {
+    "case.json": "3e3a651a5f7b67750c78e95ba03be7de4c23d8f4f292399fb22e1e80cc577eb6",
+    "contracts.json": "036cca877a952421590d4b5a72835fc1f631267a50a515d85645164c0f07ec1d",
+    "expected.json": "e7383842c01cc1cbcf273f4d459f05958da943cee12bfe985bbf10a84282f663",
+    "inputs.json": "15ad8ec1bea5ca36126fe207ebf90b666053a9e2c6d501c6e441ab6a3b945c04",
+    "archived-observations.json": "db7fe7043d672cbecc5f4fa79035386823ba76bb796618ecb2bd3ccd391c86fa",
+    "run_case.py": "25603e0e702285f98c938c89985787f6565fd03e03465f76c937bcc0ec159ff4",
+    "test_case.py": "c2751aa847a6e721b3f4a066ddb7787de23498c7cd8dc3956f85feb8e6c94893",
+    "method-freeze.json": "b348f4aaf047c23f2e864aea540329a50f63b3d920bc499533c8fb694b6c35c9",
+    "REPORT.md": "dc7d94d9c4cea9c603553ec623182e087017503e920f0e9ddf1c5aa423691bd1",
+    "README.md": "a3e2258cbaea1640d36fbee36e87b7fffe0a64b1e8adb22597acc5c31db51019",
+    "results/run-01/summary.json": "e32b013f02fd62365a9a051f1de3177acacb33a99854b4079444f8870c0bee08",
+    "results/run-01/observations.json": "0c853b9c5963424edf49ae2fbdc4a79648e416b03f9ba452819b1cff8fcf8c51",
+    "results/run-01/bridge-correct/predictions.json": "b8bb40cbb81be3397165e67043dac68b97628304289200cbcc91d2e85fbe69fb",
+    "results/run-01/bridge-missing/predictions.json": "cf0172001b81b6f525f8daa59cfdd5066bb53d59a1f1cbf82c107bf15816f5e6",
+    "results/run-01/bridge-omitted_equality/predictions.json": "9896eb821e0323fba16a1c7d8bc349e9194dad38456657eace702dfe76cf0a01",
+    "results/interface-conclusion.json": "ce773dc6f1e065987575a02048ce2ca8a52045bbadaa029358d744ad589de1ae"
+  },
+  "actions": {
+    "subject_code_executed_by_reviewer": false,
+    "new_model_calls": false,
+    "new_network": false,
+    "frozen_files_modified": false
+  },
+  "pre_run_review_created_utc": "2026-11-08T15:59:08.219559+00:00",
+  "actual_results": {
+    "current_guarded_source_executions_reviewed": 6,
+    "current_returns_equal_archived_observations": true,
+    "concrete_oracle_rows_independently_recomputed": 18,
+    "module_hashes_verified": 2,
+    "exact_scorer_AST_hashes_verified": 2,
+    "frozen_method_bridge_worker_baseline_hashes_match": true,
+    "completed_semgrep_scans": 4,
+    "version_pattern_coverage_commands_verified": 12,
+    "source_rule_binary_bytes_verified": true,
+    "raw_json_matches_stdout": true,
+    "parse_errors_timeouts_skipped_rules_or_unexpected_errors": 0,
+    "all_declared_function_and_return_spans_covered": true,
+    "whole_source_per_method": {
+      "correct": {
+        "original": "alarm",
+        "proposed_repair": "no_alarm"
+      },
+      "missing": {
+        "original": "unknown",
+        "proposed_repair": "unknown"
+      },
+      "omitted_equality": {
+        "original": "alarm",
+        "proposed_repair": "no_alarm"
+      }
+    },
+    "correct_and_omitted_detector_input_hashes_identical_for_each_source": true,
+    "compiled_equality_reintroduced_in_both_omitted_inputs": true,
+    "faithful_three_contract_static_loop_supported": false,
+    "independent_synthetic_oracle_tests_passed": 3,
+    "new_model_or_subject_execution_by_reviewer": false
+  },
+  "documentation_claim_scan": {
+    "passed": true,
+    "scoped_witness_and_whole_function_distinction": true,
+    "banana_global_alarm_confound_explicit": true,
+    "missing_spec_zero_reward_policy_precision": true,
+    "only_proposed_repair_snapshot_claimed": true,
+    "no_neural_gain_or_heldout_claim": true,
+    "Codex_assisted_authorship_disclosed": true,
+    "no_analyzer_bridge_or_rule_changes_claimed_and_hashes_match": true,
+    "future_interface_requirements_marked_unimplemented": true
+  },
+  "limits": [
+    "One known exposed development bug family, not independent evaluation.",
+    "Weak-spec nonviolation applies only to fixed opposite-token witness; banana still violates the weak token-validity condition.",
+    "Equal whole-source alarms alone do not diagnose interface fidelity; the reintroduced compiled obligation and matching input bytes do.",
+    "Missing-spec Unknown is wrapper policy, not inability of native Semgrep syntax rules; reward0 is certainly not a full-credit event.",
+    "Concrete oracle is a test-evaluation rule, not new static-analysis capability or neural contribution.",
+    "PR561 is a proposed repair in a frozen snapshot; no current merge/release claim.",
+    "Review and authored ablations are AI-assisted, not real human-effort measurements.",
+    "Actual source execution was done by the root harness via existing worker; reviewer only inspected records."
+  ]
+}

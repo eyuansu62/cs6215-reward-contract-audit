@@ -1,0 +1,2936 @@
+{
+  "created_utc": "2026-11-09T02:27:22.075028+00:00",
+  "purpose": "Answer-field structural trace to supplement text-hint pass, not runtime type inference or proof. No functions executed.",
+  "records": [
+    {
+      "path": "reasoning_gym/algebra/complex_arithmetic.py",
+      "class": "ComplexArithmeticDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "self._format_complex(result)",
+          "span": [
+            93,
+            93
+          ],
+          "self_producer": {
+            "name": "_format_complex",
+            "return_annotation": "str",
+            "return_expressions": [
+              "f'{real:.2f}'",
+              "f'{imag:.2f}i'",
+              "f'{real} {sign} {abs(imag)}i'"
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4d9b87e2c4893443ee1ad04b5146dff420ab34c4ff1b1a67de09dcbf9accd070",
+        "alpha_lexical_local_sha256": "8b2bdaaf6aa69db1a6702e74297965f7cb0ada58bb65ce5e23ba0cedbd0b8d50",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algebra/intermediate_integration.py",
+      "class": "IntermediateIntegrationDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            238,
+            238
+          ],
+          "assignments": [
+            {
+              "expression": "str(answer) + ' + C'",
+              "span": [
+                233,
+                233
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4eef75997f501dc75d6eac829dcebc75c90f150b012ed9db9e435d9a347a1e5b",
+        "alpha_lexical_local_sha256": "3657e90d74ffcd1b3bd26cb6c1af9d1e79ea5506eec4a2d8027e8d206a4b0aab",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algebra/polynomial_equations.py",
+      "class": "PolynomialEquationsDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            123,
+            123
+          ],
+          "assignments": [
+            {
+              "expression": "', '.join((str(x) for x in real_solutions))",
+              "span": [
+                115,
+                115
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "5208c760b42841172daad718d1013a9cda36bd024004b2e298c79f654e6d685a",
+        "alpha_lexical_local_sha256": "91d91f0867f5c807846e21a7a6ac1cd9e1e2c7a193e975bcf27463275f5da84f",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algebra/polynomial_multiplication.py",
+      "class": "PolynomialMultiplicationDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(product)",
+          "span": [
+            112,
+            112
+          ],
+          "stringifies": {
+            "expression": "product",
+            "span": [
+              112,
+              112
+            ],
+            "assignments": [
+              {
+                "expression": "sp.expand(polynomial_expr)",
+                "span": [
+                  107,
+                  107
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "cbf105a9cdee5a1ee281ba5520613ab1658660028fa580e45d92d83cf2f8e50a",
+        "alpha_lexical_local_sha256": "37c676dd3fc610287f29631ea60ea8b80bb0fb6b6c9a53b91e1cc425e796c6d3",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algebra/simple_equations.py",
+      "class": "SimpleEquationsDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(solution)",
+          "span": [
+            66,
+            66
+          ],
+          "stringifies": {
+            "expression": "solution",
+            "span": [
+              66,
+              66
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algebra/simple_integration.py",
+      "class": "SimpleIntegrationDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(polynomial) + ' + C'",
+          "span": [
+            85,
+            85
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "d57c97275aeea7f2c4a4e87266a1cea540b208ab176d8b859539960dc6888b56",
+        "alpha_lexical_local_sha256": "bd4b34c3faf411d6e3068e0bd2d46b464e5a593c594869a7c25fab9da53a9827",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ab.py",
+      "class": "ABDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "' '.join(steps[-1])",
+          "span": [
+            119,
+            119
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "554f3ba5ef99fc2d07492147ff8c8a0af9aa1e788e36e11b7a64a33166965a03",
+        "alpha_lexical_local_sha256": "66ae902be7728a488450ea5d49f336eec869bfeb07d71e1c1b25b0ee21c8d0c5",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/base_conversion.py",
+      "class": "BaseConversionDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "target_repr",
+          "span": [
+            107,
+            107
+          ],
+          "assignments": [
+            {
+              "expression": "format(value, 'x')",
+              "span": [
+                88,
+                88
+              ]
+            },
+            {
+              "expression": "format(value, 'b')",
+              "span": [
+                90,
+                90
+              ]
+            },
+            {
+              "expression": "''.join((str(d) if d < 10 else chr(ord('a') + d - 10) for d in reversed(digits) or [0]))",
+              "span": [
+                98,
+                98
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_alternation.py",
+      "class": "BinaryAlternationDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            109,
+            109
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              109,
+              109
+            ],
+            "assignments": [
+              {
+                "expression": "self._get_answer(string)",
+                "span": [
+                  105,
+                  105
+                ],
+                "self_producer": {
+                  "name": "_get_answer",
+                  "return_annotation": "int",
+                  "return_expressions": [
+                    "incorrect // 2",
+                    "-1",
+                    "get_num_swaps('1')",
+                    "get_num_swaps('0')",
+                    "min(get_num_swaps('0'), get_num_swaps('1'))"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/binary_matrix.py",
+      "class": "BinaryMatrixDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            131,
+            131
+          ],
+          "assignments": [
+            {
+              "expression": "self._matrix_to_str(answer)",
+              "span": [
+                127,
+                127
+              ],
+              "self_producer": {
+                "name": "_matrix_to_str",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join((' '.join((str(x) for x in row)) for row in matrix))"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "bfa2cc4602e907772a804f3bbe13307441f4803eb3d449ef3e789f3154b544fb",
+        "alpha_lexical_local_sha256": "f2a7a2ba5aa2ec828f70c58e7c04c2198d0bbdf7a2e2d196e26fb0f6123e1017",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/caesar_cipher.py",
+      "class": "CaesarCipherDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "sentence",
+          "span": [
+            80,
+            80
+          ],
+          "assignments": [
+            {
+              "expression": "rng.choice(self.valid_sentences)",
+              "span": [
+                71,
+                71
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/count_primes.py",
+      "class": "CountPrimesDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            63,
+            63
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              63,
+              63
+            ],
+            "assignments": [
+              {
+                "expression": "len(primes)",
+                "span": [
+                  60,
+                  60
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/cryptarithm.py",
+      "class": "CryptarithmDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "5561b6ff78e766909771daf4777225890f1be2ef72a702ebadb3c9bd2a893412",
+        "alpha_lexical_local_sha256": "1037b0b641de4ccf822f1c03ca301a47b2f10822123ac0e84c9b71e7c0537d51",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life.py",
+      "class": "GameOfLifeDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "result_str",
+          "span": [
+            84,
+            84
+          ],
+          "assignments": [
+            {
+              "expression": "json.dumps(final_step_list, separators=(',', ':'))",
+              "span": [
+                78,
+                78
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "44d342513cf9b708aecf2e91440bf9e802bc589197b03687918dfb6b1e67eb07",
+        "alpha_lexical_local_sha256": "2063c371cc7e732c6846a859f2a31ba40e67df229bfd20d8c17c8541bbe5d506",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/game_of_life_halting.py",
+      "class": "GameOfLifeHaltingDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(not should_oscillate)",
+          "span": [
+            366,
+            366
+          ],
+          "stringifies": {
+            "expression": "not should_oscillate",
+            "span": [
+              366,
+              366
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "ce4ddf5205d9b9fbf181a34dea29173e379dd698f20d84306d1a60cd912bd4b9",
+        "alpha_lexical_local_sha256": "222532beef3edb261595eeb8441b9055a5eab7e5b14829ebe5aa224433b5c7b6",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/graph_color.py",
+      "class": "GraphColorDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "None",
+          "span": [
+            216,
+            216
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "73fb2723d5a2b2a2a46d29d2051fe34d59eac8a0720924db8d5b0cd8491ff71e",
+        "alpha_lexical_local_sha256": "c5ba0b531ffe2c87c4055ad50f4ef4a3f93d6752ec0dd2b16c6fd3f50e9d6b45",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/group_anagrams.py",
+      "class": "GroupAnagramsDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            118,
+            118
+          ],
+          "assignments": [
+            {
+              "expression": "json.dumps(answer)",
+              "span": [
+                114,
+                114
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "82181a87f015a77c3725d94a80c5701ffcee839017f7e8246ce3da9135190012",
+        "alpha_lexical_local_sha256": "85fc3250af3e455f321e432e08a8ba93ddc1046b712d18bf1a4e53053a424947",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "class": "IsomorphicStringsDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            111,
+            111
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              111,
+              111
+            ],
+            "assignments": [
+              {
+                "expression": "self._check_isomorphic(s, t)",
+                "span": [
+                  107,
+                  107
+                ],
+                "self_producer": {
+                  "name": "_check_isomorphic",
+                  "return_annotation": "bool",
+                  "return_expressions": [
+                    "True",
+                    "False",
+                    "False"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/jugs.py",
+      "class": "JugsDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "json.dumps(solution)",
+          "span": [
+            285,
+            285
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "b645b11af20bddd8f430869b57fe3d9a94ed42f54d8d0e006b70aa54f8e8027a",
+        "alpha_lexical_local_sha256": "15d6f2e42bca451654bcc197cf423d6cedeee51a71e6f4f9ac1a755ab48be058",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/letter_counting.py",
+      "class": "LetterCountingDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(count)",
+          "span": [
+            67,
+            67
+          ],
+          "stringifies": {
+            "expression": "count",
+            "span": [
+              67,
+              67
+            ],
+            "assignments": [
+              {
+                "expression": "sum((word.lower().count(target_letter) for word in span))",
+                "span": [
+                  63,
+                  63
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/letter_jumble.py",
+      "class": "LetterJumbleDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "' '.join(selected_words)",
+          "span": [
+            108,
+            108
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "ca3a0af11f0b3ff76647b16ca62b555ae9f13c131d189ccf32e5fbda633cc970",
+        "alpha_lexical_local_sha256": "3f0b575e09f5994b7e0c28dcb462888de794266b519b5254c28abe8bda25365f",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/manipulate_matrix.py",
+      "class": "ManipulateMatrixDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            309,
+            309
+          ],
+          "assignments": [
+            {
+              "expression": "self._matrix_to_str(answer)",
+              "span": [
+                303,
+                303
+              ],
+              "self_producer": {
+                "name": "_matrix_to_str",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join((' '.join((str(x) for x in row)) for row in matrix))"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "08786f3057fa28b5633a360e91462fa39dffa5a85e38e4c5cf944bf4aeb5965b",
+        "alpha_lexical_local_sha256": "af446b009386c45770fa0bf23b7c0aa0ccc338292e89b58c32b8e09a3bc66892",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/number_filtering.py",
+      "class": "NumberFilteringDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result_strs) if result_strs else '[]'",
+          "span": [
+            94,
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/number_sorting.py",
+      "class": "NumberSortingDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            86,
+            86
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              86,
+              86
+            ],
+            "assignments": [
+              {
+                "expression": "asc_answer if is_ascending else desc_answer",
+                "span": [
+                  81,
+                  81
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "e4f143e5fcf1ba14d9626734b1bac833b90826c43a511ad217141e50d42177c1",
+        "alpha_lexical_local_sha256": "494c55a9482041c9cb45263a677732d8af46ed0d1c0269a508f40ebf98999edb",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/palindrome_generation.py",
+      "class": "PalindromeDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "palindrome",
+          "span": [
+            71,
+            71
+          ],
+          "assignments": [
+            {
+              "expression": "self._assemble_palindrome(letters)",
+              "span": [
+                68,
+                68
+              ],
+              "self_producer": {
+                "name": "_assemble_palindrome",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "''.join(letters)"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "af102c1aac651baafd040118144920dcc1fb29dc688f070c76fa940a5fc50c45",
+        "alpha_lexical_local_sha256": "a77f105f8884709c85a9db37dee011c9c51e822fcd81562f8edca9b81116d9f0",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/palindrome_partitioning.py",
+      "class": "PalindromePartitioningDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            141,
+            141
+          ],
+          "assignments": [
+            {
+              "expression": "json.dumps(answer)",
+              "span": [
+                137,
+                137
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "57e2d954a2c5d59ab32c773babc459288dfd80786e1077d460f2a817f0a31af5",
+        "alpha_lexical_local_sha256": "bcc64c0ff4b63b2fd94d9cc53e7c37c76def99b09c128c207ab3d9d9cccc906a",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/pool_matrix.py",
+      "class": "PoolMatrixDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            117,
+            117
+          ],
+          "assignments": [
+            {
+              "expression": "self._matrix_to_str(answer)",
+              "span": [
+                113,
+                113
+              ],
+              "self_producer": {
+                "name": "_matrix_to_str",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join((' '.join((str(round(x, 2)) for x in row)) for row in matrix))"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "98e7a92f71d283e95fd5eee5a58a3557eaf588deaf5901dd765f5efd58ca49aa",
+        "alpha_lexical_local_sha256": "c14cd3ae9abb4c8954d96381d89e5cde9f3bc8de015c4b216bfe90056b57084a",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/ransom_note.py",
+      "class": "RansomNoteDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            102,
+            102
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              102,
+              102
+            ],
+            "assignments": [
+              {
+                "expression": "self._can_construct(ransom_note, magazine)",
+                "span": [
+                  98,
+                  98
+                ],
+                "self_producer": {
+                  "name": "_can_construct",
+                  "return_annotation": "bool",
+                  "return_expressions": [
+                    "True",
+                    "False"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/rotate_matrix.py",
+      "class": "RotateMatrixDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            86,
+            86
+          ],
+          "assignments": [
+            {
+              "expression": "self._matrix_to_str(answer)",
+              "span": [
+                82,
+                82
+              ],
+              "self_producer": {
+                "name": "_matrix_to_str",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join((' '.join((str(x) for x in row)) for row in matrix))"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/rotten_oranges.py",
+      "class": "RottenOrangesDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            123,
+            123
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              123,
+              123
+            ],
+            "assignments": [
+              {
+                "expression": "self._get_answer(matrix)",
+                "span": [
+                  119,
+                  119
+                ],
+                "self_producer": {
+                  "name": "_get_answer",
+                  "return_annotation": "int",
+                  "return_expressions": [
+                    "clock if infected == healthy else -1"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/sentence_reordering.py",
+      "class": "SentenceReorderingDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solved_sentence",
+          "span": [
+            94,
+            94
+          ],
+          "assignments": [
+            {
+              "expression": "' '.join(sorted(input_words, key=lambda word: goal_words.index(word)))",
+              "span": [
+                88,
+                88
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "a2d988df34a1e198ec87c9a993d02c2d0ddb5d72a47c3d4222d0cb65637a7f57",
+        "alpha_lexical_local_sha256": "805f866fda2338a863b25afb5415524f58b99eb58bedc9eb88fbc23409e28e12",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/spell_backward.py",
+      "class": "SpellBackwardDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            55,
+            55
+          ],
+          "assignments": [
+            {
+              "expression": "word[::-1]",
+              "span": [
+                51,
+                51
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "28be1663d36f2fa4c94bddef916ade3084e976a3e17e846669db2bbdd4cc954b",
+        "alpha_lexical_local_sha256": "cd65cb1134a057e41e4c992d2fd2e9ffdb307facbc1b534460a323184e648bd9",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/spiral_matrix.py",
+      "class": "SpiralMatrixDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            117,
+            117
+          ],
+          "assignments": [
+            {
+              "expression": "self._list_to_str(answer)",
+              "span": [
+                113,
+                113
+              ],
+              "self_producer": {
+                "name": "_list_to_str",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "' '.join((str(x) for x in array))"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "91c0e04dac2abeecd029e26871d029afbc3e66902a28613c208f85053b706ee9",
+        "alpha_lexical_local_sha256": "92aba954ebb440bed2b2fdfeabb4c826441dc0339fa89b1d8c825d2c3d52a740",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_insertion.py",
+      "class": "StringInsertionDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            106,
+            106
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              106,
+              106
+            ],
+            "assignments": [
+              {
+                "expression": "self._get_answer(string)",
+                "span": [
+                  102,
+                  102
+                ],
+                "self_producer": {
+                  "name": "_get_answer",
+                  "return_annotation": "str",
+                  "return_expressions": [
+                    "''.join(output)"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4821244fe8f73bee62aead0d909ded43b8aa9c142ffe9d525f63541571f7dab7",
+        "alpha_lexical_local_sha256": "fb08c6ee302a549aad7cb6d1a48e1e5c0aef6be8acfd6d2f60d0c93aff8a820e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_manipulation.py",
+      "class": "StringManipulationDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            182,
+            182
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              182,
+              182
+            ],
+            "assignments": [
+              {
+                "expression": "states[-1]",
+                "span": [
+                  178,
+                  178
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_splitting.py",
+      "class": "StringSplittingDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            128,
+            128
+          ],
+          "assignments": [
+            {
+              "expression": "' '.join((str(x) for x in answer))",
+              "span": [
+                119,
+                119
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/string_synthesis.py",
+      "class": "StringSynthesisDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            134,
+            134
+          ],
+          "assignments": [
+            {
+              "expression": "' '.join((str(x) for x in answer))",
+              "span": [
+                125,
+                125
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_ladder.py",
+      "class": "WordLadderDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "','.join(path)",
+          "span": [
+            223,
+            223
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "7b14047790999c39ac345d0423d32d9eebcb5ed756090a89502936bf76619df3",
+        "alpha_lexical_local_sha256": "87e18e7e9232d9e4013ecba09e69032e8f2fd49a6406020deb8fd1bafa5ec591",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "class": "WordSequenceReversalDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            67,
+            67
+          ],
+          "assignments": [
+            {
+              "expression": "', '.join(reversed(words))",
+              "span": [
+                63,
+                63
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/algorithmic/word_sorting.py",
+      "class": "WordSortingDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "', '.join(answer)",
+          "span": [
+            109,
+            109
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "cf15a667183837d79c74e54aeb498ecbfca3f220b48c39f3efd4714825f6e4c3",
+        "alpha_lexical_local_sha256": "613e5c9055e75fa4b820da8f8ed291487706eb5a7afa93b91fadb2b89b9e0136",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arc/arc_1d.py",
+      "class": "Arc1DDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "' '.join((str(x) for x in test_example['output']))",
+          "span": [
+            104,
+            104
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arc/arc_agi.py",
+      "class": "ArcAgiDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "test_output",
+          "span": [
+            200,
+            200
+          ],
+          "assignments": [
+            {
+              "expression": "format_board(augmented_test_output, self.board_format_opts)",
+              "span": [
+                191,
+                191
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "1f785840a307d99abc0ed54162188aa1551b2002261b3424a1187c046624aad5",
+        "alpha_lexical_local_sha256": "0bdd523bf70835764579c29a3d453ee57a61cfc54797ebaa23ee12c42dbbd1d0",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arc/rearc.py",
+      "class": "ReArcDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            124,
+            124
+          ],
+          "assignments": [
+            {
+              "expression": "format_board(task['output'], self.board_format_opts)",
+              "span": [
+                120,
+                120
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "1f785840a307d99abc0ed54162188aa1551b2002261b3424a1187c046624aad5",
+        "alpha_lexical_local_sha256": "0bdd523bf70835764579c29a3d453ee57a61cfc54797ebaa23ee12c42dbbd1d0",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/basic_arithmetic.py",
+      "class": "BasicArithmeticDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result)",
+          "span": [
+            98,
+            98
+          ],
+          "stringifies": {
+            "expression": "result",
+            "span": [
+              98,
+              98
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arithmetic/bitwise_arithmetic.py",
+      "class": "BitwiseArithmeticDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            159,
+            159
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "632fc22e66c47cc42b08b816d40cf76a96132fffbaf6f8d467a3785da5754392",
+        "alpha_lexical_local_sha256": "b1d0c8a1262ed4ec5e8e0c28abe0c3d3f345b70aec609124a4ba92ee092e2d72",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/calendar_arithmetic.py",
+      "class": "CalendarArithmeticDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            140,
+            140
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              140,
+              140
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "acad42008e465bab41ba99c3c97e124ac6de2300e23ee280d19b3482bd955070",
+        "alpha_lexical_local_sha256": "614c034a51b283db7de3ed1ebc517b942cccf13a52a2af077f01a140dad60e74",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/chain_sum.py",
+      "class": "ChainSumDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result)",
+          "span": [
+            67,
+            67
+          ],
+          "stringifies": {
+            "expression": "result",
+            "span": [
+              67,
+              67
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "39d73a90cd99e30076af3aa8448fb14d22ffd71653ab3d8b0b043837c8bda72e",
+        "alpha_lexical_local_sha256": "8d64b16fbe94ac6cde39f37271d88b2f1a47a06f64b9edbb468cb0d63ece846e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/count_bits.py",
+      "class": "CountBitsDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            46,
+            46
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              46,
+              46
+            ],
+            "assignments": [
+              {
+                "expression": "binary.count('1')",
+                "span": [
+                  42,
+                  42
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "class": "DecimalArithmeticDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            192,
+            192
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              192,
+              192
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "34f4730f54dc015ac3beb8311ad072977c1209464c5422842bc957000c00e89a",
+        "alpha_lexical_local_sha256": "5dac190cb4d83865380f9f751de14779211a05e7c77068457d4074be72ff0e4e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/decimal_chain_sum.py",
+      "class": "DecimalChainSumDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result)",
+          "span": [
+            69,
+            69
+          ],
+          "stringifies": {
+            "expression": "result",
+            "span": [
+              69,
+              69
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "8f9cdd2dc4b91efde327f69a5c40dec6b6a75ab76c5bed2eb829160bd81bfaae",
+        "alpha_lexical_local_sha256": "d69c1a03ddbad9fb73d1d82d920a4a9cb5c44e1e8a54f43989a46b8ec5889095",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/dice.py",
+      "class": "DiceDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            127,
+            127
+          ],
+          "assignments": [
+            {
+              "expression": "f\"{puzzle['num']}/{puzzle['den']}\"",
+              "span": [
+                123,
+                123
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "db484fe44aca292cad493bb72d108a91d11f96619211fdc95d49b2e5e554569f",
+        "alpha_lexical_local_sha256": "05a16faa3cae28b25b0b6cafd535edd44dbf80ade00cca9039cf7ae35928eae3",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "class": "FractionSimplificationDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer_fraction",
+          "span": [
+            117,
+            117
+          ],
+          "assignments": [
+            {
+              "expression": "self._format_fraction(simple_num, simple_den, style)",
+              "span": [
+                113,
+                113
+              ],
+              "self_producer": {
+                "name": "_format_fraction",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "f'{num}/{den}'",
+                  "f'${num}/{den}$'",
+                  "f'$\\\\frac{{{num}}}{{{den}}}$'",
+                  "f'$\\\\dfrac{{{num}}}{{{den}}}$'"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "8a3d13c1e5d0556c5526d94e341cd7fa0e0b4eacaf0ae3e3bb402f7d97d68d3c",
+        "alpha_lexical_local_sha256": "4d7b55b11ea01421edf3d2faedede28c26287d01925a1bb379f4d8492f5ac912",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gcd.py",
+      "class": "GCDDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result)",
+          "span": [
+            65,
+            65
+          ],
+          "stringifies": {
+            "expression": "result",
+            "span": [
+              65,
+              65
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arithmetic/gsm_symbolic/gsm_symbolic.py",
+      "class": "GSMSymbolicDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "65a5e4c2305fd1f65a455e803d03095340512276f281fafdd52946a983d38659",
+        "alpha_lexical_local_sha256": "f4b446c29f17aed34c816276457b2f91e046d5430ff7dfab12f55fc03ceed1a9",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/lcm.py",
+      "class": "LCMDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result)",
+          "span": [
+            67,
+            67
+          ],
+          "stringifies": {
+            "expression": "result",
+            "span": [
+              67,
+              67
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arithmetic/leg_counting.py",
+      "class": "LegCountingDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(total_legs)",
+          "span": [
+            122,
+            122
+          ],
+          "stringifies": {
+            "expression": "total_legs",
+            "span": [
+              122,
+              122
+            ],
+            "assignments": [
+              {
+                "expression": "sum((count * ANIMALS[animal] for animal, count in animals.items()))",
+                "span": [
+                  113,
+                  113
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/arithmetic/number_format.py",
+      "class": "NumberFormatDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            97,
+            97
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              97,
+              97
+            ],
+            "assignments": [
+              {
+                "expression": "max(candidates) if size == 'largest' else min(candidates)",
+                "span": [
+                  93,
+                  93
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "6f80effa5839f884995f66ce575528305bae7e322f53008d99616a643c9c980c",
+        "alpha_lexical_local_sha256": "afe9b865d54c360653a8dd73e84f6a8c1100aaa828590d49459754adb6d56feb",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/power_function.py",
+      "class": "PowerFunctionDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            81,
+            81
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              81,
+              81
+            ],
+            "assignments": [
+              {
+                "expression": "pow(base, exponent)",
+                "span": [
+                  77,
+                  77
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4e9c9fe706ba61a34cc90e90d9bea05e056ec2a494cc8d604ab12f7287fbe32a",
+        "alpha_lexical_local_sha256": "8c3550e72a11db2ff509d05b3c06642b18a9d7c61857c699c0136a0e9af1dca2",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/prime_factorization.py",
+      "class": "PrimeFactorizationDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            90,
+            90
+          ],
+          "assignments": [
+            {
+              "expression": "' × '.join(map(str, factors))",
+              "span": [
+                83,
+                83
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "eae78bb5c2fe5af36d41bffc9e27c6d6810b4fd43429fe16b797702d4c12880a",
+        "alpha_lexical_local_sha256": "cefaeda3af5ed7f964bc2186f18b3d0cb92629feadd76e415479ed85f4b9828a",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/products.py",
+      "class": "ProductsDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(result)",
+          "span": [
+            69,
+            69
+          ],
+          "stringifies": {
+            "expression": "result",
+            "span": [
+              69,
+              69
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "39d73a90cd99e30076af3aa8448fb14d22ffd71653ab3d8b0b043837c8bda72e",
+        "alpha_lexical_local_sha256": "8d64b16fbe94ac6cde39f37271d88b2f1a47a06f64b9edbb468cb0d63ece846e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/arithmetic/time_intervals.py",
+      "class": "TimeIntervalsDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            137,
+            137
+          ],
+          "assignments": [
+            {
+              "expression": "f'{int(total_seconds // 3600):02d}:{int(total_seconds % 3600 // 60):02d}'",
+              "span": [
+                115,
+                115
+              ]
+            },
+            {
+              "expression": "f'{int(total_seconds // 3600):02d}:{int(total_seconds % 3600 // 60):02d}:{int(total_seconds % 60):02d}'",
+              "span": [
+                118,
+                118
+              ]
+            },
+            {
+              "expression": "f'{int(total_seconds // 3600):02d}:{int(total_seconds % 3600 // 60):02d}:{int(total_seconds % 60):02d}.{ms:03d}'",
+              "span": [
+                122,
+                122
+              ]
+            },
+            {
+              "expression": "f'{difference.days} days'",
+              "span": [
+                124,
+                124
+              ]
+            },
+            {
+              "expression": "f'{days} days, {hours:02d}:{minutes:02d}:{seconds:02d}'",
+              "span": [
+                131,
+                131
+              ]
+            },
+            {
+              "expression": "f'{days} days, {hours:02d}:{minutes:02d}'",
+              "span": [
+                133,
+                133
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4e482daa046947d5a3667460d6a34b335b540ca071e43e0b533c2799cac74560",
+        "alpha_lexical_local_sha256": "9c7af347b30cf4741224395b8c9ec4bef13c9f914f86331ca644f875434c9a30",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/code/bf.py",
+      "class": "BFDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "result",
+          "span": [
+            56,
+            56
+          ],
+          "assignments": [
+            {
+              "expression": "bfi.interpret(bf_program, buffer_output=True)",
+              "span": [
+                52,
+                52
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/code/codeio.py",
+      "class": "CodeIODataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution",
+          "span": [
+            137,
+            137
+          ],
+          "assignments": [
+            {
+              "expression": "json.dumps(output_data)",
+              "span": [
+                130,
+                130
+              ]
+            },
+            {
+              "expression": "json.dumps(input_data)",
+              "span": [
+                133,
+                133
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "8960ed161e322bce0910ebd4b0164db4ca51d3db26e31913fd99eb1d01d0ad5a",
+        "alpha_lexical_local_sha256": "dcb2011d9916e3b2c2d82f3c3c56a6cb2fe11b13bd27c2f6d86079c4bfd130c6",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/cognition/color_cube_rotation.py",
+      "class": "ColorCubeRotationDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "cube.colors[target_side].value",
+          "span": [
+            141,
+            141
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "72fc86fc0459dd98273aea8d3b495ce26720461cb8eec2c260af53929cca09f3",
+        "alpha_lexical_local_sha256": "38861916a0868c66e360c079e3af480ef4aec58bb2aa7edfb720a2daccb32e62",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/cognition/figlet_fonts.py",
+      "class": "FigletFontDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "word",
+          "span": [
+            189,
+            189
+          ],
+          "assignments": [
+            {
+              "expression": "self.config.static_word if self.config.static_word is not None else rng.choice(self.words).upper()",
+              "span": [
+                178,
+                178
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "b06ce742a64fa9e3a341c9af7f5eccfea5e9ec7cecad452ed3c24e8bd603962a",
+        "alpha_lexical_local_sha256": "27135b9d9a9efb8216bbd2d57c6da863b90812869ed30d3287cf8ce053e86df5",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/cognition/modulo_grid.py",
+      "class": "ModuloGridDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "flatten_grid(grid)",
+          "span": [
+            139,
+            139
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/cognition/needle_haystack.py",
+      "class": "NeedleHaystackDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "stack['needle'][0]",
+          "span": [
+            107,
+            107
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "b7e4f324dd0c232a48a38a2d7cddd4d683be2744b4f3f27c2295b2f5322bdcf9",
+        "alpha_lexical_local_sha256": "c1b8342fd02c0b4958d07647e725259e062e4304df87fbc1eb63ef93f2b539ed",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/cognition/number_sequences.py",
+      "class": "NumberSequenceDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(sequence[-1])",
+          "span": [
+            199,
+            199
+          ],
+          "stringifies": {
+            "expression": "sequence[-1]",
+            "span": [
+              199,
+              199
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/cognition/rectangle_count.py",
+      "class": "RectangleCountDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            123,
+            123
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              123,
+              123
+            ]
+          }
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "09834c156b9fef8d32f6334bb92d8f03303c2da40dbaa67ab946d975c7fd4c8b",
+        "alpha_lexical_local_sha256": "6515e966d3613cd8239a7b93cd184b9147a76d459805a7a80967f7aa7e44d373",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/cognition/rubiks_cube.py",
+      "class": "RubiksCubeDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "None",
+          "span": [
+            109,
+            109
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "8df401b0e7406598fbff067ed7a43d45949ca89630820a8058ef434b7dc93f30",
+        "alpha_lexical_local_sha256": "a43433b8770d379648d3fd647a396fd53de387a0a30612a31e8ff621fb45921f",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/composite.py",
+      "class": "CompositeDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "23ba2600c57e47a9e4d296b2265736dc6fdbd148c367925ffdaf001c9b4d2f09",
+        "alpha_lexical_local_sha256": "34b140da345153b7a3b5afdb33190d98f877ed171e253c1b3e2c6bbdb56ac00a",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/dataset.py",
+      "class": "ProceduralDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "696db3181f88b00229d5d23c798fa0938adb857d72d1414938b2a43d9a0f84a9",
+        "alpha_lexical_local_sha256": "b625dad4a913f081ac1b920d2a0a0dacc6a65fadde29bab30918413e318d14d6",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/dataset.py",
+      "class": "ReseedingDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "8a7f0ee1b2dc521e3d0511a8ea2bcbe98ee2f5411ed0e81fada1e37cfa5877fe",
+        "alpha_lexical_local_sha256": "f1b171c129ee7c6d6192685b7d786464060c9710ff8d9522294a67ad7dbfb100",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/boxnet.py",
+      "class": "BoxnetDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "None",
+          "span": [
+            134,
+            134
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "5534dd999b4194f7516bdf770eec7d40e4567daf0714fd9902d75dcec8ef83ef",
+        "alpha_lexical_local_sha256": "3faab5a21bef1016f7a83dbaeaf1ceee620d15f96aad76dad5a3a0ea6ad684e9",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/countdown.py",
+      "class": "CountdownDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "expression",
+          "span": [
+            101,
+            101
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4080b266f275d3bd7be32a843302c508390a8d604dc1765a39c5f0d9e498f89c",
+        "alpha_lexical_local_sha256": "60f8ab171c996412a117ba029265ae973ad0e82c0756fbeb95f41af6fb6ea16d",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/emoji_mystery.py",
+      "class": "EmojiMysteryDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "secret_sentence",
+          "span": [
+            196,
+            196
+          ],
+          "assignments": [
+            {
+              "expression": "rng.choice(self.sentences).strip().replace('\\n', ' ')",
+              "span": [
+                191,
+                191
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "b5af581a27b755553bd62ee15e5f4bd64ef6e633db7d274f6ab9754e9a3520f2",
+        "alpha_lexical_local_sha256": "bcfd76772a2e977e95d776c950cf329b5643b35ea30aa89103fc59413f01d167",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/futoshiki.py",
+      "class": "FutoshikiDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution_str",
+          "span": [
+            86,
+            86
+          ],
+          "assignments": [
+            {
+              "expression": "self._puzzle_to_string(solution, constraints)",
+              "span": [
+                72,
+                72
+              ],
+              "self_producer": {
+                "name": "_puzzle_to_string",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join(lines)",
+                  "str(val) if val != 0 else '_'",
+                  "None",
+                  "None",
+                  "'>'",
+                  "'∨'",
+                  "'<'",
+                  "'∧'",
+                  "'<'",
+                  "'∧'",
+                  "'>'",
+                  "'∨'"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "1b9cf4a7ddfa2a3c78c5bcf014911dda444fbe1f0ab6dc8082d6b24b0ebcf71b",
+        "alpha_lexical_local_sha256": "7a1fdf225dbc3e012901d01268438b9dcde5a62bb169684c6e86c867a3e41cd4",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/kakurasu.py",
+      "class": "KakurasuDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "'\\n'.join([' '.join((str(cell) for cell in row)) for row in solution_grid])",
+          "span": [
+            102,
+            104
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "896d07ccc447c9a0c0ff78f01eb6c13d1f974b1846814cfdc095970257093dd0",
+        "alpha_lexical_local_sha256": "cf7f5bb25b2d0a03b443c98ec9586314e13a3fb7f57991f79bffb3c78c57e105",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/knight_swap.py",
+      "class": "KnightSwapDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution_str",
+          "span": [
+            290,
+            290
+          ],
+          "assignments": [
+            {
+              "expression": "self._format_moves(solution) if solution else 'No'",
+              "span": [
+                275,
+                275
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "96ab3d566f200660adb6ee1312809e572b8a706065fe78896980a7edd0e335ba",
+        "alpha_lexical_local_sha256": "d031504416ef023c287259e13bbe81115e62c991b7e15124f6add4faa791d6ac",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/mahjong.py",
+      "class": "MahjongPuzzleDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            123,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/games/maze.py",
+      "class": "MazeDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(dist)",
+          "span": [
+            107,
+            107
+          ],
+          "stringifies": {
+            "expression": "dist",
+            "span": [
+              107,
+              107
+            ],
+            "assignments": [
+              {
+                "expression": "self._bfs_shortest_path(maze_grid, start_r, start_c, goal_r, goal_c)",
+                "span": [
+                  90,
+                  90
+                ],
+                "self_producer": {
+                  "name": "_bfs_shortest_path",
+                  "return_annotation": "Optional[int]",
+                  "return_expressions": [
+                    "None",
+                    "dist"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/games/mini_sudoku.py",
+      "class": "MiniSudokuDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution_str",
+          "span": [
+            196,
+            196
+          ],
+          "assignments": [
+            {
+              "expression": "self._board_to_string(solved_board)",
+              "span": [
+                183,
+                183
+              ],
+              "self_producer": {
+                "name": "_board_to_string",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join((' '.join((str(x) if x != 0 else '_' for x in row)) for row in board))"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "9dcacc77619c6a871c9fd2d41d3c5de0373d584f89c67e3ec99b80908071b3a4",
+        "alpha_lexical_local_sha256": "8d228e856a68bafc39030b3326cf411ab0f211ac02acd1c0ec69fbd197bde8fb",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/n_queens.py",
+      "class": "NQueensDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "rng.choice(valid_solutions_str)",
+          "span": [
+            134,
+            134
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "a1c97e51616cfb99dee10c0859f4f86ce609cf1f4bdc40ee369f33d98e44c2bd",
+        "alpha_lexical_local_sha256": "4e53f0653cdd42a7baa7481c7d89af575d29b944ec79a873529ee45e828a2dbb",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/puzzle24.py",
+      "class": "Puzzle24Dataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "expr_str",
+          "span": [
+            105,
+            105
+          ],
+          "assignments": [
+            {
+              "expression": "str(expr)",
+              "span": [
+                96,
+                96
+              ],
+              "stringifies": {
+                "expression": "expr",
+                "span": [
+                  96,
+                  96
+                ]
+              }
+            },
+            {
+              "expression": "expr_str.replace(str(sym), str(numbers[i]))",
+              "span": [
+                98,
+                98
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "e093dd914099d6dfec54ad37811fca5d765b07147f1ac076520c96d26c4072df",
+        "alpha_lexical_local_sha256": "34522339508177b5806fdc26f75673bee3e1ec3e4b6f59de52be15c62e28cf69",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/rush_hour.py",
+      "class": "RushHourDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "None",
+          "span": [
+            163,
+            163
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "7163877df263e6a69b7cb4bfdb1f6b7e6f05dbbf0daa2b522b697ea971ea4c7a",
+        "alpha_lexical_local_sha256": "5c7d0f01ee2e89a8bc3de64d1e97f96d6dda9cfba67871e8df7c96a06f71054d",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/sokoban.py",
+      "class": "SokobanDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution",
+          "span": [
+            97,
+            97
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "4971fdbff74fe238b23de90f69b840cbd6e6b98ccd0fa20d0bba7bd20790f9a7",
+        "alpha_lexical_local_sha256": "e34ef0589624a2c4113a47919e59e48d68818fb8237c3e09e7a86ec8864de088",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/sudoku.py",
+      "class": "SudokuDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution_str",
+          "span": [
+            215,
+            215
+          ],
+          "assignments": [
+            {
+              "expression": "self._board_to_string(solved_board)",
+              "span": [
+                206,
+                206
+              ],
+              "self_producer": {
+                "name": "_board_to_string",
+                "return_annotation": "str",
+                "return_expressions": [
+                  "'\\n'.join((' '.join((str(x) if x != 0 else '_' for x in row)) for row in board))"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "9dcacc77619c6a871c9fd2d41d3c5de0373d584f89c67e3ec99b80908071b3a4",
+        "alpha_lexical_local_sha256": "8d228e856a68bafc39030b3326cf411ab0f211ac02acd1c0ec69fbd197bde8fb",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/survo.py",
+      "class": "SurvoDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution_str",
+          "span": [
+            84,
+            84
+          ],
+          "assignments": [
+            {
+              "expression": "'\\n'.join((' '.join((str(x) for x in row)) for row in filled_matrix))",
+              "span": [
+                78,
+                78
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "45736e3470e1a2e8d09944c2cbd7a208606655f06b95ae96a77dec6d75da5d6d",
+        "alpha_lexical_local_sha256": "be962896ee4fc8ba21280ab52bd843186665463d9d3112766e82dcc90ab68103",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/tower_of_hanoi.py",
+      "class": "HanoiDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "'\\n'.join(solution)",
+          "span": [
+            272,
+            272
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "0a1bd6be465bbc3f8d77e8587c413855a6259d2fc9e15f4070bbcb4d6a55268d",
+        "alpha_lexical_local_sha256": "e10b118b267377131aeedcb847a269661cfb535fd651fc6e2f01dac7b119c93e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/games/tsumego.py",
+      "class": "TsumegoDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "solution_str",
+          "span": [
+            274,
+            274
+          ],
+          "assignments": [
+            {
+              "expression": "f\"{chr(ord('A') + solution[1])}{size - solution[0]}\"",
+              "span": [
+                264,
+                264
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "bc5ac540b83a1262f3737a5875427ab069ba19aef11f2464799c51c9a23bb066",
+        "alpha_lexical_local_sha256": "5455309dfc36658556003cd564902a3f18365425d1abb514a5b4478534bfeded",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/geometry/advanced_geometry.py",
+      "class": "AdvancedGeometryDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            102,
+            102
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "3ea0e2020ac53a0cde728168569feb6991494c2ea93cd34e48145e4c9eae9187",
+        "alpha_lexical_local_sha256": "e47589092ba5873fd56939f4245c5f1bc3939cf1965a565b393f334fbb384226",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/geometry/simple_geometry.py",
+      "class": "SimpleGeometryDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            112,
+            112
+          ],
+          "assignments": [
+            {
+              "expression": "str(missing_angle_rounded)",
+              "span": [
+                108,
+                108
+              ],
+              "stringifies": {
+                "expression": "missing_angle_rounded",
+                "span": [
+                  108,
+                  108
+                ],
+                "assignments": [
+                  {
+                    "expression": "round(missing_angle, 1)",
+                    "span": [
+                      103,
+                      103
+                    ]
+                  },
+                  {
+                    "expression": "int(missing_angle_rounded)",
+                    "span": [
+                      106,
+                      106
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/graphs/course_schedule.py",
+      "class": "CourseScheduleDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            135,
+            135
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              135,
+              135
+            ],
+            "assignments": [
+              {
+                "expression": "self._can_finish(num_courses, prerequisites)",
+                "span": [
+                  127,
+                  127
+                ],
+                "self_producer": {
+                  "name": "_can_finish",
+                  "return_annotation": "bool",
+                  "return_expressions": [
+                    "True",
+                    "True",
+                    "False",
+                    "True",
+                    "False",
+                    "False"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/graphs/family_relationships.py",
+      "class": "FamilyRelationshipsDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "relationship.value",
+          "span": [
+            204,
+            204
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "bb07175fa671dbed9a06b1a46ca777608a4dcb95bd96a7aa8cfac700fb7b3f9c",
+        "alpha_lexical_local_sha256": "0ea20057bb49f77870e3e8dd989c194298226bb03709d36132647dd48e24c20e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/graphs/largest_island.py",
+      "class": "LargestIslandDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "str(answer)",
+          "span": [
+            142,
+            142
+          ],
+          "stringifies": {
+            "expression": "answer",
+            "span": [
+              142,
+              142
+            ],
+            "assignments": [
+              {
+                "expression": "self._get_largest_island(grid)",
+                "span": [
+                  138,
+                  138
+                ],
+                "self_producer": {
+                  "name": "_get_largest_island",
+                  "return_annotation": "int",
+                  "return_expressions": [
+                    "max_area",
+                    "area"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/graphs/path_star.py",
+      "class": "PathStarDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            116,
+            116
+          ],
+          "assignments": [
+            {
+              "expression": "' '.join(map(str, gold))",
+              "span": [
+                112,
+                112
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "93eb7a92ef0358e64e40684ae92d6089e3355096a6e724b8f3eabe7cc0efad27",
+        "alpha_lexical_local_sha256": "e00bc9c59bc9c136bf88bd964d49538ec263d5aa6399856f6191a59ae3d8a88e",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/graphs/quantum_lock.py",
+      "class": "QuantumLockDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "' → '.join(puzzle_data['solution'])",
+          "span": [
+            59,
+            59
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "edaa31401ed5e483909e38c85322246b39d82795177b37f379c03de4ce492fee",
+        "alpha_lexical_local_sha256": "89af21f2a75b9de2297db428b6e4cd7f1da8d733bbc96bd6173d4e840e18b2c9",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/graphs/shortest_path.py",
+      "class": "ShortestPathDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            162,
+            162
+          ],
+          "assignments": [
+            {
+              "expression": "' '.join(answer) if answer else 'infeasible'",
+              "span": [
+                158,
+                158
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "41552c8c0309ce9bae91fb5e227192349b15a2fdc97e3f65f0a259221c3f4dbc",
+        "alpha_lexical_local_sha256": "ac1c91de7377f426a19c0df4d981721ec585974bc33013241452c5fea8123b22",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/induction/acre/acre.py",
+      "class": "ACREDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            95,
+            95
+          ],
+          "assignments": [
+            {
+              "expression": "input['question']['output']",
+              "span": [
+                91,
+                91
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/induction/list_functions/list_functions.py",
+      "class": "ListFunctionsDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "output",
+          "span": [
+            82,
+            82
+          ],
+          "assignments": [
+            {
+              "expression": "entry[1]",
+              "span": [
+                73,
+                73
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "reasoning_gym/logic/aiw.py",
+      "class": "AliceInWonderlandDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": []
+    },
+    {
+      "path": "reasoning_gym/logic/circuit_logic.py",
+      "class": "CircuitLogicDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "904561274a25f4234f98ffb0a251d0a2c857ddfe0c7dfd16585d9a62259d65c7",
+        "alpha_lexical_local_sha256": "f25f2ee148ea2cd2428dffbcc813806614206781ce542de652f076794e4d2821",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/knights_knaves.py",
+      "class": "KnightsKnavesDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "9e94f28aa3fa17f3da063acf01a03dafedc704b13eaac81ba52cdd2cbbe6c84b",
+        "alpha_lexical_local_sha256": "923ef483735ef429949c9d37f40ced9b93317426ffacbe17e7f6ca81cb1e5f8b",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/propositional_logic.py",
+      "class": "PropositionalLogicDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "None",
+          "span": [
+            219,
+            219
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "577b1265c8dbff8adae619f7d56555c715ccc2fa97f289170a42491af5466626",
+        "alpha_lexical_local_sha256": "f4b4a877147846ba1b3d524798dbe7da1d327cbc6728a2fd85c664e4dc0fa5c0",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/self_reference.py",
+      "class": "SelfReferenceDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            350,
+            350
+          ],
+          "assignments": [
+            {
+              "expression": "str(len(solutions))",
+              "span": [
+                346,
+                346
+              ],
+              "stringifies": {
+                "expression": "len(solutions)",
+                "span": [
+                  346,
+                  346
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "914210d9218704304664a6fa1b3e0bab6767340453b7c17f59e87ccfd1c953fd",
+        "alpha_lexical_local_sha256": "84ba43cf849f70369f39d580f0e4612e093c4a2ffed1936b1d911fdbacdff777",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/logic/syllogisms.py",
+      "class": "SyllogismDataset",
+      "owns_score_answer": false,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": []
+    },
+    {
+      "path": "reasoning_gym/logic/zebra_puzzles.py",
+      "class": "ZebraDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": false,
+      "answer_field_traces": [
+        {
+          "expression": "answer",
+          "span": [
+            54,
+            54
+          ],
+          "assignments": [
+            {
+              "expression": "instance['questions'][0]['answer']",
+              "span": [
+                48,
+                48
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "db484fe44aca292cad493bb72d108a91d11f96619211fdc95d49b2e5e554569f",
+        "alpha_lexical_local_sha256": "05a16faa3cae28b25b0b6cafd535edd44dbf80ade00cca9039cf7ae35928eae3",
+        "preserves_global_builtin_attribute_names": true
+      }
+    },
+    {
+      "path": "reasoning_gym/probability/coin_flip.py",
+      "class": "CoinFlipDataset",
+      "owns_score_answer": true,
+      "previous_content_exposed_before_census": true,
+      "answer_field_traces": [
+        {
+          "expression": "answer_str",
+          "span": [
+            79,
+            79
+          ],
+          "assignments": [
+            {
+              "expression": "format(prob, '.10g')",
+              "span": [
+                75,
+                75
+              ]
+            }
+          ]
+        }
+      ],
+      "conservative_implementation_fingerprints": {
+        "doc_annotation_removed_ast_sha256": "bc8b06a37e56d4623258c9d55f41494c76720f59627dcff30e5bcd3bbb29343e",
+        "alpha_lexical_local_sha256": "2570ff72d0a7ace28c03f79e2f77dc7b1cbedef2044f85ced57f60c17959221b",
+        "preserves_global_builtin_attribute_names": true
+      }
+    }
+  ],
+  "dedup_limit": "Conservative hashes preserve global/builtin/member names; alpha-equivalence is heuristic and any eligible collision requires source/helper review."
+}

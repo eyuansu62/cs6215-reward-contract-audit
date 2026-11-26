@@ -1,0 +1,21 @@
+{
+  "records": [
+    {
+      "path": "src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "status": "fetched",
+      "sha256": "fe73a9bd5cc3224b05590063dfec2c46453a10ea31c17688cb63f08dd745c231",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/metrics/evaluate_reference_metrics.py"
+    },
+    {
+      "path": "src/helm/benchmark/metrics/string_match_metrics.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "path": "src/helm/benchmark/run_spec.py",
+      "status": "fetched",
+      "sha256": "fa77efa5abf2b29d8da2c9c47e0bf9de4fc28da466a3841dd5d53ad96c0e50f3",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/run_spec.py"
+    }
+  ]
+}

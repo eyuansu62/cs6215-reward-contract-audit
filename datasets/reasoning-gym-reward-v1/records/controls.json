@@ -1,0 +1,1077 @@
+{
+  "schema_version": 1,
+  "collection": "reasoning-gym-reward-v1",
+  "repository": "open-thought/reasoning-gym",
+  "selection_snapshot": {
+    "name": "main",
+    "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+    "refs_file": "collection/refs.json",
+    "tree_file": "collection/main-tree.json"
+  },
+  "curation_status": "three_source_reviewed_scoped_controls_pending_root_execution_one_control_deficit",
+  "normal_label_definition": "Normal means source-reviewed consistency with each declared mathematical/output contract. It is neither a whole-module absence-of-bugs assertion nor a policy that every wrong answer must receive zero.",
+  "execution_boundary": "This curator performed no upstream imports, generator execution, target-method execution, analyzer execution, model calls, training or dependency installation. Root owns any isolated extracted-source execution and must update evidence accordingly.",
+  "selection_budget": {
+    "primary_modules_source_inspected": 8,
+    "maximum_primary_modules": 8,
+    "module_order": [
+      "reasoning_gym/algorithmic/palindrome_generation.py",
+      "reasoning_gym/algorithmic/spell_backward.py",
+      "reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "reasoning_gym/algorithmic/group_anagrams.py",
+      "reasoning_gym/arithmetic/prime_factorization.py",
+      "reasoning_gym/games/n_queens.py",
+      "reasoning_gym/algorithmic/binary_matrix.py"
+    ],
+    "further_source_search_stopped": true
+  },
+  "controls": [
+    {
+      "id": "control-palindrome-validity-main",
+      "title": "Palindrome validity with multiset equality",
+      "role": "normal_control",
+      "label": "normal_within_declared_contract",
+      "source": {
+        "snapshot": "main",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "module": "reasoning_gym/algorithmic/palindrome_generation.py",
+        "class": "PalindromeDataset",
+        "method": "score_answer",
+        "lines": {
+          "start": 97,
+          "end": 126
+        },
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/palindrome_generation.py",
+        "sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de",
+        "git_blob_sha1": "9385c0893c9d42a7f6145c2f36ab276668a5fc51",
+        "source_file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+        "source_provenance_file": "collection/source-provenance/main/reasoning_gym/algorithmic/palindrome_generation.py.json",
+        "required_self_properties": {},
+        "required_helpers": [],
+        "stdlib_dependencies": [],
+        "builtin_dependencies": [
+          "isinstance",
+          "sorted"
+        ],
+        "scoring_body_policy": "Extract the real method and named real helpers unchanged. Do not import the upstream module, construct the upstream dataset, run its generator, or replace its scoring logic."
+      },
+      "contract": {
+        "task_meaning": "Form any palindrome from exactly the given lowercase-letter multiset, rather than merely repeat the chosen reference palindrome.",
+        "entry_domain": "metadata.letters is a nonempty list of lowercase ASCII letters that can form a palindrome; entry.answer is one valid construction.",
+        "answer_domain": "Optional string. For the full-credit mathematical contract, interpret strip().lower() as the accepted response normalization. A valid normalized response has no internal spaces or punctuation.",
+        "full_credit_properties": [
+          {
+            "id": "P1",
+            "statement": "Full credit requires that the normalized string equals its reverse."
+          },
+          {
+            "id": "P2",
+            "statement": "Full credit also requires exact equality of the response and supplied-letter multisets, including multiplicity; any valid ordering qualifies."
+          },
+          {
+            "id": "P3",
+            "statement": "Missing or non-string answers earn zero; nonempty wrong strings may receive the explicit partial rewards but never full credit."
+          }
+        ],
+        "legitimate_partial_credit": "The source explicitly awards 0.02 to a non-palindrome string and 0.05 to a palindrome using the wrong letter multiset. These positive rewards are not evidence of full-credit validity."
+      },
+      "native_inputs": {
+        "construction": "Small manually constructed source-shaped witnesses; these are not generator samples or hidden benchmark rows. The question, oracle and metadata were reviewed against the pinned template/generator without executing upstream code.",
+        "entries": {
+          "letters-aabb": {
+            "question": "Your task is, given a list of letters, to form a valid palindrome.\n\nA palindrome is a phrase that reads the same forwards and backwards.\n\nIf there are multiple possible answers, only respond with one of them. You must use all the letters provided.\n\nYour output should be a single string, with no spaces or punctuation.\n\nNow, form a valid palindrome using the following letters: a, a, b, b\n",
+            "answer": "abba",
+            "metadata": {
+              "source_dataset": "palindrome_generation",
+              "letters": [
+                "a",
+                "a",
+                "b",
+                "b"
+              ],
+              "generated_palindrome": "abba",
+              "length": 4
+            }
+          }
+        }
+      },
+      "reference_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 9,
+            "end": 18
+          },
+          "role": "task_template",
+          "excerpt": "If there are multiple possible answers, only respond with one of them. You must use all the letters provided."
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 64,
+            "end": 81
+          },
+          "role": "entry_construction",
+          "excerpt": "\"letters\": scrambled_letters,\n\"generated_palindrome\": palindrome,"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 84,
+            "end": 95
+          },
+          "role": "generator_semantics",
+          "excerpt": "return letters + [middle_letter] + letters[::-1]"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/palindrome_generation.py",
+          "lines": {
+            "start": 97,
+            "end": 126
+          },
+          "role": "scorer",
+          "excerpt": "if answer != answer[::-1]:\n    return 0.02\n...\nif sorted(answer) != sorted(expected_letters):\n    return 0.05\nreturn 1.0"
+        }
+      ],
+      "probes": [
+        {
+          "id": "p-valid-reference",
+          "entry_id": "letters-aabb",
+          "answer": "abba",
+          "expected_reward": 1.0,
+          "purpose": "Reference palindrome uses exactly a,a,b,b.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "p-valid-alternative",
+          "entry_id": "letters-aabb",
+          "answer": "baab",
+          "expected_reward": 1.0,
+          "purpose": "Different valid palindrome; establishes semantic validation rather than strict oracle equality.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "p-normalized-valid",
+          "entry_id": "letters-aabb",
+          "answer": " ABBA ",
+          "expected_reward": 1.0,
+          "purpose": "Documents accepted outer-whitespace and case normalization.",
+          "kind": "normalization",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "p-wrong-order",
+          "entry_id": "letters-aabb",
+          "answer": "aabb",
+          "expected_reward": 0.02,
+          "purpose": "Correct letters but not a palindrome; intended partial reward.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "p-wrong-letters",
+          "entry_id": "letters-aabb",
+          "answer": "aaaa",
+          "expected_reward": 0.05,
+          "purpose": "Palindrome with the wrong multiset; intended partial reward.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "p-missing",
+          "entry_id": "letters-aabb",
+          "answer": null,
+          "expected_reward": 0.0,
+          "purpose": "Missing answer is explicitly rejected.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "p-empty",
+          "entry_id": "letters-aabb",
+          "answer": "",
+          "expected_reward": 0.0,
+          "purpose": "Empty string is explicitly rejected.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        }
+      ],
+      "review_assurance": {
+        "evidence_level": "source_reviewed",
+        "review_scope": "Read the complete primary module, its question/template, generator and score method plus all scoring helpers. This is a scoped source review, not a claim that the complete task or module is bug-free.",
+        "property_specific_rationale": "After explicit normalization, reversal equality is precisely the palindrome predicate, and sorting both finite strings/lists compares every letter with its multiplicity. Both predicates are required before the only return 1.0 branch. Alternative baab is mathematically valid for the same input.",
+        "execution_status": "pending_root_isolated_harness",
+        "upstream_module_imported": false,
+        "upstream_generator_executed": false,
+        "target_method_executed_by_curator": false,
+        "dependencies_installed": false
+      },
+      "limitations": [
+        "No global formatting-enforcement claim: the scorer deliberately strips outer whitespace and lowercases. No generator/exhaustive input-domain verification. Its partial rewards deliberately remain positive for two kinds of incomplete solution."
+      ],
+      "grouping": {
+        "independent_function_family": "PalindromeDataset.score_answer",
+        "source_version_group": "49b07130b3fcd12f2d064bba7c43869543a0e7e7:reasoning_gym/algorithmic/palindrome_generation.py:PalindromeDataset.score_answer",
+        "split_unit": "function_family",
+        "all_probes_correlated": true,
+        "role_in_evaluation": "Development/exposed normal control; not an unseen generalization example."
+      }
+    },
+    {
+      "id": "control-group-anagrams-order-main",
+      "title": "Anagram partition equality independent of group order",
+      "role": "normal_control",
+      "label": "normal_within_declared_contract",
+      "source": {
+        "snapshot": "main",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "module": "reasoning_gym/algorithmic/group_anagrams.py",
+        "class": "GroupAnagramsDataset",
+        "method": "score_answer",
+        "lines": {
+          "start": 88,
+          "end": 103
+        },
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/group_anagrams.py",
+        "sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+        "git_blob_sha1": "665408470a416984d696a2bf797cb4922ea74a30",
+        "source_file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+        "source_provenance_file": "collection/source-provenance/main/reasoning_gym/algorithmic/group_anagrams.py.json",
+        "required_self_properties": {},
+        "required_helpers": [
+          {
+            "name": "_sort_nested_list",
+            "kind": "instance_method",
+            "class": "GroupAnagramsDataset",
+            "lines": {
+              "start": 67,
+              "end": 69
+            },
+            "source_file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+            "transitive_helpers": []
+          }
+        ],
+        "stdlib_dependencies": [
+          "json"
+        ],
+        "builtin_dependencies": [
+          "sorted"
+        ],
+        "scoring_body_policy": "Extract the real method and named real helpers unchanged. Do not import the upstream module, construct the upstream dataset, run its generator, or replace its scoring logic."
+      },
+      "contract": {
+        "task_meaning": "Partition every input word into exactly its anagram group; outer group order and word order within each group are irrelevant.",
+        "entry_domain": "A correctly generated or manually checked metadata.solution partition of distinct lowercase input words. Groups are nonempty lists of strings. Different anagram groups are disjoint.",
+        "answer_domain": "JSON serialization of a list of nonempty string lists for the semantic full-credit contract; arbitrary malformed strings and missing input are separately probed.",
+        "full_credit_properties": [
+          {
+            "id": "G1",
+            "statement": "Any permutation of the oracle groups and any permutation within each group receives full credit."
+          },
+          {
+            "id": "G2",
+            "statement": "A different partition, missing word or duplicate word cannot receive full credit after canonical ordering."
+          },
+          {
+            "id": "G3",
+            "statement": "Invalid JSON and missing input return zero. A well-formed but wrong partition may receive the deliberate 0.01 syntax credit."
+          }
+        ],
+        "legitimate_partial_credit": "0.01 is a deliberate reward for parseable/canonicalizable JSON that differs from the oracle; a positive scalar does not mean the grouping is correct."
+      },
+      "native_inputs": {
+        "construction": "Small manually constructed source-shaped witnesses; these are not generator samples or hidden benchmark rows. The question, oracle and metadata were reviewed against the pinned template/generator without executing upstream code.",
+        "entries": {
+          "two-anagram-groups": {
+            "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+            "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+            "metadata": {
+              "source_dataset": "group_anagrams",
+              "words": [
+                "eat",
+                "tea",
+                "tan",
+                "nat"
+              ],
+              "solution": [
+                [
+                  "eat",
+                  "tea"
+                ],
+                [
+                  "nat",
+                  "tan"
+                ]
+              ],
+              "anagram_groups": 2
+            }
+          }
+        }
+      },
+      "reference_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 19,
+            "end": 27
+          },
+          "role": "task_template",
+          "excerpt": "Your job is to group the anagrams together. You can return the answer in any order."
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 67,
+            "end": 86
+          },
+          "role": "oracle_and_canonicalizer",
+          "excerpt": "return sorted([sorted(sublist) for sublist in lst], key=lambda x: x[0] if x else \"\")"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 88,
+            "end": 103
+          },
+          "role": "scorer",
+          "excerpt": "answer = json.loads(answer)\noracle = entry[\"metadata\"][\"solution\"]\n...\nif answer_str == oracle_str:\n    reward = 1.0\nelse:\n    reward = 0.01  # json parsable"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+          "lines": {
+            "start": 109,
+            "end": 129
+          },
+          "role": "entry_construction",
+          "excerpt": "answer = self._group_anagrams(words)\n...\n\"solution\": answer,"
+        }
+      ],
+      "probes": [
+        {
+          "id": "g-valid-reference",
+          "entry_id": "two-anagram-groups",
+          "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+          "expected_reward": 1.0,
+          "purpose": "Reference partition.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "g-valid-reordered",
+          "entry_id": "two-anagram-groups",
+          "answer": "[[\"tan\", \"nat\"], [\"tea\", \"eat\"]]",
+          "expected_reward": 1.0,
+          "purpose": "Same partition with both levels reordered.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "g-wrong-partition",
+          "entry_id": "two-anagram-groups",
+          "answer": "[[\"eat\", \"tan\"], [\"tea\", \"nat\"]]",
+          "expected_reward": 0.01,
+          "purpose": "JSON syntax is valid but unrelated words are grouped; intended syntax-only credit.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "g-missing-word",
+          "entry_id": "two-anagram-groups",
+          "answer": "[[\"eat\", \"tea\"], [\"nat\"]]",
+          "expected_reward": 0.01,
+          "purpose": "Omitting tan changes canonical partition.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "g-invalid-json",
+          "entry_id": "two-anagram-groups",
+          "answer": "not JSON",
+          "expected_reward": 0.0,
+          "purpose": "Decoder rejects malformed input.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "g-missing",
+          "entry_id": "two-anagram-groups",
+          "answer": null,
+          "expected_reward": 0.0,
+          "purpose": "Missing answer.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        }
+      ],
+      "review_assurance": {
+        "evidence_level": "source_reviewed",
+        "review_scope": "Read the complete primary module, its question/template, generator and score method plus all scoring helpers. This is a scoped source review, not a claim that the complete task or module is bug-free.",
+        "property_specific_rationale": "For the declared nonempty disjoint groups, sorting strings within a group removes word-order variation, and sorting groups by the first sorted word removes group-order variation. JSON serialization preserves all strings and multiplicities, so equality after canonicalization exactly expresses the same partition. All source scoring helpers are included.",
+        "execution_status": "pending_root_isolated_harness",
+        "upstream_module_imported": false,
+        "upstream_generator_executed": false,
+        "target_method_executed_by_curator": false,
+        "dependencies_installed": false
+      },
+      "limitations": [
+        "Scope assumes the metadata.solution oracle is correct and each generated anagram family is a distinct partition block; no upstream data file was read or executed.",
+        "This control does not claim complete schema validation of every JSON type. Non-list and mixed-type JSON may be rejected by the helper or yield low syntax credit; only the specified list-of-list contract is labeled normal."
+      ],
+      "grouping": {
+        "independent_function_family": "GroupAnagramsDataset.score_answer",
+        "source_version_group": "49b07130b3fcd12f2d064bba7c43869543a0e7e7:reasoning_gym/algorithmic/group_anagrams.py:GroupAnagramsDataset.score_answer",
+        "split_unit": "function_family",
+        "all_probes_correlated": true,
+        "role_in_evaluation": "Development/exposed normal control; not an unseen generalization example."
+      }
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "title": "Prime multiset equality with intentional product partial credit",
+      "role": "normal_control",
+      "label": "normal_within_declared_contract",
+      "source": {
+        "snapshot": "main",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "module": "reasoning_gym/arithmetic/prime_factorization.py",
+        "class": "PrimeFactorizationDataset",
+        "method": "score_answer",
+        "lines": {
+          "start": 57,
+          "end": 70
+        },
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arithmetic/prime_factorization.py",
+        "sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a",
+        "git_blob_sha1": "0a3072842bbb46de951a99659954691a8ffa1b55",
+        "source_file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+        "source_provenance_file": "collection/source-provenance/main/reasoning_gym/arithmetic/prime_factorization.py.json",
+        "required_self_properties": {},
+        "required_helpers": [
+          {
+            "name": "_normalize_answer",
+            "kind": "instance_method",
+            "class": "PrimeFactorizationDataset",
+            "lines": {
+              "start": 50,
+              "end": 55
+            },
+            "source_file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+            "transitive_helpers": []
+          }
+        ],
+        "stdlib_dependencies": [
+          "math"
+        ],
+        "builtin_dependencies": [
+          "sorted",
+          "int"
+        ],
+        "scoring_body_policy": "Extract the real method and named real helpers unchanged. Do not import the upstream module, construct the upstream dataset, run its generator, or replace its scoring logic."
+      },
+      "contract": {
+        "task_meaning": "Return every prime factor of the positive integer, with multiplicities, separated by the multiplication sign ×. Factor order is immaterial.",
+        "entry_domain": "entry.answer represents the correct prime factorization of an integer >=2, as produced by _prime_factors or independently checked; factors here are [2,2,3] for 12.",
+        "answer_domain": "None or a finite string of positive integer tokens separated by ×, with optional surrounding token whitespace. Arbitrary nonnumeric tokens are outside this scoped scoring contract because the real helper raises ValueError.",
+        "full_credit_properties": [
+          {
+            "id": "F1",
+            "statement": "Full credit is granted exactly when sorted parsed response factors equal the oracle prime multiset, including multiplicity."
+          },
+          {
+            "id": "F2",
+            "statement": "A different factorization with the same product earns the explicit 0.5 partial reward, never full credit."
+          },
+          {
+            "id": "F3",
+            "statement": "A different product earns 0.01; missing input earns zero."
+          }
+        ],
+        "legitimate_partial_credit": "3 × 4 multiplies to 12 but 4 is composite, so 0.5 appropriately distinguishes a product-preserving decomposition from complete prime factorization. A wrong-product numeric answer receives the source-defined 0.01 minimum."
+      },
+      "native_inputs": {
+        "construction": "Small manually constructed source-shaped witnesses; these are not generator samples or hidden benchmark rows. The question, oracle and metadata were reviewed against the pinned template/generator without executing upstream code.",
+        "entries": {
+          "factor-twelve": {
+            "question": "Find the prime factorization of 12. Write the factors separated by × (Example: for 12 the answer would be: 2 × 2 × 3)",
+            "answer": "2 × 2 × 3",
+            "metadata": {
+              "source_dataset": "prime_factorization",
+              "number": 12,
+              "factors": [
+                2,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      },
+      "reference_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+          "lines": {
+            "start": 35,
+            "end": 48
+          },
+          "role": "oracle_generator",
+          "excerpt": "while n % d == 0:\n    factors.append(d)\n    n //= d"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+          "lines": {
+            "start": 50,
+            "end": 70
+          },
+          "role": "normalizer_and_scorer",
+          "excerpt": "return sorted([int(factor.strip()) for factor in answer.split(\"×\") if factor.strip() != \"\"])\n...\nif oracle_answer_parsed == answer_parsed:\n    reward = 1.0\nelif math.prod(oracle_answer_parsed) == math.prod(answer_parsed):\n    reward = 0.5"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/prime_factorization.py",
+          "lines": {
+            "start": 76,
+            "end": 99
+          },
+          "role": "task_and_entry_construction",
+          "excerpt": "Find the prime factorization of {number}. Write the factors separated by ×"
+        }
+      ],
+      "probes": [
+        {
+          "id": "f-valid-reference",
+          "entry_id": "factor-twelve",
+          "answer": "2 × 2 × 3",
+          "expected_reward": 1.0,
+          "purpose": "Correct prime factors and multiplicity.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "f-valid-permutation",
+          "entry_id": "factor-twelve",
+          "answer": " 3 × 2 × 2 ",
+          "expected_reward": 1.0,
+          "purpose": "Prime factors reordered with token whitespace.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "f-composite-factor",
+          "entry_id": "factor-twelve",
+          "answer": "3 × 4",
+          "expected_reward": 0.5,
+          "purpose": "Product is right, decomposition is not fully prime; intended partial credit.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "f-wrong-product",
+          "entry_id": "factor-twelve",
+          "answer": "2 × 3",
+          "expected_reward": 0.01,
+          "purpose": "Missing one factor of 2 changes product and multiset.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "pending_root_isolated_harness"
+        },
+        {
+          "id": "f-missing",
+          "entry_id": "factor-twelve",
+          "answer": null,
+          "expected_reward": 0.0,
+          "purpose": "Missing answer returns zero.",
+          "kind": "contract",
+          "execution_status": "pending_root_isolated_harness"
+        }
+      ],
+      "review_assurance": {
+        "evidence_level": "source_reviewed",
+        "review_scope": "Read the complete primary module, its question/template, generator and score method plus all scoring helpers. This is a scoped source review, not a claim that the complete task or module is bug-free.",
+        "property_specific_rationale": "The integer 12 has the independently checkable prime multiset [2,2,3]. Exact sorted integer-list equality preserves multiplicity and requires precisely these factors, so an equal-product composite decomposition cannot enter the full-credit branch. Sorting explicitly permits factor-order alternatives.",
+        "execution_status": "pending_root_isolated_harness",
+        "upstream_module_imported": false,
+        "upstream_generator_executed": false,
+        "target_method_executed_by_curator": false,
+        "dependencies_installed": false
+      },
+      "limitations": [
+        "The scorer is not total on arbitrary strings: a nonnumeric factor causes an uncaught ValueError. Such malformed responses are not labeled normal here; this limitation is source-reviewed and must remain visible.",
+        "The parser ignores empty ×-separated fields, accepts signed/zero-padded integer spellings, and does not enforce presentation grammar. The scoped claim concerns the resulting mathematical factor list.",
+        "No prime generator was run; the 12 witness is independently checked by 2*2*3=12 and primality of 2 and 3."
+      ],
+      "grouping": {
+        "independent_function_family": "PrimeFactorizationDataset.score_answer",
+        "source_version_group": "49b07130b3fcd12f2d064bba7c43869543a0e7e7:reasoning_gym/arithmetic/prime_factorization.py:PrimeFactorizationDataset.score_answer",
+        "split_unit": "function_family",
+        "all_probes_correlated": true,
+        "role_in_evaluation": "Development/exposed normal control; not an unseen generalization example."
+      }
+    }
+  ],
+  "selection_inventory": [
+    {
+      "module": "reasoning_gym/algorithmic/palindrome_generation.py",
+      "disposition": "selected_scoped_control",
+      "reason": "Distinct semantic palindrome+multiset override; explicit partial-credit policy."
+    },
+    {
+      "module": "reasoning_gym/algorithmic/spell_backward.py",
+      "disposition": "needs_review",
+      "reason": "Explicit positional partial credit, but repeatedly adding 1/answer_len and only checking reward == 1.0 raises an unexecuted floating-point boundary concern: a longer answer with a complete expected prefix can accumulate near or above 1.0 instead of entering the intended 0.2 deduction. Not labeled normal and not silently replaced by an analyzer result.",
+      "evidence": {
+        "file": "upstream/main/reasoning_gym/algorithmic/spell_backward.py",
+        "lines": {
+          "start": 67,
+          "end": 90
+        },
+        "role": "source_review_concern",
+        "excerpt": "reward += 1 / answer_len\n...\nif reward == 1.0:\n    reward -= 0.2"
+      },
+      "execution_status": "not_executed"
+    },
+    {
+      "module": "reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "disposition": "excluded_inherited_family",
+      "reason": "Complete source has no score_answer override. A task wrapper around the inherited ProceduralDataset.score_answer would not create an independent function family. The base method was not fetched/read by this curator.",
+      "evidence": {
+        "file": "upstream/main/reasoning_gym/algorithmic/word_sequence_reversal.py",
+        "lines": {
+          "start": 38,
+          "end": 77
+        },
+        "role": "class_without_override",
+        "excerpt": "class WordSequenceReversalDataset(ProceduralDataset):"
+      },
+      "execution_status": "not_executed"
+    },
+    {
+      "module": "reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "disposition": "needs_review_contract_ambiguity",
+      "reason": "Question requests precision significant digits (line186), whereas score grants full credit for absolute error <= 10^-config.max_num_decimal_places (lines221-225). Those are different contracts and could accept inaccurate significant-digit answers. No normal label or additional probe execution. The scorer docstring also says otherwise0.01 but implementation returns0.0.",
+      "evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/decimal_arithmetic.py",
+          "lines": {
+            "start": 185,
+            "end": 188
+          },
+          "role": "task_precision",
+          "excerpt": "Please solve this problem to a maximum of {str(self.config.precision)} significant digits, rounding up from the half."
+        },
+        {
+          "file": "upstream/main/reasoning_gym/arithmetic/decimal_arithmetic.py",
+          "lines": {
+            "start": 221,
+            "end": 229
+          },
+          "role": "absolute_tolerance",
+          "excerpt": "precision: int = self.config.max_num_decimal_places\ntol: Decimal = Decimal(10) ** (-precision)\nif abs(user_ans - correct_ans) <= tol:\n    return 1.0"
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    {
+      "module": "reasoning_gym/algorithmic/group_anagrams.py",
+      "disposition": "selected_scoped_control",
+      "reason": "Distinct order-independent nested-list partition override with one pure helper and json dependency."
+    },
+    {
+      "module": "reasoning_gym/arithmetic/prime_factorization.py",
+      "disposition": "selected_scoped_control",
+      "reason": "Distinct numeric-multiset override and intentional same-product0.5 partial credit. Malformed-token non-totality retained as an explicit scope limitation."
+    },
+    {
+      "module": "reasoning_gym/games/n_queens.py",
+      "disposition": "source_reviewed_excluded_from_replay",
+      "reason": "Builtin eval fallback exceeds the pure extracted-source replay scope. Full source review and candidate probes retained under source_reviewed_not_selected; no eval-to-literal_eval substitution and no target execution. This creates an explicit one-control deficit."
+    },
+    {
+      "module": "reasoning_gym/algorithmic/binary_matrix.py",
+      "disposition": "inspected_not_selected",
+      "reason": "Scorer has exact text equality and eval fallback with0.1 formatting partial credit. NQueens provides stronger alternative-solution semantics within four-control target; both share a serialization-fallback pattern, and source eval limitation remains. Not promoted to normal and not discarded due to any analyzer result.",
+      "evidence": {
+        "file": "upstream/main/reasoning_gym/algorithmic/binary_matrix.py",
+        "lines": {
+          "start": 98,
+          "end": 116
+        },
+        "role": "scorer_and_helper",
+        "excerpt": "answer = self._matrix_to_str(eval(answer))\nif answer == oracle_answer:\n    return 0.1"
+      },
+      "execution_status": "not_executed"
+    }
+  ],
+  "exposure": {
+    "all_inspected_sources_are_exposed": true,
+    "future_split_policy": "All versions/probes/helpers for a scorer remain in the same function-family group. This curated set is development material and cannot establish unseen generalization.",
+    "analyzer_or_model_used_for_selection": false
+  },
+  "source_reviewed_not_selected": [
+    {
+      "id": "control-n-queens-valid-answers-main",
+      "title": "N-queens valid-board membership with alternate solutions",
+      "role": "excluded_candidate",
+      "label": "source_reviewed_not_selected_for_replay",
+      "source": {
+        "snapshot": "main",
+        "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+        "module": "reasoning_gym/games/n_queens.py",
+        "class": "NQueensDataset",
+        "method": "score_answer",
+        "lines": {
+          "start": 149,
+          "end": 160
+        },
+        "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/games/n_queens.py",
+        "sha256": "2738aad6232b45f21e57c0cb6d58dbcd1752a97e95e7abb8cf8c1002a4bf4c64",
+        "git_blob_sha1": "06e53f0c44559fbae6a1b7eeb32010ad75450c99",
+        "source_file": "upstream/main/reasoning_gym/games/n_queens.py",
+        "source_provenance_file": "collection/source-provenance/main/reasoning_gym/games/n_queens.py.json",
+        "required_self_properties": {},
+        "required_helpers": [
+          {
+            "name": "_board_to_string",
+            "kind": "instance_method",
+            "class": "NQueensDataset",
+            "lines": {
+              "start": 100,
+              "end": 102
+            },
+            "source_file": "upstream/main/reasoning_gym/games/n_queens.py",
+            "transitive_helpers": []
+          }
+        ],
+        "stdlib_dependencies": [],
+        "builtin_dependencies": [
+          "isinstance",
+          "eval"
+        ],
+        "scoring_body_policy": "Extract the real method and named real helpers unchanged. Do not import the upstream module, construct the upstream dataset, run its generator, or replace its scoring logic."
+      },
+      "contract": {
+        "task_meaning": "Complete the given n-by-n board with exactly n nonattacking queens while preserving preplaced queens. Any compatible valid completion is accepted in the displayed space/newline board format.",
+        "entry_domain": "metadata.valid_answers is the complete set of compatible valid solutions, serialized by _board_to_string. The n=4 witnesses list the two known solutions or the one compatible with a fixed queen.",
+        "answer_domain": "Optional string. Full-credit domain is an exact board serialization. The one fallback-format probe is a small literal nested list of Q/_ strings; arbitrary expression input is out of scope and must never be executed as a probe.",
+        "full_credit_properties": [
+          {
+            "id": "Q1",
+            "statement": "Each exact board string in valid_answers receives full credit, including a valid alternative different from entry.answer."
+          },
+          {
+            "id": "Q2",
+            "statement": "Boards that violate the queen constraints or move a fixed queen are not full-credit members."
+          },
+          {
+            "id": "Q3",
+            "statement": "A literal list encoding of a valid board receives the explicit 0.5 formatting partial credit, while missing input receives zero."
+          }
+        ],
+        "legitimate_partial_credit": "A correct board expressed as a Python list literal has the right placement but fails the requested board text format; the real scorer deliberately gives 0.5 rather than 1.0."
+      },
+      "native_inputs": {
+        "construction": "Small manually constructed source-shaped witnesses; these are not generator samples or hidden benchmark rows. The question, oracle and metadata were reviewed against the pinned template/generator without executing upstream code.",
+        "entries": {
+          "empty-four-board": {
+            "question": "Your job is to complete an n x n chess board with n Queens in total, such that no two attack each other.\n\nNo two queens attack each other if they are not in the same row, column, or diagonal.\n\nYou can place a queen by replacing an underscore (_) with a Q.\n\nYour output should be also a board in the same format as the input, with queens placed on the board by replacing underscores with the letter Q.\n\nGiven the below board of size 4 x 4 your job is to place 4 queen(s) on the board such that no two queens attack each other.\n_ _ _ _\n_ _ _ _\n_ _ _ _\n_ _ _ _\n",
+            "answer": "_ Q _ _\n_ _ _ Q\nQ _ _ _\n_ _ Q _",
+            "metadata": {
+              "source_dataset": "n_queens",
+              "puzzle": [
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ],
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ],
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ],
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ]
+              ],
+              "solutions": [
+                [
+                  [
+                    "_",
+                    "Q",
+                    "_",
+                    "_"
+                  ],
+                  [
+                    "_",
+                    "_",
+                    "_",
+                    "Q"
+                  ],
+                  [
+                    "Q",
+                    "_",
+                    "_",
+                    "_"
+                  ],
+                  [
+                    "_",
+                    "_",
+                    "Q",
+                    "_"
+                  ]
+                ],
+                [
+                  [
+                    "_",
+                    "_",
+                    "Q",
+                    "_"
+                  ],
+                  [
+                    "Q",
+                    "_",
+                    "_",
+                    "_"
+                  ],
+                  [
+                    "_",
+                    "_",
+                    "_",
+                    "Q"
+                  ],
+                  [
+                    "_",
+                    "Q",
+                    "_",
+                    "_"
+                  ]
+                ]
+              ],
+              "num_removed": 4,
+              "valid_answers": [
+                "_ Q _ _\n_ _ _ Q\nQ _ _ _\n_ _ Q _",
+                "_ _ Q _\nQ _ _ _\n_ _ _ Q\n_ Q _ _"
+              ]
+            }
+          },
+          "fixed-four-board": {
+            "question": "Your job is to complete an n x n chess board with n Queens in total, such that no two attack each other.\n\nNo two queens attack each other if they are not in the same row, column, or diagonal.\n\nYou can place a queen by replacing an underscore (_) with a Q.\n\nYour output should be also a board in the same format as the input, with queens placed on the board by replacing underscores with the letter Q.\n\nGiven the below board of size 4 x 4 your job is to place 3 queen(s) on the board such that no two queens attack each other.\n_ Q _ _\n_ _ _ _\n_ _ _ _\n_ _ _ _\n",
+            "answer": "_ Q _ _\n_ _ _ Q\nQ _ _ _\n_ _ Q _",
+            "metadata": {
+              "source_dataset": "n_queens",
+              "puzzle": [
+                [
+                  "_",
+                  "Q",
+                  "_",
+                  "_"
+                ],
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ],
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ],
+                [
+                  "_",
+                  "_",
+                  "_",
+                  "_"
+                ]
+              ],
+              "solutions": [
+                [
+                  [
+                    "_",
+                    "Q",
+                    "_",
+                    "_"
+                  ],
+                  [
+                    "_",
+                    "_",
+                    "_",
+                    "Q"
+                  ],
+                  [
+                    "Q",
+                    "_",
+                    "_",
+                    "_"
+                  ],
+                  [
+                    "_",
+                    "_",
+                    "Q",
+                    "_"
+                  ]
+                ]
+              ],
+              "num_removed": 3,
+              "valid_answers": [
+                "_ Q _ _\n_ _ _ Q\nQ _ _ _\n_ _ Q _"
+              ]
+            }
+          }
+        }
+      },
+      "reference_evidence": [
+        {
+          "file": "upstream/main/reasoning_gym/games/n_queens.py",
+          "lines": {
+            "start": 18,
+            "end": 28
+          },
+          "role": "task_template",
+          "excerpt": "Your output should be also a board in the same format as the input, with queens placed on the board by replacing underscores with the letter Q."
+        },
+        {
+          "file": "upstream/main/reasoning_gym/games/n_queens.py",
+          "lines": {
+            "start": 58,
+            "end": 88
+          },
+          "role": "complete_solution_generation",
+          "excerpt": "if col in visited_cols or (row + col) in visited_pos_diag or (row - col) in visited_neg_diag:\n    continue"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/games/n_queens.py",
+          "lines": {
+            "start": 100,
+            "end": 114
+          },
+          "role": "serialization_and_fixed_queen_filter",
+          "excerpt": "return \"\\n\".join(\" \".join(x for x in row) for row in board)\n...\nif puzzle[r][c] == \"Q\" and solution[r][c] != \"Q\":\n    return False"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/games/n_queens.py",
+          "lines": {
+            "start": 120,
+            "end": 145
+          },
+          "role": "valid_answer_entry_construction",
+          "excerpt": "valid_solutions = [board for board in self._solutions if self._is_tractable_solution(puzzle, board)]\nvalid_solutions_str = sorted({self._board_to_string(board) for board in valid_solutions})"
+        },
+        {
+          "file": "upstream/main/reasoning_gym/games/n_queens.py",
+          "lines": {
+            "start": 149,
+            "end": 160
+          },
+          "role": "scorer",
+          "excerpt": "if answer in valid_solutions:\n    return 1.0\n...\nanswer = self._board_to_string(eval(answer))\nif answer in valid_solutions:\n    return 0.5"
+        }
+      ],
+      "probes": [
+        {
+          "id": "q-valid-reference",
+          "entry_id": "empty-four-board",
+          "answer": "_ Q _ _\n_ _ _ Q\nQ _ _ _\n_ _ Q _",
+          "expected_reward": 1.0,
+          "purpose": "First 4-queen solution in required format.",
+          "kind": "contract",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        },
+        {
+          "id": "q-valid-alternative",
+          "entry_id": "empty-four-board",
+          "answer": "_ _ Q _\nQ _ _ _\n_ _ _ Q\n_ Q _ _",
+          "expected_reward": 1.0,
+          "purpose": "Second valid solution differs from entry.answer; positive full credit is legitimate.",
+          "kind": "contract",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        },
+        {
+          "id": "q-correct-literal-format",
+          "entry_id": "empty-four-board",
+          "answer": "[['_', 'Q', '_', '_'], ['_', '_', '_', 'Q'], ['Q', '_', '_', '_'], ['_', '_', 'Q', '_']]",
+          "expected_reward": 0.5,
+          "purpose": "Same valid placement expressed as a nested-list literal; intended formatting credit.",
+          "kind": "legitimate_partial_credit",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        },
+        {
+          "id": "q-attacking-board",
+          "entry_id": "empty-four-board",
+          "answer": "Q _ _ _\n_ Q _ _\n_ _ Q _\n_ _ _ Q",
+          "expected_reward": 0.0,
+          "purpose": "Four queens on one diagonal are invalid and absent from valid_answers.",
+          "kind": "contract",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        },
+        {
+          "id": "q-fixed-queen-valid",
+          "entry_id": "fixed-four-board",
+          "answer": "_ Q _ _\n_ _ _ Q\nQ _ _ _\n_ _ Q _",
+          "expected_reward": 1.0,
+          "purpose": "Valid solution preserves the existing queen at row0,col1.",
+          "kind": "contract",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        },
+        {
+          "id": "q-moves-fixed-queen",
+          "entry_id": "fixed-four-board",
+          "answer": "_ _ Q _\nQ _ _ _\n_ _ _ Q\n_ Q _ _",
+          "expected_reward": 0.0,
+          "purpose": "Otherwise valid board fails to preserve the existing queen and is excluded from valid_answers.",
+          "kind": "contract",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        },
+        {
+          "id": "q-missing",
+          "entry_id": "empty-four-board",
+          "answer": null,
+          "expected_reward": 0.0,
+          "purpose": "Missing answer bypasses parser and returns zero.",
+          "kind": "contract",
+          "execution_status": "excluded_from_replay_builtin_eval"
+        }
+      ],
+      "review_assurance": {
+        "evidence_level": "source_reviewed",
+        "review_scope": "Read the complete primary module, its question/template, generator and score method plus all scoring helpers. This is a scoped source review, not a claim that the complete task or module is bug-free.",
+        "property_specific_rationale": "Only direct membership in the precomputed compatible-solution list can return 1.0; the fallback cannot return more than 0.5. For n=4, placements [1,3,0,2] and [2,0,3,1] each use distinct rows, columns, row+column diagonals and row-column diagonals. Of those, only [1,3,0,2] preserves the queen at (0,1). The generator source separately establishes why valid_answers includes all generated compatible solutions.",
+        "execution_status": "excluded_from_replay_builtin_eval",
+        "upstream_module_imported": false,
+        "upstream_generator_executed": false,
+        "target_method_executed_by_curator": false,
+        "dependencies_installed": false
+      },
+      "limitations": [
+        "The real scorer uses builtin eval on a non-member response. This is a security and unrestricted-input limitation; no global safety claim is made. The root harness must preserve the real method and never substitute literal_eval while claiming unmodified source.",
+        "Execute only the recorded finite strings: the sole successful eval fallback is a literal nested list. Invalid board strings are simple Q/_ board text and raise syntax/name errors; no arbitrary expressions, calls, comprehensions, attributes or source-selected payloads are permitted.",
+        "The normal label assumes metadata.valid_answers is correct and complete. The generator was source-reviewed but not executed.",
+        "Exact whitespace is part of the full-credit output contract. Alternative valid placements earn full credit; different structured formatting intentionally receives 0.5."
+      ],
+      "grouping": {
+        "independent_function_family": "NQueensDataset.score_answer",
+        "source_version_group": "49b07130b3fcd12f2d064bba7c43869543a0e7e7:reasoning_gym/games/n_queens.py:NQueensDataset.score_answer",
+        "split_unit": "function_family",
+        "all_probes_correlated": true,
+        "role_in_evaluation": "Development/exposed normal control; not an unseen generalization example."
+      }
+    }
+  ],
+  "requested_controls": 4,
+  "selected_controls": 3,
+  "deficit": {
+    "count": 1,
+    "reason": "Eight-primary-module source budget reached. NQueens and BinaryMatrix use builtin eval; the selected isolated execution lane permits unchanged pure scoring source with stdlib helpers but no arbitrary eval. SpellBackward and DecimalArithmetic have source-review concerns; WordSequenceReversal has no distinct score override. No fourth normal control is forced.",
+    "next_action": "Preserve the honest three-control set and rejection inventory. Additional source review requires a separately authorized wider selection budget."
+  }
+}

@@ -1,0 +1,639 @@
+{
+  "created_utc": "2026-11-09T07:07:12.627407+00:00",
+  "purpose": "Exact pinned LICENSE/NOTICE copies for retained excluded-source evidence; not new experiment data or a legal permission determination",
+  "max_paths": 20,
+  "attempted_paths": 18,
+  "repositories_with_retained_content_checked": 14,
+  "results": [
+    {
+      "repo": "EleutherAI/lm-evaluation-harness",
+      "commit": "d6de81643928d653435c431bae19945d41d32520",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/EleutherAI__lm-evaluation-harness/d6de81643928/LICENSE.md"
+      ],
+      "attempts": 2,
+      "retained_tree_root_legal_paths": [],
+      "retained_tree_truncated_flags": []
+    },
+    {
+      "repo": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "root_license_text_captured": false,
+      "captured_license_paths": [],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/NousResearch__atropos/296a0bc55760/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [
+        "LICENSE"
+      ],
+      "retained_tree_truncated_flags": [
+        false,
+        false
+      ]
+    },
+    {
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/OpenRLHF__OpenRLHF/26494490bc23/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [
+        "LICENSE"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/apple__ml-multilingual-reasoning-gym/260d3e6a883b/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [
+        "LICENSE"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "root_license_text_captured": false,
+      "captured_license_paths": [],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "google/BIG-bench",
+      "commit": "092b196c1f8f14a54bbc62f24759d43bde46dd3b",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/google__BIG-bench/092b196c1f8f/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [],
+      "retained_tree_truncated_flags": []
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/hiyouga__EasyR1/a73346d028ba/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [
+        "LICENSE"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "huggingface/OpenEnv",
+      "commit": "9fac2a9acae682d5c18857198eac7152d7bf1a63",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/huggingface__OpenEnv/9fac2a9acae6/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [
+        "LICENSE"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "root_license_text_captured": false,
+      "captured_license_paths": [],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/researchim-ai__reasoning-gym-ru/a66a7e796552/LICENSE"
+      ],
+      "attempts": 2,
+      "retained_tree_root_legal_paths": [
+        "LICENSE",
+        "NOTICE.txt"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "suzgunmirac/BIG-Bench-Hard",
+      "commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/suzgunmirac__BIG-Bench-Hard/9ee07bd481fe/LICENSE"
+      ],
+      "attempts": 1,
+      "retained_tree_root_legal_paths": [],
+      "retained_tree_truncated_flags": []
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/volcengine__verl/69921c419cb4/LICENSE"
+      ],
+      "attempts": 2,
+      "retained_tree_root_legal_paths": [
+        "LICENSE",
+        "Notice.txt"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "root_license_text_captured": true,
+      "captured_license_paths": [
+        "third_party/licenses/zzx-peter__Multiple-Solution-TTRL/5d30fc7ecc20/LICENSE"
+      ],
+      "attempts": 2,
+      "retained_tree_root_legal_paths": [
+        "LICENSE",
+        "Notice.txt"
+      ],
+      "retained_tree_truncated_flags": [
+        false
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "repo": "EleutherAI/lm-evaluation-harness",
+      "commit": "d6de81643928d653435c431bae19945d41d32520",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/d6de81643928d653435c431bae19945d41d32520/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/scalar_evaluators/EleutherAI__lm-evaluation-harness/pin.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:06.428717+00:00",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "repo": "EleutherAI/lm-evaluation-harness",
+      "commit": "d6de81643928d653435c431bae19945d41d32520",
+      "path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/d6de81643928d653435c431bae19945d41d32520/LICENSE.md",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/scalar_evaluators/EleutherAI__lm-evaluation-harness/pin.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:06.730887+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 1067,
+      "sha256": "a806e42547620dffbc2ec0333322c8b3523b4af11e059be14ef81aa5b1ae021f",
+      "local_path": "third_party/licenses/EleutherAI__lm-evaluation-harness/d6de81643928/LICENSE.md",
+      "text_identification": {
+        "spdx_text": "MIT",
+        "label": "MIT-style permission/license text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "12e6063183935e876e232db276568baf4954b492",
+      "expected_git_blob_sha1": null,
+      "git_blob_matches_retained_tree": null
+    },
+    {
+      "repo": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/EnvCommons/ReasoningGym/460ae1a987c40d4bd9c1964566affb3daf99198f/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/rg_style/source-review.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:07.009610+00:00",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "repo": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/NousResearch/atropos/296a0bc55760e43b9c0743c052f8d6c2732606d1/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/rg_style/source-review.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:07.306201+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 1070,
+      "sha256": "5f79d321c17de8ef6e5f34967dc5b484afebeeefd87180890d9741941f6b815f",
+      "local_path": "third_party/licenses/NousResearch__atropos/296a0bc55760/LICENSE",
+      "text_identification": {
+        "spdx_text": "MIT",
+        "label": "MIT-style permission/license text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "5700b997827973cb0eb6d84a2782bb08a5872434",
+      "expected_git_blob_sha1": "5700b997827973cb0eb6d84a2782bb08a5872434",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "OpenRLHF/OpenRLHF",
+      "commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/OpenRLHF/OpenRLHF/26494490bc237f6c3af62dab6117e6bbb0a78dba/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:07.599300+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 11356,
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "local_path": "third_party/licenses/OpenRLHF__OpenRLHF/26494490bc23/LICENSE",
+      "text_identification": {
+        "spdx_text": "Apache-2.0",
+        "label": "Apache License, Version 2.0 text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "f49a4e16e68b128803cc2dcea614603632b04eac",
+      "expected_git_blob_sha1": "f49a4e16e68b128803cc2dcea614603632b04eac",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/apple/ml-multilingual-reasoning-gym/260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/rg_style/source-review.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:08.206865+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 2316,
+      "sha256": "c5753e591b80897ac8345a3859be7703efc46b2d3baf41e0e6eff97f147829f8",
+      "local_path": "third_party/licenses/apple__ml-multilingual-reasoning-gym/260d3e6a883b/LICENSE",
+      "text_identification": {
+        "spdx_text": null,
+        "label": "Apple custom/sample-code-style license text; no SPDX identifier assigned",
+        "scope_note": "The text begins Copyright(C)2026Apple Inc. and contains its own use/reproduction/redistribution and disclaimer terms. It is not labeled Apache-2.0 or plain MIT by this audit."
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "6332d579805533ffcdc0b8b13bbffdc239620a5e",
+      "expected_git_blob_sha1": "6332d579805533ffcdc0b8b13bbffdc239620a5e",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "coder-qicao/RL4GLUE",
+      "commit": "2ad8bc53f663797bef091db108175fc8651cf538",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/coder-qicao/RL4GLUE/2ad8bc53f663797bef091db108175fc8651cf538/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:08.542188+00:00",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "repo": "google/BIG-bench",
+      "commit": "092b196c1f8f14a54bbc62f24759d43bde46dd3b",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/google/BIG-bench/092b196c1f8f14a54bbc62f24759d43bde46dd3b/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/scalar_evaluators/google__BIG-bench/pin.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:08.847934+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "local_path": "third_party/licenses/google__BIG-bench/092b196c1f8f/LICENSE",
+      "text_identification": {
+        "spdx_text": "Apache-2.0",
+        "label": "Apache License, Version 2.0 text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "expected_git_blob_sha1": null,
+      "git_blob_matches_retained_tree": null
+    },
+    {
+      "repo": "hiyouga/EasyR1",
+      "commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/hiyouga/EasyR1/a73346d028ba0335aa42da104972c86e6cd0fe69/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:09.253749+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "local_path": "third_party/licenses/hiyouga__EasyR1/a73346d028ba/LICENSE",
+      "text_identification": {
+        "spdx_text": "Apache-2.0",
+        "label": "Apache License, Version 2.0 text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "expected_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "huggingface/OpenEnv",
+      "commit": "9fac2a9acae682d5c18857198eac7152d7bf1a63",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/huggingface/OpenEnv/9fac2a9acae682d5c18857198eac7152d7bf1a63/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/rg_style/source-review.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:09.655464+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 1505,
+      "sha256": "c6f0790f35e2dc8fff3e6d6a39ed9937ed6eebb8738c75fd0805d7c757165145",
+      "local_path": "third_party/licenses/huggingface__OpenEnv/9fac2a9acae6/LICENSE",
+      "text_identification": {
+        "spdx_text": "BSD-3-Clause",
+        "label": "BSD three-clause-style text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "46ae58d8e015b7c18ecf78291ad472170b1a958b",
+      "expected_git_blob_sha1": "46ae58d8e015b7c18ecf78291ad472170b1a958b",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "kbwal/rl-next-tokens",
+      "commit": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/kbwal/rl-next-tokens/5c6cd2fb617ca117caeba1828addd1a63d6501cf/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:09.968277+00:00",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "repo": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/researchim-ai/reasoning-gym-ru/a66a7e796552ff23410508a6c696a6f1a70a9988/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/rg_style/source-review.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:10.281978+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "local_path": "third_party/licenses/researchim-ai__reasoning-gym-ru/a66a7e796552/LICENSE",
+      "text_identification": {
+        "spdx_text": "Apache-2.0",
+        "label": "Apache License, Version 2.0 text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "expected_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "path": "NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/researchim-ai/reasoning-gym-ru/a66a7e796552ff23410508a6c696a6f1a70a9988/NOTICE.txt",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/rg_style/source-review.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:10.600655+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 2732,
+      "sha256": "129d0f6e808f7342c43ed8aa80355e93eadc8faa168b20d1f9d2427fcaca69d9",
+      "local_path": "third_party/licenses/researchim-ai__reasoning-gym-ru/a66a7e796552/NOTICE.txt",
+      "text_identification": {
+        "spdx_text": null,
+        "label": "Notice/attribution or unclassified text; no license inference"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "ee5336993e6f9ec5855c2e928eca0ebeff96cf2b",
+      "expected_git_blob_sha1": "ee5336993e6f9ec5855c2e928eca0ebeff96cf2b",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "suzgunmirac/BIG-Bench-Hard",
+      "commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/scalar_evaluators/suzgunmirac__BIG-Bench-Hard/pin.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:10.909935+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 1068,
+      "sha256": "4ef2ff4295d26ab6211235039c132697408cec5391d2c091b41e983771978db8",
+      "local_path": "third_party/licenses/suzgunmirac__BIG-Bench-Hard/9ee07bd481fe/LICENSE",
+      "text_identification": {
+        "spdx_text": "MIT",
+        "label": "MIT-style permission/license text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "f3b47ea6da7ab08fd87b0cac96fbee655a211364",
+      "expected_git_blob_sha1": null,
+      "git_blob_matches_retained_tree": null
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:11.232294+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "local_path": "third_party/licenses/volcengine__verl/69921c419cb4/LICENSE",
+      "text_identification": {
+        "spdx_text": "Apache-2.0",
+        "label": "Apache License, Version 2.0 text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "expected_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "volcengine/verl",
+      "commit": "69921c419cb4ee880c01744f0e6ffcf17337abc0",
+      "path": "Notice.txt",
+      "url": "https://raw.githubusercontent.com/volcengine/verl/69921c419cb4ee880c01744f0e6ffcf17337abc0/Notice.txt",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/candidate-sources.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:11.629769+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 57,
+      "sha256": "f40ed94400d2b9636afb1f8019ab817255b19892d426c40eebe0c60d4850a1c9",
+      "local_path": "third_party/licenses/volcengine__verl/69921c419cb4/Notice.txt",
+      "text_identification": {
+        "spdx_text": null,
+        "label": "Notice/attribution or unclassified text; no license inference"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "ade439da525ac3f82936e131a1ae386f43207fd8",
+      "expected_git_blob_sha1": "ade439da525ac3f82936e131a1ae386f43207fd8",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/zzx-peter/Multiple-Solution-TTRL/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/LICENSE",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:11.940855+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "local_path": "third_party/licenses/zzx-peter__Multiple-Solution-TTRL/5d30fc7ecc20/LICENSE",
+      "text_identification": {
+        "spdx_text": "Apache-2.0",
+        "label": "Apache License, Version 2.0 text"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "expected_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "git_blob_matches_retained_tree": true
+    },
+    {
+      "repo": "zzx-peter/Multiple-Solution-TTRL",
+      "commit": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "path": "Notice.txt",
+      "url": "https://raw.githubusercontent.com/zzx-peter/Multiple-Solution-TTRL/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/Notice.txt",
+      "pin_metadata": [
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json",
+        "experiments/reward-external-boolean-v1/collection/native_rewards/binding_phase/source-records.json"
+      ],
+      "observed_utc": "2026-11-09T07:07:12.320937+00:00",
+      "http_status": 200,
+      "status": "captured",
+      "bytes": 57,
+      "sha256": "f40ed94400d2b9636afb1f8019ab817255b19892d426c40eebe0c60d4850a1c9",
+      "local_path": "third_party/licenses/zzx-peter__Multiple-Solution-TTRL/5d30fc7ecc20/Notice.txt",
+      "text_identification": {
+        "spdx_text": null,
+        "label": "Notice/attribution or unclassified text; no license inference"
+      },
+      "legal_determination": false,
+      "git_blob_sha1": "ade439da525ac3f82936e131a1ae386f43207fd8",
+      "expected_git_blob_sha1": "ade439da525ac3f82936e131a1ae386f43207fd8",
+      "git_blob_matches_retained_tree": true
+    }
+  ],
+  "frozen_source_files_modified": false,
+  "scorer_model_analyzer_or_training_runs": 0,
+  "license_scope_limit": "Root license copies and notices do not resolve per-file/vendored/mixed-license provenance or grant publication authority. Unknown or absent texts remain explicit.",
+  "summary": {
+    "repository_pins_with_retained_text_checked": 14,
+    "license_or_notice_HTTP_path_attempts": 18,
+    "captured_root_license_text_repositories": 11,
+    "captured_total_text_files": 14,
+    "captured_notice_files": 3,
+    "captured_files_git_blob_verified_against_retained_tree": 11,
+    "unresolved_root_license_repositories": [
+      "EnvCommons/ReasoningGym",
+      "coder-qicao/RL4GLUE",
+      "kbwal/rl-next-tokens"
+    ]
+  },
+  "stable_added_files_sha256": {
+    "third_party/licenses/EleutherAI__lm-evaluation-harness/d6de81643928/LICENSE.md": "a806e42547620dffbc2ec0333322c8b3523b4af11e059be14ef81aa5b1ae021f",
+    "third_party/licenses/NousResearch__atropos/296a0bc55760/LICENSE": "5f79d321c17de8ef6e5f34967dc5b484afebeeefd87180890d9741941f6b815f",
+    "third_party/licenses/OpenRLHF__OpenRLHF/26494490bc23/LICENSE": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+    "third_party/licenses/apple__ml-multilingual-reasoning-gym/260d3e6a883b/LICENSE": "c5753e591b80897ac8345a3859be7703efc46b2d3baf41e0e6eff97f147829f8",
+    "third_party/licenses/google__BIG-bench/092b196c1f8f/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "third_party/licenses/hiyouga__EasyR1/a73346d028ba/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "third_party/licenses/huggingface__OpenEnv/9fac2a9acae6/LICENSE": "c6f0790f35e2dc8fff3e6d6a39ed9937ed6eebb8738c75fd0805d7c757165145",
+    "third_party/licenses/researchim-ai__reasoning-gym-ru/a66a7e796552/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "third_party/licenses/researchim-ai__reasoning-gym-ru/a66a7e796552/NOTICE.txt": "129d0f6e808f7342c43ed8aa80355e93eadc8faa168b20d1f9d2427fcaca69d9",
+    "third_party/licenses/suzgunmirac__BIG-Bench-Hard/9ee07bd481fe/LICENSE": "4ef2ff4295d26ab6211235039c132697408cec5391d2c091b41e983771978db8",
+    "third_party/licenses/volcengine__verl/69921c419cb4/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "third_party/licenses/volcengine__verl/69921c419cb4/Notice.txt": "f40ed94400d2b9636afb1f8019ab817255b19892d426c40eebe0c60d4850a1c9",
+    "third_party/licenses/zzx-peter__Multiple-Solution-TTRL/5d30fc7ecc20/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "third_party/licenses/zzx-peter__Multiple-Solution-TTRL/5d30fc7ecc20/Notice.txt": "f40ed94400d2b9636afb1f8019ab817255b19892d426c40eebe0c60d4850a1c9",
+    "third_party/licenses/README.md": "14cd872e1ea170695c7f68412282da8f96e724d209fcc5fe488e4fe641c499ec"
+  },
+  "scope_checks": {
+    "fixed_pin_metadata_reused": true,
+    "license_or_notice_text_only": true,
+    "new_subject_or_source_function_content_fetched": false,
+    "new_model_or_analysis_or_scorer_or_training_runs": 0,
+    "frozen_experiment_directories_modified": false,
+    "new_dependencies": false,
+    "public_publish_performed": false
+  }
+}

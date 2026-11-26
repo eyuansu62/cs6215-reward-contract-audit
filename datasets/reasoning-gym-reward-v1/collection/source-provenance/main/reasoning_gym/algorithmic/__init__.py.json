@@ -1,0 +1,14 @@
+{
+  "repository": "open-thought/reasoning-gym",
+  "snapshot": "main",
+  "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "tree": "a4d9de6595325dc97bd76014863215aee7ff400d",
+  "path": "reasoning_gym/algorithmic/__init__.py",
+  "sha256": "f77492da35192df6b595e57978c18d669aa2310c2c25f813cea7624dcef0015f",
+  "git_blob_sha1": "1816ddaeb18174f8358898b645b13f87ab82df4c",
+  "bytes": 6302,
+  "source_url": "https://github.com/open-thought/reasoning-gym/blob/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/algorithmic/__init__.py",
+  "local_path": "upstream/main/reasoning_gym/algorithmic/__init__.py",
+  "fetched_utc": "2026-11-08T07:53:01.173260+00:00",
+  "git_blob_verified": true
+}

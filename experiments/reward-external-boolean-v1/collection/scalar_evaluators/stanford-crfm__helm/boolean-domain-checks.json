@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "path": "src/helm/benchmark/scenarios/boolq_scenario.py",
+      "status": "fetched",
+      "sha256": "5392382066031f85fa3fd41c7e6a2c0ace4856fa67a1343af0c7c89d704b1892",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/scenarios/boolq_scenario.py",
+      "literal_contexts": [
+        {
+          "line": 126,
+          "text": "                        [Reference(Output(text=perturbed_answer), tags=[CORRECT_TAG])]"
+        },
+        {
+          "line": 134,
+          "text": "                    references=[Reference(Output(text=correct_answer), tags=[CORRECT_TAG])],"
+        }
+      ]
+    },
+    {
+      "path": "src/helm/benchmark/scenarios/civil_comments_scenario.py",
+      "status": "fetched",
+      "sha256": "3756664322979118d15ca3d3c841cea5b0e10648dc63c5b21cf28c59a065daaa",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/scenarios/civil_comments_scenario.py",
+      "literal_contexts": [
+        {
+          "line": 117,
+          "text": "                expected_output = \"True\""
+        },
+        {
+          "line": 120,
+          "text": "                expected_output = \"False\""
+        },
+        {
+          "line": 125,
+          "text": "                references=[Reference(Output(text=expected_output), tags=[CORRECT_TAG])],"
+        }
+      ]
+    },
+    {
+      "path": "src/helm/benchmark/scenarios/disinformation_scenario.py",
+      "status": "fetched",
+      "sha256": "4c7aae42d10a6d11ec3b3223adb265e078779812cd840f6490ad30df22c15b2c",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/scenarios/disinformation_scenario.py",
+      "literal_contexts": [
+        {
+          "line": 114,
+          "text": "                references=[Reference(Output(text=reference_text), tags=[CORRECT_TAG])],"
+        }
+      ]
+    },
+    {
+      "path": "src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "status": "fetched",
+      "sha256": "f37174d7b14f1440ffd74e8839ac093758dd63a21f4441893cd46f0a890a18d9",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "literal_contexts": [
+        {
+          "line": 153,
+          "text": "                    references=[Reference(Output(text=label), tags=[CORRECT_TAG])],"
+        }
+      ]
+    }
+  ]
+}

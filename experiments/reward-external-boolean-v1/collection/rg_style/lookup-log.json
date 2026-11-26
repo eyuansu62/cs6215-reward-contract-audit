@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-11-09T02:45:36.762200+00:00",
+  "query_topics": [
+    "github score_answer entry boolean excluding original RG site",
+    "github score_answer True False Dataset excluding prior tasks",
+    "github reasoning gym extension boolean datasets reward",
+    "score_answer entry excluding reasoning-gym/reasoning_gym/ReasoningGym",
+    "def reward entry answer True False excluding reasoning-gym",
+    "score_answer boolean excluding open-thought",
+    "score_answer BoolQ github",
+    "score_answer boolean_expressions github",
+    "score_answer is_prime Dataset github",
+    "ReasoningGym extension boolean github",
+    "reasoning_gym boolean_expressions github",
+    "score_answer Dataset boolean excluding reasoning",
+    "score_answer(answer,entry) excluding open-thought/reasoning",
+    "score_answer entry boolq excluding reasoning-gym"
+  ],
+  "GitHub_connector_result": "Unknown tool github.search; no connector source returned",
+  "public_search_character": "Heavily returned known RG sources, wrappers and translated forks. Search snippets alone did not establish eligibility.",
+  "public_raw_fetch": "GitHub HEAD resolved to fixed commits before source GET; 5pins and source provenance retained.",
+  "alternate_code_search": "grep.app request blocked: HTTP429; sandbox DNS failure retained in narrative, no data obtained.",
+  "incidental_unselected_search_hits": [
+    "Original RG issue44",
+    "Original RG issue18",
+    "Original RG issue528",
+    "Original RG issues listing"
+  ],
+  "issue_or_PR_bug_information_used_for_selection": false,
+  "selected_functions": 0
+}

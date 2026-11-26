@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-11-09T02:51:12.260423+00:00",
+  "status": "freeze_ready_reviewed",
+  "scope": "Explicit native parameter / one-level literal-key scalar reads only; no source rewrite, encoding conversion, scorer logic changes or new AST/library/helper model.",
+  "API": [
+    "analyze_bound(unit,contract,binding)",
+    "check_witness_bound(unit,contract,binding,answer,reference)",
+    "validate_binding(binding,source)",
+    "verify_frozen()"
+  ],
+  "binding_format": {
+    "candidate": {
+      "parameter": "solution_str",
+      "field": null
+    },
+    "reference": {
+      "parameter": "ground_truth",
+      "field": null
+    }
+  },
+  "syntax_supported": [
+    "direct named parameters, including posonly and kwonly",
+    "candidate/reference one-level mapping fields",
+    "two distinct fields in same mapping parameter"
+  ],
+  "conservative_limits": [
+    "Bare/whole-container aliases and unrelated fields Unknown",
+    "Whole mapping-parameter Store/Del rejected before marker reuse",
+    "Variadic signature Unknown",
+    "Existing self-state/helpers/fixed-configuration/purity/unsupported-operation limits unchanged",
+    "Default or nonnominated parameters stay unmodeled when read",
+    "Native container assumption is a mapping with declared keys and native scalar field domains; actual caller provenance remains collection responsibility"
+  ],
+  "tests": {
+    "test_methods_passed": 18,
+    "test_first_red_log": "audit/binding-red-tests.txt",
+    "test_log": "audit/binding-tests.txt",
+    "compilation_passed": true,
+    "independent_extra_synthetic_checks": 8,
+    "independent_evidence": "audit/binding-independent-synthetics.json"
+  },
+  "simplification": "Deleted unused duplicate preparation helper after independent review; no behavior change.",
+  "source_sha256": {
+    "native_binding.py": "d2a4c32e807352ead28e98d9aa73767ce2aa7d006481e8db4451dd0342a03328",
+    "tests/test_native_binding.py": "444c4184ccf86af43981ab6e4854efaad1539fefd2b1ed06e2bdd8c360f3fe62"
+  },
+  "preserved_imports_sha256": {
+    "v2_checker": "a0218e6474606af3841dd96212fad7c3327dee9a14f8940a7184b13e95dd7705",
+    "v2_contracts": "b832098bb832b56d2bd100bc5b66d02546820bdabfac51fff22eaa395c58f257",
+    "legacy": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c"
+  },
+  "external_primary_sources_read": false,
+  "models_called": 0,
+  "target_scorers_executed": 0,
+  "no_old_file_edits": true,
+  "new_dependencies": false
+}

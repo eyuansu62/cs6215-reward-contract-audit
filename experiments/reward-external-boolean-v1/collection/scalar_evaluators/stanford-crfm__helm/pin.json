@@ -1,0 +1,6 @@
+{
+  "repo": "stanford-crfm/helm",
+  "commit": "63754d05db6f874e41a395880fb573890a13e791",
+  "method": "git ls-remote HEAD",
+  "observed_utc": "2026-11-09T02:56:32.738273+00:00"
+}

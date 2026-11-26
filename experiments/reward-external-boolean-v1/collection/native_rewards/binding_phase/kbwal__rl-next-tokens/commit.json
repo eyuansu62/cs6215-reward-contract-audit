@@ -1,0 +1,179 @@
+{
+  "sha": "5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+  "node_id": "C_kwDOT8sU-NoAKDVjNmNkMmZiNjE3Y2ExMTdjYWViYTE4MjhhZGRkMWE2M2Q2NTAxY2Y",
+  "commit": {
+    "author": {
+      "name": "Kushal Baranwal",
+      "email": "[email omitted]",
+      "date": "2026-09-19T08:29:24Z"
+    },
+    "committer": {
+      "name": "Kushal Baranwal",
+      "email": "[email omitted]",
+      "date": "2026-09-19T11:57:00Z"
+    },
+    "message": "length collapse w finemath still very present",
+    "tree": {
+      "sha": "285cb2f871fe9919abd295d6eb77c25611559809",
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/trees/285cb2f871fe9919abd295d6eb77c25611559809"
+    },
+    "url": "https://api.github.com/repos/kbwal/rl-next-tokens/git/commits/5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/kbwal/rl-next-tokens/commits/5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+  "html_url": "https://github.com/kbwal/rl-next-tokens/commit/5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+  "comments_url": "https://api.github.com/repos/kbwal/rl-next-tokens/commits/5c6cd2fb617ca117caeba1828addd1a63d6501cf/comments",
+  "author": {
+    "login": "kbwal",
+    "id": 74308033,
+    "node_id": "MDQ6VXNlcjc0MzA4MDMz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/74308033?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kbwal",
+    "html_url": "https://github.com/kbwal",
+    "followers_url": "https://api.github.com/users/kbwal/followers",
+    "following_url": "https://api.github.com/users/kbwal/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kbwal/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kbwal/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kbwal/subscriptions",
+    "organizations_url": "https://api.github.com/users/kbwal/orgs",
+    "repos_url": "https://api.github.com/users/kbwal/repos",
+    "events_url": "https://api.github.com/users/kbwal/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kbwal/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "kbwal",
+    "id": 74308033,
+    "node_id": "MDQ6VXNlcjc0MzA4MDMz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/74308033?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kbwal",
+    "html_url": "https://github.com/kbwal",
+    "followers_url": "https://api.github.com/users/kbwal/followers",
+    "following_url": "https://api.github.com/users/kbwal/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kbwal/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kbwal/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kbwal/subscriptions",
+    "organizations_url": "https://api.github.com/users/kbwal/orgs",
+    "repos_url": "https://api.github.com/users/kbwal/repos",
+    "events_url": "https://api.github.com/users/kbwal/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kbwal/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "feab73e7a01b48440da76737df709491efe07ab9",
+      "url": "https://api.github.com/repos/kbwal/rl-next-tokens/commits/feab73e7a01b48440da76737df709491efe07ab9",
+      "html_url": "https://github.com/kbwal/rl-next-tokens/commit/feab73e7a01b48440da76737df709491efe07ab9"
+    }
+  ],
+  "stats": {
+    "total": 27486,
+    "additions": 17644,
+    "deletions": 9842
+  },
+  "files": [
+    {
+      "sha": "d6b628ba03f38b7e334e8b9906c5810ca57cb598",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 4,
+      "changes": 13,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/README.md",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/README.md",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/README.md?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "patch": "@@ -1,8 +1,8 @@\n # RL-NTP: Reinforcement Learning for Next-Token Prediction\n \n-A work-in-progress project exploring whether language models can learn to \"think\" (`<think>...</think>`) before predicting next-token continuations during pretraining, without task-specific verifiers or ground-truth answer checkers.\n+A project exploring whether language models can learn to \"think\" (`<think>...</think>`) before predicting next-token continuations during pretraining, without task-specific verifiers or ground-truth answer checkers.\n \n-Currently running on [FineMath-4plus](https://huggingface.co/datasets/HuggingFaceTB/finemath). I originally tried [OpenWebMath](https://huggingface.co/datasets/open-web-math/open-web-math), even with custom split points in documents, and it didn't work too well tbh.\n+Final runs were on [FineMath-4plus](https://huggingface.co/datasets/HuggingFaceTB/finemath). I originally tried [OpenWebMath](https://huggingface.co/datasets/open-web-math/open-web-math), even with custom split points in documents, and it didn't work too well tbh.\n \n ---\n \n@@ -12,15 +12,16 @@ I first tried directly replicating NVIDIA's **RLP** (*Reinforcement as a Pretrai\n - Wrapped raw text prefixes in a prompt asking the model to think in `<think>...</think>` before continuing the text in the same style.\n - Rewarded completions based on the continuation logprobs under the base model\n \n-**Result:** Pretty unsuccessful. In a full run of ~1k steps (32k unique prompts, 8 rollouts per prompt), rewards stayed pretty flat (if you squinted, it's possible it went from -16 to -15) with little policy improvement. The base model also doesn't spontaneously use the `<think>` tags, and the action space is way too open for cold-start exploration to discover useful reasoning on its own.\n+**Result:** Pretty unsuccessful. In a full run of ~1k steps (32k unique prompts, 8 rollouts per prompt), rewards stayed pretty flat (if you squinted, it's possible it went from -16 to -15) with little policy improvement. The base model also doesn't spontaneously use the `<think>` tags, and the model doesn't discover how to do useful reasoning on its own (it basically stays in the base model regime, which is why the logprobs are -15).\n \n I'm not sure how Nvidia solved this; my guesses are mostly scale right now (I think I'm at the point of scale where I should be ~2ooms below Nvidia).\n+They were able to afford much larger batch sizes than me, and this probably helps their convergence. I also ran this with continuation length of 768, and Nvidia mentioned that it only helped continuation logprobs over base b/w 512 and 1024 thinking tokens, so I might be roughly in the collapse regime anyways.\n \n ---\n \n ## 2. The Two-Stage Approach: SFT Warm-Start + GRPO (`grpo.py`)\n \n-Since cold-starting RL on a base model didn't pan out, I switched to a two-stage approach (what I'm entirely trying to do now): teach the model *how* to format thoughts and structure scratchpads first via SFT, then let GRPO optimize the reasoning.\n+Since cold-starting RL on a base model didn't pan out, I switched to a two-stage approach: teach the model *how* to format thoughts and structure scratchpads first via SFT, then let GRPO optimize the reasoning.\n \n ### Step 1: Data & Teacher Traces\n - **[`precompute_good_splits.py`](precompute_good_splits.py)**: Random text splits usually land on trivial tokens (e.g. punctuation, stopwords). I score splits with the base model to find prefix/continuation boundaries where thinking actually has room to help (first-token logprob between -4.5 and -1.0). Note: I didn't do this until more recently, so some of my first commits still did the Nvidia way of choosing random splits (I found this led to too many tokens where thinking didn't help).\n@@ -38,6 +39,10 @@ Since cold-starting RL on a base model didn't pan out, I switched to a two-stage\n   - **Format penalty**: penalizes unclosed or repeated `<think>` tags (I'm not strictly sure if this is necessary! It seems to not matter too much, as I make `</think>` an EOS, so it should be auto-punished for not formatting right anyways)\n   - **Length penalty**: this technically exists, so I should mention it, but in practice I'm setting this to 0 in all of my runs.\n - **Result:** Better than direct RLP, but subject to pretty big failure modes. The biggest one I saw on OpenWebMath is length collapse. I'm suspecting this is due to the quality of the data, and nothink being a strong strange attractor basin that's hard to fall out of if a decent chunk of prompts aren't improved by thinking (i.e. the data quality isn't as good as I'd hope; the reason for switching to FineMath-4plus!)\n+- **Update:** FineMath-4plus didn't fix the length collapse either. BBH benchmarks (`eval_on_bbh.py`):\n+  - `multistep_arithmetic_two`: Base `-6.93` seq logprob -> SFT `+2.71` info gain (len 249) -> GRPO-300 `+1.61` info gain (len 197)\n+  - `boolean_expressions`: Base `-1.55` logprob -> SFT `+0.80` info gain (len 190) -> GRPO-300 `+0.66` info gain (len 138)\n+  - `dyck_languages`: Base `-2.62` seq logprob -> SFT `-1.18` info gain (len 257) -> GRPO-300 `-0.97` info gain (len 124)\n \n ---\n "
+    },
+    {
+      "sha": "28d66f8efc82693f9a51d3ccb1d71c78f1971a1b",
+      "filename": "eval_on_bbh.py",
+      "status": "modified",
+      "additions": 55,
+      "deletions": 10,
+      "changes": 65,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/eval_on_bbh.py",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/eval_on_bbh.py",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/eval_on_bbh.py?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf",
+      "patch": "@@ -214,7 +214,7 @@ def merge_bbh_results(\n     output_file: str | None = None,\n ) -> dict[str, Any] | None:\n     if model_names is None:\n-        model_names = [\"base\", \"sft\", \"grpo80\", \"grpo300\"]\n+        model_names = [\"base\", \"sft\", \"grpo300\"]\n \n     merged_models: dict[str, Any] = {}\n     n_examples = None\n@@ -251,8 +251,8 @@ def merge_bbh_results(\n         \"mean_logprob\": {m: merged_models[m][\"mean_logprob\"] for m in merged_models},\n         \"info_gain_vs_base\": {\n             m: merged_models[m][\"mean_logprob\"] - base_mean\n-            for m in [\"sft\", \"grpo80\", \"grpo300\"]\n-            if m in merged_models\n+            for m in model_names\n+            if m != \"base\" and m in merged_models\n         },\n         \"mean_seq_logprob\": {\n             m: merged_models[m].get(\n@@ -262,8 +262,8 @@ def merge_bbh_results(\n         },\n         \"seq_info_gain_vs_base\": {\n             m: merged_models[m].get(\"mean_seq_logprob\", 0.0) - base_seq_mean\n-            for m in [\"sft\", \"grpo80\", \"grpo300\"]\n-            if m in merged_models\n+            for m in model_names\n+            if m != \"base\" and m in merged_models\n         },\n         \"mean_thought_length\": {\n             m: merged_models[m][\"mean_thought_length\"] for m in merged_models\n@@ -354,9 +354,9 @@ def benchmark_bbh(\n     n_examples: int = 50,\n     data_dir: str = \"./data/bbh\",\n     base_model_path: str = \"Qwen/Qwen3-1.7B-Base\",\n-    sft_adapter_path: str = \"./sft-checkpoints/sft-good-splits-checkpoints/run-32-0.0003-1.0/batch_123\",\n-    grpo80_path: str = \"./grpo-checkpoints/important-checkpoints/checkpoint-80-91d428mf\",\n-    grpo300_path: str = \"./grpo-checkpoints/grpo-good-split-data-full-run-1-checkpoints/checkpoint-300\",\n+    sft_adapter_path: str = \"./sft-checkpoints/sft-finemath-checkpoints/run-32-0.0003-1.0/batch_121\",\n+    grpo_dir: str = \"./grpo-checkpoints/grpo-finemath-full-run-1-checkpoints\",\n+    grpo300_path: str | None = None,\n     cache_dir: str = \"/scratch/hub\",\n     batch_size: int = 16,\n     seed: int = 10,\n@@ -370,6 +370,15 @@ def benchmark_bbh(\n     rank = int(os.environ.get(\"LOCAL_RANK\", os.environ.get(\"RANK\", \"0\")))\n     device = f\"cuda:{rank}\" if torch.cuda.is_available() else \"cpu\"\n \n+    if grpo300_path is None:\n+        if os.path.exists(os.path.join(grpo_dir, \"config.json\")):\n+            grpo300_path = grpo_dir\n+        elif os.path.isdir(os.path.join(grpo_dir, \"checkpoint-300\")):\n+            grpo300_path = os.path.join(grpo_dir, \"checkpoint-300\")\n+        else:\n+            possible_path = os.path.join(grpo_dir, \"checkpoint-300\")\n+            grpo300_path = possible_path if os.path.exists(possible_path) else grpo_dir\n+\n     is_distributed = world_size > 1\n     if is_distributed and not dist.is_initialized():\n         torch.cuda.set_device(rank)\n@@ -383,7 +392,6 @@ def benchmark_bbh(\n             \"path\": base_model_path,\n             \"adapter\": sft_adapter_path,\n         },\n-        {\"name\": \"grpo80\", \"type\": \"causal\", \"path\": grpo80_path, \"adapter\": None},\n         {\"name\": \"grpo300\", \"type\": \"causal\", \"path\": grpo300_path, \"adapter\": None},\n     ]\n \n@@ -561,7 +569,20 @@ def benchmark_bbh(\n     if is_distributed:\n         dist.barrier()\n         if rank == 0:\n-            merge_bbh_results(task=task, results_dir=\"results\")\n+            res_dir = \"results\"\n+            out_file = None\n+            if output_json is not None:\n+                if os.path.isdir(output_json) or output_json.endswith(\"/\"):\n+                    res_dir = output_json\n+                else:\n+                    res_dir = os.path.dirname(os.path.abspath(output_json))\n+                    out_file = output_json\n+            merge_bbh_results(\n+                task=task,\n+                results_dir=res_dir,\n+                model_names=[m[\"name\"] for m in models],\n+                output_file=out_file,\n+            )\n         dist.destroy_process_group()\n \n     return results\n@@ -573,6 +594,27 @@ def benchmark_bbh(\n     parser.add_argument(\"--data-dir\", type=str, default=\"./data/bbh\")\n     parser.add_argument(\"--n\", type=int, default=50)\n     parser.add_argument(\"--b\", type=int, default=16)\n+    parser.add_argument(\n+        \"--grpo-dir\",\n+        \"--grpo-folder\",\n+        \"--grpo-path\",\n+        dest=\"grpo_dir\",\n+        type=str,\n+        default=\"./grpo-checkpoints/grpo-finemath-full-run-1-checkpoints\",\n+        help=\"Path to GRPO checkpoints folder or checkpoint-300 directory\",\n+    )\n+    parser.add_argument(\n+        \"--sft-path\",\n+        type=str,\n+        default=\"./sft-checkpoints/sft-finemath-checkpoints/run-32-0.0003-1.0/batch_121\",\n+        help=\"Path to SFT adapter\",\n+    )\n+    parser.add_argument(\n+        \"--base-model-path\",\n+        type=str,\n+        default=\"Qwen/Qwen3-1.7B-Base\",\n+        help=\"Base model path or huggingface model ID\",\n+    )\n     parser.add_argument(\n         \"--output\",\n         type=str,\n@@ -588,6 +630,9 @@ def benchmark_bbh(\n         task=args.task,\n         n_examples=args.n,\n         data_dir=args.data_dir,\n+        base_model_path=args.base_model_path,\n+        sft_adapter_path=args.sft_path,\n+        grpo_dir=args.grpo_dir,\n         batch_size=args.b,\n         output_json=args.output,\n         force_open_think=not args.no_force_think,"
+    },
+    {
+      "sha": "6d9d33753a285ed146ffa9acaf0a742aa1b4911e",
+      "filename": "results/boolean_expressions_results.json",
+      "status": "modified",
+      "additions": 2382,
+      "deletions": 3404,
+      "changes": 5786,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fboolean_expressions_results.json",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fboolean_expressions_results.json",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/results%2Fboolean_expressions_results.json?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf"
+    },
+    {
+      "sha": "f4e6e150f4cfef5c66c8634c884639231abdfeb1",
+      "filename": "results/dyck_languages_results.json",
+      "status": "modified",
+      "additions": 1954,
+      "deletions": 2976,
+      "changes": 4930,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fdyck_languages_results.json",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fdyck_languages_results.json",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/results%2Fdyck_languages_results.json?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf"
+    },
+    {
+      "sha": "08d06437d538c2a221d0e7bc0dedd1ea7846626c",
+      "filename": "results/multistep_arithmetic_two_results.json",
+      "status": "modified",
+      "additions": 2426,
+      "deletions": 3448,
+      "changes": 5874,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fmultistep_arithmetic_two_results.json",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fmultistep_arithmetic_two_results.json",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/results%2Fmultistep_arithmetic_two_results.json?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf"
+    },
+    {
+      "sha": "b6ca874764058a88ffc4f683e85fb9d808330ad7",
+      "filename": "results/old_splits/boolean_expressions_results_old_splits.json",
+      "status": "added",
+      "additions": 3606,
+      "deletions": 0,
+      "changes": 3606,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fold_splits%2Fboolean_expressions_results_old_splits.json",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fold_splits%2Fboolean_expressions_results_old_splits.json",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/results%2Fold_splits%2Fboolean_expressions_results_old_splits.json?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf"
+    },
+    {
+      "sha": "7f0d1b8797638962beaca825c6553311c3ffd4f9",
+      "filename": "results/old_splits/dyck_languages_results_old_splits.json",
+      "status": "added",
+      "additions": 3606,
+      "deletions": 0,
+      "changes": 3606,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fold_splits%2Fdyck_languages_results_old_splits.json",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fold_splits%2Fdyck_languages_results_old_splits.json",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/results%2Fold_splits%2Fdyck_languages_results_old_splits.json?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf"
+    },
+    {
+      "sha": "59d9dbb73f1e8457c5cefdbb6d14fa5010354212",
+      "filename": "results/old_splits/multistep_arithmetic_two_results_old_splits.json",
+      "status": "added",
+      "additions": 3606,
+      "deletions": 0,
+      "changes": 3606,
+      "blob_url": "https://github.com/kbwal/rl-next-tokens/blob/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fold_splits%2Fmultistep_arithmetic_two_results_old_splits.json",
+      "raw_url": "https://github.com/kbwal/rl-next-tokens/raw/5c6cd2fb617ca117caeba1828addd1a63d6501cf/results%2Fold_splits%2Fmultistep_arithmetic_two_results_old_splits.json",
+      "contents_url": "https://api.github.com/repos/kbwal/rl-next-tokens/contents/results%2Fold_splits%2Fmultistep_arithmetic_two_results_old_splits.json?ref=5c6cd2fb617ca117caeba1828addd1a63d6501cf"
+    }
+  ]
+}

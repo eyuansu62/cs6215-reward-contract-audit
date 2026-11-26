@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-08T15:29:32.526438+00:00",
+  "files_sha256": {
+    "run_downstream.py": "18388978f7cb90b443b8b3a26a1ea10cade2fe4986d307544590c0f51b70d0c3",
+    "tools/downstream.py": "b0de7b4b933105f3e53e42e733285e96136d7489b86bb6419c931ce813c458e6",
+    "tools/test_downstream.py": "7b6d2ea84ecc8716405c47de83d1e38f38a39c5337f63a5b6f0ed44efc5969f9",
+    "protocol/design.json": "e62b0cd6658b304708faad3b12307a899b33b1965367763de833ba098d903ba1",
+    "downstream-method-freeze.json": "233bea8f896625243234a2ba2e8aeb80905647989f093681af8ea4b96ae73cbb",
+    "collection/source-units.json": "02ec500fc53c5b12a70af9f958c8d871e5004d57706c6a80f3d50c51a8bda44d",
+    "collection/source-unit-provenance.json": "f7da9c56f745835fb09ed19291c0fe6d2ffb202351eb3d7468a4ccb85d228226",
+    "collection/canonical-reference-evidence.json": "3e54c37298969e8d6d4bd3e7d2ade5586acfbe01a6974b5f0729b494e556112f",
+    "collection/source-preparation-checks.json": "59a74c17c213d3fe8425c385d9cefd50f0961cac266050a56fc982b0860bfaa0",
+    "collection/prepare_source_units.py": "7bcf217ba1ddb60758d3a4ec39f3476ae81766796f03a8c75433c2e4bec1ad80",
+    "results/condition-inputs.json": "d13be057f8ee4a1c364307789664d2a7a2cf369b6647c99d23dc012453ed421b",
+    "results/model-response-freeze.json": "96548066b9f89362d1f05d08591e7bb0ec5427ca40dde9b93c86f357975f6ba5"
+  },
+  "extraction_freeze_sha256": "2271f85f77ff26b263d0b543ad43c3ed2dd087e53286698a0a51e34120ea6828",
+  "frozen_before_downstream_predictions": true,
+  "source_preparation_executed_targets": false
+}

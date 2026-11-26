@@ -1,0 +1,61 @@
+{
+  "sha": "5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+  "node_id": "C_kwDOTGxsLtoAKDVkMzBmYzdlY2MyMGQ4OThhNmU0ZWU1YjFmOTljYTU1Y2Q5NDAwNGE",
+  "commit": {
+    "author": {
+      "name": "zzx",
+      "email": "[email omitted]",
+      "date": "2026-09-21T16:19:50Z"
+    },
+    "committer": {
+      "name": "zzx",
+      "email": "[email omitted]",
+      "date": "2026-09-21T16:19:50Z"
+    },
+    "message": "anonymous",
+    "tree": {
+      "sha": "98330d3ba3876a96c5d76ba0c60b1a7438905778",
+      "url": "https://api.github.com/repos/zzx-peter/Multiple-Solution-TTRL/git/trees/98330d3ba3876a96c5d76ba0c60b1a7438905778"
+    },
+    "url": "https://api.github.com/repos/zzx-peter/Multiple-Solution-TTRL/git/commits/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/zzx-peter/Multiple-Solution-TTRL/commits/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+  "html_url": "https://github.com/zzx-peter/Multiple-Solution-TTRL/commit/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+  "comments_url": "https://api.github.com/repos/zzx-peter/Multiple-Solution-TTRL/commits/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "249582443055bf2492b36e6533ede32c40c7015d",
+      "url": "https://api.github.com/repos/zzx-peter/Multiple-Solution-TTRL/commits/249582443055bf2492b36e6533ede32c40c7015d",
+      "html_url": "https://github.com/zzx-peter/Multiple-Solution-TTRL/commit/249582443055bf2492b36e6533ede32c40c7015d"
+    }
+  ],
+  "stats": {
+    "total": 8,
+    "additions": 1,
+    "deletions": 7
+  },
+  "files": [
+    {
+      "sha": "8fec9e3098a398040048f07bb43b1fd5d2add079",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 7,
+      "changes": 8,
+      "blob_url": "https://github.com/zzx-peter/Multiple-Solution-TTRL/blob/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/README.md",
+      "raw_url": "https://github.com/zzx-peter/Multiple-Solution-TTRL/raw/5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a/README.md",
+      "contents_url": "https://api.github.com/repos/zzx-peter/Multiple-Solution-TTRL/contents/README.md?ref=5d30fc7ecc20d898a6e4ee5b1f99ca55cd94004a",
+      "patch": "@@ -192,10 +192,4 @@ verl/trainer/ppo/rare_valid_metrics.py                                 rare-vali\n verl/trainer/ppo/ray_trainer.py                                        verifier integration\n verl/utils/reward_score/mace_math/                                     MACE-MATH reward\n examples/mode_collapse/msttrl-hopper/                                  MSTTRL experiments\n-~~~\n-\n-## References\n-\n-- verl: https://github.com/verl-project/verl\n-- TTRL: https://arxiv.org/abs/2504.16084\n-- Repository: https://github.com/zzx-peter/Multiple-Solution-TTRL\n+~~~\n\\ No newline at end of file"
+    }
+  ]
+}

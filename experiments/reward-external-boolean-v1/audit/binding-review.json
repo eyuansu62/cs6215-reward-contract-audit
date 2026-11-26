@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-11-09T02:52:02.956526+00:00",
+  "passed": true,
+  "stage": "binding_design_and_synthetic_implementation_pass",
+  "reviewer": "Independent native Codex subagent; no external candidate source/model output accessed",
+  "blocking_findings": [],
+  "authorization_scope": "Only source-grounded native function parameter and one-level literal-key scalar bindings. No answer encoding, reward transformation, scorer source rewriting, helper/operation/library model or obligation-predicate expansion.",
+  "checks": {
+    "binding_selectors_exact_and_signature_parameter_validated": true,
+    "candidate_reference_same_selector_or_scalar_mapping_contradiction_rejected": true,
+    "same_native_mapping_distinct_fields_supported": true,
+    "mapping_container_bare_alias_unrelated_field_or_reassignment_Unknown": true,
+    "scalar_assignments_preserve_original_candidate_reference_obligation_semantics": true,
+    "builtin_shadowing_keeps_old_Unknown_policy": true,
+    "native_source_bytes_not_renamed_rewritten_or_wrapped": true,
+    "logical_IR_obligation_list_unchanged": true,
+    "binding_metadata_part_of_actual_consumer_input_fingerprint": true,
+    "only_active_obligations_evaluated_and_reported": true,
+    "global_API_no_reward_probe_or_labels": true,
+    "witness_API_no_observed_reward": true,
+    "old_v2_IR_checker_and_legacy_module_hash_pinned": true,
+    "source_identity_not_classification_condition": true,
+    "no_new_encoding_parser_batch_or_result_coercion": true
+  },
+  "independent_tests": {
+    "suite_test_methods_passed": 18,
+    "additional_authored_synthetic_checks_passed": 8,
+    "extra_evidence": "audit/binding-independent-synthetics.json",
+    "source_programs_executed": false,
+    "external_project_source_read": false,
+    "models_called": 0
+  },
+  "implementation_simplification": "Owner deleted unused duplicate preparation helper after independent review; final diff leaves one validation/preparation path and no behavior expansion.",
+  "limits": [
+    "Actual caller/source evidence establishing native scalar domains and canonical True/False references is collection responsibility; metadata flags alone do not prove runtime inputs.",
+    "Binding model assumes native mappings with declared literal keys and native scalar values; aliases of whole mappings are intentionally unmodeled.",
+    "Default and nonnominated parameters remain unmodeled if evaluated.",
+    "Scalar reassignment is interpreted by the existing Term environment, not rebound to original values; mapping reassignment is rejected conservatively.",
+    "Unknown helpers, effects, variadics, hidden self state, unsupported operators and returns remain Unknown.",
+    "This review establishes bounded binding behavior on synthetic regressions, not independent task detection or LLM benefits."
+  ],
+  "reviewed_files_sha256": {
+    "protocol/binding-plan.json": "47fbf6a32216a4d56099f889373d51ef31cf6c69a957ac69d4928e47a53e4af2",
+    "native_binding.py": "d2a4c32e807352ead28e98d9aa73767ce2aa7d006481e8db4451dd0342a03328",
+    "tests/test_native_binding.py": "444c4184ccf86af43981ab6e4854efaad1539fefd2b1ed06e2bdd8c360f3fe62",
+    "audit/binding-ready.json": "dff8f16686ef7aa00fbb332caae4c77ad5549cb75fd96ad22ff4b51251f6b362",
+    "audit/binding-independent-synthetics.json": "cecb528f9aefa8e6a69ddd1ab44b11c22203c29de69cc432b73bb84adbb8885f"
+  },
+  "reviewer_actions": {
+    "new_model_or_target_execution": false,
+    "new_project_content_inspection": false,
+    "network": false,
+    "implementation_or_frozen_file_edits": false
+  }
+}

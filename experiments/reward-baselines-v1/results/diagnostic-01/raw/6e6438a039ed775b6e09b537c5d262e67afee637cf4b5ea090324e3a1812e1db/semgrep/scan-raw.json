@@ -1,0 +1,143 @@
+{
+  "version": "1.183.0",
+  "results": [
+    {
+      "check_id": "reward-bool-truthiness-equality",
+      "path": "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/diagnostic-01/raw/6e6438a039ed775b6e09b537c5d262e67afee637cf4b5ea090324e3a1812e1db/semgrep/source.py",
+      "start": {
+        "line": 2,
+        "col": 31,
+        "offset": 69
+      },
+      "end": {
+        "line": 2,
+        "col": 68,
+        "offset": 106
+      },
+      "extra": {
+        "metavars": {
+          "$CANDIDATE": {
+            "start": {
+              "line": 2,
+              "col": 36,
+              "offset": 74
+            },
+            "end": {
+              "line": 2,
+              "col": 42,
+              "offset": 80
+            },
+            "abstract_content": "answer"
+          },
+          "$REFERENCE": {
+            "start": {
+              "line": 2,
+              "col": 52,
+              "offset": 90
+            },
+            "end": {
+              "line": 2,
+              "col": 67,
+              "offset": 105
+            },
+            "abstract_content": "entry['answer']"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Truthiness equality can award full credit to unequal Boolean strings.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "$ARTIFACT_ROOT/experiments/reward-baselines-v1/results/diagnostic-01/raw/6e6438a039ed775b6e09b537c5d262e67afee637cf4b5ea090324e3a1812e1db/semgrep/source.py"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 0.00036215782165527344,
+    "profiling_times": {},
+    "parsing_time": {
+      "total_time": 0.003958940505981445,
+      "per_file_time": {
+        "mean": 0.003958940505981445,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.005496978759765625,
+      "per_file_time": {
+        "mean": 0.005496978759765625,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0014109611511230469,
+      "per_file_and_rule_time": {
+        "mean": 0.0014109611511230469,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 1.0,
+      "rules_selected_ratio": 0.3333333333333333,
+      "rules_matched_ratio": 0.3333333333333333
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 93792512
+  },
+  "rules_by_engine": [
+    [
+      "reward-bool-truthiness-equality",
+      "OSS"
+    ],
+    [
+      "reward-nonfinite-exp-clamp",
+      "OSS"
+    ],
+    [
+      "reward-prefix-shorter-length-ratio",
+      "OSS"
+    ]
+  ],
+  "engine_requested": "OSS",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "profiling_results": []
+}

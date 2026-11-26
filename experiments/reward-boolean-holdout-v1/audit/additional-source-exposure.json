@@ -1,0 +1,29 @@
+{
+  "role": "Supplementary failed candidate-location search, not a selected dataset or result source",
+  "purpose": "Check whether public search exposes an immediately usable alternate native answer/entry Boolean reward interface after initial candidate shortage.",
+  "queries": [
+    "github score_answer True False entry reward excluding prior tasknames",
+    "github reward_fn answer entry True False"
+  ],
+  "selected_functions_from_search": 0,
+  "model_or_analyzer_calls": 0,
+  "additional_content_exposure": [
+    {
+      "url": "https://github.com/open-thought/reasoning-gym/blob/main/reasoning_gym/games/countdown.py",
+      "kind": "Unpinned current-main excerpt in search results; non-Boolean arithmetic-expression task, not used in snapshot census conclusions."
+    },
+    {
+      "url": "https://github.com/open-thought/reasoning-gym/issues/528",
+      "kind": "Issue snippet about propositional-expression scoring seen after that module was already excluded; no bug label derived or used."
+    },
+    {
+      "url": "https://github.com/NovaSky-AI/SkyRL/pull/160/files",
+      "kind": "Integration wrapper snippet; no own compatible task scorer selected."
+    },
+    {
+      "url": "https://github.com/iandonaldson/bio-mystery-bench/blob/main/documents/code_walkthroughs/code_flow.md",
+      "kind": "Documentation snippet with different API, not a canonical Boolean task/scorer selected."
+    }
+  ],
+  "limitations": "No claimed broader project survey or verified alternative; existing current study stays same pinned Reasoning Gym scope. Search snippets do not establish source labels or runtime properties."
+}

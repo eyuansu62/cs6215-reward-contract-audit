@@ -1,0 +1,5 @@
+{
+  "files_checked": 96,
+  "high_confidence_secret_shape_matches": [],
+  "limits": "Shape scan only; not a complete confidentiality assessment. Raw service logs retain original local paths and startup diagnostics. No credentials/endpoint values printed or tested."
+}

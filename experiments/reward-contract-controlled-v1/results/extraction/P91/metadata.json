@@ -1,0 +1,39 @@
+{
+  "task_id": "P91",
+  "created_utc": "2026-11-13T02:46:07.449964+00:00",
+  "status": "complete",
+  "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16",
+  "preflight_sha256": "b3ab3525ec241bc01d447b53ecf0fec89073df290e7fa14354a69c232ce635c3",
+  "request_attempted": true,
+  "successful_model_turns": 1,
+  "completed_turns_observed": 1,
+  "prompt_sha256": "d2df740037aa9c2b2cbb045637caf6b7d34371faa64754942b770d19aa19835c",
+  "model_reported": null,
+  "no_retries": true,
+  "no_obligations_repaired": true,
+  "label_family_source_reference_contract_and_results_excluded": true,
+  "cli_version": "codex-cli 0.147.0",
+  "wall_seconds": 7.5947,
+  "returncode": 0,
+  "model_identity_note": "Observed default service; exact identity remains unknown if not exposed. Temperature/seed not recorded.",
+  "observed_completed_usage": {
+    "input_tokens": 27268,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 164,
+    "reasoning_output_tokens": 0
+  },
+  "usage": {
+    "input_tokens": 27268,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 164,
+    "reasoning_output_tokens": 0
+  },
+  "event_count": 4,
+  "accepted_tool_actions": 0,
+  "response_sha256": "ca8ea5f91be893833bfba1abdf07e4b4ba5722a2ad40fb18c42497da4e82ffaa",
+  "selected_obligations": [
+    "valid_boolean_token"
+  ]
+}

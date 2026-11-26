@@ -1,0 +1,17 @@
+{
+  "command": [
+    "$ARTIFACT_ROOT/work/semgrep-tool/distribution/semgrep-1.183.0.data/purelib/semgrep/bin/semgrep-core",
+    "-json_nodots",
+    "-j",
+    "1",
+    "-timeout",
+    "10",
+    "-lang",
+    "python",
+    "-rules",
+    "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/1-7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/coverage-rules.json",
+    "$ARTIFACT_ROOT/experiments/reward-contract-loop-v1/results/run-01/bridge-omitted_equality/raw/1-7529c2f054f26971d0bb205a466f5e5bbd59f01991647d22d2da495343e4a10b/semgrep/source.py"
+  ],
+  "timeout_seconds": 30,
+  "returncode": 0
+}

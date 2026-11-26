@@ -1,0 +1,42 @@
+{
+  "semgrep_synthetic_tests": {
+    "passed": 28,
+    "source_unchanged_since_combined_47_test_pass": true
+  },
+  "symbolic_synthetic_tests": {
+    "passed": 28,
+    "log": "development/symbolic/synthetic-tests.txt",
+    "includes_all_pre_freeze_review_blocker_regressions": true
+  },
+  "protocol_scoring_tests": {
+    "passed": 5
+  },
+  "total_test_methods_passed": 61,
+  "py_compile_passed": true,
+  "primary_predictions_run": false,
+  "dataset_integrity_passed": {
+    "frozen_files": 176,
+    "source_files": 28,
+    "exact_method_ASTs": 12,
+    "no_target_execution": true
+  },
+  "environment": {
+    "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "preserved_artifacts_sha256": {
+    "datasets/reasoning-gym-reward-v1.zip": "35d974538ac87f7bb7419512632dd9d97ffed2387dc474c84f1901b07841d880",
+    "datasets/reasoning-gym-reward-v1/dataset-freeze.json": "174a493fdb19d4c3fe7b05ebfa65d2fb7f8ab6c0c909111045e22def454e6cfb",
+    "outputs/main-experiment-v10.zip": "1ec556817897134f2c9f46f53ef9771caf251ef2394998c604aa00f9a391ed32"
+  },
+  "source_hashes": {
+    "prepare_inputs.py": "32b7d1aef06f525a7aa76294a6aad36b46afd7687ed05466d9872890196561af",
+    "run_baselines.py": "211da806e4c9b092031652d54689a9d000f1dfa0d432dad8040bc8b64355e32a",
+    "test_study.py": "355bb8eaac02db7e2d98da705e61320b4a8e5a5fb66c652f3a304600c6f1fe5e",
+    "tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+    "tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+    "tools/test_semgrep_baseline.py": "ecdd607446186c788540a7b44902293c6176026a13255e50e41970ce22d2ff51",
+    "tools/test_symbolic_baseline.py": "2a2653686e307048ee77d1668388f7464f20d7239a77f99c6167720e2151181b"
+  }
+}

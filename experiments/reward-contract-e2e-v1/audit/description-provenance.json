@@ -1,0 +1,17 @@
+{
+  "role": "Source provenance not supplied to extraction model",
+  "source_file": "datasets/reasoning-gym-reward-v1/upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+  "source_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+  "source_commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "question_assignment_lines": [
+    358,
+    362
+  ],
+  "source_expression": "question = (\n            f\"This is a 'Game of Life' grid. We consider a game halted if there are no cells alive.\\n\"\n            f\"Will this game halt at or before {self.config.max_simulation_steps} steps? Assume a Moore neighborhood and wrapping topology. If it will halt, reply 'True'. If it won't halt, reply 'False'.\\n\\n\"\n            f\"Initial board:\\n{board_str}\"\n        )",
+  "placeholder_substitutions": {
+    "self.config.max_simulation_steps": "max_steps",
+    "board_str": "initial_board"
+  },
+  "source_AST_extracted_without_execution": true,
+  "task_and_source_already_exposed_development": true
+}

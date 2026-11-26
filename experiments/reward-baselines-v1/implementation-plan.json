@@ -1,0 +1,8 @@
+{
+  "scope": "One small non-neural baseline characterization, not a new general analyzer.",
+  "cleanup_plan": "Reuse existing pinnedSemgrep execution/logging and generic source integrity; implement a separate minimal return-contract checker rather than patch prompt-only v10. Lock behavior with synthetic guard/alias/unknown regressions before main run.",
+  "owners": "Root:protocol,source-only projection,scoring,freeze,report/replay. Separate agents own Semgrep and symbolic implementations/tests.",
+  "no_new_dependencies": true,
+  "noLLM": true,
+  "no_post_result_tuning": true
+}

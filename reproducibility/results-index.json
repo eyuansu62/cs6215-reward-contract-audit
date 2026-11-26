@@ -1,0 +1,313 @@
+{
+  "schema": "reward-contract-final-saved-result-index-v1",
+  "A_known_RG_contracts": {
+    "source": "experiments/reward-baselines-v1/results/primary-01/scores.json",
+    "unit": "source-exposed function-version/contract case",
+    "cases": 7,
+    "families": 5,
+    "positive_labels": 3,
+    "negative_labels": 4,
+    "methods": {
+      "semgrep": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "unknown_positive": 0,
+        "unknown_negative": 0,
+        "correct": 7,
+        "total": 7
+      },
+      "symbolic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "unknown_positive": 2,
+        "unknown_negative": 1,
+        "correct": 4,
+        "total": 7
+      }
+    },
+    "neural_method_tested_in_this_stage": false
+  },
+  "A_authored_diagnostics": {
+    "source": "experiments/reward-baselines-v1/results/diagnostic-01/scores.json",
+    "cases": 8,
+    "methods": {
+      "semgrep": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 1,
+        "tn": 2,
+        "unknown_positive": 0,
+        "unknown_negative": 0,
+        "correct": 4,
+        "total": 8
+      },
+      "symbolic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "unknown_positive": 2,
+        "unknown_negative": 2,
+        "correct": 4,
+        "total": 8
+      }
+    },
+    "unit": "authored synthetic diagnostic; separate from real cases and no neural gain claim"
+  },
+  "B_description_pilot": {
+    "source": "experiments/reward-contract-extraction-v1/comparison/summary.json",
+    "tasks": 6,
+    "schema_valid_responses": 6,
+    "strictly_accepted_responses": 5,
+    "field_groups": 60,
+    "keep": 59,
+    "confirmed_substantive_edits": 0,
+    "uncertain": 1,
+    "protocol_evidence_rejected_task": "T05",
+    "supported_projections": 3,
+    "distinct_supported_detector_inputs": 1,
+    "distinct_scorer_bodies": 3,
+    "inherited_scorer_tasks": 4,
+    "changed_downstream_method_verdicts": 0,
+    "human_effort_measured": false,
+    "reference_authorship": "AI-assisted researcher reference"
+  },
+  "C_development_interface": {
+    "sources": [
+      "experiments/reward-contract-loop-v1/results/run-01/summary.json",
+      "experiments/reward-contract-loop-v2/results/run-01/summary.json"
+    ],
+    "bug_families": 1,
+    "versions": 2,
+    "probes": 3,
+    "conditions": 3,
+    "witness_contract_rows": 18,
+    "nonmissing_static_reward_rows": 12,
+    "missing_contract_Unknown_rows": 6,
+    "old_projection_reintroduced_equality": true,
+    "explicit_v2_preserves_omission": true,
+    "experimental_model_turns": 0
+  },
+  "D_known_case_LLM_integration": {
+    "source": "experiments/reward-contract-e2e-v1/results/run-01/summary.json",
+    "task_templates": 1,
+    "experimental_model_turns": 1,
+    "selected_atoms": [
+      "valid_boolean_token",
+      "equals_reference"
+    ],
+    "paired_witness_version_inputs": 6,
+    "condition_rows": 12,
+    "same_verdict_pairs": 6,
+    "same_violated_ID_pairs": 6,
+    "raw_contract_preserved": true,
+    "held_out_bug_evaluation": false
+  },
+  "E_RG_eligibility_audit": {
+    "source": "experiments/reward-boolean-holdout-v1/results/status.json",
+    "candidate_modules": 8,
+    "parsed_source_files": 122,
+    "Dataset_suffix_classes_including_base_composite": 108,
+    "own_score_definitions": 75,
+    "selected_cases": 0,
+    "experiment_started": false,
+    "performance_metrics": null
+  },
+  "F_HELM_policy_transfer": {
+    "source": "experiments/reward-external-boolean-v1/results/run-01/summary.json",
+    "project_count": 1,
+    "task_templates": 1,
+    "related_metric_implementations": 3,
+    "experimental_model_turns": 1,
+    "reference_contract": null,
+    "model_atoms": [
+      "valid_boolean_token",
+      "equals_reference"
+    ],
+    "native_return_rows": 42,
+    "condition_witness_rows": 84,
+    "source_global_counts": {
+      "reference": {
+        "unknown": 3
+      },
+      "llm": {
+        "unknown": 3
+      }
+    },
+    "Semgrep_counts": {
+      "no_alarm": 3
+    },
+    "per_metric_native_counts": {
+      "H01": {
+        "native_return_rows": 14,
+        "full_rewards": 2,
+        "conditional_policy_incompatibilities": 0,
+        "probe_ids": []
+      },
+      "H02": {
+        "native_return_rows": 14,
+        "full_rewards": 6,
+        "conditional_policy_incompatibilities": 4,
+        "probe_ids": [
+          "true-article",
+          "true-punctuation",
+          "false-article",
+          "false-punctuation"
+        ]
+      },
+      "H03": {
+        "native_return_rows": 14,
+        "full_rewards": 6,
+        "conditional_policy_incompatibilities": 4,
+        "probe_ids": [
+          "true-suffix",
+          "true-punctuation",
+          "false-suffix",
+          "false-punctuation"
+        ]
+      }
+    },
+    "conditional_policy_incompatibilities": 8,
+    "eligible_reference_model_pairs": 0,
+    "quality_metrics": null,
+    "qualification": "Native interface probes, not actual CivilComments examples. Intentional normalization/prefix leniency is not an adjudicated upstream bug. Reference abstention is not a negative contract label."
+  },
+  "resources": {
+    "completed_experimental_model_turns": 8,
+    "input_tokens": 205819,
+    "cached_input_tokens": 18048,
+    "output_tokens": 1987,
+    "reasoning_output_tokens": 55,
+    "sum_request_wall_seconds": 72.743,
+    "pre_model_initialization_failures_not_counted": 1,
+    "exact_model_identity_known": false,
+    "scope": "Experimental-request subtotal only. Includes one completed but evidence-rejected pilot response. Excludes earlier v10, ideation, source research, coding, review and report-writing AI usage; not an account-billing total.",
+    "requests": [
+      {
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T01/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 26288,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 322,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 11.2492,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T02/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24322,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 253,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 9.443,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T03/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 26314,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 266,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 9.5875,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T04/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24272,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 180,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.4208,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T05/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "failed",
+        "usage": {
+          "input_tokens": 26344,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 365,
+          "reasoning_output_tokens": 55
+        },
+        "wall_seconds": 11.347,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-contract-extraction-v1/results/extraction-02/T06/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 24264,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 218,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.9322,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-contract-e2e-v1/results/extraction-01/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 27044,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 197,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.4625,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      },
+      {
+        "metadata": "experiments/reward-external-boolean-v1/results/extraction-01/metadata.json",
+        "completed_model_turns": 1,
+        "response_status": "complete",
+        "usage": {
+          "input_tokens": 26971,
+          "cached_input_tokens": 18048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 186,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 8.3008,
+        "model_reported": null,
+        "cli_version": "codex-cli 0.147.0"
+      }
+    ]
+  },
+  "scope": "Do not sum stages, probes, paired variants, replays, field groups or test counts as independent tasks. Legacy v10 leakage results are not reward-contract accuracy."
+}

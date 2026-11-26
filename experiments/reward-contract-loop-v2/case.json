@@ -1,0 +1,105 @@
+{
+  "created_utc": "2026-11-08T16:14:56.065299+00:00",
+  "scope": "Same known #544/PR561 development case. Only explicit Boolean obligations/interface changed.",
+  "predecessor_method_sha256": "b348f4aaf047c23f2e864aea540329a50f63b3d920bc499533c8fb694b6c35c9",
+  "predecessor_artifact_manifest_sha256": "31ab8de098dca9de14a9e3d4bdac4560f490ded0b27361bf51fb715a8f40626d",
+  "issue": {
+    "url": "https://github.com/open-thought/reasoning-gym/issues/544",
+    "title": "Game of Life halting Boolean truthiness scoring bug",
+    "evidence": "datasets/reasoning-gym-reward-v1/collection/issue-544.json"
+  },
+  "repair": {
+    "url": "https://github.com/open-thought/reasoning-gym/pull/561",
+    "status": "Proposed upstream repair in frozen snapshot; not a verified merged release",
+    "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0"
+  },
+  "versions": [
+    {
+      "id": "rg-issue-544-original",
+      "version": "original",
+      "commit": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+      "module": "upstream/issue_snapshot/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+      "score_source": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and bool(answer) == bool(entry[\"answer\"]):\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0\n",
+      "method_ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-issue-544-original/score_answer.py",
+          "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+          "ast_sha256": "4a056afdc8aa83739d03e25993ca4309aa5d642f24f4e81925e286f7948b5630",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "4829ebb77385c3259c3162418772636583464418c18615804f2c721057fc0196",
+            "module_sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "version": "proposed_repair",
+      "commit": "4ab6143b1858f5bf09ebe23501a8ffd77c86cdf0",
+      "module": "upstream/pr561/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+      "score_source": "    def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n\n        if answer is not None and answer.strip().lower() == entry[\"answer\"].strip().lower():\n            # python's bool conversion is very tolerant and normally doesn't raise exceptions\n            return 1.0\n        return 0.0\n",
+      "method_ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+      "extracted_methods": [
+        {
+          "name": "score_answer",
+          "source_path": "extracted/rg-pr-561-proposed-repair/score_answer.py",
+          "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+          "ast_sha256": "26ea90437c72335f604a1a94c8bbb8fb618e46b9dff8748d9b9101feff3455eb",
+          "extraction": {
+            "qualified_name": "GameOfLifeHaltingDataset.score_answer",
+            "start_line": 385,
+            "end_line": 401,
+            "source_sha256": "f4ebbe739135f7a108ef60c34f68aef07728254b6557b0862f25aac67c4d0a8b",
+            "module_sha256": "32e9d08d8d886956cf4cabcd3bdf5acddaa54fe2386732e95b1306a85052f542",
+            "entry_async": false,
+            "ast_identity_verified": true,
+            "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+          }
+        }
+      ]
+    }
+  ],
+  "probes": [
+    "counterexamples/opposite-false",
+    "counterexamples/nonboolean-banana",
+    "normal_controls/exact-true"
+  ],
+  "primary_witness": {
+    "probe_id": "counterexamples/opposite-false",
+    "answer": "False",
+    "entry": {
+      "answer": "True"
+    },
+    "original_reward": 1.0,
+    "repair_reward": 0.0
+  },
+  "primary_fixture_origin": "Reported opposite-token failure with curated minimal native entry; not a newly generated Game of Life board. Trusted reference interface is conditional; generator correctness is not tested.",
+  "changes": [
+    "Explicit valid_boolean_token / equals_reference obligation list",
+    "Select/certify/refute each active obligation using preserved AST/native Boolean path theory",
+    "Attribute supplied witness results to active violated obligation IDs"
+  ],
+  "unchanged": [
+    "Task/scorer/helper/generator sources",
+    "Frozen old static engines and Semgrep rules",
+    "Original datasets/results/manifests/archives",
+    "Existing AST operations, supported library models and purity guards"
+  ],
+  "limits": [
+    "One known development bug family, not new generalization evidence",
+    "Source-level equal-reference guard may imply validity logically; it does not activate an omitted equality obligation",
+    "Whole-source valid-only contract can still Alarm on banana",
+    "Missing-spec Unknown is wrapper policy; observed zero reward is not full credit",
+    "No experimental LLM requests or causal human-effort measurements"
+  ]
+}

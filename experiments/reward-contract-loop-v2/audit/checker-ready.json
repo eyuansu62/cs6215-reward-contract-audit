@@ -1,0 +1,32 @@
+{
+  "status": "freeze_ready_reviewed",
+  "files_sha256": {
+    "boolean_checker.py": "a0218e6474606af3841dd96212fad7c3327dee9a14f8940a7184b13e95dd7705",
+    "tests/test_boolean_checker.py": "3481ade0cb358b98061f4ad2c4db75131245d1d02e72dc9b7913de290a9611ab"
+  },
+  "legacy_sha256": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+  "synthetic_test_methods_passed": 16,
+  "py_compile_passed": true,
+  "primary_case_calls": 0,
+  "target_executions": 0,
+  "new_model_requests": 0,
+  "implementation": "Hash-imported legacy AST/Term/path theory; per-active-obligation proof and counterexample hooks only. Stored/hashed consumer contract is explicit IR, not legacy combined contract.",
+  "interfaces": {
+    "analyze": "analyze(unit, contract) -> alarm/no_alarm/unknown + active_obligations/per_obligation/alarm_obligations/compiled_contract/input_fingerprint",
+    "check_witness": "check_witness(unit, contract, answer, reference) -> reward from modeled source paths + full_credit_violation/no_violation_for_this_witness/unknown, per_obligation, violated_obligations, source_spans"
+  },
+  "scope_limits": [
+    "Single exact source function only; helpers/fixed-parameter modeling not added",
+    "Loaded self state, mutation, unknown calls, unmodeled AST operators and exception uncertainty stay Unknown",
+    "Global absence of finitely searched witnesses never proves safety",
+    "Trusted reference canonicality is a supplied source-preparation obligation",
+    "Internal legacy Boolean kind selects native input field/truthiness models only; both full-credit decision hooks overridden"
+  ],
+  "review_regression_fixed": "Large native integer literal no longer passed to math.isfinite float conversion; valid compiled contract status survives unsupported source",
+  "independent_synthetic_recheck": {
+    "passed": true,
+    "checks": 12,
+    "no_additional_blockers": true,
+    "source": "contract_loop_review message and audit/independent-synthetics.json"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "preserved_pre_model_initialization_failure",
+  "task_id": "T01",
+  "events_bytes": 0,
+  "successful_model_turns_in_failed_attempt": 0,
+  "reason": "CLI could not initialize read-only state database/in-process app-server client under shell sandbox",
+  "retry": "Same frozen prompt/schema in extraction-02/T01 with reviewed host permission; no model response existed to tune against",
+  "failure_files_sha256": {
+    "command.json": "61ee9749db76dba38cdc6d86b697f197c4fe0c66b289f08134633b7646342dff",
+    "events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metadata.json": "54586a9cac65cefbb9f426804ecc4c2243eab89d047b2026bdc7a8c546fd6f69",
+    "prompt.txt": "47ae86360ab38615c5f928ab3d92d0b7454a528706b9b67c78c588a9c23a87ca",
+    "request.json": "ea45e9f612b3d45ab30206f83f193b1b49c5e37c4079896904f291def3fb6971",
+    "transport.stderr.txt": "b4a33d362fd354b911622483f2a302f3a47b6650deec3babd80ab00ffb5dfc97"
+  },
+  "interpretation": "metadata model_called denotes command attempt, not proof of model completion; successful calls counted from turn.completed audit"
+}

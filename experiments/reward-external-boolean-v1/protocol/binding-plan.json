@@ -1,0 +1,13 @@
+{
+  "authorization": "User explicitly allowed only source-grounded parameter/reference-field bindings. Scoring logic, True/False encoding, obligation predicates and analysis capabilities remain unchanged.",
+  "frozen_logical_IR": "boolean-obligations-v1; logical answer and entry.answer; native string/None and trusted canonical True/False string; strip/lower and reward>=1",
+  "native_binding": {
+    "candidate": "Native function parameter, or one literal-key field in a native parameter mapping",
+    "reference": "Native function parameter containing canonical reference scalar, or one literal-key field in a native parameter mapping",
+    "source": "Exact upstream scoring function AST; never rename source, create wrapper, inline helper, slice batch or convert output encodings."
+  },
+  "consumer": "Import and hash-check existing v2 checker/IR and underlying old AST theory. Narrow subclass maps only proven source parameter/field reads to existing candidate/reference Terms; separate wrapper preserves existing per-obligation certificates/counterexamples and Unknown policy. No operation or library model additions.",
+  "limits": ["Only direct parameter or one-level literal-key mapping bindings", "No list indexing/batch flattening, boxed/XML parser substitution, bool conversion, new helper semantics, result-dict coercion or reward transformation", "Unsupported signature/state/call stays Unknown", "Repeated or contradictory bindings rejected", "Same mapping parameter may provide two distinct fields; unrelated fields not modeled", "Active obligations copied exactly from LLM; no default completion"],
+  "evaluation": "Fresh actual bare True/False tasks with original independent reward implementations. Reference contracts fixed before model outputs, input probes fixed before detector outcomes. Semgrep remains unfiltered native source-pattern baseline. Pure symbolic control uses same bound source engine with reference obligations, LLM condition differs only in chosen obligations.",
+  "no_other_features": true
+}

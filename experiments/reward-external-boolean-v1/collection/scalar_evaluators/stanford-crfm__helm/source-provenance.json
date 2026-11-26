@@ -1,0 +1,26 @@
+{
+  "repo": "stanford-crfm/helm",
+  "commit": "63754d05db6f874e41a395880fb573890a13e791",
+  "native_role": "evaluation scalar metrics, not asserted RL-training rewards",
+  "records": [
+    {
+      "path": "src/helm/benchmark/metrics/basic_metrics.py",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/metrics/basic_metrics.py",
+      "sha256": "df2d4cd261492fc16590c910596b38655d8d8ab89a306c9d75d6de63717ebd79",
+      "bytes": 30547
+    },
+    {
+      "path": "src/helm/benchmark/scenarios/big_bench_scenario.py",
+      "status": "fetched",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/63754d05db6f874e41a395880fb573890a13e791/src/helm/benchmark/scenarios/big_bench_scenario.py",
+      "sha256": "f78dccf94b787e746956508f02c9cccf4ca74100a1624cab44415d4842a7e9d9",
+      "bytes": 8150
+    },
+    {
+      "path": "src/helm/benchmark/run_specs.py",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+  ]
+}

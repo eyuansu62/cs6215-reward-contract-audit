@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-11-09T04:15:22.139861+00:00",
+  "stage": "prepared_awaiting_dataset_type_choice",
+  "main_study_completed": false,
+  "native_parameter_field_binding_user_approved": true,
+  "evaluation_metric_dataset_choice_pending": true,
+  "primary_model_requests": 0,
+  "primary_Semgrep_scans": 0,
+  "primary_symbolic_runs": 0,
+  "primary_target_executions": 0,
+  "primary_metrics": null,
+  "synthetic_tests_passed": 40,
+  "compilation_passed": true,
+  "previous_payloads_preserved": 3116,
+  "preserved_archives": {
+    "experiments/reward-boolean-holdout-v1.zip": "ad74c4b3c75f67e39aac42a66c9121650c41eb3cddbdeb60b97956ebce8ecf85",
+    "experiments/reward-contract-e2e-v1.zip": "2b95123837b60e95c65d35bc798d6d389fa4729d3a1fbc00a132029adc74f57b",
+    "experiments/reward-contract-loop-v2.zip": "e42c983d75d820ceae49f6068605d642ac27c7bbc099ba5826907ff28f5335f4"
+  },
+  "binding_method_freeze_sha256": "d6b6d22749f552e8bc44fb172215cd87892a794f8764cb96bbb5f765c8364b9d",
+  "review_sha256": "252b739378182a1c638db8a32e7c7f7f400d35ace38065b25f156c3818a4584e",
+  "preparation_sha256": "5ea91157345ab8b480a6ba8acd733092d303fdd715f2b04b9853591dfb858489",
+  "pending_scope_and_reference_draft_not_main_result": true,
+  "next_allowed_action_after_explicit_choice": "If evaluation scorers accepted, formally amend scope/record choice, freeze source/reference/method before any model/analysis/target output; otherwise keep eligibility exclusions and seek only training reward."
+}

@@ -1,0 +1,47 @@
+{
+  "task_id": "T03",
+  "status": "extracted",
+  "answer_kind": "boolean",
+  "boolean_tokens": {
+    "true": "True",
+    "false": "False"
+  },
+  "collection_element_kind": null,
+  "order_requirement": "not_applicable",
+  "output_format_requirements": [
+    "Return the Boolean token True or False."
+  ],
+  "full_credit_requirements": [
+    "Return True exactly when all courses can be completed while satisfying every prerequisite pair (a_i, b_i), meaning course b_i must be taken before course a_i.",
+    "Return False otherwise, including when the prerequisite constraints make completion of all courses impossible."
+  ],
+  "allowed_normalizations": [],
+  "numeric_tolerance": null,
+  "partial_credit_policy": "unspecified",
+  "partial_credit_details": null,
+  "not_specified": [
+    "Case or whitespace normalization",
+    "Alternative Boolean spellings or encodings",
+    "Partial-credit or reward policy",
+    "Parser behavior"
+  ],
+  "evidence": [
+    {
+      "field": "answer_kind",
+      "quote": "Return True if you can finish all courses considering the prerequisites, or False otherwise."
+    },
+    {
+      "field": "boolean_tokens",
+      "quote": "True"
+    },
+    {
+      "field": "boolean_tokens",
+      "quote": "False"
+    },
+    {
+      "field": "full_credit_requirements",
+      "quote": "prerequisites[i] = (a_i, b_i) indicates that you must first take course b_i if you want to take course a_i"
+    }
+  ],
+  "abstention_reason": null
+}

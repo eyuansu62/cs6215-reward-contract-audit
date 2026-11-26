@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0-independent-protocol-review",
+  "created_utc": "2026-11-08T14:19:10.167086+00:00",
+  "reviewer": "Independent Codex native subagent; protocol/label review, no detector implementation or target execution",
+  "verdict": "pass_for_bounded_source_exposed_fixed_contract_characterization",
+  "blocking_findings": [],
+  "scope": {
+    "primary_function_version_contract_cases": 7,
+    "positive_cases": 3,
+    "negative_cases": 4,
+    "function_families": 5,
+    "projects": 1,
+    "proposed_open_repair_negatives": 2,
+    "property_scoped_normal_controls": 2,
+    "qualified_group_anagrams_excluded": true,
+    "split": "development_source_exposed",
+    "reward_threshold": 1.0,
+    "target": "Existence of a source-compatible normal return >=1 whose declared full-credit requirement is false."
+  },
+  "checks": [
+    {
+      "check": "Frozen contracts, evaluation, oracle and dataset-freeze hashes match current bytes",
+      "passed": true
+    },
+    {
+      "check": "Primary IDs, family and contract assignments agree between protocol, original subjects and oracle",
+      "passed": true
+    },
+    {
+      "check": "Three original positive labels have independently reviewed full-reward counterexamples; labels precede detector outputs",
+      "passed": true
+    },
+    {
+      "check": "Negative labels have source-level basis for the specific target, not merely absence of findings in a finite probe set",
+      "passed": true
+    },
+    {
+      "check": "All positive rewards below one can be legitimate partial credit; they are not full-credit violations",
+      "passed": true
+    },
+    {
+      "check": "Exceptions are not full-reward returns; unsupported exception reasoning cannot imply safety",
+      "passed": true
+    },
+    {
+      "check": "Unknown is reported separately, never TN, and positive Unknown remains a recall miss",
+      "passed": true
+    },
+    {
+      "check": "Semgrep no_alarm is a completed pattern scan, not a semantic proof; symbolic no_alarm requires a bounded guard/path certificate",
+      "passed": true
+    },
+    {
+      "check": "Protocol gives both methods the same exact source/helpers and fixed structured contract while excluding witnesses, rewards, issue/PR metadata, dispositions and ID-based classification",
+      "passed": true
+    },
+    {
+      "check": "Contracts are supplied reviewed specifications; no LLM contract acquisition, neural gain or held-out generalization claim",
+      "passed": true
+    },
+    {
+      "check": "Detector implementation, actual input projection, frozen runner and final metrics",
+      "passed": null,
+      "status": "Not part of this preimplementation audit; inspect separately before relying on resulting comparison."
+    }
+  ],
+  "contract_label_basis": [
+    {
+      "contract": "C_PROBABILITY_FULL",
+      "cases": [
+        "rg-issue-543-original"
+      ],
+      "conclusion": "Positive. Prefix matching divides by the shorter canonical string, so a wrong prefix can return one despite error above the fixed tolerance. The independent dataset review already validates concrete label witnesses.",
+      "limit": "Contract concerns full credit, not a unique repaired partial-credit curve; use tol=1e-4 as fixed native default."
+    },
+    {
+      "contract": "C_BOOLEAN_FULL",
+      "cases": [
+        "rg-issue-544-original",
+        "rg-pr-561-proposed-repair"
+      ],
+      "conclusion": "Original positive: truthiness of nonempty strings does not imply Boolean-token equality. Proposed repair negative for this property: a full return is guarded by normalized candidate/reference equality and the trusted reference is True/False.",
+      "limit": "Does not verify Game of Life board dynamics, generator correctness or merged repair status."
+    },
+    {
+      "contract": "C_COMPLEX_FINITE",
+      "cases": [
+        "rg-issue-545-original",
+        "rg-pr-562-proposed-repair"
+      ],
+      "conclusion": "Original positive: min(1.0, exp(-NaN)) can return one. Proposed repair rejects nonfinite distance before its normal reward return; under a finite trusted reference, a nonfinite parsed component cannot pass that distance guard.",
+      "limit": "Only finite parseability is the tested necessary condition. Exact correctness of all finite answers, parser completeness, numerical totality and global repair correctness are not labels."
+    },
+    {
+      "contract": "C_PALINDROME_FULL",
+      "cases": [
+        "control-palindrome-validity-main"
+      ],
+      "conclusion": "Scoped negative. Full return is reached only after normalized reversal equality and exact sorted-letter multiset equality; earlier partial returns are below one.",
+      "limit": "Trusted nonempty lowercase ASCII letter multiset; not a universal no-bug claim."
+    },
+    {
+      "contract": "C_PRIME_FACTORS_FULL",
+      "cases": [
+        "control-prime-factorization-main"
+      ],
+      "conclusion": "Scoped negative. Full reward requires equality of normalized native-integer factor lists to the trusted prime factorization, which implies primality, equal product and multiplicity. Other numeric branches return 0.5 or 0.01.",
+      "limit": "Missing/invalid token exceptions do not establish a fail-open; permissive empty separators are declared normalization."
+    }
+  ],
+  "information_parity_assessment": {
+    "protocol_as_written": "No material asymmetry or label circularity found. Both methods may use contract identity/semantics, but neither may classify from subject IDs, gold labels, saved witnesses/rewards, issue disposition or a case table.",
+    "implementation_gate": "Check the actual source-only projection and each adapter/checker for forbidden-field reads and case-ID branches. Contract parameters must actually reach both methods; a contract-aware implementation versus an uninformed scanner must not be presented as an equal-information comparison.",
+    "manual_contract_limit": "Supplied reviewed contracts remove contract-acquisition uncertainty. Any later advantage concerns these implementations with these supplied specifications, not LLM inference or neural necessity."
+  },
+  "nonblocking_findings": [
+    {
+      "id": "explicit-default-tolerance",
+      "severity": "precision",
+      "finding": "Probability scorer exposes a tol parameter while the protocol contract fixes 0.0001.",
+      "recommendation": "State in the source projection/runner assumptions that tol uses the native default 1e-4 and is not adversary-controlled. This is already strongly implied by absolute_tolerance and saved evidence."
+    }
+  ],
+  "review_actions": {
+    "target_modules_imported": false,
+    "target_methods_executed": false,
+    "detectors_or_models_executed": false,
+    "network_used": false,
+    "new_dependencies": false,
+    "original_dataset_modified": false,
+    "predictions_used_for_review": false,
+    "selected_scoring_and_helper_source_read": true
+  },
+  "limits": [
+    "Seven correlated cases from five families in one source-exposed project are development characterization, not an independent benchmark.",
+    "Original/repair variants and the 63 archived probes are correlated; the probes are label-validation evidence, not detector inputs or independent classification units.",
+    "PR561/562 remain open proposals; negative labels cover stated properties only. GroupAnagrams remains excluded.",
+    "Pure scorer/helpers and declared native assumptions are the boundary; no outer wrapper, package import, RL training or general arbitrary-Python proof.",
+    "Hash checks verify current contents; freeze chronology is a protocol/process assertion rather than a cryptographic timestamp attestation."
+  ],
+  "reviewed_files_sha256": {
+    "experiments/reward-baselines-v1/protocol/contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+    "experiments/reward-baselines-v1/protocol/evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab",
+    "experiments/reward-baselines-v1/protocol/contracts-evaluation-freeze.json": "b2a688633864a35e702b9ab0536a5ddf08a7f54d44e20f3171df02d1bfec7e0e",
+    "experiments/reward-baselines-v1/implementation-plan.json": "6b1cd9678b876a8fa9d7780fddcddb422489cb5f7d5223e2a47d80847f0b61ea",
+    "experiments/reward-baselines-v1/evaluation/oracle.json": "1fb258b1dd0780177b8b714982e6135307d3339a45b44ae288a840571771a371",
+    "datasets/reasoning-gym-reward-v1/dataset.json": "10ffd252098d3b0cd54cbdad68e3fbb396510d9122d48b4e79e349519a3ab798",
+    "datasets/reasoning-gym-reward-v1/subjects.json": "949216119a343b5182567dfabcda61be5cdc1f144dd8e9b8e726ff95bfa0df15",
+    "datasets/reasoning-gym-reward-v1/contracts.json": "4e45b4cc66dd38ff5a4789c9f20a4443d2a8dbd810c549810a35bf395786a98f",
+    "datasets/reasoning-gym-reward-v1/evidence.json": "95a28af37eff23572a688945b704516743ad860936314d26e59dd60ea7919c43",
+    "datasets/reasoning-gym-reward-v1/audit/independent-review.json": "464c3910bdbeb5ae1d9fc8d9a99a3501529ca20939318219a855278154680ae1"
+  }
+}

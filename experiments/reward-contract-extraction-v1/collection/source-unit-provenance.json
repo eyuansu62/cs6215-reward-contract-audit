@@ -1,0 +1,158 @@
+{
+  "units": [
+    {
+      "task_id": "T01",
+      "task_class": "IsomorphicStringsDataset",
+      "task_source_path": "reasoning_gym/algorithmic/isomorphic_strings.py",
+      "task_source_sha256": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76",
+      "scorer_qualified_name": "ProceduralDataset.score_answer",
+      "scorer_inherited": true,
+      "scorer_previously_exposed": true,
+      "scorer_origin_path": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/dataset.py",
+      "scorer_origin_sha256": "6e29c6f83cba9174631bd0fd10b86c5fbdd9de5904ace54d2554c92ee80371b4",
+      "scorer_span": [
+        63,
+        72
+      ],
+      "scorer_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+      "score_fragment_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "combined_source_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "helpers": [],
+      "source_preparation": {
+        "status": "complete",
+        "unsupported_reasons": []
+      }
+    },
+    {
+      "task_id": "T02",
+      "task_class": "RansomNoteDataset",
+      "task_source_path": "reasoning_gym/algorithmic/ransom_note.py",
+      "task_source_sha256": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866",
+      "scorer_qualified_name": "ProceduralDataset.score_answer",
+      "scorer_inherited": true,
+      "scorer_previously_exposed": true,
+      "scorer_origin_path": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/dataset.py",
+      "scorer_origin_sha256": "6e29c6f83cba9174631bd0fd10b86c5fbdd9de5904ace54d2554c92ee80371b4",
+      "scorer_span": [
+        63,
+        72
+      ],
+      "scorer_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+      "score_fragment_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "combined_source_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "helpers": [],
+      "source_preparation": {
+        "status": "complete",
+        "unsupported_reasons": []
+      }
+    },
+    {
+      "task_id": "T03",
+      "task_class": "CourseScheduleDataset",
+      "task_source_path": "reasoning_gym/graphs/course_schedule.py",
+      "task_source_sha256": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c",
+      "scorer_qualified_name": "ProceduralDataset.score_answer",
+      "scorer_inherited": true,
+      "scorer_previously_exposed": true,
+      "scorer_origin_path": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/dataset.py",
+      "scorer_origin_sha256": "6e29c6f83cba9174631bd0fd10b86c5fbdd9de5904ace54d2554c92ee80371b4",
+      "scorer_span": [
+        63,
+        72
+      ],
+      "scorer_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+      "score_fragment_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "combined_source_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "helpers": [],
+      "source_preparation": {
+        "status": "complete",
+        "unsupported_reasons": []
+      }
+    },
+    {
+      "task_id": "T04",
+      "task_class": "CountPrimesDataset",
+      "task_source_path": "reasoning_gym/algorithmic/count_primes.py",
+      "task_source_sha256": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd",
+      "scorer_qualified_name": "ProceduralDataset.score_answer",
+      "scorer_inherited": true,
+      "scorer_previously_exposed": true,
+      "scorer_origin_path": "datasets/reasoning-gym-reward-v1/upstream/main/reasoning_gym/dataset.py",
+      "scorer_origin_sha256": "6e29c6f83cba9174631bd0fd10b86c5fbdd9de5904ace54d2554c92ee80371b4",
+      "scorer_span": [
+        63,
+        72
+      ],
+      "scorer_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+      "score_fragment_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "combined_source_sha256": "8fbaeb6559b1d3a54589319a4e6eddab95c0c541fd641d7af9744a1acbbfa7d5",
+      "helpers": [],
+      "source_preparation": {
+        "status": "complete",
+        "unsupported_reasons": []
+      }
+    },
+    {
+      "task_id": "T05",
+      "task_class": "NumberSortingDataset",
+      "task_source_path": "reasoning_gym/algorithmic/number_sorting.py",
+      "task_source_sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+      "scorer_qualified_name": "NumberSortingDataset.score_answer",
+      "scorer_inherited": false,
+      "scorer_previously_exposed": false,
+      "scorer_origin_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/algorithmic/number_sorting.py",
+      "scorer_origin_sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1",
+      "scorer_span": [
+        102,
+        162
+      ],
+      "scorer_ast_sha256": "03664ee09ca3260c1b3e696843ff7aea28c388e3142e6736a79ba88c1b3739c8",
+      "score_fragment_sha256": "2217a3ef80c4a45a70f9a6619b6d586fd1ca9678213f8a1bb8a086fdeb876229",
+      "combined_source_sha256": "2217a3ef80c4a45a70f9a6619b6d586fd1ca9678213f8a1bb8a086fdeb876229",
+      "helpers": [],
+      "source_preparation": {
+        "status": "unknown",
+        "unsupported_reasons": [
+          "Dynamic callable semantics retained without execution: eval"
+        ]
+      }
+    },
+    {
+      "task_id": "T06",
+      "task_class": "FractionSimplificationDataset",
+      "task_source_path": "reasoning_gym/arithmetic/fraction_simplification.py",
+      "task_source_sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab",
+      "scorer_qualified_name": "FractionSimplificationDataset.score_answer",
+      "scorer_inherited": false,
+      "scorer_previously_exposed": false,
+      "scorer_origin_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/arithmetic/fraction_simplification.py",
+      "scorer_origin_sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab",
+      "scorer_span": [
+        147,
+        162
+      ],
+      "scorer_ast_sha256": "084fc8c7c954f4932b20b458d4475689d5755e121560e61c43ab276257fbc07b",
+      "score_fragment_sha256": "b5d67e54fcfd8147434e4f3819082839d844553ba46b5ffb6717f4e05057fa88",
+      "combined_source_sha256": "678c474b36351185fe43d4a5178957e91e49a525ccf3852e673d3d1c714ecca4",
+      "helpers": [
+        {
+          "name": "_extract_fraction",
+          "origin_class": "FractionSimplificationDataset",
+          "source_path": "experiments/reward-contract-extraction-v1/collection/sealed-upstream/reasoning_gym/arithmetic/fraction_simplification.py",
+          "source_span": [
+            135,
+            145
+          ],
+          "fragment_sha256": "c52ccea217d5013adebf14f9479aeb3b810df27287edea70b381ff717b03052b"
+        }
+      ],
+      "source_preparation": {
+        "status": "complete",
+        "unsupported_reasons": []
+      }
+    }
+  ],
+  "distinct_scorer_bodies": 3,
+  "previously_exposed_shared_scorer_units": 4,
+  "source_units_sha256": "02ec500fc53c5b12a70af9f958c8d871e5004d57706c6a80f3d50c51a8bda44d"
+}

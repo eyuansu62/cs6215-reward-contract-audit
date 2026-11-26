@@ -1,0 +1,1415 @@
+{
+  "rows": [
+    {
+      "unit_id": "H01",
+      "probe_id": "true-correct",
+      "answer": "True",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-opposite",
+      "answer": "False",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-invalid",
+      "answer": "banana",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-empty",
+      "answer": "",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-suffix",
+      "answer": "True extra",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-article",
+      "answer": "the True",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "true-punctuation",
+      "answer": "True!",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-correct",
+      "answer": "False",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-opposite",
+      "answer": "True",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-invalid",
+      "answer": "banana",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-empty",
+      "answer": "",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-suffix",
+      "answer": "False extra",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-article",
+      "answer": "the False",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H01",
+      "probe_id": "false-punctuation",
+      "answer": "False!",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-correct",
+      "answer": "True",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-opposite",
+      "answer": "False",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-invalid",
+      "answer": "banana",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-empty",
+      "answer": "",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-suffix",
+      "answer": "True extra",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-article",
+      "answer": "the True",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "true-punctuation",
+      "answer": "True!",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-correct",
+      "answer": "False",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-opposite",
+      "answer": "True",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-invalid",
+      "answer": "banana",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-empty",
+      "answer": "",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-suffix",
+      "answer": "False extra",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-article",
+      "answer": "the False",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H02",
+      "probe_id": "false-punctuation",
+      "answer": "False!",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "helpers_or_fixed_parameters_outside_minimal_boolean_scope",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-correct",
+      "answer": "True",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-opposite",
+      "answer": "False",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-invalid",
+      "answer": "banana",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-empty",
+      "answer": "",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-suffix",
+      "answer": "True extra",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-article",
+      "answer": "the True",
+      "reference": "True",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "true-punctuation",
+      "answer": "True!",
+      "reference": "True",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-correct",
+      "answer": "False",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": true,
+          "full_credit_event": true,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-opposite",
+      "answer": "True",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": true,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-invalid",
+      "answer": "banana",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-empty",
+      "answer": "",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-suffix",
+      "answer": "False extra",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-article",
+      "answer": "the False",
+      "reference": "False",
+      "native_reward": 0,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "no_violation_for_this_witness",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": false,
+          "violated": false
+        }
+      ],
+      "model_violated_obligations": [],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    },
+    {
+      "unit_id": "H03",
+      "probe_id": "false-punctuation",
+      "answer": "False!",
+      "reference": "False",
+      "native_reward": 1,
+      "reference_contract_status": "abstained",
+      "reference_oracle_verdict": "unknown",
+      "reference_static_verdict": "unknown",
+      "model_oracle_verdict": "full_credit_violation",
+      "model_active_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_per_obligation": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        },
+        {
+          "obligation_id": "equals_reference",
+          "predicate_satisfied": false,
+          "full_credit_event": true,
+          "violated": true
+        }
+      ],
+      "model_violated_obligations": [
+        "valid_boolean_token",
+        "equals_reference"
+      ],
+      "model_static_verdict": "unknown",
+      "model_static_reason": "witness_has_an_unsupported_or_exceptional_possible_path",
+      "interpretation": "Conditional on unvalidated strict model proposal; native declared leniency is not an adjudicated upstream bug."
+    }
+  ],
+  "unit": "42 native scalar boundary probes across3correlated metric implementations; one question template, not42independenttasks."
+}

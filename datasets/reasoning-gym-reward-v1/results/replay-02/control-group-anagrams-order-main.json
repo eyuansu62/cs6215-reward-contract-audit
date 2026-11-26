@@ -1,0 +1,400 @@
+{
+  "id": "control-group-anagrams-order-main",
+  "family_id": "GroupAnagramsDataset.score_answer",
+  "kind": "normal_control",
+  "source_file": "upstream/main/reasoning_gym/algorithmic/group_anagrams.py",
+  "source_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+  "extracted_methods": [
+    {
+      "name": "_sort_nested_list",
+      "source_path": "extracted/control-group-anagrams-order-main/_sort_nested_list.py",
+      "source_sha256": "f9bf93062ffb17a6f5e76a5da364e14c00229900322f8f2830c4bb4eb03f96ec",
+      "ast_sha256": "e71e8121e893ea6c4ad688cdd8ec7719f396ca36b61d42bcb0481327f54e375b",
+      "extraction": {
+        "qualified_name": "GroupAnagramsDataset._sort_nested_list",
+        "start_line": 67,
+        "end_line": 69,
+        "source_sha256": "f9bf93062ffb17a6f5e76a5da364e14c00229900322f8f2830c4bb4eb03f96ec",
+        "module_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    },
+    {
+      "name": "score_answer",
+      "source_path": "extracted/control-group-anagrams-order-main/score_answer.py",
+      "source_sha256": "a9f4a4026ba2589cbda5576381ad62f2813e0e931ae7e511093e4fc197cf5182",
+      "ast_sha256": "86e18b876068ca355beec75be86c324dabd1fdb71084334aafc60ae10fd557ad",
+      "extraction": {
+        "qualified_name": "GroupAnagramsDataset.score_answer",
+        "start_line": 88,
+        "end_line": 103,
+        "source_sha256": "a9f4a4026ba2589cbda5576381ad62f2813e0e931ae7e511093e4fc197cf5182",
+        "module_sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c",
+        "entry_async": false,
+        "ast_identity_verified": true,
+        "transformation": "code-prefix dedent only; string interiors retained; whole AST identical"
+      }
+    }
+  ],
+  "evidence_level": "extracted_real_method_executed",
+  "all_source_expectations_matched": true,
+  "full_credit_violating_probes": 0,
+  "probes": [
+    {
+      "id": "g-valid-reference",
+      "role": "normal_control_probe",
+      "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-group-anagrams-order-main",
+        "--probe",
+        "g-valid-reference"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "g-valid-reordered",
+      "role": "normal_control_probe",
+      "answer": "[[\"tan\", \"nat\"], [\"tea\", \"eat\"]]",
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 1.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 1.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": true,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-group-anagrams-order-main",
+        "--probe",
+        "g-valid-reordered"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "g-wrong-partition",
+      "role": "normal_control_probe",
+      "answer": "[[\"eat\", \"tan\"], [\"tea\", \"nat\"]]",
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.01,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.01
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-group-anagrams-order-main",
+        "--probe",
+        "g-wrong-partition"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "g-missing-word",
+      "role": "normal_control_probe",
+      "answer": "[[\"eat\", \"tea\"], [\"nat\"]]",
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.01,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.01
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-group-anagrams-order-main",
+        "--probe",
+        "g-missing-word"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "g-invalid-json",
+      "role": "normal_control_probe",
+      "answer": "not JSON",
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-group-anagrams-order-main",
+        "--probe",
+        "g-invalid-json"
+      ],
+      "stderr": ""
+    },
+    {
+      "id": "g-missing",
+      "role": "normal_control_probe",
+      "answer": null,
+      "entry": {
+        "question": "An anagram is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\nYour job is to group the anagrams together. You can return the answer in any order.\n\nThe output is a list of lists of strings, where each outer list contains a group of anagrams, e.g. [[\"eat\", \"tea\"], [\"tan\", \"nat\"]].\n\nGroup the following list of words into anagrams:\n[\"eat\", \"tea\", \"tan\", \"nat\"]\n",
+        "answer": "[[\"eat\", \"tea\"], [\"nat\", \"tan\"]]",
+        "metadata": {
+          "source_dataset": "group_anagrams",
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "nat"
+          ],
+          "solution": [
+            [
+              "eat",
+              "tea"
+            ],
+            [
+              "nat",
+              "tan"
+            ]
+          ],
+          "anagram_groups": 2
+        }
+      },
+      "observed": {
+        "kind": "returned",
+        "reward": 0.0,
+        "python_type": "float",
+        "entry_unchanged": true,
+        "source_AST_identity_verified": true,
+        "upstream_module_imported": false,
+        "upstream_constructor_or_generator_executed": false
+      },
+      "expected_source_behavior": {
+        "equals": 0.0
+      },
+      "source_behavior_matches": true,
+      "declared_contract_expectation": null,
+      "declared_expectation_satisfied": null,
+      "independent_full_credit_predicate_satisfied": false,
+      "full_credit_contract_violation_observed": false,
+      "original_bug_probe": false,
+      "command": [
+        "$HOMEBREW/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "$ARTIFACT_ROOT/datasets/reasoning-gym-reward-v1/repro/reproduce.py",
+        "worker",
+        "--case",
+        "control-group-anagrams-order-main",
+        "--probe",
+        "g-missing"
+      ],
+      "stderr": ""
+    }
+  ]
+}

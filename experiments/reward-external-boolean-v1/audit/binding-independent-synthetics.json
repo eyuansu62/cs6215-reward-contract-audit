@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "builtin_parameter_shadow",
+      "source": "def reward(bool, r):\n    if bool(bool):\n        return 1\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "bool",
+          "field": null
+        },
+        "reference": {
+          "parameter": "r",
+          "field": null
+        }
+      },
+      "answer": "False",
+      "reference": "True",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "mapping_alias_mutation",
+      "source": "def reward(d):\n    alias = d\n    alias['ref'] = alias['pred']\n    return 1\n",
+      "binding": {
+        "candidate": {
+          "parameter": "d",
+          "field": "pred"
+        },
+        "reference": {
+          "parameter": "d",
+          "field": "ref"
+        }
+      },
+      "answer": "False",
+      "reference": "True",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "mapping_parameter_before_rebind",
+      "source": "def reward(d):\n    if d['pred'] == d['ref']:\n        return 1\n    d = None\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "d",
+          "field": "pred"
+        },
+        "reference": {
+          "parameter": "d",
+          "field": "ref"
+        }
+      },
+      "answer": "False",
+      "reference": "True",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "scalar_reference_clobber",
+      "source": "def reward(p, r):\n    r = p\n    if p == r:\n        return 1\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "p",
+          "field": null
+        },
+        "reference": {
+          "parameter": "r",
+          "field": null
+        }
+      },
+      "answer": "False",
+      "reference": "True",
+      "expected": "full_credit_violation",
+      "actual": "full_credit_violation"
+    },
+    {
+      "name": "candidate_mapped_reference_scalar",
+      "source": "def reward(d,r):\n    if d['pred'] == r:\n        return 1\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "d",
+          "field": "pred"
+        },
+        "reference": {
+          "parameter": "r",
+          "field": null
+        }
+      },
+      "answer": "True",
+      "reference": "True",
+      "expected": "no_violation_for_this_witness",
+      "actual": "no_violation_for_this_witness"
+    },
+    {
+      "name": "reference_field_otherkey",
+      "source": "def reward(p,d):\n    if p == d['other']:\n        return 1\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "p",
+          "field": null
+        },
+        "reference": {
+          "parameter": "d",
+          "field": "ref"
+        }
+      },
+      "answer": "True",
+      "reference": "True",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "scalar_candidate_self_assign",
+      "source": "def reward(p,r):\n    p = p\n    if p == r:\n        return 1\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "p",
+          "field": null
+        },
+        "reference": {
+          "parameter": "r",
+          "field": null
+        }
+      },
+      "answer": "False",
+      "reference": "True",
+      "expected": "no_violation_for_this_witness",
+      "actual": "no_violation_for_this_witness"
+    },
+    {
+      "name": "global_shadow_local_import",
+      "source": "def reward(p,r):\n    if bool(p):\n        return 1\n    import x as bool\n    return 0\n",
+      "binding": {
+        "candidate": {
+          "parameter": "p",
+          "field": null
+        },
+        "reference": {
+          "parameter": "r",
+          "field": null
+        }
+      },
+      "answer": "False",
+      "reference": "True",
+      "expected": "unknown",
+      "actual": "unknown"
+    }
+  ],
+  "source_programs_executed": false,
+  "new_project_sources_read": false
+}

@@ -1,0 +1,363 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-13T02:50:17.588168+00:00",
+  "reviewer": "controlled_pre_model_review native subagent",
+  "review_kind": "Independent saved-results audit without experimental reruns",
+  "method_freeze_sha256": "e41d4c6f41cdf2710b18626c680dd20ca1a3e9510ab2a2b231df6a795b18ef16",
+  "model_response_freeze_sha256": "53e4bd50a17cca13638a47f67efa608377e984448050bc2e815cb3afdc0a3ec3",
+  "preflight_sha256": "b3ab3525ec241bc01d447b53ecf0fec89073df290e7fa14354a69c232ce635c3",
+  "comparison_manifest_sha256": "d5b4191148539e135cdd47a6458e1f519ce523db0c05addd2cc271b7a2587953",
+  "reviewed_source_pins": {
+    "method_files": 20,
+    "model_sealed_files": 99,
+    "comparison_sealed_files": 33,
+    "preserved_dependencies": 5,
+    "all_match": true,
+    "pre_model_review_matches_method": true
+  },
+  "chronology": [
+    {
+      "file": "audit/pre-model-review.json",
+      "recorded_created_utc": "2026-11-13T02:45:25.303553+00:00",
+      "filesystem_mtime_utc": "2026-11-13T02:45:25.304371+00:00"
+    },
+    {
+      "file": "method-freeze.json",
+      "recorded_created_utc": "2026-11-13T02:45:43.311561+00:00",
+      "filesystem_mtime_utc": "2026-11-13T02:45:43.320962+00:00"
+    },
+    {
+      "file": "audit/preflight.json",
+      "recorded_created_utc": null,
+      "filesystem_mtime_utc": "2026-11-13T02:45:47.222084+00:00"
+    },
+    {
+      "file": "results/rule-extraction.json",
+      "recorded_created_utc": "2026-11-13T02:45:52.387439+00:00",
+      "filesystem_mtime_utc": "2026-11-13T02:45:52.388113+00:00"
+    },
+    {
+      "file": "results/batch-start.json",
+      "recorded_created_utc": "2026-11-13T02:46:07.442546+00:00",
+      "filesystem_mtime_utc": "2026-11-13T02:46:07.443337+00:00"
+    },
+    {
+      "file": "results/batch-finish.json",
+      "recorded_created_utc": "2026-11-13T02:46:40.281990+00:00",
+      "filesystem_mtime_utc": "2026-11-13T02:46:40.282137+00:00"
+    },
+    {
+      "file": "model-response-freeze.json",
+      "recorded_created_utc": "2026-11-13T02:46:40.283638+00:00",
+      "filesystem_mtime_utc": "2026-11-13T02:46:40.301712+00:00"
+    },
+    {
+      "file": "results/comparison/artifact-files-sha256.json",
+      "recorded_created_utc": null,
+      "filesystem_mtime_utc": "2026-11-13T02:46:47.814399+00:00"
+    }
+  ],
+  "chronology_qualification": "Recorded timestamps, filesystem order and hash dependencies consistently show review -> method freeze -> preflight -> rules -> model batch -> response seal -> comparison. This is an internal artifact audit, not an externally notarized chronology.",
+  "preflight": {
+    "passed": true,
+    "standard_combinations": 6,
+    "analyze_calls": 6,
+    "determinate_expected_matches": 6,
+    "global_verdicts": {
+      "alarm": 3,
+      "no_alarm": 3
+    },
+    "native_executions": 28,
+    "failure_reason": null
+  },
+  "model_admission": {
+    "requests": 12,
+    "successful_turns": 12,
+    "extracted": 8,
+    "abstained": 4,
+    "rejected": 0,
+    "failed": 0,
+    "tool_action_events": 0,
+    "distinct_ephemeral_directories": 12,
+    "raw_event_message_equals_response": true,
+    "raw_response_contract_equals_accepted_and_analyzed_contract": true,
+    "evidence_quotes_exact": true,
+    "evidence_policy_reading_reviewed": true,
+    "fixed_profile_preserved": true,
+    "explicit_payload_matches_frozen_description_only_boundary": true,
+    "all_E_responses_preserve_ordered_V_plus_E": true,
+    "one_recorded_attempt_per_card": true,
+    "no_recorded_orchestrator_retries": true
+  },
+  "usage": {
+    "reported_totals": {
+      "input_tokens": 303662,
+      "cached_input_tokens": 83328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1834,
+      "reasoning_output_tokens": 0
+    },
+    "cached_input_is_not_added_again_to_input": true,
+    "cli_version": "codex-cli 0.147.0",
+    "model_reported": null,
+    "model_null_records": 12,
+    "temperature": null,
+    "seed": null,
+    "monetary_cost": null,
+    "cost_reason": "No price, billing amount or exact model identity is exposed in the saved artifacts. Do not invent a dollar estimate.",
+    "batch_elapsed_seconds": 32.839444,
+    "summed_request_wall_seconds": 84.8577,
+    "parallelism": 3,
+    "implicit_service_context": "Not fully logged or independently verified; raw service input token counts exceed the explicit payload."
+  },
+  "independently_recomputed_conditions": {
+    "reference": {
+      "semantic_class_correct_cards": 12,
+      "semantic_class_denominator": 12,
+      "binary_confusion": {
+        "TP": 12,
+        "FP": 0,
+        "FN": 0,
+        "TN": 12,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 24,
+      "witness_supported_correct_cells": 24,
+      "nonnull_denominator": 24,
+      "U_valid_abstention_cells": 12,
+      "U_unjustified_contract_cells": 0,
+      "U_alarms": 0,
+      "U_administrative_denominator": 12,
+      "positive_unknown_cells": 0,
+      "positive_denominator_including_unknown": 12
+    },
+    "rules": {
+      "semantic_class_correct_cards": 5,
+      "semantic_class_denominator": 12,
+      "binary_confusion": {
+        "TP": 2,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1,
+        "Unknown": 21
+      },
+      "binary_correct_cells": 3,
+      "witness_supported_correct_cells": 3,
+      "nonnull_denominator": 24,
+      "U_valid_abstention_cells": 12,
+      "U_unjustified_contract_cells": 0,
+      "U_alarms": 0,
+      "U_administrative_denominator": 12,
+      "positive_unknown_cells": 10,
+      "positive_denominator_including_unknown": 12
+    },
+    "llm": {
+      "semantic_class_correct_cards": 12,
+      "semantic_class_denominator": 12,
+      "binary_confusion": {
+        "TP": 12,
+        "FP": 0,
+        "FN": 0,
+        "TN": 12,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 24,
+      "witness_supported_correct_cells": 24,
+      "nonnull_denominator": 24,
+      "U_valid_abstention_cells": 12,
+      "U_unjustified_contract_cells": 0,
+      "U_alarms": 0,
+      "U_administrative_denominator": 12,
+      "positive_unknown_cells": 0,
+      "positive_denominator_including_unknown": 12
+    },
+    "fixed_E": {
+      "semantic_class_correct_cards": 4,
+      "semantic_class_denominator": 12,
+      "binary_confusion": {
+        "TP": 12,
+        "FP": 4,
+        "FN": 0,
+        "TN": 8,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 20,
+      "witness_supported_correct_cells": 16,
+      "nonnull_denominator": 24,
+      "U_valid_abstention_cells": 0,
+      "U_unjustified_contract_cells": 12,
+      "U_alarms": 8,
+      "U_administrative_denominator": 12,
+      "positive_unknown_cells": 0,
+      "positive_denominator_including_unknown": 12
+    },
+    "fixed_V": {
+      "semantic_class_correct_cards": 4,
+      "semantic_class_denominator": 12,
+      "binary_confusion": {
+        "TP": 8,
+        "FP": 0,
+        "FN": 4,
+        "TN": 12,
+        "Unknown": 0
+      },
+      "binary_correct_cells": 20,
+      "witness_supported_correct_cells": 20,
+      "nonnull_denominator": 24,
+      "U_valid_abstention_cells": 0,
+      "U_unjustified_contract_cells": 12,
+      "U_alarms": 4,
+      "U_administrative_denominator": 12,
+      "positive_unknown_cells": 0,
+      "positive_denominator_including_unknown": 12
+    },
+    "fixed_null": {
+      "semantic_class_correct_cards": 4,
+      "semantic_class_denominator": 12,
+      "binary_confusion": {
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "Unknown": 24
+      },
+      "binary_correct_cells": 0,
+      "witness_supported_correct_cells": 0,
+      "nonnull_denominator": 24,
+      "U_valid_abstention_cells": 12,
+      "U_unjustified_contract_cells": 0,
+      "U_alarms": 0,
+      "U_administrative_denominator": 12,
+      "positive_unknown_cells": 12,
+      "positive_denominator_including_unknown": 12
+    }
+  },
+  "saved_evidence_checks": {
+    "global_rows": 216,
+    "raw_native_comparison_executions": 28,
+    "saved_witness_rows": 336,
+    "saved_witness_condition_decisions_recomputed": 2016,
+    "mismatches": 0,
+    "static_global_contracts_unchanged": true,
+    "native_rewards_checked_from_saved_stdout": true,
+    "native_inputs_match_witnesses": true,
+    "obligation_truth_recomputed_independently": true
+  },
+  "critical_witness_examples": [
+    {
+      "task_id": "P35",
+      "program_id": "truthiness",
+      "condition": "llm",
+      "gold_class": "V",
+      "binary_outcome": "TP",
+      "witness_supported": true,
+      "witnesses": [
+        {
+          "obligation_id": "valid_boolean_token",
+          "answer": "__not_a_boolean_token__",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-0a451cb4875e00da57af",
+          "predicate_truth": {
+            "valid_boolean_token": false,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": true,
+          "gold_class": "V"
+        }
+      ]
+    },
+    {
+      "task_id": "P35",
+      "program_id": "truthiness",
+      "condition": "fixed_E",
+      "gold_class": "V",
+      "binary_outcome": "TP",
+      "witness_supported": false,
+      "witnesses": [
+        {
+          "obligation_id": "equals_reference",
+          "answer": "False",
+          "reference": "True",
+          "native_reward": 1.0,
+          "native_execution_id": "native-549e9d65dcd11f0df90c",
+          "predicate_truth": {
+            "valid_boolean_token": true,
+            "equals_reference": false
+          },
+          "active_predicate_violated": true,
+          "gold_predicate_violated": false,
+          "gold_class": "V"
+        }
+      ]
+    }
+  ],
+  "paired_result": {
+    "nonnull_wins": 21,
+    "nonnull_ties": 3,
+    "nonnull_losses": 0,
+    "gain_source": "Seven additional nonnull descriptions extracted; every paired cell gain is Unknown to a correct determinate result. The rules made no incorrect determinate decision.",
+    "U_administrative_ties": 12,
+    "U_is_never_static_TN": true
+  },
+  "approved_bounded_claim": "In this single frozen controlled run, the LLM extractor matched all 12 researcher-assigned semantic classes, versus 5 for the fixed six-development-card rule baseline, and increased witness-supported correct determinate decisions from 3/24 to 24/24 repeated nonnull policy/program cells without added false positives, unjustified returned witnesses, or U-policy obligations. All 21 paired cell gains resolved baseline abstentions. This supports controlled contract-selection coverage gain only.",
+  "nonblocking_findings": [
+    "Saved stderr contains skills-install, models-cache and MCP-startup warnings/errors. All twelve commands still exit zero with one successful completed model turn and no model tool/action events. Do not claim error-free or fully hermetic service logs.",
+    "All exact model identity fields are null. Raw service usage is available but monetary cost, temperature, seed and full implicit service context are unverified.",
+    "Some evidence snippets rely on neighboring sentences for the complete necessity argument. Their exact substrings and full-description interpretation support the selected obligations; this is not machine-proved natural-language implication."
+  ],
+  "claim_limits": [
+    "Twelve authored descriptions across four linguistic families and three controlled source pairings; the 24 cells repeat only six nonnull semantic/program combinations.",
+    "The rules abstained on eleven cards: four justified U abstentions and seven missed nonnull contracts. The positive comparison is primarily coverage against this particular small-development-set baseline, not broad superiority over rule systems.",
+    "No new independent upstream bug discovery, static-engine improvement, real-world contract generalization, soundness theorem, human-effort reduction or iid statistical inference is supported.",
+    "No_alarm audits only necessary full-credit obligations. Equality under V and token_only on normalized variants can under-reward valid answers; those errors are outside this check.",
+    "Fixed E has four false positives plus four coincidental true positives whose returned equality witness does not violate gold V: 20/24 binary-correct cells become 16/24 witness-supported. Fixed V has four false negatives and 20/24 witness-supported cells.",
+    "U cells represent unsupported-policy administration; both extractors abstain correctly on all four U descriptions, while fixed policies impose unjustified obligations. U cells must not inflate binary TN counts."
+  ],
+  "review_actions": {
+    "model_calls": 0,
+    "analyzer_calls": 0,
+    "native_scorer_calls": 0,
+    "test_runs": 0,
+    "imports_of_study_modules": 0,
+    "method_edits": 0,
+    "new_subagents": 0,
+    "allowed_work": "Read saved bytes, recompute counts and predicates, validate hashes, and write only these two new review artifacts."
+  },
+  "open_blockers": [],
+  "reporting_delta_review": {
+    "passed": true,
+    "created_utc": "2026-11-13T02:53:01.097717+00:00",
+    "reviewed_files_sha256": {
+      "REPORT.md": "31e2aef94a75e3cc12628f3af179e6742c5facdff61b71b65fea5b348a605c6b",
+      "SUPPLEMENT.md": "8d38252e3c38928c543a67e150f043c8f306aba8a024391cbc896f96bd463d6d",
+      "analysis/resource-ledger.json": "67e6c3f3c2e4b1da82f0ebd75246377fe26948658a052783790fc6cdb6b4fece",
+      "figures/downstream-comparison.png": "152897c9f722f893cfafdfa34da5302c5b10e38695f794673a4b098b2c550d26"
+    },
+    "previous_review_json_sha256": "2e5f57ff66753061a722d128d1f3ca8ff2a914a73c5bbeae1698f1c27e3f9b81",
+    "previous_review_md_sha256": "34fa982acd534e2c8ddee15ef73df1daa0d17840828a78f64ac707c2e0cb04ea",
+    "scope": "Reporting-only review of the final Chinese report, English supplement, service resource ledger and displayed comparison figure; no experiment rerun or method edit.",
+    "verdict": "The final reports accurately support a bounded controlled coverage gain and preserve the required scientific limits.",
+    "checks": [
+      "Exact class and downstream counts match saved results: LLM 12/12 class and 24/24 supported cells; rules 5/12 class and 3/24 supported cells plus 21 Unknown.",
+      "All 21 paired gains are explicitly abstention-to-determinate: ten additional verified alarms and eleven necessary-condition certificates. No incorrect determinate rule verdict was corrected.",
+      "Fixed E separates 20 binary-correct from 16 witness-supported cells, including four false positives and four coincidental true positives with gold-nonviolating witnesses. Fixed V retains four false negatives.",
+      "Binary denominator is 24 nonnull cells, U has twelve administrative cells per condition, and Unknown is neither a TN nor silently removed from positive-recall denominators.",
+      "The reports state four linguistic families, six repeated semantic/program combinations, three constructed source pairings, six development cards, and the lack of independent-case or real-world generalization.",
+      "Parallel authoring and joint freeze are stated without inventing a strict rule-freeze-before-test-authoring chronology. AI-assisted authorship is not presented as independent human annotation.",
+      "Correct rule abstention labels on U are not presented as evidence that the rule understood the open-text policy.",
+      "Necessary-full-credit implications remain separate from complete reward-policy correctness, including under-rewarding examples.",
+      "All twelve resource-ledger rows match saved metadata. Totals, cached-input treatment, batch versus summed latency, unreported exact model/temperature/seed/cost and omitted design/review AI costs are clear.",
+      "Startup stderr warnings and limits of the implicit service context are disclosed; explicit request and event-audit claims are appropriately bounded.",
+      "The comparison image was visually inspected: bars start at zero, counts and denominators match the table, Unknown is separate, and binary correctness is distinct from the right-column witness-supported measure.",
+      "Final preservation artifact records all 47,285 prior files matching the initial snapshot. All twenty frozen method files remain unchanged during this reporting delta."
+    ],
+    "resolved_prose_items": [
+      "Added missing spaces around numbers in the English supplement.",
+      "Replaced the broad phrase about rule misclassification with the precise claim about incorrect determinate rule verdicts."
+    ],
+    "open_blockers": [],
+    "review_model_analyzer_native_test_calls": 0
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "labels": [
+    {
+      "id": "rg-issue-543-original",
+      "expected_violation": true,
+      "family": "rg-issue-543",
+      "contract_id": "C_PROBABILITY_FULL",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    },
+    {
+      "id": "rg-issue-544-original",
+      "expected_violation": true,
+      "family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    },
+    {
+      "id": "rg-issue-545-original",
+      "expected_violation": true,
+      "family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    },
+    {
+      "id": "rg-pr-561-proposed-repair",
+      "expected_violation": false,
+      "family": "rg-issue-544",
+      "contract_id": "C_BOOLEAN_FULL",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    },
+    {
+      "id": "rg-pr-562-proposed-repair",
+      "expected_violation": false,
+      "family": "rg-issue-545",
+      "contract_id": "C_COMPLEX_FINITE",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    },
+    {
+      "id": "control-palindrome-validity-main",
+      "expected_violation": false,
+      "family": "PalindromeDataset.score_answer",
+      "contract_id": "C_PALINDROME_FULL",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    },
+    {
+      "id": "control-prime-factorization-main",
+      "expected_violation": false,
+      "family": "PrimeFactorizationDataset.score_answer",
+      "contract_id": "C_PRIME_FACTORS_FULL",
+      "scope": "Stated full-credit contract only; development/source-exposed sample."
+    }
+  ],
+  "qualified_schema_diagnostic_excluded": true,
+  "basis": "Fixed curated source/contract and counterexample evidence, not detector outputs."
+}

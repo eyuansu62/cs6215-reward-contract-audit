@@ -1,0 +1,343 @@
+{
+  "created_utc": "2026-11-09T02:44:01.974264+00:00",
+  "lane": "RG-style external callbacks",
+  "repositories": 5,
+  "initial_path_attempts": 12,
+  "path_correction_fetches": 2,
+  "successful_text_files": 12,
+  "failed_initial_paths": 2,
+  "selected": [],
+  "eligible_functions": 0,
+  "records": [
+    {
+      "repository": "EnvCommons/ReasoningGym",
+      "commit": "460ae1a987c40d4bd9c1964566affb3daf99198f",
+      "eligible": false,
+      "selection": "excluded",
+      "reasons": [
+        "Real binary_score wrapper has dataset,answer,entry, but returns (reward,raw_score), invokes dataset scorer and text/number helper; extracting reward component would change boundary.",
+        "submit_answer is async/self-stateful and returns ToolOutput. Isomorphic task class delegates to inherited framework; no independent scalar callback selected."
+      ],
+      "source_records": [
+        {
+          "path": "raw/EnvCommons__ReasoningGym/algorithmic/isomorphic_strings.py",
+          "sha256": "a86ff744020df9b2a83b8da54f2d02ed054c9620803eff5cd7b799c28b649098",
+          "functions": [],
+          "delegated_score_calls": []
+        },
+        {
+          "path": "raw/EnvCommons__ReasoningGym/base_env.py",
+          "sha256": "58c5d19810a9d9793f090896f3b3f519754e7c6a498fb113e2f7893da98c1330",
+          "functions": [
+            {
+              "name": "binary_score",
+              "span": [
+                33,
+                47
+              ],
+              "arguments": [
+                "dataset",
+                "answer",
+                "entry"
+              ],
+              "async": false,
+              "source": "def binary_score(dataset, answer: str, entry: dict) -> tuple[float, float]:\n    \"\"\"(reward, raw score): the reward is 1.0 for a correct answer and 0.0 otherwise.\n\n    reasoning_gym's default scorer (ProceduralDataset.score_answer, kept by about a third of the\n    datasets) gives substring credit len(oracle)/len(answer): \"-18\" earns 0.67 against \"-1\". For\n    those datasets an answer counts only if it equals the oracle up to whitespace or is the same\n    decimal number. Datasets with their own scorer count only full marks: their partial credit\n    (a near miss, a wrong format, a valid but suboptimal solution) earns 0.\n    \"\"\"\n    raw = float(dataset.score_answer(answer=answer, entry=entry) or 0.0)\n    if type(dataset).score_answer is ProceduralDataset.score_answer:\n        correct = isinstance(answer, str) and _same_text_or_number(answer, str(entry[\"answer\"]))\n    else:\n        correct = raw >= 1.0 - 1e-9\n    return (1.0 if correct else 0.0), raw",
+              "full_ast_sha256": "7fb5a4251551af982ba00c0b76b0812525dff96a441f679b21520542658bfbfb",
+              "without_docs_annotations_ast_sha256": "f37b1fe077bd07d7e34da196623fcd3e316a7a13f81d67032d0352dd57546e84",
+              "exact_implementation_matches_previous": []
+            },
+            {
+              "name": "submit_answer",
+              "span": [
+                161,
+                204
+              ],
+              "arguments": [
+                "self",
+                "params"
+              ],
+              "async": true,
+              "source": "async def submit_answer(self, params: SubmitAnswerInput) -> ToolOutput:\n        \"\"\"Submit your answer for algorithmic verification.\n\n        The answer is checked algorithmically. The reward is 1.0 for a correct\n        answer and 0.0 otherwise; there is no partial credit.\n\n        Args:\n            params: Input containing the answer string\n\n        Returns:\n            ToolOutput with feedback, score, and metadata\n        \"\"\"\n        # Binary reward on top of reasoning-gym's algorithmic verification\n        score, raw_score = binary_score(self.dataset, params.answer, self.entry)\n        feedback = \"✅ Correct!\" if score == 1.0 else \"❌ Incorrect\"\n\n        # Include expected answer if available and answer is incorrect\n        expected = self.entry.get(\"answer\")\n        if expected is not None and score < 1.0:\n            feedback += f\"\\n\\nExpected answer: {expected}\"\n\n        # Build metadata for debugging and analysis\n        metadata = {\n            \"task_id\": self.task_id,\n            \"dataset\": self.DATASET_NAME,\n            \"submitted_answer\": params.answer,\n            \"expected_answer\": expected,\n            \"score\": score,\n            \"raw_score\": raw_score,\n        }\n\n        # Include example correct answer if provided in metadata (e.g., rubiks_cube)\n        if \"example_correct_answer\" in self.entry.get(\"metadata\", {}):\n            example_answer = self.entry[\"metadata\"][\"example_correct_answer\"]\n            metadata[\"example_correct_answer\"] = example_answer\n            if score < 1.0:\n                feedback += f\"\\n\\nExample correct answer: {example_answer}\"\n\n        return ToolOutput(\n            blocks=[TextBlock(text=feedback)],\n            metadata=metadata,\n            reward=score,\n            finished=True,\n        )",
+              "full_ast_sha256": "4b88fc9236cc0bcab8cdd95646ce2b54abbf6ad9649f9b5a7eee57a5626d8edd",
+              "without_docs_annotations_ast_sha256": "caacab09f36aa1646355a3af6f8989bc3159be8590d6e7586039c05f34a3d2a4",
+              "exact_implementation_matches_previous": []
+            }
+          ],
+          "delegated_score_calls": [
+            {
+              "span": [
+                42,
+                42
+              ],
+              "expression": "dataset.score_answer(answer=answer, entry=entry)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "huggingface/OpenEnv",
+      "commit": "9fac2a9acae682d5c18857198eac7152d7bf1a63",
+      "eligible": false,
+      "selection": "excluded",
+      "reasons": [
+        "step(action,timeout_s) is a stateful environment method, obtains score from self._dataset.score_answer; no independent answer/entry Boolean scorer."
+      ],
+      "source_records": [
+        {
+          "path": "raw/huggingface__OpenEnv/envs/reasoning_gym_env/server/reasoning_gym_environment.py",
+          "sha256": "fc278bc9463ea06097b3ea1663aa361d05d4331410523596491fb08cc43b64dd",
+          "functions": [],
+          "delegated_score_calls": [
+            {
+              "span": [
+                246,
+                246
+              ],
+              "expression": "self._dataset.score_answer(answer, self._current_entry)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "NousResearch/atropos",
+      "commit": "296a0bc55760e43b9c0743c052f8d6c2732606d1",
+      "eligible": false,
+      "selection": "excluded",
+      "reasons": [
+        "Environment scoring wraps reasoning_gym.create_dataset plus dataset.score_answer and tag parsing; async/stateful orchestration, not an independent native scalar True/False callback."
+      ],
+      "source_records": [
+        {
+          "path": "raw/NousResearch__atropos/environments/reasoning_gym_environment/reasoning_gym_environment.py",
+          "sha256": "f10a6560c39a120a6d6cddbcb1c298fca9e570e72a6fa6b15d5eb48cd27eeb82",
+          "functions": [
+            {
+              "name": "_score_answer_with_both_formats",
+              "span": [
+                681,
+                726
+              ],
+              "arguments": [
+                "self",
+                "model_answer",
+                "rg_item",
+                "dataset_obj"
+              ],
+              "async": false,
+              "source": "def _score_answer_with_both_formats(\n        self, model_answer: str, rg_item: dict, dataset_obj: Any\n    ) -> float:\n        \"\"\"\n        Score the answer using both formats (with and without <answer> tags) and return the higher score.\n        This handles verifiers that expect different formats.\n        \"\"\"\n        # Format 1: Just the answer content\n        try:\n            score1 = dataset_obj.score_answer(answer=model_answer, entry=rg_item)\n            score1 = max(0.0, min(1.0, float(score1)))\n        except Exception as e:\n            task_name = rg_item.get(\"metadata\", {}).get(\"source_dataset\", \"unknown\")\n            self.logger.debug(\n                f\"Error scoring answer format 1 for task {task_name}: {e}\"\n            )\n            score1 = 0.0\n\n        # Format 2: Answer wrapped in <answer> tags\n        answer_with_tags = f\"<answer>{model_answer}</answer>\"\n        try:\n            score2 = dataset_obj.score_answer(answer=answer_with_tags, entry=rg_item)\n            score2 = max(0.0, min(1.0, float(score2)))\n        except Exception as e:\n            task_name = rg_item.get(\"metadata\", {}).get(\"source_dataset\", \"unknown\")\n            self.logger.debug(\n                f\"Error scoring answer format 2 for task {task_name}: {e}\"\n            )\n            score2 = 0.0\n\n        # Return the higher score\n        final_score = max(score1, score2)\n\n        # Log which format worked better (only in debug mode)\n        if self.config.debug_logging and score1 != score2:\n            task_name = rg_item.get(\"metadata\", {}).get(\"source_dataset\", \"unknown\")\n            if score1 > score2:\n                self.logger.debug(\n                    f\"Task {task_name}: Raw answer format scored higher ({score1:.3f} vs {score2:.3f})\"\n                )\n            else:\n                self.logger.debug(\n                    f\"Task {task_name}: Tagged answer format scored higher ({score2:.3f} vs {score1:.3f})\"\n                )\n\n        return final_score",
+              "full_ast_sha256": "165e84bf6a708343740420837b752734313f5a4883b56d09eb99bae68ec60bbd",
+              "without_docs_annotations_ast_sha256": "f0a6c104cbd32894c005750f3c7b4d217d6a07ad64bb360b1976d7b0523742cb",
+              "exact_implementation_matches_previous": []
+            },
+            {
+              "name": "score",
+              "span": [
+                728,
+                908
+              ],
+              "arguments": [
+                "self",
+                "rollout_group_data"
+              ],
+              "async": true,
+              "source": "async def score(\n        self,\n        rollout_group_data: List[Dict[str, Any]],\n    ) -> Optional[ScoredDataGroup]:\n        \"\"\"\n        Scores a group of rollouts using reasoning_gym's score_answer method.\n        Args:\n            rollout_group_data: A list of dicts, where each dict contains:\n                - messages: The full conversation history for the rollout.\n                - rg_item: The original reasoning_gym item (contains 'question', 'answer', 'metadata').\n                - dataset_obj: The reasoning_gym dataset object used to generate and score the item.\n                - finish_reason: The completion finish reason.\n                - tokens: The token IDs.\n                - masks: The token masks.\n                - logprobs: The token logprobs.\n        Returns:\n            ScoredDataGroup with scores between 0.0 and 1.0, or None if no valid items\n        \"\"\"\n        scores_container = ScoredDataGroup()\n        scores_container[\"tokens\"] = list()\n        scores_container[\"masks\"] = list()\n        scores_container[\"scores\"] = list()\n        scores_container[\"overrides\"] = list()\n        scores_container[\"inference_logprobs\"] = list()\n\n        if not rollout_group_data:\n            return None\n\n        rg_item_for_group = rollout_group_data[0][\"rg_item\"]\n        dataset_obj_for_group = rollout_group_data[0][\"dataset_obj\"]\n\n        # Shuffle to avoid bias in selection\n        random.shuffle(rollout_group_data)\n\n        for rollout_item in rollout_group_data:\n            trajectory_messages = rollout_item[\"messages\"]\n            finish_reason = rollout_item[\"finish_reason\"]\n            tokens = rollout_item[\"tokens\"]\n            masks = rollout_item[\"masks\"]\n            logprobs = rollout_item[\"logprobs\"]\n\n            model_full_response = trajectory_messages[-1][\"content\"]\n\n            # Extract the part of the response that should be the answer\n            model_answer_to_score = self._extract_final_answer(model_full_response)\n\n            # If extraction failed (model didn't follow instructions), give 0 score\n            if model_answer_to_score is None:\n                reward_0_to_1 = 0.0\n                if self.config.debug_logging:\n                    task_name = rg_item_for_group.get(\"metadata\", {}).get(\n                        \"source_dataset\", \"unknown\"\n                    )\n                    self.logger.debug(\n                        f\"Task {task_name}: Giving 0 score due to failed answer extraction (didn't follow format)\"\n                    )\n            else:\n                # Use our dual-format scoring method that tries both raw answer and tagged answer\n                reward_0_to_1 = self._score_answer_with_both_formats(\n                    model_answer_to_score, rg_item_for_group, dataset_obj_for_group\n                )\n\n            # Remove examples with insufficient context\n            if len([1 for i in masks if i != -100]) < 10:\n                continue\n\n            scores_container[\"tokens\"].append(tokens)\n            scores_container[\"masks\"].append(masks)\n            scores_container[\"inference_logprobs\"].append(logprobs)\n            scores_container[\"scores\"].append(reward_0_to_1)\n            scores_container[\"overrides\"].append(dict())\n            if finish_reason == \"length\":\n                if self.config.mask_too_long_completions:\n                    scores_container[\"overrides\"][-1][\"set_advantage_to_zero\"] = True\n\n            if len(scores_container[\"tokens\"]) >= self.config.group_size:\n                break\n\n        if not scores_container[\"tokens\"]:\n            self.logger.warning(\n                \"No valid items were scored in this group - all items had insufficient context or failed scoring\"\n            )\n            return None\n\n        # Record success rate metrics (convert to binary for percent_correct tracking)\n        for score_val in scores_container[\"scores\"]:\n            self.percent_correct_buffer.append(1.0 if score_val >= 0.5 else 0.0)\n\n        # Update task performance for curriculum adjustment\n        task_name = rg_item_for_group.get(\"metadata\", {}).get(\n            \"source_dataset\", \"unknown\"\n        )\n        if task_name != \"unknown\" and self.config.complexity_mode == \"curriculum\":\n            # Use average score of the group for curriculum feedback\n            avg_score = sum(scores_container[\"scores\"]) / len(\n                scores_container[\"scores\"]\n            )\n            self._update_task_performance(task_name, avg_score)\n\n        # Calculate and log average score for the current group\n        current_scores = scores_container.get(\"scores\", [])\n        if current_scores:\n            average_score = sum(current_scores) / len(current_scores)\n            task_name = rg_item_for_group.get(\"metadata\", {}).get(\n                \"source_dataset\", \"unknown_task\"\n            )\n            log_message_main = (\n                f\"Task: {task_name} | Group average score: {average_score:.4f}\"\n            )\n            if all(s >= 0.5 for s in current_scores):\n                self.logger.info(f\"{log_message_main} (All correct in this group!)\")\n            elif all(s == 0.0 for s in current_scores):\n                self.logger.info(f\"{log_message_main} (All failed - no valid answers!)\")\n            elif all(s < 0.5 for s in current_scores):\n                self.logger.info(\n                    f\"{log_message_main} (All incorrect but some partial credit!)\"\n                )\n            else:\n                self.logger.info(log_message_main)\n\n        # Apply length penalty if all responses are correct (score >= 0.5)\n        if all(s >= 0.5 for s in scores_container[\"scores\"]):\n            # Calculate token lengths\n            token_lengths = [len(token) for token in scores_container[\"tokens\"]]\n            if max(token_lengths) == 0:\n                return None\n\n            # Get max allowed token length from config\n            max_allowed_length = self.config.max_token_length\n            # Set threshold at 75% of max_token_length\n            length_threshold = max_allowed_length * 0.75\n\n            # Apply modified length penalty with threshold\n            new_scores = []\n            penalties_applied = 0\n            for i, length in enumerate(token_lengths):\n                original_score = scores_container[\"scores\"][i]\n                if length <= length_threshold:\n                    new_scores.append(original_score)\n                else:\n                    # Calculate how far we are between threshold and max as a percentage\n                    percentage_of_range = (length - length_threshold) / (\n                        max_allowed_length - length_threshold\n                    )\n                    percentage_of_range = min(percentage_of_range, 1.0)\n                    # Apply linear penalty scaling from original_score down to 0.0\n                    penalized_score = original_score * (1.0 - percentage_of_range)\n                    new_scores.append(penalized_score)\n                    penalties_applied += 1\n\n            if penalties_applied > 0:\n                avg_length = sum(token_lengths) / len(token_lengths)\n                self.logger.debug(\n                    f\"Applied length penalty to {penalties_applied}/{len(token_lengths)} responses (avg length: {avg_length:.0f}, threshold: {length_threshold:.0f})\"  # noqa: E501\n                )\n\n            scores_container[\"scores\"] = new_scores\n\n        # Check if all scores are the same (no learning signal)\n        if all(\n            scores_container[\"scores\"][0] == score\n            for score in scores_container[\"scores\"]\n        ):\n            self.logger.debug(\n                f\"All scores in group are identical ({scores_container['scores'][0]:.4f}) - no learning signal, skipping group\"  # noqa: E501\n            )\n\n            # Before returning None, check if this is a completely failed group (all 0.0 scores) for debugging\n            if self.config.dump_failed_rollouts and all(\n                score == 0.0 for score in scores_container[\"scores\"]\n            ):\n                self.logger.debug(\n                    \"Saving failed group (all 0 scores) for debugging analysis\"\n                )\n                await self._save_failed_group_for_debugging(\n                    rollout_group_data, scores_container\n                )\n\n            return None\n\n        return scores_container",
+              "full_ast_sha256": "d414e2e2daeb7236ca966d843b7cd713de2d3ef8dea6ad42b23b61d0f62a1a00",
+              "without_docs_annotations_ast_sha256": "eb0ea9a55a2fd8a73d00a5e7d9b6754501dc6d9b9180a5b011169a0dafbf089e",
+              "exact_implementation_matches_previous": []
+            },
+            {
+              "name": "rollout_and_score_eval",
+              "span": [
+                1173,
+                1225
+              ],
+              "arguments": [
+                "self",
+                "test_data_tuple"
+              ],
+              "async": true,
+              "source": "async def rollout_and_score_eval(\n        self, test_data_tuple: Tuple[Dict[str, Any], Any]\n    ) -> float:\n        \"\"\"\n        Performs a rollout for a single evaluation item and scores it.\n        Args:\n            test_data_tuple: A tuple (rg_item, dataset_obj) from self.test_items_with_scorers.\n        Returns:\n            Score (1.0 for correct, 0.0 for incorrect/error).\n        \"\"\"\n        rg_item, dataset_obj = test_data_tuple\n        question_text = rg_item[\"question\"]\n\n        messages = [\n            {\"role\": \"system\", \"content\": system_prompt},\n            {\"role\": \"user\", \"content\": question_text},\n        ]\n\n        prompt_str = self.tokenizer.apply_chat_template(\n            messages, add_generation_prompt=True, tokenize=False\n        )\n\n        # Calculate max_tokens like tool_calling_server\n        prompt_tokens = len(self.tokenizer.encode(prompt_str))\n        max_tokens = (2 * self.config.max_token_length) - prompt_tokens\n        if max_tokens < 0:\n            return 0.0\n\n        async with self.server.managed_server(tokenizer=self.tokenizer) as managed:\n            completion = await managed.completion(\n                prompt=prompt_str,\n                n=1,\n                max_tokens=max_tokens,\n                temperature=0.1,\n                split=\"eval\",\n            )\n\n        model_full_response = completion.choices[0].text\n        model_answer_to_score = self._extract_final_answer(model_full_response)\n\n        # If extraction failed (model didn't follow instructions), give 0 score\n        if model_answer_to_score is None:\n            if self.config.debug_logging:\n                task_name = rg_item.get(\"metadata\", {}).get(\"source_dataset\", \"unknown\")\n                self.logger.debug(\n                    f\"Eval - Task {task_name}: Giving 0 score due to failed answer extraction (didn't follow format)\"\n                )\n            return 0.0\n\n        # Use our dual-format scoring method for evaluation as well\n        return self._score_answer_with_both_formats(\n            model_answer_to_score, rg_item, dataset_obj\n        )",
+              "full_ast_sha256": "2203b064ba5b6c89aa03b1d2b3089a4471f47289bcbd6370e66c8542f60ef689",
+              "without_docs_annotations_ast_sha256": "e2b41a67605c401c0fa68abbd7feb986219dc4e52b23541a9bdc09459796af13",
+              "exact_implementation_matches_previous": []
+            }
+          ],
+          "delegated_score_calls": [
+            {
+              "span": [
+                690,
+                690
+              ],
+              "expression": "dataset_obj.score_answer(answer=model_answer, entry=rg_item)"
+            },
+            {
+              "span": [
+                702,
+                702
+              ],
+              "expression": "dataset_obj.score_answer(answer=answer_with_tags, entry=rg_item)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "apple/ml-multilingual-reasoning-gym",
+      "commit": "260d3e6a883bcc5be24cbd1c1d7e9dfcf1efeae4",
+      "eligible": false,
+      "selection": "excluded",
+      "reasons": [
+        "Default scorer and reseeding delegator match previous RG implementation after removing docs/annotations.",
+        "GoL normalization implementation differs in source but is the already-exposed same task/scorer family; language-localized answer domain also cannot be assumed canonical True/False across configurations."
+      ],
+      "source_records": [
+        {
+          "path": "raw/apple__ml-multilingual-reasoning-gym/reasoning_gym/algorithmic/game_of_life_halting.py",
+          "sha256": "e52abbb650a0cc8a560b254bb347b15fe36491903f0b28dc4c83a66cf4d33257",
+          "functions": [
+            {
+              "name": "score_answer",
+              "span": [
+                408,
+                430
+              ],
+              "arguments": [
+                "self",
+                "answer",
+                "entry"
+              ],
+              "async": false,
+              "source": "def score_answer(self, answer: Optional[str], entry: Dict[str, any]) -> float:\n        \"\"\"Determine if the solution provided solves the GoL task.\n\n        The function awards 1.0 for a correct answer, comparing against localized answer strings.\n\n        Args:\n            answer (Optional[str]): The user's answer.\n            entry (Dict[str, any]): The original dataset entry containing the correct answer.\n\n        Returns:\n            float: The computed score between 0.0 and 1.0.\n        \"\"\"\n        if answer is None:\n            return 0.0\n            \n        # Get the correct answer from the entry (now localized)\n        correct_answer = entry[\"answer\"]\n        \n        # Case-insensitive exact match with the localized answer\n        if answer.strip().lower() == correct_answer.lower():\n            return 1.0\n            \n        return 0.0",
+              "full_ast_sha256": "bec5cbd6f30da8475f1adf207e0b4b67f21612da3da2c0b6f64bf1ce9edf24b3",
+              "without_docs_annotations_ast_sha256": "3230b21310bf642711b7ba323eeffe92949e7ded1430e0cb59415299fecae000",
+              "exact_implementation_matches_previous": []
+            }
+          ],
+          "delegated_score_calls": []
+        },
+        {
+          "path": "raw/apple__ml-multilingual-reasoning-gym/reasoning_gym/dataset.py",
+          "sha256": "0e5d35a3a157ff9312ed00c43d529ab990537045f15d9e8a820c7c239e0baae5",
+          "functions": [
+            {
+              "name": "score_answer",
+              "span": [
+                80,
+                89
+              ],
+              "arguments": [
+                "self",
+                "answer",
+                "entry"
+              ],
+              "async": false,
+              "source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        \"\"\"Overwrite this method in derived classes if a single oracle answer is not available.\"\"\"\n        oracle_answer = entry[\"answer\"]\n        reward = 0.0\n        if isinstance(answer, str) and len(answer) > 0:\n            if answer == oracle_answer:\n                reward = 1.0\n            elif oracle_answer in answer:\n                reward = len(oracle_answer) / len(answer)\n        return reward",
+              "full_ast_sha256": "a867f8ac6a770a4594b18ab68cac0aa5b468e6a9960a3c878a44b017c54d405b",
+              "without_docs_annotations_ast_sha256": "5be475a876eb594c51046fd38b43426c924e75bc37bc8372025391d9448c86ff",
+              "exact_implementation_matches_previous": [
+                "experiments/reward-boolean-holdout-v1/collection/census/raw-source/reasoning_gym/dataset.py"
+              ]
+            },
+            {
+              "name": "score_answer",
+              "span": [
+                144,
+                146
+              ],
+              "arguments": [
+                "self",
+                "answer",
+                "entry"
+              ],
+              "async": false,
+              "source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        \"\"\"Forward scoring to the wrapped dataset's implementation\"\"\"\n        return self.dataset.score_answer(answer, entry)",
+              "full_ast_sha256": "ccbad8d60f8943e27533e4f5bafc98a2f5bd77a7df74cafde9f28e83a3ad3fdb",
+              "without_docs_annotations_ast_sha256": "4ea64b39777b43e55e2ce9e19142a35220d03fad03e3a55318ac3e4e6aa32937",
+              "exact_implementation_matches_previous": [
+                "experiments/reward-boolean-holdout-v1/collection/census/raw-source/reasoning_gym/dataset.py"
+              ]
+            }
+          ],
+          "delegated_score_calls": [
+            {
+              "span": [
+                146,
+                146
+              ],
+              "expression": "self.dataset.score_answer(answer, entry)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "researchim-ai/reasoning-gym-ru",
+      "commit": "a66a7e796552ff23410508a6c696a6f1a70a9988",
+      "eligible": false,
+      "selection": "excluded",
+      "reasons": [
+        "Modified default scorer adds strip/0.01 branches but remains the forked known generic scorer family; not counted as an independent task scorer.",
+        "Reseeding delegator exactly matches previously exposed implementation; GoL path absent at pinned commit."
+      ],
+      "source_records": [
+        {
+          "path": "raw/researchim-ai__reasoning-gym-ru/reasoning_gym/dataset.py",
+          "sha256": "b8b8abd6bec41504e7ba07c7905568df7481e1cab2a66792efb07fa785dc837a",
+          "functions": [
+            {
+              "name": "score_answer",
+              "span": [
+                63,
+                76
+              ],
+              "arguments": [
+                "self",
+                "answer",
+                "entry"
+              ],
+              "async": false,
+              "source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        \"\"\"Overwrite this method in derived classes if a single oracle answer is not available.\"\"\"\n        oracle_answer = entry[\"answer\"].strip()\n        reward = 0.0\n        if answer is not None and len(answer) > 0:\n            answer = answer.strip()\n            if answer == oracle_answer:\n                reward = 1.0\n            elif oracle_answer in answer:\n                reward = len(oracle_answer) / len(answer)\n            else:\n                reward = 0.01\n\n        return reward",
+              "full_ast_sha256": "9a07b00dd5271de2b69dfcab0a1964a5a0fefbbb3c162fe84a989c0b55670f29",
+              "without_docs_annotations_ast_sha256": "1c35051a30d4fadba98ade57f19fd4b78ad970dd69d23680a6c97f7058a02c66",
+              "exact_implementation_matches_previous": []
+            },
+            {
+              "name": "score_answer",
+              "span": [
+                131,
+                133
+              ],
+              "arguments": [
+                "self",
+                "answer",
+                "entry"
+              ],
+              "async": false,
+              "source": "def score_answer(self, answer: Optional[str], entry: dict[str, Any]) -> float:\n        \"\"\"Forward scoring to the wrapped dataset's implementation\"\"\"\n        return self.dataset.score_answer(answer, entry)",
+              "full_ast_sha256": "ccbad8d60f8943e27533e4f5bafc98a2f5bd77a7df74cafde9f28e83a3ad3fdb",
+              "without_docs_annotations_ast_sha256": "4ea64b39777b43e55e2ce9e19142a35220d03fad03e3a55318ac3e4e6aa32937",
+              "exact_implementation_matches_previous": [
+                "experiments/reward-boolean-holdout-v1/collection/census/raw-source/reasoning_gym/dataset.py"
+              ]
+            }
+          ],
+          "delegated_score_calls": [
+            {
+              "span": [
+                133,
+                133
+              ],
+              "expression": "self.dataset.score_answer(answer, entry)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subject_imports_or_execution": false,
+  "model_or_analyzer_calls": 0,
+  "dedup_note": "Doc/annotation-insensitive AST equality preserves all identifiers. It establishes some exact copies, not general semantic equivalence. Remaining known-family/wrapper exclusions are source-reviewed.",
+  "snapshot_note": "Each repository HEAD resolved to a commit before content fetch. No release/current-state guarantee beyond observed pins."
+}

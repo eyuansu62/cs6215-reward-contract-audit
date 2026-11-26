@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-08T14:45:49.139292+00:00",
+  "files_sha256": {
+    "prepare_inputs.py": "32b7d1aef06f525a7aa76294a6aad36b46afd7687ed05466d9872890196561af",
+    "protocol/contracts-evaluation-freeze.json": "b2a688633864a35e702b9ab0536a5ddf08a7f54d44e20f3171df02d1bfec7e0e",
+    "protocol/contracts.json": "1d48c82cf8ef8147147af119aef971608ffc7fbde06f4004c6336d158325ffd8",
+    "protocol/evaluation.json": "1838a0df14e92bde854a319619e2c9cfa9ff91f7efb73d383e38bb4d7e7d1bab",
+    "run_baselines.py": "211da806e4c9b092031652d54689a9d000f1dfa0d432dad8040bc8b64355e32a",
+    "test_study.py": "355bb8eaac02db7e2d98da705e61320b4a8e5a5fb66c652f3a304600c6f1fe5e",
+    "tools/semgrep_baseline.py": "49d44d8f9a8d6691de3c4024f270fa5670fb4db0fdcf0288da839c43c78ab92e",
+    "tools/symbolic_baseline.py": "dfd7e9489b339c71f801b8b5d8cb2ac9721fd1fb2296c2d8e01c2d8242bae95c",
+    "tools/test_semgrep_baseline.py": "ecdd607446186c788540a7b44902293c6176026a13255e50e41970ce22d2ff51",
+    "tools/test_symbolic_baseline.py": "2a2653686e307048ee77d1668388f7464f20d7239a77f99c6167720e2151181b",
+    "tools/tool-release.json": "ef27db9b8b76468126e040ebb188ac9a941158f960265ad7b7dc944378d54005"
+  },
+  "inputs_sha256": {
+    "inputs.json": "af88535cfd0a330b5787fba4d9e1c1bf9cc2a782478ac53f6fc760da5d24d631",
+    "diagnostic-inputs.json": "65c36b3f28400edb7c1043d6883b390ef3246e67c3bf6604f90bd968a26d1136",
+    "evaluation/unit-map.json": "8a5324f6eecfe72248b76915bb673d30243ac4b916342b622faa12138ee74f74",
+    "evaluation/diagnostics.json": "9617a13a8a1c165e78a5728e1a515ae508bbcbb4ffe533b77b6ce0bf718ae586"
+  },
+  "oracle_sha256": "1fb258b1dd0780177b8b714982e6135307d3339a45b44ae288a840571771a371",
+  "diagnostic_oracle_sha256": "98d6d7a3d6f36a94484fdf7ab708c6522c218fffe1a2bfc696f03cea5941a7fe",
+  "frozen_before_primary_predictions": true,
+  "source_exposed_development": true,
+  "LLM_runs": 0
+}

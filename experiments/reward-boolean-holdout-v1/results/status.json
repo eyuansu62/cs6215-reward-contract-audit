@@ -1,0 +1,39 @@
+{
+  "status": "independent_test_not_started_data_eligibility_deficit",
+  "minimum_eligible_functions": 2,
+  "selected_fresh_compatible_nondeduplicated_functions": 0,
+  "screened_concept_candidates": 8,
+  "same_snapshot_census": {
+    "included_python_source_files": 122,
+    "top_level_classes_with_Dataset_name_suffix": 108,
+    "of_these_owning_score_answer": 75,
+    "non_score_module_text_boolean_clue_classes": 13,
+    "classes_with_answer_field_structural_traces": 108,
+    "qualification": "Exact syntactic counts under recorded file/class filters; not registered-task counts or arbitrary-Python runtime domain proofs. No additional source-supported fresh canonical True/False own scorer identified."
+  },
+  "evaluated_LLM_extraction_requests": 0,
+  "Semgrep_scans": 0,
+  "symbolic_analyzer_runs": 0,
+  "target_scorer_executions": 0,
+  "reference_contracts_for_eligible_holdout_tasks": 0,
+  "comparison_metrics": {
+    "contract_extraction_accuracy": null,
+    "paired_detection_gain": null,
+    "TP": null,
+    "FP": null,
+    "FN": null,
+    "TN": null,
+    "unknown_rate": null,
+    "witness_obligation_agreement": null
+  },
+  "undefined_metrics_reason": "No eligible independent test set. Non-Boolean or unrepresentable tasks are exclusions, not fabricated Unknown benchmark rows.",
+  "same_prompt_interface_and_analyzers_preserved": true,
+  "normalization_or_encoding_translation_added": false,
+  "synthetic_or_mutated_scorers_counted_as_real": false,
+  "source_snapshot": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "previous_e2e_result_not_relabelled_as_independent": true,
+  "formal_current_head_collection_metadata_only": true,
+  "supplementary_unpinned_main_excerpt_seen": true,
+  "unpinned_source_used_in_eligibility_or_testing": false,
+  "supplementary_source_exposure_record": "audit/additional-source-exposure.json"
+}

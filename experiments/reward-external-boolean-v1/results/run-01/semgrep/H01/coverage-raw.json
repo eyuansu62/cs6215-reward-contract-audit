@@ -1,0 +1,198 @@
+{
+  "version": "1.183.0",
+  "results": [
+    {
+      "check_id": "coverage-function",
+      "path": "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H01/source.py",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 5,
+        "col": 52,
+        "offset": 134
+      },
+      "extra": {
+        "metavars": {
+          "$FUNCTION": {
+            "start": {
+              "line": 1,
+              "col": 5,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "col": 16,
+              "offset": 15
+            },
+            "abstract_content": "exact_match"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Function structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H01/source.py",
+      "start": {
+        "line": 3,
+        "col": 9,
+        "offset": 73
+      },
+      "end": {
+        "line": 3,
+        "col": 17,
+        "offset": 81
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 3,
+              "col": 16,
+              "offset": 80
+            },
+            "end": {
+              "line": 3,
+              "col": 17,
+              "offset": 81
+            },
+            "abstract_content": "0"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "coverage-return",
+      "path": "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H01/source.py",
+      "start": {
+        "line": 5,
+        "col": 5,
+        "offset": 87
+      },
+      "end": {
+        "line": 5,
+        "col": 52,
+        "offset": 134
+      },
+      "extra": {
+        "metavars": {
+          "$VALUE": {
+            "start": {
+              "line": 5,
+              "col": 12,
+              "offset": 94
+            },
+            "end": {
+              "line": 5,
+              "col": 52,
+              "offset": 134
+            },
+            "abstract_content": "1 gold.strip()==pred.strip()0"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Return structural coverage.",
+        "severity": "WARNING",
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "$ARTIFACT_ROOT/experiments/reward-external-boolean-v1/results/run-01/semgrep/H01/source.py"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 0.0005140304565429688,
+    "profiling_times": {},
+    "parsing_time": {
+      "total_time": 0.0053119659423828125,
+      "per_file_time": {
+        "mean": 0.0026559829711914062,
+        "std_dev": 7.044117410259787e-06
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.009671926498413086,
+      "per_file_time": {
+        "mean": 0.009671926498413086,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.004153013229370117,
+      "per_file_and_rule_time": {
+        "mean": 0.0020765066146850586,
+        "std_dev": 4.236956229419775e-06
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.0,
+      "rules_selected_ratio": 1.0,
+      "rules_matched_ratio": 1.0
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 94316800
+  },
+  "rules_by_engine": [
+    [
+      "coverage-function",
+      "OSS"
+    ],
+    [
+      "coverage-return",
+      "OSS"
+    ]
+  ],
+  "engine_requested": "OSS",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "profiling_results": []
+}

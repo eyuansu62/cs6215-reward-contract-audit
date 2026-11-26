@@ -1,0 +1,21 @@
+{
+  "method": "semgrep-ce-fixed-risky-idioms-v1",
+  "verdict": "unknown",
+  "status": "error",
+  "errors": [
+    "ValueError: Contract must match the frozen clauses and native argument shape"
+  ],
+  "findings": [],
+  "all_findings": [],
+  "coverage": {
+    "status": "not_run"
+  },
+  "qualification": "Heuristic source-pattern detector, not proof of reward correctness. No_alarm means complete syntactic scan with no fixed-rule finding. No dedicated palindrome/multiset or prime/product semantic checks are implemented; C_PALINDROME_FULL and C_PRIME_FACTORS_FULL no_alarm results have that limitation. Boolean semantic preguards are not proved; equivalent aliases, helper-mediated idioms and nonadjacent finite guards may be missed or warned on.",
+  "explanation": "Unsupported input or incomplete/failed engine scan; no negative conclusion.",
+  "source_executed": false,
+  "source_rewritten": false,
+  "unit_id": "synthetic",
+  "contract_id": "C_BOOLEAN_FULL",
+  "source_sha256": "42530a9ce6e478a7903a49a215c28723f1b5314b78488953da52abbc4743eb0b",
+  "wall_seconds": 4.3e-05
+}
