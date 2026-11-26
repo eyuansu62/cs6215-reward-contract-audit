@@ -1,6 +1,6 @@
 # Build the report
 
-Run these commands from this directory with TeX Live and the ACM sigconf class installed.
+Run these commands from this directory with TeX Live and the ACM sigconf class and the listings package installed.
 
 ~~~sh
 pdflatex -interaction=nonstopmode -halt-on-error report.tex

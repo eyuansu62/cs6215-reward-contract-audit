@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{balance}
+\usepackage{listings}
 \setcopyright{none}
 \settopmatter{printacmref=false,printccs=false,printfolios=true}
 \renewcommand\footnotetextcopyrightpermission[1]{}
@@ -281,7 +282,27 @@ The native returns illustrate what the three positive labels mean. CoinFlip gave
 
 Semgrep's warnings and their absence agreed with the labels on 7/7 versions. The symbolic checker reached a decision on 4/7 and all four were correct. Its positive recall including abstentions was 1/3. The Semgrep patterns were written after inspection of these scorers. An absence of warnings means none of those patterns matched. These seven cases provide no estimate of accuracy on unfamiliar code.
 
-On eight authored diagnostics, Semgrep raised three false alarms. One truthiness check followed a correct equality guard, another example placed the suspect branch under \texttt{if False}, and a third inserted an assignment after a finite-distance guard. Semgrep also missed a branch that gave full credit to a nonfinite value. The symbolic checker ruled out the first two Boolean false alarms and abstained on the numerical cases. Both methods classified four of the eight examples correctly. Semgrep issued decisions on all eight and the symbolic checker on four. The two Boolean false alarms disappeared through symbolic reasoning alone.
+On eight authored diagnostics, Semgrep raised three false alarms. One truthiness check followed a correct equality guard. Listing~\ref{lst:dead-branch} shows the second false alarm, on a branch guarded by \texttt{if False}. The third example inserted an assignment after a finite-distance guard. Semgrep also missed a branch that gave full credit to a nonfinite value. The symbolic checker ruled out the first two Boolean false alarms and abstained on the numerical cases. Both methods classified four of the eight examples correctly. Semgrep issued decisions on all eight and the symbolic checker on four.
+
+
+\begin{lstlisting}[
+  language=Python,
+  basicstyle=\footnotesize\ttfamily,
+  numbers=left,
+  numberstyle=\scriptsize,
+  numbersep=5pt,
+  xleftmargin=1.35em,
+  frame=single,
+  showstringspaces=false,
+  caption={Semgrep flags line 3. The symbolic checker discards the branch at line 2, leaving the zero return on line 5.},
+  label={lst:dead-branch}
+]
+def score_answer(self, answer, entry):
+    if False:
+        if bool(answer) == bool(entry['answer']):
+            return 1.0
+    return 0.0
+\end{lstlisting}
 
 \subsection{RQ2. Revisions to description-only drafts}
 
@@ -379,7 +400,7 @@ Across the twenty completed requests, the service reported 509,481 input tokens 
 
 The controlled descriptions and the HELM question differ in what they tell the reader about format. P91 explicitly gives credit for either Boolean label. Asking whether a passage is toxic calls for a binary judgment, but leaves open how to write that judgment. Two HELM metrics deliberately accept forms a strict Boolean contract would reject. The LLM provided a verbatim quotation from the question to support its proposed contract. The validator could check that those words occurred in the question. Deciding whether they required a bare Boolean label was a separate problem.
 
-A missing condition can cause just as much trouble as an invented one. In the development experiment, removing equality from the contract ought to make an opposite valid token cease to be a counterexample. The original compiler put equality back. The global alarm alone gave little indication of the mistake because the scorer also accepted invalid tokens. Inspecting which obligation failed on which input exposed the error. For an auditor, the evidence behind an alarm includes the candidate, the reference, the full return and the particular obligation that failed.
+The compiler error in Section~5.3 illustrates the opposite problem. It restored equality even when the extractor omitted it. Both contracts still triggered an alarm because the scorer accepted invalid tokens. Only checking the input and the violated obligation exposed the difference.
 
 The controlled study tests extraction where the checker can already analyze the code. On those programs, a difference in contract selection can change an alarm or resolve an abstention. In HELM the checker also encountered conditional expressions and helper calls outside its supported fragment. Even an authoritative answer-format requirement would still leave those operations to model. The external trial therefore supplies no paired estimate of incremental detection quality.
 
